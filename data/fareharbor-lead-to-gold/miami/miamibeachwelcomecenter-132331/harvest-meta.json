@@ -1,0 +1,47 @@
+{
+  "company": "miamibeachwelcomecenter",
+  "itemId": "132331",
+  "fetchedAt": "2026-10-03T18:10:09.219314+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/miamibeachwelcomecenter/132331/content/",
+      "status": 200,
+      "bytes": 3031,
+      "sha256": "fce5e2c4e390d9524b206935575c5696fc776df8f585c3c1a1059ed4424597ac"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/miamibeachwelcomecenter/132331/structured-description/",
+      "status": 200,
+      "bytes": 2492,
+      "sha256": "0ff4f30ba1f6bce7341ba5a24576747edcda05db4ac89db40622c77b0f25b0b5"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/miamibeachwelcomecenter/items/132331/",
+      "status": 200,
+      "bytes": 10090,
+      "sha256": "b6070bfc812d3f4802bab13ab678e849b79c5abac53ccb86495bd4ac80889cec"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/miamibeachwelcomecenter/price-preview/per-item/v2/?asn=fhdn&item_pks=132331&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 587,
+      "sha256": "0e32c9a903da97a74b05f32bd2000359c535ab4b76827274b967e2b13d8dd90f"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/miamibeachwelcomecenter/items/132331/ratings/",
+      "status": 200,
+      "bytes": 483,
+      "sha256": "68b86826918661eda013e64a785720fc0efd6b21da3682c843348ecfccbe39db"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "132331",
+    "provider": "miamibeachwelcomecenter",
+    "bookingUrl": "https://fareharbor.com/embeds/book/miamibeachwelcomecenter/items/132331/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

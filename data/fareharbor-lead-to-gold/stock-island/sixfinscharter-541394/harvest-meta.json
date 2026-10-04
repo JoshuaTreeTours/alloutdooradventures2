@@ -1,0 +1,47 @@
+{
+  "company": "sixfinscharter",
+  "itemId": "541394",
+  "fetchedAt": "2026-10-03T18:09:45.637035+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sixfinscharter/541394/content/",
+      "status": 200,
+      "bytes": 13953,
+      "sha256": "85e19c194392f1096fcab19c9ca98f9bc1e162b3d1402982d422cf57fed27324"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sixfinscharter/541394/structured-description/",
+      "status": 200,
+      "bytes": 6117,
+      "sha256": "3d9fe972a7d901673c8be6566c84a3130fb10303dca5810b36201bca556a7bda"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/541394/",
+      "status": 200,
+      "bytes": 22623,
+      "sha256": "1a7f5ac9565972e3a7f3f7a219ccb5611bd4483ed0a4f1d6da9868035a6d3a23"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=541394&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 894,
+      "sha256": "814bc78bc46d5281fd57cdd17bee9004af73c080029713248bab6b59281c382a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/541394/ratings/",
+      "status": 200,
+      "bytes": 502,
+      "sha256": "8106ffceadb91de4843fadde1a8fced66978fb4735ebfc45fd666e205e8e5253"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "541394",
+    "provider": "sixfinscharter",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/541394/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

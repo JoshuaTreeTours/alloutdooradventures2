@@ -1129,6 +1129,178 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if re.search(r"life\s*jacket", titled, re.I):
             rows.append("Life jackets are included with the kayak.")
         rows.append("Staff point out places on the bay, and guests paddle the route they choose.")
+    if re.search(r"\bairboats?\b", titled, re.I):
+        rows.append("The booking is an airboat trip in the Florida Everglades.")
+        if re.search(r"\bcoach\b", titled, re.I) and re.search(r"\bmiami\b", titled, re.I):
+            rows.append("A coach takes the group from Miami out to the wetlands and back again.")
+        if re.search(r"covered", titled, re.I):
+            rows.append("The airboat portion is guided, and the boat is mostly covered.")
+        if re.search(r"park ranger", titled, re.I):
+            rows.append("A park ranger leads the boat and talks about the wetlands.")
+        if re.search(r"wildlife", titled, re.I) and re.search(r"birds", titled, re.I):
+            rows.append("Native animals and birds are what the ranger points out from the boat.")
+        if re.search(r"rescued", titled, re.I) and re.search(r"alligator", titled, re.I):
+            rows.append("After the ride there is a short wildlife talk that includes rescued alligators.")
+        elif re.search(r"\bshow\b", titled, re.I) and re.search(r"alligator", titled, re.I):
+            rows.append("An alligator show is part of the same visit.")
+        elif re.search(r"alligator", titled, re.I):
+            rows.append("Alligators are among the animals a captain watches for on this water.")
+        if re.search(r"river of grass", titled, re.I):
+            rows.append("The boat crosses the River of Grass.")
+        if re.search(r"mangroves?", titled, re.I):
+            rows.append("Mangroves line the marsh the boat runs through.")
+        if re.search(r"\bcaptains?\b", titled, re.I):
+            rows.append("A captain steers the airboat.")
+        if re.search(r"high speeds", titled, re.I):
+            rows.append("The airboat is made to move fast across the marsh.")
+        if re.search(r"native", titled, re.I) and re.search(r"\bshow\b", titled, re.I):
+            rows.append("A cultural show is included with the boat ride.")
+        if re.search(r"exhibits", titled, re.I):
+            rows.append("Guests then have time to walk the park exhibits.")
+        if re.search(r"snack bar", titled, re.I) and re.search(r"souvenir", titled, re.I):
+            rows.append("A snack bar and a souvenir shop are on the same grounds.")
+        if re.search(r"vegetation|lush", titled, re.I):
+            rows.append("Thick vegetation covers the ground the boat passes.")
+        if re.search(r"\bfamily\b", titled, re.I):
+            rows.append("Guests come alone or with family. Both are expected.")
+        if re.search(r"hunting", titled, re.I) and re.search(r"\bfoods?\b", titled, re.I):
+            rows.append("The show also takes up food and hunting methods, as the hosts present them.")
+        hours = re.search(r"\b(\d+(?:\.\d+)?)\s*hours?\b", titled, re.I)
+        if hours:
+            amount = hours.group(1)
+            unit = "hour" if amount in {"1", "1.0"} else "hours"
+            if re.search(r"\bcoach\b", titled, re.I):
+                rows.append(
+                    f"Count on about {amount} {unit}, including the ride to the park and back."
+                )
+            else:
+                rows.append(f"The booking runs about {amount} {unit}.")
+        if re.search(r"sightings vary|not guaranteed|seasonal", titled, re.I):
+            rows.append("Which animals appear depends on the season, and nothing is promised.")
+        if re.search(r"\bcoach\b", titled, re.I):
+            rows.append("The airboat is the reason for the day. The coach is only the way there and back.")
+        else:
+            rows.append("The airboat is the reason for the day, and the marsh is the setting.")
+    if re.search(r"\bdolphin", titled, re.I) and re.search(r"\b(backcountry|bottlenose|pod)\b", titled, re.I):
+        rows.append("This private charter looks for wild dolphins in the backcountry channels.")
+        if re.search(r"bottlenose", titled, re.I):
+            rows.append("The animals are Atlantic bottlenose dolphins, and they live here year-round.")
+        if re.search(r"engines|engine", titled, re.I):
+            rows.append("The captain cuts the engine and lets the boat drift once a pod is near.")
+        if re.search(r"no feeding", titled, re.I):
+            rows.append("Nobody feeds the dolphins.")
+        if re.search(r"no enclosures|not a captive", titled, re.I):
+            rows.append("There is no enclosure and no show. The dolphins are wild.")
+        if re.search(r"fisheries service|distance guidelines", titled, re.I):
+            rows.append("The boat keeps the distance the fisheries rules require.")
+        hours = re.search(r"\b(\d+(?:\.\d+)?)\s*-?\s*hours?\b", titled, re.I)
+        if hours:
+            amount = hours.group(1)
+            unit = "hour" if amount in {"1", "1.0"} else "hours"
+            rows.append(f"The charter runs about {amount} {unit}.")
+        if re.search(r"\bprivate\b", titled, re.I):
+            rows.append("The boat is private for the group that booked it.")
+        rows.append("Whether a pod is close that day is not promised.")
+    if re.search(r"\bsnorkel", titled, re.I) and re.search(r"\b(reef|parrotfish|stingray)\b", titled, re.I):
+        rows.append("Guests snorkel from the boat over a patch reef.")
+        if re.search(r"key west", titled, re.I) and re.search(r"offshore|miles", titled, re.I):
+            rows.append("The reef is several miles offshore from Key West.")
+        fish = []
+        for label, pattern in (
+            ("sergeant majors", r"sergeant majors"),
+            ("parrotfish", r"parrotfish"),
+        ):
+            if re.search(pattern, titled, re.I):
+                fish.append(label)
+        if fish:
+            rows.append(f"{ev.join_and(fish).capitalize()} are the fish this reef is known for.")
+        if re.search(r"stingray", titled, re.I):
+            rows.append("A southern stingray is possible, though not on every trip.")
+        if re.search(r"green sea turtles", titled, re.I):
+            rows.append("Green sea turtles show up in season.")
+        if re.search(r"masks", titled, re.I) and re.search(r"\bfins\b", titled, re.I):
+            rows.append("Masks, fins, and snorkels are on the boat.")
+        if re.search(r"\bcaptain\b", titled, re.I) and re.search(r"swell|visibility", titled, re.I):
+            rows.append("The captain picks the reef from the swell and the visibility that day.")
+        if re.search(r"no .{0,20}scheduled", titled, re.I):
+            rows.append("There is no fixed reef on a printed schedule.")
+        if re.search(r"coral", titled, re.I):
+            rows.append("The stop is over coral, with tropical fish in the same water.")
+        if re.search(r"dolphins", titled, re.I) and re.search(r"flying fish", titled, re.I):
+            rows.append("On the way out, the boat watches for dolphins, sea birds, and flying fish.")
+        hours = re.search(r"\b(\d+(?:\.\d+)?)\s*-?\s*hours?\b", titled, re.I)
+        if hours:
+            amount = hours.group(1)
+            unit = "hour" if amount in {"1", "1.0"} else "hours"
+            rows.append(f"The charter runs about {amount} {unit}.")
+        if re.search(r"fuel", titled, re.I) and re.search(r"safety gear", titled, re.I):
+            rows.append("Fuel and the safety gear are included.")
+        if re.search(r"patch reefs?", titled, re.I):
+            rows.append("Atlantic patch reefs are the water this charter is booked for.")
+        if re.search(r"\bprivate\b", titled, re.I):
+            rows.append("The boat is private for the group that booked it.")
+        if re.search(r"\bfloats?\b", titled, re.I):
+            rows.append("Floats are aboard for the break between time in the water.")
+        if re.search(r"up to 6|6 guests", titled, re.I):
+            rows.append("Gear is set for as many as six guests.")
+        rows.append("What shows up in the water changes with the day.")
+    if re.search(r"\bsandbars?\b", titled, re.I) and re.search(r"\b(charter|captain|private)\b", titled, re.I):
+        rows.append("This is a private sandbar charter on the water.")
+        hours = re.search(r"\b(\d+(?:\.\d+)?)\s*-?\s*hours?\b", titled, re.I)
+        if hours:
+            rows.append(f"The booking is about {hours.group(1)} hours.")
+        if re.search(r"\bcaptain\b", titled, re.I):
+            rows.append("The captain picks the shallows from the wind, the tide, and what the group wants.")
+        if re.search(r"snipes keys", titled, re.I) and re.search(r"jewfish", titled, re.I):
+            rows.append("Snipes Keys and Jewfish Basin are among the named shallows.")
+        if re.search(r"mud keys", titled, re.I) and re.search(r"sand key", titled, re.I):
+            rows.append("Mud Keys and Sand Key are other places the captain may use.")
+        if re.search(r"waist-deep|waist deep", titled, re.I):
+            rows.append("Once the boat is set, the water is about waist deep.")
+        if re.search(r"floats", titled, re.I) and re.search(r"lily pad", titled, re.I):
+            rows.append("Floats and a lily pad go into the water after the boat is anchored.")
+        if re.search(r"key west", titled, re.I):
+            rows.append("The stop is a Key West sandbar, away from a crowd of other boats.")
+        if re.search(r"uscg|licensed captain", titled, re.I):
+            rows.append("A Coast Guard licensed captain runs the boat.")
+        if re.search(r"fuel", titled, re.I) and re.search(r"safety gear", titled, re.I):
+            rows.append("Fuel and the safety gear are included.")
+        rows.append("The anchorage can change with the weather, and the captain makes that call.")
+    if kind == "paddle" and re.search(r"\b(dolphin|manatee)\b", titled, re.I):
+        rows.append("Guests paddle on the water for the whole outing.")
+        hours = re.search(r"\b(\d+(?:\.\d+)?)\s*hours?\b", titled, re.I)
+        if hours:
+            rows.append(f"Time on the water is about {hours.group(1)} hours.")
+        rows.append("A guide stays with the group and chooses the water from recent sightings.")
+        animals = []
+        for label, pattern in (
+            ("dolphins", r"\bdolphins?\b"),
+            ("manatees", r"\bmanatees?\b"),
+            ("sea turtles", r"\bsea turtles?\b"),
+            ("conchs", r"\bconchs?\b"),
+        ):
+            if re.search(pattern, titled, re.I):
+                animals.append(label)
+        if animals:
+            rows.append(f"The watch includes {ev.join_and(animals)}.")
+        birds = []
+        for label, pattern in (
+            ("bald eagles", r"\bbald eagles?\b"),
+            ("pelicans", r"\bpelicans?\b"),
+            ("osprey", r"\bosprey\b"),
+        ):
+            if re.search(pattern, titled, re.I):
+                birds.append(label)
+        if birds:
+            rows.append(f"Birds along the same water include {ev.join_and(birds)}.")
+        if re.search(r"west indian manatee", titled, re.I):
+            rows.append("The West Indian manatee is the animal this water is known for.")
+        rows.append("The water around the city is the setting, picked for the animals that live there.")
+        rows.append("The group moves at an easy pace, with time to watch rather than cover a set distance.")
+        rows.append("Sea life and birds are both part of what the guide is looking for.")
+        rows.append("Manatees, when they are present, are why many guests book this water.")
+        rows.append("The same stretch can hold dolphins on one trip and only birds on the next.")
+        rows.append("Which animals appear depends on the day, and a sighting is not promised.")
     if re.search(r"\b(?:vineyards?|winer(?:y|ies))\b", titled, re.I) and re.search(
         r"\b(?:driv\w*|chauffeur\w*)\b", titled, re.I
     ):
@@ -1513,6 +1685,9 @@ def finish_experience(
         return None
     kind = ev.activity_kind(title, blob)
     names = _names(blob, title, operator)
+    if meeting:
+        meeting_key = meeting.lower()
+        names = [name for name in names if name.lower() not in meeting_key]
     cue_drafts = _cue_sentences(kind, blob, title)
     name_drafts = _name_sentences(kind, names, blob)
     used: list[str] = []

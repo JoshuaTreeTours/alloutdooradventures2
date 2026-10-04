@@ -1,0 +1,47 @@
+{
+  "company": "epicpaddleadventures",
+  "itemId": "333279",
+  "fetchedAt": "2026-10-03T18:09:50.306454+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/content/",
+      "status": 200,
+      "bytes": 10732,
+      "sha256": "eca0511cf67204240edbf9698c8367d451c654491006505fd583439680f967e1"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/structured-description/",
+      "status": 200,
+      "bytes": 7181,
+      "sha256": "e2ca3b45f58e2110266d86e61f388b45e088a541878666a6f26f3bb535982a7a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/epicpaddleadventures/items/333279/",
+      "status": 200,
+      "bytes": 19611,
+      "sha256": "56cdbfed42aed76ca1d2d169ff80ad09ae40b13530f7e5ca08d69175c23e04bc"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/epicpaddleadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=333279&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 963,
+      "sha256": "f526b971ae34e633a0b866f1907c01ce2f7d7d190d7bf3fa6ea295b407ab83d0"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/epicpaddleadventures/items/333279/ratings/",
+      "status": 200,
+      "bytes": 589,
+      "sha256": "2848e1964d2510de483773b2ea733afb0bcb08b902bc63f6629254a5f1c336b4"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "333279",
+    "provider": "epicpaddleadventures",
+    "bookingUrl": "https://fareharbor.com/embeds/book/epicpaddleadventures/items/333279/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

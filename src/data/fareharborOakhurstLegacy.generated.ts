@@ -11,9 +11,9 @@ export const fareHarborOakhurstLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The commentary takes up Good Trip Adventures and Pohono Trail. That same account stays with Tunnel View and Bridalveil Falls. Cook's Meadow and Mirror Lake are part of the same story. The route keeps Curry Village and Yosemite Falls in view."
+      "This full-day small-group tour and hike in Yosemite Valley runs about six to eight hours from Oakhurst. The route includes the Pohono Trail, Tunnel View, and Bridalveil Fall, then Cook's Meadow, Mirror Lake, Curry Village, and Yosemite Falls."
     ],
-    "schemaDescription": "A 6- to 8-hour guided outing with Good Trip Adventures - California in Oakhurst.",
+    "schemaDescription": "Full-day small-group tour and hike in Yosemite Valley, about six to eight hours, from Oakhurst.",
     "highlights": [
       "6- to 8-hour guided outing in Oakhurst",
       "Medically trained, naturalist guide"
@@ -22,7 +22,7 @@ export const fareHarborOakhurstLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6"
     ],
     "productImage": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
-    "wordCount": 41,
+    "wordCount": 40,
     "durationLabel": "6-8 hours",
     "durationIso": null,
     "meetingLocation": "49044 Civic Circle Oakhurst, CA 93644",

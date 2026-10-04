@@ -1,0 +1,2372 @@
+[
+  {
+    "itemId": "266593",
+    "company": "305toursandrentals",
+    "title": "Miami Boat Tour with FREE South Beach Bicycle Rental",
+    "operator": "305 Tours & Rentals",
+    "publicPath": "/destinations/florida/miami-beach/tours/miami-boat-tour-with-free-south-beach-bicycle-rental-266593",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Art Deco buildings in the financial district are what guests are taken to see. Guests ride a rented bike for the day. Time on the water is about 1.5 hours. The ride passes Hour Bike Rental and Biscayne Bay. Cyclists also come to Downtown Miami and Fisher Island.",
+      "Millionaire's Row and Versace Mansion are on the same loop. Later the route reaches Star Island and Lincoln Road."
+    ],
+    "schemaDescription": "A three-hour bicycle outing with 305 Tours & Rentals. The outing passes Fisher Island, Star Island, and South Pointe Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "3 Hour bicycle outing",
+      "Fisher Island and Star Island"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/kekAePQFQNam02qguFGM",
+    "wordCount": 68,
+    "durationLabel": "3 Hour",
+    "durationIso": "PT3H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $59",
+    "priceRows": [
+      {
+        "label": "11 and over",
+        "note": "Ages 11+",
+        "amountLabel": "$69"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 2-10",
+        "amountLabel": "$59"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "59.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 33,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 33 reviews on GET https://fareharbor.com/api/v1/companies/305toursandrentals/items/266593/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/kekAePQFQNam02qguFGM",
+      "heroHandle": "kekAePQFQNam02qguFGM",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/305toursandrentals-266593",
+      "fetchedAt": "2026-10-03T18:10:17.588946+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/305toursandrentals/266593/content/",
+          "status": 200,
+          "bytes": 3559,
+          "sha256": "6467a19197bfc2116b7ccff1ddbe5607fcd79da220fb8669c5fdd92161c79da6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/305toursandrentals/266593/structured-description/",
+          "status": 200,
+          "bytes": 2433,
+          "sha256": "17b7dd0eb03ba1a257112a714dc549ef8f15c541938bf5c54bb5158778ef8e04"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/305toursandrentals/items/266593/",
+          "status": 200,
+          "bytes": 10794,
+          "sha256": "9fbeb05a1143a718f333a07bac7a8ae3281e601fbc17b16659f6eef41a63b988"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/305toursandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=266593&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 765,
+          "sha256": "848f220877fb6323547dac13592f28d740b7fde16e38e0d4ea48604a0bdc2024"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/305toursandrentals/items/266593/ratings/",
+          "status": 200,
+          "bytes": 657,
+          "sha256": "729c8337f1d38d84103a37f7a4823bc69516317b87faefc40da7dbf687e20423"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Child",
+          "note": "Ages 2-10",
+          "amount": 59.0
+        },
+        "customerTypes": [
+          {
+            "singular": "11 and over",
+            "note": "Ages 11+",
+            "amount": 69.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 2-10",
+            "amount": 59.0
+          }
+        ],
+        "zeroPriceTypes": [
+          "Infant"
+        ],
+        "departureStartAt": "2026-10-03T15:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "3 Hour",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "3 hours • All ages",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "3 Hour Tour includes 90 minute boat ride Plus a 3 Hour Bike Rental (Same or different day) Tour See Miami from a totally different and refreshing perspective, from the water.",
+          "Purchase beverages and light snacks on board during the 90-minute cruise."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Hour Tour",
+          "Hour Bike Rental",
+          "South Beach",
+          "Biscayne Bay",
+          "Downtown Miami",
+          "Fisher Island",
+          "Miami Beach",
+          "Versace Mansion"
+        ],
+        "measures": [
+          "1.5hour",
+          "3 Hour",
+          "90 minute",
+          "3 hours"
+        ],
+        "description": "See Miami from a totally different and refreshing perspective, from the water. This fun 1.5hour boat cruise takes you through the waters around this beautiful city, plus a three hour bike rental. 3 Hour Tour includes 90 minute boat ride Plus a 3 Hour Bike Rental (Same or different day) Tour See Miami from a totally different and refreshing perspective, from the water. This fun 1.5hour boat cruise takes you through the waters around this beautiful city. Learn about the history of Miami, and get a great glance at this magical city. After the cruise, enjoy the complimentary 3 hours bike rental to explore South Beach on any date of your choosing. Start by getting picked up at your hotel in South Beach, or at our shop. Hit the water with a fully narrated sightseeing boat cruise. Cruise through Biscayne Bay, see the Downtown Miami skyline, the Port of Miami, Fisher Island, and Millionaire's Row. Purchase beverages and light snacks on board during the 90-minute cruise. Bike Rental Explore South Beach by bicycle, an excellent way to see Miami Beach even further. Ride through glamorous SoBe, and experience a tropical paradise. Ride past the Versace Mansion, Star Island, the vibrant Lincoln Road outdoor mall, Ocean Drive and the Art Deco District, South Pointe Park, and more. On a day of your choosing, please come to our shop and pick up your free bike rental for 3 hours to explore South Beach. Includes a bicycle, helmet, bike lock, and bottled water. bike a helmet, and bike lock.",
+        "detailsText": "Hotel Pick Up We will pick you up at the address you provided while booking. Pick ups range from 30 minutes before tour start to 30 nminutes after depending on your location. For your specific pick up time, please call us directly. - Water - Snacks Hotel Pick Up We will pick you up at the address you provided while booking (listed under the \"details\" section below). Pick ups range from 30 minutes before tour start to 30 minutes after depending on your location. For your specific pick up time, please call us directly. - Water - Snacks Bike Rental Please call us to schedule your free bike rental. Your bike rental includes bottled water, safety helmet, and bike lock. Please bring your ID for bike rental check in. 3 hours • All ages 3 hours • All ages",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "266593",
+        "provider": "305toursandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/305toursandrentals/items/266593/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "266597",
+    "company": "305toursandrentals",
+    "title": "Miami City and Boat Tour Combo with FREE South Beach Bicycle Rental",
+    "operator": "305 Tours & Rentals",
+    "publicPath": "/destinations/florida/miami-beach/tours/miami-city-and-boat-tour-combo-with-free-south-beach-bicycle-rental-266597",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Art Deco buildings in the financial district are what guests are taken to see. Guests ride a rented bike for the day. Time on the water is about 5 hours. The ride passes Hour Bike Rental and Art Deco District. Cyclists also come to Ocean Drive and Downtown Miami.",
+      "Brickell Avenue and Coconut Grove are on the same loop. Later the route reaches Coral Gables and Little Havana."
+    ],
+    "schemaDescription": "A 5-hour bicycle outing with 305 Tours & Rentals. The outing passes Fisher Island, Star Island, and South Pointe Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "5 Hours bicycle outing",
+      "Fisher Island and Star Island"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/wpgG3jOSWxAOOvHj5RQ4",
+    "wordCount": 68,
+    "durationLabel": "5 Hours",
+    "durationIso": "PT5H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $79",
+    "priceRows": [
+      {
+        "label": "11 and over",
+        "note": "Ages 11+",
+        "amountLabel": "$89"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 2-10",
+        "amountLabel": "$79"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "79.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 33,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 33 reviews on GET https://fareharbor.com/api/v1/companies/305toursandrentals/items/266597/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/wpgG3jOSWxAOOvHj5RQ4",
+      "heroHandle": "wpgG3jOSWxAOOvHj5RQ4",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/305toursandrentals-266597",
+      "fetchedAt": "2026-10-03T18:10:17.589879+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/305toursandrentals/266597/content/",
+          "status": 200,
+          "bytes": 3884,
+          "sha256": "61833b89996bdcd662dc147d2d397d6445804c9f8ca550e2ec352fcbda8fcb24"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/305toursandrentals/266597/structured-description/",
+          "status": 200,
+          "bytes": 2728,
+          "sha256": "2e07c7cf6f33b82ec8aa42bdf72436d2ffc3900d86d427dc20b0ab94a0123de3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/305toursandrentals/items/266597/",
+          "status": 200,
+          "bytes": 11152,
+          "sha256": "1ac7416ecad43908735886eb5ff0768f1e4773bcf56321af7660184a3ce5afed"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/305toursandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=266597&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 765,
+          "sha256": "a5bca63255c54e7ce511541ce4d170d4225a54a1eb7e3498413478ddfa5fca00"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/305toursandrentals/items/266597/ratings/",
+          "status": 200,
+          "bytes": 673,
+          "sha256": "7b360b40b8499dcd375dc4124f07fce48726ab8b47053c1f7de1ff9687408be8"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Child",
+          "note": "Ages 2-10",
+          "amount": 79.0
+        },
+        "customerTypes": [
+          {
+            "singular": "11 and over",
+            "note": "Ages 11+",
+            "amount": 89.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 2-10",
+            "amount": 79.0
+          }
+        ],
+        "zeroPriceTypes": [
+          "Infant"
+        ],
+        "departureStartAt": "2026-10-04T00:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "5 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "5 hours • All ages",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "5 Hours Plus a 3 Hour Bike Rental (Same or different day) Tour See Miami from a totally different and refreshing perspective, from the water.",
+          "Purchase beverages and light snacks on board during the 90-minute cruise."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Hour Bike Rental",
+          "South Beach",
+          "Art Deco District",
+          "Downtown Miami",
+          "Coconut Grove",
+          "Coral Gables",
+          "Little Havana",
+          "Biscayne Bay"
+        ],
+        "measures": [
+          "5 Hours",
+          "3 Hour",
+          "3 hours"
+        ],
+        "description": "This fun four-hour city tour and boat cruise take you through the streets of the dynamic city and the waters around it, plus a three hour bike rental. 5 Hours Plus a 3 Hour Bike Rental (Same or different day) Tour See Miami from a totally different and refreshing perspective, from the water. Learn about the history of Miami, and get a great glance at this magical city. Start by getting picked up at your hotel in South Beach, or at our shop, and ride around town in a comfortable air-conditioned bus. See some of the most scenic spots, including the Art Deco District, Ocean Drive, Downtown Miami, Brickell Avenue, Coconut Grove, Coral Gables, Little Havana, and Calle Ocho. After exploring the city by land, hit the water with a fully narrated sightseeing boat cruise. Cruise through Biscayne Bay, see the Downtown Miami skyline, the Port of Miami, Fisher Island, and Millionaire's Row. Purchase beverages and light snacks on board during the 90-minute cruise. Finally, explore South Beach by bicycle, an excellent way to see Miami Beach even further. Ride through glamorous SoBe, and experience a tropical paradise. Ride past the Versace Mansion, Star Island, the vibrant Lincoln Road outdoor mall, Ocean Drive and the Art Deco District, South Pointe Park, and more. Bike Rental Explore South Beach by bicycle, an excellent way to see Miami Beach even further. Ride through glamorous SoBe, and experience a tropical paradise. Ride past the Versace Mansion, Star Island, the vibrant Lincoln Road outdoor mall, Ocean Drive and the Art Deco District, South Pointe Park, and more. On a day of your choosing, please come to our shop and pick up your free bike rental for 3 hours to explore South Beach. Includes a bicycle, helmet, bike lock, and bottled water. bike a helmet, and bike lock.",
+        "detailsText": "Hotel Pick Up We will pick you up at the address you provided while booking. Pick ups range from 30 minutes before tour start to 30 nminutes after depending on your location. For your specific pick up time, please call us directly. - Water - Snacks Bike Rental Hotel Pick Up We will pick you up at the address you provided while booking (listed under the \"details\" section below). Pick ups range from 30 minutes before tour start to 30 minutes after depending on your location. For your specific pick up time, please call us directly. - Water - Snacks Bike Rental Please call us to schedule your free bike rental. Your bike rental includes bottled water, safety helmet, and bike lock. Please bring your ID for bike rental check in. 5 hours • All ages 5 hours • All ages",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "266597",
+        "provider": "305toursandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/305toursandrentals/items/266597/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "575606",
+    "company": "bobbysbikehike",
+    "title": "Miami Beach Bikes, Bites & Views Food Tour (Adults Only)",
+    "operator": "Bobby's Bike Hike",
+    "publicPath": "/destinations/florida/miami-beach/tours/miami-beach-bikes-bites-and-views-food-tour-adults-only-575606",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Art Deco buildings in the financial district are what guests are taken to see. The tasting also stops near Art Deco."
+    ],
+    "schemaDescription": "Art Deco buildings in the financial district are what guests are taken to see.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4.5-hour bicycle outing in Miami Beach",
+      "Bikes"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/yWn9XmeHRYaOIKHpJizi"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/mdcBKF4lTbahj8bdgPPX",
+    "wordCount": 21,
+    "durationLabel": "4.5 hours",
+    "durationIso": "PT4H30M",
+    "meetingLocation": "959 West Ave Suite 1 Miami Beach, FL 33139",
+    "visiblePriceLabel": "From $84.99",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18+",
+        "amountLabel": "$84.99"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "84.99",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 398,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.9 from 398 reviews on GET https://fareharbor.com/api/v1/companies/bobbysbikehike/items/575606/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/mdcBKF4lTbahj8bdgPPX",
+      "heroHandle": "mdcBKF4lTbahj8bdgPPX",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/yWn9XmeHRYaOIKHpJizi",
+          "handle": "yWn9XmeHRYaOIKHpJizi",
+          "pixelSha256": "80eb449e3c21faed926835fced622252e38dfdf2deb7e2997cdf5c1a7c374d3d",
+          "differenceHashDistanceFromHero": 127,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.36254,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/yWn9XmeHRYaOIKHpJizi",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/bobbysbikehike-575606",
+      "fetchedAt": "2026-10-03T18:10:17.590510+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/575606/content/",
+          "status": 200,
+          "bytes": 6798,
+          "sha256": "1926848e7ed57902b32bc46ef51d542a18e49da5882f6e1b853becc268424609"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/575606/structured-description/",
+          "status": 200,
+          "bytes": 1686,
+          "sha256": "cbd943146a465f85b3213f0a67844ef5c194908f172a1a2e2cf2931a6156956e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/575606/",
+          "status": 200,
+          "bytes": 19066,
+          "sha256": "c9de8109defda8bc30567ddfa2692bc803b22ce6b89fd02fa0c8cc4951550b75"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bobbysbikehike/price-preview/per-item/v2/?asn=fhdn&item_pks=575606&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "01c324d261a0931e6e304907a32133a7cf95c7aa9ad70d7680bc8f9988578dfe"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/575606/ratings/",
+          "status": 200,
+          "bytes": 647,
+          "sha256": "5819dc34c8f8264aa0ff8d9e924ba83cb0157e152e428dcae4dbca3625fe47b0"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 18+",
+          "amount": 84.99
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 18+",
+            "amount": 84.99
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T10:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4.5 hours",
+        "meetingAddress": "959 West Ave Suite 1 Miami Beach, FL 33139",
+        "itemLocation": null,
+        "headline": "Starting at $79.99 | 4 Hours | Sample Miami's cultural cuisine",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 18,
+        "maxAge": 99,
+        "groupSize": "15",
+        "included": [
+          "Bikes",
+          "Helmets",
+          "Guide",
+          "Food",
+          "Tap water at restaurants"
+        ],
+        "excluded": [
+          "Drinks (beyond tap water)",
+          "Gratuity for Tour Guide"
+        ],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [
+          "Bring a refillable water bottle",
+          "Wear loose, comfortable clothing"
+        ],
+        "cancellation": "72 hours",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Miami Beach",
+          "Food Tour",
+          "From Cuban",
+          "Art Deco"
+        ],
+        "measures": [],
+        "description": "Experience the best of Miami Beach on our Bike & Food Tour! Pedal through vibrant streets, explore top attractions, and savor the city's diverse culinary scene. From Cuban delights to fresh seafood and Latin fusion, you'll enjoy a delicious journey through local favorites. Take in stunning views of the Art Deco district, sandy beaches, and iconic landmarks. Book your tickets today for an unforgettable adventure that blends culture, flavor, and fun! Vegetarian options available.",
+        "detailsText": "Arrive 20 minutes early Arrive 20 minutes early Starting at $79.99 | 4 Hours | Sample Miami's cultural cuisine Starting at $79.99 | 4 Hours | Sample Miami's cultural cuisine",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "575606",
+        "provider": "bobbysbikehike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bobbysbikehike/items/575606/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "625274",
+    "company": "sfjetskirentals",
+    "title": "Aqua Escape Party Boat",
+    "operator": "Jetski Rentals of South Florida",
+    "publicPath": "/destinations/florida/miami-beach/tours/aqua-escape-party-boat-625274",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests book the sailboat for a bachelorette party. The party stays on the water for the whole booking. Music plays on board, and some departures add a live set. The paddle passes Miami Bay and Island Stop. From the water the group comes to Complimentary Water Toys and Onboard Amenities.",
+      "Jet Skis and Jet Cars are on the same stretch."
+    ],
+    "schemaDescription": "A harbor outing lasting 3+ Hours with Jetski Rentals of South Florida. The sail passes Island Stop.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "3+ Hours harbor outing",
+      "Island Stop",
+      "Capacity: Up to 40 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/QOHgtsWNQXqd76v0ro1i"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/B3LzyQ2ERgOH3HDlIbuU",
+    "wordCount": 60,
+    "durationLabel": "3+ Hours",
+    "durationIso": null,
+    "meetingLocation": "10800 Collins Ave Miami Fl, 33154",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sfjetskirentals/items/625274/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/B3LzyQ2ERgOH3HDlIbuU",
+      "heroHandle": "B3LzyQ2ERgOH3HDlIbuU",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/QOHgtsWNQXqd76v0ro1i",
+          "handle": "QOHgtsWNQXqd76v0ro1i",
+          "pixelSha256": "a16fef90230899ec0d25cac829d3007e6a78def1581e707b60f2515951ab6b19",
+          "differenceHashDistanceFromHero": 136,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31245,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/QOHgtsWNQXqd76v0ro1i",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/sfjetskirentals-625274",
+      "fetchedAt": "2026-10-03T18:10:17.590699+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/625274/content/",
+          "status": 200,
+          "bytes": 4253,
+          "sha256": "5ef1a28b92dea765ae766b27d23f89e6a5eaf591814ce85419d939969674d23d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/625274/structured-description/",
+          "status": 200,
+          "bytes": 3513,
+          "sha256": "683f98823499d33cc0e56eeccc9db635046165b3fc7588c206de5f777aa3ee10"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/625274/",
+          "status": 200,
+          "bytes": 10749,
+          "sha256": "e0105d00a3819ce20fe90ea141f9f9a173eb02fc37ab773c5a3c60fb69257b89"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=625274&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/625274/ratings/",
+          "status": 200,
+          "bytes": 436,
+          "sha256": "c70e3cd02070e0c5ceeddf308ac12b69c2246a5fa621f38a98d0a9f0c442e542"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "3+ Hours",
+        "meetingAddress": "10800 Collins Ave Miami Fl, 33154",
+        "itemLocation": null,
+        "headline": "Up to 40 Guests!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "40",
+        "included": [
+          "Capacity: Up to 40 guests",
+          "Island Stop: Swim, take pictures, and relax on a private island",
+          "Cooler stocked with ice, water, and soft drinks"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [
+          "Why Choose Us?",
+          "A unique way to experience the vibrant waters of Miami with friends and family"
+        ],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "No Refunds - All Sales are Final!",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Ultimate Party Boat Adventure",
+          "Miami Bay",
+          "Island Stop",
+          "Complimentary Water Toys",
+          "Onboard Amenities",
+          "Jet Skis",
+          "Jet Cars",
+          "Perfect For"
+        ],
+        "measures": [
+          "40 guests"
+        ],
+        "description": "Experience the Ultimate Party Boat Adventure in Miami! Join us for an unforgettable 3+ hour party boat experience on the stunning waters of Miami! - Capacity: Up to 40 guests - Cruise the Bay: Enjoy a scenic ride through the beautiful Miami Bay. - Island Stop: Swim, take pictures, and relax on a private island. - Complimentary Water Toys: Have fun with our floating trampoline, paddle board, and water mat. - Onboard Amenities: Bluetooth music system for your favorite tunes - Cooler stocked with ice, water, and soft drinks - Snacks including chips to keep you energized Add-Ons: - Jet Skis: Speed through the waves and experience the thrill of jet skiing. - Jet Cars: Take your adventure to the next level with our exciting jet car rides. Perfect For: - Birthdays - Bachelorette/Bachelor parties - Family outings - Corporate events Why Choose Us? - Experienced crew dedicated to ensuring your safety and enjoyment. - Flexible booking options to suit your schedule. - A unique way to experience the vibrant waters of Miami with friends and family. Book Your Adventure Today! Don't miss out on this incredible experience. Reserve your spot now and get ready to make unforgettable memories on the water in Miami! For more details or to book your activity, please contact us at [305.990.2192]. Let's set sail for a day filled with fun and adventure!",
+        "detailsText": "Party Boat 📍Please come to Bill bird Marina: 10800 Collins Ave Miami Fl, 33154 📍Everyone MUST brings photo ID and method of payment 📍Please walk through the building once you arrive at “Bill Bird Marina” and wait by the sea wall. Party Boat 📍Please come to Bill bird Marina: 10800 Collins Ave Miami Fl, 33154 📍Everyone MUST brings photo ID and method of payment 📍Please walk through the building once you arrive at “Bill Bird Marina” and wait by the sea wall. Up to 40 Guests! Up to 40 Guests!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "625274",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/625274/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 60 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "107989",
+    "company": "southfloridatrikketours",
+    "title": "Everglades Airboat Adventure + FREE 2 HOURS with Rentals.",
+    "operator": "South Florida Trikke Tours",
+    "publicPath": "/destinations/florida/miami-beach/tours/everglades-airboat-adventure-free-2-hours-with-rentals-107989",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Art Deco buildings in the financial district are what guests are taken to see. The booking is an airboat trip in the Florida Everglades. After the ride there is a short wildlife talk that includes rescued alligators. Count on about 2 hours, including the ride to the park and back.",
+      "The airboat is the reason for the day. The coach is only the way there and back. The commentary takes up Art Deco District and Everglades National Park. That same account stays with Florida Everglades and South Beach's Art Deco."
+    ],
+    "schemaDescription": "A 4.5-hour airboat outing with South Florida Trikke Tours in Miami Beach. The outing passes Everglades National Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4.5-hour harbor outing in Miami Beach",
+      "Everglades National Park"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/t10LSbZvTt6s2EsIDFhn"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/DokRtLLrSNiXv03swq6F",
+    "wordCount": 90,
+    "durationLabel": "4.5 hours",
+    "durationIso": "PT4H30M",
+    "meetingLocation": "233 14th Street Miami Beach, FL 33139",
+    "visiblePriceLabel": "From $69",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$69"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 3-12",
+        "amountLabel": "$59"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "69.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 2155,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 2155 reviews on GET https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/107989/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Street Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/DokRtLLrSNiXv03swq6F",
+      "heroHandle": "DokRtLLrSNiXv03swq6F",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/t10LSbZvTt6s2EsIDFhn",
+          "handle": "t10LSbZvTt6s2EsIDFhn",
+          "pixelSha256": "0643f8e82f2b11557036a060572c100e313decb3864f40ea2054fcda36b5d3b1",
+          "differenceHashDistanceFromHero": 109,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.2634,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/t10LSbZvTt6s2EsIDFhn",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/southfloridatrikketours-107989",
+      "fetchedAt": "2026-10-03T18:10:19.600926+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/107989/content/",
+          "status": 200,
+          "bytes": 3990,
+          "sha256": "6a8c7d5d1012819f0c63a014de21f845c2c94cb36b396dd3d4f4dd2042f1a339"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/107989/structured-description/",
+          "status": 200,
+          "bytes": 2150,
+          "sha256": "0c84bf87e488dfa9da9af72896146e62d1646e169dc33194fa761dc6a15117e2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/107989/",
+          "status": 200,
+          "bytes": 17795,
+          "sha256": "05c9563057d776a8c2477695fc69b99f9ac0fce21d5d224bc65ba9ae6c0b82c7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/southfloridatrikketours/price-preview/per-item/v2/?asn=fhdn&item_pks=107989&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 649,
+          "sha256": "ce67df2a2d4b35139c0b00b32e3935862201098234da05c2e2e4d303267bbdd0"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/107989/ratings/",
+          "status": 200,
+          "bytes": 603,
+          "sha256": "ad2fc7c93990b3cd6b4e7cd44d95e7bc9c95a38e0cfc6a7d3dbaa526fc83cc4a"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 13+",
+          "amount": 69.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 13+",
+            "amount": 69.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 3-12",
+            "amount": 59.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:15:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4.5 hours",
+        "meetingAddress": "233 14th Street Miami Beach, FL 33139",
+        "itemLocation": "233 14th Street Miami Beach, FL 33139",
+        "headline": "4.5 Hours · Includes Alligator Show · See Birds, Snakes and Various Reptiles",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "4.5 hours Go from the Art Deco District to the Everglades National Park on this 4.5-hour entertaining and educational guided tour.",
+          "Learn about the flora and fauna of the Everglades from the guide on this 4.5-hour tour."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Art Deco District",
+          "South Beach",
+          "South Beach's Art Deco"
+        ],
+        "measures": [
+          "4.5 hours"
+        ],
+        "description": "See the wildlife including alligators Show, birds, snakes and various reptiles. 4.5 hours Go from the Art Deco District to the Everglades National Park on this 4.5-hour entertaining and educational guided tour. Leave wild South Beach behind for another kind of wild: flora- and fauna-loaded Florida Everglades. See alligators, turtles and all manner of birds in their natural habitat. Meet in the middle of South Beach's Art Deco district and then get whisked out of Miami to the wild Everglades. Learn about the flora and fauna of the Everglades from the guide on this 4.5-hour tour. Once there, hop on an airboat and skim the water, zipping around a 1.5-million-acre subtropical ecosystem. See indigenous wildlife including alligators, birds, snakes and various reptiles before heading to an alligator farm, an area that is literally crawling with the continent's largest reptiles. See caimans, crocodiles and other species and learn the difference between them. You will also learn about how the ancient American-Indian captured alligators. Finally, make the comfortable drive back to Miami, getting dropped off where the tour began. Remember that you have 2 FREE hours with any rentals.",
+        "detailsText": "Please be at the shop 15 minutes before your tour starting time. For your security, at check-in you are required to present the credit card that was used to pay for your booking and matching valid photo identification. The name listed on your credit card must be identical to the contact name listed on your booking. Departure location Miami Beach Bike Rental Shop 233 14th Street Miami Beach, FL 33139 Tours run rain or shine. Instances of severe weather will be addressed on the day of the program. Cancellation may only be cancelled 24 hours in advance for full refund. Welcome to South Beach! 4.5 Hours · Includes Alligator Show · See Birds, Snakes and Various Reptiles 4.5 Hours · Includes Alligator Show · See Birds, Snakes and Various Reptiles",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "107989",
+        "provider": "southfloridatrikketours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/southfloridatrikketours/items/107989/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "117385",
+    "company": "southfloridatrikketours",
+    "title": "Miami City and Boat Tour Combo Little Havana Included plus FREE 2 HOURS with Rentals.",
+    "operator": "South Florida Trikke Tours",
+    "publicPath": "/destinations/florida/miami-beach/tours/miami-city-and-boat-tour-combo-little-havana-included-plus-free-2-hours-with-rentals-117385",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Art Deco buildings in the financial district are what guests are taken to see. Guests ride a rented bike for the day. Time on the water is about 2 hours. The ride passes Art Deco District and Ocean Drive. Cyclists also come to Downtown Miami and Brickell Avenue.",
+      "South Beach and Calle Ocho are on the same loop. Later the route reaches Biscayne Bay and Fisher Island."
+    ],
+    "schemaDescription": "A harbor outing with South Florida Trikke Tours on Miami Beach Harbor. The sail passes Fisher Island, Star Island, and South Pointe Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Fisher Island and Star Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/71gYJqsRQ9iUpTexLCIz"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/DYYUaSQ1usrWWUcOQMwA",
+    "wordCount": 67,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "233 14th Street Miami Beach, FL 33139",
+    "visiblePriceLabel": "From $89",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$89"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 3-12",
+        "amountLabel": "$79"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "89.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 2155,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 2155 reviews on GET https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/117385/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Street Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/DYYUaSQ1usrWWUcOQMwA",
+      "heroHandle": "DYYUaSQ1usrWWUcOQMwA",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/71gYJqsRQ9iUpTexLCIz",
+          "handle": "71gYJqsRQ9iUpTexLCIz",
+          "pixelSha256": "f766fdaa34ad00408b08a728dc8eea7c2ad17a90bee192466e3dc294d799ac64",
+          "differenceHashDistanceFromHero": 119,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.3152,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/71gYJqsRQ9iUpTexLCIz",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/southfloridatrikketours-117385",
+      "fetchedAt": "2026-10-03T18:10:19.659283+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/117385/content/",
+          "status": 200,
+          "bytes": 4351,
+          "sha256": "12166e4d0a946c1dcfbe7eef5c3f0d8834105b2b63fd8a735da393dfe4615d39"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/117385/structured-description/",
+          "status": 200,
+          "bytes": 2435,
+          "sha256": "41fa63b5f08827c1378567321a471dbcdd81538fed718f735571c0906e4177ac"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/117385/",
+          "status": 200,
+          "bytes": 18258,
+          "sha256": "103f0cf2aa9fc6a7fe0ca9cf40a1fe5e813c0038929a1e3d15442b887c667025"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/southfloridatrikketours/price-preview/per-item/v2/?asn=fhdn&item_pks=117385&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 649,
+          "sha256": "81b25d7c7dca8e150cd1bd962cc76a78167a097b18abb9acd67c0a6e154e691a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/117385/ratings/",
+          "status": 200,
+          "bytes": 631,
+          "sha256": "ef22d1a01f1fd9ab442ec26739b218ed798c438346de4407006145e66734a7fd"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 13+",
+          "amount": 89.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 13+",
+            "amount": 89.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 3-12",
+            "amount": 79.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "233 14th Street Miami Beach, FL 33139",
+        "itemLocation": "233 14th Street Miami Beach, FL 33139",
+        "headline": "Explore Miami through land and water on this all day combo experience.",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Purchase beverages and light snacks on board during the 90-minute cruise."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Art Deco District",
+          "Downtown Miami",
+          "Little Havana",
+          "South Beach",
+          "Biscayne Bay",
+          "Fisher Island",
+          "Miami Beach",
+          "Versace Mansion"
+        ],
+        "measures": [
+          "3 hours"
+        ],
+        "description": "Including the Art Deco District, Ocean Drive, Downtown Miami, Brickell Avenue, Little Havana, This tour lasts between three and eight hours depending on the amount hop on to Discover and hop off to explore. See Miami from a totally different and refreshing perspective, from the water. This fun four-hour city tour and boat cruise takes you through the streets of the dynamic city, and through the waters around it. Learn about the History of Miami, and get a great glance of this magical city. After the cruise, enjoy the complimentary 3 hours bike rental to explore South Beach on any date of your choosing. Start by getting picked up at our shop in South Beach, or at our shop, and ride around town in a comfortable air-conditioned bus. See some of the most scenic spots, including the Art Deco District, Ocean Drive, Downtown Miami, Brickell Avenue, Little Havana, and Calle Ocho. After exploring the city by land, hit the water with a fully narrated sightseeing boat cruise. Cruise through Biscayne Bay, see the Downtown Miami skyline, the Port of Miami, Fisher Island, and Millionaire's Row. Purchase beverages and light snacks on board during the 90-minute cruise. Finally, explore South Beach by bicycle, an excellent way to see Miami Beach even further. Ride through glamorous SoBe, and experience a tropical paradise. Ride past the Versace Mansion, Star Island, the vibrant Lincoln Road outdoor mall, Ocean Drive and the Art Deco District, South Pointe Park and more.",
+        "detailsText": "Please be at the shop 15 minutes before your tour starting time. For your security, at check-in you are required to present the credit card that was used to pay for your booking and matching valid photo identification. The name listed on your credit card must be identical to the contact name listed on your booking. Departure location Miami Beach Bike Rental Shop 233 14th Street Miami Beach, FL 33139 Tours run rain or shine. Instances of severe weather will be addressed on the day of the program. Cancellation may only be cancelled 24 hours in advance for full refund. Welcome to South Beach! Explore Miami through land and water on this all day combo experience. Explore Miami through land and water on this all day combo experience.",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "117385",
+        "provider": "southfloridatrikketours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/southfloridatrikketours/items/117385/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "293969",
+    "company": "southfloridatrikketours",
+    "title": "Miami Millionaire's Row Cruiser Tour + FREE 2 HOURS with Rentals.",
+    "operator": "South Florida Trikke Tours",
+    "publicPath": "/destinations/florida/miami-beach/tours/miami-millionaires-row-cruiser-tour-free-2-hours-with-rentals-293969",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator South Florida Trikke Tours lists this outing."
+    ],
+    "schemaDescription": "The operator South Florida Trikke Tours lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ex66XNvlRJOOfodQEVgz"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/ytIU3mvDQf2WI9DqDbNY",
+    "wordCount": 9,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "233 14th Street Miami Beach, FL 33139",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 2155,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 2155 reviews on GET https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/293969/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Street Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ytIU3mvDQf2WI9DqDbNY",
+      "heroHandle": "ytIU3mvDQf2WI9DqDbNY",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ex66XNvlRJOOfodQEVgz",
+          "handle": "ex66XNvlRJOOfodQEVgz",
+          "pixelSha256": "040767652fa8bf5582faeea18581e65187398b46899e9370df04e75cda49913a",
+          "differenceHashDistanceFromHero": 125,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.30678,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ex66XNvlRJOOfodQEVgz",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/southfloridatrikketours-293969",
+      "fetchedAt": "2026-10-03T18:10:19.717507+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/293969/content/",
+          "status": 200,
+          "bytes": 2908,
+          "sha256": "831c8eb3e9f60b1e7928dd062e915b9df5682e02f5bec5a151a7f26adfeb4ec9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/293969/structured-description/",
+          "status": 200,
+          "bytes": 1471,
+          "sha256": "62416df7d1e3e09ba00a6ae10ef42d3d39e8faf3deee12461b1b604e1bad1c12"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/293969/",
+          "status": 200,
+          "bytes": 14293,
+          "sha256": "a83c905bd0dd9d016acee73a71e6b0ce384de20812aa132ee62b2cb200ce0a38"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/southfloridatrikketours/price-preview/per-item/v2/?asn=fhdn&item_pks=293969&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 658,
+          "sha256": "674977331fa22ec340a05fa151287b6dc2ecbdea61b6bccfafedc6b0e17a3c18"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/293969/ratings/",
+          "status": 200,
+          "bytes": 611,
+          "sha256": "54d5feb79ff5f2e51bdb8604efc94329c88ea80303969634ea2ff332d05b28c0"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1.5 hours",
+        "meetingAddress": "233 14th Street Miami Beach, FL 33139",
+        "itemLocation": "233 14th Street Miami Beach, FL 33139",
+        "headline": "1.5 hours • All Ages",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Biscayne Bay"
+        ],
+        "measures": [
+          "1.5 hours"
+        ],
+        "description": "1.5 hours Explore the lap of luxury with our Millionaire's Row boat tour in Miami. Cruise along Biscayne Bay, guided by local experts who unveil the lavish estates of the rich and famous, known as Millionaire's Row. Marvel at opulent mansions, celebrity homes, and the stunning Miami skyline. Depart at your convenience, and let the shimmering waters be the backdrop to a tour that combines elegance, history, and the allure of Miami's elite. Join us for an unforgettable voyage through the city's most exclusive waterfront residences.",
+        "detailsText": "Departure location Miami Beach Bike Rental Shop 233 14th Street Miami Beach, FL 33139 Tours run rain or shine. Instances of severe weather will be addressed on the day of the tour. -Cancellation: The tour may be cancelled 24 hours in advance for full refund.Please be at the shop 15 minutes before your starting time. For your security, at check-in you are required to present the credit card that was used to pay for your booking and matching valid photo identification. The name listed on your credit card must be identical to the contact name listed on your booking. 1.5 hours • All Ages 1.5 hours • All Ages",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "293969",
+        "provider": "southfloridatrikketours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/southfloridatrikketours/items/293969/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "297478",
+    "company": "southfloridatrikketours",
+    "title": "Everglades Airboat and Millionaire's Row Cruiser Tour Combo + FREE 2 HOURS with Rentals.",
+    "operator": "South Florida Trikke Tours",
+    "publicPath": "/destinations/florida/miami-beach/tours/everglades-airboat-and-millionaires-row-cruiser-tour-combo-free-2-hours-with-rentals-297478",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The booking is an airboat trip in the Florida Everglades. After the ride there is a short wildlife talk that includes rescued alligators. Count on about 2 hours, including the ride to the park and back. The airboat is the reason for the day. The coach is only the way there and back.",
+      "Time on the water is about 2 hours. The route also reaches Bayside Marketplace and Biscayne Bay. Downtown Miami and Star Island are part of the same outing."
+    ],
+    "schemaDescription": "A airboat outing with South Florida Trikke Tours in Miami Beach. The outing passes Star Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Star Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/hp2VsKm3SWIQOMXDSbDk"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/h2YQcb7tTs6Md5MWUmkZ",
+    "wordCount": 81,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "233 14th Street Miami Beach, FL 33139",
+    "visiblePriceLabel": "From $119",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$119"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 3-12",
+        "amountLabel": "$109"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "119.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 2155,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 2155 reviews on GET https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/297478/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Street Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Street Miami Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/h2YQcb7tTs6Md5MWUmkZ",
+      "heroHandle": "h2YQcb7tTs6Md5MWUmkZ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/hp2VsKm3SWIQOMXDSbDk",
+          "handle": "hp2VsKm3SWIQOMXDSbDk",
+          "pixelSha256": "a5f54ce9bb75cca390023cbc8f50cadf11a66efb206376bd5fb6abd50f2dac5b",
+          "differenceHashDistanceFromHero": 146,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26452,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/hp2VsKm3SWIQOMXDSbDk",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/southfloridatrikketours-297478",
+      "fetchedAt": "2026-10-03T18:10:19.775814+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/297478/content/",
+          "status": 200,
+          "bytes": 3583,
+          "sha256": "3b7eed799f7e3523e4aa49f39e7ad0546410f0ce09c35af282477c2fffd50510"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/297478/structured-description/",
+          "status": 200,
+          "bytes": 2096,
+          "sha256": "911955b494f1b069fd5ac8bc55101b53d81146d48da76f7ba6f77bc22f29d8f6"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/297478/",
+          "status": 200,
+          "bytes": 15659,
+          "sha256": "0411d27aa639632eeb1b312e0852fb7cc3b7318249a7d31d871f88edeecec2af"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/southfloridatrikketours/price-preview/per-item/v2/?asn=fhdn&item_pks=297478&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 653,
+          "sha256": "f04c49015c4af5543b130181a5c6a285c039ba64f875f990cee10166a86ee537"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/297478/ratings/",
+          "status": 200,
+          "bytes": 634,
+          "sha256": "b5032a30780db2beed48254228a114aebca9585c5df552051f7b462e61b5e4d3"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 13+",
+          "amount": 119.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 13+",
+            "amount": 119.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 3-12",
+            "amount": 109.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:15:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "233 14th Street Miami Beach, FL 33139",
+        "itemLocation": "233 14th Street Miami Beach, FL 33139",
+        "headline": "This Combo can be done in two days one tour each day.",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Florida Everglades",
+          "Miami Beach",
+          "Biscayne Bay",
+          "Downtown Miami",
+          "Star Island"
+        ],
+        "measures": [],
+        "description": "Embark on a dual adventure like no other with our exclusive combo tour that seamlessly blends the untamed beauty of the Everglades and the opulence of Millionaire's Row. Begin your day with the thrill of our guided tour to the Florida Everglades, where you'll encounter alligators, turtles, and diverse birdlife in their natural habitat. Feel the rush as you skim the waters on an airboat through this expansive 1.5-million-acre subtropical ecosystem. In the afternoon, return to the vibrant pulse of Miami Beach and let us transport you to the Marina at Bayside Marketplace. Board our cruise to delve into the glamour of Millionaire's Row, treating your senses to the islands, Biscayne Bay, Downtown Miami, and Star Island during a mesmerizing 90-minute boat tour. As the day concludes, our convenient transportation will whisk you back to our store in Miami Beach. For the ultimate Miami experience, choose this two-tour combo, available for an action-packed single day or spread across two days. Revel in the diversity of Miami's landscapes, creating memories that resonate with both thrilling wildlife encounters and the allure of waterfront luxury. Rates",
+        "detailsText": "Please be at the shop 15 minutes before your tour starting time. For your security, at check-in you are required to present the credit card that was used to pay for your booking and matching valid photo identification. The name listed on your credit card must be identical to the contact name listed on your booking. Departure location Miami Beach Bike Rental Shop 233 14th street Miami Beach, FL 33139 Tours run rain or shine. Instances of severe weather will be addressed on the day of the program. Cancellation may only be cancelled 24 hours in advance for full refund. Welcome to South Beach! This Combo can be done in two days one tour each day. This Combo can be done in two days one tour each day.",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "297478",
+        "provider": "southfloridatrikketours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/southfloridatrikketours/items/297478/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "176702",
+    "company": "us2u",
+    "title": "Key West Tour with Dolphin Spotting Boat from Miami",
+    "operator": "US2U",
+    "publicPath": "/destinations/florida/miami-beach/tours/key-west-tour-with-dolphin-spotting-boat-from-miami-176702",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "From the water, guests see Overseas Highway and Miami Ca. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A 14-hour harbor outing with US2U on Miami Beach Harbor.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "14-hour harbor outing in Miami Beach",
+      "Refreshments on the boat"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ghxzLhlSmGjaZLqIZ3JV"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/Urj6Sb5jR2qmdDnXq5cQ",
+    "wordCount": 63,
+    "durationLabel": "14 hours",
+    "durationIso": "PT14H",
+    "meetingLocation": "700 Collins Avenue Miami Beach, FL 33139",
+    "visiblePriceLabel": "From $199",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18-100",
+        "amountLabel": "$199"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 2-17",
+        "amountLabel": "$199"
+      },
+      {
+        "label": "Infant",
+        "note": "Ages 0-1",
+        "amountLabel": "$199"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "199.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 3.7,
+      "reviewCount": 383,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 3.7 from 383 reviews on GET https://fareharbor.com/api/v1/companies/us2u/items/176702/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Collins Avenue Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Collins Avenue Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Urj6Sb5jR2qmdDnXq5cQ",
+      "heroHandle": "Urj6Sb5jR2qmdDnXq5cQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ghxzLhlSmGjaZLqIZ3JV",
+          "handle": "ghxzLhlSmGjaZLqIZ3JV",
+          "pixelSha256": "137c7dc8944a78505eaec93595de2857a93bae89affd13e43eae6b6b6d81139e",
+          "differenceHashDistanceFromHero": 123,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26548,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ghxzLhlSmGjaZLqIZ3JV",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/us2u-176702",
+      "fetchedAt": "2026-10-03T18:10:21.741331+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/us2u/176702/content/",
+          "status": 200,
+          "bytes": 3097,
+          "sha256": "30de1fcfc6561c729977f892790ca9f64622fd7ccb31bac98f2bb4e7a3d3c027"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/us2u/176702/structured-description/",
+          "status": 200,
+          "bytes": 2947,
+          "sha256": "89653c2b1abd116ae97ebf71ef9bc9d13bbda113f3d042e53d7204f4b6ac21e1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/us2u/items/176702/",
+          "status": 200,
+          "bytes": 13582,
+          "sha256": "9ae30a82d4977d66037f2a8f9295b4a4447e7296e3cb9a5337c4a2563abe26f7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/us2u/price-preview/per-item/v2/?asn=fhdn&item_pks=176702&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 787,
+          "sha256": "aeb97a9d7433a26df2e6586f699fd0b5808c0cde9f2556a91921ac23dce2d99c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/us2u/items/176702/ratings/",
+          "status": 200,
+          "bytes": 594,
+          "sha256": "f770731faf3207e20afc27ebc9b9955ddde0106c740d290baf6d3c5038bef84b"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 18-100",
+          "amount": 199.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 18-100",
+            "amount": 199.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 2-17",
+            "amount": 199.0
+          },
+          {
+            "singular": "Infant",
+            "note": "Ages 0-1",
+            "amount": 199.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T05:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "14 hours",
+        "meetingAddress": "700 Collins Avenue Miami Beach, FL 33139",
+        "itemLocation": "Miami Beach",
+        "headline": "Enjoy the Florida Keys for a day",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Up to 49 guests",
+        "included": [
+          "Boat tour from Key West to spot dolphins",
+          "Refreshments on the boat",
+          "Free time to explore Key West"
+        ],
+        "excluded": [
+          "Tips"
+        ],
+        "itinerary": [
+          "Ca. 6.30AM bus departure from select Miami meeting points",
+          "Ca. 11.30AM arrival in Key West depending on traffic",
+          "Dolphin spotting boat tour",
+          "Ca. 5.30PM bus departure back to Miami",
+          "Ca. 9.00PM arrival in Miami depending on traffic"
+        ],
+        "routeNotes": [
+          "1. Ca. 6.30AM bus departure from select Miami meeting points 2. Ca. 11.30AM arrival in Key West depending on traffic 3. Dolphin spotting boat tour 4. Ca. 2 hours free time to explore Key West on your own 5. Ca. 5.30PM bus departure back to Miami 6. Ca. 9.00PM arrival in Miami depending on traffic"
+        ],
+        "highlights": [
+          "Visit Key West from Miami in one day",
+          "Spot dolphins in their natural habitat during the boat tour",
+          "Soak in the sun on the boat deck"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Sunscreen"
+        ],
+        "cancellation": "Cancel for free up to 24 hours before departure",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Key West",
+          "Overseas Highway",
+          "Key West's"
+        ],
+        "measures": [],
+        "description": "Travel from Miami to Key West on a scenic, full-day excursion that blends urban highlights with coastal beauty. Enjoy a comfortable coach journey along the Overseas Highway, watch for dolphins on a guided boat tour, and spend leisurely free time wandering Key West's colorful streets, sampling seafood, and soaking up the island atmosphere. This curated day trip is designed for relaxation and discovery, offering photo-ready views, marine wildlife sightings, and the freedom to explore Key West at your own pace.",
+        "detailsText": "Meet at 700 Collins Avenue, Miami Beach, FL 33139. Pick up is provided from any Miami Beach hotel along 7500 to 600 Collins Avenue or at 340 Biscayne Boulevard in Downtown Miami. Meet at 700 Collins Avenue, Miami Beach, FL 33139. Pick up is provided from any Miami Beach hotel along 7500 to 600 Collins Avenue or at 340 Biscayne Boulevard in Downtown Miami. Full-day coach trip from Miami to Key West with a dolphin-spotting boat tour and free time to explore the island. Enjoy the Florida Keys for a day",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "176702",
+        "provider": "us2u",
+        "bookingUrl": "https://fareharbor.com/embeds/book/us2u/items/176702/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "81627",
+    "company": "us2u",
+    "title": "Everglades Airboat and Wildlife Sanctuary with round-trip transportation",
+    "operator": "US2U",
+    "publicPath": "/destinations/florida/miami-beach/tours/everglades-airboat-and-wildlife-sanctuary-with-round-trip-transportation-81627",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The booking is an airboat trip in the Florida Everglades. A coach takes the group from Miami out to the wetlands and back again. The airboat portion is guided, and the boat is mostly covered. A park ranger leads the boat and talks about the wetlands.",
+      "After the ride there is a short wildlife talk that includes rescued alligators. Guests then have time to walk the park exhibits. A snack bar and a souvenir shop are on the same grounds. Which animals appear depends on the season, and nothing is promised.",
+      "The airboat is the reason for the day. The coach is only the way there and back."
+    ],
+    "schemaDescription": "A 5-hour airboat outing with US2U in Miami Beach.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "5-hour harbor outing in Miami Beach",
+      "Groups are capped at 45"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/o8pXwQ4QmGGqBPp5auMg"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/wt9N5qVvQEWdWNkdZsQw",
+    "wordCount": 108,
+    "durationLabel": "5 hours",
+    "durationIso": "PT5H",
+    "meetingLocation": "700 Collins Avenue Miami Beach, FL 33139",
+    "visiblePriceLabel": "From $79",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18-100",
+        "amountLabel": "$79"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 2-17",
+        "amountLabel": "$79"
+      },
+      {
+        "label": "Infant",
+        "note": "Ages 0-1",
+        "amountLabel": "$79"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "79.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 3.7,
+      "reviewCount": 383,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 3.7 from 383 reviews on GET https://fareharbor.com/api/v1/companies/us2u/items/81627/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Collins Avenue Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Collins Avenue Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/wt9N5qVvQEWdWNkdZsQw",
+      "heroHandle": "wt9N5qVvQEWdWNkdZsQw",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/o8pXwQ4QmGGqBPp5auMg",
+          "handle": "o8pXwQ4QmGGqBPp5auMg",
+          "pixelSha256": "4063c465daf1bcea073313bb47034df8d93a915d1a6e1331178911a90078705a",
+          "differenceHashDistanceFromHero": 129,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.21723,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/o8pXwQ4QmGGqBPp5auMg",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/us2u-81627",
+      "fetchedAt": "2026-10-03T18:10:21.795748+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/us2u/81627/content/",
+          "status": 200,
+          "bytes": 4512,
+          "sha256": "12db4e3f4f0c652337ee234edd14e1aa90520d886cbf1bab8d68238e4011066e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/us2u/81627/structured-description/",
+          "status": 200,
+          "bytes": 4250,
+          "sha256": "03858ceaa116f488b7f6cd31ebe7f56143e33d6701d2cf6601a88ece3f2081d3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/us2u/items/81627/",
+          "status": 200,
+          "bytes": 12356,
+          "sha256": "a04206027bfd8e472eac7f7b5b44ec4f83db380cb5c17c7b395416d6288f191e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/us2u/price-preview/per-item/v2/?asn=fhdn&item_pks=81627&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 782,
+          "sha256": "2c01ee192d9b4c5cbbf99bb01a4026b1012ac98cbccdbae50857f3b36201c3b9"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/us2u/items/81627/ratings/",
+          "status": 200,
+          "bytes": 613,
+          "sha256": "4c41fef8e31c1038c7c5865ead2437e71f6ee23d2f6c660afb4359de548bdb6c"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 18-100",
+          "amount": 79.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 18-100",
+            "amount": 79.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 2-17",
+            "amount": 79.0
+          },
+          {
+            "singular": "Infant",
+            "note": "Ages 0-1",
+            "amount": 79.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:15:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "5 hours",
+        "meetingAddress": "700 Collins Avenue Miami Beach, FL 33139",
+        "itemLocation": "including pickup from Miami Beach",
+        "headline": "Discover the Everglades from Miami.",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": 99,
+        "groupSize": "Up to 45 guests",
+        "included": [
+          "Guided mostly covered airboat tour led by a local park ranger",
+          "Brief wildlife presentation with up-close rescued alligator encounters",
+          "Free time to visit park exhibits, snack bar, and souvenir shop"
+        ],
+        "excluded": [
+          "Gratuities"
+        ],
+        "itinerary": [
+          "Ca. 50-90 minute bus transfer to the Everglades depending on traffic and pick-up location",
+          "Ca. 45 minute airboat ride",
+          "Brief wildlife presentation and introduction at the sanctuary",
+          "Ca. 45-60 minute free time to explore exhibits, snack bar, souvenir shop and restrooms",
+          "Ca. 50-90 minute bus transfer back to Miami"
+        ],
+        "routeNotes": [
+          "1. Pick up from selected meeting point by bus 2. Ca. 50-90 minute bus transfer to the Everglades depending on traffic and pick-up location 3. Ca. 45 minute airboat ride 4. Brief wildlife presentation and introduction at the sanctuary 5. Ca. 45-60 minute free time to explore exhibits, snack bar, souvenir shop and restrooms 6. Ca. 50-90 minute bus transfer back to Miami 7. Return to your original tour starting point"
+        ],
+        "highlights": [
+          "Guided airboat safari led by a local park ranger",
+          "Educational wildlife presentation with rescued alligator encounters",
+          "Opportunity to spot native wildlife and exotic birds in their natural habitat",
+          "Free time to explore park exhibits, snack bar, and souvenirs",
+          "Airboats may be covered for sun and weather protection and vary in size depending on group size from 12 to 30 guests"
+        ],
+        "restrictions": [
+          "Most airboats are covered for sun, rain and lightning protection",
+          "The Everglades are a natural ecosystem; wildlife sightings are not guaranteed and captive animals on-site are rescues under government care"
+        ],
+        "bring": [
+          "Closed-toe shoes (sneakers recommended)",
+          "Sunscreen",
+          "Sunglasses"
+        ],
+        "cancellation": "Full refund if canceled at least 24 hours in advance",
+        "accessibility": null,
+        "languages": [
+          "English"
+        ],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Miami Beach"
+        ],
+        "measures": [],
+        "description": "Embark on a seamless adventure from Miami Beach or downtown Miami aboard a climate-controlled coach to the Florida Everglades. Enjoy a guided, mostly covered airboat tour led by a local park ranger who shares insights into the wetlands and points out native wildlife and birds. Experience a brief, educational wildlife presentation featuring rescued alligators, then relax with free time to explore park exhibits, visit the snack bar, or shop for souvenirs before returning to Miami. Wildlife sightings vary with seasonal conditions.",
+        "detailsText": "Wait outside on the street sidewalk at your selected meeting point at your scheduled pickup time. Bus arrival may vary within a 15-minute window; pickup runs north to south. Travel time to the Everglades is 75-100 minutes each way depending on traffic. Arrive at your meeting point about 10 minutes early for scheduled pickup. Wait outside on the street sidewalk at your selected meeting point at your scheduled pickup time. Bus arrival may vary within a 15-minute window; pickup runs north to south. Travel time to the Everglades is 75-100 minutes each way depending on traffic. Arrive at your meeting point about 10 minutes early for scheduled pickup. Round-trip bus transfer from Miami to the Everglades with a guided, mostly covered airboat tour, wildlife presentation, and free time at the sanctuary Discover the Everglades from Miami.",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "81627",
+        "provider": "us2u",
+        "bookingUrl": "https://fareharbor.com/embeds/book/us2u/items/81627/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "81669",
+    "company": "us2u",
+    "title": "Key West Tour with Snorkel Boat from Miami",
+    "operator": "US2U",
+    "publicPath": "/destinations/florida/miami-beach/tours/key-west-tour-with-snorkel-boat-from-miami-81669",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "A few optional stops leave time to step out for photographs and a closer look. The route also reaches Mallory Square and Southernmost Point. Key West Ca and Miami Ca are part of the same outing. Later the group comes to Florida Keys."
+    ],
+    "schemaDescription": "A 15-hour harbor outing with US2U on Miami Beach Harbor. The sail passes Seven Mile Bridge and Mallory Square.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "15-hour harbor outing in Miami Beach",
+      "Seven Mile Bridge and Mallory Square",
+      "Basic snorkel gear"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/l8XgSOZURCQWNL6Pwyxx"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/ny1IR7ZiTWaZX6LxM49I",
+    "wordCount": 43,
+    "durationLabel": "15 hours",
+    "durationIso": "PT15H",
+    "meetingLocation": "700 Collins Avenue Miami Beach, FL 33139",
+    "visiblePriceLabel": "From $169",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18-100",
+        "amountLabel": "$169"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 2-17",
+        "amountLabel": "$169"
+      },
+      {
+        "label": "Infant",
+        "note": "Ages 0-1",
+        "amountLabel": "$169"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "169.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 3.7,
+      "reviewCount": 383,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 3.7 from 383 reviews on GET https://fareharbor.com/api/v1/companies/us2u/items/81669/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami Beach",
+      "state": "Florida",
+      "citySlug": "miami-beach",
+      "stateSlug": "florida",
+      "reason": "Miami Beach, Florida belongs to the Miami Beach area via meeting_point",
+      "place": {
+        "city": "Miami Beach",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami-beach",
+        "stateSlug": "florida",
+        "raw": "Collins Avenue Miami Beach, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami-beach",
+          "stateSlug": "florida",
+          "raw": "Collins Avenue Miami Beach, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ny1IR7ZiTWaZX6LxM49I",
+      "heroHandle": "ny1IR7ZiTWaZX6LxM49I",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/l8XgSOZURCQWNL6Pwyxx",
+          "handle": "l8XgSOZURCQWNL6Pwyxx",
+          "pixelSha256": "fde7614714777287982cb451b21d14151d7786231c4acb34882855e32c0eeac7",
+          "differenceHashDistanceFromHero": 120,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.1712,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/l8XgSOZURCQWNL6Pwyxx",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami-beach/us2u-81669",
+      "fetchedAt": "2026-10-03T18:10:21.949965+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/us2u/81669/content/",
+          "status": 200,
+          "bytes": 3314,
+          "sha256": "9e2d2220a516b015b469dc414499fde09157e1e9db24db1cf5501d334bf52a2f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/us2u/81669/structured-description/",
+          "status": 200,
+          "bytes": 3163,
+          "sha256": "7f466ec02c301e0d041e934861317c4c23c27755dcc20283df22d32ac572bb2c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/us2u/items/81669/",
+          "status": 200,
+          "bytes": 13602,
+          "sha256": "8c325ea5935cb3365718ead997f449651522190188f0a6d0ba89dd4814f0fdb2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/us2u/price-preview/per-item/v2/?asn=fhdn&item_pks=81669&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 786,
+          "sha256": "8f4c2a779caff836a981ac6dacf266fb0147248a4a71190fbf49b848e7a9bc0e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/us2u/items/81669/ratings/",
+          "status": 200,
+          "bytes": 583,
+          "sha256": "73d2848e7dec90beff3d2d7b3dbfe63d4613b51744d1b392099e4a046865bc1f"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 18-100",
+          "amount": 169.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 18-100",
+            "amount": 169.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 2-17",
+            "amount": 169.0
+          },
+          {
+            "singular": "Infant",
+            "note": "Ages 0-1",
+            "amount": 169.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T05:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "15 hours",
+        "meetingAddress": "700 Collins Avenue Miami Beach, FL 33139",
+        "itemLocation": null,
+        "headline": "Snorkel the warm waters of the Florida Keys",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "49",
+        "included": [
+          "Three-hour boat tour from Key West with a snorkel stop at the reef",
+          "Basic snorkel gear",
+          "Margaritas, wine and sodas provided after snorkeling",
+          "Approximately two hours of free time to explore Key West"
+        ],
+        "excluded": [
+          "Tips"
+        ],
+        "itinerary": [
+          "Ca. 6.30AM bus departure from select Miami meeting points",
+          "Ca. 11.30AM arrival in Key West",
+          "Ca. 3 hours snorkel tour by boat",
+          "Ca. 5.30PM bus departure back to Miami",
+          "Ca. 9.00 PM arrival in Miami depending on traffic"
+        ],
+        "routeNotes": [
+          "1. Ca. 6.30AM bus departure from select Miami meeting points 2. Ca. 11.30AM arrival in Key West 3. Ca. 3 hours snorkel tour by boat 4. Ca. 2 hours free time to explore Key West on your own 5. Ca. 5.30PM bus departure back to Miami 6. Ca. 9.00 PM arrival in Miami depending on traffic"
+        ],
+        "highlights": [
+          "Visit Key West from Miami in one day",
+          "Spot marine life in their natural habitat",
+          "Snorkel the turquoise waters of the Florida Keys with basic snorkel gear included"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Swimsuit",
+          "Towel",
+          "Sunscreen"
+        ],
+        "cancellation": "Cancel for free up to 24 hours before",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Key West",
+          "Seven Mile Bridge",
+          "Southernmost Point"
+        ],
+        "measures": [],
+        "description": "Leave the driving to the professionals and enjoy a full-day Miami to Key West adventure that highlights coastal vistas and the iconic Seven Mile Bridge along the Overseas Highway. After a scenic ride south toward the Caribbean, spend the afternoon in vibrant Key West with time to wander Mallory Square, snap a photo at the Southernmost Point buoy, or savor authentic Key lime pie. The experience combines sightseeing, snorkeling, and independent exploration for a sun-drenched tropical escape.",
+        "detailsText": "Pick up is provided from any Miami Beach hotel along 7500 to 600 Collins Avenue or at 340 Biscayne Boulevard in Downtown Miami. Meeting point listed as 700 Collins Avenue Miami Beach, FL 33139. Pick up is provided from any Miami Beach hotel along 7500 to 600 Collins Avenue or at 340 Biscayne Boulevard in Downtown Miami. Meeting point listed as 700 Collins Avenue Miami Beach, FL 33139. Full-day Miami to Key West trip with a 3-hour snorkel boat tour, basic snorkel gear, drinks after snorkeling and free time to explore Key West. Snorkel the warm waters of the Florida Keys",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "81669",
+        "provider": "us2u",
+        "bookingUrl": "https://fareharbor.com/embeds/book/us2u/items/81669/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

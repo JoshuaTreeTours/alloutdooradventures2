@@ -1,0 +1,47 @@
+{
+  "company": "us2u",
+  "itemId": "81627",
+  "fetchedAt": "2026-10-03T18:10:21.795748+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/us2u/81627/content/",
+      "status": 200,
+      "bytes": 4512,
+      "sha256": "12db4e3f4f0c652337ee234edd14e1aa90520d886cbf1bab8d68238e4011066e"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/us2u/81627/structured-description/",
+      "status": 200,
+      "bytes": 4250,
+      "sha256": "03858ceaa116f488b7f6cd31ebe7f56143e33d6701d2cf6601a88ece3f2081d3"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/us2u/items/81627/",
+      "status": 200,
+      "bytes": 12356,
+      "sha256": "a04206027bfd8e472eac7f7b5b44ec4f83db380cb5c17c7b395416d6288f191e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/us2u/price-preview/per-item/v2/?asn=fhdn&item_pks=81627&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 782,
+      "sha256": "2c01ee192d9b4c5cbbf99bb01a4026b1012ac98cbccdbae50857f3b36201c3b9"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/us2u/items/81627/ratings/",
+      "status": 200,
+      "bytes": 613,
+      "sha256": "4c41fef8e31c1038c7c5865ead2437e71f6ee23d2f6c660afb4359de548bdb6c"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "81627",
+    "provider": "us2u",
+    "bookingUrl": "https://fareharbor.com/embeds/book/us2u/items/81627/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

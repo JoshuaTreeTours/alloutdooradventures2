@@ -1,0 +1,222 @@
+{
+  "citySlug": "sarasota",
+  "total": 11,
+  "active": 3,
+  "terminal": 8,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 11,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "fishingsarasotaflorida",
+      "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+      "itemId": "680066",
+      "slug": "inshore-nearshore-fishing-charter-680066",
+      "publicPath": "/destinations/florida/sarasota/tours/inshore-nearshore-fishing-charter-680066",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588103
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fishingsarasotaflorida",
+      "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+      "itemId": "680075",
+      "slug": "lil-angler-fishing-680075",
+      "publicPath": "/destinations/florida/sarasota/tours/lil-angler-fishing-680075",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588103
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fishingsarasotaflorida",
+      "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+      "itemId": "680076",
+      "slug": "single-angler-fishing-enthusiast-680076",
+      "publicPath": "/destinations/florida/sarasota/tours/single-angler-fishing-enthusiast-680076",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588103
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fishingsarasotaflorida",
+      "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+      "itemId": "680083",
+      "slug": "eco-nature-tours-680083",
+      "publicPath": "/destinations/florida/sarasota/tours/eco-nature-tours-680083",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588103
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fishingsarasotaflorida",
+      "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+      "itemId": "680091",
+      "slug": "sandbar-shelling-excursion-680091",
+      "publicPath": "/destinations/florida/sarasota/tours/sandbar-shelling-excursion-680091",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588103
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fishingsarasotaflorida",
+      "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+      "itemId": "680092",
+      "slug": "lil-pirate-treasure-hunt-680092",
+      "publicPath": "/destinations/florida/sarasota/tours/lil-pirate-treasure-hunt-680092",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588103
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fishingsarasotaflorida",
+      "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+      "itemId": "680093",
+      "slug": "cheeseburger-in-sarasota-paradise-680093",
+      "publicPath": "/destinations/florida/sarasota/tours/cheeseburger-in-sarasota-paradise-680093",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588103
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaunderwatersports",
+      "operator": "Florida Underwater Sports",
+      "itemId": "430401",
+      "slug": "seahorse-safari-430401",
+      "publicPath": "/destinations/florida/sarasota/tours/seahorse-safari-430401",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gilliganstikitours",
+      "operator": "Gilligan's Tiki Tours",
+      "itemId": "579414",
+      "slug": "private-3-hour-island-sandbar-tiki-cruise-579414",
+      "publicPath": "/destinations/florida/sarasota/tours/private-3-hour-island-sandbar-tiki-cruise-579414",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1473,
+        "structuredStatus": 200,
+        "structuredBytes": 1297
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gulfwatertours",
+      "operator": "Gulf Water Tours",
+      "itemId": "527211",
+      "slug": "destination-andor-special-occasion-cruise-527211",
+      "publicPath": "/destinations/florida/sarasota/tours/destination-andor-special-occasion-cruise-527211",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2942,
+        "structuredStatus": 200,
+        "structuredBytes": 2700
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "surfitusa",
+      "operator": "SURFit USA",
+      "itemId": "688791",
+      "slug": "florida-springs-and-manatee-kayak-or-paddleboard-adventure-688791",
+      "publicPath": "/destinations/florida/sarasota/tours/florida-springs-and-manatee-kayak-or-paddleboard-adventure-688791",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8367,
+        "structuredStatus": 200,
+        "structuredBytes": 5355
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

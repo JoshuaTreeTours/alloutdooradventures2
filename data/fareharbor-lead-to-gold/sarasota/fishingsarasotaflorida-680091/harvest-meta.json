@@ -1,0 +1,48 @@
+{
+  "company": "fishingsarasotaflorida",
+  "itemId": "680091",
+  "fetchedAt": "2026-10-03T18:09:37.308663+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680091/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680091/structured-description/",
+      "status": 404,
+      "bytes": 588103,
+      "sha256": "612bc2caadc7256ffcffeab0d1f477fdaf5cf946210bae6e893f93d90f5f8150"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680091/",
+      "status": 404,
+      "bytes": 588077,
+      "sha256": "e7ca1f5141c95f289a18232894c926bcc7e4f47cdf535d4a1eeea5d2aa3d2924"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680091&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 146,
+      "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680091/ratings/",
+      "status": 404,
+      "bytes": 588093,
+      "sha256": "86ad8e674129b9c7f6cb2488b3510d314cecfef27dcc33c84b97266b2326a0b4"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "680091",
+    "provider": "fishingsarasotaflorida",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680091/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,51 @@
+{
+  "citySlug": "homestead",
+  "total": 2,
+  "active": 2,
+  "terminal": 0,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 2,
+  "inSitemap": 0,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "soflnps",
+      "operator": "South Florida National Park Service",
+      "itemId": "648246",
+      "slug": "journey-through-nine-mile-pond-nps-ranger-guided-canoe-adventure-648246",
+      "publicPath": "/destinations/florida/homestead/tours/journey-through-nine-mile-pond-nps-ranger-guided-canoe-adventure-648246",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6949,
+        "structuredStatus": 200,
+        "structuredBytes": 4160
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "soflnps",
+      "operator": "South Florida National Park Service",
+      "itemId": "648259",
+      "slug": "paddling-in-paradise-ranger-guided-kayaking-on-florida-bay-648259",
+      "publicPath": "/destinations/florida/homestead/tours/paddling-in-paradise-ranger-guided-kayaking-on-florida-bay-648259",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6765,
+        "structuredStatus": 200,
+        "structuredBytes": 4425
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

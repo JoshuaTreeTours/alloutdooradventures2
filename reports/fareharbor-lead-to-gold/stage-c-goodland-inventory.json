@@ -1,0 +1,583 @@
+{
+  "citySlug": "goodland",
+  "total": 30,
+  "active": 29,
+  "terminal": 1,
+  "priceAvailable": 24,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 29,
+  "inSitemap": 28,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "128312",
+      "slug": "sunset-eco-tour-128312",
+      "publicPath": "/destinations/florida/goodland/tours/sunset-eco-tour-128312",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9474,
+        "structuredStatus": 200,
+        "structuredBytes": 8286
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "154092",
+      "slug": "4-hour-shelling-tour-154092",
+      "publicPath": "/destinations/florida/goodland/tours/4-hour-shelling-tour-154092",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6616,
+        "structuredStatus": 200,
+        "structuredBytes": 4334
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "44195",
+      "slug": "marco-island-wildlife-sightseeing-and-shelling-tour-44195",
+      "publicPath": "/destinations/florida/goodland/tours/marco-island-wildlife-sightseeing-and-shelling-tour-44195",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10493,
+        "structuredStatus": 200,
+        "structuredBytes": 8277
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "44212",
+      "slug": "dolphin-tours-44212",
+      "publicPath": "/destinations/florida/goodland/tours/dolphin-tours-44212",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9853,
+        "structuredStatus": 200,
+        "structuredBytes": 8081
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "44214",
+      "slug": "3-hour-eco-tour-44214",
+      "publicPath": "/destinations/florida/goodland/tours/3-hour-eco-tour-44214",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10438,
+        "structuredStatus": 200,
+        "structuredBytes": 8848
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "490967",
+      "slug": "audubon-birding-tour-490967",
+      "publicPath": "/destinations/florida/goodland/tours/audubon-birding-tour-490967",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5202,
+        "structuredStatus": 200,
+        "structuredBytes": 2697
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "49231",
+      "slug": "private-wildlife-sightseeing-and-shelling-tour-49231",
+      "publicPath": "/destinations/florida/goodland/tours/private-wildlife-sightseeing-and-shelling-tour-49231",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10122,
+        "structuredStatus": 200,
+        "structuredBytes": 8473
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "525862",
+      "slug": "2-hour-private-tour-525862",
+      "publicPath": "/destinations/florida/goodland/tours/2-hour-private-tour-525862",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9682,
+        "structuredStatus": 200,
+        "structuredBytes": 8143
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "525864",
+      "slug": "3-hour-private-tour-525864",
+      "publicPath": "/destinations/florida/goodland/tours/3-hour-private-tour-525864",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9467,
+        "structuredStatus": 200,
+        "structuredBytes": 8143
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "525865",
+      "slug": "4-hour-private-tour-525865",
+      "publicPath": "/destinations/florida/goodland/tours/4-hour-private-tour-525865",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9785,
+        "structuredStatus": 200,
+        "structuredBytes": 8691
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "692761",
+      "slug": "3-hour-shelling-tour-692761",
+      "publicPath": "/destinations/florida/goodland/tours/3-hour-shelling-tour-692761",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10002,
+        "structuredStatus": 200,
+        "structuredBytes": 9126
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": false,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "76676",
+      "slug": "private-dolphin-tours-76676",
+      "publicPath": "/destinations/florida/goodland/tours/private-dolphin-tours-76676",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9944,
+        "structuredStatus": 200,
+        "structuredBytes": 8107
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "239475",
+      "slug": "island-paradise-dolphin-shelling-birding-eco-boat-tour-239475",
+      "publicPath": "/destinations/florida/goodland/tours/island-paradise-dolphin-shelling-birding-eco-boat-tour-239475",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2768,
+        "structuredStatus": 200,
+        "structuredBytes": 1493
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "239489",
+      "slug": "sand-bar-shelling-tour-239489",
+      "publicPath": "/destinations/florida/goodland/tours/sand-bar-shelling-tour-239489",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3388,
+        "structuredStatus": 200,
+        "structuredBytes": 2308
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "239507",
+      "slug": "barrier-island-shelling-tour-239507",
+      "publicPath": "/destinations/florida/goodland/tours/barrier-island-shelling-tour-239507",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2411,
+        "structuredStatus": 200,
+        "structuredBytes": 1245
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "239568",
+      "slug": "sunset-boat-tour-239568",
+      "publicPath": "/destinations/florida/goodland/tours/sunset-boat-tour-239568",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3204,
+        "structuredStatus": 200,
+        "structuredBytes": 1429
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "239574",
+      "slug": "best-of-marco-dolphin-boat-tour-239574",
+      "publicPath": "/destinations/florida/goodland/tours/best-of-marco-dolphin-boat-tour-239574",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2828,
+        "structuredStatus": 200,
+        "structuredBytes": 1432
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "239612",
+      "slug": "family-fun-day-with-fishing-4hrs-239612",
+      "publicPath": "/destinations/florida/goodland/tours/family-fun-day-with-fishing-4hrs-239612",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3792,
+        "structuredStatus": 200,
+        "structuredBytes": 2406
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "239623",
+      "slug": "4hr-private-boat-tour-239623",
+      "publicPath": "/destinations/florida/goodland/tours/4hr-private-boat-tour-239623",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3089,
+        "structuredStatus": 200,
+        "structuredBytes": 1236
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "332475",
+      "slug": "6hr-private-boat-tour-332475",
+      "publicPath": "/destinations/florida/goodland/tours/6hr-private-boat-tour-332475",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2705,
+        "structuredStatus": 200,
+        "structuredBytes": 1236
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "339514",
+      "slug": "3hr-private-boat-tour-339514",
+      "publicPath": "/destinations/florida/goodland/tours/3hr-private-boat-tour-339514",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2006,
+        "structuredStatus": 200,
+        "structuredBytes": 1236
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "352216",
+      "slug": "2hr-private-boat-tour-352216",
+      "publicPath": "/destinations/florida/goodland/tours/2hr-private-boat-tour-352216",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3105,
+        "structuredStatus": 200,
+        "structuredBytes": 2413
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "417714",
+      "slug": "best-of-marco-island-tour-417714",
+      "publicPath": "/destinations/florida/goodland/tours/best-of-marco-island-tour-417714",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3494,
+        "structuredStatus": 200,
+        "structuredBytes": 2666
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "417843",
+      "slug": "half-day-super-shelling-tour-417843",
+      "publicPath": "/destinations/florida/goodland/tours/half-day-super-shelling-tour-417843",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3664,
+        "structuredStatus": 200,
+        "structuredBytes": 2612
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "478602",
+      "slug": "25hr-private-boat-tour-478602",
+      "publicPath": "/destinations/florida/goodland/tours/25hr-private-boat-tour-478602",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2240,
+        "structuredStatus": 200,
+        "structuredBytes": 1236
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "524677",
+      "slug": "2-hour-small-group-private-tour-524677",
+      "publicPath": "/destinations/florida/goodland/tours/2-hour-small-group-private-tour-524677",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4049,
+        "structuredStatus": 200,
+        "structuredBytes": 3534
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "524679",
+      "slug": "25hr-small-group-private-boat-tour-524679",
+      "publicPath": "/destinations/florida/goodland/tours/25hr-small-group-private-boat-tour-524679",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2027,
+        "structuredStatus": 200,
+        "structuredBytes": 1236
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaislandtours",
+      "operator": "Florida Island Tours",
+      "itemId": "597140",
+      "slug": "8hr-private-boat-tour-597140",
+      "publicPath": "/destinations/florida/goodland/tours/8hr-private-boat-tour-597140",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2552,
+        "structuredStatus": 200,
+        "structuredBytes": 1674
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "goodlandadventures",
+      "operator": "Goodland Adventures",
+      "itemId": "541644",
+      "slug": "afternoon-cruise-541644",
+      "publicPath": "/destinations/florida/goodland/tours/afternoon-cruise-541644",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588095
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "puntagordatiki",
+      "operator": "Tropical Tiki Tours",
+      "itemId": "547157",
+      "slug": "morning-eco-tour-25hr-private-547157",
+      "publicPath": "/destinations/florida/goodland/tours/morning-eco-tour-25hr-private-547157",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7816,
+        "structuredStatus": 200,
+        "structuredBytes": 7857
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

@@ -378,17 +378,38 @@ def price_row_label(singular: str) -> str:
     return re.sub(r"\s*-\s*free\s*$", "", singular, flags=re.I).strip()
 
 
+def clarify_partial_payment_note(note: str, amount_label: str) -> str:
+    """Keep the charged amount, and name a larger tour price when the note is a deposit."""
+    match = re.search(
+        r"\$(\d[\d,]*\.?\d*)\b[^.\n]{0,120}partial payment",
+        note or "",
+        re.I,
+    )
+    if not match or not amount_label:
+        return note
+    tour_amount = float(match.group(1).replace(",", ""))
+    charged = re.search(r"(\d[\d,]*\.?\d*)", amount_label.replace(",", ""))
+    if not charged or tour_amount <= float(charged.group(1)):
+        return note
+    tour = match.group(1)
+    return (
+        f"Tour price ${tour}. The {amount_label} charged online is a partial-payment deposit, "
+        "not the full tour price."
+    )
+
+
 def price_rows(price: dict | None) -> list[dict]:
     if not price:
         return []
     paid_adult = any(is_adult(entry["singular"]) for entry in price["customerTypes"])
     rows = []
     for entry in price["customerTypes"]:
+        amount_label = format_money(entry["amount"], price["currency"])
         rows.append(
             {
                 "label": price_row_label(entry["singular"]),
-                "note": entry["note"],
-                "amountLabel": format_money(entry["amount"], price["currency"]),
+                "note": clarify_partial_payment_note(entry["note"], amount_label),
+                "amountLabel": amount_label,
             }
         )
     if paid_adult:

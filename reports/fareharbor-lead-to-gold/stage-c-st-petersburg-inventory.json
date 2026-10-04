@@ -1,0 +1,127 @@
+{
+  "citySlug": "st-petersburg",
+  "total": 6,
+  "active": 6,
+  "terminal": 0,
+  "priceAvailable": 4,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 6,
+  "inSitemap": 0,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "fatherdaughtercharters",
+      "operator": "Florida Sail",
+      "itemId": "520862",
+      "slug": "sunset-sail-520862",
+      "publicPath": "/destinations/florida/st-petersburg/tours/sunset-sail-520862",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3026,
+        "structuredStatus": 200,
+        "structuredBytes": 1694
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "operator": "Florida Sail",
+      "itemId": "521462",
+      "slug": "half-day-sail-521462",
+      "publicPath": "/destinations/florida/st-petersburg/tours/half-day-sail-521462",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2592,
+        "structuredStatus": 200,
+        "structuredBytes": 1334
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "operator": "Florida Sail",
+      "itemId": "521546",
+      "slug": "full-day-sail-521546",
+      "publicPath": "/destinations/florida/st-petersburg/tours/full-day-sail-521546",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2847,
+        "structuredStatus": 200,
+        "structuredBytes": 1491
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "operator": "Florida Sail",
+      "itemId": "521569",
+      "slug": "overnight-sail---1-night-521569",
+      "publicPath": "/destinations/florida/st-petersburg/tours/overnight-sail---1-night-521569",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2822,
+        "structuredStatus": 200,
+        "structuredBytes": 1335
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "operator": "Florida Sail",
+      "itemId": "521577",
+      "slug": "overnight-sail---2-nights-521577",
+      "publicPath": "/destinations/florida/st-petersburg/tours/overnight-sail---2-nights-521577",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2835,
+        "structuredStatus": 200,
+        "structuredBytes": 1326
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "operator": "Florida Sail",
+      "itemId": "521595",
+      "slug": "dolphin-spotting-sail-521595",
+      "publicPath": "/destinations/florida/st-petersburg/tours/dolphin-spotting-sail-521595",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2719,
+        "structuredStatus": 200,
+        "structuredBytes": 1354
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

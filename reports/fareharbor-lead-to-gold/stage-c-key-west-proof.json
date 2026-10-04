@@ -1,0 +1,3766 @@
+[
+  {
+    "itemId": "176775",
+    "company": "floridakeysventures",
+    "title": "Key West History And Culture Southernmost Walking Tour",
+    "operator": "Florida Keys Ventures",
+    "publicPath": "/destinations/florida/key-west/tours/key-west-history-and-culture-southernmost-walking-tour-176775",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The commentary takes up Southernmost Point. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given.",
+      "Each pause is there so guests can look at the place the story belongs to."
+    ],
+    "schemaDescription": "A walking tour with Florida Keys Ventures in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0XJii9coR2a45nUfjWJD"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/4HsbXVxTRSXODU1F49pa",
+    "wordCount": 78,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "107 Fitzpatrick St Key West, FL 33040",
+    "visiblePriceLabel": "From $49.99",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 12+",
+        "amountLabel": "$49.99"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 7-11",
+        "amountLabel": "$39.99"
+      },
+      {
+        "label": "Toddler",
+        "note": "",
+        "amountLabel": "Free"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "49.99",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/floridakeysventures/items/176775/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.559246,
+          "lng": -81.806012
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/4HsbXVxTRSXODU1F49pa",
+      "heroHandle": "4HsbXVxTRSXODU1F49pa",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/0XJii9coR2a45nUfjWJD",
+          "handle": "0XJii9coR2a45nUfjWJD",
+          "pixelSha256": "bfc3a035f3c1b4183ae1b20c96b2f57a306290cf5b0eb5832ce2198354de3d32",
+          "differenceHashDistanceFromHero": 122,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.33659,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/0XJii9coR2a45nUfjWJD",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/floridakeysventures-176775",
+      "fetchedAt": "2026-10-03T18:09:57.778437+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/176775/content/",
+          "status": 200,
+          "bytes": 3459,
+          "sha256": "02a7ff4823728e6cfb6eb1ea4a78795dfe9eb13a5c9df7286d93315f75ba4a5f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/176775/structured-description/",
+          "status": 200,
+          "bytes": 2076,
+          "sha256": "5fdb899c8cbd0c145dca2f691f4753bf941923cee730453ae9ebe989c0afa9aa"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/176775/",
+          "status": 200,
+          "bytes": 13886,
+          "sha256": "1b677f9cceaaa6a70d1b3b80695889aa452fa35c04f46aa630f3d291b6e16d9f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridakeysventures/price-preview/per-item/v2/?asn=fhdn&item_pks=176775&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 770,
+          "sha256": "6967c1f085dd568a95a22a45b1db59f9c4edd409d3c27162dc8621525e8ca3c1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/176775/ratings/",
+          "status": 200,
+          "bytes": 470,
+          "sha256": "58123331d1aef6447626afdffa8ac27599dc779b1ef0e736ae28a9c5441c3d8f"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 12+",
+          "amount": 49.99
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 12+",
+            "amount": 49.99
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 7-11",
+            "amount": 39.99
+          }
+        ],
+        "zeroPriceTypes": [
+          "Toddler"
+        ],
+        "departureStartAt": "2026-10-04T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "107 Fitzpatrick St Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "1 hour 45 minutes • All Ages",
+        "startCity": "Key West",
+        "startProvince": "FL",
+        "startLat": 24.559246,
+        "startLng": -81.806012,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Meet The Locals",
+          "On Foot",
+          "At Eye Level If",
+          "Southernmost Walking Tour",
+          "Key West",
+          "Kino Sandals",
+          "Southernmost Point"
+        ],
+        "measures": [],
+        "description": "Meet The Locals, On Foot, At Eye Level If you're like us, you think of travel as more than just “going places.” You crave experience and discovery, not just monuments and museums. You want to understand what's behind the touristic façade that most people never penetrate. That's why the Southernmost Walking Tour is the best way to immerse you into the history and culture of Key West! When you're on foot, the world can't slide past you faster than you can absorb it. You'll have time - and proximity - to get up close to the region's culture and natural history. Start your tour at the famous Cuban sandal factory - Kino Sandals before heading off toward the Southernmost Point of the continental United States. Along the way, our incredibly knowledgeable and well-connected local guides will show you the most popular landmarks and introduce you to local culture. By the time you're finished, you'll have a uniquely fun perspective of our tiny island!",
+        "detailsText": "Please plan to 10 minutes before the tour's start time! There are no bathrooms along the way, so please make sure to use the restroom before the tour begins. The tour will take place, rain or shine! What to Bring - Hat, sunglasses, and sunblock is a must. - Bring at least one bottle of water for yourself. We will walk and it gets hot. - Wear comfortable clothing and shoes. Sneakers are the best option. - Tour guide gratuity is not included in your ticket. If you had a great time, please tip your guide! It is standard in the service industry to tip 10-20% of the ticket price. - Camera or your phone to take pictures. - Your adventurous spirit :) We meet at the Kino plaza! Your Tour Guide will meet you at the plaza in front of Lucy's Cafe at the plaza. We meet at the Kino plaza! Your Tour Guide will meet you at the plaza in front of Lucy's Cafe at the plaza. 1 hour 45 minutes • All Ages 1 hour 45 minutes • All Ages",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "176775",
+        "provider": "floridakeysventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridakeysventures/items/176775/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "196883",
+    "company": "floridakeysventures",
+    "title": "Private Key West History And Culture Southernmost Walking Tour",
+    "operator": "Florida Keys Ventures",
+    "publicPath": "/destinations/florida/key-west/tours/private-key-west-history-and-culture-southernmost-walking-tour-196883",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests hear the history and culture of Key West. Guests come for best walking tour in Key West. Guests be amazed by how much past and culture the small island has. Local Guide will take guests on a time travel adventure. As guests walk through scenic streets of the Old Town, guests hear how the island was found and became one of richest cities in the USA.",
+      "Private tour is the best way to look at Key West and have fun with the own group of friends or family. After that, book Now and call us to schedule time that is convenient for guests. The outing is standard in service industry to tip 10-20% of ticket price. - Camera or the phone to take pictures. - the adventurous spirit."
+    ],
+    "schemaDescription": "A two-hour walking tour with Florida Keys Ventures.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "2 Hours walking tour"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6rcbV4G9SLauQ5KlhmtG"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/YGDjiwYbQX7O8ovIUsHQ",
+    "wordCount": 128,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/floridakeysventures/items/196883/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/YGDjiwYbQX7O8ovIUsHQ",
+      "heroHandle": "YGDjiwYbQX7O8ovIUsHQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/6rcbV4G9SLauQ5KlhmtG",
+          "handle": "6rcbV4G9SLauQ5KlhmtG",
+          "pixelSha256": "f9ee1340e0a235ae4cd1ebc1bcecdf9d35da8cbcde49a65e4cef241f08afcbd4",
+          "differenceHashDistanceFromHero": 124,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.29843,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/6rcbV4G9SLauQ5KlhmtG",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/floridakeysventures-196883",
+      "fetchedAt": "2026-10-03T18:09:57.779003+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/196883/content/",
+          "status": 200,
+          "bytes": 3773,
+          "sha256": "85d7a1f9c7d2593c5aa8f0264cf7663e394aaab269e1414e927cc5bc91080d2b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/196883/structured-description/",
+          "status": 200,
+          "bytes": 2395,
+          "sha256": "fab12bbb15e5a595541516f602ade8dcad11c14742df9700b0738d9d982708e3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/196883/",
+          "status": 200,
+          "bytes": 14508,
+          "sha256": "35a105ecf78495ab84de1669bc9f8c5545c69b9393ce51093d929d888972c6e3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridakeysventures/price-preview/per-item/v2/?asn=fhdn&item_pks=196883&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/196883/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "1bea5c68a1f3e2689a9371645ce4ed8319a6c3e4fe5adbdec10b981e4391959f"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "2 Hours • All Ages",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "2 Hours Join us for the best walking tour in Key West!",
+          "Walking Distance Please plan to walk approximately 1.4 to 1.8 miles during the tour."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Key West",
+          "Local Guide",
+          "Old Town",
+          "Book Now"
+        ],
+        "measures": [
+          "2 Hours",
+          "1.8 miles"
+        ],
+        "description": "Learn the history and culture of Key West! 2 Hours Join us for the best walking tour in Key West! You will be amazed by how much history and culture our small island has! Local Guide will take you on a time travel adventure. As you stroll through the scenic streets of the Old Town, you will learn how the island was discovered and became one of the richest cities in the USA! Hear the stories of the first industries on the island, such as shipwrecking, sponge harvesting and cigarmaking. Also, learn what key role Key West played in the Cuban fight for its independence and find out why Key West declared the war against the United States. The private tour is the best way to explore Key West and have fun with your own group of friends or family! Book Now and call us to schedule the time that is convenient for you! The tour takes place rain or shine - Ponchos will be provided if necessary. Walking Distance Please plan to walk approximately 1.4 to 1.8 miles during the tour. - Hat, sunglasses, and sunblock are a must. - Bring at least one bottle of water for yourself. We will walk and it gets hot! - Wear comfortable clothing and shoes. Sneakers are the best option. - Tour guide gratuity is not included in your ticket. If you had a great time, please tip your guide! It is standard in the service industry to tip 10-20% of the ticket price. - Camera or your phone to take pictures. - Your adventurous spirit!",
+        "detailsText": "Please contact our office to schedule the specific time of your tour Please plan to 10 minutes before the tour's start time! There are no bathrooms along the way, so please make sure to use the restroom before the tour begins. The tour will take place, rain or shine! What to Bring - Hat, sunglasses and sunblock is a must. - Bring at least one bottle of water for yourself. We will walk and it gets hot. - Wear comfortable clothing and shoes. Sneakers are the best option. - Tour guide gratuity is not included in your ticket. If you had a great time, please tip your guide! It is standard in the service industry to tip 10-20% the ticket price. - Camera or your phone to take pictures. - Your adventurous spirit :) 2 Hours • All Ages 2 Hours • All Ages",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "196883",
+        "provider": "floridakeysventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridakeysventures/items/196883/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "203230",
+    "company": "floridakeysventures",
+    "title": "Key West Historic Bahama Village & Hemingway Heritage",
+    "operator": "Florida Keys Ventures",
+    "publicPath": "/destinations/florida/key-west/tours/key-west-historic-bahama-village-and-hemingway-heritage-203230",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The commentary takes up Key West's Historic Districts and Old Town. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
+      "The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
+    ],
+    "schemaDescription": "A walking tour lasting 1.5 with Florida Keys Ventures in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "1.5 walking tour",
+      "Groups are capped at 12"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Zjd7meM5Tz2cNHinQ1t9"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/7EnDEvYSfK01EcfWuxd1",
+    "wordCount": 83,
+    "durationLabel": "1.5",
+    "durationIso": null,
+    "meetingLocation": "516 Duval Street Key West, FL 33040",
+    "visiblePriceLabel": "From $56.99",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 12+",
+        "amountLabel": "$56.99"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 7-11",
+        "amountLabel": "$39.99"
+      },
+      {
+        "label": "Toddler",
+        "note": "",
+        "amountLabel": "Free"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "56.99",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/floridakeysventures/items/203230/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Duval Street Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Duval Street Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/7EnDEvYSfK01EcfWuxd1",
+      "heroHandle": "7EnDEvYSfK01EcfWuxd1",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/Zjd7meM5Tz2cNHinQ1t9",
+          "handle": "Zjd7meM5Tz2cNHinQ1t9",
+          "pixelSha256": "2a6b93a1e6f4cd97a156f148b572811c4af3fb8a0394817a7eac551b40f15e34",
+          "differenceHashDistanceFromHero": 122,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25083,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/Zjd7meM5Tz2cNHinQ1t9",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/floridakeysventures-203230",
+      "fetchedAt": "2026-10-03T18:09:57.779629+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/203230/content/",
+          "status": 200,
+          "bytes": 2407,
+          "sha256": "6b8931ea81c937a7d32eb17be03a72d47c321ddf707ef223f70d0696831f82b9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/203230/structured-description/",
+          "status": 200,
+          "bytes": 2224,
+          "sha256": "876c0eb622edc5ec8d882d177080c4ea30c1d2e85d6f9b83ad13f6a075360a1f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/203230/",
+          "status": 200,
+          "bytes": 11608,
+          "sha256": "53b93bf958300f2e418cc22cc48ac1261791d59b7358f2ccb6668b5d14b24f6e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridakeysventures/price-preview/per-item/v2/?asn=fhdn&item_pks=203230&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 770,
+          "sha256": "c770ebb43c56e7e5e4536dad6263ae10f0b4bece9d1d45ec4bc1fbbf06379c4d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/203230/ratings/",
+          "status": 200,
+          "bytes": 474,
+          "sha256": "e5313bc24e70c281186b6aa452ff14a5de4079f7af721bd8d0ec8a5dcf7eccb1"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 12+",
+          "amount": 56.99
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 12+",
+            "amount": 56.99
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 7-11",
+            "amount": 39.99
+          }
+        ],
+        "zeroPriceTypes": [
+          "Toddler"
+        ],
+        "departureStartAt": "2026-10-04T11:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1.5",
+        "meetingAddress": "516 Duval Street Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "All Ages",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "12",
+        "included": [
+          "Guided Tour with local tour guide for 1 hour 30 minutes",
+          "Tour in English"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "cancel 24 hours before tour start time for a full refund",
+        "accessibility": null,
+        "languages": [
+          "English"
+        ],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Key West",
+          "Key West's Historic Districts",
+          "Old Town"
+        ],
+        "measures": [
+          "1 hour",
+          "30 minutes"
+        ],
+        "description": "Ever wondered how the island of Key West was discovered and became so rich? Explore Key West's history, lore, and legends from the ground up with an intimate walking tour. Whether you want to learn more about the island's first industries such as shipwrecking and cigarmaking, are curious about local history, or are looking for a fun-filled walk, Key West's Historic Districts are waiting for you! This small-group walking tour offers both an educational experience and unparalleled delight for the lovers of history and culture. Our experienced local tour guides will lead you on an impressive stroll through the scenic streets of the Old Town where you can connect with the culture of a historic city. This unique experience is enjoyed by visitors from across the world and is a must-do while in Key West! What to bring and to wear: Comfortable clothing and shoes, sunscreen, hat, sunglasses, water.",
+        "detailsText": "",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "203230",
+        "provider": "floridakeysventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridakeysventures/items/203230/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "104492",
+    "company": "keywestfishing-charters",
+    "title": "Cowgirl 45' Premium Offshore Fishing Charter",
+    "operator": "Cowboy Charters",
+    "publicPath": "/destinations/florida/key-west/tours/cowgirl-45-premium-offshore-fishing-charter-104492",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "From the water, guests see Run Offshore Cruise and Fishing Time Lines. Comfort Breaks Relax and Dock Fish Cleaning Arrival come into view as the boat moves. The cruise also passes Setup Load and Fishing Plan Meet. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A 4- to 12-hour harbor outing with Cowboy Charters on Key West Harbor. The sail passes Boarding & Setup, Safety Brief & Fishing Plan, and Run Offshore.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4- to 12-hour harbor outing in Key West",
+      "Boarding & Setup and Safety Brief & Fishing Plan",
+      "Captain and mate on every trip"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KLbmMCxcR7iJvPIwv4d9"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/UxWDijTVS9CElGrgZCj8",
+    "wordCount": 90,
+    "durationLabel": "4-12 Hours",
+    "durationIso": null,
+    "meetingLocation": "1801 N Roosevelt Blvd, Key West, Florida 33040",
+    "visiblePriceLabel": "From $1,050",
+    "priceRows": [
+      {
+        "label": "Half Day Private Charter",
+        "note": "4 Hours | Price Includes up to 6 People | All Ages",
+        "amountLabel": "$1,050"
+      },
+      {
+        "label": "3/4 Day Private Charter",
+        "note": "6 Hours | Price Includes up to 6 People | All Ages",
+        "amountLabel": "$1,350"
+      },
+      {
+        "label": "Full Day Private Charter",
+        "note": "8 Hours | Price Includes up to 6 People | All Ages",
+        "amountLabel": "$1,550"
+      },
+      {
+        "label": "10 Hour Charter",
+        "note": "10 Hours | Price Includes up to 6 People | All Ages",
+        "amountLabel": "$1,750"
+      },
+      {
+        "label": "12 Hour Charter",
+        "note": "12 Hours | Price Includes up to 6 People | All Ages",
+        "amountLabel": "$1,950"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1050.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1022,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.8 from 1022 reviews on GET https://fareharbor.com/api/v1/companies/keywestfishing-charters/items/104492/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, Florida",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, Florida",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/UxWDijTVS9CElGrgZCj8",
+      "heroHandle": "UxWDijTVS9CElGrgZCj8",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/mPjwgoRNTOW7UuUupICY",
+          "handle": "mPjwgoRNTOW7UuUupICY",
+          "pixelSha256": "1d5068b68181ffdb7acf36ee69f66475ae97c4a5c436d2aa39e5089afbc99758",
+          "differenceHashDistanceFromHero": 0,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.00155,
+          "classification": "NEAR_DUPLICATE"
+        },
+        {
+          "url": "https://cdn.filestackcontent.com/KLbmMCxcR7iJvPIwv4d9",
+          "handle": "KLbmMCxcR7iJvPIwv4d9",
+          "pixelSha256": "015eaa03f991182c12cbc3dbee4ea1d517334d87a5457c6bbee065a820139a88",
+          "differenceHashDistanceFromHero": 136,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.24727,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/mPjwgoRNTOW7UuUupICY",
+          "handle": "mPjwgoRNTOW7UuUupICY",
+          "pixelSha256": "1d5068b68181ffdb7acf36ee69f66475ae97c4a5c436d2aa39e5089afbc99758",
+          "differenceHashDistanceFromHero": 0,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.00155,
+          "classification": "NEAR_DUPLICATE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/KLbmMCxcR7iJvPIwv4d9",
+      "action": "substituted",
+      "reason": "distinct harvested image after removing a hero duplicate"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/keywestfishing-charters-104492",
+      "fetchedAt": "2026-10-03T18:09:57.779995+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/keywestfishing-charters/104492/content/",
+          "status": 200,
+          "bytes": 15349,
+          "sha256": "1db4e7a52d565c5449a4728e24258373f337eee6c916c1a4395de8c404b304e0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/keywestfishing-charters/104492/structured-description/",
+          "status": 200,
+          "bytes": 8971,
+          "sha256": "45d3a05c02462c99c9966eb7010dc3f8e5bf63bb7b373c0f30271977528f50d9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/keywestfishing-charters/items/104492/",
+          "status": 200,
+          "bytes": 21438,
+          "sha256": "83922ce8896508c46917f3107b0896adfa9e766484658db5e667f98911298b5f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/keywestfishing-charters/price-preview/per-item/v2/?asn=fhdn&item_pks=104492&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1358,
+          "sha256": "934702d1aca69f49dd9bfc5054110a208353630f3bc6aeb1d7cb64ca4df9ae99"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/keywestfishing-charters/items/104492/ratings/",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "101dc09cd4bab83180ff2180b93bef86822a02aa4f5723ab7b9dfcd820fc9b72"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Half Day Private Charter",
+          "note": "4 Hours | Price Includes up to 6 People | All Ages",
+          "amount": 1050.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Half Day Private Charter",
+            "note": "4 Hours | Price Includes up to 6 People | All Ages",
+            "amount": 1050.0
+          },
+          {
+            "singular": "3/4 Day Private Charter",
+            "note": "6 Hours | Price Includes up to 6 People | All Ages",
+            "amount": 1350.0
+          },
+          {
+            "singular": "Full Day Private Charter",
+            "note": "8 Hours | Price Includes up to 6 People | All Ages",
+            "amount": 1550.0
+          },
+          {
+            "singular": "10 Hour Charter",
+            "note": "10 Hours | Price Includes up to 6 People | All Ages",
+            "amount": 1750.0
+          },
+          {
+            "singular": "12 Hour Charter",
+            "note": "12 Hours | Price Includes up to 6 People | All Ages",
+            "amount": 1950.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T07:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4-12 Hours",
+        "meetingAddress": "1801 N Roosevelt Blvd, Key West, Florida 33040",
+        "itemLocation": null,
+        "headline": "Cold A/C-Smooth, steady ride-Comfortable deep-sea fishing",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 6",
+        "included": [
+          "Private offshore fishing charter for up to 6 guests",
+          "Captain and mate on every trip",
+          "Experienced, family-friendly Key West crew",
+          "All bait, premium tackle, rods, reels, and lures",
+          "Florida fishing licenses for every angler",
+          "Fish cleaning and bagging at the dock (when legally allowed)",
+          "Air-conditioned cabin for comfort",
+          "Marine head (bathroom) onboard"
+        ],
+        "excluded": [
+          "Fuel surcharge (clearly disclosed during booking)",
+          "Food and drinks (guests are welcome to bring their own)",
+          "Gratuity for captain and mate (customary but not required)",
+          "Sunscreen, hats, sunglasses, and personal items"
+        ],
+        "itinerary": [
+          "Arrival & Check-In",
+          "Boarding & Setup",
+          "Safety Brief & Fishing Plan",
+          "Departure",
+          "Typical departure times are 7:00 AM or 1:00 PM, with flexibility available by request",
+          "Run Offshore",
+          "Cruise to offshore reefs, wrecks, or deep water while the crew prepares the gear and sets up for fishing",
+          "Fishing Time",
+          "Lines go in and the action begins. Anglers rotate on strikes, and beginners receive hands-on coaching from the crew",
+          "Comfort Breaks",
+          "Relax between bites in the cold, air-conditioned cabin or shaded cockpit",
+          "Return to Dock",
+          "Fish Cleaning"
+        ],
+        "routeNotes": [
+          "Arrival & Check-In Arrive 15 minutes early. You'll receive a text the night before with exact meeting details. Look for our dock sign behind the boat. Boarding & Setup Load your food and drinks, stow gear, and get comfortable. Bottled water is provided onboard. Safety Brief & Fishing Plan Meet your captain and mate, review safety procedures, sea conditions, and discuss target species and fishing techniques. Departure Typical departure times are 7:00 AM or 1:00 PM, with flexibility available by request. Run Offshore Cruise to offshore reefs, wrecks, or deep water while the crew prepares the gear and sets up for fishing. Fishing Time Lines go in and the action begins. Anglers rotate on strikes, and beginners receive hands-on coaching from the crew. Comfort Breaks Relax between bites in the cold, air-conditioned cabin or shaded cockpit. Return to Dock Enjoy a safe cruise back to the marina with time for photos and stories from the day. Fish Cleaning The mate cleans and bags your legal catch at the dock and can recommend local restaurants to prepare it."
+        ],
+        "highlights": [
+          "Flagship offshore performance",
+          "Serious fishing for every experience level",
+          "Comfort that matters offshore"
+        ],
+        "restrictions": [
+          "Restrictions Guests of all ages and experience levels are welcome",
+          "Please inform the captain and mate before departure of any medical conditions, disabilities, mobility limitations, or other concerns that may require additional assistance onboard",
+          "This allows the crew to ensure a safe and comfortable experience for everyone"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": "with assistance",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Key West"
+        ],
+        "measures": [
+          "6 guests"
+        ],
+        "description": "Step aboard Cowgirl, our 45' Hatteras offshore sportfishing boat built for comfort, stability, and serious fishing. This private Key West offshore fishing charter is perfect for families, groups, and anglers of all experience levels. You can fish reefs, wrecks, and deep water for mahi, wahoo, tuna, sailfish, snapper, and shark. Our crew is professional and family-friendly. Enjoy a smooth ride and relax in a cold, air-conditioned cabin between bites. Trip Details Private charter for up to 6 guests 4, 6, 8, 10, or 12-hour trips available Quality tackle, bait, licenses, ice, and fish cleaning included Bring your own food and drinks",
+        "detailsText": "Provide customers with specific details about check in, like whether they need to arrive early. Provide customers with specific details about check in, like whether they need to arrive early. Private offshore fishing aboard the 45' Cowgirl with cold A/C, a smooth ride, and comfortable, family-friendly deep-sea fishing in Key West. Cold A/C-Smooth, steady ride-Comfortable deep-sea fishing",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "104492",
+        "provider": "keywestfishing-charters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/keywestfishing-charters/items/104492/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "638390",
+    "company": "laromayachtsflorida",
+    "title": "The Atlantia",
+    "operator": "Laroma Yachts Florida, LLC",
+    "publicPath": "/destinations/florida/key-west/tours/the-atlantia-638390",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Teak decks and wood trim are part of the boat. Guests sail on a catamaran for this cruise. Bathrooms are on board for the length of the cruise. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A 4- to 8-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4- to 8-hour guided outing in Key West",
+      "Groups stay at a maximum of 12 guests"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/UV7VbaC8RwKQanIogE8b",
+    "wordCount": 81,
+    "durationLabel": "4 - 8 Hours",
+    "durationIso": null,
+    "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
+    "visiblePriceLabel": "From $6,000",
+    "priceRows": [
+      {
+        "label": "Eight Hour Charter",
+        "note": "Up to 12 Guests",
+        "amountLabel": "$6,000"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "6000.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638390/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Shrimp Road Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Shrimp Road Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/UV7VbaC8RwKQanIogE8b",
+      "heroHandle": "UV7VbaC8RwKQanIogE8b",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/laromayachtsflorida-638390",
+      "fetchedAt": "2026-10-03T18:09:59.861279+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638390/content/",
+          "status": 200,
+          "bytes": 2447,
+          "sha256": "9a78ab4a755bfd6fc4404936e0e8e7eb6998cc9d57b8c6a3b83286fbb2b013a7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638390/structured-description/",
+          "status": 200,
+          "bytes": 2106,
+          "sha256": "ff2a393bbae056862e4e2cf87b82f8d42b7ff38b0a10272d6f53b00e09f52ca5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638390/",
+          "status": 200,
+          "bytes": 7455,
+          "sha256": "279dfc7f061814827728591c2a74e2c650bd23f19059ad6c2046d202e8b467e1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=638390&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 573,
+          "sha256": "2663ccc72540245311e168a33cdb903fb598d0493bece37b217592c03bda8558"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638390/ratings/",
+          "status": 200,
+          "bytes": 434,
+          "sha256": "cc6def06456746295cb41b9d3c3489e0a2d7f8cdf5a9fa8a66485fb4de8b4696"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Eight Hour Charter",
+          "note": "Up to 12 Guests",
+          "amount": 6000.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Eight Hour Charter",
+            "note": "Up to 12 Guests",
+            "amount": 6000.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 - 8 Hours",
+        "meetingAddress": "7001 Shrimp Road Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "For all ages! • 4 - 8 Hours • 4 hour charter- $3500 - 8 hour $6500",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 12 People",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Atlantia is a 64' power catamaran sporting a 33 foot beam.",
+          "Atlantia features an amazing six state rooms and six bathrooms, plus crew quarters, accommodating up to 12 people overnight as well as 12 on a day charter."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [
+          "33 foot",
+          "12 people"
+        ],
+        "description": "Atlantia is a 64' power catamaran sporting a 33 foot beam. Atlantia features an amazing six state rooms and six bathrooms, plus crew quarters, accommodating up to 12 people overnight as well as 12 on a day charter. This is a gorgeous catamaran that provides a smooth ride for an unforgettable charter experience. Atlantia boasts a spacious, fully equipped galley, with a large island, an industrial dishwasher, a new enhanced hood for the full sized range and oven, and a double bay sink. Her salon features a large retractable TV, a lounge/dining space with 2 convertible tables, and comfort beyond any other catamaran out on the water. The spacious all teak decks, lounge areas on her bow and stern provide ample space for a relaxing and luxurious charter. Atlantia's outdoor accommodations are unmatched with two outdoor refrigerators, sinks, and an ice maker. Her helm is equipped with state of the art navigational equipment and cutting edge technology. This is the perfect yacht to entertain, and guarantees the most desirable experience on the water.",
+        "detailsText": "For all ages! • 4 - 8 Hours • 4 hour charter- $3500 - 8 hour $6500 For all ages! • 4 - 8 Hours • 4 hour charter- $3500 - 8 hour $6500",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "638390",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/638390/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "638423",
+    "company": "laromayachtsflorida",
+    "title": "The \"Somewhere\"",
+    "operator": "Laroma Yachts Florida, LLC",
+    "publicPath": "/destinations/florida/key-west/tours/the-somewhere-638423",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The \"Somewhere\" is a 4- to 8-hour guided outing with Laroma Yachts Florida, LLC in Key West. The outing reaches Lagoon.",
+      "Groups stay at a maximum of 12 guests."
+    ],
+    "schemaDescription": "The \"Somewhere\" is a 4- to 8-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4- to 8-hour guided outing in Key West",
+      "Lagoon",
+      "Groups stay at a maximum of 12 guests"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/decacu4jS1KjdaOl3XbS",
+    "wordCount": 30,
+    "durationLabel": "4 - 8 Hours",
+    "durationIso": null,
+    "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
+    "visiblePriceLabel": "From $4,500",
+    "priceRows": [
+      {
+        "label": "Eight Hour Charter",
+        "note": "Up to 12 Guests",
+        "amountLabel": "$4,500"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "4500.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638423/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Shrimp Road Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Shrimp Road Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/decacu4jS1KjdaOl3XbS",
+      "heroHandle": "decacu4jS1KjdaOl3XbS",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/laromayachtsflorida-638423",
+      "fetchedAt": "2026-10-03T18:10:00.129425+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638423/content/",
+          "status": 200,
+          "bytes": 1925,
+          "sha256": "8e111377cdd59d68c713ca202a42976661351007547d5496668ea4da8dff684c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638423/structured-description/",
+          "status": 200,
+          "bytes": 1590,
+          "sha256": "a23bbe0584b2152956faf524be7ecd7b84c73884d60f6a16bbf89aa54c1cce16"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638423/",
+          "status": 200,
+          "bytes": 7449,
+          "sha256": "080ab9de10d6771a0d8cd2e4936396c404d6bdd11491967929da33c87c1d62c5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=638423&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 573,
+          "sha256": "b4e10b451ca7e4d7cf6a75af5ae6274728b88b97379836920969bfc810af1d6d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638423/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "ba5b550ccf8c827b87ebe09286c08b1b53e89e92965ab710ef31b7dede126580"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Eight Hour Charter",
+          "note": "Up to 12 Guests",
+          "amount": 4500.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Eight Hour Charter",
+            "note": "Up to 12 Guests",
+            "amount": 4500.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 - 8 Hours",
+        "meetingAddress": "7001 Shrimp Road Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "For all ages! • 4-8 Hours • 4 hour $2250 - 8 hour $4000",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 12 People",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "The Lagoon 450 F (flybridge version) barely needs an introduction, as it is one of the most popular mid-sized catamarans on the secondhand market."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "The Lagoon 450 F (flybridge version) barely needs an introduction, as it is one of the most popular mid-sized catamarans on the secondhand market. Safe and easy for a couple to handle, but large enough for entertaining in style and comfort. A very large cockpit, great visibility at the flybridge with all lines and controls at arms reach, forward cockpit to catch the best views and breeze, 4 bright spacious cabins all with ensuite heads and separate showers, 6'6\" + headroom, great C-galley and 360 views in the saloon, sliding doors with flush floors and decks, etc.",
+        "detailsText": "For all ages! • 4-8 Hours • 4 hour $2250 - 8 hour $4000 For all ages! • 4-8 Hours • 4 hour $2250 - 8 hour $4000",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "638423",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/638423/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "638429",
+    "company": "laromayachtsflorida",
+    "title": "The Grand Admiral",
+    "operator": "Laroma Yachts Florida, LLC",
+    "publicPath": "/destinations/florida/key-west/tours/the-grand-admiral-638429",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Laroma Yachts Florida, LLC lists this outing."
+    ],
+    "schemaDescription": "The operator Laroma Yachts Florida, LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/r9sgZoxGSMSRM65fCBWf",
+    "wordCount": 9,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638429/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Shrimp Road Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Shrimp Road Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/r9sgZoxGSMSRM65fCBWf",
+      "heroHandle": "r9sgZoxGSMSRM65fCBWf",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/laromayachtsflorida-638429",
+      "fetchedAt": "2026-10-03T18:10:00.224646+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638429/content/",
+          "status": 200,
+          "bytes": 1735,
+          "sha256": "6eddc64cee62b6327987e2f82be3bf520283fb9be890fa7345e70ab1f56f4a4b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638429/structured-description/",
+          "status": 200,
+          "bytes": 1400,
+          "sha256": "499568deba1d971502f747f48322b7fcfe3eac4bd1d483727af08fbb6b076e78"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638429/",
+          "status": 200,
+          "bytes": 7450,
+          "sha256": "c28cbb3568eb883931bef5eeda3442d5358007b5c4d0827a6917efc543400817"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=638429&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 573,
+          "sha256": "9b67e60d830d89f3d33a081c5727166f255daaee5924a3f06bffe19fb09542aa"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638429/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "deaeaeaaf434a929f6d2088e2062836c0dccb86afe713ecf27f7379061170f73"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "4 - 8 Hours",
+        "meetingAddress": "7001 Shrimp Road Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "For all ages! • 4-8 Hours • 4 hour $1500 - 8 hour $2500",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 12 People",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "The Sea Ray 420 Sun dancer is a luxury express cruiser designed for comfort, performance, and sleek styling."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "The Sea Ray 420 Sun dancer is a luxury express cruiser designed for comfort, performance, and sleek styling. It's a popular model among weekend boaters and coastal cruisers, combining elegant design with practical amenities for entertaining and extended stays on the water. The cabin is designed for luxury and convenience, with high-end finishes and plenty of natural light.",
+        "detailsText": "For all ages! • 4-8 Hours • 4 hour $1500 - 8 hour $2500 For all ages! • 4-8 Hours • 4 hour $1500 - 8 hour $2500",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "638429",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/638429/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "639170",
+    "company": "laromayachtsflorida",
+    "title": "Sunset Atlantia",
+    "operator": "Laroma Yachts Florida, LLC",
+    "publicPath": "/destinations/florida/key-west/tours/sunset-atlantia-639170",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Teak decks and wood trim are part of the boat. Guests sail on a catamaran for this cruise. Bathrooms are on board for the length of the cruise. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A two-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "two-hour guided outing in Key West",
+      "Groups stay at a maximum of 12 guests"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/ffg3ALRnRL265ybaJwEu",
+    "wordCount": 81,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
+    "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
+    "visiblePriceLabel": "From $2,000",
+    "priceRows": [
+      {
+        "label": "Sunset Cruise",
+        "note": "Up to 12 Guests",
+        "amountLabel": "$2,000"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "2000.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639170/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Shrimp Road Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Shrimp Road Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ffg3ALRnRL265ybaJwEu",
+      "heroHandle": "ffg3ALRnRL265ybaJwEu",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/laromayachtsflorida-639170",
+      "fetchedAt": "2026-10-03T18:10:00.281681+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639170/content/",
+          "status": 200,
+          "bytes": 2398,
+          "sha256": "3e778ecda9e029b11807e9641dadb511fb3d38b8090b47b8e5e9df24eeb10609"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639170/structured-description/",
+          "status": 200,
+          "bytes": 2075,
+          "sha256": "0201f0ea3b63bd07d19902b8112025ed80103446718abc948ffa47c170516758"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639170/",
+          "status": 200,
+          "bytes": 7435,
+          "sha256": "11ae8d2511d3c35c0d17e7f799d7a01b888aa0d71ed650fb8a8af3430f78a5ad"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=639170&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "eeb0517d78f66f3df65b4435fdef7887a9fa7c0741cb352b2d9854ef8d751861"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639170/ratings/",
+          "status": 200,
+          "bytes": 438,
+          "sha256": "8161ea85d00d8543f2748698b48efc30daa37a5b97f7cc1c6da64ddd27baab73"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Sunset Cruise",
+          "note": "Up to 12 Guests",
+          "amount": 2000.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Sunset Cruise",
+            "note": "Up to 12 Guests",
+            "amount": 2000.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T18:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 Hours",
+        "meetingAddress": "7001 Shrimp Road Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "For all ages! • 2 Hours • Sunset cruise $2000",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 12 People",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Atlantia is a 64' power catamaran sporting a 33 foot beam.",
+          "Atlantia features an amazing six state rooms and six bathrooms, plus crew quarters, accommodating up to 12 people overnight as well as 12 on a day charter."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [
+          "33 foot",
+          "12 people"
+        ],
+        "description": "Atlantia is a 64' power catamaran sporting a 33 foot beam. Atlantia features an amazing six state rooms and six bathrooms, plus crew quarters, accommodating up to 12 people overnight as well as 12 on a day charter. This is a gorgeous catamaran that provides a smooth ride for an unforgettable charter experience. Atlantia boasts a spacious, fully equipped galley, with a large island, an industrial dishwasher, a new enhanced hood for the full sized range and oven, and a double bay sink. Her salon features a large retractable TV, a lounge/dining space with 2 convertible tables, and comfort beyond any other catamaran out on the water. The spacious all teak decks, lounge areas on her bow and stern provide ample space for a relaxing and luxurious charter. Atlantia's outdoor accommodations are unmatched with two outdoor refrigerators, sinks, and an ice maker. Her helm is equipped with state of the art navigational equipment and cutting edge technology. This is the perfect yacht to entertain, and guarantees the most desirable experience on the water.",
+        "detailsText": "For all ages! • 2 Hours • Sunset cruise $2000 For all ages! • 2 Hours • Sunset cruise $2000",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "639170",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/639170/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "639172",
+    "company": "laromayachtsflorida",
+    "title": "Sunset \"Somewhere\"",
+    "operator": "Laroma Yachts Florida, LLC",
+    "publicPath": "/destinations/florida/key-west/tours/sunset-somewhere-639172",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Sunset \"Somewhere\" is a two-hour guided outing with Laroma Yachts Florida, LLC in Key West. The outing reaches Lagoon.",
+      "Groups stay at a maximum of 12 guests."
+    ],
+    "schemaDescription": "Sunset \"Somewhere\" is a two-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "two-hour guided outing in Key West",
+      "Lagoon",
+      "Groups stay at a maximum of 12 guests"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/i4ADNzRdS3iashVlHD1h",
+    "wordCount": 28,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
+    "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
+    "visiblePriceLabel": "From $1,500",
+    "priceRows": [
+      {
+        "label": "Sunset Cruise",
+        "note": "Up to 12 Guests",
+        "amountLabel": "$1,500"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1500.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639172/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Shrimp Road Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Shrimp Road Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/i4ADNzRdS3iashVlHD1h",
+      "heroHandle": "i4ADNzRdS3iashVlHD1h",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/laromayachtsflorida-639172",
+      "fetchedAt": "2026-10-03T18:10:01.970385+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639172/content/",
+          "status": 200,
+          "bytes": 1903,
+          "sha256": "994e9e653d8fe18e3bc537dca6555d5a3c392776e581aa934764201161ce3d92"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639172/structured-description/",
+          "status": 200,
+          "bytes": 1575,
+          "sha256": "e662e4631a7c8b3c14787891b98237478fe3f7843fc46f87da1880a215d4b024"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639172/",
+          "status": 200,
+          "bytes": 7450,
+          "sha256": "69e666608cc6c6b636deb241a96ae7a4fdff8ef5b46fbedf21bf75be973cf35c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=639172&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "b2e0029c617a7c1b641f67a6897f57dc302be06ebb8e32d1c45b168a43b9c8da"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639172/ratings/",
+          "status": 200,
+          "bytes": 443,
+          "sha256": "497f91d090424f88b83e8a51e0aeb572a7b10417f5381f724c8a98ef22f31172"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Sunset Cruise",
+          "note": "Up to 12 Guests",
+          "amount": 1500.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Sunset Cruise",
+            "note": "Up to 12 Guests",
+            "amount": 1500.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T18:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 Hours",
+        "meetingAddress": "7001 Shrimp Road Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "For all ages! • 2 Hours • Sunset cruise $1500",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 12 People",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "The Lagoon 450 F (flybridge version) barely needs an introduction, as it is one of the most popular mid-sized catamarans on the secondhand market."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "The Lagoon 450 F (flybridge version) barely needs an introduction, as it is one of the most popular mid-sized catamarans on the secondhand market. Safe and easy for a couple to handle, but large enough for entertaining in style and comfort. A very large cockpit, great visibility at the flybridge with all lines and controls at arms reach, forward cockpit to catch the best views and breeze, 4 bright spacious cabins all with ensuite heads and separate showers, 6'6\" + headroom, great C-galley and 360 views in the saloon, sliding doors with flush floors and decks, etc.",
+        "detailsText": "For all ages! • 2 Hours • Sunset cruise $1500 For all ages! • 2 Hours • Sunset cruise $1500",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "639172",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/639172/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "626355",
+    "company": "namastealldaykeywest",
+    "title": "Tailored Sandbar Experience",
+    "operator": "Namaste Here LLC",
+    "publicPath": "/destinations/florida/key-west/tours/tailored-sandbar-experience-626355",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a private sandbar charter on the water. The stop is a Key West sandbar, away from a crowd of other boats. From the water, guests see Florida Keys. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A four-hour snorkel outing with Namaste Here LLC in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "four-hour harbor outing in Key West",
+      "Groups stay at a maximum of 6 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/VjRAjbQwSqi0xdZMZdY1"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/eWvlhjg8TiS4pCYrHPMa",
+    "wordCount": 83,
+    "durationLabel": "4 hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "7001 Shrimp Rd, Key West, FL, USA",
+    "visiblePriceLabel": "From $750",
+    "priceRows": [
+      {
+        "label": "Half Day Charter",
+        "note": "",
+        "amountLabel": "$750"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "750.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/namastealldaykeywest/items/626355/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/eWvlhjg8TiS4pCYrHPMa",
+      "heroHandle": "eWvlhjg8TiS4pCYrHPMa",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/VjRAjbQwSqi0xdZMZdY1",
+          "handle": "VjRAjbQwSqi0xdZMZdY1",
+          "pixelSha256": "d5dbcc8a48eb78003791e8ec98268e7fb5b0b72bcd29b87fc665c1ca52f57805",
+          "differenceHashDistanceFromHero": 62,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.11491,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/VjRAjbQwSqi0xdZMZdY1",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/namastealldaykeywest-626355",
+      "fetchedAt": "2026-10-03T18:10:02.169309+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/namastealldaykeywest/626355/content/",
+          "status": 200,
+          "bytes": 2503,
+          "sha256": "366a491daacda2ecf62dcd9915944a9f7812dcfd7ec3d177aa213eac41476ec6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/namastealldaykeywest/626355/structured-description/",
+          "status": 200,
+          "bytes": 1672,
+          "sha256": "ea977811b9b33fbf1244dea9e90ce07f5b0b9bc3bd2839420413899e8ca08738"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/namastealldaykeywest/items/626355/",
+          "status": 200,
+          "bytes": 7539,
+          "sha256": "e2024e15d93bec6b1f2efce27fe4645545e49ff0fc7e15c1570d27f7dbc4d9c2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/namastealldaykeywest/price-preview/per-item/v2/?asn=fhdn&item_pks=626355&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 551,
+          "sha256": "a3ac70208b22794982046cb62c8843b2a2184cd245e860b131e696d80164d1ed"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/namastealldaykeywest/items/626355/ratings/",
+          "status": 200,
+          "bytes": 442,
+          "sha256": "2a3dda8cfc4651ee61e347123e76cfed687acfdd2c3a0b57032a7fbb7705c573"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Half Day Charter",
+          "note": "",
+          "amount": 750.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Half Day Charter",
+            "note": "",
+            "amount": 750.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T15:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 hours",
+        "meetingAddress": "7001 Shrimp Rd, Key West, FL, USA",
+        "itemLocation": null,
+        "headline": "Ages 6+ • 4 Hours",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 6,
+        "maxAge": null,
+        "groupSize": "Maximum 6 people",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Key West"
+        ],
+        "measures": [],
+        "description": "Experience the ultimate Key West adventure aboard our fun sandbar boat charter! Escape the hustle and bustle of everyday life and enjoy the crystal-clear waters, sandy shores, and breathtaking views of the Florida Keys. Captain Christy will guide you to some of the most beautiful, secluded sandbars where you can swim, snorkel, and relax in the serene environment. Whether you're looking to spend a peaceful day on the water, celebrate a special occasion, or enjoy a fun-filled day with friends and family, our boat charter offers the perfect setting. Sit back, unwind, and let us take care of the rest while you make unforgettable memories in one of the most picturesque locations in the world.",
+        "detailsText": "Ages 6+ • 4 Hours Ages 6+ • 4 Hours",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "626355",
+        "provider": "namastealldaykeywest",
+        "bookingUrl": "https://fareharbor.com/embeds/book/namastealldaykeywest/items/626355/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "417200",
+    "company": "saltysandbars",
+    "title": "Half Day Charter 4hrs Boston Whaler",
+    "operator": "Salty Sandbars",
+    "publicPath": "/destinations/florida/key-west/tours/half-day-charter-4hrs-boston-whaler-417200",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental. From the water, guests see Premium Bow-rider."
+    ],
+    "schemaDescription": "A harbor outing with Salty Sandbars on Key West Harbor. The sail passes SunChill Island Float The Vessel and Premium Bow-rider.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "SunChill Island Float The Vessel and Premium Bow-rider"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/tAXXbINpRYmNV8fSCzEI"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/BNWLrJ0QdCQUX1Dl43zA",
+    "wordCount": 48,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
+    "visiblePriceLabel": "From $649",
+    "priceRows": [
+      {
+        "label": "Half Day Charter",
+        "note": "Up to 6 guests • 4 Hours",
+        "amountLabel": "$649"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "649.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 187,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 187 reviews on GET https://fareharbor.com/api/v1/companies/saltysandbars/items/417200/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/BNWLrJ0QdCQUX1Dl43zA",
+      "heroHandle": "BNWLrJ0QdCQUX1Dl43zA",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/tAXXbINpRYmNV8fSCzEI",
+          "handle": "tAXXbINpRYmNV8fSCzEI",
+          "pixelSha256": "6261bc758d8324c1cb2f273ff1cf97981d281c4945fc0a0d7786e7fd19613cd7",
+          "differenceHashDistanceFromHero": 133,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.16087,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/tAXXbINpRYmNV8fSCzEI",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/saltysandbars-417200",
+      "fetchedAt": "2026-10-03T18:10:02.724052+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417200/content/",
+          "status": 200,
+          "bytes": 2310,
+          "sha256": "d82d0163a52ee205c4f96cf7e54047fca0a01d41d2a831c1993dc80e77646684"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417200/structured-description/",
+          "status": 200,
+          "bytes": 1669,
+          "sha256": "35a3e88ca9160bd3ea1a08836830165e0e8eab9348137291a60c2764feadfadc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417200/",
+          "status": 200,
+          "bytes": 10387,
+          "sha256": "93829336c373ea66da92e511b5d5749df7b98af22406c614ed5c2a33b8ff83c7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=417200&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 579,
+          "sha256": "ed89379e3640c7d270f8e69c2301654e463fd54525a00f05fcffc7b904ff8d71"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417200/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "4c2a3834274461303868493ec23ffb01a9773807dc40890cdc842a5a3012bf40"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Half Day Charter",
+          "note": "Up to 6 guests • 4 Hours",
+          "amount": 649.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Half Day Charter",
+            "note": "Up to 6 guests • 4 Hours",
+            "amount": 649.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "811 Palm Ave Cswy 10 Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "Up to 6 guests • Private, captained charter • Most popular!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- Captain - Fuel - Cooler and ice - Bottled water - Soda and chips - SunChill Island Float The Vessel - Premium Bow-rider - Boston Whaler \"The unsinkable legend\" - 230 Vantage - Plenty of comfortable seating for 6 passengers."
+        ],
+        "gleanedFacts": [
+          "Bottled water"
+        ],
+        "properNames": [
+          "SunChill Island Float The Vessel",
+          "Premium Bow-rider",
+          "Boston Whaler"
+        ],
+        "measures": [
+          "6 passengers"
+        ],
+        "description": "Explore unseen sights, only accessible by boat! - Captain - Fuel - Cooler and ice - Bottled water - Soda and chips - SunChill Island Float The Vessel - Premium Bow-rider - Boston Whaler \"The unsinkable legend\" - 230 Vantage - Plenty of comfortable seating for 6 passengers. - Bow seating area with lounge backrest / sun pad area. - Shade lounger / bench seat - Additional to make this boat ride even better - Bluetooth radio connection - Fresh water boat shower - Prep station with fresh water sink - Large shaded area Our mission Let's get away from reality and explore what it feels to be out of cell phone range in Paradise!",
+        "detailsText": "We look forward to seeing you! Up to 6 guests • Private, captained charter • Most popular! Up to 6 guests • Private, captained charter • Most popular!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "417200",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/417200/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "417207",
+    "company": "saltysandbars",
+    "title": "3/4 Day 6hrs Boston Whaler",
+    "operator": "Salty Sandbars",
+    "publicPath": "/destinations/florida/key-west/tours/34-day-6hrs-boston-whaler-417207",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental."
+    ],
+    "schemaDescription": "A guided outing with Salty Sandbars in Key West. The outing passes SunChill Island Float The Vessel and Newer Bow-rider.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "SunChill Island Float The Vessel and Newer Bow-rider"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SgVH47iFTRiTrmuNYhZ5"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/YEuiJ9MCSLOuMzZtp2y3",
+    "wordCount": 40,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
+    "visiblePriceLabel": "From $849",
+    "priceRows": [
+      {
+        "label": "8hr Full Day Charter",
+        "note": "Up to 6 guests • 6 Hours",
+        "amountLabel": "$849"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "849.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 187,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 187 reviews on GET https://fareharbor.com/api/v1/companies/saltysandbars/items/417207/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/YEuiJ9MCSLOuMzZtp2y3",
+      "heroHandle": "YEuiJ9MCSLOuMzZtp2y3",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/SgVH47iFTRiTrmuNYhZ5",
+          "handle": "SgVH47iFTRiTrmuNYhZ5",
+          "pixelSha256": "ef0118469fcc182ade02baf4bef57b2b4a8139702867545d431f3e030808ec3e",
+          "differenceHashDistanceFromHero": 116,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28553,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/SgVH47iFTRiTrmuNYhZ5",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/saltysandbars-417207",
+      "fetchedAt": "2026-10-03T18:10:03.027320+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417207/content/",
+          "status": 200,
+          "bytes": 2308,
+          "sha256": "47e4837d0181defbb8fb48eca53889195040c72dadeffdee9b1c5b5695412007"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417207/structured-description/",
+          "status": 200,
+          "bytes": 1670,
+          "sha256": "e2915984bd721cb1887cfb000de46e5c2145c1d47924f5632cd02b94d5e2cd7f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417207/",
+          "status": 200,
+          "bytes": 10346,
+          "sha256": "04e5e9f766689fc1eff559e80c1efdce7fd2e3cec3f71919f3feab9979390653"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=417207&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 583,
+          "sha256": "835a00c8cb3192090f849ea4dda48c205bd31a40d363aa77ccb1353cbc9f461b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417207/ratings/",
+          "status": 200,
+          "bytes": 514,
+          "sha256": "7c9831b0586fb307e97cc34500a52fa99068270d07137c0ee9f5e6c747e71a94"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "8hr Full Day Charter",
+          "note": "Up to 6 guests • 6 Hours",
+          "amount": 849.0
+        },
+        "customerTypes": [
+          {
+            "singular": "8hr Full Day Charter",
+            "note": "Up to 6 guests • 6 Hours",
+            "amount": 849.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "811 Palm Ave Cswy 10 Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "Up to 6 guests • Private, captained charter • Full day adventure!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- Captain - Fuel - Cooler and ice - Bottled waters - Soda and chips -SunChill Island Float The Vessel - Newer Bow-rider - Boston Whaler \"The unsinkable legend\" - 230 Vantage - Plenty of comfortable seating for 6 passengers."
+        ],
+        "gleanedFacts": [
+          "Bottled water"
+        ],
+        "properNames": [
+          "SunChill Island Float The Vessel",
+          "Newer Bow-rider",
+          "Boston Whaler"
+        ],
+        "measures": [
+          "6 passengers"
+        ],
+        "description": "Enjoy a full day adventure on the water! - Captain - Fuel - Cooler and ice - Bottled waters - Soda and chips -SunChill Island Float The Vessel - Newer Bow-rider - Boston Whaler \"The unsinkable legend\" - 230 Vantage - Plenty of comfortable seating for 6 passengers. - Bow seating area with lounge backrest / sun pad area. - Shade lounger / bench seat - Additional to make this boat ride even better - Bluetooth radio connection - Fresh water boat shower - Prep station with fresh water sink - Large shaded area Our mission Let's get away from reality and explore what it feels to be out of cell phone range in Paradise!",
+        "detailsText": "We look forward to seeing you! Up to 6 guests • Private, captained charter • Full day adventure! Up to 6 guests • Private, captained charter • Full day adventure!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "417207",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/417207/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "515385",
+    "company": "saltysandbars",
+    "title": "5Hour Multiple Sandbar Hangout Boston Whaler",
+    "operator": "Salty Sandbars",
+    "publicPath": "/destinations/florida/key-west/tours/5hour-multiple-sandbar-hangout-boston-whaler-515385",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental. This is a private sandbar charter on the water.",
+      "The booking is about 5 hours. From the water, guests see Newer Bow-rider. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by.",
+      "The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A guided outing with Salty Sandbars in Key West. The outing passes SunChill Island Float The Vessel and Newer Bow-rider.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "SunChill Island Float The Vessel and Newer Bow-rider"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jLcExHEVRlKUVfGnvsfT"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/UfxH7cWARrKPdXE5OUQA",
+    "wordCount": 116,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
+    "visiblePriceLabel": "From $749",
+    "priceRows": [
+      {
+        "label": "Five Hour Sandbar",
+        "note": "Up to 6 People",
+        "amountLabel": "$749"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "749.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 187,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 187 reviews on GET https://fareharbor.com/api/v1/companies/saltysandbars/items/515385/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/UfxH7cWARrKPdXE5OUQA",
+      "heroHandle": "UfxH7cWARrKPdXE5OUQA",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/jLcExHEVRlKUVfGnvsfT",
+          "handle": "jLcExHEVRlKUVfGnvsfT",
+          "pixelSha256": "28f3ddf31b6744a9858b5b9ab7b4df89d445cfc06492cde4aad172f99d3adde8",
+          "differenceHashDistanceFromHero": 113,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.10093,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/jLcExHEVRlKUVfGnvsfT",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/saltysandbars-515385",
+      "fetchedAt": "2026-10-03T18:10:03.911354+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/515385/content/",
+          "status": 200,
+          "bytes": 2349,
+          "sha256": "7b1576db1130a7a3d63d6d3f2353bd0ec388a3eb58052db723b6aa14a1b37cab"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/515385/structured-description/",
+          "status": 200,
+          "bytes": 1733,
+          "sha256": "698e306a57b21fd8551bf5ffe103fcd13f551998ada110c610d94e98279f2ae5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/515385/",
+          "status": 200,
+          "bytes": 9967,
+          "sha256": "83f5c761cb531885dc8595753a30fc44c6e9ef08c793568944184425d9677d5c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=515385&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 565,
+          "sha256": "67aa6daa3811fe564db01917c0a0d81a9ac17aa401138ee3362e93fecac41f47"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/515385/ratings/",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "ae951b1442a92cffc9f7d27ff6524edd976edb96a301c13eef8615f9421416ce"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Five Hour Sandbar",
+          "note": "Up to 6 People",
+          "amount": 749.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Five Hour Sandbar",
+            "note": "Up to 6 People",
+            "amount": 749.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "811 Palm Ave Cswy 10 Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "Up to 6 Guests • Sandbar Hangout",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- Captain - Fuel - Cooler and ice - Bottled water - Soda and chips - SunChill Island Float The Vessel - Newer Bow-rider - Boston Whaler \"The unsinkable legend\" - 230 Vantage - Plenty of comfortable seating for 6 passengers."
+        ],
+        "gleanedFacts": [
+          "Bottled water"
+        ],
+        "properNames": [
+          "SunChill Island Float The Vessel",
+          "Newer Bow-rider",
+          "Boston Whaler"
+        ],
+        "measures": [
+          "6 passengers"
+        ],
+        "description": "This charter is highly recommended for bachelor / bachelorettes and birthdays for more time under the sun! - Captain - Fuel - Cooler and ice - Bottled water - Soda and chips - SunChill Island Float The Vessel - Newer Bow-rider - Boston Whaler \"The unsinkable legend\" - 230 Vantage - Plenty of comfortable seating for 6 passengers. - Bow seating area with lounge backrest / sun pad area. - Shade lounger / bench seat - Additional to make this boat ride even better - Bluetooth radio connection - Fresh water boat shower - Prep station with fresh water sink - Large shaded area Our mission Let's get away from reality and explore what it feels to be out of cell phone range in Paradise!",
+        "detailsText": "We look forward to seeing you! What to Bring: - Towels - BYOB - Sunblock Up to 6 Guests • Sandbar Hangout Up to 6 Guests • Sandbar Hangout",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "515385",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/515385/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "637746",
+    "company": "saltysandbars",
+    "title": "2Hr. Sandbar Express - Boston Whaler",
+    "operator": "Salty Sandbars",
+    "publicPath": "/destinations/florida/key-west/tours/2hr-sandbar-express---boston-whaler-637746",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Salty Sandbars lists this outing."
+    ],
+    "schemaDescription": "The operator Salty Sandbars lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/QElinKACTau60I1IqaMz"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/97YpXVC8TsimKfG0wcKF",
+    "wordCount": 7,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 187,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 187 reviews on GET https://fareharbor.com/api/v1/companies/saltysandbars/items/637746/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/97YpXVC8TsimKfG0wcKF",
+      "heroHandle": "97YpXVC8TsimKfG0wcKF",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/QElinKACTau60I1IqaMz",
+          "handle": "QElinKACTau60I1IqaMz",
+          "pixelSha256": "93ab38e4086dbd56ddd074cb2499714dc84868c5112ac35968fed4f2f656ab90",
+          "differenceHashDistanceFromHero": 119,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.17688,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/QElinKACTau60I1IqaMz",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/saltysandbars-637746",
+      "fetchedAt": "2026-10-03T18:10:04.242222+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/637746/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/637746/structured-description/",
+          "status": 200,
+          "bytes": 1253,
+          "sha256": "b1f5a304053dff00a8e48d3708d00d6dc233cac60de5cfcb4dd9076e5e4d9c87"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/637746/",
+          "status": 200,
+          "bytes": 8555,
+          "sha256": "59157adffc38dda2796cb3daa911987d5c9421bdc541269bc23d526bf02f3800"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=637746&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/637746/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "c1eedc1e78ba83c791eabe2e4a90685dc671cfeee557ab5622f09f82a6700d80"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2 Hours",
+        "meetingAddress": "811 Palm Ave Cswy 10 Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "2. Hours • 6 Guests",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "6 Guests",
+        "included": [
+          "Captain, Fuel, Cooler with ice, Bottled waters, mini sodas"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "30 min boat ride to the backcountry.",
+          "1sandbar or Sandbar ending with sunset."
+        ],
+        "gleanedFacts": [
+          "Bottled water"
+        ],
+        "properNames": [],
+        "measures": [],
+        "description": "30 min boat ride to the backcountry. 1sandbar or Sandbar ending with sunset",
+        "detailsText": "2. Hours • 6 Guests",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "637746",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/637746/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "26077",
+    "company": "schoonerjolly",
+    "title": "Florida Keys Sunset Sail",
+    "operator": "Schooner Jolly II Rover",
+    "publicPath": "/destinations/florida/key-west/tours/florida-keys-sunset-sail-26077",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests go out for a sunset sail. From the water, guests see Historic Seaport and Key West Bight. Mallory Square and Fort Zachary Taylor come into view as the boat moves. The cruise also passes Navy Mole and Truman Annex. Looking back toward shore, the group can see President Truman and Winter Whitehouse.",
+      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A two-hour harbor outing with Schooner Jolly II Rover on Key West Harbor. The sail passes Christmas Tree Island and Mallory Square.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "two-hour harbor outing in Key West",
+      "Christmas Tree Island and Mallory Square"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jkb8Ow99SMKrclylzRcB"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/rYOWrfRTpiNlWy9n0MOz",
+    "wordCount": 106,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
+    "meetingLocation": "Key West, FL",
+    "visiblePriceLabel": "From $95",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13 & up",
+        "amountLabel": "$95"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 4-12",
+        "amountLabel": "$45"
+      },
+      {
+        "label": "Toddler",
+        "note": "",
+        "amountLabel": "Free"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "95.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 487,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 487 reviews on GET https://fareharbor.com/api/v1/companies/schoonerjolly/items/26077/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/rYOWrfRTpiNlWy9n0MOz",
+      "heroHandle": "rYOWrfRTpiNlWy9n0MOz",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/jkb8Ow99SMKrclylzRcB",
+          "handle": "jkb8Ow99SMKrclylzRcB",
+          "pixelSha256": "29e76f7f88afe00cfcc56635d6a414f82aa2806703ae00e20c60e7861edb1d71",
+          "differenceHashDistanceFromHero": 83,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.16597,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/jkb8Ow99SMKrclylzRcB",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/schoonerjolly-26077",
+      "fetchedAt": "2026-10-03T18:10:04.966645+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/schoonerjolly/26077/content/",
+          "status": 200,
+          "bytes": 3183,
+          "sha256": "3349dcf96c3ba37f983bef595a454e6d3827fac730b5a761c5b9352a88e0bbbc"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/schoonerjolly/26077/structured-description/",
+          "status": 200,
+          "bytes": 2212,
+          "sha256": "9881c0e8053288d049184a7ecda68eddefcb5829ffb70ceeacd2e2474cd9135c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/schoonerjolly/items/26077/",
+          "status": 200,
+          "bytes": 9576,
+          "sha256": "17e034498f2cab60b7eac2d0f20c7e737c961c5fde55bdc236a1655c10c62abc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/schoonerjolly/price-preview/per-item/v2/?asn=fhdn&item_pks=26077&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 767,
+          "sha256": "e1288cb35ddc030120d69c878c245276c89c19f05af3c8cb2748f5f7a9bc6b80"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/schoonerjolly/items/26077/ratings/",
+          "status": 200,
+          "bytes": 517,
+          "sha256": "31f9fe2898067526f2070f58635c9d893c47642f7066bb474243d3e85b565d64"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 13 & up",
+          "amount": 95.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 13 & up",
+            "amount": 95.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 4-12",
+            "amount": 45.0
+          }
+        ],
+        "zeroPriceTypes": [
+          "Toddler"
+        ],
+        "departureStartAt": "2026-10-04T17:45:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 Hours",
+        "meetingAddress": "Key West, FL",
+        "itemLocation": "Key West, FL",
+        "headline": "Starting at $45 | Most Popular! | Watch the sun go down from the water!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Schooner Jolly II Rover",
+          "Historic Seaport",
+          "Key West",
+          "Fort Zachary Taylor",
+          "Truman Annex",
+          "President Truman's",
+          "Winter Whitehouse",
+          "Christmas Tree Island"
+        ],
+        "measures": [
+          "2 Hours",
+          "80 foot"
+        ],
+        "description": "Come aboard the Schooner Jolly II Rover for an unforgettable sunset sailing experience - With a Hint of Piracy!- in the glistening waters of the Florida Keys. Rates Adult (13+): $85 Child (4-12): $45 Infant (3 and younger): Free 2 Hours This square-rigged, 80 foot topsail schooner, built in 1994, will transport you back in time with its tanbark colored sails and cannons. Enjoy an exciting, romantic, sailing experience while basking in the amazing views of a Florida sunset. See Key West's gorgeous Historic Seaport, known locally as the Key West Bight. Once known for its shrimp boats, it is today both a beautiful sight and rich with history and waterfront culture. During the sail, you will see: - The renowned Key West sunset (and maybe even the \"green flash\" when the sun changes color for a moment if you're lucky) - Ocean wildlife, including schools of dolphins - Mallory Square, home of the Key West historical sculpture garden - Fort Zachary Taylor - The Navy Mole, a submarine base - Truman Annex, President Truman's \"Winter Whitehouse\" - \"Christmas Tree Island\" - Sunset Key, known for its multi-million dollar celebrity homes Join us today for an experience of a lifetime that you will never forget!",
+        "detailsText": "Starting at $45 | Most Popular! | Watch the sun go down from the water! Starting at $45 | Most Popular! | Watch the sun go down from the water!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "26077",
+        "provider": "schoonerjolly",
+        "bookingUrl": "https://fareharbor.com/embeds/book/schoonerjolly/items/26077/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "628106",
+    "company": "sixfinsjetskirental",
+    "title": "SIX FINS KEY WEST: 2-HOUR FLAGSHIP GUIDED JET SKI TOUR",
+    "operator": "Six Fins Jet Ski Rental - Perry Marina",
+    "publicPath": "/destinations/florida/key-west/tours/six-fins-key-west-2-hour-flagship-guided-jet-ski-tour-628106",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a private sandbar charter on the water. The booking is about 2 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. From the water, guests see Brand-new Yamaha VX Waverunners and Boating Safety Education ID.",
+      "Florida Personal Watercraft Agreement and Southernmost Point come into view as the boat moves. The cruise also passes Key West Harbor and Boca Chica Sandbar. Looking back toward shore, the group can see Safety Gear. The landmarks are seen from the harbor, with the boat doing the traveling."
+    ],
+    "schemaDescription": "A guided outing with Six Fins Jet Ski Rental - Perry Marina in Key West. The outing passes Brand-new Yamaha VX Waverunners.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Brand-new Yamaha VX Waverunners"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/j1pbM7bJT36f6xNJFVPP"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/jEA9hOfQj2oZMMAyvqf4",
+    "wordCount": 100,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "7025 Shrimp Rd. at Coconut Row, Dock J, Slip 1 Key West, FL 33040",
+    "visiblePriceLabel": "From $209",
+    "priceRows": [
+      {
+        "label": "Driver",
+        "note": "",
+        "amountLabel": "$209"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "209.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinsjetskirental/items/628106/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.563982,
+          "lng": -81.739453
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/jEA9hOfQj2oZMMAyvqf4",
+      "heroHandle": "jEA9hOfQj2oZMMAyvqf4",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/j1pbM7bJT36f6xNJFVPP",
+          "handle": "j1pbM7bJT36f6xNJFVPP",
+          "pixelSha256": "29c0322b80ae069cf8290cc9ac18e0d2bd86d71c388c381de2208ab9d79d6231",
+          "differenceHashDistanceFromHero": 131,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.30555,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/j1pbM7bJT36f6xNJFVPP",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/sixfinsjetskirental-628106",
+      "fetchedAt": "2026-10-03T18:10:05.184693+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinsjetskirental/628106/content/",
+          "status": 200,
+          "bytes": 20395,
+          "sha256": "6e71c1a1331d86251917a534c1f8dfb4bab94566801d1b93bf8e0646d0f9ba3b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinsjetskirental/628106/structured-description/",
+          "status": 200,
+          "bytes": 11423,
+          "sha256": "b43e0efaf6c51cb081b391b8c44bf33cc43f5593fc7d74cca2dba70b9fade78e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinsjetskirental/items/628106/",
+          "status": 200,
+          "bytes": 32791,
+          "sha256": "5942b406906be0a96c2037e37756a0ff05f605543d2e5efe4aaf43b13341740a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinsjetskirental/price-preview/per-item/v2/?asn=fhdn&item_pks=628106&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "9732ec9bc9738563d7fed965af9be83e8423601130f15675b48bc4590a0601b6"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinsjetskirental/items/628106/ratings/",
+          "status": 200,
+          "bytes": 542,
+          "sha256": "43e7ed13061f887b841515731d2238a847fd7c4348cf4380e00ded03c2dca0b6"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Driver",
+          "note": "",
+          "amount": 209.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Driver",
+            "note": "",
+            "amount": 209.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T17:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "7025 Shrimp Rd. at Coconut Row, Dock J, Slip 1 Key West, FL 33040",
+        "itemLocation": null,
+        "headline": "The only 2-hour guided jet ski tour in Key West - full island circumnavigation",
+        "startCity": "Key West",
+        "startProvince": "FL",
+        "startLat": 24.563982,
+        "startLng": -81.739453,
+        "minAge": 6,
+        "maxAge": 100,
+        "groupSize": "6 skis max. Up to 3 people per ski. Must be 16 to drive; 6 to ride",
+        "included": [
+          "Guided Tour: 2-hour tour with a knowledgeable guide",
+          "Perry Hotel Day Pass: Complimentary Perry Hotel pool and gym access, an approximately $35 value",
+          "Discount: 10% off boat charter excursions for up to 1 year",
+          "Safety Gear: Coast Guard-approved life vests, neoprene shorts, whistles, and fire extinguishers"
+        ],
+        "excluded": [
+          "Optional wet suit rentals are available for $20 (recommended during winter tours). • Bottled water, $1.00 each"
+        ],
+        "itinerary": [],
+        "routeNotes": [
+          "Our action-packed 28-mile tour takes you around the breathtaking coastline, stopping at five to six prime locations, including the iconic Southernmost Point, Key West Harbor, and hidden gems like Boca Chica Sandbar. As you glide over crystal-clear waters, look for playful dolphins, graceful sea turtles, and vibrant tropical birds in their natural habitat. Weather will determine the route or modifications thereof."
+        ],
+        "highlights": [
+          "The weather will determine the route or modifications thereof"
+        ],
+        "restrictions": [
+          "Jet Ski tours require vigorous activity, swimming skills, and a command of the English language - This activity is not recommended for people with severe medical conditions or women who are pregnant",
+          "The customer must speak fluent English",
+          "The customer must know how to swim"
+        ],
+        "bring": [
+          "Towel",
+          "Sunscreen",
+          "Sunglasses & Eyeglass Holders",
+          "Snacks",
+          "Non Alcoholic Beverages"
+        ],
+        "cancellation": "48-Hour Notice Required: Cancellations must be made at least 48 hours before the scheduled departure to receive a refund.",
+        "accessibility": "Unfortunately no",
+        "languages": [
+          "English"
+        ],
+        "factualSentences": [
+          "Age - Drivers must be 16 or older.",
+          "Passengers as young as 6 can ride along with an adult."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Six Fins",
+          "Key West",
+          "Perry Hotel",
+          "Brand-new Yamaha VX Waverunners",
+          "Boating Safety Education ID",
+          "Florida Personal Watercraft Agreement"
+        ],
+        "measures": [
+          "90 minutes",
+          "2 hours",
+          "30 minutes",
+          "2 passengers"
+        ],
+        "description": "Six Fins is the only jet ski operator in Key West offering a full two-hour guided island circumnavigation - competitors run the same 28-mile route in 90 minutes, we run it slower, with stops, on brand-new Yamaha VX Waverunners. Your USCG-licensed lead guide narrates landmarks, points out marine life, and keeps the group together. Available from the Perry Hotel & Marina. Quick facts: • 2 hours • Perry Hotel & Marina • USCG-licensed lead guide • Brand-new Yamaha VX Waverunners • Small-group format Good to know before you book Florida boater safety card - If you were born on or after January 1, 1988, Florida law requires an approved boating safety course and a Boating Safety Education ID card to operate a jet ski. Bring it with you. No card, no problem - you can still ride as a passenger. Waivers - Everyone riding, including minors, signs the Florida Personal Watercraft Agreement and our rental waiver. We email them with your confirmation. Sign before you arrive and you'll be on the water faster. Age - Drivers must be 16 or older. Passengers as young as 6 can ride along with an adult. Arrive 30 minutes early - Check-in and your safety briefing take time. Coming early protects your full ride time. Limits - Max 530 lbs and 3 riders per jet ski: one driver plus up to 2 passengers.",
+        "detailsText": "IMPORTANT: Please read before your tour. This confirmation contains safety rules, arrival details, and required actions. Dear Guests, We're thrilled to host your upcoming jet ski tour with Six Fins Jet Ski Rental in the beautiful oceans of Key West, Florida. To ensure a smooth and unforgettable experience, please review the important information below. Waivers - Insurance • All Drivers and passengers must sign the liability waiver. Parents and guardians sign for minors. Please sign before arriving for your tour [here:](https://waiver.smartwaiver.com/w/2d6tk6rpsccd3k2bqcfeui/web/) Livery Attestation • All Drivers and passengers must sign the livery waiver. Parents and guardians sign for minors. Please sign before arriving for your tour [here:](https://waiver.smartwaiver.com/w/mbsnn3yekudiwguswyjbhr/web/) Boater Safety Course - Drivers Only • Drivers born after Jan 1, 1988, must complete a Temporary Boater Safety Course (and bring proof) [here:](https://boattests101.com/united-states/florida/florida-rental?mcid=6mu7rail). The fee is $9.99. ✅ Tip: Take the boater test BEFORE you arrive. Otherwise, you must arrive at least 1 hour early to allow time to complete and pass. Tour Summary 🕒 Duration: 2 hours | Distance: 28 miles 📍 Location: The Perry Hotel and Marina, 7025 Shrimp Road at Coconut Row, Dock J Slip 1, Key West, FL 33040 - Walk down the ramp to the dock across the road from the Bad Boy Taqueria & Tequila Restaurant 🕘 Arrival: Please arrive 30 minutes early 👥 Group Size: Max 6 skis | 3 riders per ski (1 driver + up to 2 passengers) 👶 Age Limits: 6+ to ride with an adult, 16+ to drive (alone) 🌊 A note on sargassum (seaweed): The Florida Keys are seeing a heavy seaweed season this year. On some days our guides adjust the tour route - at times around the island's Atlantic side - to steer clear of seaweed-clogged channels and keep your ride safe and smooth. You'll still get the full guided experience: your captain picks the best route each morning based on that day's conditions and reviews it with you at the dock before launch. What's Included • Guided 2-hour tour with an experienced guide • 2024 Yamaha VX Waverunners • Resort Day pass to Perry Hotel pools, gym, and restaurants • 10% discount on Six Fins luxury boat charters for one year [here:](sixfinscharter.com) • Coast Guard-approved life vests and safety equipment • Free shuttle service to Perry Hotel from downtown (schedule varies) Photography Your guide will take photographs for you and text them to you after the tour! Tour Highlights • Southernmost Point - Snap a photo at the iconic marker • Boca Chica Sandbar - Relax and swim at this hidden gem • Spot dolphins, sea turtles, and more • Wrecks • Free ride areas Note: Tour route may vary depending on weather conditions. What to Bring • Towel • Sunscreen & sunglasses • Snacks & non-alcoholic beverages • We recommend leaving electronics/valuables at the secure dock box Tips & Payments • Tips for your guide are greatly appreciated. A typical gratuity is 20% of the base price ($209 per jet ski), or $42. • Bottled water, $1.00 each. Policies Check-In & Requirements • Insurance Waivers and Boater Safety Course must be completed before arrival. Drivers must also carry photo ID while on the water, as required by Florida law. • Arrive at least 30 minutes early. If you have not taken the Boater Safety Course, arrive 1 hour early. • Safety instructions and on-water hand signals are given in English. Every driver must be able to understand them. Ticket and Boarding Information • Tours depart promptly. Late arrivals will miss the tour and will not receive a refund. • Rescheduling is available if the tour is canceled due to weather or other safety concerns. • Modifications to the tour due to weather or other conditions do not qualify for refunds. • All minors must be accompanied by a parent or legal guardian. Reservation Policy • Every guest, including children, must have a reservation. Cancellation Policy • Cancellations must be made at least 48 hours before departure to receive a refund. • Same-day cancellations and no-shows are non-refundable. • Tickets purchased within 48 hours of departure are non-refundable. Weather & Conditions Policy • Tours will not operate in unsafe weather. Six Fins Jet Ski Rental reserves the right to cancel or reschedule for safety. Alcohol Policy • No alcohol before the tour. Guests under the influence or with alcohol will not be permitted to ride and will not be refunded. Privacy Policy • We may contact you via email about your reservation and for marketing purposes. • You may opt out of marketing communications at any time. • Locations may be under video surveillance. • Photos or videos may be used on social media unless you object in writing. Responsibility / Damages The renter is financially responsible for any damage or loss of equipment. • Repair/replacement charges: - Impeller: $1,000 - Damaged Seats: $500/seat - Flooded Engine: $750 - Lost Key: $70 - Cracked Hull: $100/sq in - Total Loss: $10,000 • $200/day charge applies until unit is rentable again (max $10,000). Therefore, we strongly recommend that you purchase the Damage Protection Policy Coverage from your concierge or guide at the jet ski dock for only $40. Disclaimer • By riding or operating a jet ski, participants accept all responsibility for their safety and any damage caused. • Six Fins Jet Ski Rental is not responsible for lost or damaged personal items. ________________________________________ We appreciate your cooperation with these policies and look forward to providing you with an unforgettable jet ski experience! Best, David McFadden and the Six Fins Jet Ski Team Email confirmations will include all jet ski regulations, check-in requirements, age policies, and cancellation information. Please be sure to review them before check-in. - Drivers must carry photo ID while on the water, as required by Florida law. - Minors must be accompanied by their actual parent or legal guardian. For safety reasons, all jet ski operators must speak and understand English. Guests not meeting this language requirement cannot operate a jet ski. For safety reasons, all jet ski operators must be intermediate swimmers. Guests not meeting this swimming requirement cannot operate a jet ski. Mandatory Insurance Waivers: All participants, including minors, must sign. Mandatory Florida Boating/PWC Safety Course - If the jet ski driver was born on or after January 1, 1988, you must pass an online Temporary Boater Safety Course Pass this course before your arrival for your tour. - A minimum of 30 minutes early check-in is required for all guests. - No alcohol can be consumed before participating in any jet ski activity. Email confirmations will include all jet ski regulations, check-in requirements, age policies, and cancellation information. Please be sure to review them before check-in. - Drivers must carry photo ID while on the water, as required by Florida law. - Minors must be accompanied by their actual parent or legal guardian. For safety reasons, all jet ski operators must speak and understand English. Guests not meeting this language requirement cannot operate a jet ski. For safety reasons, all jet ski operators must be intermediate swimmers. Guests not meeting this swimming requirement cannot operate a jet ski. Mandatory Insurance Waivers: All participants, including minors, must sign. Mandatory Florida Boating/PWC Safety Course - If the jet ski driver was born on or after January 1, 1988, you must pass an online Temporary Boater Safety Course Pass this course before your arrival for your tour. - A minimum of 30 minutes early check-in is required for all guests. - No alcohol can be consumed before participating in any jet ski activity. The only 2-hour guided jet ski tour in Key West - full island circumnavigation The only 2-hour guided jet ski tour in Key West - full island circumnavigation",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "628106",
+        "provider": "sixfinsjetskirental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinsjetskirental/items/628106/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "22878",
+    "company": "southpointdiverskw",
+    "title": "Morning 2-Tank Dive: Vandenberg Wreck",
+    "operator": "Southpoint Divers",
+    "publicPath": "/destinations/florida/key-west/tours/morning-2-tank-dive-vandenberg-wreck-22878",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a guided outing with Southpoint Divers in Key West. Tanks & weights, gloves, and water are included. The outdoor route is about 6 miles.",
+      "The outing reaches Florida Keys National Marine Sanctuary. Groups are capped at 20.",
+      "Guests must be at least 15 years old. A full refund is available with at least 48 hours' notice."
+    ],
+    "schemaDescription": "A guided outing lasting 4.5 with Southpoint Divers in Key West. The outing passes Florida Keys National Marine Sanctuary.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4.5 guided outing",
+      "Florida Keys National Marine Sanctuary",
+      "tanks & weights"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/D0iqBBR02Z9H4OO25wwq"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/mEbdkwwRdiJILAx7Cnow",
+    "wordCount": 57,
+    "durationLabel": "4.5",
+    "durationIso": null,
+    "meetingLocation": "606 Front Street Key West Florida 33040",
+    "visiblePriceLabel": "From $65",
+    "priceRows": [
+      {
+        "label": "Certified Diver with Gear Package",
+        "note": "Tanks, weights, BCD & regulator (wetsuit if need)",
+        "amountLabel": "$174"
+      },
+      {
+        "label": "Certified Diver tanks/weights only",
+        "note": "Option to add gear piece by piece",
+        "amountLabel": "$134"
+      },
+      {
+        "label": "Rider",
+        "note": "",
+        "amountLabel": "$65"
+      },
+      {
+        "label": "Deep / Wreck Certification",
+        "note": "",
+        "amountLabel": "$859"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "65.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/southpointdiverskw/items/22878/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via company_start_location",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Key West, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 24.561131,
+        "lng": -81.80432
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.561131,
+          "lng": -81.80432
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/mEbdkwwRdiJILAx7Cnow",
+      "heroHandle": "mEbdkwwRdiJILAx7Cnow",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/D0iqBBR02Z9H4OO25wwq",
+          "handle": "D0iqBBR02Z9H4OO25wwq",
+          "pixelSha256": "4f1e264c71f3c718bbd31388bada1074861eeed834ef3b1ba409a3acacadd085",
+          "differenceHashDistanceFromHero": 91,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.06222,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/D0iqBBR02Z9H4OO25wwq",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/southpointdiverskw-22878",
+      "fetchedAt": "2026-10-03T18:10:06.162483+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/southpointdiverskw/22878/content/",
+          "status": 200,
+          "bytes": 5504,
+          "sha256": "5d06768e2098e4c4d30f3fbacba90d09268dfe8cf6d2b7f589655fdbcd69ef76"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/southpointdiverskw/22878/structured-description/",
+          "status": 200,
+          "bytes": 2369,
+          "sha256": "a6f6aa5403eaac415d48256c2be6c8e7f5f73ea996e1f2d5c39890f1e772489a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/southpointdiverskw/items/22878/",
+          "status": 200,
+          "bytes": 16966,
+          "sha256": "feaf89b3a7c71e36ce6eb4f05841987ba8ad7fd78c5dd04d25a4c6e275306b4f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/southpointdiverskw/price-preview/per-item/v2/?asn=fhdn&item_pks=22878&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1075,
+          "sha256": "2fd9f5bf686cc8e17a992ecda13c7a1c413c991cb8dde3bf5bb152e8e31fb90b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/southpointdiverskw/items/22878/ratings/",
+          "status": 200,
+          "bytes": 501,
+          "sha256": "46fd71e2ca37f0a1d00979d100b775eb679d5353a1aef792711b3cf40e0f2495"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Rider",
+          "note": "",
+          "amount": 65.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Certified Diver with Gear Package",
+            "note": "Tanks, weights, BCD & regulator (wetsuit if need)",
+            "amount": 174.0
+          },
+          {
+            "singular": "Certified Diver tanks/weights only",
+            "note": "Option to add gear piece by piece",
+            "amount": 134.0
+          },
+          {
+            "singular": "Rider",
+            "note": "",
+            "amount": 65.0
+          },
+          {
+            "singular": "Deep / Wreck Certification",
+            "note": "",
+            "amount": 859.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-05T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4.5",
+        "meetingAddress": "606 Front Street Key West Florida 33040",
+        "itemLocation": null,
+        "headline": "4.5 Hours • Dive the World's 2nd largest Artificial Reef with us! • Ages 15+",
+        "startCity": "Key West",
+        "startProvince": "FL",
+        "startLat": 24.561131,
+        "startLng": -81.80432,
+        "minAge": 15,
+        "maxAge": 75,
+        "groupSize": "20",
+        "included": [
+          "tanks & weights",
+          "gloves",
+          "water",
+          "cooler full of ice",
+          "fully covered boat for sun protection"
+        ],
+        "excluded": [
+          "Guides, or dive master in water"
+        ],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "48 hour cancellation policy",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "This majestic naval ship, purposefully sunk in 2009, serves as Key West's most expansive and captivating artificial reef.",
+          "Located approximately 6 miles south-southeast of Key West within the pristine Florida Keys National Marine Sanctuary (FKNMS), the Vandenberg rests at a depth of 140 feet."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Key West's",
+          "Key West",
+          "Florida Keys National Marine Sanctuary"
+        ],
+        "measures": [
+          "6 miles",
+          "140 feet",
+          "100 feet"
+        ],
+        "description": "During our exhilarating 2-tank morning wreck dive, we explore the legendary USNS General Hoyt S. Vandenberg, renowned as the world's second-largest artificial reef. This majestic naval ship, purposefully sunk in 2009, serves as Key West's most expansive and captivating artificial reef. Located approximately 6 miles south-southeast of Key West within the pristine Florida Keys National Marine Sanctuary (FKNMS), the Vandenberg rests at a depth of 140 feet. Our adventure takes us to a maximum depth of 100 feet, allowing us to navigate the expansive deck of this colossal vessel. The dive unveils an underwater landscape teeming with marine biodiversity, with the ship's towering structures now encrusted with colorful corals and bustling with vibrant sea life. Each tank offers a unique perspective-whether gliding along the deck's remnants or peering into the ship's intriguing corridors, the Vandenberg promises an unforgettable underwater experience.",
+        "detailsText": "VANDENBERG WRECK DIVE - ADVANCED DIVE (READ CAREFULLY) This is an advanced, high risk dive. Not for beginners. Please read everything below carefully before arrival. CHECK-IN LOCATION Southpoint Divers - [606 Front St, Key West, FL 33040](https://goo.gl/maps/LDskY2AXDky), Our 46' custom dive boat, The Phoenix, docks at the Hyatt Marina, across the street from the shop. Arrival Time: 8:00am SHARP -Boat departs from Hyatt Centric (across the street) at 8:30am -We do not wait for late arrivals Late arrivals = missed dive, no refund Required Experience The Vandenberg is a deep, advanced wreck dive with potential for: -Strong currents -Limited visibility -Depth and overhead environments To participate, you must, -Be Advanced Open Water certified (or equivalent) -Have dived within the last 12 months -Be comfortable in deeper water and variable conditions -Open Water Certified MUST have dived within the last 6 months and REQUIRES a guide ($50) MEDICAL (FOR REFERENCE) [PADI Medical Form](https://www.padi.com/sites/default/files/documents/2022-12/Diver_Medical_Participant_Questionnaire_10346_EN_English_2022-02-01.pdf) - This is provided as reference for general dive fitness - if you have any medical concerns, you are responsible for obtaining Doctor clearance prior to arrival - Certification card (required) - Towel & swimsuit - We encourage you to use mineral-based reef safe sunscreen and use Ultraviolet Protection Factor (UPF) sunwear. - Recommended - motion sickness prevention - surface marker Buoy OPTIONAL BUT STRONGLY RECOMMENDED - Guide ($50) - Strongly recommend if unfamiliar with the Vandenberg - Dive computer (required if you do not have one) - GoPro Rental DIVE CONDITIONS - 2-tank wreck dive - Conditions vary daily - This is a serious dive profile IMPORTANT REMINDERS No flying within 24 hours after diving Ocean conditions are unpredictable- plan accordingly CREW GRATUITY If you had a great experience - Typical gratuity: 15-20% per person Always appreciated, Never required Please watch this short video Please watch this short [video](https://nmsfloridakeys.blob.core.windows.net/floridakeys-prod/media/videos/reef-etiquette.mp4) to learn more about diving and snorkeling in Florida Keys National Marine Sanctuary and how you can help to protect this special place! 4.5 Hours • Dive the World's 2nd largest Artificial Reef with us! • Ages 15+ 4.5 Hours • Dive the World's 2nd largest Artificial Reef with us! • Ages 15+",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "22878",
+        "provider": "southpointdiverskw",
+        "bookingUrl": "https://fareharbor.com/embeds/book/southpointdiverskw/items/22878/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "624612",
+    "company": "undergrounddonutour",
+    "title": "Key West Southernmost Sweet Treats Tour",
+    "operator": "Underground Donut Tour",
+    "publicPath": "/destinations/florida/key-west/tours/key-west-southernmost-sweet-treats-tour-624612",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "A few optional stops leave time to step out for photographs and a closer look. The tasting also stops near Glazed Donuts and Old Town Key West. Food is the thread: each stop is there for what guests taste, with the street as the setting."
+    ],
+    "schemaDescription": "A two-hour walking tour with Underground Donut Tour in Key West.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "two-hour walking tour in Key West",
+      "Groups stay at a maximum of 20 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ucavwJ29Qq62vEB34mOM"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/HPV1P8fNS2qRfCdHLUZP",
+    "wordCount": 45,
+    "durationLabel": "2 hours",
+    "durationIso": "PT2H",
+    "meetingLocation": "430 Duval Street Key West, FL 33040",
+    "visiblePriceLabel": "From $65",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 11+",
+        "amountLabel": "$65"
+      },
+      {
+        "label": "Kid",
+        "note": "Ages 10 & Under",
+        "amountLabel": "$55"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "65.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 1463,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 5 from 1463 reviews on GET https://fareharbor.com/api/v1/companies/undergrounddonutour/items/624612/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Key West",
+      "state": "Florida",
+      "citySlug": "key-west",
+      "stateSlug": "florida",
+      "reason": "Key West, Florida belongs to the Key West area via meeting_point",
+      "place": {
+        "city": "Key West",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "key-west",
+        "stateSlug": "florida",
+        "raw": "Duval Street Key West, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Duval Street Key West, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Key West",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "key-west",
+          "stateSlug": "florida",
+          "raw": "Key West, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.556004,
+          "lng": -81.803391
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/HPV1P8fNS2qRfCdHLUZP",
+      "heroHandle": "HPV1P8fNS2qRfCdHLUZP",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ucavwJ29Qq62vEB34mOM",
+          "handle": "ucavwJ29Qq62vEB34mOM",
+          "pixelSha256": "101eeb3290d433a768c7d2b5eef55d5af2216078ef9d4c16132e81fc4e55f529",
+          "differenceHashDistanceFromHero": 132,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31779,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ucavwJ29Qq62vEB34mOM",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/key-west/undergrounddonutour-624612",
+      "fetchedAt": "2026-10-03T18:10:06.292529+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/undergrounddonutour/624612/content/",
+          "status": 200,
+          "bytes": 8504,
+          "sha256": "f7754e2b08b47b7a752476f49753ec794b2614cb62d4b10323c875717f1a554b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/undergrounddonutour/624612/structured-description/",
+          "status": 200,
+          "bytes": 3837,
+          "sha256": "278fd299ca55b49839b7c08e564843f6d1fc1da35e8f2cba9e21e24baa2095ba"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/undergrounddonutour/items/624612/",
+          "status": 200,
+          "bytes": 17056,
+          "sha256": "8fbe08e79e83183bf730bb1bc1cbaa64c4f2722148b69c3903cb3d9d7a041cd6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/undergrounddonutour/price-preview/per-item/v2/?asn=fhdn&item_pks=624612&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 649,
+          "sha256": "36158db11585ffd59457804694ef42d7ae1438406f93bbe5d2b88a30ca3bfdf5"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/undergrounddonutour/items/624612/ratings/",
+          "status": 200,
+          "bytes": 647,
+          "sha256": "41c7ae1666dcf151c8a7fb0953e764c1431831f91b59df2f9f8f1d07e5b2aa3f"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 11+",
+          "amount": 65.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 11+",
+            "amount": 65.0
+          },
+          {
+            "singular": "Kid",
+            "note": "Ages 10 & Under",
+            "amount": 55.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-05T10:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 hours",
+        "meetingAddress": "430 Duval Street Key West, FL 33040",
+        "itemLocation": "Key West, FL",
+        "headline": "2 Hours • Offered Many Days Throughout the Week",
+        "startCity": "Key West",
+        "startProvince": "FL",
+        "startLat": 24.556004,
+        "startLng": -81.803391,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 20 people",
+        "included": [
+          "Fresh donut tastings starting at Glazed Donuts",
+          "A rotating selection of island sweet treats, which may include Key lime pie, cookies, ice cream, or conch fritters",
+          "A guided walking tour through Old Town Key West",
+          "Scenic photo opportunities with colorful streets and tropical backdrops 🌴🍩"
+        ],
+        "excluded": [
+          "Tips / Gratuity",
+          "Parking fees"
+        ],
+        "itinerary": [],
+        "routeNotes": [
+          "Get ready to explore paradise one sweet bite at a time on the Underground Donut Tour Key West. This laid-back, flavor-packed walking tour starts at Glazed Donuts, where we kick things off with freshly made donuts before heading out to wander the streets of Old Town Key West. From there, the tour becomes a delicious adventure through the island, mixing tropical vibes, local history, and plenty of sweet stops along the way.​ As we stroll through Old Town, you'll sample a variety of beloved Key West treats based on what the group is most excited to try. That could mean classic Key lime pie, cookies, ice cream, local donuts, or even “Key West donuts,” better known as conch fritters. Every tour is a little different, making each experience unique and tailored to the group's tastes. Along the way, your guide will share fun stories, quirky local lore, and insights into what makes Key West such a one-of-a-kind destination. With beautiful scenery, plenty of photo opportunities, and a rotating lineup of incredible sweet treats, this tour is perfect for couples, friends, families, or anyone who wants to experience Key West in a fun, relaxed, and delicious way."
+        ],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "100% refund within 24 hours of tour.",
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Glazed Donuts",
+          "Key West"
+        ],
+        "measures": [],
+        "description": "Experience paradise one sweet bite at a time on the Underground Donut Tour Key West. The adventure begins at Glazed Donuts, where you will enjoy freshly made donuts before exploring the charming streets of Old Town. From there, the tour becomes a rotating tasting experience featuring beloved island treats such as Key lime pie, cookies, ice cream, local donuts, and even conch fritters, sometimes called Key West donuts. Each tour is slightly different based on the group's tastes, making every experience unique. Along the way, your guide shares quirky local stories, island history, and fun facts. With tropical scenery, colorful architecture, and plenty of photo opportunities, this relaxed walking tour offers a delicious and memorable way to discover Key West. 🌴🍩",
+        "detailsText": "Explore Old Town Key West with fresh donuts, Key lime pie, tropical treats, local stories, and laid back island vibes. 🌴🍩 2 Hours • Offered Many Days Throughout the Week",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "624612",
+        "provider": "undergrounddonutour",
+        "bookingUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/624612/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

@@ -1,0 +1,1096 @@
+[
+  {
+    "itemId": "520862",
+    "company": "fatherdaughtercharters",
+    "title": "Sunset Sail",
+    "operator": "Florida Sail",
+    "publicPath": "/destinations/florida/st-petersburg/tours/sunset-sail-520862",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests go out for a sunset sail. The water is usually calmer once the afternoon wind drops. From the water, guests see SkyBeach Resort Marina."
+    ],
+    "schemaDescription": "Guests go out for a sunset sail. The water is usually calmer once the afternoon wind drops.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dr5U0nMoQgSgV5ob9qXI"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/0d4wY48USeaKHeRSYXmO",
+    "wordCount": 25,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+    "visiblePriceLabel": "From $899",
+    "priceRows": [
+      {
+        "label": "Sunset Sail",
+        "note": "2 hours • Ages 3+",
+        "amountLabel": "$899"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "899.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/520862/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "St. Petersburg",
+      "state": "Florida",
+      "citySlug": "st-petersburg",
+      "stateSlug": "florida",
+      "reason": "St. Petersburg, Florida belongs to the St. Petersburg area via meeting_point",
+      "place": {
+        "city": "St. Petersburg",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "st-petersburg",
+        "stateSlug": "florida",
+        "raw": "Drive South St. Petersburg, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "St. Petersburg",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "st-petersburg",
+          "stateSlug": "florida",
+          "raw": "Drive South St. Petersburg, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Bradenton Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "bradenton-beach",
+          "stateSlug": "florida",
+          "raw": "Bradenton Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/0d4wY48USeaKHeRSYXmO",
+      "heroHandle": "0d4wY48USeaKHeRSYXmO",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/dr5U0nMoQgSgV5ob9qXI",
+          "handle": "dr5U0nMoQgSgV5ob9qXI",
+          "pixelSha256": "128f8ff14981b2f0a78abee9f5c89670734f4688a3cba890db5801b446785919",
+          "differenceHashDistanceFromHero": 179,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.19623,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/dr5U0nMoQgSgV5ob9qXI",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/st-petersburg/fatherdaughtercharters-520862",
+      "fetchedAt": "2026-10-03T18:09:30.514203+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/520862/content/",
+          "status": 200,
+          "bytes": 3026,
+          "sha256": "52c9264e5731ee01d1704ba0d3930a21326c74fea63b2ba7e4aec7b72e1507c5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/520862/structured-description/",
+          "status": 200,
+          "bytes": 1694,
+          "sha256": "a58bc87df07cb457e5d816e9bf9b5e49db59d8ed4644225afd343f71773ae8ef"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/520862/",
+          "status": 200,
+          "bytes": 12193,
+          "sha256": "7ee27a382058e62b6f1b3ea6d14118bf965e92c4a7898f8a79eac1114bbc6c75"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=520862&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 562,
+          "sha256": "eb570b1c8876db0a19e1be20ff7bb02c4e5a8378f0d4bc33b81402c7fc71d50f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/520862/ratings/",
+          "status": 200,
+          "bytes": 428,
+          "sha256": "d8e0333fa591549ef5b27fab449aea23e2f734ce4397174b40439f06da7815e7"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Sunset Sail",
+          "note": "2 hours • Ages 3+",
+          "amount": 899.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Sunset Sail",
+            "note": "2 hours • Ages 3+",
+            "amount": 899.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T18:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+        "itemLocation": "NEW LOCATION 1465 Gulf Dr S, Bradenton Beach, FL 34217",
+        "headline": "2 Hour Private Charter",
+        "startCity": "St. Petersburg",
+        "startProvince": "FL",
+        "startLat": 27.703982,
+        "startLng": -82.647747,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [
+          "Scenic sunset views over the bay",
+          "Opportunities to see wild dolphins in their natural habitat",
+          "Calm intracoastal waterways ideal for a relaxing cruise"
+        ],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "SkyBeach Resort Marina"
+        ],
+        "measures": [],
+        "description": "Enjoy a peaceful cruise through the bay at SkyBeach Resort Marina as the sun dips below the horizon. Glide along calm intracoastal waterways that set the scene for unforgettable colors on the water while guides point out playful wild dolphins. This relaxed outing is perfect for guests who want to unwind, watch wildlife, and capture sunset views from the water.",
+        "detailsText": "Meet at SkyBeach Resort Marina, 6800 Sunshine Skyway Ln S, St. Petersburg, FL 33711. Meet at SkyBeach Resort Marina, 6800 Sunshine Skyway Ln S, St. Petersburg, FL 33711. Relaxing sunset cruise through calm intracoastal waterways with dolphin-spotting opportunities. 2 Hour Private Charter",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "520862",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/520862/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "521462",
+    "company": "fatherdaughtercharters",
+    "title": "Half-Day Sail",
+    "operator": "Florida Sail",
+    "publicPath": "/destinations/florida/st-petersburg/tours/half-day-sail-521462",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Florida Sail lists this outing."
+    ],
+    "schemaDescription": "The operator Florida Sail lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/hkI4oKPdRVG1iTrE4MnD"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/Rft9qEmJSXKylnFORIKR",
+    "wordCount": 7,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521462/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "St. Petersburg",
+      "state": "Florida",
+      "citySlug": "st-petersburg",
+      "stateSlug": "florida",
+      "reason": "St. Petersburg, Florida belongs to the St. Petersburg area via meeting_point",
+      "place": {
+        "city": "St. Petersburg",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "st-petersburg",
+        "stateSlug": "florida",
+        "raw": "Drive South St. Petersburg, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "St. Petersburg",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "st-petersburg",
+          "stateSlug": "florida",
+          "raw": "Drive South St. Petersburg, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Bradenton Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "bradenton-beach",
+          "stateSlug": "florida",
+          "raw": "Bradenton Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Rft9qEmJSXKylnFORIKR",
+      "heroHandle": "Rft9qEmJSXKylnFORIKR",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/hkI4oKPdRVG1iTrE4MnD",
+          "handle": "hkI4oKPdRVG1iTrE4MnD",
+          "pixelSha256": "8cc00ea6943d23a17030c6daee983eebd816b58e88875d77fc77c928533b4316",
+          "differenceHashDistanceFromHero": 140,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.16748,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/hkI4oKPdRVG1iTrE4MnD",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/st-petersburg/fatherdaughtercharters-521462",
+      "fetchedAt": "2026-10-03T18:09:30.514965+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521462/content/",
+          "status": 200,
+          "bytes": 2592,
+          "sha256": "10db4d53f62067b117a63c41f57cd982853e98d7305175d42affcd3dfa161f8b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521462/structured-description/",
+          "status": 200,
+          "bytes": 1334,
+          "sha256": "4b5a6a23eaf6e01ada34fa17a4548c99b4d9e367a2c22bbccf157b76cd70317a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521462/",
+          "status": 200,
+          "bytes": 12585,
+          "sha256": "a935b4e7a25b03f06993561afe1efd77ac11afd2b28828e3d1bc6671d01141d4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521462&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 590,
+          "sha256": "3398d2fe71874b94c7eaaeb44443a4ac16f07b5b448caf2121cec7709f9458fb"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521462/ratings/",
+          "status": 200,
+          "bytes": 430,
+          "sha256": "b3ce79e77d7f6063b62a5a2000d219535d39bbfd60d3989909883ccb955532e5"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+        "itemLocation": "NEW LOCATION 1465 Gulf Dr S, Bradenton Beach, FL 34217",
+        "headline": "4 Hour Private Charter",
+        "startCity": "St. Petersburg",
+        "startProvince": "FL",
+        "startLat": 27.703982,
+        "startLng": -82.647747,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Shell Key"
+        ],
+        "measures": [],
+        "description": "Escape the hustle and bustle with our most popular sailing trip-the half day sail! This charter kicks off with a leisurely sail along the intercoastal waterways to one of the best local shelling islands in Florida. Once at Shell Key, you'll have time to swim, snorkel, and look for shells before we begin our sail back to the marina.",
+        "detailsText": "4 Hour Private Charter 4 Hour Private Charter",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "521462",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521462/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "521546",
+    "company": "fatherdaughtercharters",
+    "title": "Full-Day Sail",
+    "operator": "Florida Sail",
+    "publicPath": "/destinations/florida/st-petersburg/tours/full-day-sail-521546",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "From the water, guests see Egmont Key and Shell Key. Fort Dade and Choose Anna Maria come into view as the boat moves."
+    ],
+    "schemaDescription": "From the water, guests see Egmont Key and Shell Key.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7JZkwDwQ4WAYNCezIEcF"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/ABOPSt8QGquxdkSwgxF2",
+    "wordCount": 23,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+    "visiblePriceLabel": "From $1,495",
+    "priceRows": [
+      {
+        "label": "Full-Day Private Charter",
+        "note": "8 hours • Ages 3+",
+        "amountLabel": "$1,495"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1495.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521546/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "St. Petersburg",
+      "state": "Florida",
+      "citySlug": "st-petersburg",
+      "stateSlug": "florida",
+      "reason": "St. Petersburg, Florida belongs to the St. Petersburg area via meeting_point",
+      "place": {
+        "city": "St. Petersburg",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "st-petersburg",
+        "stateSlug": "florida",
+        "raw": "Drive South St. Petersburg, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "St. Petersburg",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "st-petersburg",
+          "stateSlug": "florida",
+          "raw": "Drive South St. Petersburg, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Bradenton Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "bradenton-beach",
+          "stateSlug": "florida",
+          "raw": "Bradenton Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ABOPSt8QGquxdkSwgxF2",
+      "heroHandle": "ABOPSt8QGquxdkSwgxF2",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/7JZkwDwQ4WAYNCezIEcF",
+          "handle": "7JZkwDwQ4WAYNCezIEcF",
+          "pixelSha256": "f88061a5592a796a11d70dfe6914271ac0fb9c063e3d64e8aa4ec8806a387320",
+          "differenceHashDistanceFromHero": 130,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.20198,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/7JZkwDwQ4WAYNCezIEcF",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/st-petersburg/fatherdaughtercharters-521546",
+      "fetchedAt": "2026-10-03T18:09:30.515977+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521546/content/",
+          "status": 200,
+          "bytes": 2847,
+          "sha256": "4147f6f811bc1d42799a30efb90c2a4a92bd32a5d0d8fd6678c9730f9c3aae0d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521546/structured-description/",
+          "status": 200,
+          "bytes": 1491,
+          "sha256": "f7d6f7375ff89d6ae35773f53c19bd81325fb00a13d9c799e70e990d1a610cb5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521546/",
+          "status": 200,
+          "bytes": 12831,
+          "sha256": "bc55807e7c04f4e7f28f29b53d25bae83e891af04a9a24b51a9cee37b4e9f258"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521546&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 590,
+          "sha256": "c6b54866bcae3117968a6e7420cd097bb705844bffcbbab83c54dd2b7950c100"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521546/ratings/",
+          "status": 200,
+          "bytes": 430,
+          "sha256": "518ab49bd4a734b420e923d5e964f825236879845c3a6905d0bb892c0e0e02a3"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Full-Day Private Charter",
+          "note": "8 hours • Ages 3+",
+          "amount": 1495.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Full-Day Private Charter",
+            "note": "8 hours • Ages 3+",
+            "amount": 1495.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+        "itemLocation": "NEW LOCATION 1465 Gulf Dr S, Bradenton Beach, FL 34217",
+        "headline": "8 Hour Private Charter",
+        "startCity": "St. Petersburg",
+        "startProvince": "FL",
+        "startLat": 27.703982,
+        "startLng": -82.647747,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Egmont Key",
+          "Anna Maria",
+          "Fort Dade",
+          "Choose Anna Maria",
+          "While Shell Key"
+        ],
+        "measures": [],
+        "description": "Embark on a customized sailing adventure and choose your destination. Egmont Key, Anna Maria, or Shell Key. Opt for Egmont Key to explore a historic island, home to gopher tortoises, remains of Fort Dade, and secluded beaches. Choose Anna Maria for a charming coastal town with picturesque surroundings. While Shell Key is a haven for unspoiled nature with fantastic shelling opportunities. Whichever destination you select, our experienced crew will ensure a fun-filled sailing experience.",
+        "detailsText": "8 Hour Private Charter 8 Hour Private Charter",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "521546",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521546/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "521569",
+    "company": "fatherdaughtercharters",
+    "title": "Overnight Sail - 1 Night",
+    "operator": "Florida Sail",
+    "publicPath": "/destinations/florida/st-petersburg/tours/overnight-sail---1-night-521569",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests go out for a sunset sail. From the water, guests see Egmont Key and Anna Maria Island. Second Wind come into view as the boat moves."
+    ],
+    "schemaDescription": "Guests go out for a sunset sail. From the water, guests see Egmont Key and Anna Maria Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Anna Maria Island and Treasure Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7qRv5sUdSpGcLzhh45Rs"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/GlRcuQ23Tvq4s7Pc50La",
+    "wordCount": 27,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Treasure Island",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521569/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "St. Petersburg",
+      "state": "Florida",
+      "citySlug": "st-petersburg",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/GlRcuQ23Tvq4s7Pc50La",
+      "heroHandle": "GlRcuQ23Tvq4s7Pc50La",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/7qRv5sUdSpGcLzhh45Rs",
+          "handle": "7qRv5sUdSpGcLzhh45Rs",
+          "pixelSha256": "203d9155f6676d663cd728d7d97d32167e852a809b517d1c5e8db7190bade0ce",
+          "differenceHashDistanceFromHero": 114,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.08708,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/7qRv5sUdSpGcLzhh45Rs",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/st-petersburg/fatherdaughtercharters-521569",
+      "fetchedAt": "2026-10-03T18:09:30.516302+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521569/content/",
+          "status": 200,
+          "bytes": 2822,
+          "sha256": "b9cce2c92f6796104f06d0f1c958d401bc76b0b35e8e19ccfb396e9efc82ab29"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521569/structured-description/",
+          "status": 200,
+          "bytes": 1335,
+          "sha256": "1453fb0973ae118decb927dbc8aa279c4a78266deaf42f3a5cef5499b41dec2d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521569/",
+          "status": 200,
+          "bytes": 12844,
+          "sha256": "1fa4679eda37be921b480efc2b062929f6a0d33d6c10c94676004cba3634e3af"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521569&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521569/ratings/",
+          "status": 200,
+          "bytes": 440,
+          "sha256": "2f346f6b37958e7d4662d769e2aa415ac41b3d7651e1a77a72de23d1dd4d42a8"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": "Treasure Island",
+        "itemLocation": "Treasure Island",
+        "headline": "2 Days/1 Night Private Charter",
+        "startCity": "St. Petersburg",
+        "startProvince": "FL",
+        "startLat": 27.703982,
+        "startLng": -82.647747,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Egmont Key",
+          "Second Wind",
+          "Anna Maria Island"
+        ],
+        "measures": [
+          "6 Guests"
+        ],
+        "description": "Embark on an unforgettable overnight sail, including a visit to historic Egmont Key, soaking in the sunset on the water, and anchoring near the charming Anna Maria Island. After a day of adventures, enjoy dinner and activities on the island before returning to Second Wind to rest. In the morning, have the option for an early morning coffee and breakfast on Anna Maria Island before starting our sail back to Treasure Island. Max: 6 Guests",
+        "detailsText": "2 Days/1 Night Private Charter 2 Days/1 Night Private Charter",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "521569",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521569/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 27 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "521577",
+    "company": "fatherdaughtercharters",
+    "title": "Overnight Sail - 2 Nights",
+    "operator": "Florida Sail",
+    "publicPath": "/destinations/florida/st-petersburg/tours/overnight-sail---2-nights-521577",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "From the water, guests see Egmont Key and Shell Key. Anna Maria Island come into view as the boat moves."
+    ],
+    "schemaDescription": "From the water, guests see Egmont Key and Shell Key.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Treasure Island and Anna Maria Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6aq8qIXT2WjqXkLQrcjc"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/j5GeS86dSJ69PBzITDHQ",
+    "wordCount": 20,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Treasure Island",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521577/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "St. Petersburg",
+      "state": "Florida",
+      "citySlug": "st-petersburg",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/j5GeS86dSJ69PBzITDHQ",
+      "heroHandle": "j5GeS86dSJ69PBzITDHQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/6aq8qIXT2WjqXkLQrcjc",
+          "handle": "6aq8qIXT2WjqXkLQrcjc",
+          "pixelSha256": "22fc5ba7f1b9cd3f946c252a49af35d2dbb3e3f4c0da1824cd561fdbdf8eb931",
+          "differenceHashDistanceFromHero": 87,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.06537,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/6aq8qIXT2WjqXkLQrcjc",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/st-petersburg/fatherdaughtercharters-521577",
+      "fetchedAt": "2026-10-03T18:09:32.539664+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521577/content/",
+          "status": 200,
+          "bytes": 2835,
+          "sha256": "4df74ff5448b9661479fe9b1dc7d611f64a80ebc8c6c59dbd63a0b6d65255ff9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521577/structured-description/",
+          "status": 200,
+          "bytes": 1326,
+          "sha256": "f47156917ace65ea68d5d14c1aa8c678e1db3d64b54aed6d315819e3611517da"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521577/",
+          "status": 200,
+          "bytes": 12755,
+          "sha256": "8bd415ea3267239f24ab4bf5e5d64a74566794194ea973b3e4b35474d4971564"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521577&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521577/ratings/",
+          "status": 200,
+          "bytes": 441,
+          "sha256": "12778ce7e33242a18755458192a7b643398ccd73d39902dc45466dabed50aeeb"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": "Treasure Island",
+        "itemLocation": "Treasure Island",
+        "headline": "3 Days/2 Nights Private Charter",
+        "startCity": "St. Petersburg",
+        "startProvince": "FL",
+        "startLat": 27.703982,
+        "startLng": -82.647747,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Treasure Island",
+          "Egmont Key",
+          "Shell Key"
+        ],
+        "measures": [
+          "6 Guests"
+        ],
+        "description": "Get ready for a relaxing two-night adventure from Treasure Island making stops at Egmont Key, Shell Key, and Anna Maria Island. This excursion gives you time to soak up the sun, experience the sailor's life, and unwind along the Gulf's picturesque coastline. With ample time for fishing, snorkeling, shell hunting, and exploring charming coastal towns, this trip promises to curate memories that will last a lifetime. Max: 6 Guests",
+        "detailsText": "3 Days/2 Nights Private Charter 3 Days/2 Nights Private Charter",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "521577",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521577/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 20 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "521595",
+    "company": "fatherdaughtercharters",
+    "title": "Dolphin Spotting Sail",
+    "operator": "Florida Sail",
+    "publicPath": "/destinations/florida/st-petersburg/tours/dolphin-spotting-sail-521595",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The skyline is the main view as the boat moves through the harbor. Guests sail on a catamaran for this cruise."
+    ],
+    "schemaDescription": "The skyline is the main view as the boat moves through the harbor.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/PeqtaSvTCygDg03N4ZCg"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/eDDIPtISXaeUdvdqRhl7",
+    "wordCount": 21,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+    "visiblePriceLabel": "From $900",
+    "priceRows": [
+      {
+        "label": "Quarter-Day Private Charter",
+        "note": "2 hours • Ages 3+",
+        "amountLabel": "$900"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "900.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521595/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "St. Petersburg",
+      "state": "Florida",
+      "citySlug": "st-petersburg",
+      "stateSlug": "florida",
+      "reason": "St. Petersburg, Florida belongs to the St. Petersburg area via meeting_point",
+      "place": {
+        "city": "St. Petersburg",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "st-petersburg",
+        "stateSlug": "florida",
+        "raw": "Drive South St. Petersburg, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "St. Petersburg",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "st-petersburg",
+          "stateSlug": "florida",
+          "raw": "Drive South St. Petersburg, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Bradenton Beach",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "bradenton-beach",
+          "stateSlug": "florida",
+          "raw": "Bradenton Beach, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/eDDIPtISXaeUdvdqRhl7",
+      "heroHandle": "eDDIPtISXaeUdvdqRhl7",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/PeqtaSvTCygDg03N4ZCg",
+          "handle": "PeqtaSvTCygDg03N4ZCg",
+          "pixelSha256": "855bf2ef2ea86ed38f3168184b9caf0c8a83475af87dfd6769bbb9a46674d146",
+          "differenceHashDistanceFromHero": 128,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.20661,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/PeqtaSvTCygDg03N4ZCg",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/st-petersburg/fatherdaughtercharters-521595",
+      "fetchedAt": "2026-10-03T18:09:32.649479+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521595/content/",
+          "status": 200,
+          "bytes": 2719,
+          "sha256": "562ddb72890fde1cf64cdbf63932888ba17f386577ed797ff9f608bbced91222"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521595/structured-description/",
+          "status": 200,
+          "bytes": 1354,
+          "sha256": "970a9adfe484a7b55b8739fffe84e776d0070e3bd4e416bfa46a68795f45db5d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521595/",
+          "status": 200,
+          "bytes": 12302,
+          "sha256": "017a7cd57c96730b60867e2bc52f6aac601786d80a3ca86ecbd069c31390d88a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521595&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 593,
+          "sha256": "44383a851663d69ecc4feedd33fc4104a27001a7cc870820ad0adf068c2ca3c1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521595/ratings/",
+          "status": 200,
+          "bytes": 437,
+          "sha256": "cece4c55649ece4ca97eb32590508360f2183290edd8841aabf3618466facb99"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Quarter-Day Private Charter",
+          "note": "2 hours • Ages 3+",
+          "amount": 900.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Quarter-Day Private Charter",
+            "note": "2 hours • Ages 3+",
+            "amount": 900.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "6800 Sunshine Drive South St. Petersburg, FL 33705",
+        "itemLocation": "NEW LOCATION 1465 Gulf Dr S, Bradenton Beach, FL 34217",
+        "headline": "2 Hour Private Charter",
+        "startCity": "St. Petersburg",
+        "startProvince": "FL",
+        "startLat": 27.703982,
+        "startLng": -82.647747,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Set sail along the bay and witness the captivating city skyline, multi-million dollar waterfront mansions, and diverse wildlife. Playful dolphins often make appearances, accompanied by pelicans, and on rare occasions, you might spot manatees. This sail is the perfect opportunity to connect with nature, while enjoying the luxury of a Leopard catamaran.",
+        "detailsText": "2 Hour Private Charter 2 Hour Private Charter",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "521595",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521595/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

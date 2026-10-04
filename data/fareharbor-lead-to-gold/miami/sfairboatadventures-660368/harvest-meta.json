@@ -1,0 +1,47 @@
+{
+  "company": "sfairboatadventures",
+  "itemId": "660368",
+  "fetchedAt": "2026-10-03T18:10:09.220086+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660368/content/",
+      "status": 200,
+      "bytes": 2885,
+      "sha256": "4576ef8db37a3c747b716b9261cf1a4571d87db0a887621252ee40ee93f609ee"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660368/structured-description/",
+      "status": 200,
+      "bytes": 1710,
+      "sha256": "1ac8d2879920b47298e49f0f206af70703b068c9046f797ce5670efdcb8e400b"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660368/",
+      "status": 200,
+      "bytes": 8282,
+      "sha256": "d4689d29eab933a826774c5ebe85d9310a0c867d89f3059efda3bc9a13a2c702"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660368&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 569,
+      "sha256": "5d687b2fa24a043e9833f09528d42d41d603f1f27b9b6ecb16ee870d96731c17"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660368/ratings/",
+      "status": 200,
+      "bytes": 453,
+      "sha256": "b9836ede152a128bb170e8abfb8d1b360bf6b75e9a5c93b82ac7ac23b66b64ed"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "660368",
+    "provider": "sfairboatadventures",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660368/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

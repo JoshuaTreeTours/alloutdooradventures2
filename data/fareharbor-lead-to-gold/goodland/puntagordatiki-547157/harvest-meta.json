@@ -1,0 +1,47 @@
+{
+  "company": "puntagordatiki",
+  "itemId": "547157",
+  "fetchedAt": "2026-10-03T18:10:41.002555+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/puntagordatiki/547157/content/",
+      "status": 200,
+      "bytes": 7816,
+      "sha256": "c3e9312457a740d855b59fe8d1c768ce975e9a8051228814f85e5f9d106c3b5e"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/puntagordatiki/547157/structured-description/",
+      "status": 200,
+      "bytes": 7857,
+      "sha256": "aadf07b1899a491e49fa354683541ee09a27cd9ec38e83605e00242c133b21a2"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/puntagordatiki/items/547157/",
+      "status": 200,
+      "bytes": 8304,
+      "sha256": "1594a55c4378c529a2aa3a8063f817e0222baa4e01816089ff15f34db90d3fd4"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/puntagordatiki/price-preview/per-item/v2/?asn=fhdn&item_pks=547157&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 229,
+      "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/puntagordatiki/items/547157/ratings/",
+      "status": 200,
+      "bytes": 444,
+      "sha256": "2d04fc46b152911d2bf1ecd1096a06d437d9648c2238963b0cd832f29fc0f192"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "547157",
+    "provider": "puntagordatiki",
+    "bookingUrl": "https://fareharbor.com/embeds/book/puntagordatiki/items/547157/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

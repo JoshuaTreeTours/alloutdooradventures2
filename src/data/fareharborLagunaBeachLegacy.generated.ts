@@ -14,7 +14,7 @@ export const fareHarborLagunaBeachLegacyProducts: FareHarborProofProduct[] = [
       "Pedal through quaint Craftsman neighborhoods and gardens, access view corridors, stop at Heisler Park to notice the magnificent public art and experience the downtown commercial district with many artist residences. Guests climb easily high above city in Mystic Hills neighborhood with commanding view of the downtown district, Main Beach, and Laguna Hotel.",
       "Then guests roll through the quaint downtown area, navigating picturesque neighborhoods past Pyne Castle, alongside elevated ocean views in the bucolic and North Laguna. Then guests head seaward to Crescent Bay Beach Park, with best panoramic view of coastline that extends from Dana Point all way up toward Palos Verdes in LA County."
     ],
-    "schemaDescription": "A two-hour bicycle outing with La Vida Laguna in Laguna Beach. The outing passes Heisler Park and Crescent Bay Beach Park.",
+    "schemaDescription": "Two-hour electric-bike ride on Laguna Beach back roads, with a stop at Heisler Park.",
     "highlights": [
       "two-hour bicycle outing in Laguna Beach",
       "Heisler Park and Crescent Bay Beach Park",

@@ -260,9 +260,9 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Red Jeep Tours runs this as a shared, naturalist-guided drive into the San Andreas Fault zone near Indio. More than one party may share a Jeep. Guests meet at Metate Ranch in the Indio Hills, where the Pacific and North American plates meet. Guests should arrive about 10 minutes before departure. If the guide has not arrived by five minutes before the start, the office number is (760) 324-5337, extension 1. The tour is scheduled for three hours.",
-      "The vehicle is an open-air Jeep Scrambler, the CJ-8, with a removable canvas shade top. Each Jeep takes at least two guests and no more than seven. A single rider is asked to call before booking. The minimum age is five. The drive goes about one mile into the fault zone. The guide covers plants, animals, geology, and seismology in the cuts and canyons, then leads a walk in a slot canyon. One stop is a California fan palm oasis sustained by groundwater captured along the fault. Another is a recreated Cahuilla village with interpretive displays on the archaeological site of Paltewet. An optional short walk climbs to the grinding stone above the village. Guests who are able to enter and leave the Jeep can ask ahead about a limited-mobility arrangement.",
-      "Bottled water, granola snacks, admission, and taxes are included. Guide gratuities are not. Shoes need to be closed at the toe and have good traction. Sandals, heels, and shoes without grip are not allowed. Seat belts stay on while the Jeep is moving. Portable toilets are on the property, and the Jeeps stop for breaks. Blankets are on the Jeeps for cooler mornings from November through March. Cancellation without a penalty is available until 48 hours before departure. On the child ticket, children are 17 and under, a parent must accompany them, and booster seats are not provided."
+      "Red Jeep Tours runs this as a shared, naturalist-guided drive into the San Andreas Fault zone near Indio. More than one party may share a Jeep. Guests meet at Metate Ranch in the Indio Hills, where the Pacific and North American plates meet. The tour is scheduled for three hours.",
+      "The vehicle is an open-air Jeep Scrambler, the CJ-8. Each Jeep takes at least two guests and no more than seven. The minimum age is five. The drive goes about one mile into the fault zone. The guide covers plants, animals, geology, and seismology, then leads a walk in a slot canyon. One stop is a California fan palm oasis fed by groundwater along the fault. Another is a recreated Cahuilla village on the archaeological site of Paltewet.",
+      "Bottled water, granola snacks, and admission are included."
     ],
     "schemaDescription": "Shared three-hour naturalist-guided Jeep ride into the San Andreas Fault zone, meeting at Metate Ranch, 38635 Monroe Street, Indio. The vehicle is an open-air Jeep Scrambler. The drive goes about one mile into the fault zone, with two to seven guests per Jeep.",
     "highlights": [
@@ -271,7 +271,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Palm oasis, slot canyon walk, and the Paltewet village site"
     ],
     "galleryImages": [],
-    "wordCount": 312,
+    "wordCount": 139,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "Metate Ranch, 38635 Monroe Street, Indio, CA 92203",
@@ -305,9 +305,8 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour guided night paddle in Orlando on a clear kayak or a paddleboard, with neon light under the hull. The group size is 40. Check-in is a safety briefing and a gear fitting. The group launches as the evening light fades, paddles with the guide, and returns to shore. No paddling experience is required. The guide keeps an easy pace, with time for photos on the water.",
-      "The booking choice is a clear single kayak, a clear two-person kayak, or an adult paddleboard. Neon under-glow, a paddle, safety equipment, and a U.S. Coast Guard life vest are included. Photos are sent after the outing. Champagne is included for guests 21 and older, and a valid ID is required for it. Dry storage is recommended for a phone or camera. Gratuities and any extra food or drinks are not included. Clothing to wear is athletic wear, shorts, or a light layer, along with water shoes that cover the toes or sandals that have straps.",
-      "The paddle takes place at night and may not suit guests who are uncomfortable on the water after dark. It is not suitable when a mobility limitation would prevent safe boarding or paddling. Guests need to get in and out of the craft with little help. On the two-person kayak, each person must weigh under 200 pounds, and the pair must be under 400 pounds combined. The single kayak lists a weight limit of 325 pounds. The paddleboard is for ages 15 and older and requires a driver's license or a permit. A refund or a credit is available with 24 hours' notice."
+      "This Orlando booking is a guided night paddle lasting two hours, on a clear kayak or a paddleboard, with neon light under the hull. The group size is 40. The group launches as the evening light fades, paddles with the guide, and returns to shore. No paddling experience is required. The guide keeps an easy pace, with time for photos on the water.",
+      "The booking choice is a clear single kayak, a clear two-person kayak, or an adult paddleboard. Neon under-glow, a paddle, safety equipment, and a U.S. Coast Guard life vest are included. Photos are sent after the outing. Champagne is included for guests 21 and older, and a valid ID is required for it. On the tandem kayak, each person must weigh under 200 pounds, and the pair must stay under 400 pounds combined."
     ],
     "schemaDescription": "Two-hour guided night paddle in Orlando on a clear kayak or paddleboard with neon light underneath. Guests meet at 1600 North Orange Avenue. A life vest is included, champagne is included for guests 21 and older, and photos are sent afterward.",
     "highlights": [
@@ -318,7 +317,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/LkmxXm7tRpSfcUhaPjuz"
     ],
-    "wordCount": 275,
+    "wordCount": 139,
     "durationLabel": "2 hour experience",
     "durationIso": "PT2H",
     "meetingLocation": "Epic Paddle Adventures, 1600 North Orange Avenue, Orlando, FL 32804",
@@ -357,9 +356,8 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": "/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220",
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This outing runs for four hours and takes a guided group from Ensenada out to La Bufadora, the blowhole on the Punta Banda peninsula. Pickup from Ensenada hotels is midmorning. The drive is about 24 miles, or 39 kilometers, with coastal scenery on the way. A guide who speaks English and Spanish goes with the group. Bottled water and snacks are included. Food, other drinks, and gratuities are not.",
-      "After the drive, the group walks about three blocks through the crafts market to the blowhole. Waves force water up through a sea cave about every one to two minutes. Spouts can rise more than 100 feet, and the guide explains the phenomenon. There is then free time to browse the sidewalk market or eat at the restaurants next to it, both at the guest's own expense. The guide meets the group again at 1:00 p.m. for the return, with hotel drop-off scheduled by 2:00 p.m.",
-      "Adult tickets on the shared tour are for ages 5 and older, and children must be with an adult. Infants under 4 are a separate ticket category. A private tour is also sold. The group size is 50, and the maximum age is 99. U.S. dollars are widely accepted and ATMs are scarce, so the useful things to carry are cash, a hat, walking shoes, and sunglasses. In summer, sunscreen is one of the things to bring."
+      "This outing runs for four hours and takes a guided group from Ensenada out to La Bufadora, the blowhole on the Punta Banda peninsula. Pickup from Ensenada hotels is midmorning. The drive is about 24 miles. A guide who speaks English and Spanish goes with the group. Bottled water and snacks are included. Food and other drinks are not.",
+      "After the drive, the group walks about three blocks through the crafts market to the blowhole. Waves force water up through a sea cave about every one to two minutes. Spouts can rise more than 100 feet, and the guide explains how that happens. Free time follows, for the sidewalk market or the restaurants beside it, at the guest's own expense. The guide meets the group again at 1:00 p.m. Hotel drop-off is scheduled by 2:00 p.m."
     ],
     "schemaDescription": "Guided four-hour outing from Ensenada to the La Bufadora blowhole on Punta Banda, with hotel pickup and an English- and Spanish-speaking guide. The drive is about 24 miles. Bottled water and snacks are included. Food and drinks at the market are extra.",
     "highlights": [
@@ -368,7 +366,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Bilingual guide, bottled water, and snacks"
     ],
     "galleryImages": [],
-    "wordCount": 238,
+    "wordCount": 141,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879",

@@ -1,0 +1,203 @@
+{
+  "citySlug": "stock-island",
+  "total": 10,
+  "active": 10,
+  "terminal": 0,
+  "priceAvailable": 9,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 10,
+  "inSitemap": 9,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "532140",
+      "slug": "private-custom-activities-combo-charter-532140",
+      "publicPath": "/destinations/florida/stock-island/tours/private-custom-activities-combo-charter-532140",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 17552,
+        "structuredStatus": 200,
+        "structuredBytes": 5182
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "532157",
+      "slug": "private-romantic-sunset-cruise-532157",
+      "publicPath": "/destinations/florida/stock-island/tours/private-romantic-sunset-cruise-532157",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13843,
+        "structuredStatus": 200,
+        "structuredBytes": 5800
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "532165",
+      "slug": "private-historic-harbor-cruise-532165",
+      "publicPath": "/destinations/florida/stock-island/tours/private-historic-harbor-cruise-532165",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 5431
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "532224",
+      "slug": "private-snorkel-adventure-532224",
+      "publicPath": "/destinations/florida/stock-island/tours/private-snorkel-adventure-532224",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 14539,
+        "structuredStatus": 200,
+        "structuredBytes": 6473
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "532226",
+      "slug": "private-secret-local-sandbars-escape-532226",
+      "publicPath": "/destinations/florida/stock-island/tours/private-secret-local-sandbars-escape-532226",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 15331,
+        "structuredStatus": 200,
+        "structuredBytes": 6901
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "532228",
+      "slug": "private-national-wildlife-refuge-eco-tour-532228",
+      "publicPath": "/destinations/florida/stock-island/tours/private-national-wildlife-refuge-eco-tour-532228",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9305,
+        "structuredStatus": 200,
+        "structuredBytes": 5302
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "532233",
+      "slug": "private-dolphin-playground-safari-532233",
+      "publicPath": "/destinations/florida/stock-island/tours/private-dolphin-playground-safari-532233",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9341,
+        "structuredStatus": 200,
+        "structuredBytes": 5525
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "541394",
+      "slug": "private-patch-reef-fishing-541394",
+      "publicPath": "/destinations/florida/stock-island/tours/private-patch-reef-fishing-541394",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13953,
+        "structuredStatus": 200,
+        "structuredBytes": 6117
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "550475",
+      "slug": "discover-the-marquesas-keys-550475",
+      "publicPath": "/destinations/florida/stock-island/tours/discover-the-marquesas-keys-550475",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10661,
+        "structuredStatus": 200,
+        "structuredBytes": 6094
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinscharter",
+      "operator": "Six Fins Charter",
+      "itemId": "563185",
+      "slug": "private-clothing-optional-charter-563185",
+      "publicPath": "/destinations/florida/stock-island/tours/private-clothing-optional-charter-563185",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13876,
+        "structuredStatus": 200,
+        "structuredBytes": 5391
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

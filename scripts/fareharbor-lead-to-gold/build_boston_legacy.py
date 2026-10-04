@@ -36,6 +36,7 @@ from tripadvisor_ratings import (
     parse_tripadvisor_rating,
     ratings_payload_item_id,
 )
+from florida_winter import FLORIDA_WINTER_CITY_SLUGS, apply_winter_cohort
 from editorial_voice import (
     activity_contradiction_errors,
     compose_editorial,
@@ -45,6 +46,7 @@ from editorial_voice import (
     invented_food_walk_errors,
     load_editorial_sample,
     paragraphs_without_contrast,
+    is_scraped_heading_highlight,
     is_structural_label,
     section_label_leak_errors,
     split_sentences,
@@ -1060,10 +1062,15 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
                 paragraphs, highlights, generated_schema = restored
             elif previous and previous.get("exceptionStatus") == "OK":
                 previous_highlights = list(previous.get("highlights") or [])
-                if previous_highlights and not template_artifact_errors(previous_highlights) and not any(
-                    is_structural_label(item) for item in previous_highlights
-                ):
-                    highlights = previous_highlights
+                kept_highlights = [
+                    item
+                    for item in previous_highlights
+                    if item
+                    and not template_artifact_errors([item])
+                    and not is_scraped_heading_highlight(item)
+                ]
+                if kept_highlights:
+                    highlights = kept_highlights
                 elif not previous_highlights:
                     highlights = []
                 source_is_thin = not source_can_support_full_editorial(
@@ -1731,10 +1738,13 @@ def main() -> None:
 
     if "--city" in sys.argv:
         configure_city(sys.argv[sys.argv.index("--city") + 1])
-    catalog = {item["itemId"]: item for item in inventory(CITY_SLUG)["products"]}
+    catalog_products = inventory(CITY_SLUG)["products"]
+    if "--all-products" not in sys.argv:
+        catalog_products = apply_winter_cohort(CITY_SLUG, catalog_products)
+    catalog = {item["itemId"]: item for item in catalog_products}
     PREVIOUS_RUNTIME = load_previous_runtime()
     REGENERATE_ITEM_IDS = identical_prose_without_shared_source(PREVIOUS_RUNTIME, catalog)
-    if CITY_SLUG in CALIFORNIA_EDITORIAL_CITIES:
+    if CITY_SLUG in CALIFORNIA_EDITORIAL_CITIES or CITY_SLUG in FLORIDA_WINTER_CITY_SLUGS:
         REGENERATE_ITEM_IDS.update(
             item_id
             for item_id, row in PREVIOUS_RUNTIME.items()

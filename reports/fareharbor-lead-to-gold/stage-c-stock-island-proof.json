@@ -1,0 +1,2555 @@
+[
+  {
+    "itemId": "532140",
+    "company": "sixfinscharter",
+    "title": "Private Custom Activities Combo Charter",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-custom-activities-combo-charter-532140",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Combine sandbars, snorkeling, dolphin viewing, sightseeing, evening light, and other activities in one private day. The outing does not provide preparation, fishing time, effort, or focus of dedicated fishing charter. If guests want a true Key West fishing meet, reserve the Private Patch Reef Fishing charter.",
+      "The USCG-licensed captain builds the route around the priorities and current conditions aboard 30' Jeanneau yacht. Meet at The Perry Hotel & Marina, Dock A, Slip 32; brief safety overview and flexible departure time. Dolphin search and scenic harbor cruise with local commentary. Snorkeling over reefs or backcountry patch reefs; snorkel gear provided.",
+      "Fishing gear for casual, family-friendly fishing (request in advance; conditions permitting)."
+    ],
+    "schemaDescription": "A 10-hour snorkel outing with Six Fins Charter in Stock Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "10-hour snorkel outing in Stock Island",
+      "Groups are capped at 8"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/OfeqdTQAShyXRHgu1eXI"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/dVPju7rSo279Z1WyNqlC",
+    "wordCount": 111,
+    "durationLabel": "10 hours",
+    "durationIso": "PT10H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $1,395",
+    "priceRows": [
+      {
+        "label": "6 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$1,395"
+      },
+      {
+        "label": "8 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$1,795"
+      },
+      {
+        "label": "10 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$2,195"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1395.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/532140/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/dVPju7rSo279Z1WyNqlC",
+      "heroHandle": "dVPju7rSo279Z1WyNqlC",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/OfeqdTQAShyXRHgu1eXI",
+          "handle": "OfeqdTQAShyXRHgu1eXI",
+          "pixelSha256": "6cc4b3f83178afd160820c138aba6af8982a65e4c79173fd268388570bc08dd5",
+          "differenceHashDistanceFromHero": 115,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.36322,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/OfeqdTQAShyXRHgu1eXI",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-532140",
+      "fetchedAt": "2026-10-03T18:09:42.342353+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532140/content/",
+          "status": 200,
+          "bytes": 17552,
+          "sha256": "4b3b7d34a41a1022c47658c31d4634de1b8fccbc4a22134aa5a63bc07fc64c60"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532140/structured-description/",
+          "status": 200,
+          "bytes": 5182,
+          "sha256": "c04a93357e73ef9cb0eb5a09b5b2cdf61b98c0a258f0443823a3016cb6688e8c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532140/",
+          "status": 200,
+          "bytes": 46776,
+          "sha256": "382c5bf2c89ea5576226cea9f2938135834f760590cbeedc94fee74eb56f73ac"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=532140&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 843,
+          "sha256": "3e775e10a2b3c9e41cee588f5c7860fceb5fbd09977f4c8620a298059b48fc99"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532140/ratings/",
+          "status": 200,
+          "bytes": 514,
+          "sha256": "95d85fc01f4679c15d6e5210365c16ea16f54e6ce9a5461360b109603944aeb3"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "6 Hour Private Charter",
+          "note": "",
+          "amount": 1395.0
+        },
+        "customerTypes": [
+          {
+            "singular": "6 Hour Private Charter",
+            "note": "",
+            "amount": 1395.0
+          },
+          {
+            "singular": "8 Hour Private Charter",
+            "note": "",
+            "amount": 1795.0
+          },
+          {
+            "singular": "10 Hour Private Charter",
+            "note": "",
+            "amount": 2195.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "10 hours",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "Pick your day - sandbars, snorkeling, sunset, all of it",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free cooler with ice",
+          "Free bottled water",
+          "Large lily pad (upon request at the dock)",
+          "Adult noodles",
+          "Snorkeling gear",
+          "Fishing gear for casual, family-friendly fishing (request in advance; conditions permitting)",
+          "Stand-up paddleboard (upon request at the dock)",
+          "Two bean bag chairs (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals and beverages",
+          "Tipping the captain and crew (gratuity not included; typical minimum 20%)",
+          "Towels"
+        ],
+        "itinerary": [
+          "Meet at The Perry Hotel & Marina, Dock A, Slip 32; brief safety overview and flexible departure time",
+          "Dolphin search and scenic harbor cruise with local commentary",
+          "Snorkeling over reefs or backcountry patch reefs; snorkel gear provided",
+          "Sandbar stop for swimming, floating, and relaxing"
+        ],
+        "routeNotes": [
+          "1. Meet at The Perry Hotel & Marina, Dock A, Slip 32; brief safety overview and flexible departure time. 2. Dolphin search and scenic harbor cruise with local commentary. 3. Snorkeling over reefs or backcountry patch reefs; snorkel gear provided. 4. Sandbar stop for swimming, floating, and relaxing. 5. Optional activities may include casual fishing for children and beginners when arranged in advance and conditions permit, a sunset extension, backwater eco tour, or harbor restaurant stop; return cruise to the marina."
+        ],
+        "highlights": [
+          "Experienced local captains with local knowledge",
+          "Dolphin watching in natural habitat",
+          "Snorkeling vibrant reefs and clear backcountry waters",
+          "Sandbar stops ideal for celebrations and relaxation"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and non-alcoholic beverages",
+          "Skin protection",
+          "Sea sickness medicine"
+        ],
+        "cancellation": "Cancellations must be made at least 24 hours before departure for a refund",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "Quick facts: • 6 hrs $1,395 • 8 hrs $1,795 • 10 hrs $2,195 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Six Fins",
+          "Key West",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "The most flexible charter Six Fins offers. Combine sandbars, snorkeling, dolphin watching, sightseeing, sunset, and other activities in one private day. Casual fishing may be included as one part of the itinerary and is best for children, beginners, and families who simply want to wet a line. It does not provide the preparation, fishing time, effort, or focus of a dedicated fishing charter. If you want a true Key West fishing experience, reserve our Private Patch Reef Fishing charter. Your USCG-licensed captain builds the route around your priorities and current conditions aboard the 30' Jeanneau yacht. Group-only - no shared boat. Quick facts: • 6 hrs $1,395 • 8 hrs $1,795 • 10 hrs $2,195 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included",
+        "detailsText": "Free parking is available adjacent to The Perry Hotel & Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Free parking is available adjacent to The Perry Hotel & Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Private, fully customizable Key West boat charter for sandbars, snorkeling, dolphins, sunset, casual family fishing, and special occasions. Pick your day - sandbars, snorkeling, sunset, all of it",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "532140",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/532140/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "532157",
+    "company": "sixfinscharter",
+    "title": "Private Romantic Sunset Cruise",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-romantic-sunset-cruise-532157",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "A few optional stops leave time to step out for photographs and a closer look. Music plays on board, and some departures add a live set. Bean bags on the bow are there for sitting out in the air. From the water, guests see Key West and Marina Scenic Harbor.",
+      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A three-hour harbor outing with Six Fins Charter on Stock Island Harbor. The sail passes Mallory Square Harbor, Tank Island, and Wisteria Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "three-hour harbor outing in Stock Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/XqwQ1QzQQqeMi1AGxnjl"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/dUz5aAyR9CR0PeWgW3Jj",
+    "wordCount": 103,
+    "durationLabel": "3 Hours",
+    "durationIso": "PT3H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $995",
+    "priceRows": [
+      {
+        "label": "Private Charter",
+        "note": "Up to 8 People.",
+        "amountLabel": "$995"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "995.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/532157/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/dUz5aAyR9CR0PeWgW3Jj",
+      "heroHandle": "dUz5aAyR9CR0PeWgW3Jj",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/XqwQ1QzQQqeMi1AGxnjl",
+          "handle": "XqwQ1QzQQqeMi1AGxnjl",
+          "pixelSha256": "6cc4b3f83178afd160820c138aba6af8982a65e4c79173fd268388570bc08dd5",
+          "differenceHashDistanceFromHero": 129,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.36486,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/XqwQ1QzQQqeMi1AGxnjl",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-532157",
+      "fetchedAt": "2026-10-03T18:09:42.343138+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532157/content/",
+          "status": 200,
+          "bytes": 13843,
+          "sha256": "a7f34f7800bebae5e4beb726e52172ccb44e04638d55bc522c0f32dfc6c8ff65"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532157/structured-description/",
+          "status": 200,
+          "bytes": 5800,
+          "sha256": "c094d7f6c0078b8e0eb97fa33922196b104d7ac822345b578bd21b1319229e54"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532157/",
+          "status": 200,
+          "bytes": 26369,
+          "sha256": "e7e02b2f35fdbb0d372529fd59818ff83fe15a93199577e9caa816ec65231962"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=532157&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 561,
+          "sha256": "6cad55c7cbfdfdebef910c18f0954a121358263dfa0ae1e1789169d50584d37d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532157/ratings/",
+          "status": 200,
+          "bytes": 505,
+          "sha256": "192c5ab9fe4945edec53d3f8fa005e246a781c637690d216ad243af326d97168"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Private Charter",
+          "note": "Up to 8 People.",
+          "amount": 995.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Private Charter",
+            "note": "Up to 8 People.",
+            "amount": 995.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T15:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "3 Hours",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "Three hours for two or up to six on the Atlantic horizon",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Coolers with ice",
+          "Bottled water",
+          "Two bean bag chairs (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Scenic Harbor & Coastal Cruise",
+          "Prime Sunset Positioning",
+          "Twilight Return Cruise",
+          "As daylight fades, cruise back under soft evening skies with the lights of Key West beginning to glow along the horizon"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet your captain at Dock A, Slip 32. After a brief safety overview, we cruise into calm evening waters as the golden hour begins. Scenic Harbor & Coastal Cruise Enjoy a relaxing ride past historic waterfront homes, harbor landmarks, and open Gulf or Atlantic waters. Keep an eye out for dolphins and seabirds as the sky begins its transformation. Prime Sunset Positioning Your captain selects the optimal viewing location based on wind and cloud patterns to ensure a spectacular sunset backdrop. Anchor or drift in a peaceful setting as the sky ignites with brilliant hues of orange, rose, and violet. Toast the moment, take photos, enjoy music, and soak in uninterrupted panoramic views. Twilight Return Cruise As daylight fades, cruise back under soft evening skies with the lights of Key West beginning to glow along the horizon."
+        ],
+        "highlights": [
+          "Private 3-hour sunset charter",
+          "Romantic, intimate atmosphere",
+          "Mallory Square Harbor",
+          "Sunset Key",
+          "Tank Island",
+          "Wisteria Island"
+        ],
+        "restrictions": [
+          "Not recommended for guests with significant mobility limitations due to vessel design",
+          "Not recommended for guests with serious medical conditions that may be aggravated by light vessel movement",
+          "Excessive intoxication will result in denial of boarding or early termination without refund",
+          "Smoking or vaping is not permitted inside the cabin"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "Quick facts: • 3 hrs $995 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included."
+        ],
+        "gleanedFacts": [
+          "Bottled water"
+        ],
+        "properNames": [
+          "Key West",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "A three-hour private sunset cruise for couples - engagements, anniversaries, honeymoons, or just a special night for two. Your USCG-licensed captain keeps to himself (no narration, no third wheel), runs you offshore to the perfect Atlantic horizon, and gives you the Key West sunset you came here for. Champagne stops are welcome. We can pre-cool drinks aboard, set out bow cushions, and accommodate proposals - let us know in advance and the captain will set up the moment without ruining the surprise. Quick facts: • 3 hrs $995 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - Romantic Sunset Cruise Confirmation Dear Guests, We're honored to welcome you aboard your Romantic Sunset Cruise - a private 3-hour evening experience designed to capture Key West at its most magical. Please review the important details below to ensure a seamless and unforgettable evening on the water. ―――――――――――――――――――――――――――――――――――――――― ✅ Before Your Cruise For trips up to six passengers: 👉 Each passenger must complete the insurance waiver (including adults on behalf of minors): [here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) AND for trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) and captain must complete the Bareboat Agreement together at the dock before departure, but prior to arrival, you may begin: [here](https://waiver.smartwaiver.com/w/ez5636zbxexwrng7dtz6mq/web/) Please complete all required forms prior to arrival so we may depart on time. ―――――――――――――――――――――――――――――――――――――――― 🌅 Your Romantic Sunset Experience This is a private 3-hour sunset charter designed for intimacy, elegance, and uninterrupted views. Possible scenic routes may include areas near: • Mallory Square Harbor • Sunset Key • Tank Island • Wisteria Island • Open Gulf horizon views Your captain selects the ideal sunset location based on wind and cloud conditions to ensure the most spectacular vantage point. Relax, play your favorite music, bring champagne, and watch the sky transform into brilliant hues of gold, rose, and violet. Please note: Sunset timing, cloud cover, and color intensity vary daily and cannot be guaranteed - but every evening on the water is uniquely beautiful. ―――――――――――――――――――――――――――――――――――――――― 🛥 Departure Details Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Free parking is available adjacent to The Perry Hotel & Marina. Please arrive 15 minutes prior to departure. Boat: 30' Jeanneau NC 895 Weekender Private enclosed head (toilet) USCG-certified safety equipment Licensed USCG captains ―――――――――――――――――――――――――――――――――――――――― 🧳 What's Included • Cooler with ice • Bottled water & light snacks • Comfortable seating • Panoramic sunset viewing ―――――――――――――――――――――――――――――――――――――――― 🚫 Not Included • Meals & beverages (BYOB welcome) • Towels • Infant/toddler USCG-approved life jackets (must be provided by guest) • Captain & crew gratuity (customary 20% minimum if satisfied) Open flames (candles, sparklers, etc.) are not permitted onboard. ―――――――――――――――――――――――――――――――――――――――― 🩺 Health & Safety Your safety is our highest priority. • Operated by U.S. Coast Guard-licensed captains • Safety briefing provided prior to departure • U.S. Coast Guard-approved life jackets available • Routes selected based on wind and sea conditions • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. • Prone to seasickness: tell us ahead of time and we'll suggest what to take before boarding. Guests should be in good general health and able to board the vessel with minimal assistance. Excessive intoxication or unsafe behavior may result in denial of boarding or early termination without refund. ―――――――――――――――――――――――――――――――――――――――― ⚠ Disclaimers • Sunset visibility and color intensity vary daily • All itineraries are subject to weather and captain discretion • Wildlife sightings cannot be guaranteed • Late arrivals may reduce charter time • Six Fins is not responsible for lost or damaged personal items ―――――――――――――――――――――――――――――――――――――――― 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools and fitness center before and after your cruise. Make it a full evening. ―――――――――――――――――――――――――――――――――――――――― We look forward to sharing a beautiful Key West sunset with you. Warm regards, David McFadden Owner, Six Fins Charter Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Three hours for two or up to six on the Atlantic horizon Three hours for two or up to six on the Atlantic horizon",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "532157",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/532157/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "532165",
+    "company": "sixfinscharter",
+    "title": "Private Historic Harbor Cruise",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-historic-harbor-cruise-532165",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The skyline is the main view as the boat moves through the harbor. Bean bags on the bow are there for sitting out in the air. The cruise is open to every age. From the water, guests see Truman Annex and Sunset Pier. Spanish-American War and Seaport District Mallory Square come into view as the boat moves.",
+      "The cruise also passes Naval Air Station and Historic Seaport District. Looking back toward shore, the group can see Wisteria Island and Key West Harbor. The landmarks are seen from the harbor, with the boat doing the traveling. Writers and the rooms where they worked are the subject, more than a checklist of facades."
+    ],
+    "schemaDescription": "A three-hour harbor outing with Six Fins Charter on Stock Island Harbor. The sail passes Historic Seaport District, Mallory Square waterfront, and Sunset Key.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "three-hour harbor outing in Stock Island",
+      "Historic Seaport District and Mallory Square waterfront",
+      "Groups are capped at 8"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ep6oVDWDSQGpoTgIjgsO"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/z6g6Gf06TLuiqBWLgSFX",
+    "wordCount": 112,
+    "durationLabel": "3 Hours",
+    "durationIso": "PT3H",
+    "meetingLocation": "Key West, Fl.",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/532165/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via company_start_location",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 24.565299,
+        "lng": -81.739327
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/z6g6Gf06TLuiqBWLgSFX",
+      "heroHandle": "z6g6Gf06TLuiqBWLgSFX",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ep6oVDWDSQGpoTgIjgsO",
+          "handle": "ep6oVDWDSQGpoTgIjgsO",
+          "pixelSha256": "6cc4b3f83178afd160820c138aba6af8982a65e4c79173fd268388570bc08dd5",
+          "differenceHashDistanceFromHero": 122,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.35365,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ep6oVDWDSQGpoTgIjgsO",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-532165",
+      "fetchedAt": "2026-10-03T18:09:42.343609+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532165/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532165/structured-description/",
+          "status": 200,
+          "bytes": 5431,
+          "sha256": "81ff6293c6a9c385af1c60f868bb6918a4fe5d1800acd14df21eeb4b78674088"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532165/",
+          "status": 200,
+          "bytes": 22759,
+          "sha256": "d133343c396d68180ada85554e8944c7075dc15a61a1e340dcc4578f97e31bbc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=532165&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "6c1961aac27ee0ca1289d588ca046d7ddfa2d38cd8bee2fe8f02e3eaed9f8efa"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532165/ratings/",
+          "status": 200,
+          "bytes": 504,
+          "sha256": "07a3bf87c67e7997dfd2e1810d31cff73b661e939735cc947925c3ae1dcae6fa"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "3 Hours",
+        "meetingAddress": "Key West, Fl.",
+        "itemLocation": "Key West, Fl.",
+        "headline": "Three hours of Key West history from the water - narrated by a real captain",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free coolers with ice",
+          "Free bottled water",
+          "Two bean bag chairs (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Historic Harbor Exploration",
+          "The Historic Seaport District",
+          "Mallory Square waterfront",
+          "Sunset Key",
+          "Wisteria Island",
+          "Key West Harbor anchorage",
+          "Waterfront estates and liveaboard communities",
+          "Naval Air Station waters (as permitted)",
+          "Optional Golden Hour Cruise",
+          "Return Cruise"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet at Dock A, Slip 32. After a brief safety overview, we cruise into the calm waters surrounding historic Key West. Historic Harbor Exploration Enjoy a scenic route that may include: • The Historic Seaport District • Mallory Square waterfront • Sunset Key • Wisteria Island • Key West Harbor anchorage • Waterfront estates and liveaboard communities • Naval Air Station waters (as permitted) Your captain customizes the route based on weather and your interests - history-forward, scenic cruising, wildlife spotting, or sunset-focused. Optional Golden Hour Cruise Time your charter to experience the harbor glowing under the golden light of sunset. Return Cruise Relax as we glide back toward the marina with panoramic views of Old Town's waterfront skyline."
+        ],
+        "highlights": [
+          "Private 3-hour harbor cruise",
+          "Historic seaport & maritime landmarks",
+          "Stories of shipwreckers, naval history & literary legends",
+          "Scenic routes near Mallory Square & Sunset Key",
+          "Calm-water cruising ideal for all ages",
+          "Romantic sunset option available"
+        ],
+        "restrictions": [
+          "Not recommended for guests with significant mobility limitations due to vessel access",
+          "Excessive intoxication may result in denial of boarding or early termination without refund",
+          "Smoking or vaping is not permitted inside the cabin",
+          "Open flames are not permitted onboard"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "Three hours along the historic waterfront aboard the 30' Jeanneau yacht: Mallory Square, the old shrimp fleet docks, the Truman Annex, Sunset Pier, and the working harbor that built the island.",
+          "Quick facts: • 3 hrs $995 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Truman Annex",
+          "Spanish-American War",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "See Key West the way it was meant to be seen - by water, slowly, with a USCG-licensed captain who actually knows the history. Three hours along the historic waterfront aboard the 30' Jeanneau yacht: Mallory Square, the old shrimp fleet docks, the Truman Annex, Sunset Pier, and the working harbor that built the island. Your captain narrates the wreckers' era, Hemingway and Buffett years, Spanish-American War navy presence, and the modern fishing fleet. No tour bus required. Quick facts: • 3 hrs $995 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included",
+        "detailsText": "Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Three hours of Key West history from the water - narrated by a real captain",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "532165",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/532165/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "532224",
+    "company": "sixfinscharter",
+    "title": "Private Snorkel Adventure",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-snorkel-adventure-532224",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests snorkel from the boat over a patch reef. The reef is several miles offshore from Key West. Sergeant majors and parrotfish are the fish this reef is known for. A southern stingray is possible, though not on every trip. Masks, fins, and snorkels are on the boat.",
+      "There is no fixed reef on a printed schedule. The stop is over coral, with tropical fish in the same water. On the way out, the boat watches for dolphins, sea birds, and flying fish. The charter runs about 4 hours. Fuel and the safety gear are included.",
+      "Atlantic patch reefs are the water this charter is booked for. The boat is private for the group that booked it. Floats are aboard for the break between time in the water. Gear is set for as many as six guests."
+    ],
+    "schemaDescription": "A four-hour snorkel outing with Six Fins Charter in Stock Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "four-hour snorkel outing in Stock Island",
+      "Groups are capped at 8"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/UifQzOXyQ8q4MWmormiA"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/nZOAr70bR8yPM5lbbwiq",
+    "wordCount": 137,
+    "durationLabel": "4 Hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $1,195",
+    "priceRows": [
+      {
+        "label": "Private Charter",
+        "note": "Up to 8 People.",
+        "amountLabel": "$1,195"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1195.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/532224/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/nZOAr70bR8yPM5lbbwiq",
+      "heroHandle": "nZOAr70bR8yPM5lbbwiq",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/UifQzOXyQ8q4MWmormiA",
+          "handle": "UifQzOXyQ8q4MWmormiA",
+          "pixelSha256": "eb4db156ea331c761c25dae536a81dd43b2fa975291278f08eda2e7c5b421bd8",
+          "differenceHashDistanceFromHero": 116,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31833,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/UifQzOXyQ8q4MWmormiA",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-532224",
+      "fetchedAt": "2026-10-03T18:09:42.344256+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532224/content/",
+          "status": 200,
+          "bytes": 14539,
+          "sha256": "85463f630f5b2f88d010d874be1c9d342e5cef332d655a11a414a051d99af6b4"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532224/structured-description/",
+          "status": 200,
+          "bytes": 6473,
+          "sha256": "d800b0660efc8f6b2f0d68d98a90ad3fecc08bf33cc60255e04d56f599801ab1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532224/",
+          "status": 200,
+          "bytes": 24573,
+          "sha256": "8016b7ba5d33f3221ac6dc63c46706d0b7b580be9e8d43fbaeff3aac40ccfe0e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=532224&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "3448dec16e155e822987ad3738c0a70c76178fc83328c3eb5ad900d217fef671"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532224/ratings/",
+          "status": 200,
+          "bytes": 500,
+          "sha256": "2ca3e57b3d643e16f80f47be8166eae08d54dee7916ffc9ac8dff139a31bd1bf"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Private Charter",
+          "note": "Up to 8 People.",
+          "amount": 1195.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Private Charter",
+            "note": "Up to 8 People.",
+            "amount": 1195.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 Hours",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "A dedicated reef day on the 30' Jeanneau yacht",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free cooler with ice",
+          "Free bottled water",
+          "Adult noodles",
+          "Snorkeling gear"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Scenic Offshore Cruise",
+          "Primary Reef Snorkel Stop",
+          "Surface Interval & Relaxation",
+          "Optional Second Reef Location (Conditions Permitting)",
+          "Return Cruise"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet your Six Fins captain at Dock A, Slip 32. After a safety briefing and snorkel gear fitting, we cruise offshore toward the Florida Keys Reef Tract - North America's only living barrier reef. Scenic Offshore Cruise Relax during the ride as we head to the reef, enjoying open-water views and watching for dolphins, sea birds, and flying fish along the way. Primary Reef Snorkel Stop Anchor over a carefully selected reef location chosen based on water clarity, wind, and sea conditions. After instruction and assistance, enter the water to explore vibrant coral formations, tropical fish, rays, and other marine life. Surface Interval & Relaxation Return onboard to hydrate, enjoy light refreshments, and relax between snorkel sessions. Optional Second Reef Location (Conditions Permitting) Time and conditions permitting, your captain may reposition to a second reef site for a different underwater perspective. Return Cruise Enjoy a relaxing ride back to the marina with unforgettable memories of your underwater adventure."
+        ],
+        "highlights": [
+          "Private 4-hour reef snorkeling charter",
+          "North America's only living barrier reef system",
+          "Possible visits near Western Sambo Reef",
+          "Eastern Dry Rocks (near the Christ of the Abyss statue)",
+          "Sand Key Reef",
+          "Rock Key"
+        ],
+        "restrictions": [
+          "This experience may not be suitable for everyone",
+          "Not recommended for guests with serious heart conditions, respiratory conditions, seizure disorders, recent surgeries, neck/back injuries, or significant mobility limitations",
+          "Guests must be physically able to climb a swim ladder and reboard the vessel independently or with minimal assistance",
+          "Wheelchair access is limited due to vessel design and offshore conditions"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "A four-hour private snorkel charter to the Atlantic patch reefs 6-10 miles offshore from Key West - sergeant majors, parrotfish, the occasional southern stingray, and seasonally, green sea turtles.",
+          "Quality masks, fins, and snorkels for up to 6 guests come with the boat, plus floats and a Lily Pad for between-reef breaks."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Key West",
+          "Lily Pad",
+          "Perry Hotel"
+        ],
+        "measures": [
+          "10 miles",
+          "6 guests"
+        ],
+        "description": "A four-hour private snorkel charter to the Atlantic patch reefs 6-10 miles offshore from Key West - sergeant majors, parrotfish, the occasional southern stingray, and seasonally, green sea turtles. Quality masks, fins, and snorkels for up to 6 guests come with the boat, plus floats and a Lily Pad for between-reef breaks. Your USCG-licensed captain adjusts the route on the day based on swell and visibility - there's no “scheduled” reef. Quick facts: • 4 hrs $1,195 • Private • USCG-licensed captain • Perry Hotel & Marina • All snorkel gear, fuel + safety gear included",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - Reef Snorkel Charter Confirmation Dear Guests, We're excited to welcome you aboard your Private Reef Snorkel Charter - a 4-hour adventure to the world-famous Key West coral reef. Please review the important details below to ensure a smooth and unforgettable experience. ―――――――――――――――――――――――――――――――――――――――― ✅ Before Your Trip For trips up to six passengers: 👉 Each passenger must complete the insurance waiver (including adults on behalf of minors): [here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) AND for trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) and captain must complete the Bareboat Agreement together at the dock before departure, but prior to arrival, you may begin: [here](https://waiver.smartwaiver.com/w/ez5636zbxexwrng7dtz6mq/web/) Please complete all forms prior to arrival so we can depart on time. ―――――――――――――――――――――――――――――――――――――――― 🌊 Your Reef Snorkel Experience This is a private 4-hour offshore snorkeling charter to the Florida Keys Reef Tract - North America's only living barrier reef. Possible reef locations include: • Western Sambo Reef • Eastern Dry Rocks (near the Christ of the Abyss statue) • Sand Key Reef • Rock Key • Cottrell Key patch reefs Your captain selects the optimal location based on weather, visibility, and sea conditions. After a safety and snorkel orientation, you'll explore vibrant coral formations, tropical fish, rays, and other marine life in crystal-clear waters - without the crowds of large tour boats. Snorkeling is optional. Guests may relax onboard at any time. ―――――――――――――――――――――――――――――――――――――――― 🛥 Departure Details Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Free parking is available adjacent to The Perry Hotel & Marina. Please arrive 15 minutes before departure. Boat: 30' Jeanneau NC 895 Weekender Private enclosed head (toilet) USCG-certified safety equipment Licensed USCG captains ―――――――――――――――――――――――――――――――――――――――― 🧳 What's Included • Snorkel gear • Cooler with ice • Bottled water & light snacks • Adult noodles ―――――――――――――――――――――――――――――――――――――――― 🚫 Not Included • Meals & beverages • Towels • Infant/toddler USCG-approved life jackets (must be provided by guest) • Captain & crew gratuity (customary 20% minimum if satisfied) ―――――――――――――――――――――――――――――――――――――――― 🩺 Health & Safety Your safety is our highest priority. • Operated by U.S. Coast Guard-licensed captains • Safety briefing and snorkel orientation provided • Life jackets available for all guests • Snorkel sites selected based on current conditions • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. • Prone to seasickness: tell us ahead of time and we'll suggest what to take before boarding. Snorkeling is an open-water activity. Guests should be comfortable swimming in ocean conditions, including potential currents and waves. Not recommended for guests who are pregnant or those with serious heart, respiratory, neck/back, or recent surgical conditions. Excessive intoxication or unsafe behavior may result in denial of boarding or early termination without refund. ―――――――――――――――――――――――――――――――――――――――― ⚠ Disclaimers • All itineraries are subject to weather, visibility, and captain discretion • Marine life sightings cannot be guaranteed • Reef clarity varies daily • Late arrivals may reduce charter time • Six Fins is not responsible for lost or damaged personal items ―――――――――――――――――――――――――――――――――――――――― 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools and fitness center before and after your trip. Make it a full Keys day. ―――――――――――――――――――――――――――――――――――――――― We look forward to hosting your private reef adventure. Best regards, David McFadden Owner, Six Fins Charter Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. A dedicated reef day on the 30' Jeanneau yacht A dedicated reef day on the 30' Jeanneau yacht",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "532224",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/532224/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "532226",
+    "company": "sixfinscharter",
+    "title": "Private Secret Local Sandbars Escape",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-secret-local-sandbars-escape-532226",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a four-hour guided outing with Six Fins Charter in Stock Island. The outing includes a stand-up paddle session. Free Cooler with ice, Free Bottled water, and Adult noodles are included.",
+      "Groups are capped at 8.",
+      "Guests must be at least 1 years old. A full refund is available with at least 24 hours' notice."
+    ],
+    "schemaDescription": "A four-hour guided outing with Six Fins Charter in Stock Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "four-hour guided outing in Stock Island",
+      "Groups are capped at 8"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1c1QPJFSniXIJFrelZa9"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/lfTU36coSeCs6VvlYDkg",
+    "wordCount": 58,
+    "durationLabel": "4 Hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $1,195",
+    "priceRows": [
+      {
+        "label": "Private Charter",
+        "note": "Up to 8 People.",
+        "amountLabel": "$1,195"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1195.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/532226/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/lfTU36coSeCs6VvlYDkg",
+      "heroHandle": "lfTU36coSeCs6VvlYDkg",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/1c1QPJFSniXIJFrelZa9",
+          "handle": "1c1QPJFSniXIJFrelZa9",
+          "pixelSha256": "eb4db156ea331c761c25dae536a81dd43b2fa975291278f08eda2e7c5b421bd8",
+          "differenceHashDistanceFromHero": 135,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.39145,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/1c1QPJFSniXIJFrelZa9",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-532226",
+      "fetchedAt": "2026-10-03T18:09:44.340844+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532226/content/",
+          "status": 200,
+          "bytes": 15331,
+          "sha256": "eaff12f57423f19cb4a79f63cd1258cc2a4a4e3e884cd2ad0f488a8f036ea503"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532226/structured-description/",
+          "status": 200,
+          "bytes": 6901,
+          "sha256": "4ca23adf20a5d608b5cf96ba971e743377723439d71bb1f25378aadcda52fe94"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532226/",
+          "status": 200,
+          "bytes": 24267,
+          "sha256": "16a13b4d86b23828ebae454ca7982af4d24dc1ee98232d12dcf73990037460f5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=532226&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "7549b820cff4bb87375bebe74646b227a64fa74b87d8f63f886d34a3554ae7a1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532226/ratings/",
+          "status": 200,
+          "bytes": 511,
+          "sha256": "36c8f3975d187ea655e6a71e8ee0408dbf52d77ee29ab950a5d2cab54feedce3"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Private Charter",
+          "note": "Up to 8 People.",
+          "amount": 1195.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Private Charter",
+            "note": "Up to 8 People.",
+            "amount": 1195.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 Hours",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West",
+        "headline": "The quiet sandbars locals run to - not the Boca Grande boat-party crowd",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free Cooler with ice",
+          "Free Bottled water",
+          "Large lily pad (upon request at the dock)",
+          "Adult noodles",
+          "Stand-up paddleboard (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Scenic Backcountry Cruise",
+          "Secret Sandbar Experience",
+          "Optional Exploration",
+          "Return Cruise"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet your local Six Fins captain at Dock A, Slip 32. After a brief safety overview, we cruise out through calm backcountry waters toward remote sandbars known primarily to locals. Scenic Backcountry Cruise Enjoy a relaxing ride through turquoise shallows, mangrove islands, and open Gulf waters. Keep an eye out for dolphins, rays, and seabirds along the way. Secret Sandbar Experience Arrive at a secluded sandbar or uninhabited island selected based on tides and conditions. Step into warm, crystal-clear water, float, swim, explore tide pools, or simply relax in peaceful seclusion. Use the lily pad, paddleboard, noodles, or enjoy music and refreshments while anchored in your private paradise. Optional Exploration Time permitting, your captain may reposition to a second sandbar or scenic location to give you multiple perspectives of the backcountry. Return Cruise Relax and soak in the views as we cruise back toward the marina - refreshed, sun-kissed, and crowd-free."
+        ],
+        "highlights": [
+          "Private 4-hour Secret Sandbar Escape",
+          "Secluded sandbars far from commercial tour routes",
+          "Possible stops near Marvin Key Sandbar",
+          "Jewfish Basin",
+          "Boca Grande Key Sandbar",
+          "Mud Keys backcountry shallows"
+        ],
+        "restrictions": [
+          "This experience may not be suitable for everyone",
+          "Not recommended for guests with serious back, neck, heart, or mobility conditions",
+          "Guests must be able to board and disembark the vessel with limited assistance",
+          "Guests should be comfortable walking on uneven sand and entering shallow water"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "Quick facts: • 4 hrs $1,195 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included."
+        ],
+        "gleanedFacts": [
+          "Bottled water"
+        ],
+        "properNames": [
+          "Lower Keys",
+          "Snipes Keys",
+          "Jewfish Basin",
+          "Mud Keys",
+          "Sand Key",
+          "Lily Pad",
+          "Key West",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "A four-hour private sandbar charter to whichever of the Lower Keys' hidden shallows is firing that day - Snipes Keys, Jewfish Basin, Mud Keys, Sand Key, or one of the unnamed flats only seasoned local captains know. We anchor in waist-deep crystal water, deploy floats and a Lily Pad, and you get a Key West sandbar afternoon without the crowd. Your USCG-licensed captain picks the spot based on wind, tide, and what your group wants. Quick facts: • 4 hrs $1,195 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - Secret Sandbar Escape Confirmation Dear Guests, We're excited to welcome you aboard your Secret Sandbar Escape - a private 4-hour journey to secluded Key West sandbars far from the crowds. Please review the important details below to ensure a smooth and unforgettable experience. ―――――――――――――――――――――――――――――――――――――――― ✅ Before Your Trip For trips up to six passengers: 👉 Each passenger must complete the insurance waiver (including adults on behalf of minors): [here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) AND for trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) and captain must complete the Bareboat Agreement together at the dock before departure, but prior to arrival, you may begin: [here](https://waiver.smartwaiver.com/w/ez5636zbxexwrng7dtz6mq/web/) Please complete all forms prior to arrival so we can depart on time. ―――――――――――――――――――――――――――――――――――――――― 🏝 Your Secret Sandbar Escape This is a private, customizable 4-hour charter designed around tides and conditions. Your captain will guide you through turquoise backcountry waters to secluded sandbars and uninhabited islands such as: • Marvin Key Sandbar • Jewfish Basin • Boca Grande Key • Mud Keys backcountry shallows • Snipe Key Sandbar Locations are selected based on weather and tide conditions to ensure the best experience. Swim, float, relax on the lily pad, paddleboard, explore tide pools, or simply unwind in peaceful seclusion. No crowds. No tour traffic. Just you and the Keys. ―――――――――――――――――――――――――――――――――――――――― 🛥 About the Boat • 30' Jeanneau NC 895 Weekender • Private enclosed head (toilet) • USCG-certified safety equipment • Licensed USCG captains Departure Location: Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Free parking available adjacent to The Perry Hotel & Marina. Please arrive 15 minutes prior to departure. ―――――――――――――――――――――――――――――――――――――――― 🧳 What's Included • Cooler with ice • Bottled water & light snacks • Snorkeling gear • Adult noodles • Lily pad (upon request) • Stand-up paddleboard (upon request) ―――――――――――――――――――――――――――――――――――――――― 🚫 Not Included • Meals & beverages • Towels • Infant/toddler USCG-approved life jackets (must be provided by guest) • Captain & crew gratuity (customary 20% minimum if satisfied) ―――――――――――――――――――――――――――――――――――――――― 🩺 Health & Safety Your safety is our highest priority. • Operated by USCG-licensed captains • Safety briefing provided before departure • Life jackets available for all guests • Sandbar access is tide- and weather-dependent • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. • Prone to seasickness: tell us ahead of time and we'll suggest what to take before boarding. Guests should be comfortable around water and physically able to board the vessel and step into shallow water if participating. Not recommended for guests who are pregnant or those with serious heart, back, neck, or recent surgical conditions. Excessive intoxication or unsafe behavior may result in denial of boarding or early termination without refund. ―――――――――――――――――――――――――――――――――――――――― ⚠ Disclaimers • Itineraries are subject to weather, tides, and the captain's discretion • Sandbar conditions vary daily • Wildlife sightings cannot be guaranteed • Late arrivals may reduce charter time • Six Fins is not responsible for lost or damaged personal items ―――――――――――――――――――――――――――――――――――――――― 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools before and after your trip. Make it a full Keys day. ―――――――――――――――――――――――――――――――――――――――― We look forward to hosting your private escape. Best regards, David McFadden Owner, Six Fins Charter Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. The quiet sandbars locals run to - not the Boca Grande boat-party crowd The quiet sandbars locals run to - not the Boca Grande boat-party crowd",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "532226",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/532226/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "532228",
+    "company": "sixfinscharter",
+    "title": "Private National Wildlife Refuge Eco Tour",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-national-wildlife-refuge-eco-tour-532228",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This private charter looks for wild dolphins in the backcountry channels. The charter runs about 3 hours. The boat is private for the group that booked it. Whether a pod is close that day is not promised. This is a private sandbar charter on the water.",
+      "The booking is about 3 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Great White Heron and Lower Keys.",
+      "Wildlife Observation Slow and Shallow Water Stop come into view as the boat moves. The cruise also passes Return Cruise Relax."
+    ],
+    "schemaDescription": "A three-hour guided outing with Six Fins Charter in Stock Island. The outing passes Wildlife Observation, Relax on the scenic ride back to the marina, and Key West National Wildlife Refuges.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "three-hour guided outing in Stock Island",
+      "Wildlife Observation and Relax on the scenic ride back to the marina",
+      "Groups are capped at 8"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0Di2BwgDTfSsWuwW6ruB"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/zhsgTdGSLqqeEFI08wIQ",
+    "wordCount": 113,
+    "durationLabel": "3 Hours",
+    "durationIso": "PT3H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $995",
+    "priceRows": [
+      {
+        "label": "Private Charter",
+        "note": "Up to 8 People.",
+        "amountLabel": "$995"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "995.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/532228/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/zhsgTdGSLqqeEFI08wIQ",
+      "heroHandle": "zhsgTdGSLqqeEFI08wIQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/0Di2BwgDTfSsWuwW6ruB",
+          "handle": "0Di2BwgDTfSsWuwW6ruB",
+          "pixelSha256": "6cc4b3f83178afd160820c138aba6af8982a65e4c79173fd268388570bc08dd5",
+          "differenceHashDistanceFromHero": 117,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.398,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/0Di2BwgDTfSsWuwW6ruB",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-532228",
+      "fetchedAt": "2026-10-03T18:09:44.916929+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532228/content/",
+          "status": 200,
+          "bytes": 9305,
+          "sha256": "e4bc8c617682f67198014fae6b7daeef7f055ef99b081725b47ad25a33869548"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532228/structured-description/",
+          "status": 200,
+          "bytes": 5302,
+          "sha256": "f9a116efdada24a7d280cf8522759f3bf078e5b70136a7073cb5ba2b7a39283d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532228/",
+          "status": 200,
+          "bytes": 21569,
+          "sha256": "05c5336f27a3195ee36c01cc97a353663d621aadba72849069f94d84c0eacb0c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=532228&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 561,
+          "sha256": "c75e87f35225681320f45231ad20a8bcb79c051172e47462dea0fd8143799345"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532228/ratings/",
+          "status": 200,
+          "bytes": 516,
+          "sha256": "7c2512663625c2e1394fddddb58bd6d24b7fa824a6c2d2ef9ee40a9ff5b62954"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Private Charter",
+          "note": "Up to 8 People.",
+          "amount": 995.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Private Charter",
+            "note": "Up to 8 People.",
+            "amount": 995.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "3 Hours",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "Inside the federally protected refuges around the Lower Keys",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free cooler with ice",
+          "Free bottled water",
+          "Two bean bag chairs (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Mangrove Exploration",
+          "Navigate through calm mangrove-lined channels and shallow flats. Learn about their critical role as nurseries for marine life and protection against coastal erosion",
+          "Wildlife Observation",
+          "Slow cruising through National Wildlife Refuge waters for dolphin sightings, sea turtles, rays, shorebirds, osprey, and pelicans",
+          "Shallow Water Stop (Conditions Permitting)",
+          "Optional stop in a quiet cove or sandbar area to explore shallow waters and observe marine life up close",
+          "Return Cruise",
+          "Relax on the scenic ride back to the marina"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet at Dock A, Slip 32. After a safety briefing, we cruise toward protected backcountry waters. Mangrove Exploration Navigate through calm mangrove-lined channels and shallow flats. Learn about their critical role as nurseries for marine life and protection against coastal erosion. Wildlife Observation Slow cruising through National Wildlife Refuge waters for dolphin sightings, sea turtles, rays, shorebirds, osprey, and pelicans. Shallow Water Stop (Conditions Permitting) Optional stop in a quiet cove or sandbar area to explore shallow waters and observe marine life up close. Return Cruise Relax on the scenic ride back to the marina."
+        ],
+        "highlights": [
+          "Private 3-hour National Wildlife Refuge eco tour",
+          "Protected backcountry waters",
+          "Mangrove forest exploration",
+          "Dolphin & wildlife viewing",
+          "Birdwatching opportunities",
+          "Seagrass flats and shallow ecosystems"
+        ],
+        "restrictions": [
+          "Wildlife encounters cannot be guaranteed",
+          "Not recommended for guests with significant mobility limitations due to vessel access",
+          "Excessive intoxication may result in denial of boarding or early termination without refund",
+          "Smoking or vaping is not permitted inside the cabin"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Great White Heron",
+          "Key West National Wildlife Refuges",
+          "Lower Keys",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "A three-hour private eco charter through the Great White Heron and Key West National Wildlife Refuges - federally protected zones surrounding the Lower Keys and home to some of Florida's most untouched marine habitat. Your USCG-licensed captain narrates as you go: mangrove forests, seagrass flats, bird rookeries, the occasional manatee, and the reef patches where green sea turtles graze. Best booked early morning or late afternoon when wildlife is most active. Quick facts: • 3 hrs $995 • Private (your group only) • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - National Wildlife Refuge Eco Tour Confirmation Dear Guests, We're excited to welcome you aboard your Private Eco Adventure Charter - a 3-hour exploration of protected backcountry waters surrounding Key West. Please review the important details below to ensure a smooth and meaningful experience. ✅ Before Your Tour For trips up to six passengers: 👉 Complete the insurance waiver: [here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) AND for trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) and captain must complete the Bareboat Agreement together at the dock before departure, but prior to arrival, you may begin: [here](https://waiver.smartwaiver.com/w/ez5636zbxexwrng7dtz6mq/web/) All forms must be completed prior to arrival. 🌿 Your Eco Experience This private 3-hour tour explores: • Mangrove forests • Seagrass flats • National Wildlife Refuge waters • Dolphin and bird habitats • Protected shallow ecosystems Your captain will tailor the route based on wildlife activity and environmental conditions. Wildlife sightings are common but cannot be guaranteed. 📍 Departure Details Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Please arrive 15 minutes prior to departure. 🩺 Health & Safety This is generally a calm-water tour. Guests should be comfortable boarding and riding on a vessel. The captain may adjust route for safety and environmental protection. • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. • Prone to seasickness: tell us ahead of time and we'll suggest what to take before boarding. 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools and fitness center before and after your tour. We look forward to sharing the natural beauty of the Florida Keys with you. Best regards, David McFadden Owner, Six Fins Charter Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Inside the federally protected refuges around the Lower Keys Inside the federally protected refuges around the Lower Keys",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "532228",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/532228/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "532233",
+    "company": "sixfinscharter",
+    "title": "Private Dolphin Playground Safari",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-dolphin-playground-safari-532233",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Private Dolphin Playground Safari is a three-hour guided outing with Six Fins Charter in Stock Island. Free coolers with ice and Free bottled water are included.",
+      "Groups are capped at 8.",
+      "Guests must be at least 1 years old. A full refund is available with at least 24 hours' notice."
+    ],
+    "schemaDescription": "A three-hour guided outing with Six Fins Charter in Stock Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "three-hour guided outing in Stock Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/kIAz9SGbQsalnlGlNbd7"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/6auNpiXIQrCxnQM9DV1R",
+    "wordCount": 51,
+    "durationLabel": "3 Hours",
+    "durationIso": "PT3H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $995",
+    "priceRows": [
+      {
+        "label": "Private Charter",
+        "note": "Up to 8 People.",
+        "amountLabel": "$995"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "995.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/532233/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/6auNpiXIQrCxnQM9DV1R",
+      "heroHandle": "6auNpiXIQrCxnQM9DV1R",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/kIAz9SGbQsalnlGlNbd7",
+          "handle": "kIAz9SGbQsalnlGlNbd7",
+          "pixelSha256": "6cc4b3f83178afd160820c138aba6af8982a65e4c79173fd268388570bc08dd5",
+          "differenceHashDistanceFromHero": 130,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.37845,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/kIAz9SGbQsalnlGlNbd7",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-532233",
+      "fetchedAt": "2026-10-03T18:09:44.989443+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532233/content/",
+          "status": 200,
+          "bytes": 9341,
+          "sha256": "40cd6ed2582ee8cabee309fc0b4a8df4811d06f9b1d01e097cc41f5036866402"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/532233/structured-description/",
+          "status": 200,
+          "bytes": 5525,
+          "sha256": "4b55ccd92a2bc17994fa5540fde8f293972becaa268c29f9dfac3b8502920086"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532233/",
+          "status": 200,
+          "bytes": 18888,
+          "sha256": "3bc5bed69381c75eee27dcff90ac958bc4f92e8c2f1013609bd13cf21fa234a8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=532233&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 561,
+          "sha256": "b8f1387c4651cde0673aa65bc7748c9a9a08986504d88b134e6f40f8f6d28a63"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/532233/ratings/",
+          "status": 200,
+          "bytes": 508,
+          "sha256": "8c0ba17a290d115efa9dfa9259c38b4cf83de3b2cd9b096cee793c9ba4f0d610"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Private Charter",
+          "note": "Up to 8 People.",
+          "amount": 995.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Private Charter",
+            "note": "Up to 8 People.",
+            "amount": 995.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "3 Hours",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "Wild Atlantic dolphins on their own time",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free coolers with ice",
+          "Free bottled water",
+          "Two bean bag chairs (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Dolphin Search & Observation",
+          "Pods may surface, travel, play, or occasionally surf the wake - every encounter is unique",
+          "Wildlife & Scenic Cruising",
+          "Optional Scenic Stop (Conditions Permitting)",
+          "Return Cruise"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet at Dock A, Slip 32. After a brief safety overview, we cruise into the calm Gulf and backcountry waters where wild dolphins are most commonly found. Dolphin Search & Observation Your captain navigates through known feeding and travel areas where Atlantic bottlenose dolphins frequently surface. We maintain respectful viewing distances while allowing natural curiosity to bring dolphins closer if they choose. Pods may surface, travel, play, or occasionally surf the wake - every encounter is unique. Wildlife & Scenic Cruising Along the way, you may also see sea turtles, rays, pelicans, osprey, and other marine and bird life that thrive in these protected waters. Optional Scenic Stop (Conditions Permitting) Time and conditions permitting, enjoy a brief scenic drift in a calm area to relax and take in the surroundings. Return Cruise Enjoy a smooth ride back with unforgettable memories of your wild encounter."
+        ],
+        "highlights": [
+          "Private 3-hour dolphin safari",
+          "Wild Atlantic bottlenose dolphins in their natural habitat",
+          "Ethical, no-chase wildlife viewing",
+          "Calm backcountry and Gulf waters",
+          "Educational narration about dolphin behavior",
+          "Possible sightings of turtles, rays & seabirds"
+        ],
+        "restrictions": [
+          "Wildlife encounters cannot be guaranteed",
+          "Not recommended for guests with significant mobility limitations due to vessel access",
+          "Excessive intoxication may result in denial of boarding or early termination without refund",
+          "Smoking or vaping is not permitted inside the cabin"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "Quick facts: • 3 hrs $995 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "National Marine Fisheries Service",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "A three-hour private charter to the shallow backcountry channels where Atlantic bottlenose dolphins live and play year-round. Your USCG-licensed captain knows the local pods by behavior pattern, cuts the engines in the right spots, and you drift in quiet water - often within a few yards of the boat. This is not a captive-encounter tour. No feeding, no enclosures, no performance. We follow strict National Marine Fisheries Service distance guidelines for sustainable encounters. Quick facts: • 3 hrs $995 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - Dolphin Safari Confirmation Dear Guests, We're excited to welcome you aboard your Private Dolphin Safari - a 3-hour wildlife experience in the calm waters surrounding Key West. Please review the important details below to ensure a smooth and memorable encounter. ✅ Before Your Charter For trips up to six passengers: 👉 Complete the insurance waiver:[here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) AND for trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) and captain must complete the Bareboat Agreement together at the dock before departure, but prior to arrival, you may begin: [here](https://waiver.smartwaiver.com/w/ez5636zbxexwrng7dtz6mq/web/) All required forms must be completed prior to arrival. 🐬 Your Dolphin Experience This private safari explores known dolphin habitats in the Gulf and backcountry waters. While dolphin sightings are common, they are wild animals and cannot be guaranteed. Every encounter is unique and conducted with respectful wildlife viewing practices. You may also see sea turtles, rays, and migratory birds. 📍 Departure Details Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Please arrive 15 minutes prior to departure. 🩺 Health & Safety This is generally a calm-water cruise. Guests should be comfortable boarding and riding on a vessel. The captain may adjust route based on weather or wildlife movement. • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. • Prone to seasickness: tell us ahead of time and we'll suggest what to take before boarding. 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools and fitness center before and after your charter. We look forward to sharing a truly special wildlife experience with you. Best regards, David McFadden Owner, Six Fins Charter Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Wild Atlantic dolphins on their own time Wild Atlantic dolphins on their own time",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "532233",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/532233/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "541394",
+    "company": "sixfinscharter",
+    "title": "Private Patch Reef Fishing",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-patch-reef-fishing-541394",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "From the water, guests see Lower Keys and Key West. Variation Light and Technique Variation Depending come into view as the boat moves. The cruise also passes Return Cruise Relax. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A four-hour guided outing with Six Fins Charter in Stock Island. The outing passes Technique Variation, Seasonal mahi-mahi opportunities, and Drift fishing along reef edges.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "four-hour guided outing in Stock Island",
+      "Technique Variation and Seasonal mahi-mahi opportunities"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/u5m14eZHT5ivjVeNnQnM"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/trC4enRduUsMUKHLjJrA",
+    "wordCount": 83,
+    "durationLabel": "4 hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $1,395",
+    "priceRows": [
+      {
+        "label": "Half-Day Charter",
+        "note": "4 hours | Max of 6 Passenger",
+        "amountLabel": "$1,395"
+      },
+      {
+        "label": "3/4 - Day Charter",
+        "note": "6 hours | Max of 6 Passenger",
+        "amountLabel": "$1,595"
+      },
+      {
+        "label": "Full-Day Charter",
+        "note": "8 hours | Max of 6 Passenger",
+        "amountLabel": "$1,795"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1395.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/541394/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/trC4enRduUsMUKHLjJrA",
+      "heroHandle": "trC4enRduUsMUKHLjJrA",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/u5m14eZHT5ivjVeNnQnM",
+          "handle": "u5m14eZHT5ivjVeNnQnM",
+          "pixelSha256": "6cc4b3f83178afd160820c138aba6af8982a65e4c79173fd268388570bc08dd5",
+          "differenceHashDistanceFromHero": 135,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.37393,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/u5m14eZHT5ivjVeNnQnM",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-541394",
+      "fetchedAt": "2026-10-03T18:09:45.637035+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/541394/content/",
+          "status": 200,
+          "bytes": 13953,
+          "sha256": "85e19c194392f1096fcab19c9ca98f9bc1e162b3d1402982d422cf57fed27324"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/541394/structured-description/",
+          "status": 200,
+          "bytes": 6117,
+          "sha256": "3d9fe972a7d901673c8be6566c84a3130fb10303dca5810b36201bca556a7bda"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/541394/",
+          "status": 200,
+          "bytes": 22623,
+          "sha256": "1a7f5ac9565972e3a7f3f7a219ccb5611bd4483ed0a4f1d6da9868035a6d3a23"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=541394&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 894,
+          "sha256": "814bc78bc46d5281fd57cdd17bee9004af73c080029713248bab6b59281c382a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/541394/ratings/",
+          "status": 200,
+          "bytes": 502,
+          "sha256": "8106ffceadb91de4843fadde1a8fced66978fb4735ebfc45fd666e205e8e5253"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Half-Day Charter",
+          "note": "4 hours | Max of 6 Passenger",
+          "amount": 1395.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Half-Day Charter",
+            "note": "4 hours | Max of 6 Passenger",
+            "amount": 1395.0
+          },
+          {
+            "singular": "3/4 - Day Charter",
+            "note": "6 hours | Max of 6 Passenger",
+            "amount": 1595.0
+          },
+          {
+            "singular": "Full-Day Charter",
+            "note": "8 hours | Max of 6 Passenger",
+            "amount": 1795.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T06:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 hours",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "Light-tackle reef fishing aboard the 30' Jeanneau yacht",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Six Person Max. Three Persons Fishing at a Time",
+        "included": [
+          "Coolers with ice",
+          "Bottled water",
+          "Fishing gear"
+        ],
+        "excluded": [
+          "Live bait and chum (Extra)",
+          "Electric reels",
+          "Kite fishing",
+          "Deep sea fishing",
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Primary Patch Reef Fishing",
+          "Technique Variation",
+          "Light trolling for mackerel and bonito",
+          "Seasonal mahi-mahi opportunities",
+          "Drift fishing along reef edges",
+          "Return Cruise"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet your captain at Dock A, Slip 32. After a safety briefing and gear overview, we cruise toward nearby patch reef systems. Primary Patch Reef Fishing Anchor or drift over productive reef structures located a few miles offshore. Drop lines directly over structure targeting snapper, grouper, porgies, hogfish (season permitting), and other reef species. Technique Variation Depending on conditions and bite patterns, we may incorporate: • Light trolling for mackerel and bonito • Seasonal mahi-mahi opportunities • Drift fishing along reef edges Return Cruise Relax on the ride back with your catch on ice and stories to tell."
+        ],
+        "highlights": [
+          "Private patch reef fishing charter",
+          "Flexible 4, 6, or 8-hour options",
+          "Yellowtail Snapper",
+          "Mangrove Snapper",
+          "Mutton Snapper",
+          "Grouper (seasonal regulations apply)"
+        ],
+        "restrictions": [
+          "Fishing licenses are included under the vessel's license (private charter coverage), although individual fishing licenses may be required by each fishing passenger",
+          "All catches must comply with Florida Fish & Wildlife Conservation Commission (FWC) size and bag limits",
+          "Certain species may be seasonal or closed - regulations change",
+          "Not recommended for guests with severe back, neck, or mobility limitations"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Unfortunately no",
+        "languages": [],
+        "factualSentences": [
+          "A guided light-tackle fishing charter to the patch reefs of the Lower Keys aboard the 30' Jeanneau yacht.",
+          "Quick facts: • 4 hrs $1,395 • 6 hrs $1,595 • 8 hrs $1,795 • Private • USCG-licensed captain • All gear included • Perry Hotel & Marina."
+        ],
+        "gleanedFacts": [
+          "Bottled water"
+        ],
+        "properNames": [
+          "Lower Keys",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "A guided light-tackle fishing charter to the patch reefs of the Lower Keys aboard the 30' Jeanneau yacht. Snapper, grouper, jacks, and the occasional permit - all caught within a few miles of Key West. Your USCG-licensed captain doubles as your fishing guide: he knows the reefs by GPS coordinates AND by memory. All rods, reels, tackle, and live or cut bait included. Catch-clean-cook arrangements with local restaurants available on request. Quick facts: • 4 hrs $1,395 • 6 hrs $1,595 • 8 hrs $1,795 • Private • USCG-licensed captain • All gear included • Perry Hotel & Marina",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - Patch Reef Fishing Confirmation Dear Guests, We're excited to welcome you aboard your Private Patch Reef Fishing Charter in Key West. Whether you're chasing snapper for dinner or simply enjoying a relaxed day on the water, we look forward to hosting your adventure. Please review the important details below to ensure a smooth and successful trip. ―――――――――――――――――――――――――――――――――――――――― ✅ Before Your Trip For trips up to six passengers: 👉 Each passenger must complete the insurance waiver (including adults on behalf of minors): [here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) For trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) must complete the Bareboat Contract prior to arrival: [here] (https://waiver.smartwaiver.com/w/gntbqof57vuo1dg62v383i/web/ All required forms must be completed before arrival so we may depart on time. ―――――――――――――――――――――――――――――――――――――――― 🎣 Your Fishing Experience You've reserved a private charter for: 4 Hours - $1,395 6 Hours - $1,595 8 Hours - $1,795 We'll target productive patch reefs just a few miles offshore near areas such as: • Sand Key Reef • Western Sambo Reef • Eastern Dry Rocks • Rock Key Target species may include: • Yellowtail Snapper • Mangrove Snapper • Mutton Snapper • Grouper (seasonal regulations apply) • Hogfish (season permitting) • Porgies • Spanish Mackerel • Bonito • Seasonal mahi-mahi Fishing success varies daily - but we'll work hard to keep rods bent and lines tight. All tackle and gear are provided. Your catch will be iced onboard. ―――――――――――――――――――――――――――――――――――――――― 🛥 Departure Details Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Free parking is available adjacent to The Perry Hotel & Marina. Please arrive 15 minutes prior to departure. Boat: 30' Jeanneau NC 895 Weekender Private enclosed head (toilet) USCG-certified safety equipment Licensed USCG captains ―――――――――――――――――――――――――――――――――――――――― 🧳 What's Included • All rods, reels, tackle & bait • Cooler with ice • Bottled water & light snacks • Licensed vessel fishing coverage ―――――――――――――――――――――――――――――――――――――――― 🚫 Not Included • Meals & additional beverages • Towels • Infant/toddler USCG-approved life jackets (must be provided by guest) • Captain & crew gratuity (customary 20% minimum if satisfied) All catches must comply with Florida Fish & Wildlife Conservation Commission (FWC) size and bag limits. ―――――――――――――――――――――――――――――――――――――――― 🩺 Health & Safety Your safety is our highest priority. • Operated by U.S. Coast Guard-licensed captains • Safety briefing provided before departure • USCG-approved life jackets available • Required safety equipment onboard at all times • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. • Prone to seasickness: tell us ahead of time and we'll suggest what to take before boarding. Guests should be comfortable standing, handling rods, and moving safely on deck. Excessive intoxication or unsafe behavior may result in denial of boarding or early termination without refund. Captains reserve the right to modify location or return early due to weather or sea conditions. ―――――――――――――――――――――――――――――――――――――――― ⚠ Disclaimers • Fishing success cannot be guaranteed. • Species availability varies by season and regulation. • All itineraries are subject to weather and captain discretion. • Late arrivals may reduce charter time without refund. • Six Fins is not responsible for lost or damaged personal items. ―――――――――――――――――――――――――――――――――――――――― 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools and fitness center before and after your trip. Turn your fishing trip into a full Keys day. ―――――――――――――――――――――――――――――――――――――――― We look forward to fishing with you. Best regards, David McFadden Owner, Six Fins Charter Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure Light-tackle reef fishing aboard the 30' Jeanneau yacht Light-tackle reef fishing aboard the 30' Jeanneau yacht",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "541394",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/541394/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "550475",
+    "company": "sixfinscharter",
+    "title": "Discover the Marquesas Keys",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/discover-the-marquesas-keys-550475",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This private charter looks for wild dolphins in the backcountry channels. The charter runs about 10 hours. The boat is private for the group that booked it. Whether a pod is close that day is not promised. This is a private sandbar charter on the water.",
+      "The booking is about 10 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Take Six Fins and Key West.",
+      "Western Hemisphere and Marina Offshore Cruise come into view as the boat moves. The cruise also passes Minutes Each Way and Extended Sunset Return. Looking back toward shore, the group can see Hour Charter Option and Marquesas Keys Crescent-shaped."
+    ],
+    "schemaDescription": "A 10-hour snorkel outing with Six Fins Charter in Stock Island. The outing passes Anchoring at a remote sandbar, Snorkeling patch reefs and clear flats, and Dolphin and wildlife viewing.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "10-hour snorkel outing in Stock Island",
+      "Anchoring at a remote sandbar and Snorkeling patch reefs and clear flats",
+      "Groups are capped at 8"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ngEhdLRR5Ow4w367Z1D7"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/gzyl1XbhRBivoYpb9Dzd",
+    "wordCount": 132,
+    "durationLabel": "10 hour",
+    "durationIso": "PT10H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $2,605",
+    "priceRows": [
+      {
+        "label": "8 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$2,605"
+      },
+      {
+        "label": "10 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$3,065"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "2605.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/550475/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/gzyl1XbhRBivoYpb9Dzd",
+      "heroHandle": "gzyl1XbhRBivoYpb9Dzd",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ngEhdLRR5Ow4w367Z1D7",
+          "handle": "ngEhdLRR5Ow4w367Z1D7",
+          "pixelSha256": "6cc4b3f83178afd160820c138aba6af8982a65e4c79173fd268388570bc08dd5",
+          "differenceHashDistanceFromHero": 123,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.38577,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ngEhdLRR5Ow4w367Z1D7",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-550475",
+      "fetchedAt": "2026-10-03T18:09:46.691223+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/550475/content/",
+          "status": 200,
+          "bytes": 10661,
+          "sha256": "0dd87eeee50c057e8d72efc8bca2277e0d02c1a86f47fc3c27dfb9489ae7fccc"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/550475/structured-description/",
+          "status": 200,
+          "bytes": 6094,
+          "sha256": "bb8cc4031fed54e278eb8fe8e36760505510b23bf260bf9d0da8011c502e165f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/550475/",
+          "status": 200,
+          "bytes": 29518,
+          "sha256": "4f11d0548bb510c56b16e85619a42fc9dd73b0cbdc409be75d83ec35c2a172a5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=550475&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 703,
+          "sha256": "fd4f5acae5d3a28da31c4e5427bb99797c4956fff36085d745c19cabf7882fc4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/550475/ratings/",
+          "status": 200,
+          "bytes": 502,
+          "sha256": "21a7343293bbefa2651fea316f43be52bf403f493a06701b06ec4a2c1e32e4d0"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "8 Hour Private Charter",
+          "note": "",
+          "amount": 2605.0
+        },
+        "customerTypes": [
+          {
+            "singular": "8 Hour Private Charter",
+            "note": "",
+            "amount": 2605.0
+          },
+          {
+            "singular": "10 Hour Private Charter",
+            "note": "",
+            "amount": 3065.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "10 hour",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "The only natural atoll in the Western Hemisphere - 30 miles from Key West",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free cooler with ice",
+          "Free bottled water",
+          "Large lily pad (upon request at the dock)",
+          "Adult noodles",
+          "Snorkeling gear",
+          "Fishing gear (upon request at the dock)",
+          "Stand-up paddleboard (upon request at the dock)",
+          "Two bean bag chairs (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Departure - Perry Hotel & Marina",
+          "Offshore Cruise (Approx. 60-75 Minutes Each Way)",
+          "Marquesas Exploration",
+          "Anchoring at a remote sandbar",
+          "Snorkeling patch reefs and clear flats",
+          "Beach exploration on uninhabited islands",
+          "Dolphin and wildlife viewing",
+          "Flats fishing (optional add-on)",
+          "Eco cruising through mangrove shorelines",
+          "Extended Sunset Return (10-Hour Charter Option)"
+        ],
+        "routeNotes": [
+          "Departure - Perry Hotel & Marina Meet at Dock A, Slip 32. After a safety briefing, we cruise west toward open Gulf waters. Offshore Cruise (Approx. 60-75 Minutes Each Way) Enjoy expansive horizon views as we cross toward the remote Marquesas atoll, located approximately 30 miles offshore. Marquesas Exploration Once inside the protected crescent of the atoll, your customized experience may include: • Anchoring at a remote sandbar • Snorkeling patch reefs and clear flats • Beach exploration on uninhabited islands • Dolphin and wildlife viewing • Flats fishing (optional add-on) • Eco cruising through mangrove shorelines Extended Sunset Return (10-Hour Charter Option) For longer charters, enjoy a golden-hour cruise back toward Key West."
+        ],
+        "highlights": [
+          "30 miles offshore to the remote Marquesas Keys",
+          "Crescent-shaped atoll rarely visited by tour boats",
+          "Historic waters explored by Ernest Hemingway",
+          "Jimmy Buffett's legendary playground",
+          "Remote sandbars and deserted beaches",
+          "Exceptional snorkeling opportunities"
+        ],
+        "restrictions": [
+          "This is an offshore charter and may involve longer travel time and open-water conditions",
+          "Not recommended for guests who are pregnant",
+          "Not recommended for guests with serious heart conditions, severe back/neck injuries, or mobility limitations",
+          "Excessive intoxication may result in denial of boarding or early termination without refund"
+        ],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": null,
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "Take Six Fins offshore to one of Florida's most remote and pristine destinations: the Marquesas Keys, a ring of uninhabited mangrove islands 30 miles west of Key West and the only natural atoll in the Western Hemisphere.",
+          "The 10-hour option adds time at the historic Marquesas anchorage."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Take Six Fins",
+          "Marquesas Keys",
+          "Key West",
+          "Perry Hotel",
+          "Stock Island"
+        ],
+        "measures": [
+          "30 miles"
+        ],
+        "description": "Take Six Fins offshore to one of Florida's most remote and pristine destinations: the Marquesas Keys, a ring of uninhabited mangrove islands 30 miles west of Key West and the only natural atoll in the Western Hemisphere. Your USCG-licensed captain runs you out aboard our 30' Jeanneau yacht for a day of clear-water snorkeling, deserted-sandbar lunch stops, and backcountry exploration few visitors ever see. The 10-hour option adds time at the historic Marquesas anchorage. Group-only - no shared boats, no other guests. Quick facts • 8 hrs $2,070 • 10 hrs $3,065 • Private (your group only) • USCG-licensed captain • Departs from Perry Hotel & Marina, Stock Island • Fuel + safety gear included",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - Discover the Marquesas Confirmation Dear Guests, We're excited to welcome you aboard your Marquesas Keys Expedition - one of the most remote and spectacular private charters available from Key West. Please review the important details below to ensure a smooth and unforgettable offshore adventure. ✅ Before Your Charter For trips up to six passengers: 👉 Complete the insurance waiver: [here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) AND for trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) and captain must complete the Bareboat Agreement together at the dock before departure, but prior to arrival, you may begin: [here](https://waiver.smartwaiver.com/w/ez5636zbxexwrng7dtz6mq/web/) All forms must be completed prior to arrival. 🌊 Your Offshore Expedition You've reserved: 8 Hours - $2,070 10 Hours - $3,065 The Marquesas Keys are located approximately 30 miles offshore. This charter may include: • Remote sandbar stops • Snorkeling • Wildlife viewing • Beach exploration • Optional fishing • Extended sunset return (10-hour option) Travel time is approximately 60-75 minutes each way. 📍 Departure Details Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Please arrive 15 minutes prior to departure. 🩺 Health & Safety This is an offshore charter. If you are prone to seasickness, we strongly recommend preventative medication. The captain may adjust itinerary based on weather and sea conditions. • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools and fitness center before and after your trip. We look forward to taking you to one of the most extraordinary destinations in the Florida Keys. Best regards, David McFadden Owner, Six Fins Charter Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. The only natural atoll in the Western Hemisphere - 30 miles from Key West The only natural atoll in the Western Hemisphere - 30 miles from Key West",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "550475",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/550475/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "563185",
+    "company": "sixfinscharter",
+    "title": "Private Clothing optional Charter",
+    "operator": "Six Fins Charter",
+    "publicPath": "/destinations/florida/stock-island/tours/private-clothing-optional-charter-563185",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a private sandbar charter on the water. The booking is about 10 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. Bean bags on the bow are there for sitting out in the air.",
+      "Time on the water is about 10 hours. From the water, guests see Marina Scenic and Key West Harbor Sandbar. Anchorages Swim and Sunbathe Professional come into view as the boat moves. The cruise also passes Gym Free. The landmarks are seen from the harbor, with the boat doing the traveling."
+    ],
+    "schemaDescription": "A 6-hour snorkel outing with Six Fins Charter in Stock Island. The outing passes Sandbar anchorage in a low-traffic area, Coastal cruising along the Gulf or Atlantic side, and Relaxation time on deck.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "6-hour harbor outing in Stock Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/tE52xOOZQQqrCfOhij4U"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/C7jKlgoLRJ2nwI3Hrctb",
+    "wordCount": 108,
+    "durationLabel": "6 Hour",
+    "durationIso": "PT6H",
+    "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+    "visiblePriceLabel": "From $1,295",
+    "priceRows": [
+      {
+        "label": "6 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$1,295"
+      },
+      {
+        "label": "8 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$1,445"
+      },
+      {
+        "label": "10 Hour Private Charter",
+        "note": "",
+        "amountLabel": "$1,670"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1295.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sixfinscharter/items/563185/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Stock Island",
+      "state": "Florida",
+      "citySlug": "stock-island",
+      "stateSlug": "florida",
+      "reason": "Stock Island, Florida belongs to the Stock Island area via meeting_point",
+      "place": {
+        "city": "Stock Island",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "stock-island",
+        "stateSlug": "florida",
+        "raw": "Stock Island, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Stock Island",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "stock-island",
+          "stateSlug": "florida",
+          "raw": "Stock Island, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 24.565299,
+          "lng": -81.739327
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/C7jKlgoLRJ2nwI3Hrctb",
+      "heroHandle": "C7jKlgoLRJ2nwI3Hrctb",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/tE52xOOZQQqrCfOhij4U",
+          "handle": "tE52xOOZQQqrCfOhij4U",
+          "pixelSha256": "58ba4d4ba60427be7b365ae79094d1391c35cb1239d9fbbf026a7c032e9baf1a",
+          "differenceHashDistanceFromHero": 129,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.34317,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/tE52xOOZQQqrCfOhij4U",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/stock-island/sixfinscharter-563185",
+      "fetchedAt": "2026-10-03T18:09:47.491277+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/563185/content/",
+          "status": 200,
+          "bytes": 13876,
+          "sha256": "13c0a96d5d0eee6deec1b05b7f561296836f94d1de787fc850cb1dc8ec7e44cd"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinscharter/563185/structured-description/",
+          "status": 200,
+          "bytes": 5391,
+          "sha256": "3ee9c72674aee947e151b74325cb4ee49cdc6ee1d6637b2af903b12ca031ed44"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/563185/",
+          "status": 200,
+          "bytes": 23288,
+          "sha256": "532b3263f2357be8ba59c5dea729d2e238d2f237d800545c584e7b2a8f69228d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinscharter/price-preview/per-item/v2/?asn=fhdn&item_pks=563185&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 843,
+          "sha256": "86d51a2c3c11a2a42c713cc02c936277c68f5c55183b15e2815edf5731b12c63"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinscharter/items/563185/ratings/",
+          "status": 200,
+          "bytes": 508,
+          "sha256": "93f0b3d1a4fd823c017b1ef78932d7eba96f98821c63e6ba82d1182880d29231"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "6 Hour Private Charter",
+          "note": "",
+          "amount": 1295.0
+        },
+        "customerTypes": [
+          {
+            "singular": "6 Hour Private Charter",
+            "note": "",
+            "amount": 1295.0
+          },
+          {
+            "singular": "8 Hour Private Charter",
+            "note": "",
+            "amount": 1445.0
+          },
+          {
+            "singular": "10 Hour Private Charter",
+            "note": "",
+            "amount": 1670.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "6 Hour",
+        "meetingAddress": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
+        "itemLocation": "Key West, Fl.",
+        "headline": "A private, judgment-free day on the water in the Florida Keys",
+        "startCity": "Stock Island",
+        "startProvince": "FL",
+        "startLat": 24.565299,
+        "startLng": -81.739327,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "Up to 8 Passengers",
+        "included": [
+          "Free coolers with ice",
+          "Free bottled water",
+          "Large lily pad (upon request at the dock)",
+          "Adult noodles",
+          "Snorkeling gear",
+          "Stand-up paddleboard (upon request at the dock)",
+          "Two bean bag chairs (upon request at the dock)"
+        ],
+        "excluded": [
+          "Meals & Beverages",
+          "Towels"
+        ],
+        "itinerary": [
+          "Every Clothing-Optional Charter is private and customizable. The captain will review conditions and preferences prior to departure",
+          "Depart The Perry Hotel & Marina",
+          "Scenic cruise through Key West Harbor",
+          "Sandbar anchorage in a low-traffic area",
+          "Swimming & floating time",
+          "Optional snorkeling (conditions permitting)",
+          "Coastal cruising along the Gulf or Atlantic side",
+          "Relaxation time on deck",
+          "Return cruise at golden hour (timing dependent)"
+        ],
+        "routeNotes": [
+          "Every Clothing-Optional Charter is private and customizable. The captain will review conditions and preferences prior to departure. Sample Flow (6-10 Hours): • Depart The Perry Hotel & Marina • Scenic cruise through Key West Harbor • Sandbar anchorage in a low-traffic area • Swimming & floating time • Optional snorkeling (conditions permitting) • Coastal cruising along the Gulf or Atlantic side • Relaxation time on deck • Return cruise at golden hour (timing dependent) We prioritize quieter anchorages for privacy while remaining compliant with all local, state, and federal regulations."
+        ],
+        "highlights": [
+          "100% Private Yacht - No shared guests",
+          "Flexible Start Times",
+          "Secluded Sandbars & Anchorages",
+          "Swim, Float, Relax, Sunbathe",
+          "Professional, Discreet Captain",
+          "Access to Perry Hotel Pools & Gym"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Towels",
+          "Meals",
+          "Alcoholic and Non-Alcoholic Beverages",
+          "Skin protection",
+          "Sea sickness medicine (wristband type is best)"
+        ],
+        "cancellation": "SIX FINS CHARTER REQUIRES all cancellations be made 24 hours before the scheduled departure time to receive any refund.",
+        "accessibility": "Yes",
+        "languages": [],
+        "factualSentences": [
+          "Aboard the 30' Jeanneau yacht with a USCG-licensed captain trained in privacy-respecting service, the boat is yours for the duration.",
+          "Quick facts: • 6 hrs $1,295 • 8 hrs $1,445 • 10 hrs $1,670 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Key West's",
+          "Perry Hotel"
+        ],
+        "measures": [],
+        "description": "Key West's most respectful clothing-optional charter - a fully private day on the water for couples, friend groups, and adult travelers. Aboard the 30' Jeanneau yacht with a USCG-licensed captain trained in privacy-respecting service, the boat is yours for the duration. We anchor off secluded sandbars, snorkel reefs, or quiet mangrove coves where the only audience is the dolphins. No other guests, no shared boats, no judgment. Quick facts: • 6 hrs $1,295 • 8 hrs $1,445 • 10 hrs $1,670 • Private • USCG-licensed captain • Perry Hotel & Marina • Fuel + safety gear included",
+        "detailsText": "IMPORTANT ACTION REQUIRED Six Fins Charter - Clothing-Optional Private Charter Confirmation Dear Guests, We're honored to host your private clothing-optional charter aboard Six Fins Charter. The Florida Keys are known for freedom, natural beauty, and open water - and your private yacht experience is designed with discretion, privacy, and professionalism at its core. Please carefully review the important details below to ensure a seamless and comfortable day on the water. ―――――――――――――――――――――――――――――――――――――――― ✅ Before Your Charter For trips up to six passengers: 👉 Each passenger must complete the insurance waiver (including adults on behalf of minors): [here] (https://waiver.smartwaiver.com/w/rd9k5tiavpwper7h2rhaqh/web/) AND for trips with 7th and 8th passengers: 👉 The primary renter (21+ years old) and captain must complete the Bareboat Agreement together at the dock before departure, but prior to arrival, you may begin: [here](https://waiver.smartwaiver.com/w/ez5636zbxexwrng7dtz6mq/web/) All forms must be completed in advance so we may depart on time. A valid government-issued photo ID is required at check-in. ―――――――――――――――――――――――――――――――――――――――― 🌊 Your Private Charter You've reserved a private custom charter for: 6 Hours - $1,295 8 Hours - $1,445 10 Hours - $1,670 Your itinerary is customizable and may include: • Secluded sandbar anchorage • Relaxed coastal cruising (Gulf or Atlantic side) • Swimming & floating • Snorkeling (upon request) • Scenic harbor touring • Sunset cruising (extended charters) This is not a public tour - it is your private yacht experience with a professional, discreet captain. Clothing-optional participation is entirely voluntary and never required. ―――――――――――――――――――――――――――――――――――――――― 🛥 Departure Details Dock A, Slip 32 7001 Shrimp Rd Stock Island, FL 33040 Free parking is available adjacent to The Perry Hotel & Marina. Please arrive 15 minutes prior to departure. Vessel: 30' Jeanneau NC 895 Weekender Private enclosed head (toilet) USCG-certified safety equipment Licensed USCG captain ―――――――――――――――――――――――――――――――――――――――― 🧳 What's Included • Cooler with ice • Bottled water • Adult noodles • Snorkel gear (upon request) • Lily pad & paddleboard (upon request) ―――――――――――――――――――――――――――――――――――――――― 🚫 Not Included • Meals & alcoholic beverages (BYOB welcome) • Towels • Infant/toddler USCG-approved life jackets (must be provided by guest) • Captain gratuity (customary 20% minimum if satisfied) Open flames (candles, cigars, sparklers, etc.) are not permitted onboard. Illegal substances are strictly prohibited. ―――――――――――――――――――――――――――――――――――――――― 🩺 Health & Safety Your safety and comfort are our highest priority. • Operated by U.S. Coast Guard-licensed captains • Mandatory safety briefing prior to departure • Life jackets available for all guests • Routes selected based on weather, tides, and privacy considerations • Food allergies or dietary restrictions: reply to this email and let us know in advance so we can prepare. • Prone to seasickness: tell us ahead of time and we'll suggest what to take before boarding. Excessive intoxication, unsafe behavior, or inappropriate conduct may result in denial of boarding or early termination without refund. Guests entering the water should be comfortable around water and in good general health. Guests with heart conditions, mobility limitations, pregnancy concerns, or sun sensitivity should consult a physician prior to booking. ―――――――――――――――――――――――――――――――――――――――― ⚠ Disclaimers • Itinerary subject to weather, tides, and captain discretion • Privacy cannot supersede compliance with maritime law • Wildlife sightings cannot be guaranteed • Late arrivals may reduce charter time • Six Fins Charter is not responsible for lost or damaged personal belongings • Inappropriate or unlawful behavior will result in immediate termination without refund This experience is intended for respectful adults who value discretion and a comfortable atmosphere. ―――――――――――――――――――――――――――――――――――――――― 🎁 Complimentary Access As my charter guests, you may enjoy access to The Perry Hotel & Marina pools and fitness center before and after your charter. Make it a full day of relaxation. ―――――――――――――――――――――――――――――――――――――――― We look forward to welcoming you aboard for a private and liberating day on the water. Warm regards, David McFadden Owner, Six Fins Charter If you'd like next, I can: • Add a discreet “Conduct & Consent” clause that further protects you legally • Tighten this version to reduce liability exposure • Create a captain-facing internal SOP version for managing this charter type professionally Your call. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. Parking and Location: Free parking is available adjacent to the Hotel and Marina. The boat is located on Dock A, Slip 32. Arrive 15 minutes before departure. A private, judgment-free day on the water in the Florida Keys A private, judgment-free day on the water in the Florida Keys",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "563185",
+        "provider": "sixfinscharter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinscharter/items/563185/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

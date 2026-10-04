@@ -1,0 +1,47 @@
+{
+  "company": "realfloridaadventures",
+  "itemId": "254243",
+  "fetchedAt": "2026-10-03T18:09:52.662757+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254243/content/",
+      "status": 200,
+      "bytes": 4761,
+      "sha256": "fb5cffb8ed444936e7584ac3ef8eed5ea7f5fff99fe288fac2a33903f0e0b342"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254243/structured-description/",
+      "status": 204,
+      "bytes": 0,
+      "sha256": null
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254243/",
+      "status": 200,
+      "bytes": 17159,
+      "sha256": "cdb87b393ae4a501338645768dcde0090eddd1b54b93654b0573742929bac73b"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254243&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 228,
+      "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254243/ratings/",
+      "status": 200,
+      "bytes": 522,
+      "sha256": "c79e9b384a41596c92c4202e1e4c8170215cd1ab417c1cbad32126644e9001fe"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "254243",
+    "provider": "realfloridaadventures",
+    "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254243/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

@@ -12,9 +12,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests go out on the water to look for whales. Dolphins are also part of what the outing goes out to see. Length of the boat is about 26 feet. The waters for this trip are off Mission Bay. The boat returns to Seaforth Marina at the end.",
-      "A marine biologist is aboard to answer questions about the animals. Shade and seating are available while guests watch the water. Time on the water is about 3 hours. People stay aboard, and the animals are what the trip goes out to find. Travel stays on the boat for the whole trip."
+      "A marine biologist is aboard to answer questions about the animals. Shade and seating are available while guests watch the water. Time on the water is about 3 hours."
     ],
-    "schemaDescription": "A three-hour guided outing with Big Blue Photo Expeditions in San Diego. The outing passes Return to Seaforth Marina.",
+    "schemaDescription": "Three-hour whale watch off Mission Bay, also watching for dolphins.",
     "highlights": [
       "three-hour guided outing in San Diego",
       "Return to Seaforth Marina",
@@ -24,7 +24,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/OPfa1KsKQUS5gCD6Rhdh"
     ],
     "productImage": "https://cdn.filestackcontent.com/dEmAX7RGS0aPHHtMRej4",
-    "wordCount": 100,
+    "wordCount": 77,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "1677 Quivira Rd San Diego, CA 92109",
@@ -62,10 +62,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The skyline is the main view as the boat moves through the harbor. There is a dance floor for guests who want to get up. Time on the water is about 3 hours. From the water, guests see San Diego and Harbor Island. Shelter Island come into view as the boat moves.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by."
+      "The skyline is the main view as the boat moves through the harbor. There is a dance floor for guests who want to get up. The cruise passes Harbor Island and Shelter Island."
     ],
-    "schemaDescription": "A harbor outing lasting 2hrs with Bow Tie Adventures LLC on San Diego Harbor. The sail passes Harbor Island and Shelter Island.",
+    "schemaDescription": "Two-hour sunset cruise on San Diego Bay, passing Harbor Island and Shelter Island.",
     "highlights": [
       "2hrs harbor outing",
       "Harbor Island and Shelter Island",
@@ -75,7 +74,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/VnkfSgiZQpuvQF28Gwov"
     ],
     "productImage": "https://cdn.filestackcontent.com/y22gj42kSamXk9grvgcu",
-    "wordCount": 101,
+    "wordCount": 33,
     "durationLabel": "2hrs",
     "durationIso": null,
     "meetingLocation": "2803 Emerson St, San Diego, CA 92106",
@@ -104,10 +103,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The skyline is the main view as the boat moves through the harbor. The cruise stays on San Diego Bay for the whole outing. There is a dance floor for guests who want to get up. Time on the water is about 3 hours. From the water, guests see San Diego Bay and Kellogg Beach.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by."
+      "The skyline is the main view as the boat moves through the harbor. The cruise stays on San Diego Bay for the whole outing. There is a dance floor for guests who want to get up. Time on the water is about 3 hours. From the water, guests see San Diego Bay and Kellogg Beach."
     ],
-    "schemaDescription": "A harbor outing lasting 3hrs with Bow Tie Adventures LLC on San Diego Harbor.",
+    "schemaDescription": "Three-hour yacht rental on San Diego Bay.",
     "highlights": [
       "3hrs harbor outing",
       "Capacity for up to 13 guests"
@@ -116,7 +114,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/RGLiDdS7yDJDxohogjeg"
     ],
     "productImage": "https://cdn.filestackcontent.com/aoKRyGGNQTOvAf0QFgJ3",
-    "wordCount": 104,
+    "wordCount": 55,
     "durationLabel": "3hrs",
     "durationIso": null,
     "meetingLocation": "2803 Emerson St, San Diego, CA 92106",
@@ -145,10 +143,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The skyline is the main view as the boat moves through the harbor. The cruise stays on San Diego Bay for the whole outing. There is a dance floor for guests who want to get up. Time on the water is about 3 hours. From the water, guests see San Diego Bay and Coronado Bridge.",
-      "Glorietta Bay Premium come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck. The boat is how guests move, and the harbor is the viewpoint."
+      "The skyline is the main view as the boat moves through the harbor. The cruise stays on San Diego Bay for the whole outing. There is a dance floor for guests who want to get up. From the water, guests see the bay and the Coronado Bridge."
     ],
-    "schemaDescription": "A harbor outing lasting 6hrs with Bow Tie Adventures LLC on San Diego Harbor. The sail passes Coronado Bridge.",
+    "schemaDescription": "Six-hour yacht rental on San Diego Bay.",
     "highlights": [
       "6hrs harbor outing",
       "Coronado Bridge",
@@ -158,7 +155,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/KWzn3WyMT6O0tt4a5thi"
     ],
     "productImage": "https://cdn.filestackcontent.com/94SGHRDvSISnTIHNBF3q",
-    "wordCount": 106,
+    "wordCount": 47,
     "durationLabel": "6hrs",
     "durationIso": null,
     "meetingLocation": "2803 Emerson St, San Diego, CA 92106",
@@ -187,10 +184,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Assorted Rock Fish and All Bait. Additional Anglers and HP Cummins Turbo Diesel come into view as the boat moves. The cruise also passes Southern California and HP Caterpillar Turbo Diesels. Looking back toward shore, the group can see Swell Chasers and Sun Protection.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Coletta Sport Fishing runs this half-day local charter for up to five and a half hours.",
+      "Target fish include rockfish, lingcod, sheepshead, halibut, sand bass, white seabass, calico bass, barracuda, and yellowtail. The boat is Wanu, a 32-foot Marshall flybridge sportfisher with a 250-horsepower Cummins diesel. Bait and tackle are included, the crew cleans the fish, and a California fishing license is not included."
     ],
-    "schemaDescription": "A harbor outing with Coletta Sport Fishing. The sail passes Sand Bass White Sea Bass.",
+    "schemaDescription": "Half-day local fishing charter with Coletta Sport Fishing out of San Diego.",
     "highlights": [
       "Sand Bass White Sea Bass"
     ],
@@ -198,7 +195,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/g3ySwqPtRvSb98zQ0Ec1"
     ],
     "productImage": "https://cdn.filestackcontent.com/CxYU0FBLQZyQHuej2C6n",
-    "wordCount": 102,
+    "wordCount": 67,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -232,10 +229,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Assorted Rock Fish and All Bait. Up To and Additional Anglers come into view as the boat moves. The cruise also passes HP Cummins Turbo Diesel and Southern California. Looking back toward shore, the group can see HP Caterpillar Turbo Diesels and Swell Chaser.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Coletta Sport Fishing runs this three-quarter-day local charter for up to nine hours.",
+      "Target fish include rockfish, lingcod, sheepshead, halibut, sand bass, white seabass, calico bass, barracuda, and yellowtail. The boat is Wanu, a 32-foot Marshall flybridge sportfisher with a 250-horsepower Cummins diesel. Bait and tackle are included, the crew cleans the fish, and a California fishing license is not included."
     ],
-    "schemaDescription": "A harbor outing with Coletta Sport Fishing. The sail passes Sand Bass White Sea Bass.",
+    "schemaDescription": "Three-quarter-day local fishing charter with Coletta Sport Fishing out of San Diego.",
     "highlights": [
       "Sand Bass White Sea Bass"
     ],
@@ -243,7 +240,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/SeC210uuQIGdeEOig22l"
     ],
     "productImage": "https://cdn.filestackcontent.com/I5sMkDzPSPyRnPenoDYQ",
-    "wordCount": 102,
+    "wordCount": 65,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -277,10 +274,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Tuna Season and Bluefin Tuna. Yellowfin Tuna and Swell Chaser come into view as the boat moves. The cruise also passes HP Cummins Turbo Diesel and Southern California. Looking back toward shore, the group can see Sun Protection and Polarized Glasses.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Coletta Sport Fishing runs this full-day offshore charter for a maximum of twelve hours, running from 6:30 a.m. until 6:30 p.m. Named target fish are bluefin tuna, yellowfin tuna, dorado, and marlin. Tuna season is August through October. Up to two extra anglers can be added, at $150 each. California and Mexican fishing licenses are not part of the booking.",
+      "The offshore boat named here is Swell Chaser, a United States Coast Guard inspected vessel. Its cabin has a sofa, extra chairs, a private head, and a galley with water, energy bars, and candy. The fishing deck is roomy enough for the whole party to hook fish at the same time. Tackle on board is Avet, Daiwa, and Okuma. A five-scoop live-bait setup, a fish hold, and an electronics package are also aboard."
     ],
-    "schemaDescription": "A harbor outing with Coletta Sport Fishing. The sail passes California And Mexican Fishing License's Not.",
+    "schemaDescription": "Full-day offshore fishing charter with Coletta Sport Fishing, targeting tuna, dorado, and marlin.",
     "highlights": [
       "California And Mexican Fishing License's Not"
     ],
@@ -288,7 +285,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/G0gJj0bSiaW2m34bQqpy"
     ],
     "productImage": "https://cdn.filestackcontent.com/PoNjuTkrQAe5naOnUemy",
-    "wordCount": 99,
+    "wordCount": 140,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -322,10 +319,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Three Hour Private Catch and Assorted Rock Fish. All Bait and HP Cummins Turbo Diesel come into view as the boat moves. The cruise also passes Southern California and HP Caterpillar Turbo Diesels. Looking back toward shore, the group can see Swell Chasers and Sun Protection.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This private coastal fishing cruise with Coletta Sport Fishing lasts up to three hours.",
+      "Target fish include rockfish, lingcod, sheepshead, halibut, sand bass, white seabass, calico bass, barracuda, and yellowtail. The boats named for the trip are Wanu and Swell Chaser. Bait and tackle are included, and the crew cleans the fish."
     ],
-    "schemaDescription": "A three-hour harbor outing with Coletta Sport Fishing. The sail passes Sand Bass White Sea Bass.",
+    "schemaDescription": "Three-hour private coastal fishing cruise with Coletta Sport Fishing.",
     "highlights": [
       "3 Hours harbor outing",
       "Sand Bass White Sea Bass",
@@ -335,7 +332,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/UctxVtWmTtum3UhHVoM8"
     ],
     "productImage": "https://cdn.filestackcontent.com/3pWVLveMSVfRgj3xatKg",
-    "wordCount": 104,
+    "wordCount": 52,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": null,
@@ -372,7 +369,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "This is a 5-hour harbor outing with Coletta Sport Fishing. Hoop nets & bait and Professional instruction & crew support are included.",
       "Groups are capped at 5. Guests must be at least 1 years old."
     ],
-    "schemaDescription": "This is a 5-hour harbor outing with Coletta Sport Fishing.",
+    "schemaDescription": "Five-hour lobster hoop-netting charter with Coletta Sport Fishing.",
     "highlights": [
       "5-hour harbor outing in San Diego",
       "Hoop nets & bait"
@@ -414,7 +411,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "8:30 a.m. - Guided Hike at Torrey Pines. Arrive at the beach for a relaxing picnic box lunch. 10:30 a.m. - Return to San Diego. Board transportation and head back to the starting point. Guided hike through Torrey Pines State Natural Reserve. Scenic views of the Pacific Ocean and sandstone cliffs.",
       "Small group experience for a personalized and relaxed pace."
     ],
-    "schemaDescription": "A three-hour guided outing with Five Star Tours. The outing passes Itinerary Breakdown and Torrey Pines State Natural Reserve.",
+    "schemaDescription": "Three-hour private hike and beach picnic at Torrey Pines State Natural Reserve.",
     "highlights": [
       "3 Hours guided outing",
       "Itinerary Breakdown and Torrey Pines State Natural Reserve",
@@ -471,7 +468,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Guests discover San Diego's beauty during golden hour on the exclusive Chasing Sunsets Tour-a journey on Pacific Coast designed to capture most magical moments of the day. Whether guests are a nature lover, photographer, or seeking a peaceful evening experience, the outing delivers the blend of sightseeing and relaxation.",
       "Guests visit a local shop to sample regional wines and olives. Relax and watch the sun set over the Pacific Ocean - for photos and soaking in the golden hour. Tickets include Wine and olive tasting stop. The day moves through 5:00 PM - Guest Pick-Up, 7:00 PM - Main Sunset Viewpoint, and 7: Back."
     ],
-    "schemaDescription": "A guided outing lasting 4 hrs with Five Star Tours.",
+    "schemaDescription": "Four-hour private sunset tour along the San Diego coast, with a wine and olive tasting.",
     "highlights": [
       "4 hrs guided outing",
       "5:00 PM - Guest Pick-Up and 5:30 PM - Arrival at First Sunset Viewpoint",
@@ -525,10 +522,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. The commentary takes up Gaslamp Quarter and Petco Park. That same account stays with San Diego Zoo and Coronado Bridge. La Jolla and Soledad National Veterans Memorial are part of the same story.",
-      "The route keeps Pacific Ocean and Downtown Skyline Drive in view."
+      "This private drive lasts four hours. It begins in the Gaslamp Quarter, known for its Victorian-era architecture. The route then passes Petco Park and the downtown skyline and continues to Balboa Park. The park holds more than 16 museums, gardens, and the San Diego Zoo.",
+      "The drive crosses the Coronado Bridge onto Coronado, where the Hotel del Coronado and the beaches are on the route. It then goes north to La Jolla. Sea lions on the rocks are part of that stop. The last named stop is the Mt. Soledad National Veterans Memorial, with views of the Pacific Ocean, the San Diego skyline, and Mexico on clear days."
     ],
-    "schemaDescription": "A guided outing lasting 4hrs with Five Star Tours. The outing passes Drive through the modern heart of San Diego, Coronado Bridge, and Petco Park.",
+    "schemaDescription": "Four-hour private drive through the Gaslamp Quarter, Balboa Park, Coronado, and La Jolla.",
     "highlights": [
       "4hrs guided outing",
       "Drive through the modern heart of San Diego and Coronado Bridge",
@@ -538,7 +535,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/bCe0BOtuQOmrvCGLwPmF"
     ],
     "productImage": "https://cdn.filestackcontent.com/rYaGZM7QvSBV4Lxp7NYo",
-    "wordCount": 59,
+    "wordCount": 109,
     "durationLabel": "4hrs",
     "durationIso": null,
     "meetingLocation": "San Diego San Diego, CA",
@@ -586,7 +583,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Mercado Hidalgo - Wander through Tijuana's open-air market filled with colors, traditional crafts, spices, and local produce. Guided visit to Pasaje Rodríguez and Mercado Hidalgo. On some dates the same outing is also offered in Spanish. Tickets include Taco tasting at multiple stops and Private tequila tasting.",
       "The day moves through 3:00 PM - Taco Tasting Tour, 4:00 PM - Private Tequila Tasting, and Smooth re-entry with private transportation."
     ],
-    "schemaDescription": "A guided outing lasting 5hrs with Five Star Tours. The outing passes Smooth re-entry with private transportation.",
+    "schemaDescription": "Five-hour private food and culture tour in Tijuana, with transport from San Diego.",
     "highlights": [
       "5hrs guided outing",
       "1:00 PM - Pick-Up in San Diego and 2:00 PM - Arrival & Cultural Walk",
@@ -641,9 +638,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests walk the corridor and look at outdoor murals along the way. The guide explains how that public-art route and its artists developed. Artists, neighborhood change, and the works on the walls are what the commentary covers. People stay on foot, and the art is viewed outside rather than inside a museum.",
-      "The neighborhood is the setting, and the guide attaches a story to the murals the group stops to see. The commentary takes up Baja California and Puerto Nuevo Lobster Village. That same account stays with Fast Pass and San Diego Meet. The route keeps San Diego Cross and San Diego Bilingual in view."
+      "The neighborhood is the setting, and the guide attaches a story to the murals the group stops to see. The guide covers Baja California and Puerto Nuevo Lobster Village."
     ],
-    "schemaDescription": "A guided outing lasting 8hrs with Five Star Tours.",
+    "schemaDescription": "Eight-hour private trip from San Diego for Baja lobster and a walk among outdoor murals.",
     "highlights": [
       "8hrs guided outing",
       "9:00 AM - Pick-Up in San Diego and 10:30 AM - Arrival in Rosarito",
@@ -653,7 +650,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/uB9BtezSQyY2G8fhRbwU"
     ],
     "productImage": "https://cdn.filestackcontent.com/4eUJKZ9HSeWaIBcN69ew",
-    "wordCount": 106,
+    "wordCount": 82,
     "durationLabel": "8hrs",
     "durationIso": null,
     "meetingLocation": "San Diego San Diego, CA",
@@ -701,7 +698,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Guests explore La Calle Primera, full of shops, local crafts, and souvenirs. Guided visit to key landmarks and cultural spots in Ensenada. On some dates the same outing is also offered in Spanish. The day moves through 11:30 AM - Arrival in Ensenada, 12:15 PM - El Malecón Walk, and 1:00 PM - Calle Primera Exploration.",
       "Next come 2:00 PM - Optional Lunch Time and 3:."
     ],
-    "schemaDescription": "A guided outing lasting 10hrs with Five Star Tours. The outing passes Seafood Black Market.",
+    "schemaDescription": "Ten-hour private tour from San Diego to Ensenada, with time on the coast and in town.",
     "highlights": [
       "10hrs guided outing",
       "9:00 AM - Pick-Up in San Diego and 11:30 AM - Arrival in Ensenada",
@@ -755,10 +752,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. The commentary takes up Gaslamp Quarter and Petco Park. That same account stays with San Diego Zoo and Coronado Bridge. La Jolla and Soledad National Veterans Memorial are part of the same story.",
-      "The route keeps Pacific Ocean and Downtown Skyline Drive in view."
+      "This daily drive lasts four hours and follows the same route as the highlights tour. It begins in the Gaslamp Quarter, known for its Victorian-era architecture. The route then passes Petco Park and the downtown skyline and continues to Balboa Park, home to more than 16 museums, gardens, and the San Diego Zoo.",
+      "The drive crosses the Coronado Bridge onto Coronado, where the Hotel del Coronado and the beaches are on the route. It then goes north to La Jolla, with sea lions on the rocks at that stop. The last named stop is the Mt. Soledad National Veterans Memorial. The view from there can take in the Pacific, the San Diego skyline, and Mexico when the day is clear."
     ],
-    "schemaDescription": "A guided outing lasting 4hrs with Five Star Tours in San Diego. The outing passes Drive through the modern heart of San Diego, Coronado Bridge, and Petco Park.",
+    "schemaDescription": "Four-hour daily drive through the Gaslamp Quarter, Balboa Park, Coronado, and La Jolla.",
     "highlights": [
       "4hrs guided outing",
       "Drive through the modern heart of San Diego and Coronado Bridge",
@@ -768,7 +765,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/5Xh1144JTCCBXZejb2gA"
     ],
     "productImage": "https://cdn.filestackcontent.com/URwWqYY7TVypIup4IkGf",
-    "wordCount": 59,
+    "wordCount": 121,
     "durationLabel": "4hrs",
     "durationIso": null,
     "meetingLocation": "4009 Taylor Street San Diego, CA 92110",
@@ -806,7 +803,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Mercado Hidalgo - Wander through Tijuana's open-air market filled with colors, traditional crafts, spices, and local produce. Guided visit to Pasaje Rodríguez and Mercado Hidalgo. On some dates the same outing is also offered in Spanish. Tickets include Taco tasting at multiple stops and Private tequila tasting.",
       "The day moves through 3:00 PM - Taco Tasting Tour, 4:00 PM - Private Tequila Tasting, and Smooth re-entry with private transportation."
     ],
-    "schemaDescription": "A guided outing lasting 5hrs with Five Star Tours in San Diego. The outing passes Smooth re-entry with private transportation.",
+    "schemaDescription": "Five-hour daily food and culture tour in Tijuana, with transport from San Diego.",
     "highlights": [
       "5hrs guided outing",
       "1:00 PM - Pick-Up in San Diego and 2:00 PM - Arrival & Cultural Walk",
@@ -848,7 +845,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "10:00 AM - Santa Monica Pier & Beachfront Walk. Drive through Beverly Hills, stop for a photo at the Beverly Hills Sign, and walk along Rodeo Drive's luxury shops and palm-lined streets. Guests see the stars on Hollywood Boulevard, the TCL Chinese Theatre, and the Dolby Theatre - home of the Oscars - and take that must-have photo of the Hollywood Sign.",
       "Guests explore Beverly Hills & Rodeo Drive - luxury shops and celebrity landmarks. Guests experience the Hollywood Walk of Fame, TCL Chinese Theatre & Dolby Theatre. Guests see the Hollywood Sign and take great photo stops. Visits to Santa Monica, Beverly Hills, Hollywood & Downtown LA."
     ],
-    "schemaDescription": "A guided outing lasting 12hrs with Five Star Tours in San Diego. The outing passes Walt Disney Concert Hall, Los Angeles City Hall, and Broad Museum & Grand Park.",
+    "schemaDescription": "Twelve-hour public tour of Los Angeles highlights, including Santa Monica and Beverly Hills.",
     "highlights": [
       "12hrs guided outing",
       "7:30 AM - Depart San Diego and 10:00 AM - Santa Monica Pier & Beachfront Walk",
@@ -895,7 +892,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "10:00 AM - Santa Monica Pier & Beachfront Walk. Drive through Beverly Hills, stop for a photo at the Beverly Hills Sign, and walk along Rodeo Drive's luxury shops and palm-lined streets. Guests see the stars on Hollywood Boulevard, the TCL Chinese Theatre, and the Dolby Theatre - home of the Oscars - and take that must-have photo of the Hollywood Sign.",
       "Guests explore Beverly Hills & Rodeo Drive - luxury shops and celebrity landmarks. Guests experience the Hollywood Walk of Fame, TCL Chinese Theatre & Dolby Theatre. Guests see the Hollywood Sign and take great photo stops. Visits to Santa Monica, Beverly Hills, Hollywood & Downtown LA."
     ],
-    "schemaDescription": "A guided outing lasting 12hrs with Five Star Tours. The outing passes Walt Disney Concert Hall, Los Angeles City Hall, and Broad Museum & Grand Park.",
+    "schemaDescription": "Twelve-hour private tour of Los Angeles highlights, including Santa Monica and Beverly Hills.",
     "highlights": [
       "12hrs guided outing",
       "7:30 AM - Depart San Diego and 10:00 AM - Santa Monica Pier & Beachfront Walk",
@@ -955,10 +952,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "A few optional stops leave time to step out for photographs and a closer look. Guests ride through neighborhoods to see holiday light displays. The displays include Christmas Circle, Christmas Card Lane, and Christmas House Walk. Music plays during the ride between the light displays.",
-      "There is time to get out for photographs at the displays. Families ride together to see the lights. The outing is a ride past the decorations. Guests stay with the vehicle except where the route stops for the displays. That same account stays with San DiegoDrop-off and Depart San DiegoBoard.",
-      "Chula Vista Christmas CircleOur and Christmas Card LaneNext are part of the same story."
+      "There is time to get out for photographs at the displays. Families ride together to see the lights. The outing is a ride past the decorations. Guests stay with the vehicle except where the route stops for the displays."
     ],
-    "schemaDescription": "A guided outing lasting 8hrs with Five Star Tours.",
+    "schemaDescription": "Eight-hour private holiday-lights drive in San Diego, through neighborhoods with light displays.",
     "highlights": [
       "8hrs guided outing",
       "San DiegoDrop-off",
@@ -968,7 +964,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/HJllLnhWSQCpAiyhkK3e"
     ],
     "productImage": "https://cdn.filestackcontent.com/dmkfwCV2RzqCSPG9s3HD",
-    "wordCount": 110,
+    "wordCount": 84,
     "durationLabel": "8hrs",
     "durationIso": null,
     "meetingLocation": "San Diego San Diego, CA",
@@ -1012,10 +1008,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Drinks and appetizers are sold from the deck bar. The cruise stays on San Diego Bay for the whole outing. Time on the water is about 3.5 hours. From the water, guests see Weather Permitting and Harbor Drive. San Diego Flagship and San Diego Bay Departs come into view as the boat moves.",
-      "The cruise also passes San Diego Snacks."
+      "Drinks and appetizers are sold from the deck bar. The cruise stays on San Diego Bay for the whole outing. Time on the water is about 3.5 hours."
     ],
-    "schemaDescription": "A 3.5-hour harbor outing with Flagship Cruises & Events on San Diego Harbor.",
+    "schemaDescription": "Whale-watching cruise of about 3.5 hours on San Diego Bay.",
     "highlights": [
       "3.5-hour harbor outing in San Diego",
       "Comfortable ship with unobstructed viewing"
@@ -1024,7 +1019,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ZLZ9GAkWSvaBnLISBhNQ"
     ],
     "productImage": "https://cdn.filestackcontent.com/SizSiz1tSPGbT7O83MXu",
-    "wordCount": 61,
+    "wordCount": 29,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
     "meetingLocation": "990 N Harbor Dr San Diego, CA 92101",
@@ -1074,7 +1069,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests walk a mountain trail for this outing. The guide pauses so guests can take pictures from the viewpoints. Guests stay on foot for the outing, and the mountain is the destination. The views are from the trail itself. The route also reaches Hand Sanitizer Blank Notepad and Pen Experienced Guide."
     ],
-    "schemaDescription": "A two-hour guided outing with Frequency Tours in San Diego. The outing passes Meditation Session, Hike up the mountain, and Nature walk and release of energy.",
+    "schemaDescription": "Two-hour morning mountain hike that includes a meditation session.",
     "highlights": [
       "two-hour guided outing in San Diego",
       "Meditation Session and Hike up the mountain",
@@ -1113,10 +1108,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests walk a mountain trail for this outing. The hike goes up Cowles Mountain. The approach follows trails in Mission Trails. The guide pauses so guests can take pictures from the viewpoints. Sage grows along the trail the group walks. The operator describes the hike as an easier walk, with time to stop and look.",
-      "Guests stay on foot for the outing, and the mountain is the destination. The views are from the trail itself. The commentary takes up San Diego and Mission Trails. That same account stays with Hike Cowles Mountain."
+      "Guests walk a mountain trail for this outing. The hike goes up Cowles Mountain. The approach follows trails in Mission Trails. The guide pauses so guests can take pictures from the viewpoints. Sage grows along the trail the group walks. The hike is an easier walk, with time to stop and look.",
+      "Guests stay on foot for the outing, and the mountain is the destination. The views are from the trail itself."
     ],
-    "schemaDescription": "A two-hour guided outing with Frequency Tours in San Diego. The outing passes Hike Cowles Mountain with an experienced guide and Take memorable photos with beautiful views.",
+    "schemaDescription": "Two-hour hike up Cowles Mountain in Mission Trails, with an optional meditation session.",
     "highlights": [
       "two-hour guided outing in San Diego",
       "Hike Cowles Mountain with an experienced guide and Take memorable photos with beautiful views",
@@ -1126,7 +1121,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/KvfzkcLwTMyyUGscfTLZ"
     ],
     "productImage": "https://cdn.filestackcontent.com/fn6WTc1sTEm81E8S9DF8",
-    "wordCount": 92,
+    "wordCount": 72,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "1 Father Junipero Serra Trail, San Diego, CA 92119",
@@ -1155,11 +1150,11 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The theme is how Boston has been built, altered, and rebuilt. The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. Guests drive a small GPS-guided car rather than riding a tour bus. The car plays a recorded story while guests drive the route.",
-      "The route comes back through the Gaslamp quarter. The outing is a drive, and the sights are seen from the car. From the water, guests see GoCar San Diego and San Diego's Italian. Seaport Village and Horton Plaza come into view as the boat moves.",
-      "The cruise also passes San Diego Padres and Historic Gaslamp Quarter. Looking back toward shore, the group can see Banker's Hill and Balboa Park."
+      "Guests drive a small GPS-guided car rather than riding a tour bus. The car plays a recorded story while guests drive the route.",
+      "The route comes back through the Gaslamp Quarter and passes Seaport Village and Horton Plaza.",
+      "The drive also passes Banker's Hill and Balboa Park."
     ],
-    "schemaDescription": "A one-hour harbor outing with GoCar Tours San Diego on San Diego Harbor. The sail passes Banker's Hill and Balboa Park.",
+    "schemaDescription": "One-hour GoCar drive through the San Diego harbor and the Gaslamp Quarter.",
     "highlights": [
       "one-hour harbor outing in San Diego",
       "Banker's Hill and Balboa Park"
@@ -1168,7 +1163,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/VaJAt05dRWuevImrik3A"
     ],
     "productImage": "https://cdn.filestackcontent.com/wvjtDvw9Rime53dnnTim",
-    "wordCount": 121,
+    "wordCount": 48,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": "3918 Mason St San Diego, CA 92110",
@@ -1207,10 +1202,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. The drive passes America's Finest City and Spanish Renaissance-inspired. Farther along, the van goes by Downtown San Diego and Historic Gaslamp Quarter. Little Italy Maritime Museum and Gaslamp Quarter Petco Park are on the same circuit.",
-      "The van is how guests move, and most landmarks are seen through the windows."
+      "This GoCar booking lasts two hours. The tour treats San Diego as America's Finest City. The GPS car covers Balboa Park, Hillcrest, and downtown. Balboa Park has Spanish Renaissance-style buildings, more than a dozen museums, flower gardens, and an outdoor organ pavilion. Hillcrest is included for shops and restaurants.",
+      "Downtown stops include the Maritime Museum and the Historic Gaslamp Quarter. Old Town is part of the product name with those two districts. The vehicle is a small GPS-guided GoCar, not a bus, and the two hours are a pass through the districts rather than a ticket into each museum."
     ],
-    "schemaDescription": "A two-hour guided outing with GoCar Tours San Diego in San Diego. The outing passes Maritime Museum and Spanish Renaissance-inspired.",
+    "schemaDescription": "Two-hour GoCar drive through the Gaslamp Quarter, Old Town, and Balboa Park.",
     "highlights": [
       "two-hour guided outing in San Diego",
       "Maritime Museum and Spanish Renaissance-inspired"
@@ -1219,7 +1214,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/L7p7Z6bKTvyZT9fNRFe4"
     ],
     "productImage": "https://cdn.filestackcontent.com/Lge78zWoTrSauLFewM6U",
-    "wordCount": 68,
+    "wordCount": 101,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "3918 Mason St San Diego, CA 92110",
@@ -1263,10 +1258,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour guided outing with GoCar Tours San Diego in San Diego.",
-      "All GoCars Hold 2 People is included."
+      "This is a two-hour GoCar drive pairing downtown San Diego with Old Town. Each GoCar holds two people."
     ],
-    "schemaDescription": "This is a two-hour guided outing with GoCar Tours San Diego in San Diego.",
+    "schemaDescription": "Two-hour GoCar drive pairing downtown San Diego with Old Town.",
     "highlights": [
       "two-hour guided outing in San Diego",
       "All GoCars Hold 2 People"
@@ -1275,7 +1269,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/0TxiUQyKQA1wVPCy97PZ"
     ],
     "productImage": "https://cdn.filestackcontent.com/K0Psj26yRBOOb1Tk5ded",
-    "wordCount": 22,
+    "wordCount": 19,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "3918 Mason St San Diego, CA 92110",
@@ -1314,10 +1308,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. Guests go out for a sunset sail. The drive passes US Navy and Little Italy. Farther along, the van goes by San Diego's Old Town and Point Loma.",
-      "Liberty Station and Naval Training Center are on the same circuit. Also visible from the van are Shelter Island and Cabrillo National Monument. The later stretch includes Ocean Beach and Naval Attack Submarine. The van is how guests move, and most landmarks are seen through the windows."
+      "This GoCar drive lasts three hours. The written route starts in Little Italy, then enters Old Town, a mix of western and Mexican culture. Next is Point Loma and Liberty Station. Liberty Station was the Naval Training Center until that center closed in 1997, after which the site was reused for housing, recreation, businesses, hotels, and schools.",
+      "From Liberty Station the car goes to Shelter Island for a view toward the attack-submarine base. Cabrillo National Monument comes after that, with the Point Loma ecological preserve, the old lighthouse, and tide pools. The finish is Sunset Cliffs and then Ocean Beach, where the shops are mostly independent."
     ],
-    "schemaDescription": "A three-hour guided outing with GoCar Tours San Diego in San Diego. The outing passes Shelter Island and Cabrillo National Monument.",
+    "schemaDescription": "Three-hour GoCar drive to Sunset Cliffs and the beaches by way of Point Loma.",
     "highlights": [
       "three-hour guided outing in San Diego",
       "Shelter Island and Cabrillo National Monument"
@@ -1326,7 +1320,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/iKfB00LBRliZU6zpvVgP"
     ],
     "productImage": "https://cdn.filestackcontent.com/GBZ260hwQLi4r5LCZk9i",
-    "wordCount": 92,
+    "wordCount": 107,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "3918 Mason St San Diego, CA 92110",
@@ -1370,11 +1364,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. Guests drive a small GPS-guided car rather than riding a tour bus.",
-      "The route comes back through the Gaslamp quarter. The outing is a drive, and the sights are seen from the car. The drive passes Let GoCar and San Diego. Farther along, the car goes by Balboa Park and Pacific Ocean. Little Italy Maritime Museum and Gaslamp Quarter Petco Park are on the same circuit.",
-      "The car is how guests move, and most landmarks are seen through the windows."
+      "A few optional stops leave time to step out for photographs and a closer look. Guests drive a small GPS-guided car rather than riding a tour bus.",
+      "The route comes back through the Gaslamp Quarter. It also goes by Balboa Park, the Pacific, Little Italy, the Maritime Museum, and Petco Park."
     ],
-    "schemaDescription": "A two-hour guided outing with GoCar Tours San Diego in San Diego. The outing passes Petco Park and Balboa Park.",
+    "schemaDescription": "Two-hour early GoCar tour in San Diego.",
     "highlights": [
       "two-hour guided outing in San Diego",
       "Petco Park and Balboa Park"
@@ -1383,7 +1376,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YiyNTBYFTRWqx1rQpklr"
     ],
     "productImage": "https://cdn.filestackcontent.com/bnODfn2QQwOMMBrzS6NG",
-    "wordCount": 113,
+    "wordCount": 52,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "3918 Mason St San Diego, CA 92110",
@@ -1427,10 +1420,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests drive a small GPS-guided car rather than riding a tour bus. The same booking also includes time in a speedboat that guests drive on the bay. The car plays a recorded story while guests drive the route. The driving portion runs about 2 hours.",
-      "The outing is a drive, and the sights are seen from the car. The drive passes San Diego Bay. The car is how guests move, and most landmarks are seen through the windows."
+      "This combo pairs a two-hour GPS GoCar drive with a separate 1.5-hour speedboat outing on San Diego Bay. In the car, a recorded narration gives directions and stories while the guest drives. The speedboat portion is also guest-driven and follows a guide. That bay run passes nuclear submarines and aircraft carriers, and that what is on the water changes from one departure to the next.",
+      "The two parts do not have to fall on the same day. The GoCar time is booked online. The speedboat is reserved by calling 619-294-5852 with the order number. That phone call reserves the speedboat half of the day."
     ],
-    "schemaDescription": "A two-hour harbor outing with GoCar Tours San Diego on San Diego Harbor.",
+    "schemaDescription": "Combo of a two-hour GPS GoCar drive and a separate speedboat ride on San Diego Bay.",
     "highlights": [
       "two-hour harbor outing in San Diego"
     ],
@@ -1438,7 +1431,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/utCiTtEMRc69NvNYgu5x"
     ],
     "productImage": "https://cdn.filestackcontent.com/HNcouHPKQiO48PkhUNNK",
-    "wordCount": 79,
+    "wordCount": 110,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "3918 Mason St San Diego, CA 92110",
@@ -1482,10 +1475,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. The drive passes Gaslamp Quarter and Horton Plaza. Farther along, the van goes by Balboa Park and Point Loma Ecological. Ocean Beach and Maritime Museum are on the same circuit.",
-      "Also visible from the van are Old Town San Diego and Most Beautiful City. The later stretch includes Little Italy Maritime. The van is how guests move, and most landmarks are seen through the windows."
+      "This is an eight-hour GoCar drive called the all-day Everything Tour. GoCars hold a maximum of two guests. Named stops include the Gaslamp Quarter and Horton Plaza, then Balboa Park's rose garden. At the Point Loma ecological preserve guests can wade tide pools and see sea anemones, crabs, lobster, fish, and sometimes an octopus.",
+      "Ocean Beach and the Maritime Museum are also on the route, along with more time in Balboa Park and a walk through Old Town. Old Town was the earlier mission and Mexican settlement, set against the later city. The car supplies the GPS narration for the day."
     ],
-    "schemaDescription": "A 8-hour guided outing with GoCar Tours San Diego in San Diego. The outing passes Maritime Museum and Balboa Park.",
+    "schemaDescription": "Eight-hour GoCar drive through San Diego, including the Gaslamp Quarter, Balboa Park, and Point Loma.",
     "highlights": [
       "8-hour guided outing in San Diego",
       "Maritime Museum and Balboa Park",
@@ -1495,7 +1488,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ZeHu3BCUQ9WHHj01SUvi"
     ],
     "productImage": "https://cdn.filestackcontent.com/zyRdWpRxTHqbrDLTSSLc",
-    "wordCount": 82,
+    "wordCount": 103,
     "durationLabel": "8 Hours",
     "durationIso": "PT8H",
     "meetingLocation": "3918 Mason St San Diego, CA 92110",
@@ -1539,10 +1532,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. The ride passes Phat Scooters and All Scooters Hold. Cyclists also come to Old Town and Maritime Museum. Horton Plaza and Rose Garden are on the same loop.",
-      "Later the route reaches San Diego Union Tribune and Whaley House."
+      "IRide rents Phat Scooters for one, two, or three hours, as a GPS tour or a plain rental. Each scooter holds one person. The maximum weight is 350 pounds. This rental is the three-hour choice. It combines the downtown, Balboa Park, and Old Town routes so there is time to stop.",
+      "Riders can see the ships at the Maritime Museum, go through Horton Plaza, and use the Gaslamp Quarter. Balboa Park has museums and a rose garden of more than 800 varieties. Old Town includes the first building of the San Diego Union-Tribune and the Whaley House, called America's most haunted house. Other stops include Little Italy, the aircraft carrier Midway, Seaport Village, Petco Park, Bankers Hill, the zoo, Hillcrest, Mission Hills, Fort Stockton, and Presidio Park."
     ],
-    "schemaDescription": "A three-hour bicycle outing with GoCar Tours San Diego in San Diego. The outing passes Maritime Museum, Rose Garden, and Whaley House.",
+    "schemaDescription": "Three-hour scooter rental or GPS tour covering downtown San Diego, Balboa Park, and Old Town.",
     "highlights": [
       "three-hour bicycle outing in San Diego",
       "Maritime Museum and Rose Garden"
@@ -1551,7 +1544,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/gvgK7bI0Tfu1c0coH4Dm"
     ],
     "productImage": "https://cdn.filestackcontent.com/A17czXW9TiGxLRkZYgve",
-    "wordCount": 56,
+    "wordCount": 129,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "3918 Mason St., San Diego, CA 92110",
@@ -1605,10 +1598,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. Guests ride a rented bike for the day. Guests ride electric bikes for this booking. Time on the bike is about 24 hours. The ride passes Eco Motion and Old Town.",
-      "Cyclists also come to Maritime Museum and Horton Plaza. Rose Garden and San Diego Union Tribune are on the same loop. Later the route reaches Whaley House and America's Most Haunted House."
+      "This is the 24-hour electric-bike rental. Shorter rentals of one, two, three, four, and eight hours are also available. Brands named are Haibike, Surface 604, iZip, and Eco Motion, and the bikes are new. Each holds one rider.",
+      "The suggested loop joins downtown, Balboa Park, and Old Town. Stops include ships at the Maritime Museum, Horton Plaza, and the Gaslamp Quarter. In the park there are museums and a rose garden of more than 800 varieties. Old Town stops include the first home of the San Diego Union-Tribune and the Whaley House. The loop also includes Little Italy and the U.S.S. Midway, then Seaport Village and Petco Park. Bankers Hill, the zoo, Hillcrest, Mission Hills, Fort Stockton, and Presidio Park are on the loop as well."
     ],
-    "schemaDescription": "A 24-hour bicycle outing with GoCar Tours San Diego in San Diego. The outing passes Maritime Museum, Rose Garden, and Whaley House.",
+    "schemaDescription": "24-hour electric-bike rental in San Diego, with a suggested loop through downtown, Balboa Park, and Old Town.",
     "highlights": [
       "24-hour bicycle outing in San Diego",
       "Maritime Museum and Rose Garden"
@@ -1617,7 +1610,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YYONJBlSTJyZzhclrqrd"
     ],
     "productImage": "https://cdn.filestackcontent.com/ogtgWmvgSMWGGNvNkzrQ",
-    "wordCount": 80,
+    "wordCount": 131,
     "durationLabel": "24 Hours",
     "durationIso": "PT24H",
     "meetingLocation": "3918 Mason St. San Diego, CA 92110",
@@ -1671,11 +1664,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. Guests drive a small GPS-guided car rather than riding a tour bus. The car plays a recorded story while guests drive the route. The drive goes out to Coronado and then returns.",
-      "The drive crosses the bridge as part of the same route. The route comes back through the Gaslamp quarter. The outing is a drive, and the sights are seen from the car. Farther along, the car goes by California's Crown Jewel and Coronado Island. Seaport Village and Coronado Bay Bridge are on the same circuit.",
-      "Also visible from the car are San Diego Harbor and Coronado Bridge. The later stretch includes Downtown Coronado and Naval Air Station."
+      "Guests drive a small GPS-guided car rather than riding a tour bus. The car plays a recorded story while guests drive the route.",
+      "The drive crosses the bridge to Coronado, passes the harbor and Seaport Village, and comes back through the Gaslamp Quarter. Downtown Coronado and Naval Air Station are on the route."
     ],
-    "schemaDescription": "A guided outing with GoCar Tours San Diego in San Diego. The outing passes Coronado Bay Bridge, Coronado Bridge, and Coronado Island.",
+    "schemaDescription": "Two-hour GoCar tour of Coronado for two guests.",
     "highlights": [
       "Coronado Bay Bridge and Coronado Bridge"
     ],
@@ -1683,7 +1675,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/MISL2UzkQCyI8dS0wMyB"
     ],
     "productImage": "https://cdn.filestackcontent.com/Zb3kiZu2R4qtrODBnwXo",
-    "wordCount": 127,
+    "wordCount": 54,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "3918 Mason St",
@@ -1717,10 +1709,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. Guests drive a small GPS-guided car rather than riding a tour bus. The route comes back through the Gaslamp quarter. The outing is a drive, and the sights are seen from the car.",
-      "The drive passes E-Sport Vehicle and San Diego. Farther along, the car goes by Maritime Museum and Seaport Village. Gaslamp Quarter and Go Car are on the same circuit. The car is how guests move, and most landmarks are seen through the windows."
+      "Guests drive a small GPS-guided car rather than riding a tour bus. The route comes back through the Gaslamp quarter.",
+      "Farther along, the car goes by Maritime Museum and Seaport Village."
     ],
-    "schemaDescription": "A guided outing with GoCar Tours San Diego in San Diego. The outing passes E-Sport Vehicle and Maritime Museum.",
+    "schemaDescription": "Two-hour nighttime GoCar tour of the Gaslamp Quarter and Balboa Park.",
     "highlights": [
       "E-Sport Vehicle and Maritime Museum"
     ],
@@ -1728,7 +1720,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/6gg55KDQ0WZAOTqs3Fuy"
     ],
     "productImage": "https://cdn.filestackcontent.com/AzNpvy1bRxWrfFcESeyM",
-    "wordCount": 95,
+    "wordCount": 32,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "3918 Mason Street, San Diego, CA 92110",
@@ -1757,10 +1749,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests drive a small GPS-guided car rather than riding a tour bus. The drive goes out to Coronado and then returns. The drive crosses the bridge after dark, with the city lights in view. The route comes back through the Gaslamp quarter. The outing is a drive, and the sights are seen from the car.",
-      "The car is how guests move, and most landmarks are seen through the windows."
+      "This nighttime GoCar run starts downtown, crosses the Coronado Bridge onto Coronado Island, and returns to the Gaslamp Quarter. The cars are electric, and the GPS unit navigates. City lights are the point of the bridge crossing, and parts of Tijuana can be seen from it.",
+      "Each car holds at most two people. The renter must be 21 or older, and car seats are not accommodated. Every rider signs a participant agreement. A security deposit stays on a card until the car is returned. Collision-damage waiver insurance can be bought that day. Extra time is charged in 15-minute blocks. The price is per car."
     ],
-    "schemaDescription": "A guided outing with GoCar Tours San Diego in San Diego. The outing passes Coronado Island.",
+    "schemaDescription": "Two-hour nighttime GoCar run across the Coronado Bridge and back to the Gaslamp Quarter.",
     "highlights": [
       "Coronado Island"
     ],
@@ -1768,7 +1760,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/PEBmKKkLT3ioR6uCN2NR"
     ],
     "productImage": "https://cdn.filestackcontent.com/vEcXKTAJSbe2o8Ebl3Yh",
-    "wordCount": 70,
+    "wordCount": 106,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "3918 Mason Street, San Diego, CA 92110",
@@ -1797,11 +1789,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The theme is how Boston has been built, altered, and rebuilt. The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. Guests drive a small GPS-guided car rather than riding a tour bus. The car plays a recorded story while guests drive the route.",
-      "The route comes back through the Gaslamp quarter. The driving portion runs about 1 hour. The outing is a drive, and the sights are seen from the car. The drive passes Down Town San Diego and All GoCars Hold. Farther along, the car goes by Hour See San Diego and Seaport Village.",
-      "Horton Plaza and San Diego Padres are on the same circuit. Also visible from the car are Historic Gaslamp Quarter and Banker's Hill. The later stretch includes Balboa Park and Little Italy."
+      "Guests drive a small GPS-guided car rather than riding a tour bus. The car plays a recorded story while guests drive the route.",
+      "The drive lasts about an hour. It comes back through the Gaslamp Quarter and also passes downtown, Seaport Village, Horton Plaza, Banker's Hill, Balboa Park, and Little Italy."
     ],
-    "schemaDescription": "A one-hour guided outing with GoCar Tours San Diego in San Diego. The outing passes Banker's Hill, Balboa Park, and Maritime Museum.",
+    "schemaDescription": "One-hour nighttime GoCar tour of the Gaslamp Quarter and the Embarcadero.",
     "highlights": [
       "one-hour guided outing in San Diego",
       "Banker's Hill and Balboa Park"
@@ -1810,7 +1801,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/BxCZorf8RJ64P674gYPW"
     ],
     "productImage": "https://cdn.filestackcontent.com/u0bKJFu6SkCcDv4dapz7",
-    "wordCount": 136,
+    "wordCount": 52,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": "3918 Mason Street, San Diego, CA 92110",
@@ -1843,7 +1834,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "On the way back look at the boutique shopping districts of Hillcrest. If guests want to extend the tour guests have option of taking Oldtown loop at end of the tour. Guests may stop at all or some the tour's highlights. If guests are unsure of which tour to book, book according to the amount of time guests think guests'd like to spend.",
       "Guests can customize a tour especially for guests, with the sights guests want to include, when guests come into the shop. Additional rental time will be charged in increments."
     ],
-    "schemaDescription": "A three-hour guided outing with GoCar Tours San Diego in San Diego. The outing passes Maritime Museum, Horton Plaza Historic Gaslamp Quarter, and BUY TWO HOURS AND GET ONE.",
+    "schemaDescription": "Three-hour GoCar evening tour through Balboa Park, Petco Park, and Hillcrest.",
     "highlights": [
       "three-hour guided outing in San Diego",
       "Maritime Museum and Horton Plaza Historic Gaslamp Quarter"
@@ -1882,10 +1873,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests go out on the water to look for whales. Animals the trip watches for include humpback whales, fin whales, minke whales, and Bryde's whales. Orcas are among the rarer animals the trip also watches for. A restroom is available on board during the trip.",
-      "Capacity on the vessel is 6 passengers. Departure for these trips is offshore from San Diego. The operator runs these trips in the calmer months near the end of the year. The longer window on the water is there to look for whales. People stay aboard, and the animals are what the trip goes out to find.",
-      "Travel stays on the boat for the whole trip."
+      "Capacity on the vessel is 6 passengers. Departure for these trips is offshore from San Diego. These trips run in the calmer months near the end of the year. The longer window on the water is there to look for whales."
     ],
-    "schemaDescription": "A 5-hour guided outing with Gone Whale Watching in San Diego. The outing passes Great White Shark Park.",
+    "schemaDescription": "Five-hour whale watch for up to six passengers, offshore from San Diego.",
     "highlights": [
       "5-hour guided outing in San Diego",
       "Great White Shark Park"
@@ -1894,7 +1884,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/iTJaNlWKRbeHO6ZL4ecR"
     ],
     "productImage": "https://cdn.filestackcontent.com/pLnZThORRtqGbep1HrjB",
-    "wordCount": 111,
+    "wordCount": 86,
     "durationLabel": "5 Hours",
     "durationIso": "PT5H",
     "meetingLocation": "1617 Quivira Rd San Diego, CA 92109",
@@ -1927,10 +1917,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out on the water to look for whales. Dolphins are also part of what the outing goes out to see. Departure for these trips is offshore from San Diego. Time on the water is about 5 hours. People stay aboard, and the animals are what the trip goes out to find.",
-      "Travel stays on the boat for the whole trip. From the water, guests see San Diego."
+      "Guests go out on the water to look for whales. Dolphins are also part of what the trip goes out to see. Departure is offshore from San Diego."
     ],
-    "schemaDescription": "A 2.5-hour guided outing with Gone Whale Watching in San Diego.",
+    "schemaDescription": "Dolphin and whale watch of about 2.5 hours aboard the Hana Hou.",
     "highlights": [
       "2.5-hour guided outing in San Diego"
     ],
@@ -1938,7 +1927,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/z15wuBS7Rnq84qKDNoRW"
     ],
     "productImage": "https://cdn.filestackcontent.com/rgnIddz1TeipdzgtSNFh",
-    "wordCount": 69,
+    "wordCount": 28,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "1617 Quivira Rd San Diego, CA 92109",
@@ -1980,7 +1969,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "No scuba certificate is required, though guests should be comfortable snorkeling. The swim is aimed at beginners and at intermediate swimmers. The boat leaves from Mission Bay. Snacks are set out, and guests may bring a meal and their own snorkel gear. Which animals appear depends on the day, and nothing is promised.",
       "The boat is usually back around 3 in the afternoon, weather allowing. The expedition runs about 6 hours."
     ],
-    "schemaDescription": "A 6-hour guided outing with Net Zero Expeditions.",
+    "schemaDescription": "Six-hour swim with ocean sunfish from Mission Bay, watching for whales by season.",
     "highlights": [
       "6 hours guided outing"
     ],
@@ -2020,7 +2009,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Guests gather at a firepit for the evening. A bonfire attendant stays with the group for the evening. Seating at the fire is for up to 6 guests. The fire looks out over the bay as the evening comes on. Palms are part of the setting around the firepit.",
       "The visit stays at the fire, with the attendant handling the bonfire. The route also reaches San Diego and Paradise Point. Southern California are part of the same outing."
     ],
-    "schemaDescription": "A two-hour guided outing with Paradise Point Resort & Spa - San Diego.",
+    "schemaDescription": "Evening bonfire for up to six guests, with an attendant, looking out over the bay.",
     "highlights": [
       "2 hours guided outing",
       "Seating for up to 6"
@@ -2060,10 +2049,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The boat passes the USS Midway and goes under the Coronado Bridge. The cruise stays on San Diego Bay for the whole outing. From the water, guests see San Diego Harbor and Maritime Museum. Bases Get and Coronado Bridge come into view as the boat moves.",
-      "The cruise also passes Seaport Village Ring and Navy Ships. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "The boat passes the USS Midway and goes under the Coronado Bridge. The cruise stays on San Diego Bay for the whole outing. From the water, guests see San Diego Harbor and Maritime Museum."
     ],
-    "schemaDescription": "A two-hour harbor outing with Sail Liberty on San Diego Harbor. The sail passes Maritime Museum of San Diego, USS Midway Aircraft Carrier Museum, and San Diego Bay Wildlife.",
+    "schemaDescription": "Two-hour private sail on San Diego Bay aboard a classic yacht.",
     "highlights": [
       "two-hour harbor outing in San Diego",
       "Maritime Museum of San Diego and USS Midway Aircraft Carrier Museum",
@@ -2073,7 +2061,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/OZLPddBeTe6tgvKvv2oQ"
     ],
     "productImage": "https://cdn.filestackcontent.com/ovm2Yu3mRxmAII6WxeWL",
-    "wordCount": 109,
+    "wordCount": 34,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "955 Harbor Island Drive, San Diego, CA",
@@ -2102,9 +2090,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Some Wildlife and Still Make Happy Hour. Peak Sailing Conditions and San Diego come into view as the boat moves. The cruise also passes Its Best."
+      "This ticketed sail runs three hours on San Diego Bay in the middle of the day, when the wind is up."
     ],
-    "schemaDescription": "From the water, guests see Some Wildlife and Still Make Happy Hour.",
+    "schemaDescription": "Three-hour ticketed midday sail on San Diego Bay.",
     "highlights": [
       "three-hour harbor outing in San Diego"
     ],
@@ -2112,7 +2100,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/m0SLMpIwRSihZulFQ3Ml"
     ],
     "productImage": "https://cdn.filestackcontent.com/nKnRiBkT92H8S3wUGVZ8",
-    "wordCount": 31,
+    "wordCount": 21,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "2720 Shelter Island Drive San Diego, CA 92106",
@@ -2150,7 +2138,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests sail at sunset aboard a 40-foot sailboat. The water is usually calmer once the afternoon wind drops. Beer, soft drinks, and snacks are included on the sail. From the water, guests see San Diego."
+      "Guests sail at sunset aboard a 40-foot sailboat. The water is usually calmer once the afternoon wind drops. Beer, soft drinks, and snacks are included on the sail."
     ],
     "schemaDescription": "Guests sail at sunset aboard a 40-foot sailboat.",
     "highlights": [
@@ -2161,7 +2149,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/CepfrWgRRpWeVgVNkAk8"
     ],
     "productImage": "https://cdn.filestackcontent.com/RSHDkrbcS2rhQneIoDKA",
-    "wordCount": 36,
+    "wordCount": 29,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "2720 Shelter Island Drive San Diego, CA 92106",
@@ -2199,10 +2187,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Day Sail and Licensed Captains. San Diego and More Info come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
-      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This private sail with Sail San Diego runs three hours, for sealife near the boat and for views of historic San Diego. Departure times change with the season. Beer, soft drinks, and snacks are included, and guests are not limited to a single serving.",
+      "One to six guests sail with a captain. Seven to twelve guests can book bareboat, which does not include a captain. A Coast Guard rule sets that split. Captains on the roster charge $75 an hour plus a tip, paid to the captain after the trip. The crew emails a captain list once a bareboat reservation is in."
     ],
-    "schemaDescription": "A three-hour harbor outing with Sail San Diego.",
+    "schemaDescription": "Three-hour private midday sail on San Diego Bay, for sealife and harbor views.",
     "highlights": [
       "3 Hours harbor outing"
     ],
@@ -2210,7 +2198,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/7hXDfrrmR56DVs7OfHka"
     ],
     "productImage": "https://cdn.filestackcontent.com/9kba7YEkRt6pulJ0s9Cr",
-    "wordCount": 75,
+    "wordCount": 102,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "Shelter Island",
@@ -2276,7 +2264,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Private Sunset Sail is a three-hour harbor outing with Sail San Diego.",
       "The sail is a sunset harbor outing."
     ],
-    "schemaDescription": "Private Sunset Sail is a three-hour harbor outing with Sail San Diego.",
+    "schemaDescription": "Three-hour private sunset sail on San Diego Bay.",
     "highlights": [
       "3 Hours harbor outing"
     ],
@@ -2347,7 +2335,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests book the sailboat for a bachelorette party. The party stays on the water for the whole booking. That sail stays off San Diego. From the water, guests see Wildly Fun and San Diego."
+      "Guests book the sailboat for a bachelorette party. The party stays on the water for the whole booking. That sail stays off San Diego."
     ],
     "schemaDescription": "Guests book the sailboat for a bachelorette party.",
     "highlights": [
@@ -2357,7 +2345,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/wfGrUuzMT4KeT3ukVNo0"
     ],
     "productImage": "https://cdn.filestackcontent.com/l4UDcNPR5W9E9sLBZXFW",
-    "wordCount": 34,
+    "wordCount": 24,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "2720 Shelter Island Drive San Diego, CA 92106",
@@ -2420,10 +2408,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Private Sailing Lessons is a three-hour harbor outing with Sail San Diego.",
-      "The sail passes Road Sail Manuverablility Sail Trim."
+      "This private sailing lesson on San Diego Bay runs three hours and covers sail trim and maneuvering."
     ],
-    "schemaDescription": "Private Sailing Lessons is a three-hour harbor outing with Sail San Diego.",
+    "schemaDescription": "Three-hour private sailing lesson on San Diego Bay.",
     "highlights": [
       "3 Hours harbor outing",
       "Road Sail Manuverablility Sail Trim"
@@ -2432,7 +2419,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/HNEw0RZQjqmbiDOOAN5g"
     ],
     "productImage": "https://cdn.filestackcontent.com/CtkMYbAuSfazT4VuhwYi",
-    "wordCount": 21,
+    "wordCount": 17,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": null,
@@ -2465,10 +2452,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out on a private sunset sail. Beer, soft drinks, and snacks are included on the sail. From the water, guests see Day Sail and Licensed Captains. More Info come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling.",
-      "The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Romance on the Bay is a private sail of three hours, booked as a daytime sail or as a sunset sail. Clock times move with the season. The party can be two people or a larger group of friends and family. Beer, seltzer, soft drinks, and snacks are included.",
+      "One to six people pay the listed $595 and sail with a captain. Seven to twelve people can book bareboat, listed from $595 to $1,000, without a captain. Roster captains cost $50 an hour, or $75 on a bank holiday, plus a tip, paid after the trip. A captain list goes out after that kind of booking."
     ],
-    "schemaDescription": "A three-hour guided outing with Sail San Diego.",
+    "schemaDescription": "Three-hour private sail on San Diego Bay, booked as a daytime sail or a sunset sail.",
     "highlights": [
       "3 Hours guided outing"
     ],
@@ -2476,7 +2463,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/V0JfcOKEQruX2EwqKYdY"
     ],
     "productImage": "https://cdn.filestackcontent.com/cGVW1ub8RJWsCgMc5tgV",
-    "wordCount": 90,
+    "wordCount": 107,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "Shelter Island",
@@ -2543,7 +2530,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "That combo offers the mix of sightseeing, fun, and adventure - ultimate way to spend day in San Diego. Self-guided tour through San Diego's key attractions like Balboa Park, Little Italy, and Gaslamp Quarter. The scooter provides live commentary, narrating jokes and stories about San Diego's history and culture.",
       "Guests visit locations that typical tour buses can't reach."
     ],
-    "schemaDescription": "A four-hour bicycle outing with San Diego Speed Boat Adventures in San Diego. The outing passes Transition to the Speedboat Adventure and World's First Storytelling Scooter Hop.",
+    "schemaDescription": "Combo of a GPS scooter tour and a speedboat ride on San Diego Bay, about four hours.",
     "highlights": [
       "four-hour bicycle outing in San Diego",
       "Transition to the Speedboat Adventure and World's First Storytelling Scooter Hop"
@@ -2590,7 +2577,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Don't forget to admire striking San Diego downtown skyline and spot wildlife that thrives in San Diego Harbor. After that, book the San Diego speed boat tour today and set out on a one-of-a-kind adventure. Meet at the designated dock for check-in.",
       "Receive a safety briefing on how to operate the speed boat and essential boating rules. Get fitted with life jackets and other necessary safety gear. Starting Point : San Diego Bay (Exact location provided during booking). Complete the thrilling loop around San Diego Bay and return to the starting dock."
     ],
-    "schemaDescription": "A two-hour harbor outing with San Diego Speed Boat Adventures on San Diego Harbor. The sail passes Return & Docking, USS Midway Aircraft Museum, and Coronado Bridge.",
+    "schemaDescription": "Two-hour speedboat ride on San Diego Bay.",
     "highlights": [
       "two-hour harbor outing in San Diego",
       "Return & Docking and USS Midway Aircraft Museum",
@@ -2644,16 +2631,16 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A driver takes guests to family-run vineyards in San Diego County. San Diego County is the setting, and the vineyard visits are the reason for the booking. The guide explains winemaking and how the region's vineyards got started. A meal at one of the wineries is part of the same outing.",
-      "The commentary covers how the grapes are grown and how the wine is made. Guests stay in the vehicle between vineyards. The drive passes San Diego County and Golden State. Farther along, the van goes by San Diego Beer. The van is how guests move, and most landmarks are seen through the windows."
+      "A driver takes guests to family-run vineyards in San Diego County. The guide explains winemaking and how the region's vineyards got started. A meal at one of the wineries is part of the outing.",
+      "The commentary covers how the grapes are grown and how the wine is made. Guests stay in the vehicle between vineyards."
     ],
-    "schemaDescription": "A 4.5-hour driving tour with San Diego Beer, Wine & Spirits Tours.",
+    "schemaDescription": "Chauffeured vineyard tour of about 4.5 hours in San Diego County, with a meal at one winery.",
     "highlights": [
       "4.5 hours driving tour"
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/begfWTkLQM2aPhLK06B1",
-    "wordCount": 105,
+    "wordCount": 56,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": "Choose 1. Downtown San Diego 2. Old Town 3. North County 4. Groups of 5+ and private tours may request pick up your hotel/home",
@@ -2686,10 +2673,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out on a private sunset sail. The water is usually calmer once the afternoon wind drops. Beer, soft drinks, and snacks are included on the sail. From the water, guests see Seaport Village and Downtown Coastline. Rady Shell and Life Jackets come into view as the boat moves.",
-      "The cruise also passes Warm Windproof Blankets Drinks and Coconut Water. Looking back toward shore, the group can see Flavored Sparkling Water and Water Snacks. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint."
+      "Guests go out on a private sunset sail. The water is usually calmer once the afternoon wind drops. Beer, soft drinks, and snacks are included on the sail. From the water, guests see Seaport Village and Downtown Coastline. Rady Shell comes into view from the boat."
     ],
-    "schemaDescription": "A 2.5-hour harbor outing with Sea Monkey Adventures on San Diego Harbor. The sail passes Sail.",
+    "schemaDescription": "Private sunset sail of about 2.5 hours on San Diego Bay.",
     "highlights": [
       "2.5-hour harbor outing in San Diego",
       "Sail",
@@ -2699,7 +2685,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/jSUNM7KdTPaWYDURRvVM"
     ],
     "productImage": "https://cdn.filestackcontent.com/V5k7SLlgR4uDusTRu5kP",
-    "wordCount": 100,
+    "wordCount": 46,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "955 Harbor Island Dr. San Diego, CA 92101",
@@ -2738,10 +2724,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see San Diego and US Midway. Coronado Bridge and Life Jackets come into view as the boat moves. The cruise also passes Warm Windproof Blankets Drinks and Coconut Water. Looking back toward shore, the group can see Flavored Sparkling Water and Water Snacks.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "From the water, guests see San Diego and US Midway. The boat passes the Coronado Bridge."
     ],
-    "schemaDescription": "A 2.5-hour harbor outing with Sea Monkey Adventures on San Diego Harbor. The sail passes Coronado Bridge and Sail.",
+    "schemaDescription": "Private day sail of about 2.5 hours on San Diego Bay.",
     "highlights": [
       "2.5-hour harbor outing in San Diego",
       "Coronado Bridge and Sail",
@@ -2751,7 +2736,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/eM72b8a4RQaEnEmuvshg"
     ],
     "productImage": "https://cdn.filestackcontent.com/iZTsnKOJRSiZsC9h9C9F",
-    "wordCount": 100,
+    "wordCount": 16,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "955 Harbor Island Dr. San Diego, CA 92101",
@@ -2795,11 +2780,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board. After that land lesson, the group goes into the ocean to catch waves. The booking is private, so the instructor works with that party alone. People are in the water on surfboards for the lesson.",
-      "The instructor stays in the surf with the group for the length of the lesson. From the water, guests see San Diego and Point Loma. Life Jackets and Warm Windproof Blankets Drinks come into view as the boat moves. The cruise also passes Coconut Water and Flavored Sparkling Water.",
-      "Looking back toward shore, the group can see Water Snacks."
+      "This is a private morning sail of about 2.5 hours in San Diego. Point Loma is among the views from the boat."
     ],
-    "schemaDescription": "A 2.5-hour harbor outing with Sea Monkey Adventures on San Diego Harbor. The sail passes Sail.",
+    "schemaDescription": "Private morning sail of about 2.5 hours in San Diego.",
     "highlights": [
       "2.5-hour harbor outing in San Diego",
       "Sail",
@@ -2809,7 +2792,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/fbpeoccToG3c8C2RBprw"
     ],
     "productImage": "https://cdn.filestackcontent.com/gycdmyrRRv6oWRdqIozF",
-    "wordCount": 113,
+    "wordCount": 23,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "955 Harbor Island Dr. San Diego, CA 92101",
@@ -2853,10 +2836,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Time on the water is about 4 hours. From the water, guests see Seaport Village and Downtown Coastline. Rady Shell and Coronado Bridge come into view as the boat moves. The cruise also passes Life Jackets and Warm Windproof Blankets Drinks. Looking back toward shore, the group can see Coconut Water and Flavored Sparkling Water.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "The sail runs about four hours and passes Seaport Village, the downtown shoreline, Rady Shell, and the Coronado Bridge."
     ],
-    "schemaDescription": "A four-hour harbor outing with Sea Monkey Adventures on San Diego Harbor. The sail passes Sail and Coronado Bridge.",
+    "schemaDescription": "Four-hour sail on San Diego Bay past the downtown shoreline and the Coronado Bridge.",
     "highlights": [
       "four-hour harbor outing in San Diego",
       "Sail and Coronado Bridge",
@@ -2866,7 +2848,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/rRfQaYfBQHWuDm4qT81N"
     ],
     "productImage": "https://cdn.filestackcontent.com/sTGrwnrxTXY0aTxVC6KQ",
-    "wordCount": 108,
+    "wordCount": 19,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "955 Harbor Island Dr. San Diego, CA 92101",
@@ -2910,10 +2892,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The commentary takes up Spanish Revival and San Diego's Balboa Park. That same account stays with Untold Tales. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
+      "The walk covers Spanish Revival buildings in Balboa Park. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
       "The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
     ],
-    "schemaDescription": "A two-hour walking tour with So Diego Tours in San Diego. The walk passes Balboa Park.",
+    "schemaDescription": "Two-hour walking tour of the art and Spanish Revival buildings in Balboa Park.",
     "highlights": [
       "two-hour walking tour in San Diego",
       "Balboa Park",
@@ -2923,7 +2905,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ptp23k5BQhuu9DwLRJ69"
     ],
     "productImage": "https://cdn.filestackcontent.com/D1uahufARReIowh3grWX",
-    "wordCount": 90,
+    "wordCount": 81,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "2135 Pan American Plaza San Diego, CA 92101",
@@ -2956,9 +2938,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride a rented bike for the day. Guests ride electric bikes for this booking. The ride passes Helmet Bike Lock."
+      "This is a day rental of an electric bike in San Diego. The bikes use 48-volt batteries with a stated range of more than 40 miles, and they have hydraulic disc brakes."
     ],
-    "schemaDescription": "Guests ride a rented bike for the day.",
+    "schemaDescription": "Day rental of an electric or road bike in San Diego.",
     "highlights": [
       "Helmet"
     ],
@@ -2966,7 +2948,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/9zblb6ABQxGVrx1h7cZ8"
     ],
     "productImage": "https://cdn.filestackcontent.com/7z55ii6eSuy4mGFEVHzs",
-    "wordCount": 21,
+    "wordCount": 33,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -3013,7 +2995,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Music plays on board, and some departures add a live set. A bar on the boat sells drinks while the cruise is underway. There is a dance floor for guests who want to get up. Bean bags on the bow are there for sitting out in the air.",
       "Bathrooms are on board for the length of the cruise. Stairs lead from the dock onto the boat. A captain and crew stay with the boat for the trip. Time on the water is about 2.5 hours."
     ],
-    "schemaDescription": "Guests sail on a catamaran for this cruise. The boat passes the USS Midway and goes under the Coronado Bridge. The cruise stays on San Diego Bay for the whole outing. The vessel is certified to carry as many as 100 passengers. A public departure is set up for as many as 80 guests.",
+    "schemaDescription": "Harbor cruise of about 2.5 hours on San Diego Bay, passing the USS Midway and the Coronado Bridge.",
     "highlights": [
       "2.5-hour harbor outing in San Diego",
       "Spacious open seating floor plan"
@@ -3060,9 +3042,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests sail on a catamaran for this cruise. The cruise stays on San Diego Bay for the whole outing. A bar on the boat sells drinks while the cruise is underway."
+      "Triton Charters sells a sail of two and a half hours on San Diego Bay during the Parade of Lights. The event is the 56th annual parade and a holiday tradition run by the local boating community. The dates printed are December 13 and December 20. Decorated boats follow the theme Liberty Lights the Bay. A second line on that theme reads Cheers to 250 Years.",
+      "Guests watch from the catamaran. The boat is the largest catamaran in San Diego. Hot cocktails, made for the event, are sold at the bar on board. The whole booking stays on the bay."
     ],
-    "schemaDescription": "Guests sail on a catamaran for this cruise.",
+    "schemaDescription": "Sail of about 2.5 hours on San Diego Bay during the Parade of Lights, watching decorated boats from the catamaran.",
     "highlights": [
       "2.5-hour harbor outing in San Diego",
       "Lights The San Diego Bay Parade"
@@ -3071,7 +3054,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/k36n4XZASGCiaHbZYnkG"
     ],
     "productImage": "https://cdn.filestackcontent.com/krKVqOYGQWWfj11vOZo8",
-    "wordCount": 31,
+    "wordCount": 100,
     "durationLabel": "2.5 hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "2700 Shelter Island Dr. San Diego, CA 92106",
@@ -3104,9 +3087,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This is a private Aquata charter listed for two to eight hours, any day from 8 a.m. to 10 p.m. The boat has a salon-style bedroom, a bathroom, and lounge areas forward and aft. The cabin has an electronic sunroof, air conditioning, and panoramic glass windows.",
+      "A Coast Guard-certified captain assists and is paid $50 an hour directly before leaving the dock. Speeds reach up to 55 mph. On board are one two-person cabin, a private bathroom with a shower, sun loungers on the bow and the stern, and a Bluetooth sound system. A fully enclosed waterproof cabin has a table and cushioned seating. The charter can stop to anchor and swim. Water-toy add-ons are arranged through the event coordinator."
     ],
-    "schemaDescription": "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+    "schemaDescription": "Private Aquata charter for two to eight hours, with a cabin and a Coast Guard-certified captain.",
     "highlights": [
       "2-8 hours harbor outing",
       "1 two person cabin"
@@ -3115,7 +3099,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/vnFZkUQmRT6lkZUrEd7f"
     ],
     "productImage": "https://cdn.filestackcontent.com/K5rOUudISYq28nAS23yV",
-    "wordCount": 63,
+    "wordCount": 127,
     "durationLabel": "2-8 hours",
     "durationIso": null,
     "meetingLocation": "2700 Shelter Island Drive, San Diego 92106",
@@ -3168,9 +3152,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This is a private Aquata charter listed for two hours, any day from 8 a.m. to 10 p.m. The boat has a salon-style bedroom, a bathroom, and lounge areas forward and aft. The cabin has an electronic sunroof, air conditioning, and panoramic glass windows.",
+      "A Coast Guard-certified captain assists and is paid $50 an hour directly before leaving the dock. Speeds reach up to 55 mph. On board are one two-person cabin, a private bathroom with a shower, sun loungers on the bow and the stern, and a Bluetooth sound system. A fully enclosed waterproof cabin has a table and cushioned seating. The charter can stop to anchor and swim. Water-toy add-ons are arranged through the event coordinator."
     ],
-    "schemaDescription": "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+    "schemaDescription": "Private two-hour Aquata charter with a cabin and a Coast Guard-certified captain.",
     "highlights": [
       "2 hours harbor outing",
       "1 two person cabin"
@@ -3179,7 +3164,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/DV1bZyjeSFrUjOIsJC8U"
     ],
     "productImage": "https://cdn.filestackcontent.com/aaOvrrlMTluXiMdOJNwM",
-    "wordCount": 63,
+    "wordCount": 125,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "2700 Shelter Island Drive, San Diego 92106",
@@ -3212,9 +3197,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This is a private Aquata charter listed for three hours, any day from 8 a.m. to 10 p.m. The boat has a salon-style bedroom, a bathroom, and lounge areas forward and aft. The cabin has an electronic sunroof, air conditioning, and panoramic glass windows.",
+      "A Coast Guard-certified captain assists and is paid $50 an hour directly before leaving the dock. Speeds reach up to 55 mph. On board are one two-person cabin, a private bathroom with a shower, sun loungers on the bow and the stern, and a Bluetooth sound system. A fully enclosed waterproof cabin has a table and cushioned seating. The charter can stop to anchor and swim. Water-toy add-ons are arranged through the event coordinator."
     ],
-    "schemaDescription": "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+    "schemaDescription": "Private three-hour Aquata charter with a cabin and a Coast Guard-certified captain.",
     "highlights": [
       "3 hours harbor outing",
       "1 two person cabin"
@@ -3223,7 +3209,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/HBgxb3pnRTGByMV39Rir"
     ],
     "productImage": "https://cdn.filestackcontent.com/5HaLOjT2SG6q6YrhRFkQ",
-    "wordCount": 63,
+    "wordCount": 125,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "2700 Shelter Island Drive, San Diego 92106",
@@ -3256,9 +3242,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This is a private Aquata charter listed for four hours, any day from 8 a.m. to 10 p.m. The boat has a salon-style bedroom, a bathroom, and lounge areas forward and aft. The cabin has an electronic sunroof, air conditioning, and panoramic glass windows.",
+      "A Coast Guard-certified captain assists and is paid $50 an hour directly before leaving the dock. Speeds reach up to 55 mph. On board are one two-person cabin, a private bathroom with a shower, sun loungers on the bow and the stern, and a Bluetooth sound system. A fully enclosed waterproof cabin has a table and cushioned seating. The charter can stop to anchor and swim. Water-toy add-ons are arranged through the event coordinator."
     ],
-    "schemaDescription": "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+    "schemaDescription": "Private four-hour Aquata charter with a cabin and a Coast Guard-certified captain.",
     "highlights": [
       "4 hours harbor outing",
       "1 two person cabin"
@@ -3267,7 +3254,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/tRAV00GYS7SsmFXvcBSx"
     ],
     "productImage": "https://cdn.filestackcontent.com/j3OgPQ5yqC1GRoWpPCgA",
-    "wordCount": 63,
+    "wordCount": 125,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "2700 Shelter Island Drive, San Diego 92106",
@@ -3300,9 +3287,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This is a private Aquata charter listed for six hours, any day from 8 a.m. to 10 p.m. The boat has a salon-style bedroom, a bathroom, and lounge areas forward and aft. The cabin has an electronic sunroof, air conditioning, and panoramic glass windows.",
+      "A Coast Guard-certified captain assists and is paid $50 an hour directly before leaving the dock. Speeds reach up to 55 mph. On board are one two-person cabin, a private bathroom with a shower, sun loungers on the bow and the stern, and a Bluetooth sound system. A fully enclosed waterproof cabin has a table and cushioned seating. The charter can stop to anchor and swim. Water-toy add-ons are arranged through the event coordinator."
     ],
-    "schemaDescription": "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+    "schemaDescription": "Private six-hour Aquata charter with a cabin and a Coast Guard-certified captain.",
     "highlights": [
       "6 hours harbor outing",
       "1 two person cabin"
@@ -3311,7 +3299,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/9HIzSBbHSIyLvLXZ358G"
     ],
     "productImage": "https://cdn.filestackcontent.com/oUtLjE61QJGn33cwmR9E",
-    "wordCount": 63,
+    "wordCount": 125,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "2700 Shelter Island Drive, San Diego 92106",
@@ -3344,9 +3332,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This is a private Aquata charter listed for eight hours, any day from 8 a.m. to 10 p.m. The boat has a salon-style bedroom, a bathroom, and lounge areas forward and aft. The cabin has an electronic sunroof, air conditioning, and panoramic glass windows.",
+      "A Coast Guard-certified captain assists and is paid $50 an hour directly before leaving the dock. Speeds reach up to 55 mph. On board are one two-person cabin, a private bathroom with a shower, sun loungers on the bow and the stern, and a Bluetooth sound system. A fully enclosed waterproof cabin has a table and cushioned seating. The charter can stop to anchor and swim. Water-toy add-ons are arranged through the event coordinator."
     ],
-    "schemaDescription": "From the water, guests see Best Cruiser and San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+    "schemaDescription": "Private eight-hour Aquata charter with a cabin and a Coast Guard-certified captain.",
     "highlights": [
       "8 hours harbor outing",
       "1 two person cabin"
@@ -3355,7 +3344,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/qMuhfr4jRgmJUp8VNkAs"
     ],
     "productImage": "https://cdn.filestackcontent.com/BD9kO85sRlmabfxEQ6np",
-    "wordCount": 63,
+    "wordCount": 125,
     "durationLabel": "8 hours",
     "durationIso": "PT8H",
     "meetingLocation": "2700 Shelter Island Drive, San Diego 92106",
@@ -3388,10 +3377,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. People stay with the bikes for the riding portion of the booking. The ride passes Balboa Park and Bea Evenson Fountain. Cyclists also come to San Diego Zoo and Japanese Friendship Garden. San Diego Air and Space Museum are on the same loop.",
-      "Later the route reaches Gaslamp Quarter and Embarcadero Marina Park."
+      "Unlimited Biking rents bikes from its San Diego shop. The fleet includes electric bikes, children's bikes, tandems, tag-alongs, and toddler trailers. The ride described in the park passes the Bea Evenson Fountain, the zoo, the Japanese Friendship Garden, and the San Diego Air and Space Museum.",
+      "Riders then leave Balboa Park through the Gaslamp Quarter and continue to the Embarcadero. Points named on that waterfront stretch are the U.S.S. Midway, Embarcadero Marina Park, and Billionaire Row. The Maritime Museum is on the same list, as are the Bob Hope Memorial and Tuna Pier, plus Seaport Village. This page is a rental, and no guide is included."
     ],
-    "schemaDescription": "A bicycle outing with Unlimited Biking in San Diego. The outing passes Japanese Friendship Garden, Space Museum, and Balboa Park.",
+    "schemaDescription": "San Diego bike rental that includes electric bikes, tandems, and trailers for children.",
     "highlights": [
       "Japanese Friendship Garden and Space Museum"
     ],
@@ -3399,7 +3388,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/Fb2MUVVJQKuYoyCrohrp"
     ],
     "productImage": "https://cdn.filestackcontent.com/9tF440VSN64oDAez3xJn",
-    "wordCount": 62,
+    "wordCount": 109,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "330 K Street San Diego, CA 92101",
@@ -3472,15 +3461,16 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride a rented bike for the day. Reserving ahead is how the shop holds a bike. The ride passes Toe Cage and Basket Pedals. Cyclists also come to Road Bikes."
+      "Unlimited Biking offers this road-bike rental from two hours up to a month. From April 1 through October 31 the shop is open 9 a.m. to 7 p.m. From November 1 through March 31 the hours are 9 a.m. to 5 p.m. In-house mechanics maintain the bikes, and staff help choose a size.",
+      "Included at no extra charge are a helmet, a lock, and a map that is color-coded. Road bikes use toe-cage or basket pedals, which work with ordinary shoes. If asked, staff will suggest trails, scenic roads, and places to eat. A guide is not part of the rental."
     ],
-    "schemaDescription": "Guests ride a rented bike for the day.",
+    "schemaDescription": "Road-bike rental in San Diego from two hours up to a month, with a helmet, lock, and map.",
     "highlights": [
       "two-hour bicycle outing in San Diego"
     ],
     "galleryImages": [],
     "productImage": "https://www.filepicker.io/api/file/TNQvnsGLTL2aAnPDeuRk",
-    "wordCount": 31,
+    "wordCount": 109,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "330 K Street San Diego, CA 92101",
@@ -3566,7 +3556,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Guests come for a guided electric bike tour around the city of San Diego. Beginning from the store location, first stop on this leisurely tour is Gaslamp Quarter, established in 1860s and redeveloped in the 1980s. After that, from there, guests ride the pedal assist eBikes toward the San Diego Bay, where guests hear history of USS Midway, Billionaire Row, and Bob Hope Memorial.",
       "The licensed tour guides will then lead guests through Balboa Park, measuring under five kilometers or 1,200 acres. After that, in Balboa Park, guests ride past and hear about San Diego Zoo, Spanish Village Art Center, and the Casa de Balboa. Guests must be 16+ to ride electric bike."
     ],
-    "schemaDescription": "A bicycle outing with Unlimited Biking in San Diego. The outing passes Bob Hope Memorial and Balboa Park.",
+    "schemaDescription": "Guided electric-bike tour through the Gaslamp Quarter, the bayfront, and Balboa Park.",
     "highlights": [
       "Bob Hope Memorial and Balboa Park"
     ],
@@ -3607,9 +3597,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride electric bikes on a private tour. Riders need to be 16 or older, and anyone younger than 18 comes with a guardian. The bikes are sized for riders from 100 to 260 pounds. Time on the bike is about 2.5 hours."
+      "Riders need to be 16 or older, and anyone younger than 18 comes with a guardian. The bikes are sized for riders from 100 to 260 pounds. Time on the bike is about 2.5 hours."
     ],
-    "schemaDescription": "A 2.5-hour bicycle outing with Unlimited Biking in San Diego.",
+    "schemaDescription": "Private electric-bike tour of San Diego, about 2.5 hours.",
     "highlights": [
       "2.5-hour bicycle outing in San Diego"
     ],
@@ -3617,7 +3607,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/AlaKuWD0Q3eV3wFdblow"
     ],
     "productImage": "https://cdn.filestackcontent.com/zktelNgnT2nmkxZyDTkw",
-    "wordCount": 44,
+    "wordCount": 36,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "330 K Street San Diego, CA 92101",
@@ -3653,7 +3643,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Guests come for a guided electric bike tour with Spanish-speaking guide around the city of San Diego. Beginning from the store location, first stop on this leisurely tour is Gaslamp Quarter, established in 1860s and redeveloped in the 1980s. After that, from there, guests ride the pedal assist eBikes toward the San Diego Bay, where guests hear history of USS Midway, Billionaire Row, and Bob Hope Memorial.",
       "The licensed tour guides will then lead guests through Balboa Park, measuring under five kilometers or 1,200 acres. After that, in Balboa Park, guests ride past and hear about San Diego Zoo, Spanish Village Art Center, and the Casa de Balboa. Guests must be 16+ to ride electric bike."
     ],
-    "schemaDescription": "A guided outing with Unlimited Biking in San Diego. The outing passes Bob Hope Memorial and Balboa Park.",
+    "schemaDescription": "Guided electric-bike tour in Spanish through the Gaslamp Quarter, the bayfront, and Balboa Park.",
     "highlights": [
       "Bob Hope Memorial and Balboa Park"
     ],
@@ -3697,7 +3687,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Guests meet Ultimate Whale Watching Adventure alongside Wild Pacific Whale Watch in San Diego. Cruise sparkling waters of Pacific in comfort and style as guests set course from the harbor and toward the heart of whale country. Whether it's awe-inspiring gray whales on their migration, the blue whales in summer, or even pod of orcas making rare appearance, every trip holds promise of magic.",
       "With panoramic viewing decks and crew, Wild Pacific Whale Watch offers most exciting and whale watching experience in San Diego. Don't notice the ocean-experience it with Wild Pacific. After that, book the adventure today and let wild come to life before the eyes."
     ],
-    "schemaDescription": "Guests meet Ultimate Whale Watching Adventure alongside Wild Pacific Whale Watch in San Diego. Cruise sparkling waters of Pacific in comfort and style as guests set course from the harbor and toward the heart of whale country. Whether it's awe-inspiring gray whales on their migration, the blue whales in summer, or even pod of orcas making rare appearance, every trip holds promise of magic.",
+    "schemaDescription": "Whale watch of about three to three and a half hours from San Diego Harbor.",
     "highlights": [
       "3- to 3.5-hour guided outing in San Diego"
     ],
@@ -3758,10 +3748,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out on the water to look for whales. Length of the boat is about 138 feet. Departure for these trips is offshore from San Diego. People stay aboard, and the animals are what the trip goes out to find. Travel stays on the boat for the whole trip.",
-      "From the water, guests see San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Guests go out on the water to look for whales. Length of the boat is about 138 feet. Departure for these trips is offshore from San Diego."
     ],
-    "schemaDescription": "Guests go out on the water to look for whales. Length of the boat is about 138 feet. Departure for these trips is offshore from San Diego. People stay aboard, and the animals are what the trip goes out to find. Travel stays on the boat for the whole trip.",
+    "schemaDescription": "Whale-watching trip of about three and a half to four hours offshore from San Diego.",
     "highlights": [
       "3.5- to 4-hour guided outing in San Diego",
       "Food & Beverages"
@@ -3770,7 +3759,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YAKRrI4SLmnbyO4XNwXT"
     ],
     "productImage": "https://cdn.filestackcontent.com/5b6dTfH7Tbi1IfqM5mTr",
-    "wordCount": 110,
+    "wordCount": 27,
     "durationLabel": "3.5 - 4 hours",
     "durationIso": null,
     "meetingLocation": "2050 Shelter Island Drive, San Diego CA 92106",

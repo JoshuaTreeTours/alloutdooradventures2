@@ -85,11 +85,50 @@ export const fareHarborProductImage = (
   return image || null;
 };
 
+const moneyAmount = (value: string) => {
+  const match = value.replace(/,/g, "").match(/(\d+(?:\.\d+)?)/);
+  return match ? Number(match[1]) : null;
+};
+
+export type FareHarborPartialPayment = {
+  tourPriceLabel: string;
+  depositLabel: string;
+};
+
+/** A FareHarbor note that states a tour price above the amount charged online. */
+export const fareHarborPartialPayment = (
+  proof: {
+    priceRows?: Array<{ note?: string | null; amountLabel?: string | null }>;
+  } | null
+  | undefined
+): FareHarborPartialPayment | null => {
+  for (const row of proof?.priceRows ?? []) {
+    const note = row.note ?? "";
+    if (!/partial[- ]payment/i.test(note)) continue;
+    const tourMatch = note.match(/\$(\d[\d,]*(?:\.\d{2})?)/);
+    const depositLabel = row.amountLabel?.trim() ?? "";
+    if (!tourMatch || !depositLabel) continue;
+    const tourAmount = Number(tourMatch[1].replace(/,/g, ""));
+    const depositAmount = moneyAmount(depositLabel);
+    if (!depositAmount || !(tourAmount > depositAmount)) continue;
+    return {
+      tourPriceLabel: `$${tourMatch[1]}`,
+      depositLabel,
+    };
+  }
+  return null;
+};
+
 export const fareHarborPriceLabel = (
-  proof: Pick<FareHarborProofProduct, "visiblePriceLabel">
+  proof: Pick<FareHarborProofProduct, "visiblePriceLabel"> & {
+    priceRows?: FareHarborProofProduct["priceRows"];
+  }
 ) => {
   const label = proof.visiblePriceLabel?.trim() ?? "";
-  return label || null;
+  if (!label) return null;
+  const partial = fareHarborPartialPayment(proof);
+  if (!partial || /deposit/i.test(label)) return label;
+  return `${label} online deposit (tour price ${partial.tourPriceLabel})`;
 };
 
 export const fareHarborMobileStickyBooking = (

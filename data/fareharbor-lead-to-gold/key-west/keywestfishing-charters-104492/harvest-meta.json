@@ -1,0 +1,47 @@
+{
+  "company": "keywestfishing-charters",
+  "itemId": "104492",
+  "fetchedAt": "2026-10-03T18:09:57.779995+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/keywestfishing-charters/104492/content/",
+      "status": 200,
+      "bytes": 15349,
+      "sha256": "1db4e7a52d565c5449a4728e24258373f337eee6c916c1a4395de8c404b304e0"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/keywestfishing-charters/104492/structured-description/",
+      "status": 200,
+      "bytes": 8971,
+      "sha256": "45d3a05c02462c99c9966eb7010dc3f8e5bf63bb7b373c0f30271977528f50d9"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/keywestfishing-charters/items/104492/",
+      "status": 200,
+      "bytes": 21438,
+      "sha256": "83922ce8896508c46917f3107b0896adfa9e766484658db5e667f98911298b5f"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/keywestfishing-charters/price-preview/per-item/v2/?asn=fhdn&item_pks=104492&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1358,
+      "sha256": "934702d1aca69f49dd9bfc5054110a208353630f3bc6aeb1d7cb64ca4df9ae99"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/keywestfishing-charters/items/104492/ratings/",
+      "status": 200,
+      "bytes": 563,
+      "sha256": "101dc09cd4bab83180ff2180b93bef86822a02aa4f5723ab7b9dfcd820fc9b72"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "104492",
+    "provider": "keywestfishing-charters",
+    "bookingUrl": "https://fareharbor.com/embeds/book/keywestfishing-charters/items/104492/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

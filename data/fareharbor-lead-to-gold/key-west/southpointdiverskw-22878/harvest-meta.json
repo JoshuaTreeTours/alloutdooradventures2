@@ -1,0 +1,47 @@
+{
+  "company": "southpointdiverskw",
+  "itemId": "22878",
+  "fetchedAt": "2026-10-03T18:10:06.162483+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/southpointdiverskw/22878/content/",
+      "status": 200,
+      "bytes": 5504,
+      "sha256": "5d06768e2098e4c4d30f3fbacba90d09268dfe8cf6d2b7f589655fdbcd69ef76"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/southpointdiverskw/22878/structured-description/",
+      "status": 200,
+      "bytes": 2369,
+      "sha256": "a6f6aa5403eaac415d48256c2be6c8e7f5f73ea996e1f2d5c39890f1e772489a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/southpointdiverskw/items/22878/",
+      "status": 200,
+      "bytes": 16966,
+      "sha256": "feaf89b3a7c71e36ce6eb4f05841987ba8ad7fd78c5dd04d25a4c6e275306b4f"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/southpointdiverskw/price-preview/per-item/v2/?asn=fhdn&item_pks=22878&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1075,
+      "sha256": "2fd9f5bf686cc8e17a992ecda13c7a1c413c991cb8dde3bf5bb152e8e31fb90b"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/southpointdiverskw/items/22878/ratings/",
+      "status": 200,
+      "bytes": 501,
+      "sha256": "46fd71e2ca37f0a1d00979d100b775eb679d5353a1aef792711b3cf40e0f2495"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "22878",
+    "provider": "southpointdiverskw",
+    "bookingUrl": "https://fareharbor.com/embeds/book/southpointdiverskw/items/22878/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

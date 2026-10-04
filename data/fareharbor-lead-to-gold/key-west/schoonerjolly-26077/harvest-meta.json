@@ -1,0 +1,47 @@
+{
+  "company": "schoonerjolly",
+  "itemId": "26077",
+  "fetchedAt": "2026-10-03T18:10:04.966645+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/schoonerjolly/26077/content/",
+      "status": 200,
+      "bytes": 3183,
+      "sha256": "3349dcf96c3ba37f983bef595a454e6d3827fac730b5a761c5b9352a88e0bbbc"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/schoonerjolly/26077/structured-description/",
+      "status": 200,
+      "bytes": 2212,
+      "sha256": "9881c0e8053288d049184a7ecda68eddefcb5829ffb70ceeacd2e2474cd9135c"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/schoonerjolly/items/26077/",
+      "status": 200,
+      "bytes": 9576,
+      "sha256": "17e034498f2cab60b7eac2d0f20c7e737c961c5fde55bdc236a1655c10c62abc"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/schoonerjolly/price-preview/per-item/v2/?asn=fhdn&item_pks=26077&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 767,
+      "sha256": "e1288cb35ddc030120d69c878c245276c89c19f05af3c8cb2748f5f7a9bc6b80"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/schoonerjolly/items/26077/ratings/",
+      "status": 200,
+      "bytes": 517,
+      "sha256": "31f9fe2898067526f2070f58635c9d893c47642f7066bb474243d3e85b565d64"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "26077",
+    "provider": "schoonerjolly",
+    "bookingUrl": "https://fareharbor.com/embeds/book/schoonerjolly/items/26077/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

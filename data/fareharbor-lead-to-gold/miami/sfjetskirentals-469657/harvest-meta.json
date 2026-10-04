@@ -1,0 +1,47 @@
+{
+  "company": "sfjetskirentals",
+  "itemId": "469657",
+  "fetchedAt": "2026-10-03T18:10:11.519247+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469657/content/",
+      "status": 200,
+      "bytes": 10504,
+      "sha256": "f3fd42ae8b1efc4f8466077470c4c97ecfc6b319f891b37b4d558d9ce22db8f7"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469657/structured-description/",
+      "status": 200,
+      "bytes": 5127,
+      "sha256": "b6d6d24590802ce45d6f8143b5a12f40a2ea59369303d5f7b1cac665b85b66ac"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469657/",
+      "status": 200,
+      "bytes": 21850,
+      "sha256": "e88eb52b585546556c7e00684998e01fe1d111c899e037b09bdbba2cc6b627ce"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=469657&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 544,
+      "sha256": "64db2abc24eeb08d059909345e8db817876c91597cca584902526f72d0b89689"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469657/ratings/",
+      "status": 200,
+      "bytes": 439,
+      "sha256": "724c4404bcf28dad95193a314330333fd51fbf05e049ef2f795b53bfae83f58e"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "469657",
+    "provider": "sfjetskirentals",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/469657/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

@@ -1,0 +1,1575 @@
+[
+  {
+    "itemId": "680066",
+    "company": "fishingsarasotaflorida",
+    "title": "Inshore Nearshore Fishing Charter",
+    "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+    "publicPath": "/destinations/florida/sarasota/tours/inshore-nearshore-fishing-charter-680066",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing."
+    ],
+    "schemaDescription": "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 13,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680066/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/fishingsarasotaflorida-680066",
+      "fetchedAt": "2026-10-03T18:09:35.271824+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680066/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680066/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "25e0ed84858a46b66b7e959d1c0c24d906b60b161cfc969ca5d3604e43a14603"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680066/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "408093a8c8c05707c5a3429414a955ecfe28ca2c941b42d8d1e417912cf260a2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680066&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 146,
+          "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680066/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "878a96c7dd7dc0c077384b4995050391812a2f17ccdceb412b2ac0cf534a9d32"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "680066",
+        "provider": "fishingsarasotaflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680066/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "680075",
+    "company": "fishingsarasotaflorida",
+    "title": "Lil Angler Fishing",
+    "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+    "publicPath": "/destinations/florida/sarasota/tours/lil-angler-fishing-680075",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing."
+    ],
+    "schemaDescription": "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 13,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680075/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/fishingsarasotaflorida-680075",
+      "fetchedAt": "2026-10-03T18:09:35.273788+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680075/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680075/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "94a2da5e019fb644c6401ae188ee329545b622731c8be81446d590ae5f736a97"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680075/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "fb4787418e55d50c4144dff4c3afce3161f747aaf1f62dcbcba1bc5452dcbf17"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680075&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 146,
+          "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680075/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "73166d74d66ec0e76b394a0573f420a2551e65193af9f628507f4a480c4dd442"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "680075",
+        "provider": "fishingsarasotaflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680075/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "680076",
+    "company": "fishingsarasotaflorida",
+    "title": "Single Angler Fishing Enthusiast",
+    "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+    "publicPath": "/destinations/florida/sarasota/tours/single-angler-fishing-enthusiast-680076",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing."
+    ],
+    "schemaDescription": "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 13,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680076/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/fishingsarasotaflorida-680076",
+      "fetchedAt": "2026-10-03T18:09:35.273394+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680076/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680076/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "20e0c4da130b002508fc0f1236b8f059c9fc47575e25c0ba57d861c2a5e1d1fe"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680076/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "0d23dfe2f8f0d80e76f395263e8a2a6ea866c09c7f56453a65741b48b44eca01"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680076&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 146,
+          "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680076/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "39a73c967387f5be3ab3bcaa79f1a29a5c6ab31a13fe6593b3f7eb737efedbda"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "680076",
+        "provider": "fishingsarasotaflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680076/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "680083",
+    "company": "fishingsarasotaflorida",
+    "title": "Eco-Nature Tours",
+    "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+    "publicPath": "/destinations/florida/sarasota/tours/eco-nature-tours-680083",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing."
+    ],
+    "schemaDescription": "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 13,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680083/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/fishingsarasotaflorida-680083",
+      "fetchedAt": "2026-10-03T18:09:35.274211+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680083/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680083/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "5ceb30c239ebbba035ca9eba0d4e0bd4541f20736b3e8205b91cfef06edde21b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680083/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "9c65f58e5ef7c059263a43aef7e8c7501f6c59ae836139b8f55baf2f092163c6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680083&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 146,
+          "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680083/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "f2c1b05036a08d7a89a67a5e417dba7884f7745e4266b22e97e26c81f52d4cec"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "680083",
+        "provider": "fishingsarasotaflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680083/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "680091",
+    "company": "fishingsarasotaflorida",
+    "title": "Sandbar Shelling Excursion",
+    "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+    "publicPath": "/destinations/florida/sarasota/tours/sandbar-shelling-excursion-680091",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing."
+    ],
+    "schemaDescription": "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 13,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680091/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/fishingsarasotaflorida-680091",
+      "fetchedAt": "2026-10-03T18:09:37.308663+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680091/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680091/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "612bc2caadc7256ffcffeab0d1f477fdaf5cf946210bae6e893f93d90f5f8150"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680091/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "e7ca1f5141c95f289a18232894c926bcc7e4f47cdf535d4a1eeea5d2aa3d2924"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680091&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 146,
+          "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680091/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "86ad8e674129b9c7f6cb2488b3510d314cecfef27dcc33c84b97266b2326a0b4"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "680091",
+        "provider": "fishingsarasotaflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680091/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "680092",
+    "company": "fishingsarasotaflorida",
+    "title": "Lil Pirate Treasure Hunt",
+    "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+    "publicPath": "/destinations/florida/sarasota/tours/lil-pirate-treasure-hunt-680092",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing."
+    ],
+    "schemaDescription": "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 13,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680092/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/fishingsarasotaflorida-680092",
+      "fetchedAt": "2026-10-03T18:09:37.370564+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680092/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680092/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "b24948376d4a7f000d168917283442dec0a6fc477a66232521f3bb5cf73d0e1b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680092/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "a942bc2093ec894b3de8be63edc5d5eb85aee6173848232f881bf3bafabbb883"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680092&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 146,
+          "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680092/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "30cf98393be4873701bae46b452142104b7f6c6745d37d22e6d7876b4727ed7f"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "680092",
+        "provider": "fishingsarasotaflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680092/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "680093",
+    "company": "fishingsarasotaflorida",
+    "title": "CheeseBurger In Sarasota Paradise",
+    "operator": "Tearin’ Em Up! Fishing Charters L.L.C.",
+    "publicPath": "/destinations/florida/sarasota/tours/cheeseburger-in-sarasota-paradise-680093",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing."
+    ],
+    "schemaDescription": "The operator Tearin’ Em Up! Fishing Charters L.L.C. lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 13,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680093/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/fishingsarasotaflorida-680093",
+      "fetchedAt": "2026-10-03T18:09:37.413939+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680093/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fishingsarasotaflorida/680093/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "78e9cbd60a63411f2f4c12076323c8fcac36805124b4082d033979046b9c8f77"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680093/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "fdcd757c702edf1a8bff27fee8099991713e04c9576318a31e87e5129bd9c241"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fishingsarasotaflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=680093&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 146,
+          "sha256": "a0c4a6564b4a032fc685c6d09d369775fe78c745276d374d5660a0336430743e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fishingsarasotaflorida/items/680093/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "4740eaf055fec96a2aace13b0dbb15c30ee88c2b1d9ddb1e190a1d42c9bab254"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "680093",
+        "provider": "fishingsarasotaflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fishingsarasotaflorida/items/680093/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "430401",
+    "company": "floridaunderwatersports",
+    "title": "Seahorse Safari",
+    "operator": "Florida Underwater Sports",
+    "publicPath": "/destinations/florida/sarasota/tours/seahorse-safari-430401",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Florida Underwater Sports lists this outing."
+    ],
+    "schemaDescription": "The operator Florida Underwater Sports lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/floridaunderwatersports/items/430401/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/floridaunderwatersports-430401",
+      "fetchedAt": "2026-10-03T18:09:37.553851+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaunderwatersports/430401/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaunderwatersports/430401/structured-description/",
+          "status": 404,
+          "bytes": 588105,
+          "sha256": "d2c85f308dbf9b83ad4d77b9edcc5bbfe16edda81fb625342f9748bbb84765dc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaunderwatersports/items/430401/",
+          "status": 404,
+          "bytes": 588079,
+          "sha256": "48658930bf15d63563dc80c6e5830bd050cf89da380639894622b5a9dd6d5740"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaunderwatersports/price-preview/per-item/v2/?asn=fhdn&item_pks=430401&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 147,
+          "sha256": "26afa9ab418d4ed585cb2ee77133b99de397defab5eced511637728bba9063aa"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaunderwatersports/items/430401/ratings/",
+          "status": 404,
+          "bytes": 588095,
+          "sha256": "4a39dedf317ed3e06cd92462ebc0923fccb75c8d9ff2020f90b97886132aa6c2"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "430401",
+        "provider": "floridaunderwatersports",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaunderwatersports/items/430401/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "579414",
+    "company": "gilliganstikitours",
+    "title": "Private 3 Hour Island Sandbar Tiki Cruise",
+    "operator": "Gilligan's Tiki Tours",
+    "publicPath": "/destinations/florida/sarasota/tours/private-3-hour-island-sandbar-tiki-cruise-579414",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "This is a private sandbar charter on the water. The booking is about 3 hours. Time on the water is about 3 hours. From the water, guests see Sarasota Bay and Big Pass Sandbar."
+    ],
+    "schemaDescription": "This is a private sandbar charter on the water.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "3 Hours harbor outing"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/3S6YnaQTSd6urj0MJnze",
+    "wordCount": 34,
+    "durationLabel": "3 Hours",
+    "durationIso": "PT3H",
+    "meetingLocation": "Van Wezel",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/gilliganstikitours/items/579414/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/3S6YnaQTSd6urj0MJnze",
+      "heroHandle": "3S6YnaQTSd6urj0MJnze",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/gilliganstikitours-579414",
+      "fetchedAt": "2026-10-03T18:09:39.250919+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/gilliganstikitours/579414/content/",
+          "status": 200,
+          "bytes": 1473,
+          "sha256": "6e618879a239f84d8e7ea29f90dc9e3a71173e9521827b2692e98392a6e7abc0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/gilliganstikitours/579414/structured-description/",
+          "status": 200,
+          "bytes": 1297,
+          "sha256": "c9c96eb72b0103751e7f7814697fa0e38c611c8a0a3dad615263fea9005193da"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/gilliganstikitours/items/579414/",
+          "status": 200,
+          "bytes": 8270,
+          "sha256": "9388e6d5dfc51f0829fffd471fd733b22287eedd19ea47707a2b0881be806996"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/gilliganstikitours/price-preview/per-item/v2/?asn=fhdn&item_pks=579414&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/gilliganstikitours/items/579414/ratings/",
+          "status": 200,
+          "bytes": 455,
+          "sha256": "e60a409962153cc58a91e62257d29ad192ecbd4f7d8de826f46f3ab574acca1c"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "3 Hours",
+        "meetingAddress": "Van Wezel",
+        "itemLocation": null,
+        "headline": "All Ages • 3 Hours • Up to 6 passengers",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "3 hours of Fun in the Sun, cool off with a dip in the water and explore Big Pass Sandbar with a cocktail in hand!",
+          "More info This trip is a private tour for up to 6 guests."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Tiki Fun",
+          "Sarasota Bay",
+          "Big Pass Sandbar"
+        ],
+        "measures": [
+          "3 hours",
+          "6 guests"
+        ],
+        "description": "Have some Tiki Fun in the sun and hang out with the locals on a Sandbar! Enjoy the beautiful scenic views of Sarasota Bay. 3 hours of Fun in the Sun, cool off with a dip in the water and explore Big Pass Sandbar with a cocktail in hand! More info This trip is a private tour for up to 6 guests. Smoking is not permitted on board.",
+        "detailsText": "All Ages • 3 Hours • Up to 6 passengers All Ages • 3 Hours • Up to 6 passengers",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "579414",
+        "provider": "gilliganstikitours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/gilliganstikitours/items/579414/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 34 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "527211",
+    "company": "gulfwatertours",
+    "title": "Destination and/or Special Occasion Cruise",
+    "operator": "Gulf Water Tours",
+    "publicPath": "/destinations/florida/sarasota/tours/destination-andor-special-occasion-cruise-527211",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a private sandbar charter on the water. The booking is about 8 hours. From the water, guests see Egmont Key and Passage Key. Venice Island and Stump Pass come into view as the boat moves. The cruise also passes Boca Grande. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+    ],
+    "schemaDescription": "A 4- to 8-hour harbor outing with Gulf Water Tours. The sail passes Discuss preferences and destinations and Venice Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "4 - 8 hours harbor outing",
+      "Discuss preferences and destinations and Venice Island",
+      "Knowledgeable and experienced captain"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/S0lwYmUvRiSBW7c3Uk0L"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/DcVDZmTSsmHYjjJhq3uE",
+    "wordCount": 96,
+    "durationLabel": "4 - 8 hours",
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $595",
+    "priceRows": [
+      {
+        "label": "Four Hour Charter",
+        "note": "",
+        "amountLabel": "$595"
+      },
+      {
+        "label": "Six Hour Charter",
+        "note": "",
+        "amountLabel": "$795"
+      },
+      {
+        "label": "Eight Hour Charter",
+        "note": "",
+        "amountLabel": "$1,100"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "595.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/gulfwatertours/items/527211/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/DcVDZmTSsmHYjjJhq3uE",
+      "heroHandle": "DcVDZmTSsmHYjjJhq3uE",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/S0lwYmUvRiSBW7c3Uk0L",
+          "handle": "S0lwYmUvRiSBW7c3Uk0L",
+          "pixelSha256": "4021282a1f196349f3f2f07663dab1fff32eb2a6337cbc6bd545a6161a541e22",
+          "differenceHashDistanceFromHero": 114,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.23889,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/S0lwYmUvRiSBW7c3Uk0L",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/gulfwatertours-527211",
+      "fetchedAt": "2026-10-03T18:09:39.262397+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/gulfwatertours/527211/content/",
+          "status": 200,
+          "bytes": 2942,
+          "sha256": "0184c4c453ad5febf76d2fd3fcf795ed64b3d680860ca13f8df92068d9a7a86c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/gulfwatertours/527211/structured-description/",
+          "status": 200,
+          "bytes": 2700,
+          "sha256": "1c51c39feb90949a0fb12999841c716dfb0fd12f7ede0ca9f3aec3289a9dcdc4"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/gulfwatertours/items/527211/",
+          "status": 200,
+          "bytes": 10470,
+          "sha256": "757abca01b277f0e74aa929d12b0250923228e3960db5f172f2483902d9ceaee"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/gulfwatertours/price-preview/per-item/v2/?asn=fhdn&item_pks=527211&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 811,
+          "sha256": "66f347a3cba61332835b27f3bec83aaf21f83482689185774e39048fcde5d99f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/gulfwatertours/items/527211/ratings/",
+          "status": 200,
+          "bytes": 440,
+          "sha256": "db5da0e2e8923805f60fa149636190a6257271bedf6ae0ec193eda07a65453be"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Four Hour Charter",
+          "note": "",
+          "amount": 595.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Four Hour Charter",
+            "note": "",
+            "amount": 595.0
+          },
+          {
+            "singular": "Six Hour Charter",
+            "note": "",
+            "amount": 795.0
+          },
+          {
+            "singular": "Eight Hour Charter",
+            "note": "",
+            "amount": 1100.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-05T11:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 - 8 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "4 - 8 Hour Charters • Up to 6 People",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Up to 6 people",
+        "included": [
+          "Knowledgeable and experienced captain"
+        ],
+        "excluded": [],
+        "itinerary": [
+          "Discuss preferences and destinations",
+          "Navigate to selected locations such as Egmont Key, Passage Key, Venice Island, Stump Pass, or Boca Grande"
+        ],
+        "routeNotes": [
+          "1. Discuss preferences and destinations 2. Navigate to selected locations such as Egmont Key, Passage Key, Venice Island, Stump Pass, or Boca Grande 3. Enjoy activities like dolphin watching, snorkeling, or relaxing at the sandbar 4. Return with personalized experience tailored to your interests"
+        ],
+        "highlights": [
+          "Relaxing, scenic, and fun activities",
+          "Experienced captain ensuring safety and enjoyment"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Swimwear and towels",
+          "Sun protection (sunscreen, hat, sunglasses)",
+          "Refillable water bottle",
+          "Camera or smartphone for photos"
+        ],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Experience the beauty of Sarasota and its surrounding waters on a private yacht with an expert captain. Customize your 4, 6, or 8-hour tour to explore iconic landmarks, secluded islands, or waterfront attractions. Whether you want a relaxing day at the sandbar, a sunset cruise, dolphin watching, snorkeling, or a leisurely glide along the coast, your captain is there to ensure safety and fun. Relax, soak up the scenery, and create unforgettable memories tailored specifically to your preferences with a personalized itinerary or our captain's expert guidance.",
+        "detailsText": "4 - 8 Hour Charters • Up to 6 People 4 - 8 Hour Charters • Up to 6 People",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "527211",
+        "provider": "gulfwatertours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/gulfwatertours/items/527211/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "688791",
+    "company": "surfitusa",
+    "title": "Florida Springs & Manatee Kayak or Paddleboard Adventure",
+    "operator": "SURFit USA",
+    "publicPath": "/destinations/florida/sarasota/tours/florida-springs-and-manatee-kayak-or-paddleboard-adventure-688791",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Florida Springs Adventure is a small-group, hosted getaway to Florida's spring-fed waterways. Additionally, guests can hope to see river otters, fish, maybe even monkeys. A full-day paddle at Silver Springs with a packed lunch on the water. Morning snorkel, check-out, and return to TPA.",
+      "Silver Springs wildlife safari paddle: crystal-clear water, birds, fish, and the monkeys. Manatee country: paddle in waterways known for consistent manatee activity. Weeki Wachee serenity paddle: peaceful, scenic, and unbelievably spring-fed water. Crystal River springs exploration: paddle to check out multiple springs and clear-water pockets.",
+      "Snorkel tour included: experience Crystal River from below the surface, too. Guided paddling days at Crystal River, Silver Springs, and Weeki Wachee (route/timing may adjust for conditions). All paddling gear (kayak/SUP as applicable, paddle, PFD, safety gear). Ground transportation during the trip (including transport to/from paddle locations and launch sites)."
+    ],
+    "schemaDescription": "A paddle outing lasting 4 days, 3 Nights with SURFit USA.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4 days, 3 Nights paddle outing",
+      "Hosted trip with Karla + Aaron + Laura"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/xFDC4IdbQgqDpUhezOBi"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/jUPI2mI6RL2BjVd2M1nR",
+    "wordCount": 149,
+    "durationLabel": "4 days, 3 Nights",
+    "durationIso": null,
+    "meetingLocation": "Tampa Airport or the Crystal River Plantation Resport",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 3262,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 3262 reviews on GET https://fareharbor.com/api/v1/companies/surfitusa/items/688791/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Sarasota",
+      "state": "Florida",
+      "citySlug": "sarasota",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/jUPI2mI6RL2BjVd2M1nR",
+      "heroHandle": "jUPI2mI6RL2BjVd2M1nR",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/xFDC4IdbQgqDpUhezOBi",
+          "handle": "xFDC4IdbQgqDpUhezOBi",
+          "pixelSha256": "c3ff19294d0e3493000f25796be901f2a270f88051ed489c7030f6c1aeeed61d",
+          "differenceHashDistanceFromHero": 124,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28522,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/xFDC4IdbQgqDpUhezOBi",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/sarasota/surfitusa-688791",
+      "fetchedAt": "2026-10-03T18:09:39.457687+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/surfitusa/688791/content/",
+          "status": 200,
+          "bytes": 8367,
+          "sha256": "ae2df040e73bca5eb21a7a8578ee84c90ae6ee558c4e34bd902edbfa9a5de8fd"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/surfitusa/688791/structured-description/",
+          "status": 200,
+          "bytes": 5355,
+          "sha256": "186e164a851adbb7cd350a70add6cb4ae5c188efd8ac1b47b98f8a89cce31bc0"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/surfitusa/items/688791/",
+          "status": 200,
+          "bytes": 12832,
+          "sha256": "ae17e816717bf43b0fc4e8d16c15fae58c038be48fc28e087b1089e22ea58485"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/surfitusa/price-preview/per-item/v2/?asn=fhdn&item_pks=688791&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/surfitusa/items/688791/ratings/",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "b590c1220a553f389ef17660b8f7cf075fa2f374bd20aa1c18203f92e1eb23d8"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "4 days, 3 Nights",
+        "meetingAddress": "Tampa Airport or the Crystal River Plantation Resport",
+        "itemLocation": null,
+        "headline": "4-day fully supported small-group adventure (private rooms + meals included)",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 18,
+        "maxAge": null,
+        "groupSize": "12",
+        "included": [
+          "3 nights lodging at Crystal River Plantation Resort (private room for each guest)",
+          "Hosted trip with Karla + Aaron + Laura",
+          "Guided paddling days at Crystal River, Silver Springs, and Weeki Wachee (route/timing may adjust for conditions)",
+          "All paddling gear (kayak/SUP as applicable, paddle, PFD, safety gear)",
+          "Snorkel tour in Crystal River (included)",
+          "Ground transportation during the trip (including transport to/from paddle locations and launch sites)",
+          "Included pickup: 1:00 pm",
+          "Late pickup: 5:30 pm ($100 per person, limited seats)"
+        ],
+        "excluded": [
+          "Flights to/from Tampa International Airport (TPA)",
+          "Alcohol beyond what's included at the welcome social",
+          "Personal snacks beyond provided meals",
+          "Travel insurance (recommended)"
+        ],
+        "itinerary": [
+          "Day 1 (Thu Feb 12): Arrive + Crystal River + Sunset Welcome Social",
+          "TPA pickup, check-in, optional afternoon paddle, then a sunset welcome social",
+          "Day 2 (Fri Feb 13): Silver Springs (Full Day)",
+          "A full-day paddle at Silver Springs with a packed lunch on the water. Group dinner included",
+          "Day 3 (Sat Feb 14): Weeki Wachee (Full Day) + Free Evening",
+          "Day 4 (Sun Feb 15): Snorkel + Depart",
+          "Morning snorkel, check-out, and return to TPA"
+        ],
+        "routeNotes": [
+          "Day 1 (Thu Feb 12): Arrive + Crystal River + Sunset Welcome Social TPA pickup, check-in, optional afternoon paddle, then a sunset welcome social. Day 2 (Fri Feb 13): Silver Springs (Full Day) A full-day paddle at Silver Springs with a packed lunch on the water. Group dinner included. Day 3 (Sat Feb 14): Weeki Wachee (Full Day) + Free Evening Our featured paddle day. Breakfast + lunch included. Dinner on your own in Crystal River. Day 4 (Sun Feb 15): Snorkel + Depart Morning snorkel, check-out, and return to TPA."
+        ],
+        "highlights": [
+          "Silver Springs “wildlife safari” paddle: crystal-clear water, birds, fish, and the famous monkeys",
+          "Manatee country: paddle in waterways known for consistent manatee activity",
+          "Weeki Wachee serenity paddle: peaceful, scenic, and unbelievably beautiful spring-fed water",
+          "Crystal River springs exploration: paddle to check out multiple springs and clear-water pockets",
+          "Snorkel tour included: experience Crystal River from below the surface, too",
+          "Small group + private rooms: premium comfort, better pacing, better experience"
+        ],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "This trip is capped at 12 guests and includes private-room lodging at Crystal River Plantation Resort."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Florida Springs Adventure",
+          "Silver Springs",
+          "Weeki Wachee",
+          "Crystal River",
+          "Crystal River Plantation Resort"
+        ],
+        "measures": [
+          "12 guests"
+        ],
+        "description": "Florida Springs Adventure is a small-group, fully hosted getaway to Florida's most iconic spring-fed waterways. Over four days we'll paddle Silver Springs, Weeki Wachee, and Crystal River, with a snorkel tour included in Crystal River. Expect crystal-clear water, wildlife, and that classic “old Florida” scenery-plus a smooth, stress-free experience because we handle the transportation, gear, and launch logistics so you can just show up and enjoy. Wildlife note: Wildlife is wild, so sightings can't be guaranteed-but Crystal River and these spring systems are known for consistent manatee activity, and it would be very unusual not to spot them during our time on the water. Additionally, we can hope to see river otters, amazing fish, maybe even monkeys! This trip is capped at 12 guests and includes private-room lodging at Crystal River Plantation Resort.",
+        "detailsText": "4-day fully supported small-group adventure (private rooms + meals included) 4-day fully supported small-group adventure (private rooms + meals included)",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "688791",
+        "provider": "surfitusa",
+        "bookingUrl": "https://fareharbor.com/embeds/book/surfitusa/items/688791/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

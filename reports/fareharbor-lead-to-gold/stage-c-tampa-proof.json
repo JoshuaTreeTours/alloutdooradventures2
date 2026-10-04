@@ -1,0 +1,308 @@
+[
+  {
+    "itemId": "589679",
+    "company": "tampabayboatingadventures",
+    "title": "Private Snorkeling Charters in St. Pete, Florida",
+    "operator": "Tampa Bay Boating Adventures",
+    "publicPath": "/destinations/florida/tampa/tours/private-snorkeling-charters-in-st-pete-florida-589679",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Petersburg, Florida, aboard the 32' luxury boat, Zen Dog. Bring up to 11 guests for an day filled with snorkeling, sun, and adventure. Guests provide the gear, ice, water, and sunscreen-guests bring the curiosity and a sense of wonder. With professional-grade snorkeling equipment provided, guests focus on looking at Florida's underwater treasures in style.",
+      "Add personalized experiences like: Offshore Spearfishing: Test the skills with a thrilling spearfishing excursion. Guests find Scuba Diving: Dive deeper with introductory scuba session led by professionals. Sunset Cruises: a private sunset experience tailored for guests. Whatever the vision, guests help bring it to life.",
+      "Book the Adventure Today Ready to meet the beauty of St."
+    ],
+    "schemaDescription": "A four-hour snorkel outing with Tampa Bay Boating Adventures. The outing passes Maximo Boat Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4 Hours snorkel outing",
+      "Maximo Boat Park",
+      "Captain"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AeADydv1RDSx558yphTY"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/pwn5m81bQBSJlBQoKds9",
+    "wordCount": 112,
+    "durationLabel": "4 Hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "Maximo Park Boat Ramp, St. Petersburg, FL 33711",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 193,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 193 reviews on GET https://fareharbor.com/api/v1/companies/tampabayboatingadventures/items/589679/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Tampa",
+      "state": "Florida",
+      "citySlug": "tampa",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/pwn5m81bQBSJlBQoKds9",
+      "heroHandle": "pwn5m81bQBSJlBQoKds9",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/AeADydv1RDSx558yphTY",
+          "handle": "AeADydv1RDSx558yphTY",
+          "pixelSha256": "472a8a830e9e47c535ec6f301c7da905153f0b144d6d8e2b8268bacf4cfd8e8d",
+          "differenceHashDistanceFromHero": 133,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.23973,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/AeADydv1RDSx558yphTY",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tampa/tampabayboatingadventures-589679",
+      "fetchedAt": "2026-10-03T18:09:23.067396+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/tampabayboatingadventures/589679/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/tampabayboatingadventures/589679/structured-description/",
+          "status": 200,
+          "bytes": 4030,
+          "sha256": "674d4fc9939f90ff9da6d6bae016211a9bff7e716d37afd1d8d33532dcfd03bb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/tampabayboatingadventures/items/589679/",
+          "status": 200,
+          "bytes": 14089,
+          "sha256": "66ac59c56328b1c36ed7fae8db0bfe2f33207c5230ad341eaa330cc91aa6df74"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/tampabayboatingadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=589679&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/tampabayboatingadventures/items/589679/ratings/",
+          "status": 200,
+          "bytes": 583,
+          "sha256": "4387d269ce74c7399cab1f0d38d13f53888a6a490679f09a5a14b83c7c817cd3"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "4 Hours",
+        "meetingAddress": "Maximo Park Boat Ramp, St. Petersburg, FL 33711",
+        "itemLocation": null,
+        "headline": "Up to 6 Guests • Starting at $749 • Private, Captained Snorkel Excursion",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum of 12 Guests",
+        "included": [
+          "Captain",
+          "Ice",
+          "Reef-Safe Sunscreen",
+          "Mask Defog",
+          "Water"
+        ],
+        "excluded": [
+          "Snorkeling Gear (Mask, Fins, Snorkel) - Available for Rental",
+          "Snorkeling Tour Guide - Available for Booking",
+          "Wetsuit - Available for Rental"
+        ],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Discover the Hidden Gems of Florida's Gulf Coast Set out on a 4-hour private snorkeling adventure from St.",
+          "Featuring twin 300-horsepower engines, Zen Dog ensures a smooth ride to the best snorkeling spots, with plenty of room for up to 12 guests."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Hidden Gems",
+          "Florida's Gulf Coast Set",
+          "Egmont Key",
+          "Shell Key",
+          "Zen Dog Step",
+          "Zen Dog",
+          "Offshore Spearfishing",
+          "Sandbar Parties"
+        ],
+        "measures": [
+          "11 guests",
+          "12 guests"
+        ],
+        "description": "Explore St. Pete's Waters with a Private Snorkeling Charter! Discover the Hidden Gems of Florida's Gulf Coast Set out on a 4-hour private snorkeling adventure from St. Petersburg, Florida, aboard our 32' luxury boat, Zen Dog. Dive into crystal-clear waters, explore historic underwater ruins, encounter vibrant marine life, and enjoy the stunning beauty of Egmont Key, Shell Key, and other hidden gems. Bring up to 11 guests for an unforgettable day filled with snorkeling, sun, and adventure. We'll provide the gear, ice, water, and sunscreen-you bring your curiosity and a sense of wonder! Your High-End Snorkeling Boat: Zen Dog Step aboard Zen Dog, a premium 32' WorldCat center console catamaran designed for comfort and speed. Featuring twin 300-horsepower engines, Zen Dog ensures a smooth ride to the best snorkeling spots, with plenty of room for up to 12 guests. With professional-grade snorkeling equipment provided, you can focus on exploring Florida's underwater treasures in style. Make Your Trip Truly Special Looking for something unique? Our custom charters let you go beyond snorkeling! Add personalized experiences like: Offshore Spearfishing: Test your skills with a thrilling spearfishing excursion. Sandbar Parties: Relax and soak up the sun at St. Pete's favorite sandbars. Discover Scuba Diving: Dive deeper with an introductory scuba session led by professionals. Romantic Sunset Cruises: Enjoy a private sunset experience tailored for you. Whatever your vision, we'll help bring it to life! We've got the essentials covered, but here's what we recommend for your group: Towels BYOB and Snacks A Ready-to-Explore Attitude Meeting us is easy-just arrive at Maximo Boat Park in St. Pete, and we'll handle the rest. Also, we may have a member of our social media intern team come aboard and shoot content. Book Your Adventure Today Ready to experience the beauty of St. Pete's waters like never before? Book today to reserve your spot. Let's make some unforgettable memories together!",
+        "detailsText": "Please meet us at Maximo Park Boat Ramp fifteen minutes before the charter is scheduled to begin. This will ensure we have ample time to load the boat and assist with any special accommodations required. Up to 6 Guests • Starting at $749 • Private, Captained Snorkel Excursion",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "589679",
+        "provider": "tampabayboatingadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/tampabayboatingadventures/items/589679/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "326447",
+    "company": "tampafloridafishingguide",
+    "title": "Inshore Fishing Charter",
+    "operator": "Bag'Em Fishing Charters",
+    "publicPath": "/destinations/florida/tampa/tours/inshore-fishing-charter-326447",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Bag'Em Fishing Charters lists this outing."
+    ],
+    "schemaDescription": "The operator Bag'Em Fishing Charters lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/tampafloridafishingguide/items/326447/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Tampa",
+      "state": "Florida",
+      "citySlug": "tampa",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tampa/tampafloridafishingguide-326447",
+      "fetchedAt": "2026-10-03T18:09:23.068004+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/tampafloridafishingguide/326447/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/tampafloridafishingguide/326447/structured-description/",
+          "status": 404,
+          "bytes": 588107,
+          "sha256": "d953c1b74a1b8ad92a73b3f3bdde00278e97c0f3518e178eddf906118439ffae"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/tampafloridafishingguide/items/326447/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "3b636b47ec5b8d7383f787ec65e78fce1c4300ffc4aa9e650e50ed89fc61ecd1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/tampafloridafishingguide/price-preview/per-item/v2/?asn=fhdn&item_pks=326447&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 148,
+          "sha256": "f6dfa14efa1ddd26e00cfbdbc2230d05423587723daa31ae52d72540828fe841"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/tampafloridafishingguide/items/326447/ratings/",
+          "status": 404,
+          "bytes": 588097,
+          "sha256": "fae7204c81f8ef85ef3758b6f6b534a35d8eae0e960e66dd6864443d65960a03"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "326447",
+        "provider": "tampafloridafishingguide",
+        "bookingUrl": "https://fareharbor.com/embeds/book/tampafloridafishingguide/items/326447/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

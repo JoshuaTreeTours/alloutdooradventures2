@@ -1,0 +1,570 @@
+{
+  "fetchedAt": "2026-10-03T18:10:17.058652+00:00",
+  "total": 12,
+  "products": [
+    {
+      "company": "miamibeachwelcomecenter",
+      "itemId": "132331",
+      "fetchedAt": "2026-10-03T18:10:09.219314+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/miamibeachwelcomecenter/132331/content/",
+          "status": 200,
+          "bytes": 3031,
+          "sha256": "fce5e2c4e390d9524b206935575c5696fc776df8f585c3c1a1059ed4424597ac"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/miamibeachwelcomecenter/132331/structured-description/",
+          "status": 200,
+          "bytes": 2492,
+          "sha256": "0ff4f30ba1f6bce7341ba5a24576747edcda05db4ac89db40622c77b0f25b0b5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/miamibeachwelcomecenter/items/132331/",
+          "status": 200,
+          "bytes": 10090,
+          "sha256": "b6070bfc812d3f4802bab13ab678e849b79c5abac53ccb86495bd4ac80889cec"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/miamibeachwelcomecenter/price-preview/per-item/v2/?asn=fhdn&item_pks=132331&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 587,
+          "sha256": "0e32c9a903da97a74b05f32bd2000359c535ab4b76827274b967e2b13d8dd90f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/miamibeachwelcomecenter/items/132331/ratings/",
+          "status": 200,
+          "bytes": 483,
+          "sha256": "68b86826918661eda013e64a785720fc0efd6b21da3682c843348ecfccbe39db"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "132331",
+        "provider": "miamibeachwelcomecenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/miamibeachwelcomecenter/items/132331/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sfairboatadventures",
+      "itemId": "660368",
+      "fetchedAt": "2026-10-03T18:10:09.220086+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660368/content/",
+          "status": 200,
+          "bytes": 2885,
+          "sha256": "4576ef8db37a3c747b716b9261cf1a4571d87db0a887621252ee40ee93f609ee"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660368/structured-description/",
+          "status": 200,
+          "bytes": 1710,
+          "sha256": "1ac8d2879920b47298e49f0f206af70703b068c9046f797ce5670efdcb8e400b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660368/",
+          "status": 200,
+          "bytes": 8282,
+          "sha256": "d4689d29eab933a826774c5ebe85d9310a0c867d89f3059efda3bc9a13a2c702"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660368&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 569,
+          "sha256": "5d687b2fa24a043e9833f09528d42d41d603f1f27b9b6ecb16ee870d96731c17"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660368/ratings/",
+          "status": 200,
+          "bytes": 453,
+          "sha256": "b9836ede152a128bb170e8abfb8d1b360bf6b75e9a5c93b82ac7ac23b66b64ed"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "660368",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660368/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sfairboatadventures",
+      "itemId": "660403",
+      "fetchedAt": "2026-10-03T18:10:09.220645+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660403/content/",
+          "status": 200,
+          "bytes": 3450,
+          "sha256": "a974334a35ec359c8c9730fb5c633cdcbc7059a945d5756542bbfab464635c7a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660403/structured-description/",
+          "status": 200,
+          "bytes": 2795,
+          "sha256": "862d83907d0b6193ed3780d804adec3caf90f3f46f6f642045c17f0b7eb7edcf"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660403/",
+          "status": 200,
+          "bytes": 8848,
+          "sha256": "8ab73f790bd2c3a242a79b5f903a2910eb816a77c36bcd22368d94d958333a57"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660403&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1431,
+          "sha256": "d5efb3159f4c098acf986bb636fb7744863a22cd3655805bea92b622ff6442cb"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660403/ratings/",
+          "status": 200,
+          "bytes": 459,
+          "sha256": "e132caffb7a9141ff6a4f7da6c411e9cf23063c84b9177460a7691cf50f402b6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "660403",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660403/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sfairboatadventures",
+      "itemId": "660426",
+      "fetchedAt": "2026-10-03T18:10:09.221572+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660426/content/",
+          "status": 200,
+          "bytes": 1849,
+          "sha256": "b4241c0f72be5710a9b543d8ccca90d442057348e59f16972e69d908fe01dc2b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660426/structured-description/",
+          "status": 200,
+          "bytes": 1215,
+          "sha256": "e7574ea01e0205684c66d5ea92c5a8ee0b15d0b720a4d5f2981ab9500b3a051c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660426/",
+          "status": 200,
+          "bytes": 7747,
+          "sha256": "3cace2300137f917cad7c07556651f1f4431fd19fb20d406cff703197a41bbfe"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660426&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 830,
+          "sha256": "226e4fa919fa3e0e82e3d47e3752d6b8a0829af8326581acca88dc97fbed4312"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660426/ratings/",
+          "status": 200,
+          "bytes": 456,
+          "sha256": "d6b494779eaf7492af7ba77e78d1f2834ab574a9873732f4abc54280ac5b2668"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "660426",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660426/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sfairboatadventures",
+      "itemId": "660427",
+      "fetchedAt": "2026-10-03T18:10:11.192515+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660427/content/",
+          "status": 200,
+          "bytes": 2246,
+          "sha256": "a7a81ffbe7f04215c7f11b5d4373bf47b131f8cfc434e787fd4ef4383cf93b1a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660427/structured-description/",
+          "status": 200,
+          "bytes": 1414,
+          "sha256": "4520eb79b1d20b0f76f2397aebb0fe4e82245bf755ea3737dbaf47bb1937ae94"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660427/",
+          "status": 200,
+          "bytes": 7943,
+          "sha256": "a2ee36d5836318c8ba187db808047bfe65af3913b72ea83b3fb153e52730b43e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660427&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 830,
+          "sha256": "f01145f935517a57d494e142648bea94b85e67a377bf9a337bdd56c3cccf72a3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660427/ratings/",
+          "status": 200,
+          "bytes": 455,
+          "sha256": "c9c9c926bbd18cd562acb2fbdd8edfb6d1061c94202228b3818874ea9af772fd"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "660427",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660427/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sfairboatadventures",
+      "itemId": "660430",
+      "fetchedAt": "2026-10-03T18:10:11.367622+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660430/content/",
+          "status": 200,
+          "bytes": 2130,
+          "sha256": "35d1be78c479b5c238f2e62d6f0d579c026dbf0c5c38d81cebc8cdd8bb34aaae"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660430/structured-description/",
+          "status": 200,
+          "bytes": 1355,
+          "sha256": "2912f27813378f3ecd27407148743122093ea3ab5336fc0b3ae98eef885291b9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660430/",
+          "status": 200,
+          "bytes": 7892,
+          "sha256": "35cdc290458eff18e089ebd4142164842327cdac778379904694d6186781d52b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660430&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 830,
+          "sha256": "a85e07abd02c9790c5b98c1d5b71593e08a885bf9f1e7934900693c92095318c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660430/ratings/",
+          "status": 200,
+          "bytes": 458,
+          "sha256": "1d11bdec8e930f1918d83bf459ec3f333bfc9e909093838099f10cdab903133d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "660430",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660430/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sfjetskirentals",
+      "itemId": "469503",
+      "fetchedAt": "2026-10-03T18:10:11.425310+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469503/content/",
+          "status": 200,
+          "bytes": 9958,
+          "sha256": "fc3dac454672e64fd1cf656bd799fab68522411977032ef9de33273f556c8101"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469503/structured-description/",
+          "status": 200,
+          "bytes": 5898,
+          "sha256": "3dc25c300bad93d67ed6cffcafc44e4f9db191ada7357c842dc92699cdeed51f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469503/",
+          "status": 200,
+          "bytes": 19859,
+          "sha256": "ef7df8735332dcb3575b7a1696ebbb6c282bc80ee548562c43d797ec5ac943c0"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=469503&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469503/ratings/",
+          "status": 200,
+          "bytes": 447,
+          "sha256": "d7ebfe0661479dd9d6743a7637cd3feded2f48a0f96c2228aec4db9a25e0fd00"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "469503",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/469503/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "itemId": "469657",
+      "fetchedAt": "2026-10-03T18:10:11.519247+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469657/content/",
+          "status": 200,
+          "bytes": 10504,
+          "sha256": "f3fd42ae8b1efc4f8466077470c4c97ecfc6b319f891b37b4d558d9ce22db8f7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469657/structured-description/",
+          "status": 200,
+          "bytes": 5127,
+          "sha256": "b6d6d24590802ce45d6f8143b5a12f40a2ea59369303d5f7b1cac665b85b66ac"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469657/",
+          "status": 200,
+          "bytes": 21850,
+          "sha256": "e88eb52b585546556c7e00684998e01fe1d111c899e037b09bdbba2cc6b627ce"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=469657&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 544,
+          "sha256": "64db2abc24eeb08d059909345e8db817876c91597cca584902526f72d0b89689"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469657/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "724c4404bcf28dad95193a314330333fd51fbf05e049ef2f795b53bfae83f58e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "469657",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/469657/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sfjetskirentals",
+      "itemId": "538569",
+      "fetchedAt": "2026-10-03T18:10:13.249374+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/538569/content/",
+          "status": 200,
+          "bytes": 6998,
+          "sha256": "1149c9b0e3d08697f78e5d7b4ea2ab044a9844582e36afcfe3c33112d9618d6a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/538569/structured-description/",
+          "status": 200,
+          "bytes": 3173,
+          "sha256": "1043ecf0800b4ae9f6dc8552f37669c79418abb87d321ca778c7e2c1708683c1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/538569/",
+          "status": 200,
+          "bytes": 14726,
+          "sha256": "802f008349ade77807f4a3a21150107a88727c40ad9817d43f03584a5e1dee99"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=538569&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/538569/ratings/",
+          "status": 200,
+          "bytes": 435,
+          "sha256": "d15150c8986b3075714530b77a40256b59c37595ba6c3b05e933146d5821250d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "538569",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/538569/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "itemId": "575607",
+      "fetchedAt": "2026-10-03T18:10:13.466208+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/575607/content/",
+          "status": 200,
+          "bytes": 9626,
+          "sha256": "8b3beaf865ea0e295709c64ae2626b9bcadb725b066b9253a883688f858d345b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/575607/structured-description/",
+          "status": 200,
+          "bytes": 5762,
+          "sha256": "7a71f4e3143753404165bd398b1bbec7fd9d39f7e4b0e4d9a83167811b555ce8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/575607/",
+          "status": 200,
+          "bytes": 15745,
+          "sha256": "daafee5919c2ca868941f9eb847b90e685a21c96746183f75d99f3d713f3a1b9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=575607&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/575607/ratings/",
+          "status": 200,
+          "bytes": 434,
+          "sha256": "8eb2f97f0cbb540a4ae9fe3a08ab02506a490d7b2e49fe01981dd948aee49e58"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "575607",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/575607/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "itemId": "597414",
+      "fetchedAt": "2026-10-03T18:10:13.706471+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/597414/content/",
+          "status": 200,
+          "bytes": 8210,
+          "sha256": "9e32222346499913f55fcabbc050c9df3f0d71a35c9cd873d4cfdc08ad1c7b4c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/597414/structured-description/",
+          "status": 200,
+          "bytes": 5184,
+          "sha256": "d53f27fc335a152566999d804b64d02faddd7848450270da35ce90e3099625e5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/597414/",
+          "status": 200,
+          "bytes": 18907,
+          "sha256": "bb627d6731a3e38f2ed4df9e5c16ddd7a344e522f32d18bba9a79e7ef2ec77bd"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=597414&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/597414/ratings/",
+          "status": 200,
+          "bytes": 435,
+          "sha256": "62173714c12d32720f15b24140ed8393f5076d159c15e7dc49d748c28c963397"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "597414",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/597414/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "skytoursmiami",
+      "itemId": "371933",
+      "fetchedAt": "2026-10-03T18:10:14.030886+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/skytoursmiami/371933/content/",
+          "status": 200,
+          "bytes": 11461,
+          "sha256": "d1ab84f627f0500d31d1af110a96c16729902cab185ad6564f350097e6cf8968"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/skytoursmiami/371933/structured-description/",
+          "status": 200,
+          "bytes": 7572,
+          "sha256": "8b5ad67fa3596e5d92f78cdee722d5624d241fd58fd8db75b08db652c9f0f295"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/skytoursmiami/items/371933/",
+          "status": 200,
+          "bytes": 48357,
+          "sha256": "3ed9cc2a75c24fe287e0bdfe721a4e6d9430aa5dc2a1bf16812444f48260322c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/skytoursmiami/price-preview/per-item/v2/?asn=fhdn&item_pks=371933&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 533,
+          "sha256": "b4c1e0eb81d0122217bbaa44ba2b50944f9fc0dc904a2c0ab37019d2b80af5c0"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/skytoursmiami/items/371933/ratings/",
+          "status": 200,
+          "bytes": 524,
+          "sha256": "270c4431ed686a2ece7e440937f83048585e07f76d909c5bbe1bb3b7abe26900"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "371933",
+        "provider": "skytoursmiami",
+        "bookingUrl": "https://fareharbor.com/embeds/book/skytoursmiami/items/371933/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

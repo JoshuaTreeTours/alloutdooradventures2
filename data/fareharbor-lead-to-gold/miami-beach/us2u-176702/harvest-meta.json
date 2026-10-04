@@ -1,0 +1,47 @@
+{
+  "company": "us2u",
+  "itemId": "176702",
+  "fetchedAt": "2026-10-03T18:10:21.741331+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/us2u/176702/content/",
+      "status": 200,
+      "bytes": 3097,
+      "sha256": "30de1fcfc6561c729977f892790ca9f64622fd7ccb31bac98f2bb4e7a3d3c027"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/us2u/176702/structured-description/",
+      "status": 200,
+      "bytes": 2947,
+      "sha256": "89653c2b1abd116ae97ebf71ef9bc9d13bbda113f3d042e53d7204f4b6ac21e1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/us2u/items/176702/",
+      "status": 200,
+      "bytes": 13582,
+      "sha256": "9ae30a82d4977d66037f2a8f9295b4a4447e7296e3cb9a5337c4a2563abe26f7"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/us2u/price-preview/per-item/v2/?asn=fhdn&item_pks=176702&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 787,
+      "sha256": "aeb97a9d7433a26df2e6586f699fd0b5808c0cde9f2556a91921ac23dce2d99c"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/us2u/items/176702/ratings/",
+      "status": 200,
+      "bytes": 594,
+      "sha256": "f770731faf3207e20afc27ebc9b9955ddde0106c740d290baf6d3c5038bef84b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "176702",
+    "provider": "us2u",
+    "bookingUrl": "https://fareharbor.com/embeds/book/us2u/items/176702/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

@@ -1,0 +1,48 @@
+{
+  "company": "floridaunderwatersports",
+  "itemId": "430401",
+  "fetchedAt": "2026-10-03T18:09:37.553851+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/floridaunderwatersports/430401/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/floridaunderwatersports/430401/structured-description/",
+      "status": 404,
+      "bytes": 588105,
+      "sha256": "d2c85f308dbf9b83ad4d77b9edcc5bbfe16edda81fb625342f9748bbb84765dc"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/floridaunderwatersports/items/430401/",
+      "status": 404,
+      "bytes": 588079,
+      "sha256": "48658930bf15d63563dc80c6e5830bd050cf89da380639894622b5a9dd6d5740"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/floridaunderwatersports/price-preview/per-item/v2/?asn=fhdn&item_pks=430401&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 147,
+      "sha256": "26afa9ab418d4ed585cb2ee77133b99de397defab5eced511637728bba9063aa"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/floridaunderwatersports/items/430401/ratings/",
+      "status": 404,
+      "bytes": 588095,
+      "sha256": "4a39dedf317ed3e06cd92462ebc0923fccb75c8d9ff2020f90b97886132aa6c2"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "430401",
+    "provider": "floridaunderwatersports",
+    "bookingUrl": "https://fareharbor.com/embeds/book/floridaunderwatersports/items/430401/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

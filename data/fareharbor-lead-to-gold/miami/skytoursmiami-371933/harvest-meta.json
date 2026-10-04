@@ -1,0 +1,47 @@
+{
+  "company": "skytoursmiami",
+  "itemId": "371933",
+  "fetchedAt": "2026-10-03T18:10:14.030886+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/skytoursmiami/371933/content/",
+      "status": 200,
+      "bytes": 11461,
+      "sha256": "d1ab84f627f0500d31d1af110a96c16729902cab185ad6564f350097e6cf8968"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/skytoursmiami/371933/structured-description/",
+      "status": 200,
+      "bytes": 7572,
+      "sha256": "8b5ad67fa3596e5d92f78cdee722d5624d241fd58fd8db75b08db652c9f0f295"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/skytoursmiami/items/371933/",
+      "status": 200,
+      "bytes": 48357,
+      "sha256": "3ed9cc2a75c24fe287e0bdfe721a4e6d9430aa5dc2a1bf16812444f48260322c"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/skytoursmiami/price-preview/per-item/v2/?asn=fhdn&item_pks=371933&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 533,
+      "sha256": "b4c1e0eb81d0122217bbaa44ba2b50944f9fc0dc904a2c0ab37019d2b80af5c0"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/skytoursmiami/items/371933/ratings/",
+      "status": 200,
+      "bytes": 524,
+      "sha256": "270c4431ed686a2ece7e440937f83048585e07f76d909c5bbe1bb3b7abe26900"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "371933",
+    "provider": "skytoursmiami",
+    "bookingUrl": "https://fareharbor.com/embeds/book/skytoursmiami/items/371933/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

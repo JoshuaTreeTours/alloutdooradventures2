@@ -106,6 +106,26 @@ class GeographyRulesTest(unittest.TestCase):
         self.assertEqual(result["citySlug"], "marina-del-rey")
         self.assertFalse(result["conflictsWithExpected"])
 
+    def test_st_petersburg_is_not_read_as_a_street_suffix(self):
+        expected = {
+            "city": "St. Petersburg",
+            "state": "Florida",
+            "citySlug": "st-petersburg",
+            "stateSlug": "florida",
+        }
+        catalog = {
+            **CATALOG,
+            ("florida", "st-petersburg"): expected,
+        }
+        signals = collect_place_signals(
+            meeting="200 Beach Dr NE, South St. Petersburg, FL 33701",
+        )
+        result = assess_geography(
+            expected=expected, catalog_destinations=catalog, signals=signals
+        )
+        self.assertEqual(result["disposition"], "keep")
+        self.assertEqual(result["citySlug"], "st-petersburg")
+
     def test_miami_beach_meeting_point_moves_off_chicago_bucket(self):
         chicago = {
             "city": "Chicago",
@@ -217,6 +237,8 @@ class EditorialRulesTest(unittest.TestCase):
             )
         )
         self.assertEqual(normalize_activity_duration("3 hours", None), "3 hours")
+        self.assertEqual(normalize_activity_duration("1 Hours", None), "1 Hour")
+        self.assertEqual(normalize_activity_duration("4-12 Hours", None), "4-12 Hours")
         self.assertIsNone(normalize_activity_duration("Varies", None))
 
 

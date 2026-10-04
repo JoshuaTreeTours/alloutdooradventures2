@@ -1,0 +1,47 @@
+{
+  "company": "floridaadventuresandrentals",
+  "itemId": "525862",
+  "fetchedAt": "2026-10-03T18:10:27.709741+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525862/content/",
+      "status": 200,
+      "bytes": 9682,
+      "sha256": "27d5ac88d1726304c7e85c231b3969c5300eb85edc1dfc51ba318914a1847235"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525862/structured-description/",
+      "status": 200,
+      "bytes": 8143,
+      "sha256": "9a8a92f79ff0f316fdad30e0ba5e73b40fc5dd4766b54ca2f236b510c6785536"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525862/",
+      "status": 200,
+      "bytes": 20989,
+      "sha256": "c1c419da95488b93af7e986aa8012769ba87629b6cbf918cb2588ed7e224374f"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=525862&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 881,
+      "sha256": "ea7e96c6fbaff1e8a449568bb5952ac399406bb8a6f774ee0f9958803c77371a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525862/ratings/",
+      "status": 200,
+      "bytes": 565,
+      "sha256": "8e8728943c130252087b2457eb762d56e47498f4fe324b044295fb0227920a7e"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "525862",
+    "provider": "floridaadventuresandrentals",
+    "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/525862/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

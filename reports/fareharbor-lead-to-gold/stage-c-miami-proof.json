@@ -1,0 +1,2376 @@
+[
+  {
+    "itemId": "132331",
+    "company": "miamibeachwelcomecenter",
+    "title": "Everglades Airboat and Florida Alligator Show Tour",
+    "operator": "South Beach Welcome Center",
+    "publicPath": "/destinations/florida/miami/tours/everglades-airboat-and-florida-alligator-show-tour-132331",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The booking is an airboat trip in the Florida Everglades. An alligator show is part of the same visit. The boat crosses the River of Grass. Mangroves line the marsh the boat runs through. The airboat is made to move fast across the marsh. A show by Florida Native people is included with the boat ride.",
+      "Thick vegetation covers the ground the boat passes. Guests come alone or with family. The show also takes up food and hunting methods, as the hosts present them. The booking runs about 1 hour. The airboat is the reason for the day, and the marsh is the setting."
+    ],
+    "schemaDescription": "An one-hour airboat outing with South Beach Welcome Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "1 Hours airboat outing"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/WKQAWo7UTryARUKtiHrn",
+    "wordCount": 104,
+    "durationLabel": "1 Hours",
+    "durationIso": "PT1H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $14.99",
+    "priceRows": [
+      {
+        "label": "Person",
+        "note": "$45.00 • (Price online is a Partial Payment Reservation)",
+        "amountLabel": "$14.99"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "14.99",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/miamibeachwelcomecenter/items/132331/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/WKQAWo7UTryARUKtiHrn",
+      "heroHandle": "WKQAWo7UTryARUKtiHrn",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/miamibeachwelcomecenter-132331",
+      "fetchedAt": "2026-10-03T18:10:09.219314+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/miamibeachwelcomecenter/132331/content/",
+          "status": 200,
+          "bytes": 3031,
+          "sha256": "fce5e2c4e390d9524b206935575c5696fc776df8f585c3c1a1059ed4424597ac"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/miamibeachwelcomecenter/132331/structured-description/",
+          "status": 200,
+          "bytes": 2492,
+          "sha256": "0ff4f30ba1f6bce7341ba5a24576747edcda05db4ac89db40622c77b0f25b0b5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/miamibeachwelcomecenter/items/132331/",
+          "status": 200,
+          "bytes": 10090,
+          "sha256": "b6070bfc812d3f4802bab13ab678e849b79c5abac53ccb86495bd4ac80889cec"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/miamibeachwelcomecenter/price-preview/per-item/v2/?asn=fhdn&item_pks=132331&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 587,
+          "sha256": "0e32c9a903da97a74b05f32bd2000359c535ab4b76827274b967e2b13d8dd90f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/miamibeachwelcomecenter/items/132331/ratings/",
+          "status": 200,
+          "bytes": 483,
+          "sha256": "68b86826918661eda013e64a785720fc0efd6b21da3682c843348ecfccbe39db"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Person",
+          "note": "$45.00 • (Price online is a Partial Payment Reservation)",
+          "amount": 14.99
+        },
+        "customerTypes": [
+          {
+            "singular": "Person",
+            "note": "$45.00 • (Price online is a Partial Payment Reservation)",
+            "amount": 14.99
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "$45 • 3 Hour • All Ages • Wildlife Sightings",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Rates Person: $45 Price online is a pre payment ($14.99) 1 Hours Airboats offer a unique experience, like no other.",
+          "- Comfortable clothing & shoes - License or valid ID Meeting location 305 Lincoln Road Miami Beach."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Airboat Ride Through Several Ecosystems",
+          "Rates Person",
+          "Indian Natives"
+        ],
+        "measures": [
+          "1 Hours"
+        ],
+        "description": "A Unique, Airboat Ride Through Several Ecosystems! Rates Person: $45 Price online is a pre payment ($14.99) 1 Hours Airboats offer a unique experience, like no other. Whether you are coming alone or are accompanied by your family members, the airboat ride will not disappoint you. The joy of riding an airboat hits high speeds is something that you cannot always express in words. And then, sailing across the River of Grass , you'll be amazed to see the tropical island filled with lush vegetation. The captains make sure you see the most unbelievable sights that you have perhaps never seen before. Remember to keep your eyes and ears wide open while you sail as you never know when you'll come across an alligator or other rare species. The Airboat Young or old, everybody favors an airboat ride to the Everglades. And why not, an airboat is perhaps the best transportation choice that takes you to this eco-wonderland and helps you explore its riches. There's nothing like getting the sweet fragrance of this marshland when you take a ride through its dense mangroves. Included is a show by the Indian Natives of Florida. Learn and see their culture, foods, hunting techniques and much more. Truly an awesome way to see and enjoy a whole new world. Don't miss out on this unique experience that you can only capture on this tour. Wonderful learning and exciting experience for all ages alike. - Comfortable clothing & shoes - License or valid ID Meeting location 305 Lincoln Road Miami Beach",
+        "detailsText": "Arrival Please arrive 15 minutes early! Please meet us at 305 Lincoln Road, Miami Beach. - Comfortable clothing & shoes - License or valid ID $45 • 3 Hour • All Ages • Wildlife Sightings $45 • 3 Hour • All Ages • Wildlife Sightings",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "132331",
+        "provider": "miamibeachwelcomecenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/miamibeachwelcomecenter/items/132331/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "660368",
+    "company": "sfairboatadventures",
+    "title": "Nightime Python Road Hunt",
+    "operator": "South Florida Airboat Adventures",
+    "publicPath": "/destinations/florida/miami/tours/nightime-python-road-hunt-660368",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Nightime Python Road Hunt is a four-hour guided outing with South Florida Airboat Adventures in Miami. The sail runs in the evening under the stars.",
+      "Groups are capped at 4."
+    ],
+    "schemaDescription": "Nightime Python Road Hunt is a four-hour guided outing with South Florida Airboat Adventures in Miami.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "four-hour guided outing in Miami",
+      "Groups are capped at 4"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/eD1QWTMYTIeokra7lAOQ",
+    "wordCount": 31,
+    "durationLabel": "4 Hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "5334 FL-90, Miami, FL 33185",
+    "visiblePriceLabel": "From $800",
+    "priceRows": [
+      {
+        "label": "Group",
+        "note": "Night hunt group up to four people total",
+        "amountLabel": "$800"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "800.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660368/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/eD1QWTMYTIeokra7lAOQ",
+      "heroHandle": "eD1QWTMYTIeokra7lAOQ",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfairboatadventures-660368",
+      "fetchedAt": "2026-10-03T18:10:09.220086+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660368/content/",
+          "status": 200,
+          "bytes": 2885,
+          "sha256": "4576ef8db37a3c747b716b9261cf1a4571d87db0a887621252ee40ee93f609ee"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660368/structured-description/",
+          "status": 200,
+          "bytes": 1710,
+          "sha256": "1ac8d2879920b47298e49f0f206af70703b068c9046f797ce5670efdcb8e400b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660368/",
+          "status": 200,
+          "bytes": 8282,
+          "sha256": "d4689d29eab933a826774c5ebe85d9310a0c867d89f3059efda3bc9a13a2c702"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660368&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 569,
+          "sha256": "5d687b2fa24a043e9833f09528d42d41d603f1f27b9b6ecb16ee870d96731c17"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660368/ratings/",
+          "status": 200,
+          "bytes": 453,
+          "sha256": "b9836ede152a128bb170e8abfb8d1b360bf6b75e9a5c93b82ac7ac23b66b64ed"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Group",
+          "note": "Night hunt group up to four people total",
+          "amount": 800.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Group",
+            "note": "Night hunt group up to four people total",
+            "amount": 800.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T19:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 Hours",
+        "meetingAddress": "5334 FL-90, Miami, FL 33185",
+        "itemLocation": null,
+        "headline": "Experience the Wild Side of the Everglades: Nighttime Python Hunt with South Florida Airboat",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "4",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "South Florida"
+        ],
+        "measures": [],
+        "description": "Join our expert guides for an unforgettable nighttime road hunt through the Everglades in search of the invasive Burmese python. As the sun sets and the marshlands come alive, you'll cruise along back roads and levees under the stars, spotting wildlife with high-powered lights and keeping your eyes peeled for the ultimate prize-Florida's most notorious predator. This one-of-a-kind adventure offers a thrilling combination of excitement, education, and conservation. Not only will you get the adrenaline rush of a nighttime hunt, but you'll also learn about the impact of pythons on the Everglades ecosystem and the efforts to control their spread. Perfect for adventurers, wildlife enthusiasts, and anyone seeking a truly unique South Florida experience!",
+        "detailsText": "Join our expert guides for an unforgettable nighttime road hunt through the Everglades in search of the invasive Burmese python. As the sun sets and the marshlands come alive, you'll cruise along back roads and levees under the stars, spotting wildlife with high-powered lights and keeping your eyes peeled for the ultimate prize-Florida's most notorious predator. This one-of-a-kind adventure offers a thrilling combination of excitement, education, and conservation. Not only will you get the adrenaline rush of a nighttime hunt, but you'll also learn about the impact of pythons on the Everglades ecosystem and the efforts to control their spread. Perfect for adventurers, wildlife enthusiasts, and anyone seeking a truly unique South Florida experience! Experience the Wild Side of the Everglades: Nighttime Python Hunt with South Florida Airboat Experience the Wild Side of the Everglades: Nighttime Python Hunt with South Florida Airboat",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "660368",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660368/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "660403",
+    "company": "sfairboatadventures",
+    "title": "Private Everglades Airboat Tour",
+    "operator": "South Florida Airboat Adventures",
+    "publicPath": "/destinations/florida/miami/tours/private-everglades-airboat-tour-660403",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator South Florida Airboat Adventures lists this outing."
+    ],
+    "schemaDescription": "The operator South Florida Airboat Adventures lists this outing.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 9,
+    "durationLabel": "1-3 Hour",
+    "durationIso": null,
+    "meetingLocation": "5334 FL-90, Miami, FL 33185",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "AggregateRating is omitted because the composed prose matched another item whose source does not overlap this item.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/L9C5eBDQ4iXJQF7RgjfA",
+      "heroHandle": "L9C5eBDQ4iXJQF7RgjfA",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/KdI6t9K0SxWystBTmOpt",
+          "handle": "KdI6t9K0SxWystBTmOpt",
+          "pixelSha256": "bf88916dc4f6997e8794250f07f7bd4f5dbf32b2378df6dcafc33c12a086e382",
+          "differenceHashDistanceFromHero": 8,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.0223,
+          "classification": "NEAR_DUPLICATE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/KdI6t9K0SxWystBTmOpt",
+          "handle": "KdI6t9K0SxWystBTmOpt",
+          "pixelSha256": "bf88916dc4f6997e8794250f07f7bd4f5dbf32b2378df6dcafc33c12a086e382",
+          "differenceHashDistanceFromHero": 8,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.0223,
+          "classification": "NEAR_DUPLICATE"
+        }
+      ],
+      "selected": null,
+      "action": "removed",
+      "reason": "harvest images were identical or near-identical to the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfairboatadventures-660403",
+      "fetchedAt": "2026-10-03T18:10:09.220645+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660403/content/",
+          "status": 200,
+          "bytes": 3450,
+          "sha256": "a974334a35ec359c8c9730fb5c633cdcbc7059a945d5756542bbfab464635c7a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660403/structured-description/",
+          "status": 200,
+          "bytes": 2795,
+          "sha256": "862d83907d0b6193ed3780d804adec3caf90f3f46f6f642045c17f0b7eb7edcf"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660403/",
+          "status": 200,
+          "bytes": 8848,
+          "sha256": "8ab73f790bd2c3a242a79b5f903a2910eb816a77c36bcd22368d94d958333a57"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660403&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1431,
+          "sha256": "d5efb3159f4c098acf986bb636fb7744863a22cd3655805bea92b622ff6442cb"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660403/ratings/",
+          "status": 200,
+          "bytes": 459,
+          "sha256": "e132caffb7a9141ff6a4f7da6c411e9cf23063c84b9177460a7691cf50f402b6"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One Hour Private Tour",
+          "note": "for up to 2 people | $60 - each additional person",
+          "amount": 200.0
+        },
+        "customerTypes": [
+          {
+            "singular": "One Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 200.0
+          },
+          {
+            "singular": "One and a Half Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 275.0
+          },
+          {
+            "singular": "Two Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 375.0
+          },
+          {
+            "singular": "Two and Half Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 475.0
+          },
+          {
+            "singular": "Three Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 575.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T15:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1-3 Hour",
+        "meetingAddress": "5334 FL-90, Miami, FL 33185",
+        "itemLocation": null,
+        "headline": "Your Exclusive Everglades Adventure:",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "6",
+        "included": [
+          "Expert local captain with deep knowledge of the Everglades",
+          "Alligator sightings guaranteed (in natural habitat)",
+          "Panoramic views of sawgrass marshes and wildlife",
+          "Safety equipment and noise-cancelling headsets",
+          "Cooler with ice and water",
+          "Free parking on-site"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [
+          "Weather-appropriate clothing: Lightweight, moisture-wicking clothing for hot, humid weather, or layers for cooler months",
+          "Closed-toe shoes: For safety when boarding the airboat",
+          "Insect Repellent: The Everglades can have mosquitoes, especially near the water's edge"
+        ],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "At South Florida Airboat Adventures"
+        ],
+        "measures": [],
+        "description": "Start Your Everglades Adventure Today The wonders of the Everglades are waiting for you. At South Florida Airboat Adventures, we're ready to guide you through this unique ecosystem, sharing our knowledge and passion for this incredible natural treasure. Discover wildlife, and take in the breathtaking beauty of the natural landscape. Ideal for nature lovers, families, photographers, and adventure seekers looking for a deeper connection with this one-of-a-kind ecosystem.",
+        "detailsText": "Glide across the Everglades on a private airboat tour with South Florida Airboat Adventures, where it's just you, your group, and your captain exploring the river of grass. Experience the beauty and wildlife of the Everglades up close at your own pace, creating a personalized and unforgettable adventure. Your Exclusive Everglades Adventure: Your Exclusive Everglades Adventure:",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "660403",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660403/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "660426",
+    "company": "sfairboatadventures",
+    "title": "Sunrise Private Airboat Tour",
+    "operator": "South Florida Airboat Adventures",
+    "publicPath": "/destinations/florida/miami/tours/sunrise-private-airboat-tour-660426",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator South Florida Airboat Adventures lists this outing."
+    ],
+    "schemaDescription": "The operator South Florida Airboat Adventures lists this outing.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 9,
+    "durationLabel": "1-2 Hour",
+    "durationIso": null,
+    "meetingLocation": "5334 FL-90, Miami, FL 33185",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "AggregateRating is omitted because the composed prose matched another item whose source does not overlap this item.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/UbYlFMrSIKfM2pgy6VDA",
+      "heroHandle": "UbYlFMrSIKfM2pgy6VDA",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfairboatadventures-660426",
+      "fetchedAt": "2026-10-03T18:10:09.221572+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660426/content/",
+          "status": 200,
+          "bytes": 1849,
+          "sha256": "b4241c0f72be5710a9b543d8ccca90d442057348e59f16972e69d908fe01dc2b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660426/structured-description/",
+          "status": 200,
+          "bytes": 1215,
+          "sha256": "e7574ea01e0205684c66d5ea92c5a8ee0b15d0b720a4d5f2981ab9500b3a051c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660426/",
+          "status": 200,
+          "bytes": 7747,
+          "sha256": "3cace2300137f917cad7c07556651f1f4431fd19fb20d406cff703197a41bbfe"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660426&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 830,
+          "sha256": "226e4fa919fa3e0e82e3d47e3752d6b8a0829af8326581acca88dc97fbed4312"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660426/ratings/",
+          "status": 200,
+          "bytes": 456,
+          "sha256": "d6b494779eaf7492af7ba77e78d1f2834ab574a9873732f4abc54280ac5b2668"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One and a Half Hour Private Tour",
+          "note": "for up to 2 people | $60 - each additional person",
+          "amount": 375.0
+        },
+        "customerTypes": [
+          {
+            "singular": "One and a Half Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 375.0
+          },
+          {
+            "singular": "Two Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 475.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T06:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1-2 Hour",
+        "meetingAddress": "5334 FL-90, Miami, FL 33185",
+        "itemLocation": null,
+        "headline": "Catch the First Light on a Private Airboat Adventure",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "6",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Witness the Everglades wake up on a private sunrise airboat tour, where the golden morning light reflects off the water and wildlife stirs to life. Enjoy a peaceful, exclusive adventure with your captain as you glide through the river of grass at the most magical time of day.",
+        "detailsText": "Witness the Everglades wake up on a private sunrise airboat tour, where the golden morning light reflects off the water and wildlife stirs to life. Enjoy a peaceful, exclusive adventure with your captain as you glide through the river of grass at the most magical time of day. Catch the First Light on a Private Airboat Adventure Catch the First Light on a Private Airboat Adventure",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "660426",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660426/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "660427",
+    "company": "sfairboatadventures",
+    "title": "Sunset Private Airboat Tour",
+    "operator": "South Florida Airboat Adventures",
+    "publicPath": "/destinations/florida/miami/tours/sunset-private-airboat-tour-660427",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator South Florida Airboat Adventures lists this outing."
+    ],
+    "schemaDescription": "The operator South Florida Airboat Adventures lists this outing.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 9,
+    "durationLabel": "1-2 Hour",
+    "durationIso": null,
+    "meetingLocation": "5334 FL-90, Miami, FL 33185",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "AggregateRating is omitted because the composed prose matched another item whose source does not overlap this item.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/t3nAf8CGSYu1ZfKeoYIw",
+      "heroHandle": "t3nAf8CGSYu1ZfKeoYIw",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfairboatadventures-660427",
+      "fetchedAt": "2026-10-03T18:10:11.192515+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660427/content/",
+          "status": 200,
+          "bytes": 2246,
+          "sha256": "a7a81ffbe7f04215c7f11b5d4373bf47b131f8cfc434e787fd4ef4383cf93b1a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660427/structured-description/",
+          "status": 200,
+          "bytes": 1414,
+          "sha256": "4520eb79b1d20b0f76f2397aebb0fe4e82245bf755ea3737dbaf47bb1937ae94"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660427/",
+          "status": 200,
+          "bytes": 7943,
+          "sha256": "a2ee36d5836318c8ba187db808047bfe65af3913b72ea83b3fb153e52730b43e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660427&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 830,
+          "sha256": "f01145f935517a57d494e142648bea94b85e67a377bf9a337bdd56c3cccf72a3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660427/ratings/",
+          "status": 200,
+          "bytes": 455,
+          "sha256": "c9c9c926bbd18cd562acb2fbdd8edfb6d1061c94202228b3818874ea9af772fd"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One and a Half Hour Private Tour",
+          "note": "for up to 2 people | $60 - each additional person",
+          "amount": 375.0
+        },
+        "customerTypes": [
+          {
+            "singular": "One and a Half Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 375.0
+          },
+          {
+            "singular": "Two Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 475.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T17:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1-2 Hour",
+        "meetingAddress": "5334 FL-90, Miami, FL 33185",
+        "itemLocation": null,
+        "headline": "Golden Hour Adventure: Private Everglades Airboat Tour",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "6",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "South Florida"
+        ],
+        "measures": [],
+        "description": "Experience the magic of the Everglades at golden hour on a private sunset airboat tour. As the sun sinks low over the river of grass, you'll glide across shimmering waters, surrounded by the vibrant colors of the evening sky. Your captain will guide you through hidden waterways and wide-open marshes while you spot wildlife settling in for the night. Peaceful, romantic, and unforgettable, this exclusive adventure is the perfect way to end your day in South Florida.",
+        "detailsText": "Experience the magic of the Everglades at golden hour on a private sunset airboat tour. As the sun sinks low over the river of grass, you'll glide across shimmering waters, surrounded by the vibrant colors of the evening sky. Your captain will guide you through hidden waterways and wide-open marshes while you spot wildlife settling in for the night. Peaceful, romantic, and unforgettable, this exclusive adventure is the perfect way to end your day in South Florida. Golden Hour Adventure: Private Everglades Airboat Tour Golden Hour Adventure: Private Everglades Airboat Tour",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "660427",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660427/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "660430",
+    "company": "sfairboatadventures",
+    "title": "Nighttime Private Airboat Tour",
+    "operator": "South Florida Airboat Adventures",
+    "publicPath": "/destinations/florida/miami/tours/nighttime-private-airboat-tour-660430",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator South Florida Airboat Adventures lists this outing."
+    ],
+    "schemaDescription": "The operator South Florida Airboat Adventures lists this outing.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 9,
+    "durationLabel": "1-2 Hour",
+    "durationIso": null,
+    "meetingLocation": "5334 FL-90, Miami, FL 33185",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "AggregateRating is omitted because the composed prose matched another item whose source does not overlap this item.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/yHDCca7RFaAs8zcWkDa4",
+      "heroHandle": "yHDCca7RFaAs8zcWkDa4",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfairboatadventures-660430",
+      "fetchedAt": "2026-10-03T18:10:11.367622+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660430/content/",
+          "status": 200,
+          "bytes": 2130,
+          "sha256": "35d1be78c479b5c238f2e62d6f0d579c026dbf0c5c38d81cebc8cdd8bb34aaae"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfairboatadventures/660430/structured-description/",
+          "status": 200,
+          "bytes": 1355,
+          "sha256": "2912f27813378f3ecd27407148743122093ea3ab5336fc0b3ae98eef885291b9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660430/",
+          "status": 200,
+          "bytes": 7892,
+          "sha256": "35cdc290458eff18e089ebd4142164842327cdac778379904694d6186781d52b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfairboatadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=660430&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 830,
+          "sha256": "a85e07abd02c9790c5b98c1d5b71593e08a885bf9f1e7934900693c92095318c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfairboatadventures/items/660430/ratings/",
+          "status": 200,
+          "bytes": 458,
+          "sha256": "1d11bdec8e930f1918d83bf459ec3f333bfc9e909093838099f10cdab903133d"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One and a Half Hour Private Tour",
+          "note": "for up to 2 people | $60 - each additional person",
+          "amount": 375.0
+        },
+        "customerTypes": [
+          {
+            "singular": "One and a Half Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 375.0
+          },
+          {
+            "singular": "Two Hour Private Tour",
+            "note": "for up to 2 people | $60 - each additional person",
+            "amount": 475.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T17:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1-2 Hour",
+        "meetingAddress": "5334 FL-90, Miami, FL 33185",
+        "itemLocation": null,
+        "headline": "Everglades by Moonlight: Private Night Airboat Tour",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "6",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Discover the Everglades like never before on a private nighttime airboat tour. As darkness falls, you'll glide through quiet marshes under the moon and stars, using spotlights to search for the glowing eyes of alligators and other nocturnal wildlife. With only your group and captain aboard, this exclusive adventure offers both thrills and serenity, revealing a side of the Everglades that few ever get to see.",
+        "detailsText": "Discover the Everglades like never before on a private nighttime airboat tour. As darkness falls, you'll glide through quiet marshes under the moon and stars, using spotlights to search for the glowing eyes of alligators and other nocturnal wildlife. With only your group and captain aboard, this exclusive adventure offers both thrills and serenity, revealing a side of the Everglades that few ever get to see. Everglades by Moonlight: Private Night Airboat Tour Everglades by Moonlight: Private Night Airboat Tour",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "660430",
+        "provider": "sfairboatadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfairboatadventures/items/660430/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "469503",
+    "company": "sfjetskirentals",
+    "title": "Bella Vita Cruiser Yacht 50’",
+    "operator": "Jetski Rentals of South Florida",
+    "publicPath": "/destinations/florida/miami/tours/bella-vita-cruiser-yacht-50-469503",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The skyline is the main view as the boat moves through the harbor. This is a private sandbar charter on the water. The booking is about 2 hours. From the water, guests see Bear Cut and No Name Harbor. Vizcaya Museum and Key Biscayne come into view as the boat moves.",
+      "The cruise also passes Fuel Bluetooth. The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by."
+    ],
+    "schemaDescription": "A 2- to 8-hour harbor outing with Jetski Rentals of South Florida on Miami Harbor. The sail passes 2 Hours Trip, 3 Hours Trip, and 6 Hours Trip.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2- to 8-hour harbor outing in Miami",
+      "2 Hours Trip and 3 Hours Trip",
+      "Captain"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/W9b88GKMRZeCwGqxiALB"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/Yp46GZF0QySxp1tOjTj5",
+    "wordCount": 106,
+    "durationLabel": "2-8 Hours",
+    "durationIso": null,
+    "meetingLocation": "555 NE 15th St Miami, FL 33132 USA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469503/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Yp46GZF0QySxp1tOjTj5",
+      "heroHandle": "Yp46GZF0QySxp1tOjTj5",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/W9b88GKMRZeCwGqxiALB",
+          "handle": "W9b88GKMRZeCwGqxiALB",
+          "pixelSha256": "24a20373b834d07708ed75018c804dc6a5ab8c108df014e01c0b1207b4c25e69",
+          "differenceHashDistanceFromHero": 137,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.22606,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/W9b88GKMRZeCwGqxiALB",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfjetskirentals-469503",
+      "fetchedAt": "2026-10-03T18:10:11.425310+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469503/content/",
+          "status": 200,
+          "bytes": 9958,
+          "sha256": "fc3dac454672e64fd1cf656bd799fab68522411977032ef9de33273f556c8101"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469503/structured-description/",
+          "status": 200,
+          "bytes": 5898,
+          "sha256": "3dc25c300bad93d67ed6cffcafc44e4f9db191ada7357c842dc92699cdeed51f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469503/",
+          "status": 200,
+          "bytes": 19859,
+          "sha256": "ef7df8735332dcb3575b7a1696ebbb6c282bc80ee548562c43d797ec5ac943c0"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=469503&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469503/ratings/",
+          "status": 200,
+          "bytes": 447,
+          "sha256": "d7ebfe0661479dd9d6743a7637cd3feded2f48a0f96c2228aec4db9a25e0fd00"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-8 Hours",
+        "meetingAddress": "555 NE 15th St Miami, FL 33132 USA",
+        "itemLocation": "555 NE 15th St Miami, FL 33132 USA",
+        "headline": "Up to 13 passengers",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "13",
+        "included": [
+          "Captain",
+          "Ice & water",
+          "Fuel",
+          "Bluetooth speakers 🔊",
+          "Floating mat (as requested)"
+        ],
+        "excluded": [
+          "food",
+          "alcohol"
+        ],
+        "itinerary": [
+          "2 Hours Trip",
+          "Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time",
+          "Sunset tours beautiful too through Miami river Brickell with skyline. Fisher island the best spot in Miami for sunset. Don't tell anybody🤣🫶",
+          "Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option)",
+          "3 Hours Trip",
+          "Again marine stadium/ Hobie beach for more water time",
+          "4 Hours Trip - the most complete and popular 💪",
+          "6 Hours Trip",
+          "Fowey rocks lighthouse. A lighthouse in the middle of nowhere with the most crystal waters around. Its BEAUTIFUL. Google it too. Weather allowing",
+          "Haulover sandbar also recommended from 6 hours",
+          "FOR ALL: Fisher island BEAUTIFULL for sunset"
+        ],
+        "routeNotes": [
+          "TYPICAL ITINERARY RECOMMEND FOR DIFFERENT DURATION TRIPS: 2 Hours Trip - Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time. - Sunset tours beautiful too through Miami river Brickell with skyline. Fisher island the best spot in Miami for sunset. Don't tell anybody🤣🫶. - Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option) 3 Hours Trip - More real water swim time for everyone! (We can organize a jet ski to come to the boat too) - Added to millionaire homes we can go to sunset islands which is beautiful and much more relaxed and exclusive. - Again marine stadium/ Hobie beach for more water time. Our recommendation is Vizcaya sandbar. There are other sandbars (bear cut/Nixon) which we can go but to have a great time on the water (that's why you go to a sandbar) you need a bit more time. FYI: There are no bars at the Sandbar 😂. 4 Hours Trip - the most complete and popular 💪 You can do most of the above together and in any order with more flexibility, and enjoy your time on the water without looking constantly at your watch. With 4 hours you have time to stay longer in one spot if you're having a good time. All destinations above are available and also take time to properly enjoy Bear Cut and Nixon sandbar. No Name Harbor, Vizcaya Museum, and Key Biscayne area are options also. 6 Hours Trip - VIP section and some exclusive locations no one will take you - Weather tide allowing: Stittsville and Fowey rocks. Super local vibe. Stittsville are some wooden houses built over the shallow waters past Key Biscayne in the early 1930s in the “prohibition” era where all the gambling etc. took place. Very cool and interesting. Google it. - Fowey rocks lighthouse. A lighthouse in the middle of nowhere with the most crystal waters around. Its BEAUTIFUL. Google it too. Weather allowing. - Haulover sandbar also recommended from 6 hours FOR ALL: Fisher island BEAUTIFULL for sunset."
+        ],
+        "highlights": [
+          "Captained Boat Charter",
+          "Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time",
+          "Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option)"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Swimwear: Multiple options for swimming, sunbathing, and water activities",
+          "Casual clothing: Comfortable tops, shorts, and pants for daytime activities",
+          "Evening wear: Dressy outfits for any onboard events or shore excursions",
+          "Warm clothing: Light jackets or sweaters for cooler evenings",
+          "Hats and sunglasses: Essential for sun protection"
+        ],
+        "cancellation": "All payments are final. No Refunds. No Cancellations.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Bella Vita Cruiser Yacht 50' is the perfect yacht for a boat day out with the family.",
+          "PRICES 2 Hours | $700 3 Hours | $1,000 4 Hours | $1,200 6 Hours | $1,700 8 Hours | $2,000."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Bella Vita Cruiser Yacht"
+        ],
+        "measures": [
+          "11 guests",
+          "2 Hours",
+          "3 Hours",
+          "4 Hours",
+          "6 Hours",
+          "8 Hours"
+        ],
+        "description": "Bella Vita Cruiser Yacht 50' is the perfect yacht for a boat day out with the family. SeaRay holds up to 11 guests on board with more than enough room to walk around not having to bump into any of your group members. This boat comes with a captain included for your worry free day. Your boat comes equipped with boundless amenities including; Bluetooth stereo system to play your favorite jams. Also take advantage of our a giant water mat. PRICES 2 Hours | $700 3 Hours | $1,000 4 Hours | $1,200 6 Hours | $1,700 8 Hours | $2,000",
+        "detailsText": "50' Bella Vita Cruiser Yacht Address: 555 NE 15th St Miami, FL 33132 USA Confirmation: 50' Bella Vita Cruiser Yacht Here is some info that we hope will answer any questions you may have. 1.) Please try and arrive a half hour early as we have sign coast guard documents and get you guys comfortable on the yacht. Safety first. 2.) The crew and yacht will be ready for you for the start of your contracted time. The yacht runs on a tight schedule and adjusting start times is not an option. Please try and arrive early. 3.) The captain will address all of your guests about safety first. It's real important that everyone is paying attention. We take the safety of our guests very seriously. 4.) Federal Law limits the maximum amount of guests allowed on a Recreational Bareboat Charter is 13. Kids count towards the total of 13. The captain and crew DO NOT count. Please make sure we don't have more than 13 as there are no exceptions. 5.) Everyone must remove their shoes while onboard the yacht. 6.) Some smoking is permitted on the yacht. Cigarettes, Cigars, Wacky tabaky is ok as long as the guests are using a small cup for the ashes. Hookahs are NOT allowed on the yacht (no exceptions). Vapes are okay. 7.) Use of the bathroom is allowed but you must dispose of toilet paper and / or personal hygiene products in the waste basket provided. A crew member will assist you with flushing the toilet. 8.) The yacht has a Bluetooth surround sound system for your enjoyment. A crew member will assist you in getting you connected. Once connected we will set the stereo at a safe volume. If the volume needs to be adjusted a crew member will assist you. 9.) The front master bedroom and bathroom are off limits to the guests as we have the owner's personal belongings in there along with necessary documentation for the coast guard. The door has a sign that reads crew only no entry. Please respect the privacy of the owner. 10.) We provide you with some ice and water for hydration. Please make sure you bring with you whatever you wish to eat and drink. Please make sure you bring cups and plates if you feel you will need them. 11.) We will have a nice cruise from the historic Miami River to the anchorage area. We will be at the anchorage area for approximately 2 hours. You will then have the option to jump in the water, enjoy our floating Lili pad, or rent Jet Skis. If you wish to rent Jet Skis please let the captain know and he can reserve them. 12.) If you have a balance remaining to be paid, the captain will collect it when your signing the coast guard documents on board the yacht. The balance must be paid in full before the yacht can leave the docks. We accept the following forms of payment. - Cash - Zelle - Cash-app - Venmo - ApplePay The total amount that you have paid for your charter does not include any gratuity / tip for the crew. If The Captain and First Mate do a great job ensuring your safety, comfort, & enjoyment. Please show your gratitude by tipping accordingly. Thank you! When you arrive PLEASE contact the captain and he will greet you at the main marina entrance door. (If captains name and phone number is not in this confirmation, the captain will call you 24 hours prior to the day of the reservation.) Upon arrival, you will be greeted by your captain, who will board you and prepare you for your trip. Upon arrival, you will be greeted by your captain, who will board you and prepare you for your trip. Up to 13 passengers Up to 13 passengers",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "469503",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/469503/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "469657",
+    "company": "sfjetskirentals",
+    "title": "SeaRay Sundecker 27’",
+    "operator": "Jetski Rentals of South Florida",
+    "publicPath": "/destinations/florida/miami/tours/searay-sundecker-27-469657",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Trip: Tour Brickell/Biscayne Bay, marine stadium, Hobie Beach; quick swim at Monument Island or Picnic Island; sunset option via Miami River/Brickell and Fisher Island. Trip: More swim time; tour Millionaire Homes and Sunset Islands; marine stadium/Hobie Beach; recommended Vizcaya sandbar or other sandbars.",
+      "Trip: Combines the above with more flexibility to linger at favored spots; options include Bear Cut, Nixon sandbar, No Name Harbor, Vizcaya Museum, and Key Biscayne. Trip: Access to VIP/exclusive locations weather permitting, such as Stittsville and Fowey Rocks; Haulover sandbar recommended. Space for up to 11 guests with room to move around.",
+      "Options to visit sandbars, Millionaire's Row, Vizcaya, and scenic sunset routes."
+    ],
+    "schemaDescription": "A guided outing with Jetski Rentals of South Florida in Miami. The outing passes Monument Island, Picnic Island, and Fisher Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Monument Island and Picnic Island",
+      "Captain"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zxnbwwpETSucNAKlpo90"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/97GgWakRRqOVVestUsXN",
+    "wordCount": 111,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "201 NW S River Dr Miami, FL 33128 USA",
+    "visiblePriceLabel": "From $300",
+    "priceRows": [
+      {
+        "label": "2 Hour Rental",
+        "note": "",
+        "amountLabel": "$300"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "300.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469657/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/97GgWakRRqOVVestUsXN",
+      "heroHandle": "97GgWakRRqOVVestUsXN",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/zxnbwwpETSucNAKlpo90",
+          "handle": "zxnbwwpETSucNAKlpo90",
+          "pixelSha256": "0e0f77eb0baf581dc7cf174ca9abab1b71e045217bf9a6ae581e44a30d5e90d9",
+          "differenceHashDistanceFromHero": 120,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.30742,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/zxnbwwpETSucNAKlpo90",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfjetskirentals-469657",
+      "fetchedAt": "2026-10-03T18:10:11.519247+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469657/content/",
+          "status": 200,
+          "bytes": 10504,
+          "sha256": "f3fd42ae8b1efc4f8466077470c4c97ecfc6b319f891b37b4d558d9ce22db8f7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/469657/structured-description/",
+          "status": 200,
+          "bytes": 5127,
+          "sha256": "b6d6d24590802ce45d6f8143b5a12f40a2ea59369303d5f7b1cac665b85b66ac"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469657/",
+          "status": 200,
+          "bytes": 21850,
+          "sha256": "e88eb52b585546556c7e00684998e01fe1d111c899e037b09bdbba2cc6b627ce"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=469657&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 544,
+          "sha256": "64db2abc24eeb08d059909345e8db817876c91597cca584902526f72d0b89689"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/469657/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "724c4404bcf28dad95193a314330333fd51fbf05e049ef2f795b53bfae83f58e"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "2 Hour Rental",
+          "note": "",
+          "amount": 300.0
+        },
+        "customerTypes": [
+          {
+            "singular": "2 Hour Rental",
+            "note": "",
+            "amount": 300.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T23:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "201 NW S River Dr Miami, FL 33128 USA",
+        "itemLocation": "201 NW South River Dr Miami Fl 33128",
+        "headline": "Up to 11 passengers",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Up to 11 guests",
+        "included": [
+          "Captain",
+          "Ice and water",
+          "Fuel",
+          "Bluetooth speakers",
+          "Floating mat (as requested)",
+          "Complimentary soft drinks"
+        ],
+        "excluded": [
+          "Food",
+          "Alcohol"
+        ],
+        "itinerary": [
+          "2-hour trip: Tour Brickell/Biscayne Bay, marine stadium, Hobie Beach; quick swim at Monument Island or Picnic Island; sunset option via Miami River/Brickell and Fisher Island",
+          "3-hour trip: More swim time; tour Millionaire Homes and Sunset Islands; marine stadium/Hobie Beach; recommended Vizcaya sandbar or other sandbars",
+          "4-hour trip: Combines the above with more flexibility to linger at favored spots; options include Bear Cut, Nixon sandbar, No Name Harbor, Vizcaya Museum, and Key Biscayne",
+          "6-hour trip: Access to VIP/exclusive locations weather permitting, such as Stittsville and Fowey Rocks; Haulover sandbar recommended"
+        ],
+        "routeNotes": [
+          "1. 2-hour trip: Tour Brickell/Biscayne Bay, marine stadium, Hobie Beach; quick swim at Monument Island or Picnic Island; sunset option via Miami River/Brickell and Fisher Island. 2. 3-hour trip: More swim time; tour Millionaire Homes and Sunset Islands; marine stadium/Hobie Beach; recommended Vizcaya sandbar or other sandbars. 3. 4-hour trip: Combines the above with more flexibility to linger at favored spots; options include Bear Cut, Nixon sandbar, No Name Harbor, Vizcaya Museum, and Key Biscayne. 4. 6-hour trip: Access to VIP/exclusive locations weather permitting, such as Stittsville and Fowey Rocks; Haulover sandbar recommended. 5. 8-hour trip: Extended time to visit multiple destinations and enjoy full-day experiences including sunset at Fisher Island."
+        ],
+        "highlights": [
+          "Captained private charter for a relaxed, worry-free day on the water",
+          "Space for up to 11 guests with room to move around",
+          "Options to visit sandbars, Millionaire's Row, Vizcaya, and scenic sunset routes"
+        ],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "SeaRay Sundecker",
+          "Biscayne Bay"
+        ],
+        "measures": [
+          "11 guests"
+        ],
+        "description": "Enjoy a worry-free day on the water aboard a SeaRay Sundecker 26' , perfect for family outings or group days with space for up to 11 guests. Your charter includes a captain and a Bluetooth stereo so you can set the soundtrack while you cruise Biscayne Bay, explore sandbars, or tour Millionaire's Row and Fisher Island. The boat also provides a large floating mat for lounging and swimming, plus complimentary ice, water and soft drinks to keep everyone refreshed.",
+        "detailsText": "SeaRay Sundecker 27' Address: 201 NW South River Dr Miami Fl 33128 USA Confirmation: SeaRay Sundecker 27' Here is some info that we hope will answer any questions you may have. 1.) Please try and arrive a half hour early as we have sign coast guard documents and get you guys comfortable on the yacht. Safety first. 2.) The crew and yacht will be ready for you for the start of your contracted time. The yacht runs on a tight schedule and adjusting start times is not an option. Please try and arrive early. 3.) The captain will address all of your guests about safety first. It's real important that everyone is paying attention. We take the safety of our guests very seriously. 4.) Federal Law limits the maximum amount of guests allowed on a Recreational Bareboat Charter is 13. Kids count towards the total of 13. The captain and crew DO NOT count. Please make sure we don't have more than 13 as there are no exceptions. 5.) Everyone must remove their shoes while onboard the yacht. 6.) Hookahs are NOT allowed on the yacht (no exceptions). Vapes are okay. 7.) Use of the bathroom is allowed but you must dispose of toilet paper and / or personal hygiene products in the waste basket provided. A crew member will assist you with flushing the toilet. 8.) The yacht has a Bluetooth surround sound system for your enjoyment. A crew member will assist you in getting you connected. Once connected we will set the stereo at a safe volume. If the volume needs to be adjusted a crew member will assist you. 9.) The front master bedroom and bathroom are off limits to the guests as we have the owner's personal belongings in there along with necessary documentation for the coast guard. The door has a sign that reads crew only no entry. Please respect the privacy of the owner. 10.) We provide you with some ice and water for hydration. Please make sure you bring with you whatever you wish to eat and drink. Please make sure you bring cups and plates if you feel you will need them. 11.) We will have a nice cruise from the historic Miami River to the anchorage area. We will be at the anchorage area for approximately 2 hours. You will then have the option to jump in the water, enjoy our floating Lili pad, or rent Jet Skis. If you wish to rent Jet Skis please let the captain know and he can reserve them. 12.) If you have a balance remaining to be paid, the captain will collect it when your signing the coast guard documents on board the yacht. The balance must be paid in full before the yacht can leave the docks. We accept the following forms of payment. - Cash - Zelle - Cash-app - Venmo - ApplePay The total amount that you have paid for your charter does not include any gratuity / tip for the crew. If The Captain and First Mate do a great job ensuring your safety, comfort, & enjoyment. Please show your gratitude by tipping accordingly. Thank you! When you arrive PLEASE contact the captain and he will greet you at the main marina entrance door. (If captains name and phone number is not in this confirmation, the captain will call you 24 hours prior to the day of the reservation.) Private captained charter aboard a 26-foot SeaRay Sundecker for up to 11 guests with music and a floating mat included. Up to 11 passengers",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "469657",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/469657/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "538569",
+    "company": "sfjetskirentals",
+    "title": "Salt Cured 50' Yacht",
+    "operator": "Jetski Rentals of South Florida",
+    "publicPath": "/destinations/florida/miami/tours/salt-cured-50-yacht-538569",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Salt Cured 50' Yacht is a 2- to 6-hour harbor outing with Jetski Rentals of South Florida on Miami Harbor."
+    ],
+    "schemaDescription": "Salt Cured 50' Yacht is a 2- to 6-hour harbor outing with Jetski Rentals of South Florida on Miami Harbor.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2- to 6-hour harbor outing in Miami",
+      "Groups are capped at 13"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/VsP3TmYHRx6G5qXW6JbN"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/6OYeZODMTzK9RHY7iRbr",
+    "wordCount": 21,
+    "durationLabel": "2-6 Hours",
+    "durationIso": null,
+    "meetingLocation": "2215 NW 14th St Miami, FL 33125",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sfjetskirentals/items/538569/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/6OYeZODMTzK9RHY7iRbr",
+      "heroHandle": "6OYeZODMTzK9RHY7iRbr",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/VsP3TmYHRx6G5qXW6JbN",
+          "handle": "VsP3TmYHRx6G5qXW6JbN",
+          "pixelSha256": "b7cc816d4f8b57d8e57cdf4ad7bd36decdbfdb1639ca21157aca9241ee3bebd7",
+          "differenceHashDistanceFromHero": 132,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.27349,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/VsP3TmYHRx6G5qXW6JbN",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfjetskirentals-538569",
+      "fetchedAt": "2026-10-03T18:10:13.249374+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/538569/content/",
+          "status": 200,
+          "bytes": 6998,
+          "sha256": "1149c9b0e3d08697f78e5d7b4ea2ab044a9844582e36afcfe3c33112d9618d6a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/538569/structured-description/",
+          "status": 200,
+          "bytes": 3173,
+          "sha256": "1043ecf0800b4ae9f6dc8552f37669c79418abb87d321ca778c7e2c1708683c1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/538569/",
+          "status": 200,
+          "bytes": 14726,
+          "sha256": "802f008349ade77807f4a3a21150107a88727c40ad9817d43f03584a5e1dee99"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=538569&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/538569/ratings/",
+          "status": 200,
+          "bytes": 435,
+          "sha256": "d15150c8986b3075714530b77a40256b59c37595ba6c3b05e933146d5821250d"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-6 Hours",
+        "meetingAddress": "2215 NW 14th St Miami, FL 33125",
+        "itemLocation": "3909 NE 163rd St North Miami Beach, Fl 33160 USA",
+        "headline": "Up to 13 Passengers",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "13",
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [
+          "Private Parties: Celebrate birthdays, anniversaries, or any special occasion in style",
+          "Relaxing Getaways: Escape the hustle and bustle of everyday life and unwind in the serene surroundings of the open water"
+        ],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Boat will go out rain or shine with exception of NON Sea worthy cond",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Experience Luxury on the Water: Rent a 50ft Yacht with Captain, Ice, Bluetooth Speakers, and Cooler Included!",
+          "Perfect for groups of up to 13, this yacht offers ample space and amenities to ensure a memorable experience on the water."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Experience Luxury",
+          "Bluetooth Speakers"
+        ],
+        "measures": [],
+        "description": "Experience Luxury on the Water: Rent a 50ft Yacht with Captain, Ice, Bluetooth Speakers, and Cooler Included! Indulge in an unforgettable day of luxury and relaxation aboard our stunning 50ft yacht, available for private charters. Perfect for groups of up to 13, this yacht offers ample space and amenities to ensure a memorable experience on the water.",
+        "detailsText": "Up to 13 Passengers Up to 13 Passengers",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "538569",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/538569/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "schema description is not shorter than the editorial body",
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 21 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "575607",
+    "company": "sfjetskirentals",
+    "title": "Searay Sundancer 55'",
+    "operator": "Jetski Rentals of South Florida",
+    "publicPath": "/destinations/florida/miami/tours/searay-sundancer-55-575607",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The skyline is the main view as the boat moves through the harbor. This is a private sandbar charter on the water. The booking is about 2 hours. From the water, guests see Bear Cut and No Name Harbor. Vizcaya Museum and Key Biscayne come into view as the boat moves.",
+      "The cruise also passes Fuel Bluetooth. The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by."
+    ],
+    "schemaDescription": "A 2- to 8-hour guided outing with Jetski Rentals of South Florida in Miami. The outing passes 2 Hours Trip, 3 Hours Trip, and 6 Hours Trip.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2- to 8-hour guided outing in Miami",
+      "2 Hours Trip and 3 Hours Trip",
+      "Captain"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/xmlOMHbaQMiWLzyhlFq1"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/F92ZdX5MR3qq5h3XM7FW",
+    "wordCount": 106,
+    "durationLabel": "2-8 Hours",
+    "durationIso": null,
+    "meetingLocation": "401 Biscayne Blvd Miami, Florida 33132 USA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sfjetskirentals/items/575607/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Biscayne Blvd Miami, Florida",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Biscayne Blvd Miami, Florida",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/F92ZdX5MR3qq5h3XM7FW",
+      "heroHandle": "F92ZdX5MR3qq5h3XM7FW",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/xmlOMHbaQMiWLzyhlFq1",
+          "handle": "xmlOMHbaQMiWLzyhlFq1",
+          "pixelSha256": "18474be356b25a9aeda2cba87db67b533856a1f15be72fb6c70b6609c6bbb126",
+          "differenceHashDistanceFromHero": 124,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.2245,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/xmlOMHbaQMiWLzyhlFq1",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfjetskirentals-575607",
+      "fetchedAt": "2026-10-03T18:10:13.466208+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/575607/content/",
+          "status": 200,
+          "bytes": 9626,
+          "sha256": "8b3beaf865ea0e295709c64ae2626b9bcadb725b066b9253a883688f858d345b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/575607/structured-description/",
+          "status": 200,
+          "bytes": 5762,
+          "sha256": "7a71f4e3143753404165bd398b1bbec7fd9d39f7e4b0e4d9a83167811b555ce8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/575607/",
+          "status": 200,
+          "bytes": 15745,
+          "sha256": "daafee5919c2ca868941f9eb847b90e685a21c96746183f75d99f3d713f3a1b9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=575607&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/575607/ratings/",
+          "status": 200,
+          "bytes": 434,
+          "sha256": "8eb2f97f0cbb540a4ae9fe3a08ab02506a490d7b2e49fe01981dd948aee49e58"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-8 Hours",
+        "meetingAddress": "401 Biscayne Blvd Miami, Florida 33132 USA",
+        "itemLocation": null,
+        "headline": "Up to 13 passengers",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "13",
+        "included": [
+          "Captain",
+          "Ice & water",
+          "Fuel",
+          "Bluetooth speakers 🔊",
+          "Floating mat (as requested)"
+        ],
+        "excluded": [
+          "food",
+          "alcohol"
+        ],
+        "itinerary": [
+          "2 Hours Trip",
+          "Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time",
+          "Sunset tours beautiful too through Miami river Brickell with skyline. Fisher island the best spot in Miami for sunset. Don't tell anybody🤣🫶",
+          "Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option)",
+          "3 Hours Trip",
+          "Again marine stadium/ Hobie beach for more water time",
+          "4 Hours Trip - the most complete and popular 💪",
+          "6 Hours Trip",
+          "Fowey rocks lighthouse. A lighthouse in the middle of nowhere with the most crystal waters around. Its BEAUTIFUL. Google it too. Weather allowing",
+          "Haulover sandbar also recommended from 6 hours",
+          "FOR ALL: Fisher island BEAUTIFULL for sunset"
+        ],
+        "routeNotes": [
+          "TYPICAL ITINERARY RECOMMEND FOR DIFFERENT DURATION TRIPS: 2 Hours Trip - Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time. - Sunset tours beautiful too through Miami river Brickell with skyline. Fisher island the best spot in Miami for sunset. Don't tell anybody🤣🫶. - Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option) 3 Hours Trip - More real water swim time for everyone! (We can organize a jet ski to come to the boat too) - Added to millionaire homes we can go to sunset islands which is beautiful and much more relaxed and exclusive. - Again marine stadium/ Hobie beach for more water time. Our recommendation is Vizcaya sandbar. There are other sandbars (bear cut/Nixon) which we can go but to have a great time on the water (that's why you go to a sandbar) you need a bit more time. FYI: There are no bars at the Sandbar 😂. 4 Hours Trip - the most complete and popular 💪 You can do most of the above together and in any order with more flexibility, and enjoy your time on the water without looking constantly at your watch. With 4 hours you have time to stay longer in one spot if you're having a good time. All destinations above are available and also take time to properly enjoy Bear Cut and Nixon sandbar. No Name Harbor, Vizcaya Museum, and Key Biscayne area are options also. 6 Hours Trip - VIP section and some exclusive locations no one will take you - Weather tide allowing: Stittsville and Fowey rocks. Super local vibe. Stittsville are some wooden houses built over the shallow waters past Key Biscayne in the early 1930s in the “prohibition” era where all the gambling etc. took place. Very cool and interesting. Google it. - Fowey rocks lighthouse. A lighthouse in the middle of nowhere with the most crystal waters around. Its BEAUTIFUL. Google it too. Weather allowing. - Haulover sandbar also recommended from 6 hours FOR ALL: Fisher island BEAUTIFULL for sunset."
+        ],
+        "highlights": [
+          "Captained Boat Charter",
+          "Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time",
+          "Located in Bayside Marina"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Swimwear: Multiple options for swimming, sunbathing, and water activities",
+          "Casual clothing: Comfortable tops, shorts, and pants for daytime activities",
+          "Evening wear: Dressy outfits for any onboard events or shore excursions",
+          "Warm clothing: Light jackets or sweaters for cooler evenings",
+          "Hats and sunglasses: Essential for sun protection"
+        ],
+        "cancellation": "All payments are final. No Refunds. No Cancellations.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Searay Sundancer 55' is the perfect yacht for a boat day out with the family.",
+          "PRICES 2 Hours | $800 3 Hours | $1,100 4 Hours | $1,300 6 Hours | $1,800 8 Hours | $2,100."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Searay Sundancer"
+        ],
+        "measures": [
+          "11 guests",
+          "2 Hours",
+          "3 Hours",
+          "4 Hours",
+          "6 Hours",
+          "8 Hours"
+        ],
+        "description": "Searay Sundancer 55' is the perfect yacht for a boat day out with the family. SeaRay holds up to 11 guests on board with more than enough room to walk around not having to bump into any of your group members. This boat comes with a captain included for your worry free day. Your boat comes equipped with boundless amenities including; Bluetooth stereo system to play your favorite jams. Also take advantage of our a giant water mat. PRICES 2 Hours | $800 3 Hours | $1,100 4 Hours | $1,300 6 Hours | $1,800 8 Hours | $2,100",
+        "detailsText": "SeaRay Sundancer 55' Address: 401 Biscayne Blvd Miami, Florida 33132 USA Confirmation: SeaRay Sundancer 55' Here is some info that we hope will answer any questions you may have. 1.) Please try and arrive a half hour early as we have sign coast guard documents and get you guys comfortable on the yacht. Safety first. 2.) The crew and yacht will be ready for you for the start of your contracted time. The yacht runs on a tight schedule and adjusting start times is not an option. Please try and arrive early. 3.) The captain will address all of your guests about safety first. It's real important that everyone is paying attention. We take the safety of our guests very seriously. 4.) Federal Law limits the maximum amount of guests allowed on a Recreational Bareboat Charter is 13. Kids count towards the total of 13. The captain and crew DO NOT count. Please make sure we don't have more than 13 as there are no exceptions. 5.) Everyone must remove their shoes while onboard the yacht. 6.) Hookahs are NOT allowed on the yacht (no exceptions). Vapes are okay. 7.) Use of the bathroom is allowed but you must dispose of toilet paper and / or personal hygiene products in the waste basket provided. A crew member will assist you with flushing the toilet. 8.) The yacht has a Bluetooth surround sound system for your enjoyment. A crew member will assist you in getting you connected. Once connected we will set the stereo at a safe volume. If the volume needs to be adjusted a crew member will assist you. 9.) The front master bedroom and bathroom are off limits to the guests as we have the owner's personal belongings in there along with necessary documentation for the coast guard. The door has a sign that reads crew only no entry. Please respect the privacy of the owner. 10.) We provide you with some ice and water for hydration. Please make sure you bring with you whatever you wish to eat and drink. Please make sure you bring cups and plates if you feel you will need them. 11.) We will have a nice cruise from the historic Miami River to the anchorage area. We will be at the anchorage area for approximately 2 hours. You will then have the option to jump in the water, enjoy our floating Lili pad, or rent Jet Skis. If you wish to rent Jet Skis please let the captain know and he can reserve them. 12.) If you have a balance remaining to be paid, the captain will collect it when your signing the coast guard documents on board the yacht. The balance must be paid in full before the yacht can leave the docks. We accept the following forms of payment. - Cash - Zelle - Cash-app - Venmo - ApplePay The total amount that you have paid for your charter does not include any gratuity / tip for the crew. If The Captain and First Mate do a great job ensuring your safety, comfort, & enjoyment. Please show your gratitude by tipping accordingly. Thank you! When you arrive PLEASE contact the captain and he will greet you at the main marina entrance door. (If captains name and phone number is not in this confirmation, the captain will call you 24 hours prior to the day of the reservation.) Upon arrival, you will be greeted by your captain, who will board you and prepare you for your trip. Upon arrival, you will be greeted by your captain, who will board you and prepare you for your trip. Up to 13 passengers Up to 13 passengers",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "575607",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/575607/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "597414",
+    "company": "sfjetskirentals",
+    "title": "Ferreti Destiny 85 ft",
+    "operator": "Jetski Rentals of South Florida",
+    "publicPath": "/destinations/florida/miami/tours/ferreti-destiny-85-ft-597414",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The skyline is the main view as the boat moves through the harbor. This is a private sandbar charter on the water. The booking is about 2 hours. From the water, guests see Fisher Island and Bear Cut. No Name Harbor and Vizcaya Museum come into view as the boat moves.",
+      "The cruise also passes Key Biscayne and Floating Matt Towels. The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck. The boat is how guests move, and the harbor is the viewpoint."
+    ],
+    "schemaDescription": "A 4- to 8-hour guided outing with Jetski Rentals of South Florida in Miami. The outing passes 2 Hours Trip, 3 Hours Trip, and FYI: There are no bars at the Sandbar.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4- to 8-hour guided outing in Miami",
+      "2 Hours Trip and 3 Hours Trip",
+      "Captain"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Rpu6g5OXQ2iJQqpPtYUQ"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/s9jGfokfThuMj5cPlxFQ",
+    "wordCount": 102,
+    "durationLabel": "4 - 8 Hours",
+    "durationIso": null,
+    "meetingLocation": "3399 NW South River Dr, Miami Fl 33142",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/sfjetskirentals/items/597414/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via company_start_location",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 25.799339,
+        "lng": -80.25064
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 25.799339,
+          "lng": -80.25064
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/s9jGfokfThuMj5cPlxFQ",
+      "heroHandle": "s9jGfokfThuMj5cPlxFQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/Rpu6g5OXQ2iJQqpPtYUQ",
+          "handle": "Rpu6g5OXQ2iJQqpPtYUQ",
+          "pixelSha256": "908ccc06deb52f8b6b3c6cd1cca4335c2ebef202aa9a9711a4fcd7daea9296ee",
+          "differenceHashDistanceFromHero": 115,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.1276,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/Rpu6g5OXQ2iJQqpPtYUQ",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/sfjetskirentals-597414",
+      "fetchedAt": "2026-10-03T18:10:13.706471+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/597414/content/",
+          "status": 200,
+          "bytes": 8210,
+          "sha256": "9e32222346499913f55fcabbc050c9df3f0d71a35c9cd873d4cfdc08ad1c7b4c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sfjetskirentals/597414/structured-description/",
+          "status": 200,
+          "bytes": 5184,
+          "sha256": "d53f27fc335a152566999d804b64d02faddd7848450270da35ce90e3099625e5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/597414/",
+          "status": 200,
+          "bytes": 18907,
+          "sha256": "bb627d6731a3e38f2ed4df9e5c16ddd7a344e522f32d18bba9a79e7ef2ec77bd"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sfjetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=597414&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sfjetskirentals/items/597414/ratings/",
+          "status": 200,
+          "bytes": 435,
+          "sha256": "62173714c12d32720f15b24140ed8393f5076d159c15e7dc49d748c28c963397"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "4 - 8 Hours",
+        "meetingAddress": "3399 NW South River Dr, Miami Fl 33142",
+        "itemLocation": null,
+        "headline": "3399 NW South River Dr, Miami Fl 33142",
+        "startCity": "Miami",
+        "startProvince": "FL",
+        "startLat": 25.799339,
+        "startLng": -80.25064,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "13",
+        "included": [
+          "Captain",
+          "Stew",
+          "Mate",
+          "Ice",
+          "Water",
+          "Sodas",
+          "Floating Matt",
+          "Towels"
+        ],
+        "excluded": [
+          "Alcohol",
+          "food"
+        ],
+        "itinerary": [
+          "2 Hours Trip",
+          "Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time",
+          "Sunset tours beautiful too through Miami river Brickell with skyline. Fisher island the best spot in Miami for sunset. Don't tell anybody🤣🫶",
+          "Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option)",
+          "3 Hours Trip",
+          "Again marine stadium/ Hobie beach for more water time",
+          "FYI: There are no bars at the Sandbar",
+          "4 Hours Trip - the most complete and popular 💪",
+          "6 Hours Trip",
+          "Fowey rocks lighthouse. A lighthouse in the middle of nowhere with the most crystal waters around. Its BEAUTIFUL. Google it too. Weather allowing",
+          "Haulover sandbar also recommended from 6 hours",
+          "FOR ALL: Fisher Island is BEAUTIFUL for sunset"
+        ],
+        "routeNotes": [
+          "TYPICAL ITINERARY RECOMMEND FOR DIFFERENT DURATION TRIPS: 2 Hours Trip - Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time. - Sunset tours beautiful too through Miami river Brickell with skyline. Fisher island the best spot in Miami for sunset. Don't tell anybody🤣🫶. - Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option) 3 Hours Trip - More real water swim time for everyone! (We can organize a jet ski to come to the boat too) - Added to millionaire homes we can go to sunset islands which is beautiful and much more relaxed and exclusive. - Again marine stadium/ Hobie beach for more water time. Our recommendation is Vizcaya sandbar. There are other sandbars (bear cut/Nixon) which we can go but to have a great time on the water (that's why you go to a sandbar) you need a bit more time. FYI: There are no bars at the Sandbar 4 Hours Trip - the most complete and popular 💪 - You can do most of the above together and in any order with more flexibility, and enjoy your time on the water without looking constantly at your watch. With 4 hours you have time to stay longer in one spot if you're having a good time. All destinations above are available and also take time to properly enjoy Bear Cut and Nixon sandbar. No Name Harbor, Vizcaya Museum, and Key Biscayne area are options also. 6 Hours Trip - VIP section and some exclusive locations no one will take you - Weather tide allowing: Stittsville and Fowey rocks. Super local vibe. Stittsville are some wooden houses built over the shallow waters past Key Biscayne in the early 1930s in the “prohibition” era where all the gambling etc. took place. Very cool and interesting. Google it. Fowey rocks lighthouse. A lighthouse in the middle of nowhere with the most crystal waters around. Its BEAUTIFUL. Google it too. Weather allowing. Haulover sandbar also recommended from 6 hours FOR ALL: Fisher Island is BEAUTIFUL for sunset."
+        ],
+        "highlights": [
+          "Captained Boat Charter",
+          "Tour Brickell/ Biscayne bay and marine stadium/ Hobie beach and have good water time",
+          "Sunset tours beautiful too through Miami river Brickell with skyline. Fisher island the best spot in Miami for sunset. Don't tell anybody",
+          "Tour millionaire homes / star island and venetian islands area. Quick stop on monument island for quick swim if left marina punctually. (Picnic island also an option)"
+        ],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Boat will go out rain or shine with exception of NON Sea worthy cond",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Ferreti Destiny 85 ft is the perfect yacht for a boat day out with the family."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Ferreti Destiny"
+        ],
+        "measures": [
+          "13 guests"
+        ],
+        "description": "Ferreti Destiny 85 ft is the perfect yacht for a boat day out with the family. Holds up to 13 guests on board with more than enough room to walk around not having to bump into any of your group members. This boat comes with a captain included for your worry free day. Your boat comes equipped with boundless amenities including; Bluetooth stereo system to play your favorite jams. Also take advantage of our a giant water mat.",
+        "detailsText": "3399 NW South River Dr, Miami Fl 33142 3399 NW South River Dr, Miami Fl 33142",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "597414",
+        "provider": "sfjetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sfjetskirentals/items/597414/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "371933",
+    "company": "skytoursmiami",
+    "title": "Miami Downtown Private Airplane Tour",
+    "operator": "Sky Tours Miami",
+    "publicPath": "/destinations/florida/miami/tours/miami-downtown-private-airplane-tour-371933",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a guided outing with Sky Tours Miami. Private flight, Pilot, and Headset are included. The outing reaches Vizcaya Museum.",
+      "Groups are capped at 3. Guests must be at least 5 years old."
+    ],
+    "schemaDescription": "This is a guided outing with Sky Tours Miami.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "30 Mins guided outing",
+      "Vizcaya Museum",
+      "Private flight"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nyIu36e6QPmi5bNhlTSt"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/0DSwzrjqRkyXiQSydi6v",
+    "wordCount": 34,
+    "durationLabel": "30 Mins",
+    "durationIso": null,
+    "meetingLocation": "14005 SW 127th St. Unit 120 A Miami, FL 33186",
+    "visiblePriceLabel": "From $69",
+    "priceRows": [
+      {
+        "label": "Person",
+        "note": "Ages 5+",
+        "amountLabel": "$69"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "69.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 278,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 278 reviews on GET https://fareharbor.com/api/v1/companies/skytoursmiami/items/371933/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Miami",
+      "state": "Florida",
+      "citySlug": "miami",
+      "stateSlug": "florida",
+      "reason": "Miami, Florida belongs to the Miami area via meeting_point",
+      "place": {
+        "city": "Miami",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "miami",
+        "stateSlug": "florida",
+        "raw": "Miami, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Miami",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "miami",
+          "stateSlug": "florida",
+          "raw": "Miami, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/0DSwzrjqRkyXiQSydi6v",
+      "heroHandle": "0DSwzrjqRkyXiQSydi6v",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/nyIu36e6QPmi5bNhlTSt",
+          "handle": "nyIu36e6QPmi5bNhlTSt",
+          "pixelSha256": "eca19ad2a1fdc942e118a0c099b635b9bf385346f7ea6d241ace2acb1449d7f1",
+          "differenceHashDistanceFromHero": 116,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28459,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/nyIu36e6QPmi5bNhlTSt",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/miami/skytoursmiami-371933",
+      "fetchedAt": "2026-10-03T18:10:14.030886+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/skytoursmiami/371933/content/",
+          "status": 200,
+          "bytes": 11461,
+          "sha256": "d1ab84f627f0500d31d1af110a96c16729902cab185ad6564f350097e6cf8968"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/skytoursmiami/371933/structured-description/",
+          "status": 200,
+          "bytes": 7572,
+          "sha256": "8b5ad67fa3596e5d92f78cdee722d5624d241fd58fd8db75b08db652c9f0f295"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/skytoursmiami/items/371933/",
+          "status": 200,
+          "bytes": 48357,
+          "sha256": "3ed9cc2a75c24fe287e0bdfe721a4e6d9430aa5dc2a1bf16812444f48260322c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/skytoursmiami/price-preview/per-item/v2/?asn=fhdn&item_pks=371933&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 533,
+          "sha256": "b4c1e0eb81d0122217bbaa44ba2b50944f9fc0dc904a2c0ab37019d2b80af5c0"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/skytoursmiami/items/371933/ratings/",
+          "status": 200,
+          "bytes": 524,
+          "sha256": "270c4431ed686a2ece7e440937f83048585e07f76d909c5bbe1bb3b7abe26900"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Person",
+          "note": "Ages 5+",
+          "amount": 69.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Person",
+            "note": "Ages 5+",
+            "amount": 69.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T14:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "30 Mins",
+        "meetingAddress": "14005 SW 127th St. Unit 120 A Miami, FL 33186",
+        "itemLocation": "14005 Sw 127th St Unit 120A Miami, Fl 33186",
+        "headline": "30 Mins • Up to 3 Passengers • Ages 5+",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 5,
+        "maxAge": 99,
+        "groupSize": "3",
+        "included": [
+          "Private flight",
+          "Pilot",
+          "Headset",
+          "Chilled water, juice, and sodas",
+          "Free parking",
+          "Free Wi-Fi",
+          "Birthday balloon (If requested in advance)",
+          "Cessna 172 (plane color based upon availability)"
+        ],
+        "excluded": [
+          "Champagne",
+          "Food",
+          "Hotel pickup and drop-off",
+          "Tips"
+        ],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [
+          "Fall in love with Miami's best views!",
+          "Receive complimentary cold drinks onboard (Soda, water, juice only)",
+          "Weight limit per group is 480lbs or 218kgs",
+          "No Hidden Fees (No extra fees)"
+        ],
+        "restrictions": [],
+        "bring": [
+          "Passport or ID card",
+          "Comfortable shoes"
+        ],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Dadeland Downtown",
+          "Vizcaya Museum",
+          "Miami Downtown",
+          "Coastal Area"
+        ],
+        "measures": [],
+        "description": "Enjoy 30 mins of Miami Coastal Area. All our tours are Private. Main Attractions to see: - Dadeland Downtown - Botanical garden - Hammock park - Pinecrest - Vizcaya Museum - Miami Downtown - Coastal Area of Miami",
+        "detailsText": "We look forward to seeing you! Upon arrival: - Must provide a valid ID - A waiver must be signed by all passengers - Please arrive 20 minutes before flight - The customer that paid for this booking must be present at the time of the flight with ID and credit card (no photos or copies are accepted). - No person in any type of influence allowed at or around the property; no smoking allowed - No outside food and drink allowed - Must wear comfortable shoes; no high heels or flip flops -Minors must be accompanied by an Adult Please arrive 20 mins prior to your reservation time. We are located inside the Miami Executive Airport in Kendall. Find us on Google maps under the name of : Sky Tours Miami How to find us: Once inside the Miami Executive Airport - Enter Miami Executive Airport on SW 128th St - Turn right onto SW 142nd Ave - Turn right onto SW 127th St - Drive straight down until you reach Sky Tours Miami 14005 SW 127th St Unit 120A, Miami, FL 33186 Please arrive 20 mins prior to your reservation time. We are located inside the Miami Executive Airport in Kendall. Find us on Google maps under the name of : Sky Tours Miami How to find us: Once inside the Miami Executive Airport - Enter Miami Executive Airport on SW 128th St - Turn right onto SW 142nd Ave - Turn right onto SW 127th St - Drive straight down until you reach Sky Tours Miami 14005 SW 127th St Unit 120A, Miami, FL 33186 30 Mins • Up to 3 Passengers • Ages 5+ 30 Mins • Up to 3 Passengers • Ages 5+",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "371933",
+        "provider": "skytoursmiami",
+        "bookingUrl": "https://fareharbor.com/embeds/book/skytoursmiami/items/371933/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

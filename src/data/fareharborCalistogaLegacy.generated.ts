@@ -13,7 +13,7 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests may bring a bike or take a carbon or aluminum bike from the shop. The guide can aim the ride at the coast or at inland mountain roads. A flatter route is available when that is what the group wants. A guide rides with the group and can carry the gear."
     ],
-    "schemaDescription": "A four-hour bicycle outing with Calistoga Bikeshop.",
+    "schemaDescription": "Four-hour road-bike ride with Calistoga Bikeshop, on the coast or on inland mountain roads.",
     "highlights": [
       "4 hours bicycle outing"
     ],
@@ -78,16 +78,17 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take a walk ride with the horses. The ride follows Oat Hill Mine Trail, a short way from the shop. The ride passes Oat Hill Mine Trail and Santa Cruz."
+      "This four-hour electric mountain-bike tour leaves Calistoga Bike Shop for the mine trail just under a mile away, the Oat Hill line. Riders get views, sections of medium technical trail, and harder side features. The climb is more than four miles into the Palisades above town, with optional rolling trail after that and singletrack on the descent.",
+      "Bikes issued for the tour are full-suspension carbon models from Santa Cruz and from Specialized. Six riding parks sit within a 40-minute drive. The guide carries most tools needed for a trailside repair. More time, if wanted, is billed hourly. A calmer trail ride or a harder line can be chosen instead of the mine-trail climb."
     ],
-    "schemaDescription": "Guests take a walk ride with the horses.",
+    "schemaDescription": "Four-hour electric mountain-bike tour from Calistoga up the Oat Hill mine trail.",
     "highlights": [
       "4 hours bicycle outing",
       "Oat Hill Mine Trail"
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO",
-    "wordCount": 31,
+    "wordCount": 118,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": null,
@@ -132,14 +133,13 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
-      "An electric-assist bike is offered as an upgrade for the ride. This departure is the shorter ride, planned for about two to three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear.",
-      "Guests ride electric bikes for this booking."
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the shorter ride, planned for about two to three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear."
     ],
-    "schemaDescription": "A 2- to 3-hour bicycle outing with Calistoga Bikeshop.",
+    "schemaDescription": "Bike ride of two to three hours between wineries, with one tasting.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t",
-    "wordCount": 107,
+    "wordCount": 100,
     "durationLabel": "2-3 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -224,14 +224,13 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
-      "An electric-assist bike is offered as an upgrade for the ride. This departure is the mid-length ride, planned for about three to five hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear.",
-      "Guests ride electric bikes for this booking."
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the mid-length ride, planned for about three to five hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear."
     ],
-    "schemaDescription": "A 3- to 5-hour bicycle outing with Calistoga Bikeshop.",
+    "schemaDescription": "Bike ride of three to five hours between wineries, with two tastings.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl",
-    "wordCount": 108,
+    "wordCount": 101,
     "durationLabel": "3-5 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -316,14 +315,13 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
-      "An electric-assist bike is offered as an upgrade for the ride. This departure is the longest ride, planned for more than three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear.",
-      "Guests ride electric bikes for this booking."
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the longest ride, planned for more than three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear."
     ],
-    "schemaDescription": "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+    "schemaDescription": "Bike ride of more than three hours between wineries, with three tastings.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq",
-    "wordCount": 106,
+    "wordCount": 99,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -387,10 +385,10 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Lunch can be a picnic at a winery or a meal at a restaurant on the route. The bikes do the traveling, and the winery stops are where guests get off to taste.",
-      "The ride passes Napa Valley and Logvy Community Park. Cyclists also come to Wine Country and Chateau Montelena. Bennett Lane and Lava Vine are on the same loop. Later the route reaches Clos Pegase."
+      "Getaway Adventures runs this Calistoga ride through northern Napa on quiet back roads. The clock times are 10:30 a.m. to 3:00 p.m. Adults 16 and older are $250. Ages 15 and under are $200. Two wineries are on the route, and the distance is about 12 miles, mostly flat. A stop called Grapes 101 covers sipping, swirling, and tasting. Guides then lay out a picnic at one winery.",
+      "Meet at Logvy Community Park, 1745 Washington Street, Calistoga. A town bike, a helmet, water, the picnic, and a local guide are included. Wineries that may be visited include Chateau Montelena and Bennett Lane, plus Envy. Other names on that list are Summers and Lava Vine. August Briggs, Tedeschi, and Twomey are included too, as are T Vine and Clos Pegase."
     ],
-    "schemaDescription": "A guided outing with Getaway Adventures in Calistoga. The outing passes Logvy Community Park.",
+    "schemaDescription": "Calistoga bike ride through northern Napa on quiet back roads, with two winery stops and a picnic.",
     "highlights": [
       "Logvy Community Park"
     ],
@@ -398,7 +396,7 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/WqgkaZtSoOgHUOcZQBgU"
     ],
     "productImage": "https://cdn.filestackcontent.com/3ObyUVjhQfG97bQL4uRw",
-    "wordCount": 89,
+    "wordCount": 133,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Logvy Community Park, Calistoga, CA",

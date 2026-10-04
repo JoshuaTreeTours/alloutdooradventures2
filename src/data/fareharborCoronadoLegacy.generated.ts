@@ -15,7 +15,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "A wetsuit and a surfboard are provided for the time in the water. A rash guard, fins, a leash, and reef shoes are also set out with the gear. A private booking keeps one instructor with one guest. The lesson is aimed at first-time and beginner surfers.",
       "People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
-    "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
+    "schemaDescription": "Private surf lesson of about 1.5 hours in Coronado, starting on the sand and then catching waves.",
     "highlights": [
       "1.5-hour guided outing in Coronado",
       "Wetsuit"
@@ -62,7 +62,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "A wetsuit and a surfboard are provided for the time in the water. A rash guard, fins, a leash, and reef shoes are also set out with the gear. Instructors stay with the group at about 4 guests per instructor. The booking is private, so the instructor works with that party alone.",
       "Family or friends share the lesson and take the same waves together. People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
-    "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
+    "schemaDescription": "Ohana surf lesson of about 1.5 hours in Coronado, starting on the sand and then catching waves.",
     "highlights": [
       "1.5-hour guided outing in Coronado",
       "Wetsuit"
@@ -109,7 +109,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "A rash guard, fins, a leash, and reef shoes are also set out with the gear. Instructors stay with the group at about 4 guests per instructor. Family or friends share the lesson and take the same waves together. The lesson takes groups of up to 16 guests.",
       "People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
-    "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
+    "schemaDescription": "Group surf lesson of about 1.5 hours in Coronado, starting on the sand and then catching waves.",
     "highlights": [
       "1.5-hour guided outing in Coronado",
       "Groups are capped at 16"
@@ -150,7 +150,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "Guests set out on a modern adventure with the exclusive guided e-bike outing of Coronado Island, departing daily. After that, coronado Bike and Surf is only tour operator conveniently located at the Hotel del Coronado, offering guests a and exhilarating way to explore. The cutting-edge electric bikes amplify the pedaling power, allowing guests to effortlessly cover more ground, guests discover hidden coves, and soak in coastal views.",
       "That fun and dynamic ride is for anyone looking to meet Coronado's rich history, architecture, and community in an exciting new way. Fun for Everyone: An exciting and accessible e-bike adventure suitable for a wide range of ages and fitness levels."
     ],
-    "schemaDescription": "A 1.5-hour bicycle outing with Jamie O'Brien Surf Experience - San Diego in Coronado. The outing passes Coronado Island.",
+    "schemaDescription": "Group e-bike tour of about 1.5 hours around Coronado Island.",
     "highlights": [
       "1.5-hour bicycle outing in Coronado",
       "Coronado Island",
@@ -190,10 +190,10 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board. After that land lesson, the group goes into the ocean to catch waves. A wetsuit and a surfboard are provided for the time in the water.",
-      "A rash guard, fins, a leash, and reef shoes are also set out with the gear. The lesson itself is given in English. Instructors stay with the group at about 4 guests per instructor. The lesson is aimed at first-time and beginner surfers. The operator aims to have beginners standing on the board within about 30 minutes.",
+      "A rash guard, fins, a leash, and reef shoes are also set out with the gear. The lesson itself is given in English. Instructors stay with the group at about 4 guests per instructor. The lesson is aimed at first-time and beginner surfers. The lesson aims to have beginners standing on the board within about 30 minutes.",
       "People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
-    "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
+    "schemaDescription": "Group surf lesson of about 1.5 hours in Coronado for Del Club members, aimed at beginners.",
     "highlights": [
       "1.5-hour guided outing in Coronado",
       "Wetsuit"
@@ -240,7 +240,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "The cutting-edge electric bikes amplify the pedaling power, allowing the group to effortlessly cover more ground, guests discover hidden coves, and soak in coastal views. That fun and dynamic private ride is for anyone looking to meet Coronado's rich history, architecture, and community in an exciting new way, designed for guests.",
       "Guided private e-bike outing of Coronado Island."
     ],
-    "schemaDescription": "A 1.5-hour bicycle outing with Jamie O'Brien Surf Experience - San Diego in Coronado. The outing passes Coronado Island.",
+    "schemaDescription": "Private e-bike tour of about 1.5 hours around Coronado Island.",
     "highlights": [
       "1.5-hour bicycle outing in Coronado",
       "Coronado Island",

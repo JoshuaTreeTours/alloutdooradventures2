@@ -1,0 +1,355 @@
+{
+  "citySlug": "key-west",
+  "total": 18,
+  "active": 18,
+  "terminal": 0,
+  "priceAvailable": 16,
+  "tripadvisorRatingAvailable": 1,
+  "imageAvailable": 18,
+  "inSitemap": 15,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "floridakeysventures",
+      "operator": "Florida Keys Ventures",
+      "itemId": "176775",
+      "slug": "key-west-history-and-culture-southernmost-walking-tour-176775",
+      "publicPath": "/destinations/florida/key-west/tours/key-west-history-and-culture-southernmost-walking-tour-176775",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3459,
+        "structuredStatus": 200,
+        "structuredBytes": 2076
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridakeysventures",
+      "operator": "Florida Keys Ventures",
+      "itemId": "196883",
+      "slug": "private-key-west-history-and-culture-southernmost-walking-tour-196883",
+      "publicPath": "/destinations/florida/key-west/tours/private-key-west-history-and-culture-southernmost-walking-tour-196883",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3773,
+        "structuredStatus": 200,
+        "structuredBytes": 2395
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridakeysventures",
+      "operator": "Florida Keys Ventures",
+      "itemId": "203230",
+      "slug": "key-west-historic-bahama-village-and-hemingway-heritage-203230",
+      "publicPath": "/destinations/florida/key-west/tours/key-west-historic-bahama-village-and-hemingway-heritage-203230",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2407,
+        "structuredStatus": 200,
+        "structuredBytes": 2224
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "keywestfishing-charters",
+      "operator": "Cowboy Charters",
+      "itemId": "104492",
+      "slug": "cowgirl-45-premium-offshore-fishing-charter-104492",
+      "publicPath": "/destinations/florida/key-west/tours/cowgirl-45-premium-offshore-fishing-charter-104492",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 15349,
+        "structuredStatus": 200,
+        "structuredBytes": 8971
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "laromayachtsflorida",
+      "operator": "Laroma Yachts Florida, LLC",
+      "itemId": "638390",
+      "slug": "the-atlantia-638390",
+      "publicPath": "/destinations/florida/key-west/tours/the-atlantia-638390",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2447,
+        "structuredStatus": 200,
+        "structuredBytes": 2106
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "laromayachtsflorida",
+      "operator": "Laroma Yachts Florida, LLC",
+      "itemId": "638423",
+      "slug": "the-somewhere-638423",
+      "publicPath": "/destinations/florida/key-west/tours/the-somewhere-638423",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1925,
+        "structuredStatus": 200,
+        "structuredBytes": 1590
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "laromayachtsflorida",
+      "operator": "Laroma Yachts Florida, LLC",
+      "itemId": "638429",
+      "slug": "the-grand-admiral-638429",
+      "publicPath": "/destinations/florida/key-west/tours/the-grand-admiral-638429",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1735,
+        "structuredStatus": 200,
+        "structuredBytes": 1400
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "laromayachtsflorida",
+      "operator": "Laroma Yachts Florida, LLC",
+      "itemId": "639170",
+      "slug": "sunset-atlantia-639170",
+      "publicPath": "/destinations/florida/key-west/tours/sunset-atlantia-639170",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2398,
+        "structuredStatus": 200,
+        "structuredBytes": 2075
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "laromayachtsflorida",
+      "operator": "Laroma Yachts Florida, LLC",
+      "itemId": "639172",
+      "slug": "sunset-somewhere-639172",
+      "publicPath": "/destinations/florida/key-west/tours/sunset-somewhere-639172",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1903,
+        "structuredStatus": 200,
+        "structuredBytes": 1575
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "namastealldaykeywest",
+      "operator": "Namaste Here LLC",
+      "itemId": "626355",
+      "slug": "tailored-sandbar-experience-626355",
+      "publicPath": "/destinations/florida/key-west/tours/tailored-sandbar-experience-626355",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2503,
+        "structuredStatus": 200,
+        "structuredBytes": 1672
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "saltysandbars",
+      "operator": "Salty Sandbars",
+      "itemId": "417200",
+      "slug": "half-day-charter-4hrs-boston-whaler-417200",
+      "publicPath": "/destinations/florida/key-west/tours/half-day-charter-4hrs-boston-whaler-417200",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2310,
+        "structuredStatus": 200,
+        "structuredBytes": 1669
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "saltysandbars",
+      "operator": "Salty Sandbars",
+      "itemId": "417207",
+      "slug": "34-day-6hrs-boston-whaler-417207",
+      "publicPath": "/destinations/florida/key-west/tours/34-day-6hrs-boston-whaler-417207",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2308,
+        "structuredStatus": 200,
+        "structuredBytes": 1670
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "saltysandbars",
+      "operator": "Salty Sandbars",
+      "itemId": "515385",
+      "slug": "5hour-multiple-sandbar-hangout-boston-whaler-515385",
+      "publicPath": "/destinations/florida/key-west/tours/5hour-multiple-sandbar-hangout-boston-whaler-515385",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2349,
+        "structuredStatus": 200,
+        "structuredBytes": 1733
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "saltysandbars",
+      "operator": "Salty Sandbars",
+      "itemId": "637746",
+      "slug": "2hr-sandbar-express---boston-whaler-637746",
+      "publicPath": "/destinations/florida/key-west/tours/2hr-sandbar-express---boston-whaler-637746",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 1253
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "schoonerjolly",
+      "operator": "Schooner Jolly II Rover",
+      "itemId": "26077",
+      "slug": "florida-keys-sunset-sail-26077",
+      "publicPath": "/destinations/florida/key-west/tours/florida-keys-sunset-sail-26077",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3183,
+        "structuredStatus": 200,
+        "structuredBytes": 2212
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sixfinsjetskirental",
+      "operator": "Six Fins Jet Ski Rental - Perry Marina",
+      "itemId": "628106",
+      "slug": "six-fins-key-west-2-hour-flagship-guided-jet-ski-tour-628106",
+      "publicPath": "/destinations/florida/key-west/tours/six-fins-key-west-2-hour-flagship-guided-jet-ski-tour-628106",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 20395,
+        "structuredStatus": 200,
+        "structuredBytes": 11423
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "southpointdiverskw",
+      "operator": "Southpoint Divers",
+      "itemId": "22878",
+      "slug": "morning-2-tank-dive-vandenberg-wreck-22878",
+      "publicPath": "/destinations/florida/key-west/tours/morning-2-tank-dive-vandenberg-wreck-22878",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5504,
+        "structuredStatus": 200,
+        "structuredBytes": 2369
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "undergrounddonutour",
+      "operator": "Underground Donut Tour",
+      "itemId": "624612",
+      "slug": "key-west-southernmost-sweet-treats-tour-624612",
+      "publicPath": "/destinations/florida/key-west/tours/key-west-southernmost-sweet-treats-tour-624612",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8504,
+        "structuredStatus": 200,
+        "structuredBytes": 3837
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

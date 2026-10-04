@@ -1,0 +1,32 @@
+{
+  "citySlug": "everglades-city",
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "evergladesfloridaadventures",
+      "operator": "Everglades Florida Adventures",
+      "itemId": "537061",
+      "slug": "mangrove-wilderness-boat-tour-537061",
+      "publicPath": "/destinations/florida/everglades-city/tours/mangrove-wilderness-boat-tour-537061",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4474,
+        "structuredStatus": 200,
+        "structuredBytes": 1927
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

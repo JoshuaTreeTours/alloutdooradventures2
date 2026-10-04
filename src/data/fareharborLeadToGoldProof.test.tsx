@@ -296,6 +296,10 @@ describe("FareHarbor Stage B proof set", () => {
       expect(product?.ratingProvenance).toContain("quality_score");
       if (product?.exceptionStatus === "SOURCE_NOT_FOUND") {
         expect(product.wordCount).toBeLessThan(80);
+      } else if (itemId === "34849" || itemId === "333279" || itemId === "193220") {
+        // Published California and Florida pages use the Boston 100–150 word band.
+        expect(product.wordCount).toBeGreaterThanOrEqual(100);
+        expect(product.wordCount).toBeLessThanOrEqual(150);
       } else {
         expect(product.wordCount).toBeGreaterThanOrEqual(150);
       }

@@ -18,6 +18,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from build_stage_b_proof import extract_price
+from florida_winter import apply_winter_cohort
 from inventory_boston import inventory as inventory_for_city
 from tripadvisor_ratings import (
     google_review_pair,
@@ -465,6 +466,8 @@ def main() -> None:
     if "--city" in sys.argv:
         configure_city(sys.argv[sys.argv.index("--city") + 1])
     catalog = inventory()
+    if "--all-products" not in sys.argv:
+        catalog["products"] = apply_winter_cohort(CITY_SLUG, catalog["products"])
     if "--ratings-only" in sys.argv:
         harvest_ratings(catalog["products"])
         return

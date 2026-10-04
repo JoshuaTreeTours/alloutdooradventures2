@@ -1,0 +1,288 @@
+{
+  "fetchedAt": "2026-10-03T18:09:34.749337+00:00",
+  "total": 6,
+  "products": [
+    {
+      "company": "fatherdaughtercharters",
+      "itemId": "520862",
+      "fetchedAt": "2026-10-03T18:09:30.514203+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/520862/content/",
+          "status": 200,
+          "bytes": 3026,
+          "sha256": "52c9264e5731ee01d1704ba0d3930a21326c74fea63b2ba7e4aec7b72e1507c5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/520862/structured-description/",
+          "status": 200,
+          "bytes": 1694,
+          "sha256": "a58bc87df07cb457e5d816e9bf9b5e49db59d8ed4644225afd343f71773ae8ef"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/520862/",
+          "status": 200,
+          "bytes": 12193,
+          "sha256": "7ee27a382058e62b6f1b3ea6d14118bf965e92c4a7898f8a79eac1114bbc6c75"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=520862&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 562,
+          "sha256": "eb570b1c8876db0a19e1be20ff7bb02c4e5a8378f0d4bc33b81402c7fc71d50f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/520862/ratings/",
+          "status": 200,
+          "bytes": 428,
+          "sha256": "d8e0333fa591549ef5b27fab449aea23e2f734ce4397174b40439f06da7815e7"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "520862",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/520862/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "itemId": "521462",
+      "fetchedAt": "2026-10-03T18:09:30.514965+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521462/content/",
+          "status": 200,
+          "bytes": 2592,
+          "sha256": "10db4d53f62067b117a63c41f57cd982853e98d7305175d42affcd3dfa161f8b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521462/structured-description/",
+          "status": 200,
+          "bytes": 1334,
+          "sha256": "4b5a6a23eaf6e01ada34fa17a4548c99b4d9e367a2c22bbccf157b76cd70317a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521462/",
+          "status": 200,
+          "bytes": 12585,
+          "sha256": "a935b4e7a25b03f06993561afe1efd77ac11afd2b28828e3d1bc6671d01141d4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521462&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 590,
+          "sha256": "3398d2fe71874b94c7eaaeb44443a4ac16f07b5b448caf2121cec7709f9458fb"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521462/ratings/",
+          "status": 200,
+          "bytes": 430,
+          "sha256": "b3ce79e77d7f6063b62a5a2000d219535d39bbfd60d3989909883ccb955532e5"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "521462",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521462/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "itemId": "521546",
+      "fetchedAt": "2026-10-03T18:09:30.515977+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521546/content/",
+          "status": 200,
+          "bytes": 2847,
+          "sha256": "4147f6f811bc1d42799a30efb90c2a4a92bd32a5d0d8fd6678c9730f9c3aae0d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521546/structured-description/",
+          "status": 200,
+          "bytes": 1491,
+          "sha256": "f7d6f7375ff89d6ae35773f53c19bd81325fb00a13d9c799e70e990d1a610cb5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521546/",
+          "status": 200,
+          "bytes": 12831,
+          "sha256": "bc55807e7c04f4e7f28f29b53d25bae83e891af04a9a24b51a9cee37b4e9f258"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521546&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 590,
+          "sha256": "c6b54866bcae3117968a6e7420cd097bb705844bffcbbab83c54dd2b7950c100"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521546/ratings/",
+          "status": 200,
+          "bytes": 430,
+          "sha256": "518ab49bd4a734b420e923d5e964f825236879845c3a6905d0bb892c0e0e02a3"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "521546",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521546/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "itemId": "521569",
+      "fetchedAt": "2026-10-03T18:09:30.516302+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521569/content/",
+          "status": 200,
+          "bytes": 2822,
+          "sha256": "b9cce2c92f6796104f06d0f1c958d401bc76b0b35e8e19ccfb396e9efc82ab29"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521569/structured-description/",
+          "status": 200,
+          "bytes": 1335,
+          "sha256": "1453fb0973ae118decb927dbc8aa279c4a78266deaf42f3a5cef5499b41dec2d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521569/",
+          "status": 200,
+          "bytes": 12844,
+          "sha256": "1fa4679eda37be921b480efc2b062929f6a0d33d6c10c94676004cba3634e3af"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521569&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521569/ratings/",
+          "status": 200,
+          "bytes": 440,
+          "sha256": "2f346f6b37958e7d4662d769e2aa415ac41b3d7651e1a77a72de23d1dd4d42a8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "521569",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521569/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "itemId": "521577",
+      "fetchedAt": "2026-10-03T18:09:32.539664+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521577/content/",
+          "status": 200,
+          "bytes": 2835,
+          "sha256": "4df74ff5448b9661479fe9b1dc7d611f64a80ebc8c6c59dbd63a0b6d65255ff9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521577/structured-description/",
+          "status": 200,
+          "bytes": 1326,
+          "sha256": "f47156917ace65ea68d5d14c1aa8c678e1db3d64b54aed6d315819e3611517da"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521577/",
+          "status": 200,
+          "bytes": 12755,
+          "sha256": "8bd415ea3267239f24ab4bf5e5d64a74566794194ea973b3e4b35474d4971564"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521577&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521577/ratings/",
+          "status": 200,
+          "bytes": 441,
+          "sha256": "12778ce7e33242a18755458192a7b643398ccd73d39902dc45466dabed50aeeb"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "521577",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521577/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "fatherdaughtercharters",
+      "itemId": "521595",
+      "fetchedAt": "2026-10-03T18:09:32.649479+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521595/content/",
+          "status": 200,
+          "bytes": 2719,
+          "sha256": "562ddb72890fde1cf64cdbf63932888ba17f386577ed797ff9f608bbced91222"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/521595/structured-description/",
+          "status": 200,
+          "bytes": 1354,
+          "sha256": "970a9adfe484a7b55b8739fffe84e776d0070e3bd4e416bfa46a68795f45db5d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521595/",
+          "status": 200,
+          "bytes": 12302,
+          "sha256": "017a7cd57c96730b60867e2bc52f6aac601786d80a3ca86ecbd069c31390d88a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=521595&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 593,
+          "sha256": "44383a851663d69ecc4feedd33fc4104a27001a7cc870820ad0adf068c2ca3c1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/521595/ratings/",
+          "status": 200,
+          "bytes": 437,
+          "sha256": "cece4c55649ece4ca97eb32590508360f2183290edd8841aabf3618466facb99"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "521595",
+        "provider": "fatherdaughtercharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/521595/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

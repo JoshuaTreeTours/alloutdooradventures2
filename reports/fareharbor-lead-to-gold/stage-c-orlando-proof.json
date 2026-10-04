@@ -1,0 +1,1921 @@
+[
+  {
+    "itemId": "694070",
+    "company": "adventuresinflorida",
+    "title": "Expeditions",
+    "operator": "Adventures in Florida",
+    "publicPath": "/destinations/florida/orlando/tours/expeditions-694070",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Adventures in Florida lists this outing."
+    ],
+    "schemaDescription": "The operator Adventures in Florida lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/uDZratxFStKtnnN4f3yP",
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/adventuresinflorida/items/694070/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/uDZratxFStKtnnN4f3yP",
+      "heroHandle": "uDZratxFStKtnnN4f3yP",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/adventuresinflorida-694070",
+      "fetchedAt": "2026-10-03T18:09:50.305792+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/adventuresinflorida/694070/content/",
+          "status": 200,
+          "bytes": 6912,
+          "sha256": "c6bafd3145f01689a16aa4e713efabc8ede9276093becdcb6deeb994d89e6493"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/adventuresinflorida/694070/structured-description/",
+          "status": 200,
+          "bytes": 1069,
+          "sha256": "7c60429d46d910cac8577b19c71aca72f89583744b7fef646997a06fd1cbc0c1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/adventuresinflorida/items/694070/",
+          "status": 200,
+          "bytes": 7400,
+          "sha256": "4fbc20d548bec2bada36b5e74a4b479797b433c3e50e7d92f065f42f9d67a92e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/adventuresinflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=694070&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/adventuresinflorida/items/694070/ratings/",
+          "status": 200,
+          "bytes": 428,
+          "sha256": "08d6db4dbc4ac05f90d6335f57627d1f2ebac8838736abe9fdb5571d7949bcc6"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Customized for you • Call to Book!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Designed for the more experienced paddler, our expeditions traverse sensitive wilderness areas where paddling conditions can get tough and the accommodations are “backcountry basic.”",
+        "detailsText": "Customized for you • Call to Book! Customized for you • Call to Book!",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "694070",
+        "provider": "adventuresinflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/adventuresinflorida/items/694070/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "254237",
+    "company": "realfloridaadventures",
+    "title": "The Real Florida Manatee Adventure",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/the-real-florida-manatee-adventure-254237",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The booking is an airboat trip in the Florida Everglades. Alligators are among the animals a captain watches for on this water. The booking runs about 11 hours. The airboat is the reason for the day, and the marsh is the setting. The commentary takes up Manatee Capital and Manatee Snorkel.",
+      "That same account stays with West Indian and Homosassa Springs State Park. Nature's Fish Bowl and Inclusions Boat are part of the same story. The route keeps Kings Bay and Crystal River Complimentary Mask in view."
+    ],
+    "schemaDescription": "An airboat outing with Real Florida Adventures in Orlando. The outing passes Homosassa Springs State Park, Ellie Schiller Homosassa Springs Wildlife State, and Icon Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Homosassa Springs State Park and Ellie Schiller Homosassa Springs Wildlife State"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/kXZHLvRnCcxxdGSWKjYg"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/VG9doa7cRaaeJiPIegvw",
+    "wordCount": 87,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254237/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/VG9doa7cRaaeJiPIegvw",
+      "heroHandle": "VG9doa7cRaaeJiPIegvw",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/kXZHLvRnCcxxdGSWKjYg",
+          "handle": "kXZHLvRnCcxxdGSWKjYg",
+          "pixelSha256": "68e1ccd85b27177308dcaa33e2775c8787485a3ab9f5e9e65fbd33c891f11265",
+          "differenceHashDistanceFromHero": 119,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.13764,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/kXZHLvRnCcxxdGSWKjYg",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-254237",
+      "fetchedAt": "2026-10-03T18:09:50.306946+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254237/content/",
+          "status": 200,
+          "bytes": 7628,
+          "sha256": "beabe97451f8c2d3042f5b6fd98ff1f0aa50ee88af6a3293cb6e2a4c33148678"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254237/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254237/",
+          "status": 200,
+          "bytes": 20531,
+          "sha256": "7b349c58a593aee16a250254fabbcd19be78bae3e117524478c03540d2229af8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254237&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254237/ratings/",
+          "status": 200,
+          "bytes": 513,
+          "sha256": "3752d7ac032e5cf154f7b92a891b3d9633c4b3cec3e3949fd18fc71d852e8f3f"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All ages • Approx. 11 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Crystal River",
+          "Manatee Capital",
+          "Manatee Snorkel",
+          "Coast Guard Certified Captain",
+          "West Indian",
+          "Nature's Fish Bowl",
+          "Withlacoochee River",
+          "Inclusions Boat"
+        ],
+        "measures": [
+          "11 Hours",
+          "80 miles",
+          "48hours"
+        ],
+        "description": "The Real Florida Adventure Approx. 11 Hours. This Tour You've come all the way to Florida, so it makes sense to actually see as much of it as possible, and no other tour provides such a wide-ranging, in-depth experience as our carefully crafted Real Florida Adventure. This action-packed day an overview of what's in store as we head out to the beautiful Crystal River area on the Gulf coast, 80 miles north-west of Orlando. This is the Manatee Capital of the World, and the only place in America where it is legal to swim with manatees. It is also home to stunning natural springs and lots of wildlife, and you'll get to meet an essential part of it as we gear up for the signature Manatee Snorkel under the supervision of a Coast Guard Certified Captain . You will learn all about the unique West Indian manatee - and then get to see some of them, up close and personal in the crystal-clear waters! Then we head off to 210-acre Homosassa Springs State Park, a genuine hidden gem of Florida nature, where there is plentiful local wildlife to see and hear about, including the endangered Florida panther, black bears, red wolves, bobcats and alligators, as well as a profusion of birdlife, notably whooping cranes and flamingos. Also here is the unique sight of Nature's Fish Bowl, an underwater observatory built over the mouth of the main spring where a huge number of fish hang out, while the Park has its own manatee rehabilitation program to provide another exciting glimpse of these rare sea mammals. Lunch is included, here, too. Finally, the day will conclude with an exciting airboat ride on the Withlacoochee River, another natural haven where you can see more wildlife in its natural habitat and enjoy the thrill of skimming the water at up to 45mph in these exhilarating, flat-bottomed craft. NB: any person wishing to do the manatee swim must hire a wetsuit prior to boat departure. Wetsuit rental is handled when you arrive at the manatee boat tour. Snorkel equipment is provided free. Flotation devices are available for your use. Life vests are available if needed. Inclusions Boat tour of Kings Bay and Crystal River Complimentary Mask and Snorkel Packed Lunch provided by Publix: 6 inch ultimate sub on white bread, tavern ham, OvenGold turkey breast, top round roast beef, and Provolone cheese, lettuce and tomato, bag of chips, 2 cookies, 1 drink. Vegetarian, Vegan and Gluten free can be accommodated with min 48hours notice Admission into Ellie Schiller Homosassa Springs Wildlife State Park A wild airboat ride on the Withlacoochee River Roundtrip Transportation from International Drive, Disney and Kissimmee areas Professional, Certified and Licensed Tour Guide Not Included Mandatory $15 wet-suit rental fee for any swimmers Gratuities Sunscreen, Sunglasses, Camera's, Swimsuits, Towels, Insect Repellent, Proof of Confirmation Pickup Time and Schedule Margaritaville Resort Orlando at 7:15am 8000 Fins Up Cir, Kissimmee, FL 34747 Golden Corral at 7:30am 8707 Vineland Ave, Orlando, FL 32821 Orlando Star Flyer at Icon Park at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "We look forward to seeing you soon! The Real Florida Manatee Adventure Inclusions • Boat tour of Kings Bay and Crystal River • Complimentary Mask and Snorkel • Packed Lunch • Admission into Ellie Schiller Homosassa Springs Wildlife State Park • A wild airboat ride on the Withlacoochee River • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Mandatory $15 wet-suit rental fee for any swimmers • Drinks Gratuities Your tour guides gratuities are NOT included in the cost of your tour package. Although, not compulsory, tipping is expected and is an expression of your satisfaction with the people who have assisted you throughout your tour. Although it may not be customary to you, it is of considerable significance to the tour guide who will take care of you for the entire day. As a guide for you, based upon the cost of the tour booked: 10% - $14 | 15% - $21 | 20% - $28 (suggested gratuities are per person) Wetsuit Rental, Life Vests & Floats $15 Wetsuit rental is handled when you arrive at the manatee boat tour. Snorkel equipment is provided free. Flotation devices are available for your use. Life vests are available if needed. Lunch Lunch includes: 6 inch sub sandwich (White bread, ham, turkey, American cheese), bag of chips, cookies and a bottle of water. We will attempt to accommodate special dietary requirements when given a minimum of 48 hours notice, HOWEVER due to the type of food offered we may not be able to accommodate every type of request. Should we be unable to fulfill a request, we would suggest bringing your own food for the days activities. We suggest wearing swimsuit underneath your clothes to ensure speedy boarding on to manatee boats. Sunscreen, Sunglasses, Camera's, Swimsuits, Towels, Insect Repellent, Proof of Confirmation, and optional gratuities for guides. PLEASE BRING CLOTHES TO CHANGE OUT OF YOUR SWIMWEAR, YOU CANNOT BOARD THE TOUR VEHICLE WITH WET CLOTHES. Weather: Florida climate is characterized as tropical with rainfall predominantly occurring between May and October. Thunderstorms are usually in the afternoon and come and go fairly quickly. The rain usually lasts for about 30 minutes or so and in Florida it can literally be raining on one side of the street and sunny on the other. Due to this unpredictability, all tours operate RAIN OR SHINE unless SEVERE weather is forecast. A forecast of questionable weather does not negate our cancellation or refund policies and timelines. All ages • Approx. 11 Hours All ages • Approx. 11 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "254237",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254237/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 87 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "254239",
+    "company": "realfloridaadventures",
+    "title": "Kennedy Space Center Adventure",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-adventure-254239",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Kennedy Space Center Adventure is a guided outing with Real Florida Adventures in Orlando. The outing starts at Astronaut Hall. The group then visits Rocket Garden and Icon Park. The outdoor route is about 60 miles."
+    ],
+    "schemaDescription": "Kennedy Space Center Adventure is a guided outing with Real Florida Adventures in Orlando.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Astronaut Hall and Rocket Garden"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YcVfZSUSpuoNbM970ynS"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/oZJphVuBQ562Pq7SMi7s",
+    "wordCount": 36,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254239/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/oZJphVuBQ562Pq7SMi7s",
+      "heroHandle": "oZJphVuBQ562Pq7SMi7s",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/YcVfZSUSpuoNbM970ynS",
+          "handle": "YcVfZSUSpuoNbM970ynS",
+          "pixelSha256": "a394ab1752c8ca94959c4bfb7a6666056d1c09c6b92d4ceecf17111d5c71fb5e",
+          "differenceHashDistanceFromHero": 123,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.33571,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/YcVfZSUSpuoNbM970ynS",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-254239",
+      "fetchedAt": "2026-10-03T18:09:50.307367+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254239/content/",
+          "status": 200,
+          "bytes": 5090,
+          "sha256": "4665027eb78f5715a7313a4d8242dcdd0efa186a719e2fff31fefa5024a1d15e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254239/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254239/",
+          "status": 200,
+          "bytes": 16468,
+          "sha256": "0444c565e0277e1090eaa0c164f8e33fbe2c8d7e2e58d00b43ee424b49106e1b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254239&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254239/ratings/",
+          "status": 200,
+          "bytes": 509,
+          "sha256": "5f5c6d7c1c4d4d2d77b335cb2c130a110325b152b6a61bdbd07c8e09ef6d89a0"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All ages • Approx. 10.5 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "One Small Step",
+          "Space Center",
+          "Astronaut Encounter",
+          "Bus Tour",
+          "Vehicle Assembly Building",
+          "Launch Complex",
+          "Visitor Complex",
+          "Space Shuttle Atlantis"
+        ],
+        "measures": [
+          "10.5 Hours",
+          "60 miles"
+        ],
+        "description": "Kennedy Space Center Admission With Transportation Approx. 10.5 Hours. This Tour Welcome to the home of One Small Step for Man. In simple terms, this is one of the most essential - and thrilling - attractions in Florida, and it is as real as it comes in terms of a dynamic, visceral place to visit. Not only does the Space Center offer the past, present and future of the space program, it puts visitors front and center in the whole experience like never before. Seeing is believing, and you will believe you have been transported to the cutting edge of space exploration through a series of hands-on exhibits, movies, and presentations, including a daily Astronaut Encounter with one of the modern heroes of NASA's operations. It all starts with the signature Bus Tour that provides a complete overview of the full extent of the vast spread of operations, including the massive Vehicle Assembly Building, Launch Complex 39B, and the Apollo/Saturn V Center, with its recreated moon landing and awesome full-size Saturn V rocket. Back at the main Visitor Complex, you should definitely make a beeline for the hugely impressive Space Shuttle Atlantis exhibit, with its moving and emotional presentation of one of the four surviving orbiters, as well as take a ride on the riveting Shuttle Launch Experience, a clever simulator with the inside track on what it feels like to blast off from the Space Center. You can also visit the Heroes & Legends center (including the U.S. Astronaut Hall of Fame), soak up the grandeur of the IMAX Theater with its eye-popping large-screen movies, and wander the Rocket Garden. There is SO much to see here, you will definitely need all day to take it all in, and our Admission with Transportation is the perfect way to indulge your inner astronaut! The KSC is fully 60 miles from Orlando, so let us take the strain out of the journey and you can enjoy the experience to the max - the IMAX. Inclusions • Admission into Kennedy Space Center Visitors complex • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Pickup Time and Schedule Margaritaville Resort Orlando at 7:15am 8000 Fins Up Cir, Kissimmee, FL 34747 Golden Corral at 7:30am 8707 Vineland Ave, Orlando, FL 32821 Orlando Star Flyer at Icon Park at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "We look forward to seeing you soon! Kennedy Space Center Adventure Inclusions • Admission into Kennedy Space Center Visitors complex • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Drinks • Meals Gratuities Your tour guides gratuities are NOT included in the cost of your tour package. Although, not compulsory, tipping is expected and is an expression of your satisfaction with the people who have assisted you throughout your tour. Although it may not be customary to you, it is of considerable significance to the tour guide who will take care of you for the entire day. As a guide for you, based upon the cost of the tour booked: 10% - $12 | 15% - $18 | 20% - $24 (suggested gratuities are per person) Sunscreen, Sunglasses, Camera's, Proof of Confirmation or voucher, cash for optional gratuities, All ages • Approx. 10.5 Hours All ages • Approx. 10.5 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "254239",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254239/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 36 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "254240",
+    "company": "realfloridaadventures",
+    "title": "Kennedy Space Center Ultimate Adventure",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-ultimate-adventure-254240",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The commentary takes up Visitor Complex and Space Shuttle Atlantis. That same account stays with Rocket Garden and President Kennedy. Vehicle Assembly Building and Kennedy Space Center Visitors are part of the same story. The route keeps NASA's Space Program and Roundtrip Transportation in view."
+    ],
+    "schemaDescription": "A guided outing with Real Florida Adventures in Orlando. The outing passes Rocket Garden and Icon Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Rocket Garden and Icon Park"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BTiJvXptSfugeIMiD2YB"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/1kKai6OnSIuK5ZtClKQW",
+    "wordCount": 45,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254240/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/1kKai6OnSIuK5ZtClKQW",
+      "heroHandle": "1kKai6OnSIuK5ZtClKQW",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/BTiJvXptSfugeIMiD2YB",
+          "handle": "BTiJvXptSfugeIMiD2YB",
+          "pixelSha256": "7ad5fdb7b2e11bd1e8fb3598911972415fa8468de07d50a9e63d0e87408f5b14",
+          "differenceHashDistanceFromHero": 123,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31272,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/BTiJvXptSfugeIMiD2YB",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-254240",
+      "fetchedAt": "2026-10-03T18:09:52.189153+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254240/content/",
+          "status": 200,
+          "bytes": 4997,
+          "sha256": "3d2d88d391d7979c2ae3a545d87ac6c463276abef2f0134bc0a8f095afef6dbb"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254240/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254240/",
+          "status": 200,
+          "bytes": 17394,
+          "sha256": "5e5c4b9de7b8d6162cbe1fcdba6c1785acf0ec44ddefeb892f56d633e58b04e7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254240&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254240/ratings/",
+          "status": 200,
+          "bytes": 518,
+          "sha256": "bc6e3a25f96b90c5a89524c1eb06c7cfe625dc1c2ebfaac528f3e8aeaf939a58"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All ages • Approx. 10.5 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Visitor Complex",
+          "Discover KSC",
+          "Space Center",
+          "Space Shuttle Atlantis",
+          "Shuttle Launch Experience",
+          "Rocket Garden",
+          "President Kennedy",
+          "Vehicle Assembly Building"
+        ],
+        "measures": [
+          "10.5 Hours"
+        ],
+        "description": "Kennedy Space Center Ultimate Package Approx. 10.5 Hours. This Tour When you want to immerse yourself completely in the space center vibe, this is the adventure for you - transportation and admission to the Visitor Complex, plenty of time to explore all that's on offer, then the superb Dine with an Astronaut option, and finally a trip ‘behind the gates' for a two-hour Discover KSC bus tour. We rightly label this our ‘Ultimate' tour as it maximizes every moment at the Space Center with a full-on and in-depth exploration that touches on all the key aspects of the space program. First, there is the chance to get up close and personal with exhibits like the essential Space Shuttle Atlantis (don't miss this, as it packs a really emotional punch with its big ‘reveal'), the Shuttle Launch Experience, Heroes & Legends center, extensive Rocket Garden, and IMAX Theater. Once you have soaked up NASA's past, present and future, we'll take you on to the highlight of lunch with one of their veterans, and a chance to hear first-hand about what it takes to be a member of the astronaut corps. Along with a tasty meal, you will have an opportunity to ask questions and have your photograph taken with him or her for a unique souvenir. Then it's time to spread your wings a little and head out to see more of the full 144,000-acre extent of the KSC, which was founded in 1962 by President Kennedy and has been growing ever since. This unique behind-the-scenes bus tour provides rare close-up views of the signature sights such as the gigantic Vehicle Assembly Building - the tallest one-story structure in the world - the historic launch sites and other operational facilities before concluding at the fascinating Apollo/Saturn V Center, home to a full-size Saturn V rocket, a moon-landing recreation, and a piece of moon-rock you can actually touch. It's as close as you can get to being an astronaut without actually joining NASA! Included • Admission into Kennedy Space Center Visitors complex • Chef prepared lunch with an experienced veteran of NASA's Space Program • Up Close Discover KSC Bus Tour • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Meals and Drinks not mentioned • Gratuities Pickup Time and Schedule Margaritaville Resort Orlando at 7:15am 8000 Fins Up Cir, Kissimmee, FL 34747 Golden Corral at 7:30am 8707 Vineland Ave, Orlando, FL 32821 Orlando Star Flyer at Icon Park at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "We look forward to seeing you soon! Kennedy Space Center Ultimate Experience Included • Admission into Kennedy Space Center Visitors complex • Chef prepared lunch with an experienced veteran of NASA's Space Program • Up Close Discover KSC Bus Tour • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Meals and Drinks not mentioned • Gratuities Sunscreen, Sunglasses, Camera's, Proof of Confirmation All ages • Approx. 10.5 Hours All ages • Approx. 10.5 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "254240",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254240/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 45 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "254242",
+    "company": "realfloridaadventures",
+    "title": "Kennedy Space Center Adventure and CHAT with an Astronaut",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-adventure-and-chat-with-an-astronaut-254242",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The commentary takes up Astronaut Approx and Visitor Complex. That same account stays with Visitors Complex and Space Shuttle Atlantis. Astronaut Hall and Rocket Garden are part of the same story. The route keeps Kennedy Space Center Visitors and Roundtrip Transportation in view. The locations are chosen because a film or television scene was shot there."
+    ],
+    "schemaDescription": "A guided outing with Real Florida Adventures in Orlando. The outing passes Astronaut Hall, Rocket Garden, and Icon Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Astronaut Hall and Rocket Garden"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/L7d1jmryQaeHykKwR4ot"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/p6wwc6l5QBGawYgt2dtq",
+    "wordCount": 56,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254242/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/p6wwc6l5QBGawYgt2dtq",
+      "heroHandle": "p6wwc6l5QBGawYgt2dtq",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/L7d1jmryQaeHykKwR4ot",
+          "handle": "L7d1jmryQaeHykKwR4ot",
+          "pixelSha256": "a9f8f809052f9c040beac6ec18de57e0052cfa39a8dd2c3a30783f18944e2f3a",
+          "differenceHashDistanceFromHero": 136,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.32037,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/L7d1jmryQaeHykKwR4ot",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-254242",
+      "fetchedAt": "2026-10-03T18:09:52.607612+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254242/content/",
+          "status": 200,
+          "bytes": 4984,
+          "sha256": "ecc750568f57b4f4e08f0199497495e83fc73511ef979a2b206a007212c29477"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254242/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254242/",
+          "status": 200,
+          "bytes": 17616,
+          "sha256": "d4959cab9e3e4d66ec63f912e79f777100469796c0d85e6e43422cae6cf03314"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254242&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254242/ratings/",
+          "status": 200,
+          "bytes": 536,
+          "sha256": "fa370b460e49300fdda748afbd6bba48d47ad44da30a3bd3c2d8ae509d6e600e"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All ages • Approx. 10.5 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Kennedy Space Center Chat",
+          "Astronaut Approx",
+          "Visitor Complex",
+          "Real Florida Adventures",
+          "Space Center",
+          "Visitors Complex",
+          "Space Shuttle Atlantis",
+          "Shuttle Launch Experience"
+        ],
+        "measures": [
+          "10.5 Hours",
+          "45 minute"
+        ],
+        "description": "Kennedy Space Center Chat with an Astronaut Approx. 10.5 Hours. This Tour When you want to take your space exploration a step further, what better way to enjoy the KSC than with one of the people who actually makes it all happen - one of NASA's very own astronauts. Not only will you be whisked to the Visitor Complex with all the convenience and efficiency of Real Florida Adventures transport, you will also be first in line for one of THE great personalized experiences the Space Center has to offer. Set in a purpose-designed intimate venue at the Visitors Complex you will be introduced to some common astronaut traditions before engaging in a question and answer with one of NASA's amazing Astronauts. During this 45 minute to an hour session, you'll be able to ask those well thought out questions to see what it's really like to work for NASA and be one of the few to travel into orbit. During the Chat enjoy a sampling of food and beverage while having your group conversation. Each guest will receive a commemorative gift and a lithograph (signed portrait) of the astronaut. Of course, you will still have plenty of time to explore the rest of the Space Center and soak up the amazing, dynamic vibe of the modern KSC, which has been dramatically revamped in recent years to really immerse visitors in both the history and the future of space exploration. There is a LOT to discover, but don't miss the awe-inspiring Space Shuttle Atlantis exhibit, complete with the Shuttle Launch Experience, the Heroes & Legends center, incorporating the U.S. Astronaut Hall of Fame, the majestic Rocket Garden, and the fabulous IMAX Theater, with its larger-than-life movie features. Included • Admission into Kennedy Space Center Visitors complex • A continental breakfast in the morning, or chef's choice of culinary samplings in the afternoon • 1 alcoholic drink per adult ticket (more available for purchase) • A commemorative gift and lithograph (signed portrait) of the astronaut • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not included • Meals and Drinks not mentioned • Gratuities Pickup Time and Schedule Margaritaville Resort Orlando at 7:15am 8000 Fins Up Cir, Kissimmee, FL 34747 Golden Corral at 7:30am 8707 Vineland Ave, Orlando, FL 32821 Orlando Star Flyer at Icon Park at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "We look forward to seeing you soon! Kennedy Space Center Chat with an Astronaut Included • Admission into Kennedy Space Center Visitors complex • A continental breakfast in the morning, or chef's choice of culinary samplings in the afternoon • 1 alcoholic drink per adult ticket (more available for purchase) • A commemorative gift and lithograph (signed portrait) of the astronaut • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not included • Meals and Drinks not mentioned • Gratuities Sunscreen, Sunglasses, Camera's, Proof of Confirmation All ages • Approx. 10.5 Hours All ages • Approx. 10.5 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "254242",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254242/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 56 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "254243",
+    "company": "realfloridaadventures",
+    "title": "Kennedy Space Center with Airboat Adventure",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-with-airboat-adventure-254243",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The group guests know there is a LOT to fit toward the Orlando vacation, which is why guests have designed this classic combination that twins essential excitement of Kennedy Space Center with thrills of airboat ride and the chance to some of the real, natural Florida.",
+      "The outing all starts with a drive out toward Brevard County where the first part of the adventure awaits on the St. Here, on the longest river in Florida, the airboat captain will showcase natural splendors of Central Florida with an ride on one of these, flat-bottomed craft that are powered by giant propeller.",
+      "Guests have the rest of the day to look at Visitor Center and soak up vast array of shows and presentations that provide full lowdown on past, present and future of space program as it gears up for return toward the moon, and on to Mars.",
+      "Covered • Admission toward Kennedy Space Center Visitors complex • airboat ride on the St."
+    ],
+    "schemaDescription": "An airboat outing with Real Florida Adventures in Orlando. The outing passes One Small Step For Man and Icon Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "One Small Step For Man and Icon Park"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/77SCm0lFT8iu8tUKJWQl"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/79o71uigTC25Eevxv1lt",
+    "wordCount": 160,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254243/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/79o71uigTC25Eevxv1lt",
+      "heroHandle": "79o71uigTC25Eevxv1lt",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/77SCm0lFT8iu8tUKJWQl",
+          "handle": "77SCm0lFT8iu8tUKJWQl",
+          "pixelSha256": "15b1d585d74cb17c528f14db095285d9e151f94382cdaee932393abb99b1ad6b",
+          "differenceHashDistanceFromHero": 119,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.41107,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/77SCm0lFT8iu8tUKJWQl",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-254243",
+      "fetchedAt": "2026-10-03T18:09:52.662757+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254243/content/",
+          "status": 200,
+          "bytes": 4761,
+          "sha256": "fb5cffb8ed444936e7584ac3ef8eed5ea7f5fff99fe288fac2a33903f0e0b342"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254243/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254243/",
+          "status": 200,
+          "bytes": 17159,
+          "sha256": "cdb87b393ae4a501338645768dcde0090eddd1b54b93654b0573742929bac73b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254243&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254243/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "c79e9b384a41596c92c4202e1e4c8170215cd1ab417c1cbad32126644e9001fe"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All ages • Approx. 10.5 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Kennedy Space Center Dine",
+          "Astronaut Approx",
+          "Kennedy Space Center",
+          "Space Center",
+          "Brevard County",
+          "Central Florida",
+          "One Small Step For Man",
+          "Visitor Center"
+        ],
+        "measures": [
+          "10.5 Hours"
+        ],
+        "description": "Kennedy Space Center Dine with an Astronaut Approx. 10.5 Hours. This Tour We know there is a LOT to fit into your Orlando vacation, which is why we've designed this classic combination that twins the essential excitement of the Kennedy Space Center with the thrills of an airboat ride and the chance to enjoy some of the real, natural Florida. It may seem strange to combine the high-tech world of the KSC with the rural nature of airboating, but the fact is the Space Center is surrounded by conservation areas and wildlife refuges, so there is a strong link between the two, and you will get the full effect of ultra-modern and natural all on this one tour. It all starts with a gentle drive out to Brevard County where the first part of your adventure awaits on the St. Johns River. Here, on the longest river in Florida, your airboat captain will showcase the natural splendors of Central Florida with an unforgettable ride on one of these unique, flat-bottomed craft that are powered by a giant propeller. Skimming along the river and its surrounding wetlands at up to 45mph, you will catch glimpses of alligators, turtles and other wildlife that make the river their home, including the state's abundance of birdlife, from egrets and herons to eagles and ospreys. After your nature experience, it's time to head to the home of One Small Step For Man and a complete immersion in the world of NASA and its astronauts. You will have the rest of the day to explore the Visitor Center and soak up the vast array of exhibits and presentations that provide the full lowdown on the past, present and future of the space program as it gears up for a return to the moon, and on to Mars. Be sure to visit the superb Space Shuttle Atlantis exhibit for one of the most emotional tributes to the former earth orbiter, as well as the Shuttle Launch Experience and a host of hands-on opportunities. Included • Admission into Kennedy Space Center Visitors complex • An airboat ride on the St. Johns River and Lake Poinsett • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Pickup Time and Schedule Margaritaville Resort Orlando at 7:15am 8000 Fins Up Cir, Kissimmee, FL 34747 Golden Corral at 7:30am 8707 Vineland Ave, Orlando, FL 32821 Orlando Star Flyer at Icon Park at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "We look forward to seeing you soon! Kennedy Space Center with Airboat Ride Included • Admission into Kennedy Space Center Visitors complex • An airboat ride on the St. Johns River and Lake Poinsett • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Sunscreen, Sunglasses, Camera's, Proof of Confirmation All ages • Approx. 10.5 Hours All ages • Approx. 10.5 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "254243",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254243/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "271301",
+    "company": "realfloridaadventures",
+    "title": "PRIVATE Kennedy Space Center Adventure",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/private-kennedy-space-center-adventure-271301",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "This is a guided outing with Real Florida Adventures in Orlando. The group starts at Astronaut Hall. The outdoor route is about 60 miles. The group reaches Astronaut Hall and Rocket Garden."
+    ],
+    "schemaDescription": "This is a guided outing with Real Florida Adventures in Orlando.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Astronaut Hall and Rocket Garden"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aaABMNmLRWyF8GMgYHGR"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/yl9kDLPRRRim34W3jHrs",
+    "wordCount": 32,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/271301/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/yl9kDLPRRRim34W3jHrs",
+      "heroHandle": "yl9kDLPRRRim34W3jHrs",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/aaABMNmLRWyF8GMgYHGR",
+          "handle": "aaABMNmLRWyF8GMgYHGR",
+          "pixelSha256": "ccd370ca587817801318d2834424ebdbf24e3b2179aac8d214eea494c94c2bb9",
+          "differenceHashDistanceFromHero": 136,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31926,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/aaABMNmLRWyF8GMgYHGR",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-271301",
+      "fetchedAt": "2026-10-03T18:09:53.264474+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/271301/content/",
+          "status": 200,
+          "bytes": 4508,
+          "sha256": "de8a0f4517a1010e29adcabd0f4c244a11b1a65d06b2be0ce3438ccdbc912336"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/271301/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/271301/",
+          "status": 200,
+          "bytes": 15902,
+          "sha256": "a4919b9b09f79e54a3d4ad3844f6a37344e7dedf88b52a70e2b0df37a7ef8c6f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=271301&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/271301/ratings/",
+          "status": 200,
+          "bytes": 518,
+          "sha256": "b2337e417787989052fd03f7d57fe223d7394af05bbadd84d973284b8a961795"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Ages 3 and up • Approx. 10 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Transportation Approx",
+          "One Small Step",
+          "Space Center",
+          "Astronaut Encounter",
+          "Bus Tour",
+          "Vehicle Assembly Building",
+          "Launch Complex",
+          "Visitor Complex"
+        ],
+        "measures": [
+          "10 Hours",
+          "60 miles"
+        ],
+        "description": "Kennedy Space Center Admission With PRIVATE Transportation Approx. 10 Hours. This Tour Welcome to the home of One Small Step for Man. In simple terms, this is one of the most essential - and thrilling - attractions in Florida, and it is as real as it comes in terms of a dynamic, visceral place to visit. Not only does the Space Center offer the past, present and future of the space program, it puts visitors front and center in the whole experience like never before. Seeing is believing, and you will believe you have been transported to the cutting edge of space exploration through a series of hands-on exhibits, movies, and presentations, including a daily Astronaut Encounter with one of the modern heroes of NASA's operations. It all starts with the signature Bus Tour that provides a complete overview of the full extent of the vast spread of operations, including the massive Vehicle Assembly Building, Launch Complex 39B, and the Apollo/Saturn V Center, with its recreated moon landing and awesome full-size Saturn V rocket. Back at the main Visitor Complex, you should definitely make a beeline for the hugely impressive Space Shuttle Atlantis exhibit, with its moving and emotional presentation of one of the four surviving orbiters, as well as take a ride on the riveting Shuttle Launch Experience, a clever simulator with the inside track on what it feels like to blast off from the Space Center. You can also visit the Heroes & Legends center (including the U.S. Astronaut Hall of Fame), soak up the grandeur of the IMAX Theater with its eye-popping large-screen movies, and wander the Rocket Garden. There is SO much to see here, you will definitely need all day to take it all in, and our Admission with Transportation is the perfect way to indulge your inner astronaut! The KSC is fully 60 miles from Orlando, so let us take the strain out of the journey and you can enjoy the experience to the max - the IMAX. Inclusions • Admission into Kennedy Space Center Visitors complex • PRIVATE Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Pickup Time and Schedule Depending on your hotel, pickup will be between 7:30 and 8:30am. We will collect you from your own hotel as part of this PRIVATE package.",
+        "detailsText": "We look forward to seeing you soon! Kennedy Space Center with Transportation Inclusions • Admission into Kennedy Space Center Visitors complex • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Sunscreen, Sunglasses, Camera's, Proof of Confirmation or voucher, cash for optional gratuities, Ages 3 and up • Approx. 10 Hours Ages 3 and up • Approx. 10 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "271301",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/271301/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 32 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "285090",
+    "company": "realfloridaadventures",
+    "title": "PRIVATE Real Florida Manatee Adventure",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/private-real-florida-manatee-adventure-285090",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The booking is an airboat trip in the Florida Everglades. Alligators are among the animals a captain watches for on this water. The booking runs about 11 hours. The airboat is the reason for the day, and the marsh is the setting. The commentary takes up Crystal River and Manatee Capital.",
+      "That same account stays with Manatee Snorkel and West Indian. Homosassa Springs State Park and Nature's Fish Bowl are part of the same story. The route keeps Withlacoochee River and Kings Bay in view."
+    ],
+    "schemaDescription": "An airboat outing with Real Florida Adventures in Orlando. The outing passes Real Florida Adventure BOOK DIRECT, Homosassa Springs State Park, and Ellie Schiller Homosassa Springs Wildlife State.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Real Florida Adventure BOOK DIRECT and Homosassa Springs State Park"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AVujvBaoRtJDPzwyhUiw"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/X9PBHTvTTEK5tm4vQQQi",
+    "wordCount": 85,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/285090/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/X9PBHTvTTEK5tm4vQQQi",
+      "heroHandle": "X9PBHTvTTEK5tm4vQQQi",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/AVujvBaoRtJDPzwyhUiw",
+          "handle": "AVujvBaoRtJDPzwyhUiw",
+          "pixelSha256": "2a2b88612b19112e07e4ef88cebecf7ec2213b445ab8d422a44e66512ba9d49d",
+          "differenceHashDistanceFromHero": 130,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.38875,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/AVujvBaoRtJDPzwyhUiw",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-285090",
+      "fetchedAt": "2026-10-03T18:09:54.112008+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/285090/content/",
+          "status": 200,
+          "bytes": 5316,
+          "sha256": "0c319fb04e164e76f40291473f99acb0ab8de9855a232a233751a77d7fe212a3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/285090/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/285090/",
+          "status": 200,
+          "bytes": 17360,
+          "sha256": "09a154cbf71fe72d4788d4beddb4a4cf160b0e5cee57286e6c14d9444d3245c1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=285090&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/285090/ratings/",
+          "status": 200,
+          "bytes": 517,
+          "sha256": "b86e37027247e6a546cf79698dd272185d452d05d0c6ea93c2a69ee3c9cd35c8"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Ages 3 and up • Approx. 11 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Use promo-code DIRECT10 to receive 10% off tickets!"
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Crystal River",
+          "Manatee Capital",
+          "Manatee Snorkel",
+          "Coast Guard Certified Captain",
+          "West Indian",
+          "Nature's Fish Bowl",
+          "Withlacoochee River",
+          "Kings Bay"
+        ],
+        "measures": [
+          "11 Hours",
+          "80 miles"
+        ],
+        "description": "The Real Florida Adventure BOOK DIRECT BONUS! Use promo-code DIRECT10 to receive 10% off tickets! Approx. 11 Hours. This Tour You've come all the way to Florida, so it makes sense to actually see as much of it as possible, and no other tour provides such a wide-ranging, in-depth experience as our carefully crafted Real Florida Adventure. This action-packed day starts with a full overview of what's in store as we head out to the beautiful Crystal River area on the Gulf coast, 80 miles north-west of Orlando. This is the Manatee Capital of the World, and the only place in America where it is legal to swim with manatees. It is also home to stunning natural springs and lots of wildlife, and you'll get to meet an essential part of it as we gear up for the signature Manatee Snorkel under the supervision of a Coast Guard Certified Captain . You will learn all about the unique West Indian manatee - and then get to see some of them, up close and personal in the crystal-clear waters! Then we head off to 210-acre Homosassa Springs State Park, a genuine hidden gem of Florida nature, where there is plentiful local wildlife to see and hear about, including the endangered Florida panther, black bears, red wolves, bobcats and alligators, as well as a profusion of birdlife, notably whooping cranes and flamingos. Also here is the unique sight of Nature's Fish Bowl, an underwater observatory built over the mouth of the main spring where a huge number of fish hang out, while the Park has its own manatee rehabilitation program to provide another exciting glimpse of these rare sea mammals. Lunch is included, here, too. Finally, the day will conclude with an exciting airboat ride on the Withlacoochee River, another natural haven where you can see more wildlife in its natural habitat and enjoy the thrill of skimming the water at up to 45mph in these exhilarating, flat-bottomed craft. NB: any person wishing to do the manatee swim must hire a wetsuit prior to boat departure. Snorkel equipment is provided free. Inclusions • Boat tour of Kings Bay and Crystal River • Complimentary Mask and Snorkel • Packed Lunch • Admission into Ellie Schiller Homosassa Springs Wildlife State Park • A wild airboat ride on the Withlacoochee River • PRIVATE Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Mandatory wetsuit rental fee for any swimmers • Gratuities • Drinks Sunscreen, Sunglasses, Camera's, Swimsuits, Towels, Insect Repellent, Proof of Confirmation Pickup Time and Schedule Depending on your hotel, pickup will be between 7:15 and 8:30am. We will collect you from your own hotel as part of this PRIVATE package.",
+        "detailsText": "We look forward to seeing you soon! The Real Florida Adventure Your exact meeting location shows up above (one of the three) depending on the one you selected. Inclusions • Boat tour of Kings Bay and Crystal River • Complimentary Mask and Snorkel • Packed Lunch • Admission into Ellie Schiller Homosassa Springs Wildlife State Park • A wild airboat ride on the Withlacoochee River • PRIVATE Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Mandatory $12 wetsuit rental fee for any swimmers • Gratuities • Drinks Sunscreen, Sunglasses, Camera's, Swimsuits, Towels, Insect Repellent, Proof of Confirmation Ages 3 and up • Approx. 11 Hours Ages 3 and up • Approx. 11 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "285090",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/285090/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 85 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "290231",
+    "company": "realfloridaadventures",
+    "title": "Shingle Creek Guided Kayak Adventure",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/shingle-creek-guided-kayak-adventure-290231",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "This rental is a single kayak for one paddler on the bay. This rental is a two-person kayak for paddling the bay together. Life jackets are included with the kayak. Staff point out places on the bay, and guests paddle the route they choose.",
+      "The paddle passes Central Florida and Sunshine State. From the water the group comes to American Canoe Association and First Aid. Roundtrip Transportation and International Drive are on the same stretch."
+    ],
+    "schemaDescription": "A 5-hour paddle outing with Real Florida Adventures.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "5 hours paddle outing"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BNVXGtt2RfGrl7TFEvDL"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/VyHBvvxkQ2CpgWUg5BB0",
+    "wordCount": 76,
+    "durationLabel": "5 hours",
+    "durationIso": "PT5H",
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/290231/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/VyHBvvxkQ2CpgWUg5BB0",
+      "heroHandle": "VyHBvvxkQ2CpgWUg5BB0",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/BNVXGtt2RfGrl7TFEvDL",
+          "handle": "BNVXGtt2RfGrl7TFEvDL",
+          "pixelSha256": "883f6dc29f88f39133df1a652da5590ff6f83f8acc98f21fcd48d1c7bed20e8d",
+          "differenceHashDistanceFromHero": 120,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.211,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/BNVXGtt2RfGrl7TFEvDL",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-290231",
+      "fetchedAt": "2026-10-03T18:09:54.321710+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/290231/content/",
+          "status": 200,
+          "bytes": 4243,
+          "sha256": "4ca27a7ea01e63ba018fc7bacf54dade3570369b36c97720b4d7b4526d67f779"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/290231/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/290231/",
+          "status": 200,
+          "bytes": 14210,
+          "sha256": "b632ce528fb42c9feb38075cc6bf9ebc15c4790dbf1108082f0ad1fc0513c1c7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=290231&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/290231/ratings/",
+          "status": 200,
+          "bytes": 516,
+          "sha256": "485b19a319e6e099510ede1f49c6405707ab7c82c56c8d6626730e1694647b82"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "5 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Ages 5 and up • Approx. 5 Hours",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "This 2 hour out & back eco-tour is a great way to explore the peaceful side of the Sunshine State.",
+          "Tour duration is approximately 5 hours door to door."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Guided Kayak Adventure",
+          "Central Florida's",
+          "Certified Kayak Instructors",
+          "American Canoe Association",
+          "First Aid",
+          "Roundtrip Transportation",
+          "Licensed Tour Guide Not",
+          "Gratuities Pickup Time"
+        ],
+        "measures": [
+          "5 Hours",
+          "2 hour"
+        ],
+        "description": "Guided Kayak Adventure! Approx. 5 Hours. This Tour There's no better way to view Florida's natural beauty than taking a leisurely kayak tour through one of Central Florida's best kept secrets…Shingle Creek. We'll pick you up and transport you to this hidden gem located just outside the hustle and bustle of the tourist district. Steeped in rich history, certified guides will lead you down the river pointing out the abundance of wildlife as you glide through ancient cypress forests. This 2 hour out & back eco-tour is a great way to explore the peaceful side of the Sunshine State. Catch glimpses of turtles, birds of prey, wading birds, and maybe even an alligator or two. Tour includes single kayaks or tandem kayaks, paddling instructions, and all paddling equipment. After your tour enjoy a picnic lunch along the river before heading back to your pickup location. This is the perfect half day Florida experience for everyone of all ages to enjoy. All tours guides are Certified Kayak Instructors by the American Canoe Association (ACA) as well as First Aid and CPR trained and certified. Tour duration is approximately 5 hours door to door. Included • 2 hour guided kayak tour with an ACA certified guide • Picnic lunch by the water • Kayak, paddle, life jacket, and whistle • Roundtrip Transportation from International Drive, Disney, and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not included • Meals and Drinks not mentioned • Gratuities Pickup Time and Schedule Margaritaville Resort Orlando at 7:15am 8000 Fins Up Cir, Kissimmee, FL 34747 Golden Corral at 7:30am 8707 Vineland Ave, Orlando, FL 32821 Orlando Starflyer at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "We look forward to seeing you soon! Shingle Creek Guided Kayak Adventure Your exact meeting location shows up above (one of the three) depending on the one you selected. Please complete online waiver in the following link prior to your tour https://www.paddlingcenter.com/ecotour-waiver Included • 2 hour guided kayak tour with an ACA certified guide • Picnic lunch by the water • Kayak, paddle, life jacket, and whistle • Roundtrip Transportation from International Drive, Disney, and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not included • Meals and Drinks not mentioned • Gratuities Sunscreen, Sunglasses, Camera's, Proof of Confirmation Ages 5 and up • Approx. 5 Hours Ages 5 and up • Approx. 5 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "290231",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/290231/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 76 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "329221",
+    "company": "realfloridaadventures",
+    "title": "Boggy Creek Airboat Ride Adventures & Transport",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/boggy-creek-airboat-ride-adventures-and-transport-329221",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The group Discover territory that remains unaltered in wilderness of Central Florida Everglades with thrilling airboat ride to start the day. View the wildlife Florida has to offer as wind blows through the hair while guests travel up to 40mph. Experienced captains take guests into the beauty of nature, including wetlands and wildlife.",
+      "After the trip, walk through the Native American Village to hear about how they survived in this wetland. Towering Chickee's cover genuine objects and hand-made creations of Native Americans. That is a way to start the morning and be back in time to whatever guests have planned for rest of the day."
+    ],
+    "schemaDescription": "An airboat outing with Real Florida Adventures. The outing passes Boggy Creek Airboat Adventure Approx and Icon Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Boggy Creek Airboat Adventure Approx and Icon Park"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rNrWpEMZT8ycD1PXVbDS"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/W8IwAyfRCi5ulp1HiMuW",
+    "wordCount": 106,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/329221/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/W8IwAyfRCi5ulp1HiMuW",
+      "heroHandle": "W8IwAyfRCi5ulp1HiMuW",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/rNrWpEMZT8ycD1PXVbDS",
+          "handle": "rNrWpEMZT8ycD1PXVbDS",
+          "pixelSha256": "dcfbfc061bc1dd94608cae4220ef8bb2f9cef16e788c08d4fd578954e3d822b7",
+          "differenceHashDistanceFromHero": 116,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.40039,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/rNrWpEMZT8ycD1PXVbDS",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-329221",
+      "fetchedAt": "2026-10-03T18:09:54.482320+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/329221/content/",
+          "status": 200,
+          "bytes": 4481,
+          "sha256": "664d21f800fafdff5de66d7e59476bccb8dcc3cf4d8ede842a5c624eb5c96d1d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/329221/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/329221/",
+          "status": 200,
+          "bytes": 14528,
+          "sha256": "9b15ac90a04592db58f458cb26ddd4003319470bc22f5fb11bc49bb3cd8c0530"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=329221&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/329221/ratings/",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "29b644d0b7ba2865bb3c5e9499dc8705daa8fd4b87752713d648b5ab0d5b6a28"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All Ages • Approx. 3 Hours",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Boggy Creek Airboat Adventure Approx",
+          "Central Florida Everglades",
+          "Native American Village",
+          "Towering Chickee's",
+          "Airboat Tour",
+          "Alligator Oasis",
+          "Gem Mine Experience",
+          "Roundtrip Transportation"
+        ],
+        "measures": [
+          "3 Hours"
+        ],
+        "description": "Boggy Creek Airboat Adventure Approx. 3 Hours. This Tour Discover territory that remains unaltered in the wilderness of the Central Florida Everglades with a thrilling airboat ride to start your day. View the amazing wildlife Florida has to offer as the wind blows through your hair while you travel up to 40mph. Experienced captains take you into the breathtaking beauty of nature, including wetlands and wildlife. See alligators, turtles, birds and more in their natural environment. After your trip, stroll through the Native American Village to learn about how they survived in this beautiful wetland. Towering Chickee's cover genuine artifacts and hand-made creations of Native Americans. Think you can make it as a prospector? Before you leave make sure to try your luck at the gem mining experience. Kids will love it as they sift through sand looking for the perfect stone. This is a perfect way to start your morning and be back in time to enjoy whatever you have planned for the rest of the day! Included • 30 or 60 min Airboat Tour • Alligator Oasis (Live gator viewing area) • Hearing protection and life vests • Gem Mine Experience (One per Party) • Native American Village • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Pickup Time and Schedule Margaritaville Resort Orlando at 7:15am 8000 Fins Up Cir, Kissimmee, FL 34747 Golden Corral at 7:30am 8707 Vineland Ave, Orlando, FL 32821 Orlando Star Flyer at Icon Park at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "Please arrive 15 minutes early We look forward to seeing you soon! Boggy Creek Airboat Adventures Included • 30 or 60 min Airboart Tour • Alligator Oasis (Live gator viewing area) • Hearing protection and life vests • Native American Village • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Gratuities Your tour guides gratuities are NOT included in the cost of your tour package. Although, not compulsory, tipping is expected and is an expression of your satisfaction with the people who have assisted you throughout your tour. Although it may not be customary to you, it is of considerable significance to the tour guide who will take care of you for the entire day. As a guide for you, based upon the cost of the tour booked: 10% - $12 | 15% - $18 | 20% - $24 (suggested gratuities are per person) Sunscreen, Sunglasses, Camera's, Proof of Confirmation All Ages • Approx. 3 Hours All Ages • Approx. 3 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "329221",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/329221/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "491805",
+    "company": "realfloridaadventures",
+    "title": "Kennedy Space Center Direct Express",
+    "operator": "Real Florida Adventures",
+    "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-direct-express-491805",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The route also reaches One Small Step and Astronaut Encounter. Vehicle Assembly Building and Launch Complex are part of the same outing. Later the group comes to Visitor Complex and Space Shuttle Atlantis. There is time to look at Astronaut Hall and Rocket Garden."
+    ],
+    "schemaDescription": "A guided outing with Real Florida Adventures in Orlando. The outing passes Kennedy Space Center Direct Express Approx, ICON Park, and Astronaut Hall.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Kennedy Space Center Direct Express Approx and ICON Park"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zneqOTARPatA5rTexnHg"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/XtEGucCaQElaGbmkx6re",
+    "wordCount": 44,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/realfloridaadventures/items/491805/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Orlando",
+      "state": "Florida",
+      "citySlug": "orlando",
+      "stateSlug": "florida",
+      "reason": "Orlando, Florida belongs to the Orlando area via company_start_location",
+      "place": {
+        "city": "Orlando",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "orlando",
+        "stateSlug": "florida",
+        "raw": "Orlando, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 28.381602,
+        "lng": -81.504649
+      },
+      "signals": [
+        {
+          "city": "Orlando",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "orlando",
+          "stateSlug": "florida",
+          "raw": "Orlando, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 28.381602,
+          "lng": -81.504649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/XtEGucCaQElaGbmkx6re",
+      "heroHandle": "XtEGucCaQElaGbmkx6re",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/zneqOTARPatA5rTexnHg",
+          "handle": "zneqOTARPatA5rTexnHg",
+          "pixelSha256": "307b6c0e522e07d241966298d47d18f146e7f9fbf7b82eac6902f777a019613f",
+          "differenceHashDistanceFromHero": 111,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.325,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/zneqOTARPatA5rTexnHg",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/orlando/realfloridaadventures-491805",
+      "fetchedAt": "2026-10-03T18:09:54.989783+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/491805/content/",
+          "status": 200,
+          "bytes": 5096,
+          "sha256": "9569d6d060f68be37d4d301b01a1035e605593f9637dd2141b3e1792fcaf868e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/491805/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/491805/",
+          "status": 200,
+          "bytes": 16452,
+          "sha256": "1531a905cdd192f5d0df19201981d5336596ad0d7751036b8b48ac4c85f7a080"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=491805&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/491805/ratings/",
+          "status": 200,
+          "bytes": 514,
+          "sha256": "374eb1c58f4deaa820c3ab2c4eeccfbdf8cdf0e0c1839c3f2242d714649a0e26"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All ages • Approx. 10.5 Hours",
+        "startCity": "Orlando",
+        "startProvince": "FL",
+        "startLat": 28.381602,
+        "startLng": -81.504649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Orlando Starflyer",
+          "Direct Express",
+          "One Small Step",
+          "Space Center",
+          "Astronaut Encounter",
+          "Bus Tour",
+          "Vehicle Assembly Building",
+          "Launch Complex"
+        ],
+        "measures": [
+          "10.5 Hours",
+          "60 miles"
+        ],
+        "description": "Kennedy Space Center Direct Express Approx. 10.5 Hours. This Tour One Pickup, One Drop Off. Leave directly from the Orlando Starflyer at ICON Park and be the first drop off at the end of the day! Direct Express both there and back! Welcome to the home of One Small Step for Man. In simple terms, this is one of the most essential - and thrilling - attractions in Florida, and it is as real as it comes in terms of a dynamic, visceral place to visit. Not only does the Space Center offer the past, present and future of the space program, it puts visitors front and center in the whole experience like never before. Seeing is believing, and you will believe you have been transported to the cutting edge of space exploration through a series of hands-on exhibits, movies, and presentations, including a daily Astronaut Encounter with one of the modern heroes of NASA's operations. It all starts with the signature Bus Tour that provides a complete overview of the full extent of the vast spread of operations, including the massive Vehicle Assembly Building, Launch Complex 39B, and the Apollo/Saturn V Center, with its recreated moon landing and awesome full-size Saturn V rocket. Back at the main Visitor Complex, you should definitely make a beeline for the hugely impressive Space Shuttle Atlantis exhibit, with its moving and emotional presentation of one of the four surviving orbiters, as well as take a ride on the riveting Shuttle Launch Experience, a clever simulator with the inside track on what it feels like to blast off from the Space Center. You can also visit the Heroes & Legends center (including the U.S. Astronaut Hall of Fame), soak up the grandeur of the IMAX Theater with its eye-popping large-screen movies, and wander the Rocket Garden. There is SO much to see here, you will definitely need all day to take it all in, and our Admission with Transportation is the perfect way to indulge your inner astronaut! The KSC is fully 60 miles from Orlando, so let us take the strain out of the journey and you can enjoy the experience to the max - the IMAX. Inclusions • Admission into Kennedy Space Center Visitors complex • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Gratuities • Drinks • Meals Pickup Time and Schedule Orlando Star Flyer at Icon Park at 8am 8265 International Dr, Orlando, FL 32819",
+        "detailsText": "We look forward to seeing you soon! Kennedy Space Center with Transportation Inclusions • Admission into Kennedy Space Center Visitors complex • Roundtrip Transportation from International Drive, Disney and Kissimmee areas • Professional, Certified and Licensed Tour Guide Not Included • Drinks • Meals Gratuities Your tour guides gratuities are NOT included in the cost of your tour package. Although, not compulsory, tipping is expected and is an expression of your satisfaction with the people who have assisted you throughout your tour. Although it may not be customary to you, it is of considerable significance to the tour guide who will take care of you for the entire day. As a guide for you, based upon the cost of the tour booked: 10% - $12 | 15% - $18 | 20% - $24 (suggested gratuities are per person) Sunscreen, Sunglasses, Camera's, Proof of Confirmation or voucher, cash for optional gratuities, All ages • Approx. 10.5 Hours All ages • Approx. 10.5 Hours",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "491805",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/491805/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 44 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  }
+]

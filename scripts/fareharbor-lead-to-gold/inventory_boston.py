@@ -147,6 +147,9 @@ def inventory(city_slug: str = "boston") -> dict:
                 "bookingUrl": booking,
                 "heroImage": tour.get("heroImage"),
                 "galleryImages": tour.get("galleryImages") or [],
+                "tags": tour.get("tags") or [],
+                "categories": tour.get("categories") or [],
+                "primaryDisplayCategory": tour.get("primaryDisplayCategory"),
                 "alreadyRetired": item_id in retired,
             }
         )

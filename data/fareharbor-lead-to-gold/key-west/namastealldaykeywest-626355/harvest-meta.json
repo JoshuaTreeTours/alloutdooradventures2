@@ -1,0 +1,47 @@
+{
+  "company": "namastealldaykeywest",
+  "itemId": "626355",
+  "fetchedAt": "2026-10-03T18:10:02.169309+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/namastealldaykeywest/626355/content/",
+      "status": 200,
+      "bytes": 2503,
+      "sha256": "366a491daacda2ecf62dcd9915944a9f7812dcfd7ec3d177aa213eac41476ec6"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/namastealldaykeywest/626355/structured-description/",
+      "status": 200,
+      "bytes": 1672,
+      "sha256": "ea977811b9b33fbf1244dea9e90ce07f5b0b9bc3bd2839420413899e8ca08738"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/namastealldaykeywest/items/626355/",
+      "status": 200,
+      "bytes": 7539,
+      "sha256": "e2024e15d93bec6b1f2efce27fe4645545e49ff0fc7e15c1570d27f7dbc4d9c2"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/namastealldaykeywest/price-preview/per-item/v2/?asn=fhdn&item_pks=626355&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 551,
+      "sha256": "a3ac70208b22794982046cb62c8843b2a2184cd245e860b131e696d80164d1ed"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/namastealldaykeywest/items/626355/ratings/",
+      "status": 200,
+      "bytes": 442,
+      "sha256": "2a3dda8cfc4651ee61e347123e76cfed687acfdd2c3a0b57032a7fbb7705c573"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "626355",
+    "provider": "namastealldaykeywest",
+    "bookingUrl": "https://fareharbor.com/embeds/book/namastealldaykeywest/items/626355/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

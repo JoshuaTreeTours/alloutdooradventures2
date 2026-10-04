@@ -1,0 +1,169 @@
+{
+  "fetchedAt": "2026-10-03T18:09:25.293336+00:00",
+  "citySlug": "tampa",
+  "totalBostonLegacy": 2,
+  "total": 2,
+  "active": 1,
+  "terminal": 1,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 0,
+  "priceNotFound": 1,
+  "alreadyRetired": 1,
+  "engine6Collisions": 0,
+  "terminalIds": [
+    "326447"
+  ],
+  "priceNotFoundIds": [
+    "589679"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "589679",
+      "company": "tampabayboatingadventures",
+      "catalogId": "tampa-bay-boating-adventures-589679",
+      "slug": "private-snorkeling-charters-in-st-pete-florida-589679",
+      "title": "Private Snorkeling Charters in St. Pete, Florida",
+      "operator": "Tampa Bay Boating Adventures",
+      "publicPath": "/destinations/florida/tampa/tours/private-snorkeling-charters-in-st-pete-florida-589679",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Tampa",
+        "citySlug": "tampa",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/tampabayboatingadventures/items/589679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/pwn5m81bQBSJlBQoKds9",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/pwn5m81bQBSJlBQoKds9"
+      ],
+      "tags": [
+        "Snorkel"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:23.067396+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/tampabayboatingadventures/589679/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/tampabayboatingadventures/589679/structured-description/",
+          "status": 200,
+          "bytes": 4030,
+          "sha256": "674d4fc9939f90ff9da6d6bae016211a9bff7e716d37afd1d8d33532dcfd03bb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/tampabayboatingadventures/items/589679/",
+          "status": 200,
+          "bytes": 14089,
+          "sha256": "66ac59c56328b1c36ed7fae8db0bfe2f33207c5230ad341eaa330cc91aa6df74"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/tampabayboatingadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=589679&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/tampabayboatingadventures/items/589679/ratings/",
+          "status": 200,
+          "bytes": 583,
+          "sha256": "4387d269ce74c7399cab1f0d38d13f53888a6a490679f09a5a14b83c7c817cd3"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "589679",
+        "provider": "tampabayboatingadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/tampabayboatingadventures/items/589679/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "326447",
+      "company": "tampafloridafishingguide",
+      "catalogId": "bagem-fishing-charters-326447",
+      "slug": "inshore-fishing-charter-326447",
+      "title": "Inshore Fishing Charter",
+      "operator": "Bag'Em Fishing Charters",
+      "publicPath": "/destinations/florida/tampa/tours/inshore-fishing-charter-326447",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Tampa",
+        "citySlug": "tampa",
+        "lat": -82.458753,
+        "lng": 27.95169
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/tampafloridafishingguide/items/326447/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/GaJzchVbReKJMKasmyJW",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/GaJzchVbReKJMKasmyJW"
+      ],
+      "tags": [],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Fishing",
+      "alreadyRetired": true,
+      "fetchedAt": "2026-10-03T18:09:23.068004+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/tampafloridafishingguide/326447/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/tampafloridafishingguide/326447/structured-description/",
+          "status": 404,
+          "bytes": 588107,
+          "sha256": "d953c1b74a1b8ad92a73b3f3bdde00278e97c0f3518e178eddf906118439ffae"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/tampafloridafishingguide/items/326447/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "3b636b47ec5b8d7383f787ec65e78fce1c4300ffc4aa9e650e50ed89fc61ecd1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/tampafloridafishingguide/price-preview/per-item/v2/?asn=fhdn&item_pks=326447&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 148,
+          "sha256": "f6dfa14efa1ddd26e00cfbdbc2230d05423587723daa31ae52d72540828fe841"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/tampafloridafishingguide/items/326447/ratings/",
+          "status": 404,
+          "bytes": 588097,
+          "sha256": "fae7204c81f8ef85ef3758b6f6b534a35d8eae0e960e66dd6864443d65960a03"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "326447",
+        "provider": "tampafloridafishingguide",
+        "bookingUrl": "https://fareharbor.com/embeds/book/tampafloridafishingguide/items/326447/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

@@ -1,0 +1,784 @@
+{
+  "cities": {
+    "fort-lauderdale": {
+      "catalog": 4,
+      "selected": 1,
+      "withheld": [
+        {
+          "itemId": "687823",
+          "title": "Thirty Minutes Demo",
+          "publicPath": "/destinations/florida/fort-lauderdale/tours/thirty-minutes-demo-687823",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "684829",
+          "title": "Electric Bike Tour $99pp (90+mins)",
+          "publicPath": "/destinations/florida/fort-lauderdale/tours/electric-bike-tour-99pp-90mins-684829",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "684831",
+          "title": "Private Guided eBike Tour",
+          "publicPath": "/destinations/florida/fort-lauderdale/tours/private-guided-ebike-tour-684831",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        }
+      ]
+    },
+    "everglades-city": {
+      "catalog": 5,
+      "selected": 1,
+      "withheld": [
+        {
+          "itemId": "188642",
+          "title": "Kayak Rentals",
+          "publicPath": "/destinations/florida/everglades-city/tours/kayak-rentals-188642",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "197944",
+          "title": "Canoe Rentals- 2 person",
+          "publicPath": "/destinations/florida/everglades-city/tours/canoe-rentals--2-person-197944",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "200625",
+          "title": "Multi Day Canoe Rentals- 2 person",
+          "publicPath": "/destinations/florida/everglades-city/tours/multi-day-canoe-rentals--2-person-200625",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "200626",
+          "title": "Multi Day Kayak Rentals",
+          "publicPath": "/destinations/florida/everglades-city/tours/multi-day-kayak-rentals-200626",
+          "reason": "rental-admission-or-off-priority"
+        }
+      ]
+    },
+    "homestead": {
+      "catalog": 13,
+      "selected": 2,
+      "withheld": [
+        {
+          "itemId": "127309",
+          "title": "2 Hour Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/2-hour-kayak-canoe-rental-127309",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "127319",
+          "title": "4 Hour Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/4-hour-kayak-canoe-rental-127319",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "127325",
+          "title": "8 Hour Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/8-hour-kayak-canoe-rental-127325",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "127328",
+          "title": "24 Hour Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/24-hour-kayak-canoe-rental-127328",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "130986",
+          "title": "Two Day Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/two-day-kayak-canoe-rental-130986",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "130992",
+          "title": "Three Day Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/three-day-kayak-canoe-rental-130992",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "130993",
+          "title": "Four Day Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/four-day-kayak-canoe-rental-130993",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "130996",
+          "title": "Five Day Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/five-day-kayak-canoe-rental-130996",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "131002",
+          "title": "Six Day Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/six-day-kayak-canoe-rental-131002",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "131006",
+          "title": "Seven Day Kayak / Canoe Rental",
+          "publicPath": "/destinations/florida/homestead/tours/seven-day-kayak-canoe-rental-131006",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "335099",
+          "title": "4 Hour Canoe Rental @ 9 Mile Pond",
+          "publicPath": "/destinations/florida/homestead/tours/4-hour-canoe-rental-9-mile-pond-335099",
+          "reason": "rental-admission-or-off-priority"
+        }
+      ]
+    },
+    "tampa": {
+      "catalog": 3,
+      "selected": 2,
+      "withheld": [
+        {
+          "itemId": "617372",
+          "title": "Venice Louisiana Marsh fishing",
+          "publicPath": "/destinations/florida/tampa/tours/venice-louisiana-marsh-fishing-617372",
+          "reason": "outside-florida"
+        }
+      ]
+    },
+    "naples": {
+      "catalog": 5,
+      "selected": 5,
+      "withheld": []
+    },
+    "st-petersburg": {
+      "catalog": 20,
+      "selected": 6,
+      "withheld": [
+        {
+          "itemId": "254975",
+          "title": "The Jungle Prada Site History Tour",
+          "publicPath": "/destinations/florida/st-petersburg/tours/the-jungle-prada-site-history-tour-254975",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "639672",
+          "title": "General Admission",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-639672",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "639683",
+          "title": "General Admission & Mini Golf Package",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-and-mini-golf-package-639683",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "639689",
+          "title": "Immersive Date Package",
+          "publicPath": "/destinations/florida/st-petersburg/tours/immersive-date-package-639689",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "639860",
+          "title": "Sensory Saturdays",
+          "publicPath": "/destinations/florida/st-petersburg/tours/sensory-saturdays-639860",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "640300",
+          "title": "Birthday Parties",
+          "publicPath": "/destinations/florida/st-petersburg/tours/birthday-parties-640300",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "666674",
+          "title": "General Admission + Searchlight Hunt",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-searchlight-hunt-666674",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "666676",
+          "title": "General Admission + Pepe's Plight",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-pepes-plight-666676",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "666678",
+          "title": "General Admission + Flower Power",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-flower-power-666678",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "666679",
+          "title": "General Admission + Triple Play",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-triple-play-666679",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "671737",
+          "title": "General Admission + Python Challenge",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-python-challenge-671737",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "677028",
+          "title": "Four-Pack Savings Pass",
+          "publicPath": "/destinations/florida/st-petersburg/tours/four-pack-savings-pass-677028",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "677036",
+          "title": "Sunset Set Up Package",
+          "publicPath": "/destinations/florida/st-petersburg/tours/sunset-set-up-package-677036",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "683719",
+          "title": "General Admission + Feline Files",
+          "publicPath": "/destinations/florida/st-petersburg/tours/general-admission-feline-files-683719",
+          "reason": "rental-admission-or-off-priority"
+        }
+      ]
+    },
+    "sarasota": {
+      "catalog": 15,
+      "selected": 11,
+      "withheld": [
+        {
+          "itemId": "279559",
+          "title": "3 Speed Beach Cruiser Bicycle",
+          "publicPath": "/destinations/florida/sarasota/tours/3-speed-beach-cruiser-bicycle-279559",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "284517",
+          "title": "50cc Gas Scooter",
+          "publicPath": "/destinations/florida/sarasota/tours/50cc-gas-scooter-284517",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "113803",
+          "title": "Open Water Diver - Sarasota",
+          "publicPath": "/destinations/florida/sarasota/tours/open-water-diver---sarasota-113803",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "113819",
+          "title": "Rescue Diver - Sarasota",
+          "publicPath": "/destinations/florida/sarasota/tours/rescue-diver---sarasota-113819",
+          "reason": "rental-admission-or-off-priority"
+        }
+      ]
+    },
+    "stock-island": {
+      "catalog": 10,
+      "selected": 10,
+      "withheld": []
+    },
+    "orlando": {
+      "catalog": 20,
+      "selected": 11,
+      "withheld": [
+        {
+          "itemId": "333279",
+          "title": "Date Night Neon Glow Clear Kayak or Paddleboard & Champagne Orlando",
+          "publicPath": "/destinations/florida/orlando/tours/date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
+          "reason": "already-published-in-proof-batch"
+        },
+        {
+          "itemId": "254254",
+          "title": "Clearwater Beach Transport Only",
+          "publicPath": "/destinations/florida/orlando/tours/clearwater-beach-transport-only-254254",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "273816",
+          "title": "Kennedy Space Center Transportation ONLY",
+          "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-transportation-only-273816",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "282662",
+          "title": "Transportation Services",
+          "publicPath": "/destinations/florida/orlando/tours/transportation-services-282662",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "334398",
+          "title": "Orlando Magic 21-22 TICKET ONLY",
+          "publicPath": "/destinations/florida/orlando/tours/orlando-magic-21-22-ticket-only-334398",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "335992",
+          "title": "Kennedy Space Center FAM Trip",
+          "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-fam-trip-335992",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "384962",
+          "title": "Florida Cup Arsenal vs Chelsea",
+          "publicPath": "/destinations/florida/orlando/tours/florida-cup-arsenal-vs-chelsea-384962",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "385317",
+          "title": "Florida Cup Orlando City Soccer vs Arsenal",
+          "publicPath": "/destinations/florida/orlando/tours/florida-cup-orlando-city-soccer-vs-arsenal-385317",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "393377",
+          "title": "Orlando City Soccer Tickets",
+          "publicPath": "/destinations/florida/orlando/tours/orlando-city-soccer-tickets-393377",
+          "reason": "rental-admission-or-off-priority"
+        }
+      ]
+    },
+    "key-west": {
+      "catalog": 27,
+      "selected": 18,
+      "withheld": [
+        {
+          "itemId": "217057",
+          "title": "Key West Conch Republic Tiki Pedicab Experience by Kokomo Cabs",
+          "publicPath": "/destinations/florida/key-west/tours/key-west-conch-republic-tiki-pedicab-experience-by-kokomo-cabs-217057",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "527382",
+          "title": "Key West After Dark - Santeria, Voodoo & Ghost Tiki Bike Tour by Kokomo Cabs",
+          "publicPath": "/destinations/florida/key-west/tours/key-west-after-dark---santeria-voodoo-and-ghost-tiki-bike-tour-by-kokomo-cabs-527382",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "679077",
+          "title": "GPS Guided E-Bike History FunTour",
+          "publicPath": "/destinations/florida/key-west/tours/gps-guided-e-bike-history-funtour-679077",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "407103",
+          "title": "Guided Bike Tour of Old Town Key West",
+          "publicPath": "/destinations/florida/key-west/tours/guided-bike-tour-of-old-town-key-west-407103",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "145784",
+          "title": "Blind Squirrel",
+          "publicPath": "/destinations/florida/key-west/tours/blind-squirrel-145784",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "432452",
+          "title": "Tennessee Williams Museum",
+          "publicPath": "/destinations/florida/key-west/tours/tennessee-williams-museum-432452",
+          "reason": "outside-florida"
+        },
+        {
+          "itemId": "626349",
+          "title": "Namaste All Day",
+          "publicPath": "/destinations/florida/key-west/tours/namaste-all-day-626349",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "256633",
+          "title": "Robert the Doll After Dark",
+          "publicPath": "/destinations/florida/key-west/tours/robert-the-doll-after-dark-256633",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "541401",
+          "title": "Upper Keys Road Trip & Bike Ride",
+          "publicPath": "/destinations/florida/key-west/tours/upper-keys-road-trip-and-bike-ride-541401",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        }
+      ]
+    },
+    "miami": {
+      "catalog": 34,
+      "selected": 12,
+      "withheld": [
+        {
+          "itemId": "59157",
+          "title": "Social Wynwood InstaTour",
+          "publicPath": "/destinations/florida/miami/tours/social-wynwood-instatour-59157",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "498688",
+          "title": "1 Hour ATV Tour",
+          "publicPath": "/destinations/florida/miami/tours/1-hour-atv-tour-498688",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "498695",
+          "title": "45 Minutes ATV Tour",
+          "publicPath": "/destinations/florida/miami/tours/45-minutes-atv-tour-498695",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "669338",
+          "title": "2 Hour ATV Tour",
+          "publicPath": "/destinations/florida/miami/tours/2-hour-atv-tour-669338",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "445316",
+          "title": "EPIC HOTEL | 30 Minute Boat Ride + 1 Hour Jet Ski Experience",
+          "publicPath": "/destinations/florida/miami/tours/epic-hotel-30-minute-boat-ride-1-hour-jet-ski-experience-445316",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "445321",
+          "title": "1 Hour Jetski Delivery",
+          "publicPath": "/destinations/florida/miami/tours/1-hour-jetski-delivery-445321",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "445326",
+          "title": "3 Hour Jetski Delivery",
+          "publicPath": "/destinations/florida/miami/tours/3-hour-jetski-delivery-445326",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "445330",
+          "title": "4 Hour Jetski Delivery",
+          "publicPath": "/destinations/florida/miami/tours/4-hour-jetski-delivery-445330",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "445332",
+          "title": "5 Hour Jetski Delivery",
+          "publicPath": "/destinations/florida/miami/tours/5-hour-jetski-delivery-445332",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "445335",
+          "title": "DKR MARINA | 30 Minute Boat Ride + 1 Hour Jet Ski Experience",
+          "publicPath": "/destinations/florida/miami/tours/dkr-marina-30-minute-boat-ride-1-hour-jet-ski-experience-445335",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "446034",
+          "title": "Jet Ski Island Fun | Key Biscayne, Fl",
+          "publicPath": "/destinations/florida/miami/tours/jet-ski-island-fun-key-biscayne-fl-446034",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "452361",
+          "title": "VENITIAN MARINA | 30 Minute Boat Ride + 1 Hour Jet Ski Experience",
+          "publicPath": "/destinations/florida/miami/tours/venitian-marina-30-minute-boat-ride-1-hour-jet-ski-experience-452361",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "455028",
+          "title": "Harmony 45'",
+          "publicPath": "/destinations/florida/miami/tours/harmony-45-455028",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "457752",
+          "title": "All Day Jet Ski Rental",
+          "publicPath": "/destinations/florida/miami/tours/all-day-jet-ski-rental-457752",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "509437",
+          "title": "2023 Slingshot Rentals",
+          "publicPath": "/destinations/florida/miami/tours/2023-slingshot-rentals-509437",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "522090",
+          "title": "3 Hour WaterSport Excursion",
+          "publicPath": "/destinations/florida/miami/tours/3-hour-watersport-excursion-522090",
+          "reason": "not-a-winter-priority-experience"
+        },
+        {
+          "itemId": "532517",
+          "title": "Jet Ski Rentals | Miami WaterSports",
+          "publicPath": "/destinations/florida/miami/tours/jet-ski-rentals-miami-watersports-532517",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "534390",
+          "title": "Parasailing | Miami Water Sports",
+          "publicPath": "/destinations/florida/miami/tours/parasailing-miami-water-sports-534390",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "544433",
+          "title": "ATV OFF Road Tours - Farmhouse Miami",
+          "publicPath": "/destinations/florida/miami/tours/atv-off-road-tours---farmhouse-miami-544433",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "564337",
+          "title": "ATV Off Road Tours - By Brothers Family Park",
+          "publicPath": "/destinations/florida/miami/tours/atv-off-road-tours---by-brothers-family-park-564337",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "609866",
+          "title": "BAYSIDE MARKETPLACE | 30 Minute Boat Ride + 1 Hour Jet Ski Experience",
+          "publicPath": "/destinations/florida/miami/tours/bayside-marketplace-30-minute-boat-ride-1-hour-jet-ski-experience-609866",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "623313",
+          "title": "ATV MIAMI - Adrenaline ATV Tours",
+          "publicPath": "/destinations/florida/miami/tours/atv-miami---adrenaline-atv-tours-623313",
+          "reason": "rental-admission-or-off-priority"
+        }
+      ]
+    },
+    "miami-beach": {
+      "catalog": 49,
+      "selected": 11,
+      "withheld": [
+        {
+          "itemId": "266538",
+          "title": "South Beach Bicycle Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-bicycle-rental-266538",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "266569",
+          "title": "Fat Tire Beach Rider Bike Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/fat-tire-beach-rider-bike-rental-266569",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "266577",
+          "title": "Electric Bike Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/electric-bike-rental-266577",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "266587",
+          "title": "South Beach Tandem Bike Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-tandem-bike-rental-266587",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "266590",
+          "title": "South Beach Bicycle Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-bicycle-tour-266590",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "266592",
+          "title": "Miami City, Little Havana Tour with FREE South Beach Bicycle Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/miami-city-little-havana-tour-with-free-south-beach-bicycle-rental-266592",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "266600",
+          "title": "Key West Day Trip from Miami with FREE South Beach Bike Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/key-west-day-trip-from-miami-with-free-south-beach-bike-rental-266600",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "363158",
+          "title": "Hybrid Bike Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/hybrid-bike-rental-363158",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "570345",
+          "title": "Side By Side E-Bike",
+          "publicPath": "/destinations/florida/miami-beach/tours/side-by-side-e-bike-570345",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "574867",
+          "title": "17' Boston Whaler Yacht Tender",
+          "publicPath": "/destinations/florida/miami-beach/tours/17-boston-whaler-yacht-tender-574867",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "614235",
+          "title": "NORTH MIAMI BEACH | 30 Minute FREE Boat Ride + 1 Hour Jet Ski Experience",
+          "publicPath": "/destinations/florida/miami-beach/tours/north-miami-beach-30-minute-free-boat-ride-1-hour-jet-ski-experience-614235",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "101390",
+          "title": "Ocean Drive Segway Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/ocean-drive-segway-tour-101390",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "108010",
+          "title": "Key West Day Trip from Miami plus FREE 2 HOURS with Rentals.",
+          "publicPath": "/destinations/florida/miami-beach/tours/key-west-day-trip-from-miami-plus-free-2-hours-with-rentals-108010",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "111014",
+          "title": "South Beach Bicycle Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-bicycle-rental-111014",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "12877",
+          "title": "Star Island Segway Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/star-island-segway-tour-12877",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "14755",
+          "title": "South Beach Segway Tour at Sunset",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-segway-tour-at-sunset-14755",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "14756",
+          "title": "South Beach Segway Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-segway-tour-14756",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "158622",
+          "title": "South Beach Panoramic Night Segway Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-panoramic-night-segway-tour-158622",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "160269",
+          "title": "Fat Tire Bike Rental.",
+          "publicPath": "/destinations/florida/miami-beach/tours/fat-tire-bike-rental-160269",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "166043",
+          "title": "Millionaire's Row Boat and Segway Tour By Land and Sea Experience",
+          "publicPath": "/destinations/florida/miami-beach/tours/millionaires-row-boat-and-segway-tour-by-land-and-sea-experience-166043",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "197106",
+          "title": "South Beach Tandem Bike Rental",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-tandem-bike-rental-197106",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "197107",
+          "title": "Rollerblades and Skates Rental in Miami Beach.",
+          "publicPath": "/destinations/florida/miami-beach/tours/rollerblades-and-skates-rental-in-miami-beach-197107",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "22837",
+          "title": "Star Island Millionaire's Row Segway Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/star-island-millionaires-row-segway-tour-22837",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "284554",
+          "title": "Electric Bike Tour in South Beach",
+          "publicPath": "/destinations/florida/miami-beach/tours/electric-bike-tour-in-south-beach-284554",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "286570",
+          "title": "Electric Bike Rental Miami Beach",
+          "publicPath": "/destinations/florida/miami-beach/tours/electric-bike-rental-miami-beach-286570",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "297122",
+          "title": "Luggage Storage",
+          "publicPath": "/destinations/florida/miami-beach/tours/luggage-storage-297122",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "342943",
+          "title": "Electric Side By Side Bike Rentals",
+          "publicPath": "/destinations/florida/miami-beach/tours/electric-side-by-side-bike-rentals-342943",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "378150",
+          "title": "Panoramic Night Private Chariot Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/panoramic-night-private-chariot-tour-378150",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "467850",
+          "title": "Electric Tandem Bike Rental in Miami Beach",
+          "publicPath": "/destinations/florida/miami-beach/tours/electric-tandem-bike-rental-in-miami-beach-467850",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "70874",
+          "title": "South Beach Bicycle Tour.",
+          "publicPath": "/destinations/florida/miami-beach/tours/south-beach-bicycle-tour-70874",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "70875",
+          "title": "Miami Beach Art Deco Segway Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/miami-beach-art-deco-segway-tour-70875",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "70876",
+          "title": "Miami Millionaire's Row Segway Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/miami-millionaires-row-segway-tour-70876",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "394558",
+          "title": "Miami Beach Highlights Bike Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/miami-beach-highlights-bike-tour-394558",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "394561",
+          "title": "Best of Miami Electric Bike Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/best-of-miami-electric-bike-tour-394561",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "394563",
+          "title": "Miami Beach Bike Rentals",
+          "publicPath": "/destinations/florida/miami-beach/tours/miami-beach-bike-rentals-394563",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "394570",
+          "title": "Miami Beach Electric Bike Rentals",
+          "publicPath": "/destinations/florida/miami-beach/tours/miami-beach-electric-bike-rentals-394570",
+          "reason": "rental-admission-or-off-priority"
+        },
+        {
+          "itemId": "395125",
+          "title": "Miami Private Bike Tour",
+          "publicPath": "/destinations/florida/miami-beach/tours/miami-private-bike-tour-395125",
+          "reason": "bike-or-land-tour-outside-winter-priority"
+        },
+        {
+          "itemId": "469645",
+          "title": "Tour en bicicleta por Miami Beach (Español)",
+          "publicPath": "/destinations/florida/miami-beach/tours/tour-en-bicicleta-por-miami-beach-espaol-469645",
+          "reason": "not-a-winter-priority-experience"
+        }
+      ]
+    },
+    "goodland": {
+      "catalog": 30,
+      "selected": 30,
+      "withheld": []
+    }
+  },
+  "winterCitySlugs": [
+    "everglades-city",
+    "fort-lauderdale",
+    "goodland",
+    "homestead",
+    "key-west",
+    "miami",
+    "miami-beach",
+    "naples",
+    "orlando",
+    "sarasota",
+    "st-petersburg",
+    "stock-island",
+    "tampa"
+  ]
+}

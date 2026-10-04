@@ -12,9 +12,9 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Families meet animal ambassadors and move between activity stations. Trick-or-treat stops are set around the activity areas. Face painting is offered along with the animal visits. A small pumpkin patch is on site, and each child may take one pumpkin. A few rooms are arranged as a mild haunt for young children.",
-      "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program."
+      "Music plays while the stations stay open."
     ],
-    "schemaDescription": "A four-hour guided outing with Helen Woodward Animal Center. The outing passes Howl-O-Ween Harvest Family Festival.",
+    "schemaDescription": "Four-hour family festival with animal ambassadors, activity stations, and trick-or-treat stops.",
     "highlights": [
       "4 hours guided outing",
       "Howl-O-Ween Harvest Family Festival",
@@ -24,7 +24,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg"
     ],
     "productImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
-    "wordCount": 74,
+    "wordCount": 61,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -59,9 +59,9 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "The camp day is built around animal-care tasks with the staff. Preparing animal diets is one of those tasks. The group also sets up enrichment for the animals. Grooming and exercise are part of the same camp day. Mammals, reptiles, and birds are among the animals campers work with.",
-      "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals. Staff stay with the group while the animals are part of the program."
+      "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals."
     ],
-    "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
+    "schemaDescription": "Six-hour zookeeper camp built around animal-care tasks.",
     "highlights": [
       "6 hours guided outing",
       "Groups stay at a maximum of 10 guests"
@@ -70,7 +70,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim"
     ],
     "productImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
-    "wordCount": 97,
+    "wordCount": 84,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -99,10 +99,10 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
-      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave. That same account stays with Equine Hospital."
+      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital.",
+      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave."
     ],
-    "schemaDescription": "A 3.5-hour guided outing with Helen Woodward Animal Center. The outing passes 40 min: second activity, 30 min: third activity, and 30 min: snack period.",
+    "schemaDescription": "Half-day veterinarian camp of about 3.5 hours, with clinical practice and a microscope.",
     "highlights": [
       "3.5 hours guided outing",
       "40 min: second activity and 30 min: third activity",
@@ -112,7 +112,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ"
     ],
     "productImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
-    "wordCount": 84,
+    "wordCount": 64,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -141,9 +141,9 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program."
+      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital."
     ],
-    "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
+    "schemaDescription": "Six-hour veterinarian camp with clinical practice, a microscope, and canine CPR practice.",
     "highlights": [
       "6 hours guided outing",
       "Groups stay at a maximum of 30 guests"
@@ -152,7 +152,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q"
     ],
     "productImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
-    "wordCount": 51,
+    "wordCount": 38,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -181,10 +181,10 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Children meet live animals and hear how life cycles work. Animals that may be brought out include a mini horse, a chicken, a frog, and a guinea pig. Staff stay with the group while the animals are part of the program. Guests spend part of the visit in a hands-on session with the horses.",
-      "The commentary takes up Next Generation Science Standards and Education Office. That same account stays with Girl Scouts and Between Earth."
+      "Spring Adventure is a seasonal program at the Helen Woodward Animal Center. Children meet live ambassadors from four groups: a mammal, a bird, an amphibian, and an invertebrate. One activity is a STEM session on butterfly conservation. The rest covers life cycles, young animals, and the shift from winter to spring for plants and animals.",
+      "Schools are told the material lines up with the Next Generation science standards used in grades kindergarten through six. The program can run on the center's campus or travel to a classroom. Booking is by phone or email to the Education Office, with no payment up front and an invoice afterward. For Daisy Girl Scouts, the visit can be shaped toward parts of the Between Earth and Sky journey."
     ],
-    "schemaDescription": "A guided outing with Helen Woodward Animal Center.",
+    "schemaDescription": "Spring program at the Helen Woodward Animal Center where children meet a mammal, a bird, an amphibian, and an invertebrate.",
     "highlights": [
       "Onsite: mini horse, chicken, frog"
     ],
@@ -192,7 +192,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph"
     ],
     "productImage": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
-    "wordCount": 76,
+    "wordCount": 124,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
