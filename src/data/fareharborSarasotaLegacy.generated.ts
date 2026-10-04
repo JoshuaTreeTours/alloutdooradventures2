@@ -11,10 +11,10 @@ export const fareHarborSarasotaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Gulf Water Tours lists a private cruise of four, six, or eight hours on the water around Sarasota. The captain picks stops with the group. Named options include Egmont Key and Passage Key. Venice Island is another. Stump Pass and Boca Grande are also on the list. The same page can be booked as time on a sandbar, as an evening cruise, as a look for dolphins, as snorkeling, or as a run along the coast.",
+      "This private cruise with Gulf Water Tours runs four, six, or eight hours on the water around Sarasota. The captain picks stops with the group. Stop choices include Egmont Key and Passage Key. Venice Island is another. Stump Pass and Boca Grande are also on the list. The booking can be time on a sandbar, an evening cruise, a look for dolphins, snorkeling, or a run along the coast. The boat takes up to six guests.",
       "The captain is included, and the boat is private. No single route is locked in advance. The stop list is chosen in that pre-trip conversation."
     ],
-    "schemaDescription": "A 4- to 8-hour harbor outing with Gulf Water Tours. The sail passes Discuss preferences and destinations and Venice Island.",
+    "schemaDescription": "Private cruise of four, six, or eight hours on the water around Sarasota, for up to six guests. The captain chooses stops such as Egmont Key, Passage Key, or Boca Grande.",
     "highlights": [
       "4 - 8 hours harbor outing",
       "Discuss preferences and destinations and Venice Island",

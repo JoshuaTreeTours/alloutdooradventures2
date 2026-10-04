@@ -13,7 +13,7 @@ export const fareHarborStPetersburgLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests go out for a sunset sail. The water is usually calmer once the afternoon wind drops. From the water, guests see SkyBeach Resort Marina."
     ],
-    "schemaDescription": "Guests go out for a sunset sail. The water is usually calmer once the afternoon wind drops.",
+    "schemaDescription": "Sunset sail from SkyBeach Resort Marina, usually on calmer water after the afternoon wind drops.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/dr5U0nMoQgSgV5ob9qXI"
@@ -48,15 +48,15 @@ export const fareHarborStPetersburgLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Egmont Key and Shell Key. Fort Dade and Choose Anna Maria come into view as the boat moves."
+      "This full-day private sail lets the group choose one destination: Egmont Key, Anna Maria, or Shell Key. Egmont Key is a historic island with gopher tortoises, the remains of Fort Dade, and secluded beaches. Anna Maria is a coastal town. Shell Key is set aside for shelling and undeveloped shoreline. The charter length is eight hours."
     ],
-    "schemaDescription": "From the water, guests see Egmont Key and Shell Key.",
+    "schemaDescription": "Full-day private sail with a choice of Egmont Key, Anna Maria, or Shell Key. Egmont Key includes the remains of Fort Dade.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/7JZkwDwQ4WAYNCezIEcF"
     ],
     "productImage": "https://cdn.filestackcontent.com/ABOPSt8QGquxdkSwgxF2",
-    "wordCount": 23,
+    "wordCount": 57,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
@@ -87,7 +87,7 @@ export const fareHarborStPetersburgLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "The skyline is the main view as the boat moves through the harbor. Guests sail on a catamaran for this cruise."
     ],
-    "schemaDescription": "The skyline is the main view as the boat moves through the harbor.",
+    "schemaDescription": "Two-hour dolphin-spotting sail on a catamaran, with the city skyline as the main view from the harbor.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/PeqtaSvTCygDg03N4ZCg"

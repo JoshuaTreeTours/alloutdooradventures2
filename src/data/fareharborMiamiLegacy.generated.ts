@@ -14,7 +14,7 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
       "The booking is an airboat trip in the Florida Everglades. An alligator show is part of the same visit. The boat crosses the River of Grass. Mangroves line the marsh the boat runs through. The airboat is made to move fast across the marsh. A cultural show is included with the boat ride.",
       "Thick vegetation covers the ground the boat passes. Guests come alone or with family. The show also takes up food and hunting methods, as the hosts present them. The booking runs about 1 hour. The airboat is the reason for the day, and the marsh is the setting."
     ],
-    "schemaDescription": "A one-hour airboat outing with South Beach Welcome Center.",
+    "schemaDescription": "One-hour airboat ride in the Florida Everglades, with an alligator show and a cultural show. The boat crosses the River of Grass through mangroves.",
     "highlights": [
       "one-hour airboat outing"
     ],
@@ -52,7 +52,7 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
       "Nightime Python Road Hunt is a four-hour guided outing with South Florida Airboat Adventures in Miami. The sail runs in the evening under the stars.",
       "Groups are capped at 4."
     ],
-    "schemaDescription": "Nightime Python Road Hunt is a four-hour guided outing with South Florida Airboat Adventures in Miami.",
+    "schemaDescription": "Four-hour evening python hunt in Miami with South Florida Airboat Adventures, for up to four people.",
     "highlights": [
       "four-hour guided outing in Miami",
       "Groups are capped at 4"
@@ -92,7 +92,7 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
       "Trip: Combines the above with more flexibility to linger at favored spots; options include Bear Cut, Nixon sandbar, No Name Harbor, Vizcaya Museum, and Key Biscayne. Trip: Access to VIP/exclusive locations weather permitting, such as Stittsville and Fowey Rocks; Haulover sandbar recommended. Space for up to 11 guests with room to move around.",
       "Options to visit sandbars, Millionaire's Row, Vizcaya, and scenic sunset routes."
     ],
-    "schemaDescription": "A guided outing with Jetski Rentals of South Florida in Miami. The outing passes Monument Island, Picnic Island, and Fisher Island.",
+    "schemaDescription": "Private SeaRay Sundeck charter on Biscayne Bay, with swim stops at Monument Island or Picnic Island and a route that can pass Fisher Island. The boat holds up to 11 guests.",
     "highlights": [
       "Monument Island and Picnic Island",
       "Captain"
@@ -133,7 +133,7 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
       "This is a guided outing with Sky Tours Miami. Private flight, Pilot, and Headset are included. The outing reaches Vizcaya Museum.",
       "Groups are capped at 3. Guests must be at least 5 years old."
     ],
-    "schemaDescription": "This is a guided outing with Sky Tours Miami.",
+    "schemaDescription": "Private flight of about 30 minutes with Sky Tours Miami, including a pilot and a headset, passing Vizcaya Museum.",
     "highlights": [
       "30 Mins guided outing",
       "Vizcaya Museum",

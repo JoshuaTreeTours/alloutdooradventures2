@@ -13,7 +13,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "From the water, guests see Rookery Bay Reserve and Gulf Coast. Florida Adventures and Marco Island come into view as the boat moves."
     ],
-    "schemaDescription": "From the water, guests see Rookery Bay Reserve and Gulf Coast.",
+    "schemaDescription": "Two-hour sunset eco-tour with views of Rookery Bay Reserve and the Gulf Coast.",
     "highlights": [
       "two-hour guided outing in Goodland",
       "Shell Bags"
@@ -68,7 +68,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "4 Hour Shelling Tour is a four-hour guided outing with Florida Adventures and Rentals in Goodland. Shell Bags, Bottled Water, and Cooler with ice for guest use are included. The outing reaches Marco Island.",
       "Groups are capped at 17. A full refund is available with at least 48 hours' notice."
     ],
-    "schemaDescription": "A four-hour guided outing with Florida Adventures and Rentals in Goodland. The outing passes Marco Island.",
+    "schemaDescription": "Four-hour shelling tour that reaches Marco Island. Shell bags, bottled water, and a cooler with ice are included.",
     "highlights": [
       "four-hour guided outing in Goodland",
       "Marco Island",
@@ -114,7 +114,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "This is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Shell Bags, Bottled Water, and Cooler with ice for guest use are included.",
       "A full refund is available with at least 48 hours' notice."
     ],
-    "schemaDescription": "This is a two-hour guided outing with Florida Adventures and Rentals in Goodland.",
+    "schemaDescription": "Two-hour wildlife sightseeing and shelling tour, with shell bags, bottled water, and a cooler with ice.",
     "highlights": [
       "two-hour guided outing in Goodland",
       "Shell Bags"
@@ -169,7 +169,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "Dolphin Tours is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Water Bottles and Cooler with ice for guest use are included.",
       "A full refund is available with at least 48 hours' notice."
     ],
-    "schemaDescription": "Dolphin Tours is a two-hour guided outing with Florida Adventures and Rentals in Goodland.",
+    "schemaDescription": "Two-hour dolphin tour. Water bottles and a cooler with ice are included.",
     "highlights": [
       "two-hour guided outing in Goodland",
       "Water Bottles"
@@ -221,10 +221,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Ten Thousand Islands and Florida Adventures. Hour Ecotours and Marco Island come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
-      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This three-hour eco cruise goes through the Ten Thousand Islands. Captains and guides talk about the ecology of the mangrove islands. The boat searches for dolphins and covers the local population. After the mangroves, the group stops on a private beach to look for tropical shells along the Gulf coast.",
+      "The boats have comfortable seating. A ladder at the front is there for stepping onto the beach. Children and adults are both expected on the trip."
     ],
-    "schemaDescription": "A three-hour guided outing with Florida Adventures and Rentals in Goodland.",
+    "schemaDescription": "Three-hour eco cruise through the Ten Thousand Islands, with a dolphin search and a private-beach stop for shells.",
     "highlights": [
       "three-hour guided outing in Goodland",
       "Shell Bags"
@@ -233,7 +233,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/88i2Sk2vTT2oX42D4qit"
     ],
     "productImage": "https://cdn.filestackcontent.com/lZ1iMDFeQi4GodXv1xVg",
-    "wordCount": 76,
+    "wordCount": 77,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -294,7 +294,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "This is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Shell Bags, Bottled Water, and Cooler with ice for guest use are included.",
       "A full refund is available with at least 48 hours' notice."
     ],
-    "schemaDescription": "This is a two-hour guided outing with Florida Adventures and Rentals in Goodland.",
+    "schemaDescription": "Two-hour private wildlife sightseeing and shelling tour, with shell bags, bottled water, and a cooler with ice.",
     "highlights": [
       "two-hour guided outing in Goodland",
       "Shell Bags"
@@ -349,7 +349,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "Indulge in the ultimate luxury with the private boat tours, where every aspect of the experience is tailored to the desires, designed for fun with friends or special celebrations. After that, cruise the waterways, spy on homes, and jam out to the favorite tunes while soaking up the sun.",
       "After that, with options to look at hidden islands, sip cool drinks, and dance toward the beat, the private tours promise exhilarating ride that's totally tailored to the crew's vibe. That is customizable for great day on the water for guests and the party. Popular activities include stopping on an isolated island, seeing the mansions from the water, finding dolphins, and cruising around Marco Island."
     ],
-    "schemaDescription": "A two-hour harbor outing with Florida Adventures and Rentals on Goodland Harbor. The sail passes Marco Island.",
+    "schemaDescription": "Two-hour private boat tour that can stop at an isolated island, pass waterfront houses, look for dolphins, and cruise around Marco Island.",
     "highlights": [
       "two-hour harbor outing in Goodland",
       "Marco Island",
@@ -405,7 +405,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "Indulge in the ultimate luxury with the private boat tours, where every aspect of the experience is tailored to the desires, designed for fun with friends or special celebrations. After that, cruise the waterways, spy on homes, and jam out to the favorite tunes while soaking up the sun.",
       "After that, with options to look at hidden islands, sip cool drinks, and dance toward the beat, the private tours promise exhilarating ride that's totally tailored to the crew's vibe. That is customizable for great day on the water for guests and the party. Popular activities include stopping on an isolated island, seeing the mansions from the water, finding dolphins, and cruising around Marco Island."
     ],
-    "schemaDescription": "A three-hour harbor outing with Florida Adventures and Rentals on Goodland Harbor. The sail passes Marco Island.",
+    "schemaDescription": "Three-hour private boat tour that can stop at an isolated island, pass waterfront houses, look for dolphins, and cruise around Marco Island.",
     "highlights": [
       "three-hour harbor outing in Goodland",
       "Marco Island",
@@ -460,7 +460,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "From the water, guests see Keywaydin Island and Marco Island. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
-    "schemaDescription": "A four-hour harbor outing with Florida Adventures and Rentals on Goodland Harbor.",
+    "schemaDescription": "Four-hour private boat tour that can visit Keywaydin Island or Marco Island, with stops chosen before departure.",
     "highlights": [
       "four-hour harbor outing in Goodland",
       "Shell Bags"
@@ -515,7 +515,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "Private Dolphin Tours is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Water Bottles and Cooler with ice for guest use are included.",
       "A full refund is available with at least 48 hours' notice."
     ],
-    "schemaDescription": "Private Dolphin Tours is a two-hour guided outing with Florida Adventures and Rentals in Goodland.",
+    "schemaDescription": "Two-hour private dolphin tour. Water bottles and a cooler with ice are included.",
     "highlights": [
       "two-hour guided outing in Goodland",
       "Water Bottles"
@@ -569,7 +569,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "This is a harbor outing with Florida Island Tours. The group starts at Ten Thousand Islands National Wildlife Refuge. The group passes Ten Thousand Islands National Wildlife Refuge and Rookery Bay National Estuarine Research Reserve."
     ],
-    "schemaDescription": "This is a harbor outing with Florida Island Tours.",
+    "schemaDescription": "Eco boat tour for dolphins, shelling, and birding, starting at the Ten Thousand Islands refuge and passing Rookery Bay.",
     "highlights": [
       "Ten Thousand Islands National Wildlife Refuge and Rookery Bay National Estuarine Research Reserve"
     ],
@@ -624,7 +624,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "Sand Bar Shelling Tour is a guided outing lasting 2 with Florida Island Tours in Goodland. Cooler with ice, Shelling bags, and Parking are included. The outing reaches Kice Island.",
       "Groups are capped at 6."
     ],
-    "schemaDescription": "Sand Bar Shelling Tour is a guided outing lasting 2 with Florida Island Tours in Goodland.",
+    "schemaDescription": "Two-hour sandbar shelling tour that reaches Kice Island. A cooler with ice, shelling bags, and parking are included.",
     "highlights": [
       "2 guided outing",
       "Kice Island",
@@ -670,7 +670,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Barrier Island Shelling Tour is a guided outing with Florida Island Tours. The outing starts at Kice Island. The group then visits Shell Island and Marco Island."
     ],
-    "schemaDescription": "Barrier Island Shelling Tour is a guided outing with Florida Island Tours.",
+    "schemaDescription": "Barrier island shelling tour starting at Kice Island and continuing to Shell Island and Marco Island.",
     "highlights": [
       "Kice Island and Shell Island"
     ],
@@ -725,7 +725,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "This is a guided outing with Florida Island Tours in Goodland. Cooler with Ice, Shelling Bags, and Parking are included.",
       "Groups are capped at 6."
     ],
-    "schemaDescription": "This is a guided outing with Florida Island Tours in Goodland.",
+    "schemaDescription": "Four-hour family fishing day for up to six people. A cooler with ice, shelling bags, and parking are included.",
     "highlights": [
       "4hrs guided outing",
       "Groups are capped at 6"
@@ -766,7 +766,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "2hr Private Boat Tour is a harbor outing lasting 2hrs with Florida Island Tours on Goodland Harbor.",
       "Cooler with Ice, Shelling Bags, and Parking are included."
     ],
-    "schemaDescription": "2hr Private Boat Tour is a harbor outing lasting 2hrs with Florida Island Tours on Goodland Harbor.",
+    "schemaDescription": "Two-hour private boat tour. A cooler with ice, shelling bags, and parking are included.",
     "highlights": [
       "2hrs harbor outing"
     ],
@@ -808,10 +808,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Florida Island Tours lists a two-hour cruise that leaves Goodland, crosses mangrove estuary inside the Ten Thousand Islands refuge, reaches Marco Island, and returns. The guide is described as a Florida-certified master naturalist who also belongs to the historical society on Marco Island. Talk on the boat covers the Calusa, Cape Romano, how the island was developed, waterfront culture, and wildlife. Dolphins, manatees, and birds are the animals the page says guests may see.",
-      "The route notes also take in Goodland's waterfront bars and restaurants, then houses along the Marco Estates. A cooler with ice is included, and so is parking. The group cap is six."
+      "Florida Island Tours runs this two-hour sightseeing cruise, which leaves Goodland, crosses the mangrove estuary of the Ten Thousand Islands National Wildlife Refuge, reaches Marco Island, and returns. The guide is a Florida-certified master naturalist who also belongs to the historical society on Marco Island. Talk on the boat covers the Calusa, Cape Romano, how the island was developed, waterfront culture, and wildlife. Dolphins, manatees, and birds are animals guests may see.",
+      "The route also takes in Goodland's waterfront bars and restaurants, then houses along the Marco Estates. A cooler with ice is included, and so is parking. The group cap is six."
     ],
-    "schemaDescription": "A two-hour guided outing with Florida Island Tours in Goodland. The outing passes Marco Island, Marco Island Historical Society, and Ten Thousand Islands National Wildlife Refuge.",
+    "schemaDescription": "Two-hour cruise from Goodland through the Ten Thousand Islands refuge to Marco Island and back, led by a Florida-certified master naturalist.",
     "highlights": [
       "two-hour guided outing in Goodland",
       "Marco Island and Marco Island Historical Society",
@@ -821,7 +821,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/BTdUqlRTKXqzttPAN7Xw"
     ],
     "productImage": "https://cdn.filestackcontent.com/lYw27uHtQ86Ixj97LJHh",
-    "wordCount": 108,
+    "wordCount": 105,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",
@@ -867,7 +867,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "This is a private sandbar charter on the water. From the water, guests see Marco Island and Kice Island. Dickman's Point and Caxambas Sandbars come into view as the boat moves. The cruise also passes Second Chance and Shell Island."
     ],
-    "schemaDescription": "A four-hour guided outing with Florida Island Tours in Goodland. The outing passes Kice Island, Shell Island, and Marco Island.",
+    "schemaDescription": "Four-hour shelling trip passing Marco Island, Kice Island, Dickman's Point, and Shell Island, with time at the Caxambas sandbars.",
     "highlights": [
       "four-hour guided outing in Goodland",
       "Kice Island and Shell Island",
@@ -923,7 +923,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "From the water, guests see Marco Island and Ten Thousand Islands. Islands Beach and Sunset Free come into view as the boat moves."
     ],
-    "schemaDescription": "From the water, guests see Marco Island and Ten Thousand Islands.",
+    "schemaDescription": "Private boat tour of about eight hours with views of Marco Island and the Ten Thousand Islands.",
     "highlights": [
       "Marco Island sightseeing and Beach hopping",
       "Free parking"

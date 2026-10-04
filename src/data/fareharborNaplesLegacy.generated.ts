@@ -15,7 +15,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
       "Groups are capped at 10.",
       "Guests must be at least 4 years old. A full refund is available with at least 48 hours' notice."
     ],
-    "schemaDescription": "A two-hour paddle outing with Florida Adventures and Rentals in Naples. The outing passes Rookery Bay Estuarine Research Reserve.",
+    "schemaDescription": "Two-hour kayak tour in Rookery Bay with Florida Adventures and Rentals, for groups of up to 10.",
     "highlights": [
       "two-hour paddle outing in Naples",
       "Rookery Bay Estuarine Research Reserve",
@@ -65,7 +65,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "This is a two-hour paddle outing with La vita é bella - Marco Eco Tours. The group passes Marco Island. The group stays on the water in Naples."
     ],
-    "schemaDescription": "This is a two-hour paddle outing with La vita é bella - Marco Eco Tours.",
+    "schemaDescription": "Two-hour pedal-kayak tour with Marco Eco Tours, passing Marco Island.",
     "highlights": [
       "two-hour paddle outing in Naples",
       "Marco Island"
@@ -116,7 +116,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
       "The West Indian manatee is the animal this water is known for. The water around the city is the setting, picked for the animals that live there. The group moves at an easy pace, with time to watch rather than cover a set distance. Sea life and birds are both part of what the guide is looking for.",
       "Manatees, when they are present, are why many guests book this water. Which animals appear depends on the day, and a sighting is not promised."
     ],
-    "schemaDescription": "A two-hour paddle outing with Three Brothers Boards Paddle Board Tours in Naples.",
+    "schemaDescription": "Two-hour guided paddle in Naples watching for dolphins, manatees, sea turtles, and coastal birds. A sighting is not promised.",
     "highlights": [
       "two-hour walking tour in Naples"
     ],

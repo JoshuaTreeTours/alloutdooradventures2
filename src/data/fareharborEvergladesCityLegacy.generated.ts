@@ -13,7 +13,7 @@ export const fareHarborEvergladesCityLegacyProducts: FareHarborProofProduct[] = 
     "paragraphs": [
       "Mangrove Wilderness Boat Tour is a harbor outing lasting 1.75hrs with Everglades Florida Adventures on Everglades City Harbor. Landscape is included. The sail passes Everglades National Park."
     ],
-    "schemaDescription": "Mangrove Wilderness Boat Tour is a harbor outing lasting 1.75hrs with Everglades Florida Adventures on Everglades City Harbor.",
+    "schemaDescription": "Boat tour of about an hour and 45 minutes through mangrove wilderness in Everglades National Park.",
     "highlights": [
       "1.75hrs harbor outing",
       "Everglades National Park",
