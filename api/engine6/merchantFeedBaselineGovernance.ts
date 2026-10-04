@@ -137,6 +137,70 @@ export const requiresStrictMerchantFeedRuntimeParity = (
   tier: MerchantFeedGovernanceTier
 ) => tier !== "unchanged-legacy-baseline";
 
+export type MerchantFeedRuntimeCommercialDrift = {
+  productCode: string;
+  csv: { price?: string; rating?: string; reviews?: string };
+};
+
+/**
+ * True when the candidate price, rating, and review count are the validated
+ * baseline values. Live JSON-LD may still show the previous production runtime
+ * until this deployment is published; that lag is not a branch commercial edit.
+ * A product missing from the baseline is not "unchanged".
+ */
+export const merchantFeedRuntimeCommercialDriftMatchesBaseline = (
+  drift: MerchantFeedRuntimeCommercialDrift,
+  baseline: MerchantFeedPublishedBaselineCatalog
+) => {
+  const snapshot = baseline.get(normalizeProductCode(drift.productCode));
+  if (!snapshot) {
+    return false;
+  }
+
+  return (
+    snapshot.price === normalizeCommercialField(drift.csv.price) &&
+    snapshot.averageRating === normalizeCommercialField(drift.csv.rating) &&
+    snapshot.reviewCount === normalizeCommercialField(drift.csv.reviews)
+  );
+};
+
+export const selectBlockingMerchantFeedLiveRuntimeDrifts = <
+  TDrift extends MerchantFeedRuntimeCommercialDrift,
+>(
+  drifts: TDrift[],
+  governanceByProductCode: Map<string, MerchantFeedGovernanceTier>
+) =>
+  drifts.filter(drift => {
+    const tier =
+      governanceByProductCode.get(normalizeProductCode(drift.productCode)) ??
+      "new-product";
+    return requiresStrictMerchantFeedRuntimeParity(tier);
+  });
+
+/**
+ * Production merges can deadlock when a non-legacy row's candidate commercial
+ * values were already validated and production still serves the previous
+ * runtime. Allow that lag only when every blocking row is unchanged from the
+ * baseline. Any branch-introduced price, rating, or review change still blocks.
+ */
+export const merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline = (
+  drifts: MerchantFeedRuntimeCommercialDrift[],
+  governanceByProductCode: Map<string, MerchantFeedGovernanceTier>,
+  baseline: MerchantFeedPublishedBaselineCatalog
+) => {
+  const blocking = selectBlockingMerchantFeedLiveRuntimeDrifts(
+    drifts,
+    governanceByProductCode
+  );
+
+  return (
+    blocking.length > 0 &&
+    blocking.every(drift =>
+      merchantFeedRuntimeCommercialDriftMatchesBaseline(drift, baseline)
+    )
+  );
+};
+
 export const isMerchantFeedProductionRuntimeNotYetPublishedError = (
   error: unknown
 ): boolean =>

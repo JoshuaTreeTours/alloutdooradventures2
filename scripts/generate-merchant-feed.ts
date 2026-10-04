@@ -5,7 +5,9 @@ import {
   applyMerchantFeedLiveRuntimeParityBaselinePolicy,
   buildMerchantFeedBranchScopedGovernanceByProductCode,
   buildMerchantFeedPublishedBaselineCatalog,
+  merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline,
   reconcileMerchantFeedRowsWithBaselineGovernance,
+  selectBlockingMerchantFeedLiveRuntimeDrifts,
 } from "../api/engine6/merchantFeedBaselineGovernance";
 import {
   loadMerchantFeedBranchModifiedProductCodes,
@@ -944,22 +946,40 @@ const main = async () => {
   // review metadata to both the Merchant CSV and the Engine6 website snapshot.
   // Production necessarily still exposes the previous values while this
   // deployment is building, so runtime parity is expected to drift until this
-  // deployment goes live. Keep the audit visible, but do not deadlock the
-  // deployment on its own pre-deploy production state.
-  if (!runtimeParityAudit.pass && isAutomatedCommercialRefreshCommit()) {
+  // deployment goes live. A production merge has the same lag when every
+  // blocking row's price, rating, and review count are still the validated
+  // baseline values. Keep the audit visible, but do not deadlock the
+  // deployment on its own pre-deploy production state. A candidate that
+  // actually changes those commercial fields still fails.
+  const blockingLiveRuntimeDrifts = selectBlockingMerchantFeedLiveRuntimeDrifts(
+    runtimeParityAudit.drifts,
+    branchScopedGovernanceByProductCode
+  );
+  const productionMergeBaselineLag =
+    !isAutomatedCommercialRefreshCommit() &&
+    merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+      runtimeParityAudit.drifts,
+      branchScopedGovernanceByProductCode,
+      mainBaselineCatalog
+    );
+
+  if (
+    !runtimeParityAudit.pass &&
+    (isAutomatedCommercialRefreshCommit() || productionMergeBaselineLag)
+  ) {
     console.warn(
-      "[merchant-feed-build] weekly commercial refresh: live-runtime parity drift is expected until this deployment becomes production; preserving all other merchant-feed guards."
+      isAutomatedCommercialRefreshCommit()
+        ? "[merchant-feed-build] weekly commercial refresh: live-runtime parity drift is expected until this deployment becomes production; preserving all other merchant-feed guards."
+        : "[merchant-feed-build] production merge: live-runtime parity drift is limited to commercial values unchanged from the validated baseline; production cannot expose those values until this deployment is live. Branch-introduced price, rating, and review changes still fail."
     );
   }
 
-  if (!runtimeParityAudit.pass && !isAutomatedCommercialRefreshCommit()) {
-    const blockingDrifts = runtimeParityAudit.drifts.filter(drift => {
-      const tier =
-        branchScopedGovernanceByProductCode.get(
-          drift.productCode.trim().toUpperCase()
-        ) ?? "new-product";
-      return tier !== "unchanged-legacy-baseline";
-    });
+  if (
+    !runtimeParityAudit.pass &&
+    !isAutomatedCommercialRefreshCommit() &&
+    !productionMergeBaselineLag
+  ) {
+    const blockingDrifts = blockingLiveRuntimeDrifts;
     for (const drift of blockingDrifts.slice(0, 20)) {
       console.error(
         `${drift.productCode}: csv=${drift.csv.price}/${drift.csv.rating}/${drift.csv.reviews} live=${drift.liveJsonLd.price}/${drift.liveJsonLd.averageRating}/${drift.liveJsonLd.reviewCount}`

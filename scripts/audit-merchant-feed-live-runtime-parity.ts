@@ -4,6 +4,8 @@ import path from "node:path";
 import {
   applyMerchantFeedLiveRuntimeParityBaselinePolicy,
   buildMerchantFeedBranchScopedGovernanceByProductCode,
+  merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline,
+  selectBlockingMerchantFeedLiveRuntimeDrifts,
   shouldDeferMerchantFeedProductionRuntimeParityFetch,
   type MerchantFeedGovernanceTier,
 } from "../api/engine6/merchantFeedBaselineGovernance";
@@ -340,17 +342,26 @@ const main = async () => {
   console.log(formatMerchantFeedLiveRuntimeParityReport(report));
 
   if (!report.pass) {
-    const blockingDrifts = report.drifts.filter(drift => {
-      const tier =
-        branchScopedGovernanceByProductCode.get(
-          drift.productCode.trim().toUpperCase()
-        ) ?? "new-product";
-      return tier !== "unchanged-legacy-baseline";
-    });
+    const blockingDrifts = selectBlockingMerchantFeedLiveRuntimeDrifts(
+      report.drifts,
+      branchScopedGovernanceByProductCode
+    );
+    const productionMergeBaselineLag =
+      merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+        report.drifts,
+        branchScopedGovernanceByProductCode,
+        mainBaselineCatalog
+      );
     for (const drift of blockingDrifts.slice(0, 20)) {
       console.error(
         `${drift.productCode}: csv=${drift.csv.price}/${drift.csv.rating}/${drift.csv.reviews} live=${drift.liveJsonLd.price}/${drift.liveJsonLd.averageRating}/${drift.liveJsonLd.reviewCount}`
       );
+    }
+    if (productionMergeBaselineLag) {
+      console.warn(
+        "[merchant-feed-build] production merge: live-runtime parity drift is limited to commercial values unchanged from the validated baseline; production cannot expose those values until this deployment is live. Branch-introduced price, rating, and review changes still fail."
+      );
+      return;
     }
     process.exit(1);
   }

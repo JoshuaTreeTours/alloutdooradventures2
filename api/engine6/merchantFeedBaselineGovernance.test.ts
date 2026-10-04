@@ -9,7 +9,9 @@ import {
   classifyMerchantFeedGovernanceTier,
   evaluateMerchantFeedLiveRuntimeParityForBuild,
   isMerchantFeedCommercialModifiedFromBaseline,
+  merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline,
   merchantFeedCommercialSnapshotsEqual,
+  merchantFeedRuntimeCommercialDriftMatchesBaseline,
   passesMerchantFeedLiveCommercialGuardForBuild,
   reconcileMerchantFeedRowsWithBaselineGovernance,
   requiresStrictMerchantFeedLiveCommercialGuard,
@@ -458,6 +460,110 @@ describe("merchant feed branch-scoped runtime parity", () => {
 
     expect(report.pass).toBe(false);
     expect(report.informationalLegacyProductCodes).toEqual([]);
+  });
+
+  it("treats live-runtime lag as non-blocking when the candidate commercial values are unchanged from the validated baseline", () => {
+    const outputRows = [mainBaselineRow];
+    const branchScopedGovernance =
+      buildMerchantFeedBranchScopedGovernanceByProductCode(
+        outputRows,
+        mainBaseline,
+        new Set(["191303P1"])
+      );
+    const drifts = [
+      {
+        productCode: "191303P1",
+        csv: { price: "89.00 USD", rating: "5.0", reviews: "54" },
+      },
+    ];
+
+    expect(branchScopedGovernance.get("191303P1")).toBe("modified-commercial");
+    expect(
+      merchantFeedRuntimeCommercialDriftMatchesBaseline(drifts[0], mainBaseline)
+    ).toBe(true);
+    expect(
+      merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+        drifts,
+        branchScopedGovernance,
+        mainBaseline
+      )
+    ).toBe(true);
+  });
+
+  it("still blocks a branch-introduced price, rating, or review mismatch against the validated baseline", () => {
+    const branchScopedGovernance = new Map([
+      ["191303P1", "modified-commercial" as const],
+      ["NEWTOUR1", "new-product" as const],
+    ]);
+
+    expect(
+      merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+        [
+          {
+            productCode: "191303P1",
+            csv: { price: "99.00 USD", rating: "5.0", reviews: "54" },
+          },
+        ],
+        branchScopedGovernance,
+        mainBaseline
+      )
+    ).toBe(false);
+
+    expect(
+      merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+        [
+          {
+            productCode: "191303P1",
+            csv: { price: "89.00 USD", rating: "4.9", reviews: "54" },
+          },
+        ],
+        branchScopedGovernance,
+        mainBaseline
+      )
+    ).toBe(false);
+
+    expect(
+      merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+        [
+          {
+            productCode: "191303P1",
+            csv: { price: "89.00 USD", rating: "5.0", reviews: "55" },
+          },
+        ],
+        branchScopedGovernance,
+        mainBaseline
+      )
+    ).toBe(false);
+
+    expect(
+      merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+        [
+          {
+            productCode: "NEWTOUR1",
+            csv: { price: "45.00 USD", rating: "4.8", reviews: "10" },
+          },
+        ],
+        branchScopedGovernance,
+        mainBaseline
+      )
+    ).toBe(false);
+
+    expect(
+      merchantFeedBlockingLiveRuntimeDriftsAreUnchangedFromBaseline(
+        [
+          {
+            productCode: "191303P1",
+            csv: { price: "89.00 USD", rating: "5.0", reviews: "54" },
+          },
+          {
+            productCode: "NEWTOUR1",
+            csv: { price: "45.00 USD", rating: "4.8", reviews: "10" },
+          },
+        ],
+        branchScopedGovernance,
+        mainBaseline
+      )
+    ).toBe(false);
   });
 
   it("reports regenerated legacy commercial drift as informational when the branch did not change the product", () => {
