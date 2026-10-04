@@ -11,8 +11,8 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Joshua Tree Excursions runs this sightseeing circuit by shuttle. It lasts four and a half hours and leaves the Joshua Tree office at 8 a.m., with a return around 12:30 p.m. A driver who also guides stays with the group. The page is a drive between overlooks, with time to step out for photos, not the private hike.",
-      "Sites are listed one by one. The Cholla Cactus Garden is one. Skull Rock is another. Arch Rock is included. The page then offers either Ohlsen Ranch or the Cap Rock Nature Trail, and it ends at Key's View."
+      "Joshua Tree Excursions runs this sightseeing circuit by shuttle. It lasts four and a half hours and leaves the Joshua Tree office at 8 a.m., with a return around 12:30 p.m. A driver who also guides stays with the group. This circuit is a drive between overlooks, with time to step out for photos, not the private hike.",
+      "The sites come one by one. The Cholla Cactus Garden is one. Skull Rock is another. Arch Rock is included. The route then offers either Ohlsen Ranch or the Cap Rock Nature Trail, and it ends at Key's View."
     ],
     "schemaDescription": "Sightseeing Tour is a 4.5-hour guided outing with Joshua Tree Excursions.",
     "highlights": [],
@@ -47,14 +47,14 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private morning hike with Joshua Tree Excursions is listed at six hours inside Joshua Tree National Park. Guests can meet at the Joshua Tree office, take a local pickup, or request transport from Coachella Valley cities. The guide drives through the park to the trailhead, then leads a mostly off-trail hike of one to six miles.",
-      "Along the hike the guide covers park history, geology, plants, and animals. An optional lunch on the trail costs extra. Rock scrambling is optional. If time remains, the guide adds other park sights before the return to the office or the lodging. Included items named in the listing are park fees, water, in-park transportation, and a loaner daypack. Meals and extra equipment are not included."
+      "This private morning hike with Joshua Tree Excursions lasts six hours inside Joshua Tree National Park. Guests can meet at the Joshua Tree office, take a local pickup, or request transport from Coachella Valley cities. The guide drives through the park to the trailhead, then leads a mostly off-trail hike of one to six miles.",
+      "Along the hike the guide covers park history, geology, plants, and animals. An optional lunch on the trail costs extra. Rock scrambling is optional. If time remains, the guide adds other park sights before the return to the office or the lodging. Included items are park fees, water, in-park transportation, and a loaner daypack. Meals and extra equipment are not included."
     ],
     "schemaDescription": "Private Morning Hike is a 6-hour guided outing with Joshua Tree Excursions.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
-    "wordCount": 124,
+    "wordCount": 118,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": null,
@@ -83,14 +83,14 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private sunset hike with Joshua Tree Excursions is listed at six hours and is framed as hiking into the sunset. Meeting choices are the Joshua Tree office, a local pickup, or transport from Coachella Valley cities. The guide drives through the park to a trailhead and then leads a mostly off-trail route of one to six miles.",
-      "The guide's commentary covers history, geology, plants, and animals. Lunch on the trail is optional and costs extra. Rock scrambling is optional. Other park sights may be added at the end if time allows, before a return to the office or the lodging. The listing includes park fees, water, transportation in the park, and a loaner daypack."
+      "This private sunset hike with Joshua Tree Excursions lasts six hours and is a hike into the sunset. Meeting choices are the Joshua Tree office, a local pickup, or transport from Coachella Valley cities. The guide drives through the park to a trailhead and then leads a mostly off-trail route of one to six miles.",
+      "The guide's commentary covers history, geology, plants, and animals. Lunch on the trail is optional and costs extra. Rock scrambling is optional. Other park sights may be added at the end if time allows, before a return to the office or the lodging. Included are park fees, water, transportation in the park, and a loaner daypack."
     ],
     "schemaDescription": "Private Sunset Hike is a 6-hour guided outing with Joshua Tree Excursions.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
-    "wordCount": 116,
+    "wordCount": 112,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": null,

@@ -13,7 +13,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests ride in an open-air vehicle and see the sights from the seat. The outing does not include stops, so the sights are seen from the vehicle. The length runs up to about 2 hours and changes with traffic. The vehicle passes through city neighborhoods on the same drive.",
       "Moviemaking landmarks are among the sights seen from the vehicle. Residential neighborhoods are part of the same ride. Architectural buildings are visible from the open-air vehicle. Historic sites are also on the drive and are seen without a stop. Guests are asked to bring a camera for the ride.",
-      "People stay aboard the vehicle for the length of the outing. There is no walking portion, because the operator does not schedule stops. The same open-air ride is how every sight on the outing is viewed. The ride stays in Los Angeles."
+      "People stay aboard the vehicle for the length of the outing. There is no walking portion, because no stops are scheduled. The same open-air ride is how every sight on the outing is viewed. The ride stays in Los Angeles."
     ],
     "schemaDescription": "A two-hour guided outing with Golden Ticket LA.",
     "highlights": [
@@ -21,7 +21,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
-    "wordCount": 143,
+    "wordCount": 141,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -61,7 +61,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "A private group sets the sights, the departure time, and the length of the outing. The pace stays with the guests instead of following a fixed public timetable. Stops include well-known sights and places left out of ordinary travel guides. The private booking is limited to 7 guests.",
       "Free pickup is available in Beverly Hills. Guests are asked to bring a camera for the outing. The outing runs for about 3 hours. The group sets the stops, and the plan is not taken from a fixed public timetable. Small groups book the same private outing, and the plan is built around that party.",
-      "The operator leads the outing, and the plan changes with the group's size and interests. Guests visit both the better-known sights and the places the travel guides skip."
+      "A guide leads the outing, and the plan changes with the group's size and interests. Guests visit both the better-known sights and the places the travel guides skip."
     ],
     "schemaDescription": "A three-hour guided outing with Golden Ticket LA in Los Angeles.",
     "highlights": [

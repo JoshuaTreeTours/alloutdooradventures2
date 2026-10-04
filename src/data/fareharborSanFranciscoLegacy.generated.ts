@@ -175,7 +175,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Bay City Bike splits this booking by day. Alcatraz falls on the reserved date. The electric bike is the following day, any time from 8 a.m. to 6:30 p.m. Ages start at 13, and the page marks the ride beginner to novice.",
+      "Bay City Bike splits this booking by day. Alcatraz falls on the reserved date. The electric bike is the following day, any time from 8 a.m. to 6:30 p.m. Ages start at 13, and the ride is beginner to novice.",
       "The island trip leaves from Pier 33 with Alcatraz Cruises. It is a self-guided visit of about two and a half hours inside the cellhouse, using that audio tour. The ticket covers the ferry both ways and entry to the cellhouse. Afterward guests walk to 2661 Taylor Street for the bike. Each bike includes a handlebar bag, a rear rack, a helmet, a lock, and a map, plus a fitting.",
       "Riders can follow the waterfront past Aquatic Park, Fort Mason, the Marina, and the Presidio. Some continue over the Golden Gate Bridge toward Vista Point or Sausalito, then take a ferry back."
     ],
@@ -189,7 +189,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YaeKVk5sRvSZb9uj9Zr6"
     ],
     "productImage": "https://cdn.filestackcontent.com/5KlLVEpKQFCR2lAnnUNA",
-    "wordCount": 148,
+    "wordCount": 146,
     "durationLabel": "1 or 2 days",
     "durationIso": null,
     "meetingLocation": "2661 Taylor Street San Francisco, CA 94133",
@@ -284,8 +284,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This booking puts Alcatraz on the reserved date and a guided bike ride on the next morning. The ride is listed at about two and a half to three hours. The ferry leaves Pier 33. On the island the visit is self-paced, with an audio tour and exhibits, and the round-trip ferry is included.",
-      "The bike day starts with a fitting for the bike and the helmet. The guide rides toward the Golden Gate Bridge, with photo stops, then uses the bridge bike path. Notes on the page mention the bay, Alcatraz, and the skyline from the span. The route continues through Vista Point and downhill into Sausalito for galleries, restaurants, and the waterfront. A ferry back to the city is a separate ticket. A helmet, a lock, and a map are included."
+      "This booking puts Alcatraz on the reserved date and a guided bike ride on the next morning. The bike ride runs about two and a half to three hours. The ferry leaves Pier 33. On the island the visit is self-paced, with an audio tour and exhibits, and the round-trip ferry is included.",
+      "The bike day starts with a fitting for the bike and the helmet. The guide rides toward the Golden Gate Bridge, with photo stops, then uses the bridge bike path. From the bridge bike path, the view takes in the bay, Alcatraz, and the city skyline. The route continues through Vista Point and downhill into Sausalito for galleries, restaurants, and the waterfront. A ferry back to the city is a separate ticket. A helmet, a lock, and a map are included."
     ],
     "schemaDescription": "A guided outing lasting 2 Days with Bay City Bike in San Francisco. The outing passes Ferry ride from Pier 33 with scenic bay views, Self-guided exploration of the island, and Historic prison visit and exhibits.",
     "highlights": [
@@ -297,7 +297,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/QZUMQnSUW81MayWmY4Lg"
     ],
     "productImage": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
-    "wordCount": 135,
+    "wordCount": 136,
     "durationLabel": "2 Days",
     "durationIso": null,
     "meetingLocation": null,
@@ -555,7 +555,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The ride stays in Golden Gate Park, on the park's bike paths. Hippie Hill is one of the places riders pass inside the park. A helmet is included, and the shop fits the bike before departure.",
-      "A guide rides with the group and sets the pace. The operator presents the ride as suitable for beginners. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking. The ride passes San Francisco and Hippie Hill.",
+      "A guide rides with the group and sets the pace. The ride is suitable for beginners. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking. The ride passes San Francisco and Hippie Hill.",
       "Cyclists also come to Arboretum Botanical Gardens and Japanese Tea Gardens. Bison Paddock and Kids Bikes are on the same loop. Later the route reaches Daily Pricing."
     ],
     "schemaDescription": "A bicycle outing with Unlimited Biking in San Francisco. The outing passes Hippie Hill, Golden Gate Park, and San Francisco's Golden Gate Park.",
@@ -564,7 +564,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/X88GqyOZRZOXAyGEaeGQ",
-    "wordCount": 117,
+    "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1792 Haight St San Francisco, CA 94117",
@@ -607,8 +607,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This guided San Francisco bike tour is listed at four hours and starts and ends at Ghirardelli Square. Neighborhoods on the route are the Mission, the Castro, Haight-Ashbury, and Alamo Square. The operator links the city's layout to settlers from Spanish missionaries through later tech workers. Alamo Square is included for the Painted Ladies.",
-      "The Panhandle is described as a narrow park of redwood, cypress, and pine leading into Golden Gate Park. Haight-Ashbury is tied to the 1960s and to former homes of the Grateful Dead and Janis Joplin. Lower Haight is included for shops, bars, and the Wiggle bike route. The Castro is described through its activism, and the Mission through Latino roots and murals. There is a snack stop and no lunch stop. Riders must pedal their own bikes. Double trailers and tagalong bikes are not allowed. The listed departure is 9:30 a.m. daily."
+      "This guided San Francisco bike tour lasts four hours and starts and ends at Ghirardelli Square. Neighborhoods on the route are the Mission, the Castro, Haight-Ashbury, and Alamo Square. The city's layout is tied to settlers from Spanish missionaries through later tech workers. Alamo Square is included for the Painted Ladies.",
+      "The Panhandle is a narrow park of redwood, cypress, and pine leading into Golden Gate Park. Haight-Ashbury is tied to the 1960s and to former homes of the Grateful Dead and Janis Joplin. Lower Haight is included for shops, bars, and the Wiggle bike route. The Castro is described through its activism, and the Mission through Latino roots and murals. There is a snack stop and no lunch stop. Riders must pedal their own bikes. Double trailers and tagalong bikes are not allowed. Departure is 9:30 a.m. daily."
     ],
     "schemaDescription": "A four-hour bicycle outing with Unlimited Biking in San Francisco. The outing passes Golden Gate Park, Alamo Square, and Ghirardelli Square.",
     "highlights": [
@@ -619,7 +619,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/mXxIADBcSjKoZMd8xSgB"
     ],
     "productImage": "https://cdn.filestackcontent.com/vKmop1eQIyYFjjTDnI7F",
-    "wordCount": 150,
+    "wordCount": 143,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "757 Beach Street San Francisco, CA 94109",
@@ -653,7 +653,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. The ride stays in Golden Gate Park, on the park's bike paths. Hippie Hill is one of the places riders pass inside the park.",
-      "A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace. The operator presents the ride as suitable for beginners. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking.",
+      "A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace. The ride is suitable for beginners in the park. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking.",
       "Guests ride electric bikes for this booking."
     ],
     "schemaDescription": "A bicycle outing with Unlimited Biking in San Francisco. The outing passes Hippie Hill, Golden Gate Park, and San Francisco's Golden Gate Park.",

@@ -190,7 +190,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board. After that land lesson, the group goes into the ocean to catch waves. A wetsuit and a surfboard are provided for the time in the water.",
-      "A rash guard, fins, a leash, and reef shoes are also set out with the gear. The lesson itself is given in English. Instructors stay with the group at about 4 guests per instructor. The lesson is aimed at first-time and beginner surfers. The operator aims to have beginners standing on the board within about 30 minutes.",
+      "A rash guard, fins, a leash, and reef shoes are also set out with the gear. The lesson itself is given in English. Instructors stay with the group at about 4 guests per instructor. The lesson is aimed at first-time and beginner surfers. The lesson aims to have beginners standing on the board within about 30 minutes.",
       "People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",

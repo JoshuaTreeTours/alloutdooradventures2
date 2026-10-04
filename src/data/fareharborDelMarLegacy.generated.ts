@@ -181,7 +181,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Spring Adventure is a seasonal program at the Helen Woodward Animal Center. Children meet live ambassadors from four groups the page names: a mammal, a bird, an amphibian, and an invertebrate. One activity is a STEM session on butterfly conservation. The rest covers life cycles, young animals, and the shift from winter to spring for plants and animals.",
+      "Spring Adventure is a seasonal program at the Helen Woodward Animal Center. Children meet live ambassadors from four groups: a mammal, a bird, an amphibian, and an invertebrate. One activity is a STEM session on butterfly conservation. The rest covers life cycles, young animals, and the shift from winter to spring for plants and animals.",
       "Schools are told the material lines up with the Next Generation science standards used in grades kindergarten through six. The program can run on the center's campus or travel to a classroom. Booking is by phone or email to the Education Office, with no payment up front and an invoice afterward. For Daisy Girl Scouts, the visit can be shaped toward parts of the Between Earth and Sky journey."
     ],
     "schemaDescription": "A guided outing with Helen Woodward Animal Center.",
@@ -192,7 +192,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph"
     ],
     "productImage": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
-    "wordCount": 127,
+    "wordCount": 124,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
