@@ -1,0 +1,47 @@
+{
+  "company": "dolphindiscoveries",
+  "itemId": "716",
+  "fetchedAt": "2026-10-05T00:16:57.883420+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/dolphindiscoveries/716/content/",
+      "status": 200,
+      "bytes": 13792,
+      "sha256": "3ee7136761d21360f9aae3d570cee666885537bd2700c8a66070ace5877921c5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/dolphindiscoveries/716/structured-description/",
+      "status": 200,
+      "bytes": 6313,
+      "sha256": "4630c1a57bd5f164564d5b616f98e34c1c073a107a0b6ba31935b37462822cb2"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/dolphindiscoveries/items/716/",
+      "status": 200,
+      "bytes": 18786,
+      "sha256": "27bbdb3655c157f8dc78d2b7d5c1ccadf9bb5af3399e1da8e720afe12b317050"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/dolphindiscoveries/price-preview/per-item/v2/?asn=fhdn&item_pks=716&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 537,
+      "sha256": "10cf6bf45c826b9ca5c873e35ac3197d5e0c56b5d29ce67183b4a2ff1c0eb5a0"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/dolphindiscoveries/items/716/ratings/",
+      "status": 200,
+      "bytes": 547,
+      "sha256": "2d1704beade0d024e8ee9a46c9039b1319620442ea5fad457d22019524bd29cb"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "716",
+    "provider": "dolphindiscoveries",
+    "bookingUrl": "https://fareharbor.com/embeds/book/dolphindiscoveries/items/716/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

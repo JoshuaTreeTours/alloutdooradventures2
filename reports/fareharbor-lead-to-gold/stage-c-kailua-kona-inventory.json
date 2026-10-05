@@ -1,0 +1,526 @@
+{
+  "citySlug": "kailua-kona",
+  "total": 27,
+  "active": 27,
+  "terminal": 0,
+  "priceAvailable": 24,
+  "tripadvisorRatingAvailable": 5,
+  "imageAvailable": 27,
+  "inSitemap": 22,
+  "inMerchantFeed": 2,
+  "products": [
+    {
+      "company": "bigislandabalone",
+      "operator": "Big Island Abalone",
+      "itemId": "436214",
+      "slug": "kona-barbeque-436214",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/kona-barbeque-436214",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4634,
+        "structuredStatus": 200,
+        "structuredBytes": 3801
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bodyglove",
+      "operator": "Body Glove Hawaii",
+      "itemId": "397613",
+      "slug": "super-raft-snorkel---am-397613",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/super-raft-snorkel---am-397613",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5849,
+        "structuredStatus": 200,
+        "structuredBytes": 3310
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bodyglove",
+      "operator": "Body Glove Hawaii",
+      "itemId": "409",
+      "slug": "deluxe-snorkel-and-dolphin-watch-409",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/deluxe-snorkel-and-dolphin-watch-409",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5583,
+        "structuredStatus": 200,
+        "structuredBytes": 3097
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": true
+    },
+    {
+      "company": "bodyglove",
+      "operator": "Body Glove Hawaii",
+      "itemId": "445942",
+      "slug": "super-raft-sunset-tour-445942",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/super-raft-sunset-tour-445942",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4968,
+        "structuredStatus": 200,
+        "structuredBytes": 2887
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "coralreef",
+      "operator": "Coral Reef Snorkel Adventures",
+      "itemId": "204214",
+      "slug": "kealakekua-bay-captain-cook-monument-snorkel-204214",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/kealakekua-bay-captain-cook-monument-snorkel-204214",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8436,
+        "structuredStatus": 200,
+        "structuredBytes": 4767
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "coralreef",
+      "operator": "Coral Reef Snorkel Adventures",
+      "itemId": "371",
+      "slug": "manta-ray-night-snorkel-371",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/manta-ray-night-snorkel-371",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8608,
+        "structuredStatus": 200,
+        "structuredBytes": 4937
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "dolphindiscoveries",
+      "operator": "Dolphin Discoveries",
+      "itemId": "4527",
+      "slug": "captain-cook-snorkel-adventure-4527",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/captain-cook-snorkel-adventure-4527",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13992,
+        "structuredStatus": 200,
+        "structuredBytes": 6074
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "dolphindiscoveries",
+      "operator": "Dolphin Discoveries",
+      "itemId": "716",
+      "slug": "deluxe-kona-snorkel-adventure-2-snorkel-spots-716",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/deluxe-kona-snorkel-adventure-2-snorkel-spots-716",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13792,
+        "structuredStatus": 200,
+        "structuredBytes": 6313
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hawaiiislandandoceantours",
+      "operator": "Hawaii Island & Ocean Tours",
+      "itemId": "159432",
+      "slug": "whale-dolphin-watch-sea-cave-and-captain-cook-kealakekua-bay-reef-snorkel-speed-boat-adventure-159432",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/whale-dolphin-watch-sea-cave-and-captain-cook-kealakekua-bay-reef-snorkel-speed-boat-adventure-159432",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 17681,
+        "structuredStatus": 200,
+        "structuredBytes": 8257
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hawaiiislandandoceantours",
+      "operator": "Hawaii Island & Ocean Tours",
+      "itemId": "2665",
+      "slug": "manta-ray-moonlight-night-snorkel-in-keauhou---kona-2665",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/manta-ray-moonlight-night-snorkel-in-keauhou---kona-2665",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 22302,
+        "structuredStatus": 200,
+        "structuredBytes": 11696
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hawaiinautical-kona",
+      "operator": "Hawaii Nautical Big Island",
+      "itemId": "127660",
+      "slug": "kona-luxury-dolphin-snorkel-sail-127660",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/kona-luxury-dolphin-snorkel-sail-127660",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8659,
+        "structuredStatus": 200,
+        "structuredBytes": 6770
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hawaiinautical-kona",
+      "operator": "Hawaii Nautical Big Island",
+      "itemId": "224702",
+      "slug": "kona-luxury-private-yacht-charter-224702",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/kona-luxury-private-yacht-charter-224702",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8394,
+        "structuredStatus": 200,
+        "structuredBytes": 7044
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konaboys",
+      "operator": "Kona Boys",
+      "itemId": "6980",
+      "slug": "waa-hawaiian-outrigger-canoe-rides-6980",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/waa-hawaiian-outrigger-canoe-rides-6980",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2370,
+        "structuredStatus": 200,
+        "structuredBytes": 1819
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konacloudforest",
+      "operator": "Kona Cloud Forest Sanctuary",
+      "itemId": "405011",
+      "slug": "sound-bath-meditation-journey-405011",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/sound-bath-meditation-journey-405011",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13056,
+        "structuredStatus": 200,
+        "structuredBytes": 8473
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konahonudivers",
+      "operator": "Kona Honu Divers",
+      "itemId": "1470",
+      "slug": "2-tank-local-morning-dive-charter-1470",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/2-tank-local-morning-dive-charter-1470",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 14055,
+        "structuredStatus": 200,
+        "structuredBytes": 7589
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konahonudivers",
+      "operator": "Kona Honu Divers",
+      "itemId": "1482",
+      "slug": "2-tank-night-manta-dive-charter-1482",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/2-tank-night-manta-dive-charter-1482",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 14302,
+        "structuredStatus": 200,
+        "structuredBytes": 7310
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konahonudivers",
+      "operator": "Kona Honu Divers",
+      "itemId": "95023",
+      "slug": "premium-advanced-2-tank-long-range-charter-95023",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/premium-advanced-2-tank-long-range-charter-95023",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13675,
+        "structuredStatus": 200,
+        "structuredBytes": 7389
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konahonudivers",
+      "operator": "Kona Honu Divers",
+      "itemId": "95025",
+      "slug": "black-water-night-dive-95025",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/black-water-night-dive-95025",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9288,
+        "structuredStatus": 200,
+        "structuredBytes": 3159
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konahonudivers",
+      "operator": "Kona Honu Divers",
+      "itemId": "95265",
+      "slug": "private-charter-honu-lele-95265",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/private-charter-honu-lele-95265",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7915,
+        "structuredStatus": 200,
+        "structuredBytes": 2418
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konasnorkelandsail",
+      "operator": "Kona Style",
+      "itemId": "671",
+      "slug": "kealakekua-snorkel-and-sail-671",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/kealakekua-snorkel-and-sail-671",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12612,
+        "structuredStatus": 200,
+        "structuredBytes": 8335
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": true
+    },
+    {
+      "company": "konasnorkelandsail",
+      "operator": "Kona Style",
+      "itemId": "673",
+      "slug": "combo-sunset-and-manta-ray-snorkel-673",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/combo-sunset-and-manta-ray-snorkel-673",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13380,
+        "structuredStatus": 200,
+        "structuredBytes": 8129
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konasnorkeltrips",
+      "operator": "Kona Snorkel Trips",
+      "itemId": "13712",
+      "slug": "captain-cook-monument-kealakekua-bay-snorkeling-tour-13712",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/captain-cook-monument-kealakekua-bay-snorkeling-tour-13712",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12477,
+        "structuredStatus": 200,
+        "structuredBytes": 5667
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konasnorkeltrips",
+      "operator": "Kona Snorkel Trips",
+      "itemId": "13713",
+      "slug": "night-manta-ray-snorkeling-tour-13713",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/night-manta-ray-snorkeling-tour-13713",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 16801,
+        "structuredStatus": 200,
+        "structuredBytes": 7607
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "konasnorkeltrips",
+      "operator": "Kona Snorkel Trips",
+      "itemId": "139321",
+      "slug": "kona-snorkeling-in-pawai-bay-139321",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/kona-snorkeling-in-pawai-bay-139321",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11134,
+        "structuredStatus": 200,
+        "structuredBytes": 4633
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "wasabi",
+      "operator": "Wasabi Tours Hawaii",
+      "itemId": "22899",
+      "slug": "big-island-grand-circle-island-tour-22899",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/big-island-grand-circle-island-tour-22899",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6663,
+        "structuredStatus": 200,
+        "structuredBytes": 4417
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "wasabi",
+      "operator": "Wasabi Tours Hawaii",
+      "itemId": "22900",
+      "slug": "twilight-volcano-and-stargazing-tour-22900",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/twilight-volcano-and-stargazing-tour-22900",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6592,
+        "structuredStatus": 200,
+        "structuredBytes": 4253
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "wasabi",
+      "operator": "Wasabi Tours Hawaii",
+      "itemId": "22901",
+      "slug": "big-island-waterfalls-adventure-22901",
+      "publicPath": "/destinations/hawaii/kailua-kona/tours/big-island-waterfalls-adventure-22901",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6952,
+        "structuredStatus": 200,
+        "structuredBytes": 4625
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

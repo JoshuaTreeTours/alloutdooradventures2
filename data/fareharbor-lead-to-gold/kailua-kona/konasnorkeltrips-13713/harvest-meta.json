@@ -1,0 +1,47 @@
+{
+  "company": "konasnorkeltrips",
+  "itemId": "13713",
+  "fetchedAt": "2026-10-05T00:17:08.276707+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/konasnorkeltrips/13713/content/",
+      "status": 200,
+      "bytes": 16801,
+      "sha256": "d88156f0ab1b8c11f574687b7fb09270fedc8430938e2673a6617f96aeaccad5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/konasnorkeltrips/13713/structured-description/",
+      "status": 200,
+      "bytes": 7607,
+      "sha256": "e7782fb25b6b916169561beb0826d7682f122c4d98c8efb4140fa9e3b964174d"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/konasnorkeltrips/items/13713/",
+      "status": 200,
+      "bytes": 26785,
+      "sha256": "63a10afaf77cc6217cf7412b2cc9b96476221761c416eda8cec291cc71889d4e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/konasnorkeltrips/price-preview/per-item/v2/?asn=fhdn&item_pks=13713&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 948,
+      "sha256": "52e57ae07b245f13085e7b81ceee5cb8c2527903251fa8c83ab0c7f235f207c4"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/konasnorkeltrips/items/13713/ratings/",
+      "status": 200,
+      "bytes": 490,
+      "sha256": "27a5a599faa11dd3e75eee99b0b6a908155f9bce42bf7aae8dafdffe2814afe6"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "13713",
+    "provider": "konasnorkeltrips",
+    "bookingUrl": "https://fareharbor.com/embeds/book/konasnorkeltrips/items/13713/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

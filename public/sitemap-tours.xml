@@ -2574,21 +2574,15 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/honolulu/tours/wreck-and-reef-tour-9120</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kaaawa/tours/rainforest-self-guided-kayak-tour-8522</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kahului/tours/bike-maui-downhill-tour-70246</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/2-tank-local-morning-dive-charter-1470</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/2-tank-night-manta-dive-charter-1482</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/big-island-grand-circle-island-tour-22899</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/big-island-waterfalls-adventure-22901</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/black-water-night-dive-95025</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/captain-cook-monument-kealakekua-bay-snorkeling-tour-13712</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/captain-cook-snorkel-adventure-4527</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/combo-sunset-and-manta-ray-snorkel-673</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/deluxe-kona-snorkel-adventure-2-snorkel-spots-716</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/deluxe-snorkel-and-dolphin-watch-409</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/kealakekua-bay-captain-cook-monument-snorkel-204214</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/kealakekua-snorkel-and-sail-671</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/kona-barbeque-436214</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/kona-luxury-dolphin-snorkel-sail-127660</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/kona-luxury-private-yacht-charter-224702</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/kona-snorkeling-in-pawai-bay-139321</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/manta-ray-moonlight-night-snorkel-in-keauhou---kona-2665</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/manta-ray-night-snorkel-371</loc><priority>0.8</priority></url>
@@ -2600,7 +2594,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/super-raft-sunset-tour-445942</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/twilight-volcano-and-stargazing-tour-22900</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/wa-a-hawaiian-outrigger-canoe-rides-6980</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/waa-hawaiian-outrigger-canoe-rides-6980</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/whale-dolphin-watch-sea-cave-and-captain-cook-kealakekua-bay-reef-snorkel-speed-boat-adventure-159432</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua/tours/2-hour-guided-kayak-beach-time-323</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua/tours/guided-mokulua-islands-kayak-tour-and-e-bike-adventure-526154</loc><priority>0.8</priority></url>
@@ -8666,4 +8659,7 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/st-petersburg/tours/dolphin-spotting-sail-521595</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/st-petersburg/tours/full-day-sail-521546</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/st-petersburg/tours/sunset-sail-520862</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/2-tank-local-morning-dive-charter-1470</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/2-tank-night-manta-dive-charter-1482</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/hawaii/kailua-kona/tours/combo-sunset-and-manta-ray-snorkel-673</loc><priority>0.8</priority></url>
 </urlset>

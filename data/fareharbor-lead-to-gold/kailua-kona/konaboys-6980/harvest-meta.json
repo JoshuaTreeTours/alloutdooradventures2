@@ -1,0 +1,47 @@
+{
+  "company": "konaboys",
+  "itemId": "6980",
+  "fetchedAt": "2026-10-05T00:17:02.130589+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/konaboys/6980/content/",
+      "status": 200,
+      "bytes": 2370,
+      "sha256": "c575d5e43cbd29744a1312de46f4a339300826b0ac9c78be4f53277caab73cdd"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/konaboys/6980/structured-description/",
+      "status": 200,
+      "bytes": 1819,
+      "sha256": "d749ea21bcdc1cf358121eaf21d62c36b67a95f9f21d63079152ef6634a324a3"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/konaboys/items/6980/",
+      "status": 200,
+      "bytes": 9906,
+      "sha256": "16552cbeefcc98413a226c212fb6f728d0f2b319262e9cd8cac5a9436d7d93d2"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/konaboys/price-preview/per-item/v2/?asn=fhdn&item_pks=6980&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 655,
+      "sha256": "612b74dad594e592b49442c5eec527ad4558b7ec29fc3c33d1d3eb393c2d3d0e"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/konaboys/items/6980/ratings/",
+      "status": 200,
+      "bytes": 599,
+      "sha256": "43cd2ca715c0d32462d31690470544d48985c59ce776d697de53a46b589b238b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "6980",
+    "provider": "konaboys",
+    "bookingUrl": "https://fareharbor.com/embeds/book/konaboys/items/6980/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

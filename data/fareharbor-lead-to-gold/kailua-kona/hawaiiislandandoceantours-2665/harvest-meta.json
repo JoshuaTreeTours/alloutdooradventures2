@@ -1,0 +1,47 @@
+{
+  "company": "hawaiiislandandoceantours",
+  "itemId": "2665",
+  "fetchedAt": "2026-10-05T00:16:59.795651+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/hawaiiislandandoceantours/2665/content/",
+      "status": 200,
+      "bytes": 22302,
+      "sha256": "3f460819ffe42b7158d5fdc21de17f1b9af785f6e86ea2f2223f2458792f0d5b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/hawaiiislandandoceantours/2665/structured-description/",
+      "status": 200,
+      "bytes": 11696,
+      "sha256": "81781bd04589dcb914c94d9c75ab4481a218a68bff9f79344a72b2e246ca073a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/hawaiiislandandoceantours/items/2665/",
+      "status": 200,
+      "bytes": 24434,
+      "sha256": "eb6af61c34ef9a3291bd39b781fd973928f6d67914876b0f69649e62f79e73c4"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/hawaiiislandandoceantours/price-preview/per-item/v2/?asn=fhdn&item_pks=2665&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 672,
+      "sha256": "75487a7436920fb557cffbb369e34a2d22428e90d5171440e0b6b35eefb0938b"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/hawaiiislandandoceantours/items/2665/ratings/",
+      "status": 200,
+      "bytes": 582,
+      "sha256": "c91ce27b529519e287ab80d8bc0dd9730a8cab5175b4dbe7f2fff9e82cef09dd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "2665",
+    "provider": "hawaiiislandandoceantours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hawaiiislandandoceantours/items/2665/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

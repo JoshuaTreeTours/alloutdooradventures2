@@ -179,7 +179,13 @@ def _names(text: str, title: str, operator: str) -> list[str]:
             return
         if re.search(r"\w'\s|\s'", name):
             return
-        if re.search(r"\b(combo|waiver|adventure|package)\b", key) or key.endswith(" special"):
+        if re.search(
+            r"\b(combo|waiver|adventure|package|rental|available|guarantee|"
+            r"tanks?|weights?|divemaster|wetsuit|regulator|charter)\b",
+            key,
+        ) or key.endswith(" special"):
+            return
+        if key in {"get ready", "manta guarantee"}:
             return
         if any(part.isupper() and len(part) > 2 for part in name.split()):
             return
@@ -225,6 +231,8 @@ def _names(text: str, title: str, operator: str) -> list[str]:
             "national",
             "boston",
             "style",
+            "due",
+            "small",
             "show",
             "workshop",
             "one",
@@ -545,7 +553,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             rows.append("The ride stays in Los Angeles.")
     if re.search(r"\bwhales?\b|\bwhale watch\b", blob, re.I) and re.search(
         r"\b(boat|aboard|vessel|on board|on the water|whale watch)\b", blob, re.I
-    ) and not re.search(r"\b(snorkel|mola|swim)\b", blob, re.I):
+    ) and not re.search(r"\b(snorkel|mola|swim|scuba|dives?)\b", blob, re.I):
         rows.append("Guests go out on the water to look for whales.")
         if re.search(r"dolphin", blob, re.I):
             rows.append("Dolphins are also part of what the outing goes out to see.")
@@ -1208,10 +1216,12 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             rows.append("The airboat is the reason for the day. The coach is only the way there and back.")
         else:
             rows.append("The airboat is the reason for the day, and the marsh is the setting.")
-    if re.search(r"\bdolphin", titled, re.I) and re.search(r"\b(backcountry|bottlenose|pod)\b", titled, re.I):
+    if re.search(r"\bdolphin", titled, re.I) and re.search(r"\bbackcountry\b", titled, re.I):
         rows.append("This private charter looks for wild dolphins in the backcountry channels.")
-        if re.search(r"bottlenose", titled, re.I):
+        if re.search(r"\batlantic\b", titled, re.I) and re.search(r"bottlenose", titled, re.I):
             rows.append("The animals are Atlantic bottlenose dolphins, and they live here year-round.")
+        elif re.search(r"bottlenose", titled, re.I):
+            rows.append("Bottlenose dolphins are among the animals the boat watches for.")
         if re.search(r"engines|engine", titled, re.I):
             rows.append("The captain cuts the engine and lets the boat drift once a pod is near.")
         if re.search(r"no feeding", titled, re.I):
@@ -1228,6 +1238,36 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if re.search(r"\bprivate\b", titled, re.I):
             rows.append("The boat is private for the group that booked it.")
         rows.append("Whether a pod is close that day is not promised.")
+    if re.search(r"\b(?:scuba|divemasters?|\bdive\b|\bdives\b)\b", titled, re.I):
+        if re.search(r"\b(?:two|2)[\s-]*tanks?\b|\btwo dives\b", titled, re.I):
+            rows.append("The booking is two guided dives from the boat.")
+        if re.search(r"\breefs?\b", titled, re.I):
+            rows.append("The dives follow reefs along the Kona coast.")
+        if re.search(r"lava tunnels", titled, re.I):
+            rows.append("Lava tunnels are among the places a guide may lead.")
+        animals = [
+            label
+            for label, pattern in (
+                ("fish", r"\bfish\b"),
+                ("eels", r"\beels\b"),
+                ("octopus", r"\boctopus\b"),
+            )
+            if re.search(pattern, titled, re.I)
+        ]
+        if animals and re.search(r"\breefs?\b", titled, re.I):
+            rows.append(
+                f"{ev.join_and(animals).capitalize()} are among the animals named for these reefs."
+            )
+        if re.search(r"\bmanta", titled, re.I):
+            rows.append("The night dive is for manta rays.")
+        if re.search(r"black\s*water|blackwater", titled, re.I) and re.search(
+            r"tether|offshore|pelagic", titled, re.I
+        ):
+            rows.append(
+                "The night dive is a blackwater drift offshore, suspended over deep water."
+            )
+        if re.search(r"honokohau", titled, re.I):
+            rows.append("The boat leaves from Honokohau Harbor.")
     if re.search(r"\bsnorkel", titled, re.I) and re.search(r"\b(reef|parrotfish|stingray)\b", titled, re.I):
         rows.append("Guests snorkel from the boat over a patch reef.")
         if re.search(r"key west", titled, re.I) and re.search(r"offshore|miles", titled, re.I):

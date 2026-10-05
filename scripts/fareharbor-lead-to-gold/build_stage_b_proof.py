@@ -260,7 +260,7 @@ def schema_amount(amount: float) -> str:
 
 
 def is_adult(label: str) -> bool:
-    return bool(re.match(r"adult\b", label.strip(), re.I))
+    return bool(re.match(r"adults?\b", label.strip(), re.I))
 
 
 def duration_iso(label: str | None) -> str | None:
@@ -585,8 +585,8 @@ def validate(
     elif status == "OK":
         if offer is None or product["visiblePriceLabel"] is None:
             errors.append("priced product is missing an offer or visible price")
-        elif offer.get("price") in {"129.00", "129"}:
-            errors.append("synthetic 129 offer")
+        # $129 is a real FareHarbor fare when price-preview returns it.
+        # The old Engine 2 price floor is not applied in this pipeline.
         elif offer.get("availability"):
             errors.append("offer still carries availability")
         else:

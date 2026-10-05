@@ -22,6 +22,7 @@ import { fareHarborEvergladesCityLegacyProducts } from "./fareharborEvergladesCi
 import { fareHarborFortLauderdaleLegacyProducts } from "./fareharborFortLauderdaleLegacy.generated";
 import { fareHarborGoodlandLegacyProducts } from "./fareharborGoodlandLegacy.generated";
 import { fareHarborHonoluluLegacyProducts } from "./fareharborHonoluluLegacy.generated";
+import { fareHarborKailuaKonaLegacyProducts } from "./fareharborKailuaKonaLegacy.generated";
 import { fareHarborHomesteadLegacyProducts } from "./fareharborHomesteadLegacy.generated";
 import { fareHarborKeyWestLegacyProducts } from "./fareharborKeyWestLegacy.generated";
 import { fareHarborMiamiBeachLegacyProducts } from "./fareharborMiamiBeachLegacy.generated";
@@ -73,6 +74,7 @@ export const fareHarborCityBatches: readonly (readonly FareHarborProofProduct[])
     fareHarborHomesteadLegacyProducts,
     fareHarborGoodlandLegacyProducts,
     fareHarborHonoluluLegacyProducts,
+    fareHarborKailuaKonaLegacyProducts,
   ];
 
 export const fareHarborMigratedProducts: FareHarborProofProduct[] =
@@ -167,3 +169,6 @@ export const getFareHarborGoodlandLegacyProducts = (): FareHarborProofProduct[] 
 
 export const getFareHarborHonoluluLegacyProducts = (): FareHarborProofProduct[] =>
   fareHarborHonoluluLegacyProducts;
+
+export const getFareHarborKailuaKonaLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborKailuaKonaLegacyProducts;

@@ -1,0 +1,47 @@
+{
+  "company": "hawaiinautical-kona",
+  "itemId": "127660",
+  "fetchedAt": "2026-10-05T00:16:59.951096+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/hawaiinautical-kona/127660/content/",
+      "status": 200,
+      "bytes": 8659,
+      "sha256": "7302842dd907ba28af24669e15fa16d98bf1f73f5d8f81961c35461e6f373bd6"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/hawaiinautical-kona/127660/structured-description/",
+      "status": 200,
+      "bytes": 6770,
+      "sha256": "47d08862e8b80772ed31eb863d989f47307177106d93dab0209b1ac1d6086ab5"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/hawaiinautical-kona/items/127660/",
+      "status": 200,
+      "bytes": 14712,
+      "sha256": "6796f6e4c971d884cbf6c62b903d8fc543bc7f6588ba668fb6c4a5f525154423"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/hawaiinautical-kona/price-preview/per-item/v2/?asn=fhdn&item_pks=127660&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 229,
+      "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/hawaiinautical-kona/items/127660/ratings/",
+      "status": 200,
+      "bytes": 549,
+      "sha256": "1305d30ecb7d9e2495d62cb39b645fc5c41ed94c0a281190ebeb8e4a00b1c94f"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "127660",
+    "provider": "hawaiinautical-kona",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hawaiinautical-kona/items/127660/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

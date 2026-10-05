@@ -169,6 +169,8 @@ STREET_WORDS = {
     "blvd",
     "drive",
     "dr",
+    "parkway",
+    "pkwy",
     "lane",
     "ln",
     "way",

@@ -1,0 +1,47 @@
+{
+  "company": "konacloudforest",
+  "itemId": "405011",
+  "fetchedAt": "2026-10-05T00:17:02.264710+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/konacloudforest/405011/content/",
+      "status": 200,
+      "bytes": 13056,
+      "sha256": "8d5caccdfef87bdd7eec8dcbdb4e2dd99b5888f62e62e52358875481ba8ef527"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/konacloudforest/405011/structured-description/",
+      "status": 200,
+      "bytes": 8473,
+      "sha256": "d09043103707079fa949c8ea6c5ffc8d55252d40a8f35b1d01462cdfe7f25ef6"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/konacloudforest/items/405011/",
+      "status": 200,
+      "bytes": 21088,
+      "sha256": "8292a51d08ca5ee5b627a8697c2304dfbe271a7ded7350aaa0dea0113f4910d4"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/konacloudforest/price-preview/per-item/v2/?asn=fhdn&item_pks=405011&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 551,
+      "sha256": "0ead002ac1160659e3b559b765ecfe174d71ac2088532be8deb0bcaf669342c7"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/konacloudforest/items/405011/ratings/",
+      "status": 200,
+      "bytes": 629,
+      "sha256": "282d56798c597b22547029dd46bfca664d482b545019777c5c8f8d5a1518b41b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "405011",
+    "provider": "konacloudforest",
+    "bookingUrl": "https://fareharbor.com/embeds/book/konacloudforest/items/405011/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

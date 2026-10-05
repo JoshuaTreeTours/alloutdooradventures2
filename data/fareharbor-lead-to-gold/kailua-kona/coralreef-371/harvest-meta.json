@@ -1,0 +1,47 @@
+{
+  "company": "coralreef",
+  "itemId": "371",
+  "fetchedAt": "2026-10-05T00:16:57.627339+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/coralreef/371/content/",
+      "status": 200,
+      "bytes": 8608,
+      "sha256": "ddb3bce3531ce83830220f70004fdddfd12705589c9a29ee697fd7a57936d452"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/coralreef/371/structured-description/",
+      "status": 200,
+      "bytes": 4937,
+      "sha256": "ea59e31a417e288bd9f376878ca169f6056f426e851e9edeea369d475565bc03"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/coralreef/items/371/",
+      "status": 200,
+      "bytes": 18264,
+      "sha256": "1fede14742240db0d37cfcc43189ee69341ac3510d4f6fd96e4328219b691786"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/coralreef/price-preview/per-item/v2/?asn=fhdn&item_pks=371&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1042,
+      "sha256": "734dc62298d88f0525f6bf38205ade97bb65b36e538dce9e0405769f2f3c1a26"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/coralreef/items/371/ratings/",
+      "status": 200,
+      "bytes": 505,
+      "sha256": "73bb1c83116f69ed33fbf61cd0d97ffd7c9b02ff04206102edcfd9742e4dfe86"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "371",
+    "provider": "coralreef",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coralreef/items/371/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

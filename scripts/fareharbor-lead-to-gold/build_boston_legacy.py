@@ -1132,10 +1132,13 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
         and grounded_short
     )
+    # Fewer than 20 grounded words means the finisher could not rewrite the
+    # source without invention. Withhold it instead of publishing a stub.
+    ungroundable = words < 20
     if (
         exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
         and words < 100
-        and not source_supports_full
+        and (not source_supports_full or ungroundable)
         and not publish_short
     ):
         exception = "INSUFFICIENT_SOURCE_CONTENT"

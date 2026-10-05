@@ -1,0 +1,47 @@
+{
+  "company": "coralreef",
+  "itemId": "204214",
+  "fetchedAt": "2026-10-05T00:16:57.354287+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/coralreef/204214/content/",
+      "status": 200,
+      "bytes": 8436,
+      "sha256": "feba5b809a2660ed09958ba2410a2a65203bc4ae021818e45ad400c1d6ab7a9f"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/coralreef/204214/structured-description/",
+      "status": 200,
+      "bytes": 4767,
+      "sha256": "1766da0ebc06a131f46e9ed49c4da7592539894990b1dbcb972d89f90c9b9bd4"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/coralreef/items/204214/",
+      "status": 200,
+      "bytes": 17800,
+      "sha256": "6b6c226135795ba57267cb7e785a12c38a4a7ab58aa2fedb00fbfc2def679c11"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/coralreef/price-preview/per-item/v2/?asn=fhdn&item_pks=204214&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1044,
+      "sha256": "24aecc7012fc3ba6b4f37272cfc68350667033b9e3dbc932fd3af617c7774e86"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/coralreef/items/204214/ratings/",
+      "status": 200,
+      "bytes": 535,
+      "sha256": "08d49874f55bcc6c6f7452dd33d840b6c72093a71f6e8df795ddd44f3d7ca10d"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "204214",
+    "provider": "coralreef",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coralreef/items/204214/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

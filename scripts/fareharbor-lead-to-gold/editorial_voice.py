@@ -679,6 +679,8 @@ def activity_kind(title: str, description: str = "") -> str:
         return "drive"
     if re.search(r"\b(kayak|paddle|canoe)\b", title_text):
         return "paddle"
+    if re.search(r"\b(scuba|snorkel(?:ing)?|dives?|\d[\s-]*tanks?)\b", title_text):
+        return "outing"
     if re.search(r"\b(bike|bicycle|cycling|scooter|e-bike)\b", title_text):
         return "bike"
     if re.search(r"\b(food|chocolate|tasting|dim sum|cannoli|brewery|beer|wine|dumpling)\b", title_text):
@@ -1022,6 +1024,8 @@ def activity_phrase(title: str, description: str = "") -> str:
         return "snorkel outing"
     if re.search(r"kayak|paddle|canoe|paddleboard", text):
         return "paddle outing"
+    if re.search(r"\b(scuba|dives?|\d[\s-]*tanks?)\b", text):
+        return "dive outing"
     if re.search(r"\bdriv|chauffeur", text):
         return "driving tour"
     if re.search(r"\bpearl harbor\b", text) and not re.search(
@@ -1619,7 +1623,15 @@ def description_fact_drafts(description: str, extras: list[str] | None = None) -
         drafts.append("The outing visits Salem and the witch-trial sites.")
     if re.search(r"tall ship|Liberty Star", blob, re.I):
         drafts.append("The sail is aboard a tall ship.")
-    if re.search(r"\bsunset\b", blob, re.I) and re.search(r"harbor|sail|cruise", blob, re.I):
+    if re.search(r"\bsunset\b", blob, re.I) and re.search(r"\bmanta\b", blob, re.I) and re.search(
+        r"\bsnorkel", blob, re.I
+    ):
+        drafts.append("The outing pairs a sunset snorkel with time in the water for manta rays.")
+    elif (
+        re.search(r"\bsunset\b", blob, re.I)
+        and re.search(r"harbor|sail|cruise", blob, re.I)
+        and not re.search(r"\bsnorkel", blob, re.I)
+    ):
         drafts.append("The sail is a sunset harbor outing.")
     if re.search(r"moonlight|under the stars", blob, re.I) and re.search(
         r"\b(sail|cruise|harbor|schooner|yacht|boat)\b", blob, re.I
@@ -1685,6 +1697,9 @@ def place_sentences(places: list[str], activity: str) -> list[str]:
         closer_kind = "view"
     elif activity == "paddle outing":
         opener = "The outing passes"
+        closer_kind = "view"
+    elif activity == "dive outing":
+        opener = "The dives are around"
         closer_kind = "view"
     elif activity == "winery outing":
         opener = "The tasting includes"

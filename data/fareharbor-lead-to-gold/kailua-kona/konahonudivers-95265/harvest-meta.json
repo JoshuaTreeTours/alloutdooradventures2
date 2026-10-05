@@ -1,0 +1,47 @@
+{
+  "company": "konahonudivers",
+  "itemId": "95265",
+  "fetchedAt": "2026-10-05T00:17:05.412128+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/konahonudivers/95265/content/",
+      "status": 200,
+      "bytes": 7915,
+      "sha256": "d11a7a5e3814ef0e9e69cd366f97bb9d241176550ee6b967271654f8e74ff89d"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/konahonudivers/95265/structured-description/",
+      "status": 200,
+      "bytes": 2418,
+      "sha256": "f60e0d89741642568e08a4cac676015542544f658aec349859f04d1335bb6796"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/konahonudivers/items/95265/",
+      "status": 200,
+      "bytes": 18127,
+      "sha256": "e453afc3a38d5e9d867de8fd95e5d2c186e4d6b330220f9f446dcd12ab931785"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/konahonudivers/price-preview/per-item/v2/?asn=fhdn&item_pks=95265&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 727,
+      "sha256": "0b71cd7d1244531fa63e9d4fda2b5b1811ef279ad92323d8183effaba30c0012"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/konahonudivers/items/95265/ratings/",
+      "status": 200,
+      "bytes": 515,
+      "sha256": "c4578b52c6ff8a64197e63b6d95434a7bf16d5b2d5fde174b5e1419e28a012c5"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "95265",
+    "provider": "konahonudivers",
+    "bookingUrl": "https://fareharbor.com/embeds/book/konahonudivers/items/95265/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

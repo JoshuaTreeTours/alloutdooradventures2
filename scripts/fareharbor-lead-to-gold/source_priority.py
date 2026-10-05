@@ -117,6 +117,10 @@ def itinerary_stops(value) -> list[str]:
             continue
         if re.match(r"^(pick|drop|lunch|break|start|end|transfer)\b", key):
             continue
+        if re.search(r"\b(travel time|snorkel time|return to shore)\b", key):
+            continue
+        if re.match(r"^(dive again|gear up|hop in)\b", key):
+            continue
         if re.fullmatch(
             r"(monday|tuesday|wednesday|thursday|friday|saturday|sunday)s?",
             key,
