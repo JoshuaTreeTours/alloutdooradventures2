@@ -175,8 +175,10 @@ export default function CityTourBookingRoute({
     ? getFareharborOperatorSlugFromUrl(tour.bookingUrl)
     : null;
   const isBlockedFareharborEmbed =
-    !!fareharborOperatorSlug &&
-    OPT_OUT_OPERATOR_SLUGS.has(fareharborOperatorSlug);
+    isFareharbor &&
+    (state.slug === "hawaii" ||
+      (!!fareharborOperatorSlug &&
+        OPT_OUT_OPERATOR_SLUGS.has(fareharborOperatorSlug)));
 
   const ensureFareharborParams = (url?: string) => {
     if (!url) return undefined;
