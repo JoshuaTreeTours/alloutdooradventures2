@@ -7,6 +7,7 @@ const isDev = process.env.NODE_ENV !== "production";
 export const OPT_OUT_OPERATOR_SLUGS = new Set([
   "red-jeep",
   "desert-adventures",
+  "konahonudivers",
 ]);
 
 export const recordBlockedFareharborEmbed = (operatorSlug: string) => {
