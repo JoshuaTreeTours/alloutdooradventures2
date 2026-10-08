@@ -192,6 +192,28 @@ export default function CityTourBookingRoute({
     ? undefined
     : ensureFareharborParams(embedSourceUrl);
   const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
+  const isMantaLightframeTest =
+    isFareharbor &&
+    state.slug === "hawaii" &&
+    fallbackBookingUrl.includes("/items/13713/");
+
+  useEffect(() => {
+    if (!isMantaLightframeTest || typeof document === "undefined") {
+      return;
+    }
+
+    const scriptId = "fareharbor-lightframe-api";
+    if (document.getElementById(scriptId)) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.type = "text/javascript";
+    script.src = "https://fareharbor.com/embeds/api/v1/?autolightframe=yes";
+    script.async = true;
+    document.body.appendChild(script);
+  }, [isMantaLightframeTest]);
 
   useEffect(() => {
     if (!isBlockedFareharborEmbed || !fareharborOperatorSlug) {
@@ -417,12 +439,22 @@ export default function CityTourBookingRoute({
                 booking window. Your reservation will open directly with the
                 operator while keeping All Outdoor Adventures attribution intact.
               </p>
-              <BookingCtaLink
-                className="mt-5 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-                href={fallbackBookingUrl}
-              >
-                CHECK AVAILABILITY
-              </BookingCtaLink>
+              {isMantaLightframeTest ? (
+                <a
+                  className="mt-5 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                  href={fallbackBookingUrl}
+                  rel="nofollow"
+                >
+                  CHECK AVAILABILITY
+                </a>
+              ) : (
+                <BookingCtaLink
+                  className="mt-5 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                  href={fallbackBookingUrl}
+                >
+                  CHECK AVAILABILITY
+                </BookingCtaLink>
+              )}
               <p className="mt-4 text-xs text-[#405040]">{disclosureText}</p>
               <Link href={tourDetailHref}>
                 <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
