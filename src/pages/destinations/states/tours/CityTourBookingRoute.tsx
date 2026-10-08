@@ -403,17 +403,28 @@ export default function CityTourBookingRoute({
 
         <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
           {isBlockedFareharborEmbed ? (
-            <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-              <h2 className="text-xl font-semibold text-[#1f2a1f]">
-                Unavailable
-              </h2>
-              <p className="mt-3 text-sm text-[#405040]">
-                This operator is temporarily unavailable through our embedded
-                booking flow.
+            <div className="rounded-2xl border border-[#2f4a2f]/15 bg-white p-6 shadow-sm md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#6b7b68]">
+                Secure booking
               </p>
-              <Link href={toursHref}>
+              <h2 className="mt-2 text-2xl font-semibold text-[#1f2a1f]">
+                Check dates and reserve with the operator
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-[#405040]">
+                This operator’s FareHarbor checkout is best viewed in its own
+                booking window. Your reservation will open directly with the
+                operator while keeping All Outdoor Adventures attribution intact.
+              </p>
+              <BookingCtaLink
+                className="mt-5 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                href={fallbackBookingUrl}
+              >
+                CHECK AVAILABILITY
+              </BookingCtaLink>
+              <p className="mt-4 text-xs text-[#405040]">{disclosureText}</p>
+              <Link href={tourDetailHref}>
                 <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
-                  Browse city tours
+                  Back to tour details
                 </a>
               </Link>
             </div>
@@ -438,7 +449,8 @@ export default function CityTourBookingRoute({
             </div>
           ) : null}
 
-          <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
+          {!isBlockedFareharborEmbed ? (
+            <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
             {redirectMode ? (
               <p className="mb-3 rounded-xl border border-[#2f4a2f]/20 bg-[#f8f4ed] p-3 text-xs text-[#405040]">
                 The booking embed did not load, so we switched to redirect mode
@@ -468,6 +480,7 @@ export default function CityTourBookingRoute({
 
             {/* Booking flow audit UI removed */}
           </div>
+          ) : null}
         </section>
 
         {relatedTours.length > 0 ? (
