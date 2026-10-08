@@ -103,9 +103,14 @@ export default function Engine2TourBookingPage({
   const seo = useMemo(() => buildEngine2Seo(tour), [tour]);
   const bookingArgs = tour.booking.fareharbor;
   const fareharborOperatorSlug = bookingArgs?.shortname ?? null;
-  const isBlockedFareharborEmbed =
+  const isHawaiiFareharborTour =
     !!fareharborOperatorSlug &&
-    OPT_OUT_OPERATOR_SLUGS.has(fareharborOperatorSlug);
+    (tour.sourceProvinceSlug === "hawaii" ||
+      tour.seo.canonicalPath.includes("/destinations/hawaii/"));
+  const isBlockedFareharborEmbed =
+    isHawaiiFareharborTour ||
+    (!!fareharborOperatorSlug &&
+      OPT_OUT_OPERATOR_SLUGS.has(fareharborOperatorSlug));
 
   const generatedCalendarUrl = bookingArgs
     ? buildFareHarborUrl({
