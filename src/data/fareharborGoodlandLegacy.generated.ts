@@ -67,9 +67,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "4 Hour Shelling Tour is a four-hour guided outing with Florida Adventures and Rentals in Goodland. Shell Bags, Bottled Water, and Cooler with ice for guest use are included. The outing reaches Marco Island.",
-      "Groups are capped at 17. A full refund is available with at least 48 hours' notice."
-    ],
+      "Spend four hours exploring the waters around Goodland and Marco Island on a shelling-focused boat tour. The longer format gives the group time to travel beyond the marina and look for productive shoreline stops.",
+      "Marco Island and the surrounding Ten Thousand Islands region are shaped by mangrove shorelines, tidal flats and barrier islands where shells collect with changing tides. The precise landing point depends on water and beach conditions, so each outing can unfold differently.",
+      "Shell bags, bottled water and a cooler with ice are listed as included. The operator caps the group at 17 and departs from Goodland Boat Park. Bring sun protection and footwear suitable for stepping onto a beach or shallow shoreline."
+],
     "schemaDescription": "Four-hour shelling tour that reaches Marco Island. Shell bags, bottled water, and a cooler with ice are included.",
     "highlights": [
       "four-hour guided outing in Goodland",
@@ -80,7 +81,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/x6ITTQ3a7iwPtm4WrQ9J"
     ],
     "productImage": "https://cdn.filestackcontent.com/9UOMjxEsRJOItMfD0TBs",
-    "wordCount": 51,
+    "wordCount": 115,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "Goodland Boat Park | 750 Palm Point Dr Goodland, FL 34140",
@@ -113,9 +114,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Shell Bags, Bottled Water, and Cooler with ice for guest use are included.",
-      "A full refund is available with at least 48 hours' notice."
-    ],
+      "Combine wildlife sightseeing with time for shelling on a two-hour boat excursion from Goodland. The trip heads into the coastal waters around Marco Island and the Ten Thousand Islands, where mangrove shorelines give way to sandy island edges.",
+      "The guide can watch for dolphins, manatees and coastal birds while traveling between shelling areas, although wildlife encounters cannot be guaranteed. Tides and weather influence which shoreline is most useful for shelling, so the precise stop may vary from one departure to another.",
+      "Shell bags, bottled water and a cooler with ice are listed as included. The meeting point is Goodland Boat Park on Palm Point Drive. Bring sun protection and footwear suitable for wet sand, and leave live shells and protected wildlife undisturbed."
+],
     "schemaDescription": "Two-hour wildlife sightseeing and shelling tour, with shell bags, bottled water, and a cooler with ice.",
     "highlights": [
       "two-hour guided outing in Goodland",
@@ -125,7 +127,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/UwKHeLZ1TFODH7tvBlIP"
     ],
     "productImage": "https://cdn.filestackcontent.com/a7VDgVWLT2Ss2ueq63rL",
-    "wordCount": 38,
+    "wordCount": 122,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -168,9 +170,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Dolphin Tours is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Water Bottles and Cooler with ice for guest use are included.",
-      "A full refund is available with at least 48 hours' notice."
-    ],
+      "Look for dolphins in the coastal waters around Goodland on a two-hour guided boat tour. The community sits beside the Ten Thousand Islands, giving the trip access to mangrove channels and open stretches of water used by local marine life.",
+      "Bottlenose dolphins are wild animals that move throughout this environment, so sightings and behavior cannot be guaranteed. Even between encounters, the ride offers a close view of southwest Florida's mangrove shoreline and the transition between Goodland, Marco Island and the surrounding islands.",
+      "Water bottles and a cooler with ice are listed as included. Tours depart from Goodland Boat Park on Palm Point Drive. Bring sun protection and be ready for changing conditions on the water; the captain determines the route according to conditions and recent wildlife activity."
+],
     "schemaDescription": "Two-hour dolphin tour. Water bottles and a cooler with ice are included.",
     "highlights": [
       "two-hour guided outing in Goodland",
@@ -180,7 +183,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/nz8njh4bQmaXt2KF1S3b"
     ],
     "productImage": "https://cdn.filestackcontent.com/vF5Rh2GuTPqsqrDFoWIV",
-    "wordCount": 37,
+    "wordCount": 127,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -294,9 +297,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Shell Bags, Bottled Water, and Cooler with ice for guest use are included.",
-      "A full refund is available with at least 48 hours' notice."
-    ],
+      "Explore the Goodland and Marco Island waterways on a private two-hour trip combining wildlife sightseeing with shelling. A private boat gives your party a more personal way to experience the mangrove coast and nearby island shorelines.",
+      "The captain can watch for dolphins, manatees and coastal birds while traveling through the area, but wildlife sightings are never guaranteed. Shelling locations also vary with tides and beach conditions. That flexibility is part of exploring the Ten Thousand Islands rather than following a rigid sequence of stops.",
+      "Shell bags, bottled water and a cooler with ice are listed as included. Departure is from Goodland Boat Park on Palm Point Drive. Confirm your priorities with the operator before departure so the limited two-hour window is used effectively."
+],
     "schemaDescription": "Two-hour private wildlife sightseeing and shelling tour, with shell bags, bottled water, and a cooler with ice.",
     "highlights": [
       "two-hour guided outing in Goodland",
@@ -306,7 +310,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/fyw32p6aQpOOHHxqlbEo"
     ],
     "productImage": "https://cdn.filestackcontent.com/vc3AxPPTY2f3KKUaCoKd",
-    "wordCount": 38,
+    "wordCount": 123,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -349,9 +353,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Indulge in the ultimate luxury with the private boat tours, where every aspect of the experience is tailored to the desires, designed for fun with friends or special celebrations. After that, cruise the waterways, spy on homes, and jam out to the favorite tunes while soaking up the sun.",
-      "After that, with options to look at hidden islands, sip cool drinks, and dance toward the beat, the private tours promise exhilarating ride that's totally tailored to the crew's vibe. That is customizable for great day on the water for guests and the party. Popular activities include stopping on an isolated island, seeing the mansions from the water, finding dolphins, and cruising around Marco Island."
-    ],
+      "Charter a private boat for two hours from Goodland and shape the outing around the interests of your group. The compact trip can focus on cruising, waterfront sightseeing or an island stop when time and conditions allow.",
+      "The surrounding waters connect Goodland with Marco Island and the Ten Thousand Islands, offering views that range from mangrove shorelines to waterfront homes. The operator describes customizable activities rather than a fixed itinerary, so not every possible stop can fit into a two-hour charter.",
+      "Shell bags, bottled water and a cooler with ice are listed as included. Departure is from Goodland Boat Park. Discuss the preferred pace and priorities before leaving the dock, particularly if an island landing or specific sightseeing area matters to your group."
+],
     "schemaDescription": "Two-hour private boat tour that can stop at an isolated island, pass waterfront houses, look for dolphins, and cruise around Marco Island.",
     "highlights": [
       "two-hour harbor outing in Goodland",
@@ -362,7 +367,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/GRYbjyfgTHG5OUXmYJUQ"
     ],
     "productImage": "https://cdn.filestackcontent.com/COMQwkvRkaN3KKjzuhiK",
-    "wordCount": 114,
+    "wordCount": 123,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -405,9 +410,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Indulge in the ultimate luxury with the private boat tours, where every aspect of the experience is tailored to the desires, designed for fun with friends or special celebrations. After that, cruise the waterways, spy on homes, and jam out to the favorite tunes while soaking up the sun.",
-      "After that, with options to look at hidden islands, sip cool drinks, and dance toward the beat, the private tours promise exhilarating ride that's totally tailored to the crew's vibe. That is customizable for great day on the water for guests and the party. Popular activities include stopping on an isolated island, seeing the mansions from the water, finding dolphins, and cruising around Marco Island."
-    ],
+      "Spend three private hours on the waters around Goodland with an itinerary shaped around your group. The extra hour beyond the shorter charter creates more room for cruising, sightseeing and a possible island stop without turning the experience into a full-day excursion.",
+      "Goodland borders the Ten Thousand Islands and lies just south of Marco Island, placing mangrove channels, sandy shorelines and developed waterfronts within reach. The operator presents the charter as customizable, so the captain can discuss which available activities best fit conditions and your interests.",
+      "Shell bags, bottled water and a cooler with ice are listed as included. The boat departs from Goodland Boat Park. Confirm the preferred route before departure; weather, tides and travel time determine which stops are practical within three hours."
+],
     "schemaDescription": "Three-hour private boat tour that can stop at an isolated island, pass waterfront houses, look for dolphins, and cruise around Marco Island.",
     "highlights": [
       "three-hour harbor outing in Goodland",
@@ -418,7 +424,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/yeWsQ9rQ7OiBgH447561"
     ],
     "productImage": "https://cdn.filestackcontent.com/ltOok1RiT8S4QaUMmV3Q",
-    "wordCount": 114,
+    "wordCount": 125,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -461,8 +467,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This four-hour private boat tour can visit Keywaydin Island or Marco Island. The stops are chosen before departure."
-    ],
+      "Set aside four hours for a private boat charter from Goodland, with enough time to venture beyond the immediate harbor and spend part of the outing at an island destination. The operator specifically lists Keewaydin Island or Marco Island as possible choices.",
+      "Keewaydin offers a largely undeveloped barrier-island setting, while Marco Island combines beaches with a developed waterfront. These are alternatives rather than guaranteed stops on the same trip, and the captain selects a practical plan with the group before departure based on conditions.",
+      "Shell bags and other standard boat-tour provisions are listed by the operator. Departure is from Goodland Boat Park on Palm Point Drive. Discuss your preferred destination in advance and bring appropriate sun protection and footwear if the plan includes going ashore."
+],
     "schemaDescription": "Four-hour private boat tour that can visit Keywaydin Island or Marco Island, with stops chosen before departure.",
     "highlights": [
       "four-hour harbor outing in Goodland",
@@ -472,7 +480,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YJLDIdbbQx69gq67jNw5"
     ],
     "productImage": "https://cdn.filestackcontent.com/3zgLmjjPSWqzoQQ0j7GM",
-    "wordCount": 19,
+    "wordCount": 125,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -515,9 +523,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Private Dolphin Tours is a two-hour guided outing with Florida Adventures and Rentals in Goodland. Water Bottles and Cooler with ice for guest use are included.",
-      "A full refund is available with at least 48 hours' notice."
-    ],
+      "Take a private two-hour dolphin-watching cruise from Goodland Boat Park into the coastal waters around Marco Island and the Ten Thousand Islands. Keeping the boat to your own party makes this a more personal alternative to a larger shared wildlife cruise.",
+      "The captain searches areas used by bottlenose dolphins while traveling through mangrove-lined waterways and more open water. Dolphins are wild and constantly moving, so no sighting can be promised. Coastal birds and the surrounding estuary add interest even when marine mammals are farther away.",
+      "Water bottles and a cooler with ice are listed as included. Departure is from Palm Point Drive in Goodland. Bring sun protection and discuss any mobility or boarding considerations with the operator before arrival."
+],
     "schemaDescription": "Two-hour private dolphin tour. Water bottles and a cooler with ice are included.",
     "highlights": [
       "two-hour guided outing in Goodland",
@@ -527,7 +536,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/4tU5lTaTuSq5LM23MWEw"
     ],
     "productImage": "https://cdn.filestackcontent.com/KDRotEB8RFSRppMNjQMa",
-    "wordCount": 38,
+    "wordCount": 119,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -570,8 +579,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a harbor outing with Florida Island Tours. The group starts at Ten Thousand Islands National Wildlife Refuge. The group passes Ten Thousand Islands National Wildlife Refuge and Rookery Bay National Estuarine Research Reserve."
-    ],
+      "Explore the waterways around Goodland on an eco boat tour combining wildlife watching, birding and shelling. The route enters the Ten Thousand Islands, where mangrove islands and tidal channels create one of southwest Florida's distinctive coastal landscapes.",
+      "The operator highlights both Ten Thousand Islands National Wildlife Refuge and Rookery Bay National Estuarine Research Reserve. Dolphins and coastal birds may be encountered along the way, while shelling adds time ashore when conditions allow. Wildlife remains unpredictable and sightings are never guaranteed.",
+      "Departure information covers Goodland, Marco Island and the Ten Thousand Islands area. Because tides and weather influence the route, confirm the day's meeting point, duration and planned stops with Florida Island Tours before departure."
+],
     "schemaDescription": "Eco boat tour for dolphins, shelling, and birding, starting at the Ten Thousand Islands refuge and passing Rookery Bay.",
     "highlights": [
       "Ten Thousand Islands National Wildlife Refuge and Rookery Bay National Estuarine Research Reserve"
@@ -580,7 +591,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/Bv8zJ4AnTwWTs1JVVvrB"
     ],
     "productImage": "https://cdn.filestackcontent.com/BwbJMCURqanzYzL5swi7",
-    "wordCount": 35,
+    "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Goodland • Marco Island • 10,000 Islands",
@@ -624,9 +635,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Sand Bar Shelling Tour is a guided outing lasting 2 with Florida Island Tours in Goodland. Cooler with ice, Shelling bags, and Parking are included. The outing reaches Kice Island.",
-      "Groups are capped at 6."
-    ],
+      "Head out from Goodland on a two-hour small-group shelling trip with Florida Island Tours. With a maximum of six guests, the excursion is designed around reaching coastal sand and shelling areas by boat rather than sightseeing from shore.",
+      "Kice Island is the named destination, part of the barrier-island landscape south of Marco Island. Tides continually reshape these beaches and expose different shells, so what is found varies from trip to trip. The ride itself also provides views of the mangrove-lined Ten Thousand Islands region.",
+      "A cooler with ice, shelling bags and parking are listed as included. The meeting point is on Goodland Drive. Bring sun protection and shoes appropriate for wet sand, and follow local rules regarding live shells and wildlife."
+],
     "schemaDescription": "Two-hour sandbar shelling tour that reaches Kice Island. A cooler with ice, shelling bags, and parking are included.",
     "highlights": [
       "2 guided outing",
@@ -637,7 +649,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/OyRN4Wo5RRwv35fpUFsL"
     ],
     "productImage": "https://cdn.filestackcontent.com/tP7p0yyQJKDdYuLy0UUy",
-    "wordCount": 35,
+    "wordCount": 121,
     "durationLabel": "2",
     "durationIso": null,
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",
@@ -671,8 +683,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Barrier Island Shelling Tour is a guided outing with Florida Island Tours. The outing starts at Kice Island. The group then visits Shell Island and Marco Island."
-    ],
+      "Travel by boat from the Goodland area to the barrier islands south of Marco Island on a shelling-focused excursion. The operator lists Kice Island, Shell Island and Marco Island as the principal places associated with the route.",
+      "This stretch of southwest Florida is a changing environment of mangroves, tidal flats and sandy islands. Shells collect differently with each tide, and landing locations can depend on wind and water levels. The experience is therefore less about following a fixed sightseeing circuit and more about exploring suitable shoreline with the guide.",
+      "Florida Island Tours operates the outing in the Goodland, Marco Island and Ten Thousand Islands area. Confirm the current duration, meeting location and planned island stops before travel, since the source listing does not specify a fixed schedule."
+],
     "schemaDescription": "Barrier island shelling tour starting at Kice Island and continuing to Shell Island and Marco Island.",
     "highlights": [
       "Kice Island and Shell Island"
@@ -681,7 +695,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/O0vj9fx2RaHe2hhGKews"
     ],
     "productImage": "https://cdn.filestackcontent.com/YEADPrOxQCmtk7ou7tCd",
-    "wordCount": 27,
+    "wordCount": 127,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Goodland • Marco Island • 10,000 Islands",
@@ -725,9 +739,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a guided outing with Florida Island Tours in Goodland. Cooler with Ice, Shelling Bags, and Parking are included.",
-      "Groups are capped at 6."
-    ],
+      "Make a family day of the waters around Goodland on a four-hour private-style outing that includes time for fishing along with exploring the coastal environment. The extended window leaves more flexibility than a short harbor cruise.",
+      "Goodland sits at the edge of the Ten Thousand Islands, where mangrove channels, shallow bays and island shorelines create varied places to spend time on the water. Fishing conditions and productive areas change with tide, weather and season, so the guide determines where to concentrate the effort.",
+      "Florida Island Tours caps the group at six. A cooler with ice, shelling bags and parking are listed as included. Confirm fishing equipment, licensing arrangements and the day's exact activity plan before departure from Goodland Drive."
+],
     "schemaDescription": "Four-hour family fishing day for up to six people. A cooler with ice, shelling bags, and parking are included.",
     "highlights": [
       "4hrs guided outing",
@@ -737,7 +752,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/dEK6FM3ZRbSeXhfotP36"
     ],
     "productImage": "https://cdn.filestackcontent.com/WDrKet5SA8fLShqqRncQ",
-    "wordCount": 25,
+    "wordCount": 119,
     "durationLabel": "4hrs",
     "durationIso": null,
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",
@@ -766,9 +781,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "2hr Private Boat Tour is a harbor outing lasting 2hrs with Florida Island Tours on Goodland Harbor.",
-      "Cooler with Ice, Shelling Bags, and Parking are included."
-    ],
+      "Enjoy a private two-hour boat outing from Goodland Harbor with Florida Island Tours. This compact charter is suited to travelers who want time on the water without committing most of the day, while still seeing the coastal setting around Goodland.",
+      "The harbor opens toward the Ten Thousand Islands, a maze of mangrove shorelines and shallow waterways along southwest Florida. With a private booking, the emphasis can be discussed with the operator before departure, although the short duration naturally limits how far the boat can travel.",
+      "A cooler with ice, shelling bags and parking are listed as included. The meeting point is on Goodland Drive. Confirm the day's route and whether you want sightseeing, wildlife watching or another available activity to be the priority."
+],
     "schemaDescription": "Two-hour private boat tour. A cooler with ice, shelling bags, and parking are included.",
     "highlights": [
       "2hrs harbor outing"
@@ -777,7 +793,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/zgfsrZ4QTzuqcgjgVu8E"
     ],
     "productImage": "https://cdn.filestackcontent.com/mGQcc7TyO9QTcTw0nWOw",
-    "wordCount": 26,
+    "wordCount": 123,
     "durationLabel": "2hrs",
     "durationIso": null,
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",
@@ -811,9 +827,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Florida Island Tours runs this two-hour sightseeing cruise, which leaves Goodland, crosses the mangrove estuary of the Ten Thousand Islands National Wildlife Refuge, reaches Marco Island, and returns. The guide is a Florida-certified master naturalist who also belongs to the historical society on Marco Island. Talk on the boat covers the Calusa, Cape Romano, how the island was developed, waterfront culture, and wildlife. Dolphins, manatees, and birds are animals guests may see.",
-      "The route also takes in Goodland's waterfront bars and restaurants, then houses along the Marco Estates. A cooler with ice is included, and so is parking. The group cap is six."
-    ],
+      "Discover Marco Island from the water on a two-hour small-group cruise departing Goodland. The route crosses the mangrove estuary of the Ten Thousand Islands National Wildlife Refuge before reaching the developed waterfront of Marco Island.",
+      "A Florida-certified master naturalist guides the trip, with commentary ranging from the Calusa and Cape Romano to the island's development, waterfront culture and wildlife. Dolphins, manatees and coastal birds may appear, but sightings are naturally unpredictable. The route also contrasts Goodland's waterfront with homes along Marco Estates.",
+      "The group is limited to six, and a cooler with ice and parking are included. Departure is from Goodland Drive. This is a sightseeing and natural-history cruise rather than a shelling stop, making the narration and changing shoreline the focus."
+],
     "schemaDescription": "Two-hour cruise from Goodland through the Ten Thousand Islands refuge to Marco Island and back, led by a Florida-certified master naturalist.",
     "highlights": [
       "two-hour guided outing in Goodland",
@@ -824,7 +841,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/BTdUqlRTKXqzttPAN7Xw"
     ],
     "productImage": "https://cdn.filestackcontent.com/lYw27uHtQ86Ixj97LJHh",
-    "wordCount": 105,
+    "wordCount": 122,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",
@@ -926,8 +943,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private boat tour runs about eight hours, with views of Marco Island and the Ten Thousand Islands."
-    ],
+      "Spend a full day exploring southwest Florida by private boat on an approximately eight-hour charter from Goodland. The long format opens the possibility of combining sightseeing around Marco Island with beach hopping and time in the Ten Thousand Islands.",
+      "The region changes from developed waterfront to mangrove wilderness, shallow bays and sandy island edges. With a full day available, the captain can build a route around conditions and the group's priorities rather than rushing between nearby stops. Weather and tides still determine what is practical.",
+      "Free parking is listed among the operator's highlights, with departure from Goodland Drive. Confirm the day's proposed route, food and drink arrangements, and what equipment is provided before setting out. Any island or wildlife encounter remains dependent on current conditions."
+],
     "schemaDescription": "Private boat tour of about eight hours with views of Marco Island and the Ten Thousand Islands.",
     "highlights": [
       "Marco Island sightseeing and Beach hopping",
@@ -937,7 +956,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/UDgRqXXnQv6L1n5Cqstp"
     ],
     "productImage": "https://cdn.filestackcontent.com/8qp1QRgTkyL0cRK8WBLo",
-    "wordCount": 18,
+    "wordCount": 125,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "220 Goodland Dr Goodland FL 34140",
