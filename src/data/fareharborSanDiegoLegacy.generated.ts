@@ -1872,9 +1872,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out on the water to look for whales. Animals the trip watches for include humpback whales, fin whales, minke whales, and Bryde's whales. Orcas are among the rarer animals the trip also watches for. A restroom is available on board during the trip.",
-      "Capacity on the vessel is 6 passengers. Departure for these trips is offshore from San Diego. These trips run in the calmer months near the end of the year. The longer window on the water is there to look for whales."
-    ],
+      "Head offshore from San Diego on a five-hour whale-watching excursion limited to six passengers. The small group size and extended time on the water make this an ocean-focused experience rather than a quick harbor loop, with the crew searching for marine mammals in the waters off Southern California.",
+      "Species the operator watches for include humpback, fin, minke and Bryde's whales, while orcas are a rarer possibility. These are wild animals moving through a large marine environment, so no species or sighting can be promised. The longer itinerary allows time to scan the horizon and follow conditions as they develop.",
+      "The vessel has a restroom aboard and departs from the Quivira Road area of San Diego. Dress for cooler conditions offshore than on land and confirm the operator's weather policy before departure. The emphasis is on patient observation and the chance to encounter whales in their natural habitat."
+],
     "schemaDescription": "Five-hour whale watch for up to six passengers, offshore from San Diego.",
     "highlights": [
       "5-hour guided outing in San Diego",
@@ -1884,7 +1885,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/iTJaNlWKRbeHO6ZL4ecR"
     ],
     "productImage": "https://cdn.filestackcontent.com/pLnZThORRtqGbep1HrjB",
-    "wordCount": 86,
+    "wordCount": 147,
     "durationLabel": "5 Hours",
     "durationIso": "PT5H",
     "meetingLocation": "1617 Quivira Rd San Diego, CA 92109",
@@ -2138,8 +2139,10 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests sail at sunset aboard a 40-foot sailboat. The water is usually calmer once the afternoon wind drops. Beer, soft drinks, and snacks are included on the sail."
-    ],
+      "Watch the light change over San Diego's waterfront during a three-hour sunset sail aboard a 40-foot sailboat. Departing from Shelter Island, this small-group outing accommodates a maximum of six guests, leaving room to enjoy the harbor scenery without the atmosphere of a crowded sightseeing vessel.",
+      "As the boat moves through the bay, the shoreline and moored boats become part of the view. Sailing conditions change with the wind, and evenings may feel quieter as afternoon breezes ease, although calm water is never guaranteed. The sunset is the centerpiece, with time to enjoy the changing colors over the water.",
+      "The operator lists beer, soft drinks and snacks among the inclusions. Departure is from Shelter Island Drive in San Diego; check the reservation for precise boarding instructions. Bring a layer for the cooler air on the water, even if the afternoon has been warm."
+],
     "schemaDescription": "Guests sail at sunset aboard a 40-foot sailboat.",
     "highlights": [
       "three-hour harbor outing in San Diego",
@@ -2149,7 +2152,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/CepfrWgRRpWeVgVNkAk8"
     ],
     "productImage": "https://cdn.filestackcontent.com/RSHDkrbcS2rhQneIoDKA",
-    "wordCount": 29,
+    "wordCount": 142,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "2720 Shelter Island Drive San Diego, CA 92106",
