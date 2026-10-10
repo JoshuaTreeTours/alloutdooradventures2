@@ -11,8 +11,10 @@ export const fareHarborEvergladesCityLegacyProducts: FareHarborProofProduct[] = 
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The boat runs about an hour and 45 minutes through mangrove wilderness in Everglades National Park."
-    ],
+      "Explore the mangrove wilderness of Everglades National Park by boat on an outing lasting approximately one hour and 45 minutes. Departing from Everglades City, the tour moves into a coastal landscape where saltwater channels weave between dense mangrove islands.",
+      "Unlike a broad open-water cruise, this experience focuses on the sheltered waterways and the distinctive environment of the western Everglades. Mangrove roots help protect the shoreline and create habitat for fish, birds and other wildlife. Look closely at the vegetation and the changing shapes of the channels as the boat travels through the park.",
+      "The operator lists the Everglades landscape as the main highlight. Wildlife sightings and the precise route depend on conditions, so no particular encounter should be assumed. Departure information places the meeting point on Copeland Avenue South in Everglades City; check your booking for the current arrival instructions."
+],
     "schemaDescription": "Boat tour of about an hour and 45 minutes through mangrove wilderness in Everglades National Park.",
     "highlights": [
       "1.75hrs harbor outing",
@@ -23,7 +25,7 @@ export const fareHarborEvergladesCityLegacyProducts: FareHarborProofProduct[] = 
       "https://cdn.filestackcontent.com/DZYWtT4Sea5FlEA9UX1a"
     ],
     "productImage": "https://cdn.filestackcontent.com/ysRhxspAT7mn7U6LFcbm",
-    "wordCount": 16,
+    "wordCount": 140,
     "durationLabel": "1.75hrs",
     "durationIso": null,
     "meetingLocation": "905 Copeland Ave S Everglades City, FL 34139",
