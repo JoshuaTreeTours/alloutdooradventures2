@@ -1147,7 +1147,9 @@ export const fareHarborKailuaKonaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The commentary takes up Hawaii Tropical Botanical Garden and Waipio Valley Lookout. That same account stays with Akaka Falls and Hamakua Coast. Rainbow Falls and Parker Ranch are part of the same story. The route keeps Pacific Ocean and Onomea Bay in view."
+      "Discover the varied landscapes of Hawaiʻi Island on a waterfall-focused journey from the Kona side toward the lush Hāmākua Coast. The itinerary takes in Parker Ranch country and Waipiʻo Valley Lookout, where steep green cliffs rise above a black-sand shoreline and the Pacific Ocean.",
+      "Continue toward ʻAkaka Falls and the Hawaiʻi Tropical Botanical Garden at Onomea Bay. Rainforest vegetation, dramatic coastal views and cascading water reveal the island’s wetter windward environment, a striking contrast with Kona’s drier volcanic terrain.",
+      "Rainbow Falls is another featured stop, while the route’s wider volcanic setting includes the slopes of Mauna Kea and Mauna Loa. Exact stops and access can vary with weather and local conditions, so confirm the current itinerary with the operator before departure."
     ],
     "schemaDescription": "A 10-hour guided outing with Wasabi Tours Hawaii. The outing passes Big Island.",
     "highlights": [
