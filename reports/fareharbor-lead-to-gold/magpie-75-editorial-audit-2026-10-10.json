@@ -1,0 +1,609 @@
+{
+  "scope": "75 FareHarbor item IDs from Winter_Tours_Magpie_Cohort.xlsx",
+  "auditDate": "2026-10-10",
+  "note": "Word-count screening only. >=100 words does not establish human-quality prose or verified itinerary.",
+  "total": 75,
+  "below100": 43,
+  "records": [
+    {
+      "itemId": "537061",
+      "city": "EvergladesCity",
+      "title": "Mangrove Wilderness Boat Tour",
+      "words": 16,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "128312",
+      "city": "Goodland",
+      "title": "Sunset Eco-Tour",
+      "words": 43,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "154092",
+      "city": "Goodland",
+      "title": "4 Hour Shelling Tour",
+      "words": 50,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "239475",
+      "city": "Goodland",
+      "title": "Island Paradise: Dolphin, Shelling, Birding Eco Boat Tour",
+      "words": 35,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "239489",
+      "city": "Goodland",
+      "title": "Sand Bar Shelling Tour",
+      "words": 35,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "239507",
+      "city": "Goodland",
+      "title": "Barrier Island Shelling Tour",
+      "words": 27,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "239612",
+      "city": "Goodland",
+      "title": "Family Fun Day with Fishing (4hrs)",
+      "words": 25,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "352216",
+      "city": "Goodland",
+      "title": "2hr Private Boat Tour",
+      "words": 26,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "417714",
+      "city": "Goodland",
+      "title": "Best of Marco Island Tour",
+      "words": 103,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "417843",
+      "city": "Goodland",
+      "title": "Half-Day Super Shelling Tour",
+      "words": 27,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "44195",
+      "city": "Goodland",
+      "title": "Marco Island Wildlife Sightseeing and Shelling Tour",
+      "words": 37,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "44212",
+      "city": "Goodland",
+      "title": "Dolphin Tours",
+      "words": 36,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "44214",
+      "city": "Goodland",
+      "title": "3 Hour Eco Tour",
+      "words": 76,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "49231",
+      "city": "Goodland",
+      "title": "Private Wildlife Sightseeing and Shelling Tour",
+      "words": 37,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "525862",
+      "city": "Goodland",
+      "title": "2 Hour Private Tour",
+      "words": 114,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "525864",
+      "city": "Goodland",
+      "title": "3 Hour Private Tour",
+      "words": 114,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "525865",
+      "city": "Goodland",
+      "title": "4 Hour Private Tour",
+      "words": 18,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "597140",
+      "city": "Goodland",
+      "title": "8hr Private Boat Tour",
+      "words": 18,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "76676",
+      "city": "Goodland",
+      "title": "Private Dolphin Tours",
+      "words": 37,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "141477",
+      "city": "Honolulu",
+      "title": "Sights & Bites Circle Island Tour",
+      "words": 52,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "201636",
+      "city": "Honolulu",
+      "title": "Ocean and You",
+      "words": 103,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "20498",
+      "city": "Honolulu",
+      "title": "Diamond Head Bike to Hike",
+      "words": 94,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "20506",
+      "city": "Honolulu",
+      "title": "Hawaiian Foodie Bike Tour",
+      "words": 42,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "334772",
+      "city": "Honolulu",
+      "title": "Whales and You",
+      "words": 105,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "368817",
+      "city": "Honolulu",
+      "title": "Turtles and You",
+      "words": 62,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "58782",
+      "city": "Honolulu",
+      "title": "Manoa Falls Electric Bike to Hike",
+      "words": 57,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "9620",
+      "city": "Honolulu",
+      "title": "Pearl Harbor Remembered A - from Waikiki",
+      "words": 55,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "402194",
+      "city": "JoshuaTree",
+      "title": "Sunset Trail Ride",
+      "words": 36,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "459544",
+      "city": "JoshuaTree",
+      "title": "Sightseeing Tour",
+      "words": 97,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "459589",
+      "city": "JoshuaTree",
+      "title": "Private Morning Hike",
+      "words": 116,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "459590",
+      "city": "JoshuaTree",
+      "title": "Private Sunset Hike",
+      "words": 111,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "459591",
+      "city": "JoshuaTree",
+      "title": "Hike & Climb",
+      "words": 127,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "598562",
+      "city": "JoshuaTree",
+      "title": "Morning Trail Ride",
+      "words": 23,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "104492",
+      "city": "KeyWest",
+      "title": "Cowgirl 45' Premium Offshore Fishing Charter",
+      "words": 125,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "26077",
+      "city": "KeyWest",
+      "title": "Florida Keys Sunset Sail",
+      "words": 33,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "417200",
+      "city": "KeyWest",
+      "title": "Half Day Charter 4hrs Boston Whaler",
+      "words": 101,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "417207",
+      "city": "KeyWest",
+      "title": "3/4 Day 6hrs Boston Whaler",
+      "words": 99,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "515385",
+      "city": "KeyWest",
+      "title": "5Hour Multiple Sandbar Hangout Boston Whaler",
+      "words": 47,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "624612",
+      "city": "KeyWest",
+      "title": "Key West Southernmost Sweet Treats Tour",
+      "words": 108,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "626355",
+      "city": "KeyWest",
+      "title": "Tailored Sandbar Experience",
+      "words": 30,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "628106",
+      "city": "KeyWest",
+      "title": "SIX FINS KEY WEST: 2-HOUR FLAGSHIP GUIDED JET SKI TOUR",
+      "words": 136,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "639170",
+      "city": "KeyWest",
+      "title": "Sunset Atlantia",
+      "words": 101,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "639172",
+      "city": "KeyWest",
+      "title": "Sunset \\\"Somewhere\\\"",
+      "words": 101,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "371933",
+      "city": "Miami",
+      "title": "Miami Downtown Private Airplane Tour",
+      "words": 34,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "469657",
+      "city": "Miami",
+      "title": "SeaRay Sundecker 27’",
+      "words": 107,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "660368",
+      "city": "Miami",
+      "title": "Nightime Python Road Hunt",
+      "words": 30,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "107989",
+      "city": "MiamiBeach",
+      "title": "Everglades Airboat Adventure + FREE 2 HOURS with Rentals.",
+      "words": 105,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "117385",
+      "city": "MiamiBeach",
+      "title": "Miami City and Boat Tour Combo Little Havana Included plus FREE 2 HOURS with Rentals.",
+      "words": 118,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "266593",
+      "city": "MiamiBeach",
+      "title": "Miami Boat Tour with FREE South Beach Bicycle Rental",
+      "words": 111,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "266597",
+      "city": "MiamiBeach",
+      "title": "Miami City and Boat Tour Combo with FREE South Beach Bicycle Rental",
+      "words": 136,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "297478",
+      "city": "MiamiBeach",
+      "title": "Everglades Airboat and Millionaire's Row Cruiser Tour Combo + FREE 2 HOURS with Rentals.",
+      "words": 81,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "575606",
+      "city": "MiamiBeach",
+      "title": "Miami Beach Bikes, Bites & Views Food Tour (Adults Only)",
+      "words": 54,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "416773",
+      "city": "Naples",
+      "title": "Dolphin and Manatee Adventure Tour of Naples with Olde Florida History",
+      "words": 133,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "44245",
+      "city": "Naples",
+      "title": "Rookery Bay Kayak Tours",
+      "words": 37,
+      "paragraphs": 3,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "464256",
+      "city": "Naples",
+      "title": "Deluxe Pedal Kayak Tour | Marco Island and Naples, Florida",
+      "words": 28,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "173008",
+      "city": "SanDiego",
+      "title": "6-Passenger Capacity Premium 5 Hour Whale Watch | Targeting 10+ Species of Cetaceans",
+      "words": 86,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "503302",
+      "city": "SanDiego",
+      "title": "Ticketed Sunset Sail",
+      "words": 28,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "15779",
+      "city": "SanFrancisco",
+      "title": "Alcatraz & Streets of San Francisco Tour",
+      "words": 142,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "165139",
+      "city": "SanFrancisco",
+      "title": "Bike The Bridge & Muir Woods Tour Combo",
+      "words": 102,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "280403",
+      "city": "SanFrancisco",
+      "title": "Alcatraz & Full Day Electric Bike Rental",
+      "words": 142,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "315553",
+      "city": "SanFrancisco",
+      "title": "Alcatraz Tour Package",
+      "words": 57,
+      "paragraphs": 2,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "81664",
+      "city": "SanFrancisco",
+      "title": "Alcatraz & the Golden Gate Bridge to Sausalito Tour",
+      "words": 134,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "85853",
+      "city": "SanFrancisco",
+      "title": "San Francisco 3-in-1: Woods + Wine Tour + Sausalito",
+      "words": 104,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "527211",
+      "city": "Sarasota",
+      "title": "Destination and/or Special Occasion Cruise",
+      "words": 101,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "532140",
+      "city": "StockIsland",
+      "title": "Private Custom Activities Combo Charter",
+      "words": 110,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "532157",
+      "city": "StockIsland",
+      "title": "Private Romantic Sunset Cruise",
+      "words": 50,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "532224",
+      "city": "StockIsland",
+      "title": "Private Snorkel Adventure",
+      "words": 137,
+      "paragraphs": 3,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "532226",
+      "city": "StockIsland",
+      "title": "Private Secret Local Sandbars Escape",
+      "words": 105,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "532228",
+      "city": "StockIsland",
+      "title": "Private National Wildlife Refuge Eco Tour",
+      "words": 121,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "532233",
+      "city": "StockIsland",
+      "title": "Private Dolphin Playground Safari",
+      "words": 40,
+      "paragraphs": 3,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "541394",
+      "city": "StockIsland",
+      "title": "Private Patch Reef Fishing",
+      "words": 130,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "550475",
+      "city": "StockIsland",
+      "title": "Discover the Marquesas Keys",
+      "words": 136,
+      "paragraphs": 2,
+      "status": "EDITORIAL_REVIEW_REQUIRED"
+    },
+    {
+      "itemId": "520862",
+      "city": "StPetersburg",
+      "title": "Sunset Sail",
+      "words": 25,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "521546",
+      "city": "StPetersburg",
+      "title": "Full-Day Sail",
+      "words": 56,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    },
+    {
+      "itemId": "521595",
+      "city": "StPetersburg",
+      "title": "Dolphin Spotting Sail",
+      "words": 21,
+      "paragraphs": 1,
+      "status": "REWRITE_REQUIRED"
+    }
+  ]
+}
