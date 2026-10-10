@@ -82,10 +82,10 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Alcatraz tour on the booked date; Bike tour next day at 11:00 AM. On the selected booking date, head toward Pier 33 to board ferry to Alcatraz Island, where guests explore the former federal penitentiary with the audio tour. Guests ride energy-saving e-bike that also makes hills easy as guests explore North Beach, cruise on waterfront toward Ferry Building, and pass Oracle Park and Design District.",
-      "Pedal through the Castro District, home toward Harvey Milk Plaza, and continue through Wiggle toward legendary Haight-Ashbury area, birthplace of Summer of Love. Finish tour with ride down Polk Street, ever-evolving neighborhood layered alongside history, before returning to Fisherman's Wharf. All riders' names must have been submitted alongside booking.",
-      "Ferry ride from Pier 33 with scenic bay views. Two-day experience: Alcatraz visit + full-city guided e-bike tour. Keep the bike after the tour until closing time."
-    ],
+      "Combine two San Francisco experiences across two days: a visit to Alcatraz Island on the reserved date and a guided electric-bike tour the following day. The pairing connects one of the bay's most historic sites with a street-level ride through the city.",
+      "The Alcatraz portion begins with the ferry from Pier 33 and includes the island's audio tour. On the bike day, an e-bike helps with San Francisco's hills as the route links North Beach, the waterfront, Ferry Building area, Oracle Park, the Castro and Haight-Ashbury.",
+      "Confirm the exact Alcatraz entry time separately from the next day's 11 a.m. bike departure. The itinerary spans two days, so allow for both schedules rather than treating this as a single continuous tour."
+],
     "schemaDescription": "Alcatraz on the reserved date, then a bike tour of San Francisco streets the next morning.",
     "highlights": [
       "2 Days guided outing",
@@ -96,7 +96,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/mB1wx7JISQOHd0zy20Tm"
     ],
     "productImage": "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh",
-    "wordCount": 149,
+    "wordCount": 120,
     "durationLabel": "2 Days",
     "durationIso": null,
     "meetingLocation": "2661 Taylor Street San Francisco, CA 94133",
@@ -129,9 +129,10 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The day pairs a shuttle with time on a bike. The shuttle leaves Fisherman's Wharf for Muir Woods National Monument. Guests walk among the coastal redwoods there. About 90 minutes are set aside inside the grove. There is free time in Sausalito before the shuttle turns back. Riders can also cross the Golden Gate Bridge, with much of the riding along the waterfront and the Bay Trail.",
-      "A helmet is included, and the shop fits the bike before departure. Admission to Muir Woods is included. After the shuttle returns, the city bike portion is self-guided. The listed day is about eight hours."
-    ],
+      "Pair the redwoods of Muir Woods with a self-guided bicycle experience around San Francisco and the Golden Gate Bridge. The approximately eight-hour combination begins with shuttle transportation from Fisherman's Wharf to Marin County.",
+      "About 90 minutes are set aside to walk beneath the coast redwoods in Muir Woods National Monument, followed by free time in Sausalito. After returning, the bicycle portion can follow the waterfront and Bay Trail toward the Golden Gate Bridge. The two settings offer a sharp contrast between protected forest and the urban bay.",
+      "Muir Woods admission, a bicycle fitting and helmet are listed as included. The city riding portion is self-guided, so confirm the bike-return time and ferry or return options if you plan to continue independently beyond the bridge."
+],
     "schemaDescription": "Day pairing a shuttle to Muir Woods with a bike ride that can cross the Golden Gate Bridge.",
     "highlights": [
       "8-hour bicycle outing in San Francisco",
@@ -142,7 +143,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/Rtxf5NczTnKdLryuT0z9"
     ],
     "productImage": "https://cdn.filestackcontent.com/LtFc7vu6TcO5gyJbz6xb",
-    "wordCount": 103,
+    "wordCount": 124,
     "durationLabel": "8 Hours",
     "durationIso": "PT8H",
     "meetingLocation": "2661 Taylor Street San Francisco, CA 94133",
@@ -175,10 +176,10 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Bay City Bike splits this booking by day. Alcatraz falls on the reserved date. The electric bike is the following day, any time from 8 a.m. to 6:30 p.m. Ages start at 13, and the ride is beginner to novice.",
-      "The island trip leaves from Pier 33 with Alcatraz Cruises. It is a self-guided visit of about two and a half hours inside the cellhouse, using that audio tour. The ticket covers the ferry both ways and entry to the cellhouse. Afterward guests walk to 2661 Taylor Street for the bike. Each bike includes a handlebar bag, a rear rack, a helmet, a lock, and a map, plus a fitting.",
-      "Riders can follow the waterfront past Aquatic Park, Fort Mason, the Marina, and the Presidio. Some continue over the Golden Gate Bridge toward Vista Point or Sausalito, then take a ferry back."
-    ],
+      "Visit Alcatraz on your reserved date, then use a full-day electric-bike rental to explore San Francisco on the following day. This one- or two-day package separates the island visit from the cycling, giving each experience its own schedule.",
+      "The Alcatraz portion departs Pier 33 and includes round-trip ferry transportation, island entry and the self-guided audio experience. For the bike day, riders receive an e-bike, helmet, lock, map, handlebar bag and rear rack. Suggested routes can follow the waterfront toward Aquatic Park and the Golden Gate Bridge.",
+      "The operator lists the electric bike for ages 13 and older and describes the riding level as beginner to novice. Confirm the Alcatraz departure time and the separate bike pickup and return window at the Taylor Street shop."
+],
     "schemaDescription": "Alcatraz on the reserved date and a full-day electric-bike rental the next day.",
     "highlights": [
       "1 or 2 days bicycle outing",
@@ -189,7 +190,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YaeKVk5sRvSZb9uj9Zr6"
     ],
     "productImage": "https://cdn.filestackcontent.com/5KlLVEpKQFCR2lAnnUNA",
-    "wordCount": 146,
+    "wordCount": 124,
     "durationLabel": "1 or 2 days",
     "durationIso": null,
     "meetingLocation": "2661 Taylor Street San Francisco, CA 94133",
@@ -284,9 +285,10 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This booking puts Alcatraz on the reserved date and a guided bike ride on the next morning. The bike ride runs about two and a half to three hours. The ferry leaves Pier 33. On the island the visit is self-paced, with an audio tour and exhibits, and the round-trip ferry is included.",
-      "The bike day starts with a fitting for the bike and the helmet. The guide rides toward the Golden Gate Bridge, with photo stops, then uses the bridge bike path. From the bridge bike path, the view takes in the bay, Alcatraz, and the city skyline. The route continues through Vista Point and downhill into Sausalito for galleries, restaurants, and the waterfront. A ferry back to the city is a separate ticket. A helmet, a lock, and a map are included."
-    ],
+      "Combine Alcatraz Island with a guided bicycle ride across the Golden Gate Bridge to Sausalito over two days. Alcatraz is scheduled for the reserved date, while the cycling experience takes place the following morning.",
+      "The island visit begins with the ferry from Pier 33 and includes self-paced exploration, exhibits and an audio tour. On bike day, the guide follows the waterfront toward the Golden Gate Bridge, stopping for photographs before crossing the bridge path. The route continues through Vista Point and downhill into Sausalito, known for its waterfront, galleries and restaurants.",
+      "A bicycle fitting and helmet are part of the riding day. Because the activities occur on separate days, confirm both start times and your return plan from Sausalito, especially if you intend to remain there after the guided portion."
+],
     "schemaDescription": "Alcatraz on the reserved date and a guided bike ride the next morning across the Golden Gate Bridge to Sausalito.",
     "highlights": [
       "2 Days guided outing",
@@ -297,7 +299,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/QZUMQnSUW81MayWmY4Lg"
     ],
     "productImage": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
-    "wordCount": 136,
+    "wordCount": 130,
     "durationLabel": "2 Days",
     "durationIso": null,
     "meetingLocation": null,
@@ -335,9 +337,10 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. Much of the riding is along the waterfront, with the bay alongside. A helmet is included, and the shop fits the bike before departure. A round-trip ferry is part of getting riders back. The city bike portion is self-guided after the shuttle returns.",
-      "The ride passes Alcatraz Island."
-    ],
+      "Visit Alcatraz Island from San Francisco's waterfront on an excursion lasting approximately two and a half to three hours. The experience centers on exploring one of the bay's most recognizable historic landmarks.",
+      "Transportation to the island is by ferry from the Pier 33 area. Once ashore, visitors can explore the historic complex and learn about the island's layered history. Views from Alcatraz also extend across the bay toward San Francisco and the Golden Gate.",
+      "The source record contains stray bicycle language that appears to belong to another package, so this rewrite does not represent cycling as part of the experience. Confirm the exact ferry time, ticket inclusions and meeting instructions before arrival."
+],
     "schemaDescription": "Alcatraz tour with a round-trip ferry and a self-guided bike ride along the waterfront.",
     "highlights": [
       "2.5-3 hours guided outing",
@@ -347,7 +350,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/qAEet9tQQfOQFzNGumpw"
     ],
     "productImage": "https://cdn.filestackcontent.com/H7WvZjGQBqEjbeR52yGh",
-    "wordCount": 59,
+    "wordCount": 112,
     "durationLabel": "2.5-3 hours",
     "durationIso": null,
     "meetingLocation": "Pier 33, Fisherman's Wharf",
@@ -405,9 +408,10 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The first tasting is at Korbel Winery, with California Champagne and a look at the grounds. Korbel has a deli where guests can pick up lunch or order it ahead. The group then walks among the redwoods at Armstrong Redwoods State Natural Reserve. The Colonel Armstrong tree in that reserve is more than 1,000 years old.",
-      "A shorter stop can be downtown Guerneville instead of a long walk in the reserve. The last tasting is at Russian River Vineyards, looking out over the vines. The drive back to San Francisco passes through Sebastopol and open countryside. Tastings and the redwood reserve are the day."
-    ],
+      "Leave San Francisco for a day combining Sonoma County redwoods, wine tasting and small-town scenery. The route travels north into the Russian River area, where vineyards and tall coast redwoods create a markedly different landscape from the city.",
+      "The operator lists a tasting at Korbel, where guests can also arrange lunch from the deli, followed by time among the redwoods at Armstrong Redwoods State Natural Reserve. The Colonel Armstrong tree is one of the grove's notable old-growth trees. A later tasting is scheduled at Russian River Vineyards, with a possible shorter stop in Guerneville depending on the itinerary.",
+      "The return passes through Sebastopol and open countryside. Confirm tasting fees, lunch arrangements, pickup details and the current redwood access plan before departure, since winery and park operations can change."
+],
     "schemaDescription": "Day with tastings at Korbel and Russian River Vineyards, and a walk at Armstrong Redwoods.",
     "highlights": [
       "Golden Gate Bridge and Fisherman's Wharf"
@@ -416,7 +420,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/dizEb5EQQqisqvXPU2SP"
     ],
     "productImage": "https://cdn.filestackcontent.com/9PbtAJDZQYy6wkEpeEiC",
-    "wordCount": 105,
+    "wordCount": 128,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "99 Jefferson street",
