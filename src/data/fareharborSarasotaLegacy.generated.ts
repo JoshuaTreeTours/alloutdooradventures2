@@ -11,9 +11,10 @@ export const fareHarborSarasotaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private cruise with Gulf Water Tours runs four, six, or eight hours on the water around Sarasota. The captain picks stops with the group. Stop choices include Egmont Key and Passage Key. Venice Island is another. Stump Pass and Boca Grande are also on the list. The booking can be time on a sandbar, an evening cruise, a look for dolphins, snorkeling, or a run along the coast. The boat takes up to six guests.",
-      "The captain is included, and the boat is private. No single route is locked in advance. The stop list is chosen in that pre-trip conversation."
-    ],
+      "Design a private cruise around the Sarasota-area coast with four-, six- and eight-hour options. Rather than locking every departure into one route, Gulf Water Tours lets the group discuss destinations and priorities with the captain before setting out.",
+      "Possible destinations include Egmont Key, Passage Key, Venice Island, Stump Pass and Boca Grande. Depending on the time booked and conditions, the outing can emphasize a sandbar, coastal cruising, snorkeling, dolphin watching or evening scenery. These are options rather than guaranteed stops on every charter.",
+      "The boat carries up to six guests and a captain is included. Because distance and conditions determine what fits comfortably into the chosen duration, discuss your preferred destination in advance and confirm what swimming or snorkeling equipment, food and drinks are provided."
+],
     "schemaDescription": "Private cruise of four, six, or eight hours on the water around Sarasota, for up to six guests. The captain chooses stops such as Egmont Key, Passage Key, or Boca Grande.",
     "highlights": [
       "4 - 8 hours harbor outing",
@@ -24,7 +25,7 @@ export const fareHarborSarasotaLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/S0lwYmUvRiSBW7c3Uk0L"
     ],
     "productImage": "https://cdn.filestackcontent.com/DcVDZmTSsmHYjjJhq3uE",
-    "wordCount": 102,
+    "wordCount": 125,
     "durationLabel": "4 - 8 hours",
     "durationIso": null,
     "meetingLocation": null,
