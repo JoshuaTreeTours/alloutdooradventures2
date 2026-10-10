@@ -68,7 +68,10 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
-import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
+import {
+  getLegacyFhMigratedTourBySlugs,
+  getProofBackedFareHarborTourByCanonicalPath,
+} from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
 import merchantFeedCommercialSnapshot from "../../../../../data/merchantFeed-commercial-snapshot.json";
@@ -291,6 +294,8 @@ export default function CityTourDetailRoute({
   );
 
   const nativeEngine6Tour = getEngine6NativeTourByCanonicalPath(requestedPath);
+  const proofBackedFareHarborTour =
+    getProofBackedFareHarborTourByCanonicalPath(requestedPath);
   const nativeTourListingEntry = getTourBySlugs(
     params.stateSlug,
     params.citySlug,
@@ -551,6 +556,18 @@ export default function CityTourDetailRoute({
     });
 
     return <Engine6TourPage tour={resolvedEngine6Tour} />;
+  }
+
+  if (proofBackedFareHarborTour) {
+    assertEngine6RendererSupremacy({
+      tourEngine: "legacy-fh-migrated",
+      renderer: "engine6",
+    });
+    assertEngine6CtaIntegrity({
+      ctaOwner: proofBackedFareHarborTour.ownership.ctaOwner,
+      ctaUrl: proofBackedFareHarborTour.bookingUrl,
+    });
+    return <Engine6TourPage tour={proofBackedFareHarborTour} />;
   }
 
   if (migratedLegacyEngine6Tour) {
