@@ -16,6 +16,7 @@ import {
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 import { getHonoluluTargetedNarrativeDescription } from "./honoluluApprovedNarrativeDescriptions";
 import { getMexicoCityTargetedNarrativeDescription } from "./mexicoCityApprovedNarrativeDescriptions";
+import { getMagpieWinterPilotOverride } from "./magpieWinterPilotOverrides";
 
 const shouldLogEngine6LocationDiagnostics = () =>
   process.env.ENGINE6_LOCATION_DIAGNOSTICS === "1";
@@ -1264,7 +1265,11 @@ export const mapViatorToEngine6Tour = (
     `Explore ${title} with local guides in ${city}, ${state}.`;
   const cleanedDescription = cleanEngine6Description(rawDescription);
   const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
+  const magpieWinterPilotOverride = getMagpieWinterPilotOverride(
+    payload.rawProductCode
+  );
   const descriptionOverride =
+    magpieWinterPilotOverride?.summary ??
     ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
   const description = descriptionOverride ?? descriptionBody;
   const metaDescription = buildEngine6SeoDescription({
@@ -1321,6 +1326,7 @@ export const mapViatorToEngine6Tour = (
     sourceOverview: sourceOverviewText,
   });
   const overriddenOverview =
+    magpieWinterPilotOverride?.overview ??
     ENGINE6_OVERVIEW_OVERRIDES[payload.rawProductCode]?.({
       city,
       state,
