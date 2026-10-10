@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T13:39:15.192Z",
+  "generatedAt": "2026-10-10T22:12:42.679Z",
   "source": "merchant feed generation using shared Engine6 commercial resolver snapshot",
   "rows": [
     {
@@ -13,8 +13,8 @@
       "productCode": "163975P1",
       "price": "37 USD",
       "averageRating": "4.6",
-      "ratingCount": "926",
-      "reviewCount": "926"
+      "ratingCount": "927",
+      "reviewCount": "927"
     },
     {
       "productCode": "447486P8",
@@ -34,8 +34,8 @@
       "productCode": "117409P1",
       "price": "239 USD",
       "averageRating": "4.8",
-      "ratingCount": "247",
-      "reviewCount": "247"
+      "ratingCount": "248",
+      "reviewCount": "248"
     },
     {
       "productCode": "331438P1",
@@ -69,8 +69,8 @@
       "productCode": "421920P3",
       "price": "69 USD",
       "averageRating": "5.0",
-      "ratingCount": "166",
-      "reviewCount": "166"
+      "ratingCount": "167",
+      "reviewCount": "167"
     },
     {
       "productCode": "5119P13",
@@ -97,8 +97,8 @@
       "productCode": "5516ST5",
       "price": "129 USD",
       "averageRating": "4.3",
-      "ratingCount": "5918",
-      "reviewCount": "5918"
+      "ratingCount": "5919",
+      "reviewCount": "5919"
     },
     {
       "productCode": "13920P12",
@@ -111,22 +111,22 @@
       "productCode": "470339P1",
       "price": "49 USD",
       "averageRating": "4.9",
-      "ratingCount": "875",
-      "reviewCount": "875"
+      "ratingCount": "878",
+      "reviewCount": "878"
     },
     {
       "productCode": "398496P5",
       "price": "69 USD",
       "averageRating": "4.9",
-      "ratingCount": "68",
-      "reviewCount": "68"
+      "ratingCount": "69",
+      "reviewCount": "69"
     },
     {
       "productCode": "7079RREBIKE",
       "price": "129 USD",
       "averageRating": "5.0",
-      "ratingCount": "1948",
-      "reviewCount": "1948"
+      "ratingCount": "1950",
+      "reviewCount": "1950"
     },
     {
       "productCode": "3533RRC",
@@ -153,22 +153,22 @@
       "productCode": "32779P2",
       "price": "53 USD",
       "averageRating": "4.4",
-      "ratingCount": "616",
-      "reviewCount": "616"
+      "ratingCount": "617",
+      "reviewCount": "617"
     },
     {
       "productCode": "60136P1",
       "price": "149 USD",
       "averageRating": "4.8",
-      "ratingCount": "2413",
-      "reviewCount": "2413"
+      "ratingCount": "2416",
+      "reviewCount": "2416"
     },
     {
       "productCode": "26719P8",
       "price": "109 USD",
       "averageRating": "4.9",
-      "ratingCount": "5395",
-      "reviewCount": "5395"
+      "ratingCount": "5399",
+      "reviewCount": "5399"
     },
     {
       "productCode": "354611P1",
@@ -195,8 +195,8 @@
       "productCode": "152424P1",
       "price": "99 USD",
       "averageRating": "4.7",
-      "ratingCount": "1060",
-      "reviewCount": "1060"
+      "ratingCount": "1070",
+      "reviewCount": "1070"
     },
     {
       "productCode": "6007GGB",
@@ -209,8 +209,8 @@
       "productCode": "2630SUN",
       "price": "58 USD",
       "averageRating": "4.5",
-      "ratingCount": "2149",
-      "reviewCount": "2149"
+      "ratingCount": "2153",
+      "reviewCount": "2153"
     },
     {
       "productCode": "6007P5",
@@ -230,8 +230,8 @@
       "productCode": "23068P2",
       "price": "85 USD",
       "averageRating": "4.9",
-      "ratingCount": "3175",
-      "reviewCount": "3175"
+      "ratingCount": "3176",
+      "reviewCount": "3176"
     },
     {
       "productCode": "415653P2",
@@ -244,22 +244,22 @@
       "productCode": "72999P3",
       "price": "129 USD",
       "averageRating": "5.0",
-      "ratingCount": "932",
-      "reviewCount": "932"
+      "ratingCount": "936",
+      "reviewCount": "936"
     },
     {
       "productCode": "2660SFOWIN",
       "price": "156.75 USD",
       "averageRating": "4.3",
-      "ratingCount": "4617",
-      "reviewCount": "4617"
+      "ratingCount": "4618",
+      "reviewCount": "4618"
     },
     {
       "productCode": "304471P122",
       "price": "76.49 USD",
       "averageRating": "3.7",
-      "ratingCount": "161",
-      "reviewCount": "161"
+      "ratingCount": "162",
+      "reviewCount": "162"
     },
     {
       "productCode": "333016P3",
@@ -272,8 +272,8 @@
       "productCode": "3454YE3D",
       "price": "795 USD",
       "averageRating": "4.7",
-      "ratingCount": "220",
-      "reviewCount": "220"
+      "ratingCount": "222",
+      "reviewCount": "222"
     },
     {
       "productCode": "365892P1",
@@ -286,15 +286,15 @@
       "productCode": "15131P4",
       "price": "285 USD",
       "averageRating": "4.9",
-      "ratingCount": "51",
-      "reviewCount": "51"
+      "ratingCount": "52",
+      "reviewCount": "52"
     },
     {
       "productCode": "148509P1",
       "price": "76 USD",
       "averageRating": "4.6",
-      "ratingCount": "5669",
-      "reviewCount": "5669"
+      "ratingCount": "5672",
+      "reviewCount": "5672"
     },
     {
       "productCode": "106439P1",
@@ -314,8 +314,8 @@
       "productCode": "47235P1",
       "price": "149 USD",
       "averageRating": "4.9",
-      "ratingCount": "6698",
-      "reviewCount": "6698"
+      "ratingCount": "6707",
+      "reviewCount": "6707"
     },
     {
       "productCode": "2030UNIENTRY",
@@ -328,15 +328,15 @@
       "productCode": "5096P30",
       "price": "59 USD",
       "averageRating": "3.4",
-      "ratingCount": "619",
-      "reviewCount": "619"
+      "ratingCount": "621",
+      "reviewCount": "621"
     },
     {
       "productCode": "67760P2",
       "price": "95 USD",
       "averageRating": "4.9",
-      "ratingCount": "2898",
-      "reviewCount": "2898"
+      "ratingCount": "2904",
+      "reviewCount": "2904"
     },
     {
       "productCode": "70058P145",
@@ -349,8 +349,8 @@
       "productCode": "32779P6",
       "price": "90.25 USD",
       "averageRating": "4.3",
-      "ratingCount": "506",
-      "reviewCount": "506"
+      "ratingCount": "509",
+      "reviewCount": "509"
     },
     {
       "productCode": "5569HIKE",
@@ -370,8 +370,8 @@
       "productCode": "411138P3",
       "price": "177 USD",
       "averageRating": "4.9",
-      "ratingCount": "444",
-      "reviewCount": "444"
+      "ratingCount": "445",
+      "reviewCount": "445"
     },
     {
       "productCode": "100569P5",
@@ -412,8 +412,8 @@
       "productCode": "7081NYCDAY",
       "price": "99 USD",
       "averageRating": "4.8",
-      "ratingCount": "13840",
-      "reviewCount": "13840"
+      "ratingCount": "13855",
+      "reviewCount": "13855"
     },
     {
       "productCode": "62527P11",
@@ -426,22 +426,22 @@
       "productCode": "5250LIBERTYELLIS",
       "price": "79 USD",
       "averageRating": "4.8",
-      "ratingCount": "14852",
-      "reviewCount": "14852"
+      "ratingCount": "14866",
+      "reviewCount": "14866"
     },
     {
       "productCode": "5614063P8",
       "price": "139 USD",
       "averageRating": "4.9",
-      "ratingCount": "268",
-      "reviewCount": "268"
+      "ratingCount": "270",
+      "reviewCount": "270"
     },
     {
       "productCode": "3857PHI",
       "price": "169 USD",
       "averageRating": "4.2",
-      "ratingCount": "812",
-      "reviewCount": "812"
+      "ratingCount": "813",
+      "reviewCount": "813"
     },
     {
       "productCode": "43656P1",
@@ -475,22 +475,22 @@
       "productCode": "6455NOLAAIR",
       "price": "59 USD",
       "averageRating": "4.7",
-      "ratingCount": "5224",
-      "reviewCount": "5224"
+      "ratingCount": "5230",
+      "reviewCount": "5230"
     },
     {
       "productCode": "15200P6",
       "price": "60 USD",
       "averageRating": "4.8",
-      "ratingCount": "1326",
-      "reviewCount": "1326"
+      "ratingCount": "1331",
+      "reviewCount": "1331"
     },
     {
       "productCode": "3780P45",
       "price": "25.75 USD",
-      "averageRating": "4.1",
-      "ratingCount": "178",
-      "reviewCount": "178"
+      "averageRating": "4.2",
+      "ratingCount": "180",
+      "reviewCount": "180"
     },
     {
       "productCode": "3780SUPER",
@@ -503,22 +503,22 @@
       "productCode": "6953SWAMPTRANS",
       "price": "70.12 USD",
       "averageRating": "4.9",
-      "ratingCount": "7139",
-      "reviewCount": "7139"
+      "ratingCount": "7142",
+      "reviewCount": "7142"
     },
     {
       "productCode": "15200P2",
       "price": "90 USD",
       "averageRating": "4.9",
-      "ratingCount": "2101",
-      "reviewCount": "2101"
+      "ratingCount": "2102",
+      "reviewCount": "2102"
     },
     {
       "productCode": "273720P1",
       "price": "37 USD",
       "averageRating": "4.5",
-      "ratingCount": "1618",
-      "reviewCount": "1618"
+      "ratingCount": "1619",
+      "reviewCount": "1619"
     },
     {
       "productCode": "103533P1",
@@ -538,8 +538,8 @@
       "productCode": "122012P17",
       "price": "60 USD",
       "averageRating": "4.9",
-      "ratingCount": "2872",
-      "reviewCount": "2872"
+      "ratingCount": "2893",
+      "reviewCount": "2893"
     },
     {
       "productCode": "474891P3",
@@ -552,8 +552,8 @@
       "productCode": "5515296P1",
       "price": "80 USD",
       "averageRating": "4.8",
-      "ratingCount": "52",
-      "reviewCount": "52"
+      "ratingCount": "53",
+      "reviewCount": "53"
     },
     {
       "productCode": "428219P6",
@@ -636,8 +636,8 @@
       "productCode": "69764P1",
       "price": "68 USD",
       "averageRating": "4.6",
-      "ratingCount": "1763",
-      "reviewCount": "1763"
+      "ratingCount": "1764",
+      "reviewCount": "1764"
     },
     {
       "productCode": "18125P5",
@@ -650,8 +650,8 @@
       "productCode": "5046SAN_SEA",
       "price": "55.59 USD",
       "averageRating": "4.7",
-      "ratingCount": "1376",
-      "reviewCount": "1376"
+      "ratingCount": "1377",
+      "reviewCount": "1377"
     },
     {
       "productCode": "424070P1",
@@ -678,8 +678,8 @@
       "productCode": "28758P1",
       "price": "73 USD",
       "averageRating": "4.7",
-      "ratingCount": "585",
-      "reviewCount": "585"
+      "ratingCount": "586",
+      "reviewCount": "586"
     },
     {
       "productCode": "327321P1",
@@ -692,8 +692,8 @@
       "productCode": "6740P7",
       "price": "179 USD",
       "averageRating": "4.7",
-      "ratingCount": "593",
-      "reviewCount": "593"
+      "ratingCount": "595",
+      "reviewCount": "595"
     },
     {
       "productCode": "237571P2",
@@ -720,15 +720,15 @@
       "productCode": "445161P1",
       "price": "175 USD",
       "averageRating": "4.9",
-      "ratingCount": "174",
-      "reviewCount": "174"
+      "ratingCount": "179",
+      "reviewCount": "179"
     },
     {
       "productCode": "3351P15",
       "price": "149 USD",
       "averageRating": "5.0",
-      "ratingCount": "226",
-      "reviewCount": "226"
+      "ratingCount": "227",
+      "reviewCount": "227"
     },
     {
       "productCode": "383300P6",
@@ -860,8 +860,8 @@
       "productCode": "6400P7",
       "price": "30 USD",
       "averageRating": "3.8",
-      "ratingCount": "137",
-      "reviewCount": "137"
+      "ratingCount": "138",
+      "reviewCount": "138"
     },
     {
       "productCode": "3885GRINDEL_ZUR",
@@ -874,8 +874,8 @@
       "productCode": "3885SW303BS",
       "price": "241.82 USD",
       "averageRating": "4.5",
-      "ratingCount": "2027",
-      "reviewCount": "2027"
+      "ratingCount": "2029",
+      "reviewCount": "2029"
     },
     {
       "productCode": "5553984P5",
@@ -909,8 +909,8 @@
       "productCode": "194901P4",
       "price": "139 USD",
       "averageRating": "5.0",
-      "ratingCount": "1089",
-      "reviewCount": "1089"
+      "ratingCount": "1092",
+      "reviewCount": "1092"
     },
     {
       "productCode": "378720P1",
@@ -972,15 +972,15 @@
       "productCode": "18277P1",
       "price": "69 USD",
       "averageRating": "5.0",
-      "ratingCount": "366",
-      "reviewCount": "366"
+      "ratingCount": "369",
+      "reviewCount": "369"
     },
     {
       "productCode": "5765P9",
       "price": "85 USD",
       "averageRating": "4.9",
-      "ratingCount": "1026",
-      "reviewCount": "1026"
+      "ratingCount": "1028",
+      "reviewCount": "1028"
     },
     {
       "productCode": "9634P6",
@@ -993,8 +993,8 @@
       "productCode": "194901P2",
       "price": "159 USD",
       "averageRating": "5.0",
-      "ratingCount": "479",
-      "reviewCount": "479"
+      "ratingCount": "485",
+      "reviewCount": "485"
     },
     {
       "productCode": "5765MTHOOD",
@@ -1014,15 +1014,15 @@
       "productCode": "67842P3",
       "price": "79 USD",
       "averageRating": "5.0",
-      "ratingCount": "189",
-      "reviewCount": "189"
+      "ratingCount": "190",
+      "reviewCount": "190"
     },
     {
       "productCode": "5396P10",
       "price": "79 USD",
       "averageRating": "4.8",
-      "ratingCount": "2303",
-      "reviewCount": "2303"
+      "ratingCount": "2306",
+      "reviewCount": "2306"
     },
     {
       "productCode": "40943P1",
@@ -1042,8 +1042,8 @@
       "productCode": "36129P1",
       "price": "29 USD",
       "averageRating": "4.7",
-      "ratingCount": "9345",
-      "reviewCount": "9345"
+      "ratingCount": "9357",
+      "reviewCount": "9357"
     },
     {
       "productCode": "2956PIKEPL",
@@ -1070,15 +1070,15 @@
       "productCode": "7812P115",
       "price": "75 USD",
       "averageRating": "4.8",
-      "ratingCount": "124",
-      "reviewCount": "124"
+      "ratingCount": "125",
+      "reviewCount": "125"
     },
     {
       "productCode": "2960HARBOR",
       "price": "46 USD",
       "averageRating": "4.7",
-      "ratingCount": "2263",
-      "reviewCount": "2263"
+      "ratingCount": "2265",
+      "reviewCount": "2265"
     },
     {
       "productCode": "3657RAINIER",
@@ -1091,15 +1091,15 @@
       "productCode": "5396MTR",
       "price": "159 USD",
       "averageRating": "4.9",
-      "ratingCount": "2190",
-      "reviewCount": "2190"
+      "ratingCount": "2196",
+      "reviewCount": "2196"
     },
     {
       "productCode": "351474P1",
       "price": "179 USD",
       "averageRating": "4.9",
-      "ratingCount": "674",
-      "reviewCount": "674"
+      "ratingCount": "675",
+      "reviewCount": "675"
     },
     {
       "productCode": "3132SMB",
@@ -1133,8 +1133,8 @@
       "productCode": "362397P1",
       "price": "70 USD",
       "averageRating": "4.7",
-      "ratingCount": "906",
-      "reviewCount": "906"
+      "ratingCount": "908",
+      "reviewCount": "908"
     },
     {
       "productCode": "53254P8",
@@ -1196,22 +1196,22 @@
       "productCode": "6938NAPATRLY",
       "price": "145 USD",
       "averageRating": "4.5",
-      "ratingCount": "862",
-      "reviewCount": "862"
+      "ratingCount": "863",
+      "reviewCount": "863"
     },
     {
       "productCode": "6285P4",
       "price": "151.48 USD",
       "averageRating": "4.9",
-      "ratingCount": "1082",
-      "reviewCount": "1082"
+      "ratingCount": "1084",
+      "reviewCount": "1084"
     },
     {
       "productCode": "339737P1",
       "price": "325 USD",
       "averageRating": "4.8",
-      "ratingCount": "297",
-      "reviewCount": "297"
+      "ratingCount": "298",
+      "reviewCount": "298"
     },
     {
       "productCode": "148923P3",
@@ -1231,8 +1231,8 @@
       "productCode": "6938CASTLE",
       "price": "135 USD",
       "averageRating": "4.3",
-      "ratingCount": "314",
-      "reviewCount": "314"
+      "ratingCount": "316",
+      "reviewCount": "316"
     },
     {
       "productCode": "41114P2",
@@ -1433,9 +1433,9 @@
     {
       "productCode": "460648P15",
       "price": "500 USD",
-      "averageRating": "4.5",
-      "ratingCount": "4",
-      "reviewCount": "4"
+      "averageRating": "4.6",
+      "ratingCount": "5",
+      "reviewCount": "5"
     },
     {
       "productCode": "5582835P5",
@@ -1511,22 +1511,22 @@
       "productCode": "318692P1",
       "price": "345 USD",
       "averageRating": "5.0",
-      "ratingCount": "249",
-      "reviewCount": "249"
+      "ratingCount": "251",
+      "reviewCount": "251"
     },
     {
       "productCode": "318692P2",
       "price": "345 USD",
       "averageRating": "5.0",
-      "ratingCount": "86",
-      "reviewCount": "86"
+      "ratingCount": "88",
+      "reviewCount": "88"
     },
     {
       "productCode": "18678CS",
       "price": "359.32 USD",
       "averageRating": "4.8",
-      "ratingCount": "2036",
-      "reviewCount": "2036"
+      "ratingCount": "2040",
+      "reviewCount": "2040"
     },
     {
       "productCode": "6613P24",
@@ -1546,8 +1546,8 @@
       "productCode": "229754P2",
       "price": "133.34 USD",
       "averageRating": "4.9",
-      "ratingCount": "1009",
-      "reviewCount": "1009"
+      "ratingCount": "1011",
+      "reviewCount": "1011"
     },
     {
       "productCode": "5488718P3",
@@ -1602,8 +1602,8 @@
       "productCode": "199627P1",
       "price": "364 USD",
       "averageRating": "5.0",
-      "ratingCount": "302",
-      "reviewCount": "302"
+      "ratingCount": "307",
+      "reviewCount": "307"
     },
     {
       "productCode": "265766P10",
@@ -1630,8 +1630,8 @@
       "productCode": "300061P2",
       "price": "179 USD",
       "averageRating": "5.0",
-      "ratingCount": "163",
-      "reviewCount": "163"
+      "ratingCount": "164",
+      "reviewCount": "164"
     },
     {
       "productCode": "163873P9",
@@ -1651,15 +1651,15 @@
       "productCode": "118887P1",
       "price": "149 USD",
       "averageRating": "5.0",
-      "ratingCount": "1730",
-      "reviewCount": "1730"
+      "ratingCount": "1733",
+      "reviewCount": "1733"
     },
     {
       "productCode": "118887P5",
       "price": "199 USD",
       "averageRating": "5.0",
-      "ratingCount": "514",
-      "reviewCount": "514"
+      "ratingCount": "515",
+      "reviewCount": "515"
     },
     {
       "productCode": "118887P2",
@@ -1672,8 +1672,8 @@
       "productCode": "275087P2",
       "price": "249 USD",
       "averageRating": "4.9",
-      "ratingCount": "144",
-      "reviewCount": "144"
+      "ratingCount": "145",
+      "reviewCount": "145"
     },
     {
       "productCode": "163873P1",
@@ -1707,15 +1707,15 @@
       "productCode": "151830P1",
       "price": "2200 USD",
       "averageRating": "5.0",
-      "ratingCount": "990",
-      "reviewCount": "990"
+      "ratingCount": "991",
+      "reviewCount": "991"
     },
     {
       "productCode": "151830P3",
       "price": "1999 USD",
       "averageRating": "5.0",
-      "ratingCount": "108",
-      "reviewCount": "108"
+      "ratingCount": "110",
+      "reviewCount": "110"
     },
     {
       "productCode": "151830P8",
@@ -1749,15 +1749,15 @@
       "productCode": "137381P3",
       "price": "1200 USD",
       "averageRating": "5.0",
-      "ratingCount": "109",
-      "reviewCount": "109"
+      "ratingCount": "110",
+      "reviewCount": "110"
     },
     {
       "productCode": "481298P1",
       "price": "1000 USD",
       "averageRating": "5.0",
-      "ratingCount": "104",
-      "reviewCount": "104"
+      "ratingCount": "105",
+      "reviewCount": "105"
     },
     {
       "productCode": "265766P66",
@@ -1805,8 +1805,8 @@
       "productCode": "23667P2",
       "price": "182 USD",
       "averageRating": "4.8",
-      "ratingCount": "221",
-      "reviewCount": "221"
+      "ratingCount": "223",
+      "reviewCount": "223"
     },
     {
       "productCode": "23667P3",
@@ -1819,8 +1819,8 @@
       "productCode": "316119P4",
       "price": "269 USD",
       "averageRating": "4.9",
-      "ratingCount": "776",
-      "reviewCount": "776"
+      "ratingCount": "779",
+      "reviewCount": "779"
     },
     {
       "productCode": "23667P4",
@@ -1833,8 +1833,8 @@
       "productCode": "23667P1",
       "price": "182 USD",
       "averageRating": "4.8",
-      "ratingCount": "414",
-      "reviewCount": "414"
+      "ratingCount": "415",
+      "reviewCount": "415"
     },
     {
       "productCode": "463268P2",
@@ -1882,8 +1882,8 @@
       "productCode": "118744P3",
       "price": "130 USD",
       "averageRating": "4.9",
-      "ratingCount": "249",
-      "reviewCount": "249"
+      "ratingCount": "250",
+      "reviewCount": "250"
     },
     {
       "productCode": "123783P1",
@@ -1910,8 +1910,8 @@
       "productCode": "299521P8",
       "price": "240 USD",
       "averageRating": "4.8",
-      "ratingCount": "76",
-      "reviewCount": "76"
+      "ratingCount": "78",
+      "reviewCount": "78"
     },
     {
       "productCode": "86727P7",
@@ -1931,8 +1931,8 @@
       "productCode": "70248P3",
       "price": "158 USD",
       "averageRating": "4.9",
-      "ratingCount": "340",
-      "reviewCount": "340"
+      "ratingCount": "346",
+      "reviewCount": "346"
     },
     {
       "productCode": "26480P10",
@@ -1966,8 +1966,8 @@
       "productCode": "335817P3",
       "price": "85 USD",
       "averageRating": "4.9",
-      "ratingCount": "347",
-      "reviewCount": "347"
+      "ratingCount": "350",
+      "reviewCount": "350"
     },
     {
       "productCode": "335817P10",
@@ -1994,15 +1994,15 @@
       "productCode": "162351P6",
       "price": "120 USD",
       "averageRating": "4.3",
-      "ratingCount": "974",
-      "reviewCount": "974"
+      "ratingCount": "979",
+      "reviewCount": "979"
     },
     {
       "productCode": "321860P2",
       "price": "100 USD",
       "averageRating": "4.6",
-      "ratingCount": "293",
-      "reviewCount": "293"
+      "ratingCount": "295",
+      "reviewCount": "295"
     },
     {
       "productCode": "327849P2",
@@ -2029,8 +2029,8 @@
       "productCode": "189623P3",
       "price": "125 USD",
       "averageRating": "4.7",
-      "ratingCount": "685",
-      "reviewCount": "685"
+      "ratingCount": "687",
+      "reviewCount": "687"
     },
     {
       "productCode": "325517P1",
@@ -2077,9 +2077,9 @@
     {
       "productCode": "129182P2",
       "price": "250 USD",
-      "averageRating": "5.0",
-      "ratingCount": "13",
-      "reviewCount": "13"
+      "averageRating": "4.7",
+      "ratingCount": "15",
+      "reviewCount": "15"
     },
     {
       "productCode": "3925OBW",
@@ -2106,29 +2106,29 @@
       "productCode": "15880P21",
       "price": "119.23 USD",
       "averageRating": "4.9",
-      "ratingCount": "316",
-      "reviewCount": "316"
+      "ratingCount": "318",
+      "reviewCount": "318"
     },
     {
       "productCode": "15880P10",
       "price": "134.81 USD",
       "averageRating": "4.9",
-      "ratingCount": "1484",
-      "reviewCount": "1484"
+      "ratingCount": "1487",
+      "reviewCount": "1487"
     },
     {
       "productCode": "32242P1",
       "price": "238.53 USD",
       "averageRating": "4.9",
-      "ratingCount": "1867",
-      "reviewCount": "1867"
+      "ratingCount": "1868",
+      "reviewCount": "1868"
     },
     {
       "productCode": "291644P1",
       "price": "110.50 USD",
       "averageRating": "4.9",
-      "ratingCount": "629",
-      "reviewCount": "629"
+      "ratingCount": "635",
+      "reviewCount": "635"
     },
     {
       "productCode": "115255P2",
@@ -2141,8 +2141,8 @@
       "productCode": "67327P4",
       "price": "425 USD",
       "averageRating": "5.0",
-      "ratingCount": "354",
-      "reviewCount": "354"
+      "ratingCount": "355",
+      "reviewCount": "355"
     },
     {
       "productCode": "7953P7",
@@ -2197,36 +2197,36 @@
       "productCode": "6349DAYTOUR",
       "price": "89 USD",
       "averageRating": "4.7",
-      "ratingCount": "3742",
-      "reviewCount": "3742"
+      "ratingCount": "3746",
+      "reviewCount": "3746"
     },
     {
       "productCode": "6349NIGHT",
       "price": "69 USD",
       "averageRating": "4.7",
-      "ratingCount": "7271",
-      "reviewCount": "7271"
+      "ratingCount": "7272",
+      "reviewCount": "7272"
     },
     {
       "productCode": "6766P11",
       "price": "69 USD",
       "averageRating": "4.6",
-      "ratingCount": "5982",
-      "reviewCount": "5982"
+      "ratingCount": "5999",
+      "reviewCount": "5999"
     },
     {
       "productCode": "41377P2",
       "price": "89 USD",
       "averageRating": "4.8",
-      "ratingCount": "2157",
-      "reviewCount": "2157"
+      "ratingCount": "2160",
+      "reviewCount": "2160"
     },
     {
       "productCode": "60725P1",
       "price": "75 USD",
       "averageRating": "4.9",
-      "ratingCount": "2041",
-      "reviewCount": "2041"
+      "ratingCount": "2044",
+      "reviewCount": "2044"
     },
     {
       "productCode": "14782P1",
@@ -2239,15 +2239,15 @@
       "productCode": "5046WAS_MON",
       "price": "53 USD",
       "averageRating": "4.6",
-      "ratingCount": "4209",
-      "reviewCount": "4209"
+      "ratingCount": "4213",
+      "reviewCount": "4213"
     },
     {
       "productCode": "6349VIPDC",
       "price": "117 USD",
       "averageRating": "4.6",
-      "ratingCount": "2564",
-      "reviewCount": "2564"
+      "ratingCount": "2565",
+      "reviewCount": "2565"
     },
     {
       "productCode": "67327P13",
@@ -2267,15 +2267,15 @@
       "productCode": "6766SIGTOUR",
       "price": "99 USD",
       "averageRating": "4.7",
-      "ratingCount": "1643",
-      "reviewCount": "1643"
+      "ratingCount": "1648",
+      "reviewCount": "1648"
     },
     {
       "productCode": "7812P219",
       "price": "89 USD",
       "averageRating": "4.7",
-      "ratingCount": "368",
-      "reviewCount": "368"
+      "ratingCount": "369",
+      "reviewCount": "369"
     },
     {
       "productCode": "2384P20",
@@ -2288,29 +2288,29 @@
       "productCode": "5769MTVN",
       "price": "95 USD",
       "averageRating": "4.0",
-      "ratingCount": "970",
-      "reviewCount": "970"
+      "ratingCount": "972",
+      "reviewCount": "972"
     },
     {
       "productCode": "5580ARC",
       "price": "53.70 USD",
       "averageRating": "4.8",
-      "ratingCount": "17093",
-      "reviewCount": "17093"
+      "ratingCount": "17103",
+      "reviewCount": "17103"
     },
     {
       "productCode": "76126P2",
       "price": "49 USD",
       "averageRating": "4.7",
-      "ratingCount": "2461",
-      "reviewCount": "2461"
+      "ratingCount": "2462",
+      "reviewCount": "2462"
     },
     {
       "productCode": "76126P8",
       "price": "45 USD",
       "averageRating": "4.5",
-      "ratingCount": "1711",
-      "reviewCount": "1711"
+      "ratingCount": "1714",
+      "reviewCount": "1714"
     },
     {
       "productCode": "5580SKY",
@@ -2386,8 +2386,8 @@
       "productCode": "3332BITE",
       "price": "75 USD",
       "averageRating": "4.9",
-      "ratingCount": "770",
-      "reviewCount": "770"
+      "ratingCount": "771",
+      "reviewCount": "771"
     },
     {
       "productCode": "316128P3",
@@ -2421,8 +2421,8 @@
       "productCode": "3332DAY",
       "price": "55 USD",
       "averageRating": "4.9",
-      "ratingCount": "265",
-      "reviewCount": "265"
+      "ratingCount": "266",
+      "reviewCount": "266"
     },
     {
       "productCode": "191307P3",
@@ -2442,22 +2442,22 @@
       "productCode": "7812P19",
       "price": "89 USD",
       "averageRating": "4.9",
-      "ratingCount": "1029",
-      "reviewCount": "1029"
+      "ratingCount": "1032",
+      "reviewCount": "1032"
     },
     {
       "productCode": "3283BWW",
       "price": "85.56 USD",
       "averageRating": "4.5",
-      "ratingCount": "3403",
-      "reviewCount": "3403"
+      "ratingCount": "3409",
+      "reviewCount": "3409"
     },
     {
       "productCode": "3283SSCRUISE",
       "price": "46 USD",
       "averageRating": "4.5",
-      "ratingCount": "1536",
-      "reviewCount": "1536"
+      "ratingCount": "1539",
+      "reviewCount": "1539"
     },
     {
       "productCode": "44921P7",
@@ -2470,43 +2470,43 @@
       "productCode": "3037DUCK",
       "price": "60 USD",
       "averageRating": "4.6",
-      "ratingCount": "10084",
-      "reviewCount": "10084"
+      "ratingCount": "10097",
+      "reviewCount": "10097"
     },
     {
       "productCode": "66111P3",
       "price": "39 USD",
       "averageRating": "4.9",
-      "ratingCount": "8125",
-      "reviewCount": "8125"
+      "ratingCount": "8167",
+      "reviewCount": "8167"
     },
     {
       "productCode": "26797P4",
       "price": "25 USD",
       "averageRating": "4.6",
-      "ratingCount": "2807",
-      "reviewCount": "2807"
+      "ratingCount": "2816",
+      "reviewCount": "2816"
     },
     {
       "productCode": "8843P7",
       "price": "45 USD",
       "averageRating": "4.9",
-      "ratingCount": "1771",
-      "reviewCount": "1771"
+      "ratingCount": "1790",
+      "reviewCount": "1790"
     },
     {
       "productCode": "70284P1",
       "price": "59 USD",
       "averageRating": "5.0",
-      "ratingCount": "2937",
-      "reviewCount": "2937"
+      "ratingCount": "2958",
+      "reviewCount": "2958"
     },
     {
       "productCode": "5046BOS_OTT",
       "price": "52 USD",
       "averageRating": "4.3",
-      "ratingCount": "6087",
-      "reviewCount": "6087"
+      "ratingCount": "6103",
+      "reviewCount": "6103"
     },
     {
       "productCode": "7812P131",
@@ -2519,8 +2519,8 @@
       "productCode": "7812P18",
       "price": "74.99 USD",
       "averageRating": "4.8",
-      "ratingCount": "1643",
-      "reviewCount": "1643"
+      "ratingCount": "1652",
+      "reviewCount": "1652"
     },
     {
       "productCode": "400049P3",
@@ -2568,8 +2568,8 @@
       "productCode": "5151BOSCY014",
       "price": "78 USD",
       "averageRating": "4.8",
-      "ratingCount": "654",
-      "reviewCount": "654"
+      "ratingCount": "656",
+      "reviewCount": "656"
     },
     {
       "productCode": "255730P225",
@@ -2596,8 +2596,8 @@
       "productCode": "8841P70",
       "price": "249 USD",
       "averageRating": "4.9",
-      "ratingCount": "464",
-      "reviewCount": "464"
+      "ratingCount": "465",
+      "reviewCount": "465"
     },
     {
       "productCode": "8841P10",
@@ -2673,22 +2673,22 @@
       "productCode": "8841P34",
       "price": "59 USD",
       "averageRating": "4.9",
-      "ratingCount": "1067",
-      "reviewCount": "1067"
+      "ratingCount": "1068",
+      "reviewCount": "1068"
     },
     {
       "productCode": "5582660P3",
       "price": "69 USD",
-      "averageRating": "4.7",
-      "ratingCount": "115",
-      "reviewCount": "115"
+      "averageRating": "4.6",
+      "ratingCount": "117",
+      "reviewCount": "117"
     },
     {
       "productCode": "6314PHILSEG",
       "price": "69 USD",
       "averageRating": "4.8",
-      "ratingCount": "828",
-      "reviewCount": "828"
+      "ratingCount": "835",
+      "reviewCount": "835"
     },
     {
       "productCode": "5042PHLSPI",
@@ -2729,8 +2729,8 @@
       "productCode": "52886P6",
       "price": "80 USD",
       "averageRating": "4.9",
-      "ratingCount": "397",
-      "reviewCount": "397"
+      "ratingCount": "398",
+      "reviewCount": "398"
     },
     {
       "productCode": "6029YOFWILD",
@@ -2743,29 +2743,29 @@
       "productCode": "6029WILDSAF",
       "price": "159 USD",
       "averageRating": "4.9",
-      "ratingCount": "1364",
-      "reviewCount": "1364"
+      "ratingCount": "1365",
+      "reviewCount": "1365"
     },
     {
       "productCode": "15073P5",
       "price": "149 USD",
       "averageRating": "4.9",
-      "ratingCount": "1376",
-      "reviewCount": "1376"
+      "ratingCount": "1382",
+      "reviewCount": "1382"
     },
     {
       "productCode": "156172P2",
       "price": "198 USD",
       "averageRating": "4.9",
-      "ratingCount": "1368",
-      "reviewCount": "1368"
+      "ratingCount": "1371",
+      "reviewCount": "1371"
     },
     {
       "productCode": "156172P1",
       "price": "198 USD",
       "averageRating": "5.0",
-      "ratingCount": "1058",
-      "reviewCount": "1058"
+      "ratingCount": "1064",
+      "reviewCount": "1064"
     },
     {
       "productCode": "6252SCENIC",
@@ -2778,8 +2778,8 @@
       "productCode": "38400P2",
       "price": "149 USD",
       "averageRating": "4.6",
-      "ratingCount": "1161",
-      "reviewCount": "1161"
+      "ratingCount": "1166",
+      "reviewCount": "1166"
     },
     {
       "productCode": "6252P5",
@@ -2799,8 +2799,8 @@
       "productCode": "15073P6",
       "price": "325 USD",
       "averageRating": "4.9",
-      "ratingCount": "817",
-      "reviewCount": "817"
+      "ratingCount": "819",
+      "reviewCount": "819"
     },
     {
       "productCode": "320113P1",
@@ -2834,15 +2834,15 @@
       "productCode": "35441P1",
       "price": "389 USD",
       "averageRating": "4.9",
-      "ratingCount": "525",
-      "reviewCount": "525"
+      "ratingCount": "526",
+      "reviewCount": "526"
     },
     {
       "productCode": "460738P6",
       "price": "145 USD",
       "averageRating": "4.9",
-      "ratingCount": "170",
-      "reviewCount": "170"
+      "ratingCount": "173",
+      "reviewCount": "173"
     },
     {
       "productCode": "342881P1",
@@ -2855,8 +2855,8 @@
       "productCode": "38400P8",
       "price": "165 USD",
       "averageRating": "4.3",
-      "ratingCount": "43",
-      "reviewCount": "43"
+      "ratingCount": "44",
+      "reviewCount": "44"
     },
     {
       "productCode": "6029WINTER",
@@ -2883,15 +2883,15 @@
       "productCode": "366391P5",
       "price": "175 USD",
       "averageRating": "5.0",
-      "ratingCount": "43",
-      "reviewCount": "43"
+      "ratingCount": "44",
+      "reviewCount": "44"
     },
     {
       "productCode": "366391P3",
       "price": "175 USD",
       "averageRating": "5.0",
-      "ratingCount": "27",
-      "reviewCount": "27"
+      "ratingCount": "28",
+      "reviewCount": "28"
     },
     {
       "productCode": "366391P2",
@@ -2903,9 +2903,9 @@
     {
       "productCode": "449630P3",
       "price": "169 USD",
-      "averageRating": "4.3",
-      "ratingCount": "6",
-      "reviewCount": "6"
+      "averageRating": "3.9",
+      "ratingCount": "7",
+      "reviewCount": "7"
     },
     {
       "productCode": "449630P1",
@@ -2932,15 +2932,15 @@
       "productCode": "424860P1",
       "price": "156 USD",
       "averageRating": "5.0",
-      "ratingCount": "624",
-      "reviewCount": "624"
+      "ratingCount": "627",
+      "reviewCount": "627"
     },
     {
       "productCode": "450284P2",
       "price": "124.99 USD",
       "averageRating": "5.0",
-      "ratingCount": "515",
-      "reviewCount": "515"
+      "ratingCount": "523",
+      "reviewCount": "523"
     },
     {
       "productCode": "5663796P1",
@@ -2974,8 +2974,8 @@
       "productCode": "264314P3",
       "price": "129.90 USD",
       "averageRating": "4.9",
-      "ratingCount": "52",
-      "reviewCount": "52"
+      "ratingCount": "53",
+      "reviewCount": "53"
     },
     {
       "productCode": "450284P5",
@@ -3002,8 +3002,8 @@
       "productCode": "477432P1",
       "price": "155 USD",
       "averageRating": "5.0",
-      "ratingCount": "23",
-      "reviewCount": "23"
+      "ratingCount": "24",
+      "reviewCount": "24"
     },
     {
       "productCode": "337022P3",
@@ -3016,8 +3016,8 @@
       "productCode": "242506P2",
       "price": "166 USD",
       "averageRating": "5.0",
-      "ratingCount": "158",
-      "reviewCount": "158"
+      "ratingCount": "159",
+      "reviewCount": "159"
     },
     {
       "productCode": "242506P1",
@@ -3051,29 +3051,29 @@
       "productCode": "5555934P1",
       "price": "99 USD",
       "averageRating": "5.0",
-      "ratingCount": "1849",
-      "reviewCount": "1849"
+      "ratingCount": "1867",
+      "reviewCount": "1867"
     },
     {
       "productCode": "7016P4",
       "price": "159 USD",
       "averageRating": "5.0",
-      "ratingCount": "852",
-      "reviewCount": "852"
+      "ratingCount": "857",
+      "reviewCount": "857"
     },
     {
       "productCode": "7016OFFROAD",
       "price": "99 USD",
       "averageRating": "5.0",
-      "ratingCount": "3462",
-      "reviewCount": "3462"
+      "ratingCount": "3473",
+      "reviewCount": "3473"
     },
     {
       "productCode": "22803P18",
       "price": "109.91 USD",
       "averageRating": "4.9",
-      "ratingCount": "770",
-      "reviewCount": "770"
+      "ratingCount": "772",
+      "reviewCount": "772"
     },
     {
       "productCode": "132679P2",
@@ -3086,8 +3086,8 @@
       "productCode": "5555934P2",
       "price": "119 USD",
       "averageRating": "4.9",
-      "ratingCount": "260",
-      "reviewCount": "260"
+      "ratingCount": "263",
+      "reviewCount": "263"
     },
     {
       "productCode": "22803P33",
@@ -3100,15 +3100,15 @@
       "productCode": "6896MOABCPARK",
       "price": "240 USD",
       "averageRating": "4.9",
-      "ratingCount": "1127",
-      "reviewCount": "1127"
+      "ratingCount": "1129",
+      "reviewCount": "1129"
     },
     {
       "productCode": "349715P2",
       "price": "99 USD",
       "averageRating": "5.0",
-      "ratingCount": "333",
-      "reviewCount": "333"
+      "ratingCount": "337",
+      "reviewCount": "337"
     },
     {
       "productCode": "458439P2",
@@ -3121,8 +3121,8 @@
       "productCode": "334588P4",
       "price": "204 USD",
       "averageRating": "4.6",
-      "ratingCount": "129",
-      "reviewCount": "129"
+      "ratingCount": "130",
+      "reviewCount": "130"
     },
     {
       "productCode": "132679P1",
@@ -3142,15 +3142,15 @@
       "productCode": "349715P3",
       "price": "109 USD",
       "averageRating": "5.0",
-      "ratingCount": "334",
-      "reviewCount": "334"
+      "ratingCount": "339",
+      "reviewCount": "339"
     },
     {
       "productCode": "349715P1",
       "price": "99 USD",
       "averageRating": "4.9",
-      "ratingCount": "217",
-      "reviewCount": "217"
+      "ratingCount": "222",
+      "reviewCount": "222"
     },
     {
       "productCode": "18497P15",
@@ -3170,43 +3170,43 @@
       "productCode": "131994P3",
       "price": "95 USD",
       "averageRating": "5.0",
-      "ratingCount": "1006",
-      "reviewCount": "1006"
+      "ratingCount": "1009",
+      "reviewCount": "1009"
     },
     {
       "productCode": "334588P3",
       "price": "212 USD",
       "averageRating": "5.0",
-      "ratingCount": "83",
-      "reviewCount": "83"
+      "ratingCount": "86",
+      "reviewCount": "86"
     },
     {
       "productCode": "252408P1",
       "price": "177 USD",
       "averageRating": "5.0",
-      "ratingCount": "885",
-      "reviewCount": "885"
+      "ratingCount": "886",
+      "reviewCount": "886"
     },
     {
       "productCode": "349715P4",
       "price": "99 USD",
       "averageRating": "5.0",
-      "ratingCount": "103",
-      "reviewCount": "103"
+      "ratingCount": "107",
+      "reviewCount": "107"
     },
     {
       "productCode": "16847P11",
       "price": "95 USD",
       "averageRating": "4.9",
-      "ratingCount": "29",
-      "reviewCount": "29"
+      "ratingCount": "30",
+      "reviewCount": "30"
     },
     {
       "productCode": "260792P5",
       "price": "260 USD",
       "averageRating": "5.0",
-      "ratingCount": "1607",
-      "reviewCount": "1607"
+      "ratingCount": "1620",
+      "reviewCount": "1620"
     },
     {
       "productCode": "165224P7",
@@ -3261,15 +3261,15 @@
       "productCode": "328038P9",
       "price": "284.95 USD",
       "averageRating": "4.6",
-      "ratingCount": "193",
-      "reviewCount": "193"
+      "ratingCount": "195",
+      "reviewCount": "195"
     },
     {
       "productCode": "102533P9",
       "price": "250 USD",
-      "averageRating": "4.6",
-      "ratingCount": "37",
-      "reviewCount": "37"
+      "averageRating": "4.7",
+      "ratingCount": "38",
+      "reviewCount": "38"
     },
     {
       "productCode": "2642P5",
@@ -3282,8 +3282,8 @@
       "productCode": "418765P2",
       "price": "161.24 USD",
       "averageRating": "4.8",
-      "ratingCount": "56",
-      "reviewCount": "56"
+      "ratingCount": "57",
+      "reviewCount": "57"
     },
     {
       "productCode": "2642P21",
@@ -3296,8 +3296,8 @@
       "productCode": "2642P34",
       "price": "149.95 USD",
       "averageRating": "4.8",
-      "ratingCount": "697",
-      "reviewCount": "697"
+      "ratingCount": "699",
+      "reviewCount": "699"
     },
     {
       "productCode": "2642P30",
@@ -3317,8 +3317,8 @@
       "productCode": "7506P1",
       "price": "125 USD",
       "averageRating": "4.9",
-      "ratingCount": "1829",
-      "reviewCount": "1829"
+      "ratingCount": "1830",
+      "reviewCount": "1830"
     },
     {
       "productCode": "5395SUNSET",
@@ -3338,8 +3338,8 @@
       "productCode": "3800P30",
       "price": "139 USD",
       "averageRating": "4.7",
-      "ratingCount": "194",
-      "reviewCount": "194"
+      "ratingCount": "195",
+      "reviewCount": "195"
     },
     {
       "productCode": "6426SHARKECO",
@@ -3352,15 +3352,15 @@
       "productCode": "2642P6",
       "price": "92.95 USD",
       "averageRating": "4.3",
-      "ratingCount": "1943",
-      "reviewCount": "1943"
+      "ratingCount": "1946",
+      "reviewCount": "1946"
     },
     {
       "productCode": "44502P1",
       "price": "90.19 USD",
       "averageRating": "4.9",
-      "ratingCount": "1941",
-      "reviewCount": "1941"
+      "ratingCount": "1942",
+      "reviewCount": "1942"
     },
     {
       "productCode": "7812P77",
@@ -3380,8 +3380,8 @@
       "productCode": "18235P1",
       "price": "80 USD",
       "averageRating": "4.9",
-      "ratingCount": "2385",
-      "reviewCount": "2385"
+      "ratingCount": "2387",
+      "reviewCount": "2387"
     },
     {
       "productCode": "5264DC",
@@ -3436,8 +3436,8 @@
       "productCode": "3170P40",
       "price": "169 USD",
       "averageRating": "4.7",
-      "ratingCount": "284",
-      "reviewCount": "284"
+      "ratingCount": "285",
+      "reviewCount": "285"
     },
     {
       "productCode": "123164P1",
@@ -3478,8 +3478,8 @@
       "productCode": "3170P32",
       "price": "89 USD",
       "averageRating": "4.9",
-      "ratingCount": "1538",
-      "reviewCount": "1538"
+      "ratingCount": "1540",
+      "reviewCount": "1540"
     },
     {
       "productCode": "42627P1",
@@ -3527,15 +3527,15 @@
       "productCode": "37177P6",
       "price": "74.54 USD",
       "averageRating": "4.4",
-      "ratingCount": "453",
-      "reviewCount": "453"
+      "ratingCount": "454",
+      "reviewCount": "454"
     },
     {
       "productCode": "5039P5",
       "price": "65.58 USD",
       "averageRating": "4.8",
-      "ratingCount": "906",
-      "reviewCount": "906"
+      "ratingCount": "908",
+      "reviewCount": "908"
     },
     {
       "productCode": "53748P4",
@@ -3562,15 +3562,15 @@
       "productCode": "169162P11",
       "price": "299 USD",
       "averageRating": "5.0",
-      "ratingCount": "352",
-      "reviewCount": "352"
+      "ratingCount": "353",
+      "reviewCount": "353"
     },
     {
       "productCode": "169162P5",
       "price": "184.50 USD",
       "averageRating": "5.0",
-      "ratingCount": "538",
-      "reviewCount": "538"
+      "ratingCount": "543",
+      "reviewCount": "543"
     },
     {
       "productCode": "44152P2",
@@ -3674,8 +3674,8 @@
       "productCode": "50605P1",
       "price": "85 USD",
       "averageRating": "4.6",
-      "ratingCount": "713",
-      "reviewCount": "713"
+      "ratingCount": "715",
+      "reviewCount": "715"
     },
     {
       "productCode": "293665P1",
@@ -3695,8 +3695,8 @@
       "productCode": "389518P4",
       "price": "675 USD",
       "averageRating": "4.9",
-      "ratingCount": "103",
-      "reviewCount": "103"
+      "ratingCount": "104",
+      "reviewCount": "104"
     },
     {
       "productCode": "378404P5",
@@ -3772,15 +3772,15 @@
       "productCode": "389518P3",
       "price": "137 USD",
       "averageRating": "4.9",
-      "ratingCount": "250",
-      "reviewCount": "250"
+      "ratingCount": "251",
+      "reviewCount": "251"
     },
     {
       "productCode": "389518P9",
       "price": "137 USD",
       "averageRating": "4.9",
-      "ratingCount": "102",
-      "reviewCount": "102"
+      "ratingCount": "103",
+      "reviewCount": "103"
     },
     {
       "productCode": "268216P7",
@@ -3835,15 +3835,15 @@
       "productCode": "132218P140",
       "price": "178.60 USD",
       "averageRating": "4.6",
-      "ratingCount": "940",
-      "reviewCount": "940"
+      "ratingCount": "943",
+      "reviewCount": "943"
     },
     {
       "productCode": "132218P405",
       "price": "188 USD",
-      "averageRating": "4.5",
-      "ratingCount": "64",
-      "reviewCount": "64"
+      "averageRating": "4.4",
+      "ratingCount": "66",
+      "reviewCount": "66"
     },
     {
       "productCode": "265766P14",
@@ -3926,8 +3926,8 @@
       "productCode": "88081P4",
       "price": "195 USD",
       "averageRating": "5.0",
-      "ratingCount": "171",
-      "reviewCount": "171"
+      "ratingCount": "172",
+      "reviewCount": "172"
     },
     {
       "productCode": "28456P8",
@@ -3947,8 +3947,8 @@
       "productCode": "70444P6",
       "price": "589.99 USD",
       "averageRating": "4.8",
-      "ratingCount": "275",
-      "reviewCount": "275"
+      "ratingCount": "276",
+      "reviewCount": "276"
     },
     {
       "productCode": "28456P1",
@@ -3961,15 +3961,15 @@
       "productCode": "117916P9",
       "price": "225 USD",
       "averageRating": "4.7",
-      "ratingCount": "564",
-      "reviewCount": "564"
+      "ratingCount": "567",
+      "reviewCount": "567"
     },
     {
       "productCode": "179218P23",
       "price": "199.99 USD",
       "averageRating": "4.8",
-      "ratingCount": "1123",
-      "reviewCount": "1123"
+      "ratingCount": "1131",
+      "reviewCount": "1131"
     },
     {
       "productCode": "368856P1",
@@ -3982,8 +3982,8 @@
       "productCode": "6981P1",
       "price": "178 USD",
       "averageRating": "4.6",
-      "ratingCount": "515",
-      "reviewCount": "515"
+      "ratingCount": "517",
+      "reviewCount": "517"
     },
     {
       "productCode": "189546P8",
@@ -4003,64 +4003,64 @@
       "productCode": "452226P3",
       "price": "149 USD",
       "averageRating": "4.5",
-      "ratingCount": "180",
-      "reviewCount": "180"
+      "ratingCount": "183",
+      "reviewCount": "183"
     },
     {
       "productCode": "23607",
       "price": "145.55 USD",
       "averageRating": "4.6",
-      "ratingCount": "2240",
-      "reviewCount": "2240"
+      "ratingCount": "2242",
+      "reviewCount": "2242"
     },
     {
       "productCode": "390101P5",
       "price": "139 USD",
       "averageRating": "4.4",
-      "ratingCount": "157",
-      "reviewCount": "157"
+      "ratingCount": "158",
+      "reviewCount": "158"
     },
     {
       "productCode": "64146P1",
       "price": "135.08 USD",
       "averageRating": "4.1",
-      "ratingCount": "1566",
-      "reviewCount": "1566"
+      "ratingCount": "1570",
+      "reviewCount": "1570"
     },
     {
       "productCode": "33188P2",
       "price": "128 USD",
       "averageRating": "4.3",
-      "ratingCount": "856",
-      "reviewCount": "856"
+      "ratingCount": "864",
+      "reviewCount": "864"
     },
     {
       "productCode": "166842P1",
       "price": "115 USD",
       "averageRating": "4.8",
-      "ratingCount": "1814",
-      "reviewCount": "1814"
+      "ratingCount": "1815",
+      "reviewCount": "1815"
     },
     {
       "productCode": "375182P1",
       "price": "109 USD",
       "averageRating": "4.8",
-      "ratingCount": "11156",
-      "reviewCount": "11156"
+      "ratingCount": "11187",
+      "reviewCount": "11187"
     },
     {
       "productCode": "469693P1",
       "price": "106.59 USD",
       "averageRating": "4.9",
-      "ratingCount": "837",
-      "reviewCount": "837"
+      "ratingCount": "839",
+      "reviewCount": "839"
     },
     {
       "productCode": "3961P32",
       "price": "101 USD",
       "averageRating": "4.4",
-      "ratingCount": "1746",
-      "reviewCount": "1746"
+      "ratingCount": "1750",
+      "reviewCount": "1750"
     },
     {
       "productCode": "5563928P2",
@@ -4073,8 +4073,8 @@
       "productCode": "5501HASKY",
       "price": "565 USD",
       "averageRating": "4.9",
-      "ratingCount": "835",
-      "reviewCount": "835"
+      "ratingCount": "836",
+      "reviewCount": "836"
     },
     {
       "productCode": "5069WEST60",
@@ -4094,8 +4094,8 @@
       "productCode": "7029OGGHAN",
       "price": "341.11 USD",
       "averageRating": "4.8",
-      "ratingCount": "344",
-      "reviewCount": "344"
+      "ratingCount": "345",
+      "reviewCount": "345"
     },
     {
       "productCode": "5069DOM",
@@ -4115,8 +4115,8 @@
       "productCode": "326167P1",
       "price": "679 USD",
       "averageRating": "5.0",
-      "ratingCount": "1221",
-      "reviewCount": "1221"
+      "ratingCount": "1223",
+      "reviewCount": "1223"
     },
     {
       "productCode": "320015P2",
@@ -4136,15 +4136,15 @@
       "productCode": "200419P2",
       "price": "229 USD",
       "averageRating": "5.0",
-      "ratingCount": "928",
-      "reviewCount": "928"
+      "ratingCount": "929",
+      "reviewCount": "929"
     },
     {
       "productCode": "105668P1",
       "price": "299 USD",
       "averageRating": "4.9",
-      "ratingCount": "358",
-      "reviewCount": "358"
+      "ratingCount": "360",
+      "reviewCount": "360"
     },
     {
       "productCode": "104589P11",
@@ -4171,15 +4171,15 @@
       "productCode": "241329P1",
       "price": "192.56 USD",
       "averageRating": "4.8",
-      "ratingCount": "724",
-      "reviewCount": "724"
+      "ratingCount": "725",
+      "reviewCount": "725"
     },
     {
       "productCode": "2784P8",
       "price": "278 USD",
       "averageRating": "4.6",
-      "ratingCount": "1444",
-      "reviewCount": "1444"
+      "ratingCount": "1447",
+      "reviewCount": "1447"
     },
     {
       "productCode": "3087MOLL",
@@ -4213,29 +4213,29 @@
       "productCode": "6651BIOD",
       "price": "253.53 USD",
       "averageRating": "4.9",
-      "ratingCount": "7102",
-      "reviewCount": "7102"
+      "ratingCount": "7108",
+      "reviewCount": "7108"
     },
     {
       "productCode": "22796P3",
       "price": "153.34 USD",
       "averageRating": "4.8",
-      "ratingCount": "3049",
-      "reviewCount": "3049"
+      "ratingCount": "3078",
+      "reviewCount": "3078"
     },
     {
       "productCode": "270152P1",
       "price": "404.31 USD",
       "averageRating": "4.8",
-      "ratingCount": "1876",
-      "reviewCount": "1876"
+      "ratingCount": "1879",
+      "reviewCount": "1879"
     },
     {
       "productCode": "6651P4",
       "price": "286.74 USD",
       "averageRating": "4.9",
-      "ratingCount": "1748",
-      "reviewCount": "1748"
+      "ratingCount": "1749",
+      "reviewCount": "1749"
     },
     {
       "productCode": "7443P9",
@@ -4290,8 +4290,8 @@
       "productCode": "190952P3",
       "price": "767.97 USD",
       "averageRating": "4.8",
-      "ratingCount": "133",
-      "reviewCount": "133"
+      "ratingCount": "134",
+      "reviewCount": "134"
     },
     {
       "productCode": "110657P2",
@@ -4311,8 +4311,8 @@
       "productCode": "106191P10",
       "price": "429 USD",
       "averageRating": "5.0",
-      "ratingCount": "1794",
-      "reviewCount": "1794"
+      "ratingCount": "1798",
+      "reviewCount": "1798"
     },
     {
       "productCode": "441243P1",
@@ -4395,8 +4395,8 @@
       "productCode": "2360KAUAI",
       "price": "278.54 USD",
       "averageRating": "4.6",
-      "ratingCount": "582",
-      "reviewCount": "582"
+      "ratingCount": "583",
+      "reviewCount": "583"
     },
     {
       "productCode": "5655PLANTATION",
@@ -4409,8 +4409,8 @@
       "productCode": "6654P2",
       "price": "166.49 USD",
       "averageRating": "5.0",
-      "ratingCount": "7558",
-      "reviewCount": "7558"
+      "ratingCount": "7561",
+      "reviewCount": "7561"
     },
     {
       "productCode": "28456P13",
@@ -4444,29 +4444,29 @@
       "productCode": "287816P1",
       "price": "999 USD",
       "averageRating": "4.8",
-      "ratingCount": "60",
-      "reviewCount": "60"
+      "ratingCount": "61",
+      "reviewCount": "61"
     },
     {
       "productCode": "2804MKS",
       "price": "313.09 USD",
       "averageRating": "4.9",
-      "ratingCount": "1672",
-      "reviewCount": "1672"
+      "ratingCount": "1673",
+      "reviewCount": "1673"
     },
     {
       "productCode": "8945P14",
       "price": "299 USD",
       "averageRating": "4.8",
-      "ratingCount": "274",
-      "reviewCount": "274"
+      "ratingCount": "275",
+      "reviewCount": "275"
     },
     {
       "productCode": "88002P3",
       "price": "260 USD",
       "averageRating": "4.8",
-      "ratingCount": "1779",
-      "reviewCount": "1779"
+      "ratingCount": "1784",
+      "reviewCount": "1784"
     },
     {
       "productCode": "358276P1",
@@ -4507,22 +4507,22 @@
       "productCode": "418633P1",
       "price": "160 USD",
       "averageRating": "4.9",
-      "ratingCount": "315",
-      "reviewCount": "315"
+      "ratingCount": "316",
+      "reviewCount": "316"
     },
     {
       "productCode": "207802P1",
       "price": "50 USD",
       "averageRating": "5.0",
-      "ratingCount": "562",
-      "reviewCount": "562"
+      "ratingCount": "564",
+      "reviewCount": "564"
     },
     {
       "productCode": "41410P10",
       "price": "189 USD",
       "averageRating": "4.9",
-      "ratingCount": "3338",
-      "reviewCount": "3338"
+      "ratingCount": "3339",
+      "reviewCount": "3339"
     },
     {
       "productCode": "8950P6",
@@ -4549,8 +4549,8 @@
       "productCode": "41410P14",
       "price": "149 USD",
       "averageRating": "4.7",
-      "ratingCount": "64",
-      "reviewCount": "64"
+      "ratingCount": "65",
+      "reviewCount": "65"
     },
     {
       "productCode": "8950P37",
@@ -4577,15 +4577,15 @@
       "productCode": "8950P9",
       "price": "89 USD",
       "averageRating": "4.8",
-      "ratingCount": "1736",
-      "reviewCount": "1736"
+      "ratingCount": "1737",
+      "reviewCount": "1737"
     },
     {
       "productCode": "59646P5",
       "price": "95 USD",
       "averageRating": "4.9",
-      "ratingCount": "927",
-      "reviewCount": "927"
+      "ratingCount": "928",
+      "reviewCount": "928"
     },
     {
       "productCode": "323041P1",
@@ -4612,15 +4612,15 @@
       "productCode": "41410P1",
       "price": "79 USD",
       "averageRating": "4.9",
-      "ratingCount": "592",
-      "reviewCount": "592"
+      "ratingCount": "593",
+      "reviewCount": "593"
     },
     {
       "productCode": "72188P1",
       "price": "89 USD",
       "averageRating": "4.9",
-      "ratingCount": "183",
-      "reviewCount": "183"
+      "ratingCount": "185",
+      "reviewCount": "185"
     },
     {
       "productCode": "59646P3",
@@ -4633,8 +4633,8 @@
       "productCode": "74828P1",
       "price": "48 USD",
       "averageRating": "4.9",
-      "ratingCount": "83",
-      "reviewCount": "83"
+      "ratingCount": "84",
+      "reviewCount": "84"
     },
     {
       "productCode": "74828P2",
@@ -4653,9 +4653,9 @@
     {
       "productCode": "74828P4",
       "price": "48 USD",
-      "averageRating": "4.8",
-      "ratingCount": "26",
-      "reviewCount": "26"
+      "averageRating": "4.9",
+      "ratingCount": "28",
+      "reviewCount": "28"
     },
     {
       "productCode": "74828P5",
@@ -4724,8 +4724,8 @@
       "productCode": "205114P1",
       "price": "210 USD",
       "averageRating": "5.0",
-      "ratingCount": "35",
-      "reviewCount": "35"
+      "ratingCount": "36",
+      "reviewCount": "36"
     },
     {
       "productCode": "5653780P1",
@@ -4751,9 +4751,9 @@
     {
       "productCode": "404160P1",
       "price": "85 USD",
-      "averageRating": "5.0",
-      "ratingCount": "7",
-      "reviewCount": "7"
+      "averageRating": "4.5",
+      "ratingCount": "8",
+      "reviewCount": "8"
     },
     {
       "productCode": "87324P2",
@@ -4780,8 +4780,8 @@
       "productCode": "5513806P1",
       "price": "75 USD",
       "averageRating": "5.0",
-      "ratingCount": "48",
-      "reviewCount": "48"
+      "ratingCount": "49",
+      "reviewCount": "49"
     },
     {
       "productCode": "406074P3",
@@ -4850,8 +4850,8 @@
       "productCode": "10428P1",
       "price": "49 USD",
       "averageRating": "4.9",
-      "ratingCount": "2414",
-      "reviewCount": "2414"
+      "ratingCount": "2419",
+      "reviewCount": "2419"
     },
     {
       "productCode": "244340P2",
@@ -4864,22 +4864,22 @@
       "productCode": "121998P6",
       "price": "39 USD",
       "averageRating": "4.8",
-      "ratingCount": "475",
-      "reviewCount": "475"
+      "ratingCount": "478",
+      "reviewCount": "478"
     },
     {
       "productCode": "406074P1",
       "price": "59 USD",
       "averageRating": "4.9",
-      "ratingCount": "254",
-      "reviewCount": "254"
+      "ratingCount": "255",
+      "reviewCount": "255"
     },
     {
       "productCode": "291969P2",
       "price": "49.50 USD",
       "averageRating": "4.7",
-      "ratingCount": "260",
-      "reviewCount": "260"
+      "ratingCount": "261",
+      "reviewCount": "261"
     },
     {
       "productCode": "57338P1",
@@ -4892,15 +4892,15 @@
       "productCode": "42365P4",
       "price": "58.65 USD",
       "averageRating": "4.9",
-      "ratingCount": "1019",
-      "reviewCount": "1019"
+      "ratingCount": "1021",
+      "reviewCount": "1021"
     },
     {
       "productCode": "42365P1",
       "price": "58 USD",
       "averageRating": "4.9",
-      "ratingCount": "572",
-      "reviewCount": "572"
+      "ratingCount": "575",
+      "reviewCount": "575"
     },
     {
       "productCode": "350454P2",
@@ -5004,8 +5004,8 @@
       "productCode": "37391P17",
       "price": "64 USD",
       "averageRating": "4.8",
-      "ratingCount": "240",
-      "reviewCount": "240"
+      "ratingCount": "241",
+      "reviewCount": "241"
     },
     {
       "productCode": "192749P1",
@@ -5081,8 +5081,8 @@
       "productCode": "165275P4",
       "price": "125 USD",
       "averageRating": "4.9",
-      "ratingCount": "174",
-      "reviewCount": "174"
+      "ratingCount": "176",
+      "reviewCount": "176"
     },
     {
       "productCode": "5569540P1",
@@ -5123,8 +5123,8 @@
       "productCode": "422797P7",
       "price": "354 USD",
       "averageRating": "5.0",
-      "ratingCount": "2",
-      "reviewCount": "2"
+      "ratingCount": "3",
+      "reviewCount": "3"
     },
     {
       "productCode": "265766P65",
@@ -5214,8 +5214,8 @@
       "productCode": "24134P2",
       "price": "210 USD",
       "averageRating": "4.9",
-      "ratingCount": "652",
-      "reviewCount": "652"
+      "ratingCount": "653",
+      "reviewCount": "653"
     },
     {
       "productCode": "6896P1",
@@ -5263,15 +5263,15 @@
       "productCode": "24134P13",
       "price": "397 USD",
       "averageRating": "4.9",
-      "ratingCount": "34",
-      "reviewCount": "34"
+      "ratingCount": "35",
+      "reviewCount": "35"
     },
     {
       "productCode": "18497P1",
       "price": "182.61 USD",
       "averageRating": "5.0",
-      "ratingCount": "117",
-      "reviewCount": "117"
+      "ratingCount": "118",
+      "reviewCount": "118"
     },
     {
       "productCode": "24134P16",
@@ -5284,8 +5284,8 @@
       "productCode": "24134P3",
       "price": "210 USD",
       "averageRating": "4.9",
-      "ratingCount": "509",
-      "reviewCount": "509"
+      "ratingCount": "512",
+      "reviewCount": "512"
     },
     {
       "productCode": "6896MOABCHPARK",
@@ -5347,22 +5347,22 @@
       "productCode": "124652P2",
       "price": "99 USD",
       "averageRating": "4.8",
-      "ratingCount": "761",
-      "reviewCount": "761"
+      "ratingCount": "768",
+      "reviewCount": "768"
     },
     {
       "productCode": "266852P3",
       "price": "190 USD",
       "averageRating": "4.9",
-      "ratingCount": "562",
-      "reviewCount": "562"
+      "ratingCount": "571",
+      "reviewCount": "571"
     },
     {
       "productCode": "87115P76",
       "price": "149 USD",
       "averageRating": "4.7",
-      "ratingCount": "356",
-      "reviewCount": "356"
+      "ratingCount": "362",
+      "reviewCount": "362"
     },
     {
       "productCode": "265766P25",
@@ -5375,8 +5375,8 @@
       "productCode": "227717P1",
       "price": "900 USD",
       "averageRating": "5.0",
-      "ratingCount": "272",
-      "reviewCount": "272"
+      "ratingCount": "273",
+      "reviewCount": "273"
     },
     {
       "productCode": "227717P2",
@@ -5396,8 +5396,8 @@
       "productCode": "485251P2",
       "price": "700 USD",
       "averageRating": "4.8",
-      "ratingCount": "46",
-      "reviewCount": "46"
+      "ratingCount": "47",
+      "reviewCount": "47"
     },
     {
       "productCode": "265766P29",
@@ -5438,8 +5438,8 @@
       "productCode": "265766P17",
       "price": "851 USD",
       "averageRating": "5.0",
-      "ratingCount": "118",
-      "reviewCount": "118"
+      "ratingCount": "120",
+      "reviewCount": "120"
     },
     {
       "productCode": "8607P1",
@@ -5473,8 +5473,8 @@
       "productCode": "103194P1",
       "price": "270.51 USD",
       "averageRating": "5.0",
-      "ratingCount": "696",
-      "reviewCount": "696"
+      "ratingCount": "697",
+      "reviewCount": "697"
     },
     {
       "productCode": "306564P1",
@@ -5501,8 +5501,8 @@
       "productCode": "62043P1",
       "price": "161.14 USD",
       "averageRating": "4.8",
-      "ratingCount": "1041",
-      "reviewCount": "1041"
+      "ratingCount": "1046",
+      "reviewCount": "1046"
     },
     {
       "productCode": "2452L02",
@@ -5536,15 +5536,15 @@
       "productCode": "24338P83",
       "price": "79.95 USD",
       "averageRating": "4.5",
-      "ratingCount": "496",
-      "reviewCount": "496"
+      "ratingCount": "498",
+      "reviewCount": "498"
     },
     {
       "productCode": "3862BICYCLE",
       "price": "60.87 USD",
       "averageRating": "4.9",
-      "ratingCount": "1472",
-      "reviewCount": "1472"
+      "ratingCount": "1473",
+      "reviewCount": "1473"
     },
     {
       "productCode": "40046P15",
@@ -5592,8 +5592,8 @@
       "productCode": "30791P192",
       "price": "93.43 USD",
       "averageRating": "4.8",
-      "ratingCount": "325",
-      "reviewCount": "325"
+      "ratingCount": "324",
+      "reviewCount": "324"
     },
     {
       "productCode": "24380P214",
@@ -5641,29 +5641,29 @@
       "productCode": "6353P9",
       "price": "151.10 USD",
       "averageRating": "5.0",
-      "ratingCount": "1079",
-      "reviewCount": "1079"
+      "ratingCount": "1085",
+      "reviewCount": "1085"
     },
     {
       "productCode": "3731LOUVRE",
       "price": "75.32 USD",
       "averageRating": "4.5",
-      "ratingCount": "13527",
-      "reviewCount": "13527"
+      "ratingCount": "13570",
+      "reviewCount": "13570"
     },
     {
       "productCode": "67584P1",
       "price": "52.05 USD",
       "averageRating": "4.7",
-      "ratingCount": "1373",
-      "reviewCount": "1373"
+      "ratingCount": "1375",
+      "reviewCount": "1375"
     },
     {
       "productCode": "3588PARIS01",
       "price": "45.16 USD",
       "averageRating": "4.8",
-      "ratingCount": "1252",
-      "reviewCount": "1252"
+      "ratingCount": "1253",
+      "reviewCount": "1253"
     },
     {
       "productCode": "3588PARIS03",
@@ -5676,8 +5676,8 @@
       "productCode": "3588VERSA",
       "price": "114.91 USD",
       "averageRating": "4.8",
-      "ratingCount": "2293",
-      "reviewCount": "2293"
+      "ratingCount": "2294",
+      "reviewCount": "2294"
     },
     {
       "productCode": "47475P6",
@@ -5697,8 +5697,8 @@
       "productCode": "46334P22",
       "price": "80.94 USD",
       "averageRating": "4.7",
-      "ratingCount": "1197",
-      "reviewCount": "1197"
+      "ratingCount": "1200",
+      "reviewCount": "1200"
     },
     {
       "productCode": "110975P7",
@@ -5725,8 +5725,8 @@
       "productCode": "9866P50",
       "price": "336.41 USD",
       "averageRating": "4.9",
-      "ratingCount": "108",
-      "reviewCount": "108"
+      "ratingCount": "109",
+      "reviewCount": "109"
     },
     {
       "productCode": "2646BCNBALLOON",
@@ -5745,9 +5745,9 @@
     {
       "productCode": "6874P23",
       "price": "138.95 USD",
-      "averageRating": "4.8",
-      "ratingCount": "435",
-      "reviewCount": "435"
+      "averageRating": "4.7",
+      "ratingCount": "440",
+      "reviewCount": "440"
     },
     {
       "productCode": "127264P9",
@@ -5766,16 +5766,16 @@
     {
       "productCode": "16168P24",
       "price": "112.90 USD",
-      "averageRating": "4.9",
-      "ratingCount": "3056",
-      "reviewCount": "3056"
+      "averageRating": "4.8",
+      "ratingCount": "3085",
+      "reviewCount": "3085"
     },
     {
       "productCode": "43217P5",
       "price": "98.43 USD",
       "averageRating": "5.0",
-      "ratingCount": "5107",
-      "reviewCount": "5107"
+      "ratingCount": "5114",
+      "reviewCount": "5114"
     },
     {
       "productCode": "3993FTBB",
@@ -5788,29 +5788,29 @@
       "productCode": "9866P31",
       "price": "138.67 USD",
       "averageRating": "4.9",
-      "ratingCount": "1130",
-      "reviewCount": "1130"
+      "ratingCount": "1135",
+      "reviewCount": "1135"
     },
     {
       "productCode": "9866P29",
       "price": "113.86 USD",
       "averageRating": "4.9",
-      "ratingCount": "8307",
-      "reviewCount": "8307"
+      "ratingCount": "8316",
+      "reviewCount": "8316"
     },
     {
       "productCode": "16168P23",
       "price": "68.32 USD",
       "averageRating": "4.7",
-      "ratingCount": "1128",
-      "reviewCount": "1128"
+      "ratingCount": "1129",
+      "reviewCount": "1129"
     },
     {
       "productCode": "5689P12",
       "price": "102.80 USD",
       "averageRating": "4.8",
-      "ratingCount": "381",
-      "reviewCount": "381"
+      "ratingCount": "382",
+      "reviewCount": "382"
     },
     {
       "productCode": "120041P6",
@@ -5830,22 +5830,22 @@
       "productCode": "9866P55",
       "price": "92.03 USD",
       "averageRating": "4.9",
-      "ratingCount": "2141",
-      "reviewCount": "2141"
+      "ratingCount": "2155",
+      "reviewCount": "2155"
     },
     {
       "productCode": "75037P3",
       "price": "154.06 USD",
       "averageRating": "5.0",
-      "ratingCount": "1847",
-      "reviewCount": "1847"
+      "ratingCount": "1849",
+      "reviewCount": "1849"
     },
     {
       "productCode": "391465P2",
       "price": "89.42 USD",
       "averageRating": "4.9",
-      "ratingCount": "1645",
-      "reviewCount": "1645"
+      "ratingCount": "1650",
+      "reviewCount": "1650"
     },
     {
       "productCode": "367403P1",
@@ -5872,8 +5872,8 @@
       "productCode": "133210P3",
       "price": "78.68 USD",
       "averageRating": "5.0",
-      "ratingCount": "248",
-      "reviewCount": "248"
+      "ratingCount": "249",
+      "reviewCount": "249"
     },
     {
       "productCode": "123593P20",
@@ -5886,8 +5886,8 @@
       "productCode": "7812P3",
       "price": "125.86 USD",
       "averageRating": "5.0",
-      "ratingCount": "1088",
-      "reviewCount": "1088"
+      "ratingCount": "1090",
+      "reviewCount": "1090"
     },
     {
       "productCode": "20163P100",
@@ -5907,29 +5907,29 @@
       "productCode": "5284APPIAN",
       "price": "98.43 USD",
       "averageRating": "4.9",
-      "ratingCount": "1948",
-      "reviewCount": "1948"
+      "ratingCount": "1951",
+      "reviewCount": "1951"
     },
     {
       "productCode": "85309P4",
       "price": "73.13 USD",
       "averageRating": "4.8",
-      "ratingCount": "368",
-      "reviewCount": "368"
+      "ratingCount": "369",
+      "reviewCount": "369"
     },
     {
       "productCode": "24338P3",
       "price": "79.95 USD",
       "averageRating": "4.9",
-      "ratingCount": "1699",
-      "reviewCount": "1699"
+      "ratingCount": "1709",
+      "reviewCount": "1709"
     },
     {
       "productCode": "3731VATICAN",
       "price": "116.49 USD",
       "averageRating": "4.5",
-      "ratingCount": "41784",
-      "reviewCount": "41784"
+      "ratingCount": "41837",
+      "reviewCount": "41837"
     },
     {
       "productCode": "140596P2",
@@ -5963,22 +5963,22 @@
       "productCode": "15693P31",
       "price": "149.38 USD",
       "averageRating": "4.8",
-      "ratingCount": "5073",
-      "reviewCount": "5073"
+      "ratingCount": "5092",
+      "reviewCount": "5092"
     },
     {
       "productCode": "15693STMARK",
       "price": "113.48 USD",
       "averageRating": "4.7",
-      "ratingCount": "1577",
-      "reviewCount": "1577"
+      "ratingCount": "1583",
+      "reviewCount": "1583"
     },
     {
       "productCode": "6718P153",
       "price": "230.99 USD",
       "averageRating": "5.0",
-      "ratingCount": "438",
-      "reviewCount": "438"
+      "ratingCount": "442",
+      "reviewCount": "442"
     },
     {
       "productCode": "9555P4",
@@ -5991,22 +5991,22 @@
       "productCode": "2635PDOLOMITE",
       "price": "237.39 USD",
       "averageRating": "4.6",
-      "ratingCount": "1560",
-      "reviewCount": "1560"
+      "ratingCount": "1562",
+      "reviewCount": "1562"
     },
     {
       "productCode": "7812P214",
       "price": "121.50 USD",
       "averageRating": "4.9",
-      "ratingCount": "334",
-      "reviewCount": "334"
+      "ratingCount": "335",
+      "reviewCount": "335"
     },
     {
       "productCode": "3731MURANO",
       "price": "56.74 USD",
       "averageRating": "4.7",
-      "ratingCount": "9519",
-      "reviewCount": "9519"
+      "ratingCount": "9553",
+      "reviewCount": "9553"
     },
     {
       "productCode": "92490P4",
@@ -6019,8 +6019,8 @@
       "productCode": "139660P3",
       "price": "332.92 USD",
       "averageRating": "5.0",
-      "ratingCount": "279",
-      "reviewCount": "279"
+      "ratingCount": "280",
+      "reviewCount": "280"
     },
     {
       "productCode": "6290AMS4",
@@ -6040,8 +6040,8 @@
       "productCode": "221267P4",
       "price": "103.02 USD",
       "averageRating": "4.9",
-      "ratingCount": "529",
-      "reviewCount": "529"
+      "ratingCount": "530",
+      "reviewCount": "530"
     },
     {
       "productCode": "9093P9",
@@ -6054,15 +6054,15 @@
       "productCode": "6624FOOD",
       "price": "108.86 USD",
       "averageRating": "4.9",
-      "ratingCount": "2709",
-      "reviewCount": "2709"
+      "ratingCount": "2710",
+      "reviewCount": "2710"
     },
     {
       "productCode": "375412P1",
       "price": "103.06 USD",
       "averageRating": "4.9",
-      "ratingCount": "4424",
-      "reviewCount": "4424"
+      "ratingCount": "4437",
+      "reviewCount": "4437"
     },
     {
       "productCode": "6464CITY",
@@ -6075,8 +6075,8 @@
       "productCode": "6464COUNTRY",
       "price": "48.23 USD",
       "averageRating": "4.8",
-      "ratingCount": "1704",
-      "reviewCount": "1704"
+      "ratingCount": "1706",
+      "reviewCount": "1706"
     },
     {
       "productCode": "6412WALK",
@@ -6088,16 +6088,16 @@
     {
       "productCode": "61268P6",
       "price": "40.55 USD",
-      "averageRating": "4.7",
-      "ratingCount": "6475",
-      "reviewCount": "6475"
+      "averageRating": "4.8",
+      "ratingCount": "6490",
+      "reviewCount": "6490"
     },
     {
       "productCode": "75227P6",
       "price": "19.71 USD",
       "averageRating": "4.8",
-      "ratingCount": "33477",
-      "reviewCount": "33477"
+      "ratingCount": "33492",
+      "reviewCount": "33492"
     },
     {
       "productCode": "103208P1",
@@ -6117,8 +6117,8 @@
       "productCode": "7812P20",
       "price": "117.04 USD",
       "averageRating": "4.9",
-      "ratingCount": "2245",
-      "reviewCount": "2245"
+      "ratingCount": "2260",
+      "reviewCount": "2260"
     },
     {
       "productCode": "26444P13",
@@ -6131,8 +6131,8 @@
       "productCode": "8954P33",
       "price": "113.75 USD",
       "averageRating": "4.9",
-      "ratingCount": "78",
-      "reviewCount": "78"
+      "ratingCount": "80",
+      "reviewCount": "80"
     },
     {
       "productCode": "37082P4",
@@ -6173,22 +6173,22 @@
       "productCode": "33832P1",
       "price": "46.32 USD",
       "averageRating": "4.9",
-      "ratingCount": "6752",
-      "reviewCount": "6752"
+      "ratingCount": "6783",
+      "reviewCount": "6783"
     },
     {
       "productCode": "8962P3",
       "price": "86.85 USD",
       "averageRating": "4.5",
-      "ratingCount": "1295",
-      "reviewCount": "1295"
+      "ratingCount": "1297",
+      "reviewCount": "1297"
     },
     {
       "productCode": "5299MOHER",
       "price": "77.03 USD",
       "averageRating": "4.6",
-      "ratingCount": "2956",
-      "reviewCount": "2956"
+      "ratingCount": "2957",
+      "reviewCount": "2957"
     },
     {
       "productCode": "8962P4",
@@ -6201,15 +6201,15 @@
       "productCode": "5300TITANIC",
       "price": "102.15 USD",
       "averageRating": "4.9",
-      "ratingCount": "4010",
-      "reviewCount": "4010"
+      "ratingCount": "4014",
+      "reviewCount": "4014"
     },
     {
       "productCode": "225004",
       "price": "83.47 USD",
       "averageRating": "4.7",
-      "ratingCount": "2233",
-      "reviewCount": "2233"
+      "ratingCount": "2239",
+      "reviewCount": "2239"
     },
     {
       "productCode": "225008",
@@ -6229,8 +6229,8 @@
       "productCode": "401019P1",
       "price": "1211.93 USD",
       "averageRating": "5.0",
-      "ratingCount": "200",
-      "reviewCount": "200"
+      "ratingCount": "201",
+      "reviewCount": "201"
     },
     {
       "productCode": "8616P6",
@@ -6271,15 +6271,15 @@
       "productCode": "5256HLOCHNESS",
       "price": "83.95 USD",
       "averageRating": "4.6",
-      "ratingCount": "2970",
-      "reviewCount": "2970"
+      "ratingCount": "2972",
+      "reviewCount": "2972"
     },
     {
       "productCode": "7812P14",
       "price": "125.53 USD",
       "averageRating": "4.9",
-      "ratingCount": "1395",
-      "reviewCount": "1395"
+      "ratingCount": "1396",
+      "reviewCount": "1396"
     },
     {
       "productCode": "109681P1",
@@ -6292,22 +6292,22 @@
       "productCode": "293401SECRETS",
       "price": "68.36 USD",
       "averageRating": "4.8",
-      "ratingCount": "1901",
-      "reviewCount": "1901"
+      "ratingCount": "1910",
+      "reviewCount": "1910"
     },
     {
       "productCode": "5211P20",
       "price": "88.01 USD",
       "averageRating": "4.9",
-      "ratingCount": "2147",
-      "reviewCount": "2147"
+      "ratingCount": "2155",
+      "reviewCount": "2155"
     },
     {
       "productCode": "6898P9",
       "price": "78.13 USD",
       "averageRating": "4.7",
-      "ratingCount": "588",
-      "reviewCount": "588"
+      "ratingCount": "589",
+      "reviewCount": "589"
     },
     {
       "productCode": "5211WHISKY",
@@ -6320,8 +6320,8 @@
       "productCode": "72560P6",
       "price": "135.05 USD",
       "averageRating": "4.8",
-      "ratingCount": "702",
-      "reviewCount": "702"
+      "ratingCount": "704",
+      "reviewCount": "704"
     },
     {
       "productCode": "6898P18",
@@ -6341,8 +6341,8 @@
       "productCode": "247495P2",
       "price": "210.80 USD",
       "averageRating": "4.9",
-      "ratingCount": "4809",
-      "reviewCount": "4809"
+      "ratingCount": "4811",
+      "reviewCount": "4811"
     },
     {
       "productCode": "33804P2",
@@ -6362,8 +6362,8 @@
       "productCode": "325968P1",
       "price": "144 USD",
       "averageRating": "4.8",
-      "ratingCount": "1567",
-      "reviewCount": "1567"
+      "ratingCount": "1569",
+      "reviewCount": "1569"
     },
     {
       "productCode": "33804P1",
@@ -6411,22 +6411,22 @@
       "productCode": "5885P231",
       "price": "34 USD",
       "averageRating": "4.7",
-      "ratingCount": "16962",
-      "reviewCount": "16962"
+      "ratingCount": "16978",
+      "reviewCount": "16978"
     },
     {
       "productCode": "110186P7",
       "price": "39 USD",
       "averageRating": "4.8",
-      "ratingCount": "6901",
-      "reviewCount": "6901"
+      "ratingCount": "6902",
+      "reviewCount": "6902"
     },
     {
       "productCode": "308891P15",
       "price": "65 USD",
       "averageRating": "4.7",
-      "ratingCount": "6213",
-      "reviewCount": "6213"
+      "ratingCount": "6237",
+      "reviewCount": "6237"
     },
     {
       "productCode": "252732P1",
@@ -6467,36 +6467,36 @@
       "productCode": "12861P5",
       "price": "129 USD",
       "averageRating": "4.8",
-      "ratingCount": "4339",
-      "reviewCount": "4339"
+      "ratingCount": "4340",
+      "reviewCount": "4340"
     },
     {
       "productCode": "6200P5",
       "price": "149 USD",
       "averageRating": "4.6",
-      "ratingCount": "3623",
-      "reviewCount": "3623"
+      "ratingCount": "3632",
+      "reviewCount": "3632"
     },
     {
       "productCode": "308891P25",
       "price": "49 USD",
       "averageRating": "4.8",
-      "ratingCount": "1410",
-      "reviewCount": "1410"
+      "ratingCount": "1415",
+      "reviewCount": "1415"
     },
     {
       "productCode": "42786P2",
       "price": "69 USD",
       "averageRating": "4.7",
-      "ratingCount": "2818",
-      "reviewCount": "2818"
+      "ratingCount": "2825",
+      "reviewCount": "2825"
     },
     {
       "productCode": "368094P1",
       "price": "75 USD",
       "averageRating": "4.5",
-      "ratingCount": "3039",
-      "reviewCount": "3039"
+      "ratingCount": "3053",
+      "reviewCount": "3053"
     },
     {
       "productCode": "2736P31",
@@ -6509,15 +6509,15 @@
       "productCode": "22116P7",
       "price": "81 USD",
       "averageRating": "4.9",
-      "ratingCount": "869",
-      "reviewCount": "869"
+      "ratingCount": "870",
+      "reviewCount": "870"
     },
     {
       "productCode": "7053ZIP",
       "price": "118 USD",
       "averageRating": "4.9",
-      "ratingCount": "4019",
-      "reviewCount": "4019"
+      "ratingCount": "4021",
+      "reviewCount": "4021"
     },
     {
       "productCode": "24191P1",
@@ -6621,8 +6621,8 @@
       "productCode": "13221P9",
       "price": "130 USD",
       "averageRating": "4.7",
-      "ratingCount": "601",
-      "reviewCount": "601"
+      "ratingCount": "602",
+      "reviewCount": "602"
     },
     {
       "productCode": "177104P1",
@@ -6670,8 +6670,8 @@
       "productCode": "89089P57",
       "price": "25 USD",
       "averageRating": "4.9",
-      "ratingCount": "3203",
-      "reviewCount": "3203"
+      "ratingCount": "3213",
+      "reviewCount": "3213"
     },
     {
       "productCode": "49313P1",
@@ -6684,8 +6684,8 @@
       "productCode": "120993P16",
       "price": "40 USD",
       "averageRating": "4.9",
-      "ratingCount": "657",
-      "reviewCount": "657"
+      "ratingCount": "659",
+      "reviewCount": "659"
     },
     {
       "productCode": "200691P13",
@@ -6719,15 +6719,15 @@
       "productCode": "168853P1",
       "price": "334 USD",
       "averageRating": "4.8",
-      "ratingCount": "346",
-      "reviewCount": "346"
+      "ratingCount": "347",
+      "reviewCount": "347"
     },
     {
       "productCode": "19345P9",
       "price": "469 USD",
       "averageRating": "4.8",
-      "ratingCount": "1293",
-      "reviewCount": "1293"
+      "ratingCount": "1294",
+      "reviewCount": "1294"
     },
     {
       "productCode": "19345P27",
@@ -6754,8 +6754,8 @@
       "productCode": "148831P28",
       "price": "55 USD",
       "averageRating": "4.9",
-      "ratingCount": "342",
-      "reviewCount": "342"
+      "ratingCount": "344",
+      "reviewCount": "344"
     },
     {
       "productCode": "85155P2",
@@ -6775,15 +6775,15 @@
       "productCode": "226342P3",
       "price": "75 USD",
       "averageRating": "4.9",
-      "ratingCount": "1435",
-      "reviewCount": "1435"
+      "ratingCount": "1439",
+      "reviewCount": "1439"
     },
     {
       "productCode": "141439P1",
       "price": "140 USD",
       "averageRating": "4.8",
-      "ratingCount": "249",
-      "reviewCount": "249"
+      "ratingCount": "251",
+      "reviewCount": "251"
     },
     {
       "productCode": "17020P17",
@@ -6803,8 +6803,8 @@
       "productCode": "20297P1",
       "price": "206.32 USD",
       "averageRating": "5.0",
-      "ratingCount": "361",
-      "reviewCount": "361"
+      "ratingCount": "362",
+      "reviewCount": "362"
     },
     {
       "productCode": "11557P1",
@@ -6817,8 +6817,8 @@
       "productCode": "38668P1",
       "price": "195.37 USD",
       "averageRating": "4.9",
-      "ratingCount": "797",
-      "reviewCount": "797"
+      "ratingCount": "798",
+      "reviewCount": "798"
     },
     {
       "productCode": "21513P8",
@@ -6831,22 +6831,22 @@
       "productCode": "21715P2",
       "price": "75 USD",
       "averageRating": "4.7",
-      "ratingCount": "3393",
-      "reviewCount": "3393"
+      "ratingCount": "3395",
+      "reviewCount": "3395"
     },
     {
       "productCode": "8753P120",
       "price": "112 USD",
       "averageRating": "4.7",
-      "ratingCount": "806",
-      "reviewCount": "806"
+      "ratingCount": "808",
+      "reviewCount": "808"
     },
     {
       "productCode": "186670P1",
       "price": "199.44 USD",
       "averageRating": "5.0",
-      "ratingCount": "2247",
-      "reviewCount": "2247"
+      "ratingCount": "2250",
+      "reviewCount": "2250"
     },
     {
       "productCode": "179234P2",
@@ -6866,15 +6866,15 @@
       "productCode": "92136P34",
       "price": "156.60 USD",
       "averageRating": "4.9",
-      "ratingCount": "4797",
-      "reviewCount": "4797"
+      "ratingCount": "4814",
+      "reviewCount": "4814"
     },
     {
       "productCode": "30791P157",
       "price": "74.48 USD",
       "averageRating": "4.9",
-      "ratingCount": "1240",
-      "reviewCount": "1240"
+      "ratingCount": "1242",
+      "reviewCount": "1242"
     },
     {
       "productCode": "33215P1",
@@ -6901,8 +6901,8 @@
       "productCode": "130384P1",
       "price": "533.85 USD",
       "averageRating": "4.9",
-      "ratingCount": "2647",
-      "reviewCount": "2647"
+      "ratingCount": "2665",
+      "reviewCount": "2665"
     },
     {
       "productCode": "65053P9",
@@ -6915,8 +6915,8 @@
       "productCode": "40436P1",
       "price": "1281.24 USD",
       "averageRating": "5.0",
-      "ratingCount": "404",
-      "reviewCount": "404"
+      "ratingCount": "405",
+      "reviewCount": "405"
     },
     {
       "productCode": "40436P7",
@@ -6936,43 +6936,43 @@
       "productCode": "319176P1",
       "price": "132.48 USD",
       "averageRating": "4.5",
-      "ratingCount": "157",
-      "reviewCount": "157"
+      "ratingCount": "158",
+      "reviewCount": "158"
     },
     {
       "productCode": "92136P55",
       "price": "156.60 USD",
       "averageRating": "4.9",
-      "ratingCount": "1671",
-      "reviewCount": "1671"
+      "ratingCount": "1677",
+      "reviewCount": "1677"
     },
     {
       "productCode": "92136P37",
       "price": "107.24 USD",
       "averageRating": "4.9",
-      "ratingCount": "757",
-      "reviewCount": "757"
+      "ratingCount": "759",
+      "reviewCount": "759"
     },
     {
       "productCode": "92136P49",
       "price": "659.84 USD",
       "averageRating": "4.9",
-      "ratingCount": "495",
-      "reviewCount": "495"
+      "ratingCount": "496",
+      "reviewCount": "496"
     },
     {
       "productCode": "21490P11",
       "price": "150 USD",
       "averageRating": "4.9",
-      "ratingCount": "446",
-      "reviewCount": "446"
+      "ratingCount": "448",
+      "reviewCount": "448"
     },
     {
       "productCode": "285124P1",
       "price": "192.19 USD",
       "averageRating": "5.0",
-      "ratingCount": "1395",
-      "reviewCount": "1395"
+      "ratingCount": "1400",
+      "reviewCount": "1400"
     },
     {
       "productCode": "5924KYOCUSTOM_FULL",
@@ -6999,8 +6999,8 @@
       "productCode": "103013P3",
       "price": "181.28 USD",
       "averageRating": "5.0",
-      "ratingCount": "580",
-      "reviewCount": "580"
+      "ratingCount": "581",
+      "reviewCount": "581"
     },
     {
       "productCode": "38922P3",
@@ -7013,8 +7013,8 @@
       "productCode": "63670P28",
       "price": "61.06 USD",
       "averageRating": "5.0",
-      "ratingCount": "1955",
-      "reviewCount": "1955"
+      "ratingCount": "1960",
+      "reviewCount": "1960"
     },
     {
       "productCode": "92281P2",
@@ -7027,8 +7027,8 @@
       "productCode": "293458P17",
       "price": "55.05 USD",
       "averageRating": "4.9",
-      "ratingCount": "151",
-      "reviewCount": "151"
+      "ratingCount": "152",
+      "reviewCount": "152"
     },
     {
       "productCode": "5522662P20",
@@ -7083,15 +7083,15 @@
       "productCode": "198444P1",
       "price": "38.37 USD",
       "averageRating": "5.0",
-      "ratingCount": "842",
-      "reviewCount": "842"
+      "ratingCount": "846",
+      "reviewCount": "846"
     },
     {
       "productCode": "112650P5",
       "price": "36.44 USD",
       "averageRating": "4.7",
-      "ratingCount": "6760",
-      "reviewCount": "6760"
+      "ratingCount": "6763",
+      "reviewCount": "6763"
     },
     {
       "productCode": "6924BKKGHTB07",
@@ -7104,15 +7104,15 @@
       "productCode": "8374P24",
       "price": "30.70 USD",
       "averageRating": "4.5",
-      "ratingCount": "4409",
-      "reviewCount": "4409"
+      "ratingCount": "4416",
+      "reviewCount": "4416"
     },
     {
       "productCode": "203208P12",
       "price": "249.39 USD",
       "averageRating": "4.7",
-      "ratingCount": "478",
-      "reviewCount": "478"
+      "ratingCount": "479",
+      "reviewCount": "479"
     },
     {
       "productCode": "30791P719",
@@ -7132,8 +7132,8 @@
       "productCode": "223757P4",
       "price": "148 USD",
       "averageRating": "5.0",
-      "ratingCount": "929",
-      "reviewCount": "929"
+      "ratingCount": "931",
+      "reviewCount": "931"
     },
     {
       "productCode": "102132P3",
@@ -7160,8 +7160,8 @@
       "productCode": "45610P13",
       "price": "87.36 USD",
       "averageRating": "4.9",
-      "ratingCount": "2824",
-      "reviewCount": "2824"
+      "ratingCount": "2839",
+      "reviewCount": "2839"
     },
     {
       "productCode": "5570MGK",
@@ -7188,29 +7188,29 @@
       "productCode": "57811P2",
       "price": "47.01 USD",
       "averageRating": "4.9",
-      "ratingCount": "597",
-      "reviewCount": "597"
+      "ratingCount": "598",
+      "reviewCount": "598"
     },
     {
       "productCode": "86621P5",
       "price": "100 USD",
       "averageRating": "5.0",
-      "ratingCount": "17637",
-      "reviewCount": "17637"
+      "ratingCount": "17655",
+      "reviewCount": "17655"
     },
     {
       "productCode": "86621P2",
       "price": "105 USD",
       "averageRating": "5.0",
-      "ratingCount": "3929",
-      "reviewCount": "3929"
+      "ratingCount": "3932",
+      "reviewCount": "3932"
     },
     {
       "productCode": "86621P3",
       "price": "100 USD",
       "averageRating": "5.0",
-      "ratingCount": "2252",
-      "reviewCount": "2252"
+      "ratingCount": "2251",
+      "reviewCount": "2251"
     },
     {
       "productCode": "60357P25",
@@ -7223,15 +7223,15 @@
       "productCode": "206176P2",
       "price": "35 USD",
       "averageRating": "4.9",
-      "ratingCount": "2335",
-      "reviewCount": "2335"
+      "ratingCount": "2337",
+      "reviewCount": "2337"
     },
     {
       "productCode": "11769P30",
       "price": "39 USD",
       "averageRating": "5.0",
-      "ratingCount": "2768",
-      "reviewCount": "2768"
+      "ratingCount": "2769",
+      "reviewCount": "2769"
     },
     {
       "productCode": "243038P1",
@@ -7251,8 +7251,8 @@
       "productCode": "52577P9",
       "price": "26 USD",
       "averageRating": "4.9",
-      "ratingCount": "562",
-      "reviewCount": "562"
+      "ratingCount": "563",
+      "reviewCount": "563"
     },
     {
       "productCode": "92029P158",
@@ -7265,15 +7265,15 @@
       "productCode": "117975P5",
       "price": "41.80 USD",
       "averageRating": "4.9",
-      "ratingCount": "1213",
-      "reviewCount": "1213"
+      "ratingCount": "1217",
+      "reviewCount": "1217"
     },
     {
       "productCode": "66791P20",
       "price": "25.87 USD",
       "averageRating": "4.9",
-      "ratingCount": "629",
-      "reviewCount": "629"
+      "ratingCount": "631",
+      "reviewCount": "631"
     },
     {
       "productCode": "42053P19",
@@ -7286,8 +7286,8 @@
       "productCode": "6780P36",
       "price": "240 USD",
       "averageRating": "5.0",
-      "ratingCount": "593",
-      "reviewCount": "593"
+      "ratingCount": "602",
+      "reviewCount": "602"
     },
     {
       "productCode": "470724P1",
@@ -7307,43 +7307,43 @@
       "productCode": "6780CITY_FULLDAY",
       "price": "80 USD",
       "averageRating": "4.9",
-      "ratingCount": "4605",
-      "reviewCount": "4605"
+      "ratingCount": "4649",
+      "reviewCount": "4649"
     },
     {
       "productCode": "6780P26",
       "price": "79 USD",
       "averageRating": "4.9",
-      "ratingCount": "258",
-      "reviewCount": "258"
+      "ratingCount": "261",
+      "reviewCount": "261"
     },
     {
       "productCode": "30023P9",
       "price": "43.66 USD",
       "averageRating": "4.8",
-      "ratingCount": "90",
-      "reviewCount": "90"
+      "ratingCount": "91",
+      "reviewCount": "91"
     },
     {
       "productCode": "42053P14",
       "price": "53 USD",
       "averageRating": "5.0",
-      "ratingCount": "874",
-      "reviewCount": "874"
+      "ratingCount": "878",
+      "reviewCount": "878"
     },
     {
       "productCode": "48881P11",
       "price": "73.33 USD",
       "averageRating": "4.8",
-      "ratingCount": "606",
-      "reviewCount": "606"
+      "ratingCount": "608",
+      "reviewCount": "608"
     },
     {
       "productCode": "55262P2",
       "price": "91.89 USD",
       "averageRating": "4.9",
-      "ratingCount": "1234",
-      "reviewCount": "1234"
+      "ratingCount": "1249",
+      "reviewCount": "1249"
     },
     {
       "productCode": "48881P82",
@@ -7363,15 +7363,15 @@
       "productCode": "121170P1",
       "price": "91 USD",
       "averageRating": "5.0",
-      "ratingCount": "1111",
-      "reviewCount": "1111"
+      "ratingCount": "1115",
+      "reviewCount": "1115"
     },
     {
       "productCode": "359901P1",
       "price": "47 USD",
       "averageRating": "4.9",
-      "ratingCount": "89",
-      "reviewCount": "89"
+      "ratingCount": "90",
+      "reviewCount": "90"
     },
     {
       "productCode": "255235P5",
@@ -7384,29 +7384,29 @@
       "productCode": "47013P23",
       "price": "45 USD",
       "averageRating": "5.0",
-      "ratingCount": "180",
-      "reviewCount": "180"
+      "ratingCount": "182",
+      "reviewCount": "182"
     },
     {
       "productCode": "92136P44",
       "price": "156.59 USD",
       "averageRating": "4.9",
-      "ratingCount": "197",
-      "reviewCount": "197"
+      "ratingCount": "198",
+      "reviewCount": "198"
     },
     {
       "productCode": "92136P45",
       "price": "106.77 USD",
       "averageRating": "4.8",
-      "ratingCount": "402",
-      "reviewCount": "402"
+      "ratingCount": "404",
+      "reviewCount": "404"
     },
     {
       "productCode": "30791P615",
       "price": "60.93 USD",
       "averageRating": "4.8",
-      "ratingCount": "625",
-      "reviewCount": "625"
+      "ratingCount": "626",
+      "reviewCount": "626"
     },
     {
       "productCode": "429399P2",
@@ -7419,29 +7419,29 @@
       "productCode": "425662P3",
       "price": "93.38 USD",
       "averageRating": "5.0",
-      "ratingCount": "3402",
-      "reviewCount": "3402"
+      "ratingCount": "3464",
+      "reviewCount": "3464"
     },
     {
       "productCode": "130036P2",
       "price": "92.94 USD",
       "averageRating": "4.9",
-      "ratingCount": "3761",
-      "reviewCount": "3761"
+      "ratingCount": "3818",
+      "reviewCount": "3818"
     },
     {
       "productCode": "62558P5",
       "price": "117.45 USD",
       "averageRating": "4.9",
-      "ratingCount": "1131",
-      "reviewCount": "1131"
+      "ratingCount": "1134",
+      "reviewCount": "1134"
     },
     {
       "productCode": "63670P21",
       "price": "110.71 USD",
       "averageRating": "4.8",
-      "ratingCount": "1121",
-      "reviewCount": "1121"
+      "ratingCount": "1129",
+      "reviewCount": "1129"
     },
     {
       "productCode": "62558P2",
@@ -7468,8 +7468,8 @@
       "productCode": "218199P1",
       "price": "83.67 USD",
       "averageRating": "4.9",
-      "ratingCount": "122",
-      "reviewCount": "122"
+      "ratingCount": "123",
+      "reviewCount": "123"
     },
     {
       "productCode": "22288P1",
@@ -7482,8 +7482,8 @@
       "productCode": "425662P2",
       "price": "90.64 USD",
       "averageRating": "5.0",
-      "ratingCount": "1243",
-      "reviewCount": "1243"
+      "ratingCount": "1257",
+      "reviewCount": "1257"
     },
     {
       "productCode": "63670P11",
@@ -7496,8 +7496,8 @@
       "productCode": "130036P1",
       "price": "57.46 USD",
       "averageRating": "4.9",
-      "ratingCount": "1420",
-      "reviewCount": "1420"
+      "ratingCount": "1422",
+      "reviewCount": "1422"
     },
     {
       "productCode": "130036P4",
@@ -7517,8 +7517,8 @@
       "productCode": "394526P1",
       "price": "79 USD",
       "averageRating": "4.9",
-      "ratingCount": "217",
-      "reviewCount": "217"
+      "ratingCount": "218",
+      "reviewCount": "218"
     },
     {
       "productCode": "427786P5",
@@ -7566,8 +7566,8 @@
       "productCode": "22584P1",
       "price": "162.21 USD",
       "averageRating": "4.9",
-      "ratingCount": "9933",
-      "reviewCount": "9933"
+      "ratingCount": "9954",
+      "reviewCount": "9954"
     },
     {
       "productCode": "156795P5",
@@ -7580,15 +7580,15 @@
       "productCode": "14172P3",
       "price": "257.33 USD",
       "averageRating": "4.9",
-      "ratingCount": "141",
-      "reviewCount": "141"
+      "ratingCount": "142",
+      "reviewCount": "142"
     },
     {
       "productCode": "392485P1",
       "price": "143.38 USD",
       "averageRating": "4.8",
-      "ratingCount": "280",
-      "reviewCount": "280"
+      "ratingCount": "281",
+      "reviewCount": "281"
     },
     {
       "productCode": "3293SYDHARBOUR",
@@ -7608,8 +7608,8 @@
       "productCode": "5507708P5",
       "price": "84 USD",
       "averageRating": "4.9",
-      "ratingCount": "145",
-      "reviewCount": "145"
+      "ratingCount": "146",
+      "reviewCount": "146"
     },
     {
       "productCode": "146921P1",
@@ -7664,8 +7664,8 @@
       "productCode": "3378GOLD",
       "price": "171 USD",
       "averageRating": "4.4",
-      "ratingCount": "175",
-      "reviewCount": "175"
+      "ratingCount": "176",
+      "reviewCount": "176"
     },
     {
       "productCode": "3253P11",
@@ -7678,29 +7678,29 @@
       "productCode": "2845P3",
       "price": "194.79 USD",
       "averageRating": "4.3",
-      "ratingCount": "138",
-      "reviewCount": "138"
+      "ratingCount": "139",
+      "reviewCount": "139"
     },
     {
       "productCode": "22448P1",
       "price": "212.96 USD",
-      "averageRating": "4.6",
-      "ratingCount": "868",
-      "reviewCount": "868"
+      "averageRating": "4.7",
+      "ratingCount": "869",
+      "reviewCount": "869"
     },
     {
       "productCode": "76865P1",
       "price": "162.21 USD",
       "averageRating": "4.8",
-      "ratingCount": "424",
-      "reviewCount": "424"
+      "ratingCount": "425",
+      "reviewCount": "425"
     },
     {
       "productCode": "5364FREE",
       "price": "181.76 USD",
       "averageRating": "4.9",
-      "ratingCount": "682",
-      "reviewCount": "682"
+      "ratingCount": "683",
+      "reviewCount": "683"
     },
     {
       "productCode": "2845MIC_C",
@@ -7720,15 +7720,15 @@
       "productCode": "2570CTR",
       "price": "192.24 USD",
       "averageRating": "4.7",
-      "ratingCount": "902",
-      "reviewCount": "902"
+      "ratingCount": "904",
+      "reviewCount": "904"
     },
     {
       "productCode": "611960119T1",
       "price": "143.37 USD",
       "averageRating": "4.8",
-      "ratingCount": "458",
-      "reviewCount": "458"
+      "ratingCount": "459",
+      "reviewCount": "459"
     },
     {
       "productCode": "11730P6",
@@ -7741,22 +7741,22 @@
       "productCode": "20046P3",
       "price": "170.24 USD",
       "averageRating": "4.8",
-      "ratingCount": "257",
-      "reviewCount": "257"
+      "ratingCount": "258",
+      "reviewCount": "258"
     },
     {
       "productCode": "42277P10",
       "price": "190.61 USD",
       "averageRating": "4.8",
-      "ratingCount": "165",
-      "reviewCount": "165"
+      "ratingCount": "166",
+      "reviewCount": "166"
     },
     {
       "productCode": "2570KURANDA",
       "price": "180.77 USD",
       "averageRating": "4.5",
-      "ratingCount": "611",
-      "reviewCount": "611"
+      "ratingCount": "612",
+      "reviewCount": "612"
     },
     {
       "productCode": "37685P1",
@@ -7783,8 +7783,8 @@
       "productCode": "460492P1",
       "price": "115.32 USD",
       "averageRating": "5.0",
-      "ratingCount": "354",
-      "reviewCount": "354"
+      "ratingCount": "355",
+      "reviewCount": "355"
     },
     {
       "productCode": "5762P6",
@@ -7797,8 +7797,8 @@
       "productCode": "58045P5",
       "price": "133.48 USD",
       "averageRating": "4.9",
-      "ratingCount": "148",
-      "reviewCount": "148"
+      "ratingCount": "150",
+      "reviewCount": "150"
     },
     {
       "productCode": "87033P3",
@@ -7818,15 +7818,15 @@
       "productCode": "3910GS76",
       "price": "165.86 USD",
       "averageRating": "4.5",
-      "ratingCount": "713",
-      "reviewCount": "713"
+      "ratingCount": "714",
+      "reviewCount": "714"
     },
     {
       "productCode": "3287_ZQN",
       "price": "186.62 USD",
       "averageRating": "4.9",
-      "ratingCount": "2659",
-      "reviewCount": "2659"
+      "ratingCount": "2663",
+      "reviewCount": "2663"
     },
     {
       "productCode": "5627WILDERNESS",
@@ -7867,8 +7867,8 @@
       "productCode": "3181GOWEST1",
       "price": "97.94 USD",
       "averageRating": "4.9",
-      "ratingCount": "7045",
-      "reviewCount": "7045"
+      "ratingCount": "7052",
+      "reviewCount": "7052"
     },
     {
       "productCode": "39651P1",
@@ -7895,8 +7895,8 @@
       "productCode": "478616P1",
       "price": "90.29 USD",
       "averageRating": "4.9",
-      "ratingCount": "1775",
-      "reviewCount": "1775"
+      "ratingCount": "1803",
+      "reviewCount": "1803"
     },
     {
       "productCode": "6770TOUR4",
@@ -7916,8 +7916,8 @@
       "productCode": "13938P1",
       "price": "188.90 USD",
       "averageRating": "5.0",
-      "ratingCount": "664",
-      "reviewCount": "664"
+      "ratingCount": "665",
+      "reviewCount": "665"
     },
     {
       "productCode": "108928P13",
@@ -7930,15 +7930,15 @@
       "productCode": "179363P2",
       "price": "74.92 USD",
       "averageRating": "5.0",
-      "ratingCount": "162",
-      "reviewCount": "162"
+      "ratingCount": "164",
+      "reviewCount": "164"
     },
     {
       "productCode": "6740JTREE",
       "price": "179 USD",
       "averageRating": "4.8",
-      "ratingCount": "470",
-      "reviewCount": "470"
+      "ratingCount": "471",
+      "reviewCount": "471"
     }
   ]
 }
