@@ -11,10 +11,10 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour kayak tour in the Rookery Bay Estuarine Research Reserve.",
-      "Groups are capped at 10.",
-      "Guests must be at least 4 years old. A full refund is available with at least 48 hours' notice."
-    ],
+      "Paddle into the protected coastal environment of Rookery Bay on a two-hour guided kayak tour from the Naples area. The reserve encompasses mangrove forest, shallow bays and estuarine habitat along southwest Florida's Gulf Coast.",
+      "Traveling by kayak keeps the group close to the water and allows a quieter look at the shoreline than a motorized cruise. Birds and marine life may be encountered, but wildlife sightings depend on season and conditions. The guide sets the route according to weather, tides and the group's pace.",
+      "Groups are capped at 10 and the operator lists a minimum age of four. The meeting point is Capri Paddlecraft Park on Capri Boulevard. Bring sun protection and items that can tolerate getting wet, and confirm what paddling equipment is provided."
+],
     "schemaDescription": "Two-hour kayak tour in Rookery Bay with Florida Adventures and Rentals, for groups of up to 10.",
     "highlights": [
       "two-hour paddle outing in Naples",
@@ -25,7 +25,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/P7hY6A7Q96dHVAKHbWR5"
     ],
     "productImage": "https://cdn.filestackcontent.com/1gcLiu63TkigI9M3sf1F",
-    "wordCount": 38,
+    "wordCount": 125,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Capri Paddlecraft Park, 1295 Capri Blvd, Naples, FL 34113",
@@ -63,8 +63,10 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour paddle outing with La vita é bella - Marco Eco Tours. The group passes Marco Island. The group stays on the water in Naples."
-    ],
+      "Explore the waterways between Naples and Marco Island on a two-hour guided pedal-kayak tour. Pedal propulsion lets guests move through the coastal environment while keeping their hands relatively free compared with traditional paddling.",
+      "The surrounding landscape is a mixture of mangrove shorelines, shallow bays and island waterways characteristic of southwest Florida. Marco Island is specifically associated with the route, although the exact course depends on launch location, tides and weather. Wildlife may appear naturally along the way but is never guaranteed.",
+      "La vita é bella - Marco Eco Tours operates the outing. Confirm the current meeting point and what equipment is supplied before booking, since the source record does not list a meeting location. Dress for sun and the possibility of getting wet."
+],
     "schemaDescription": "Two-hour pedal-kayak tour with Marco Eco Tours, passing Marco Island.",
     "highlights": [
       "two-hour paddle outing in Naples",
@@ -74,7 +76,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/zxpP1xVrTmZdTJlTw4QF"
     ],
     "productImage": "https://cdn.filestackcontent.com/WpeZkDZZRiC8Bg4kDZzJ",
-    "wordCount": 27,
+    "wordCount": 123,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -112,10 +114,10 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests paddle on the water for the whole outing. Time on the water is about 2 hours. A guide stays with the group and chooses the water from recent sightings. The watch includes dolphins, manatees, sea turtles, and conchs. Birds along the same water include bald eagles, pelicans, and osprey.",
-      "The West Indian manatee is the animal this water is known for. The water around the city is the setting, picked for the animals that live there. The group moves at an easy pace, with time to watch rather than cover a set distance. Sea life and birds are both part of what the guide is looking for.",
-      "Manatees, when they are present, are why many guests book this water. Which animals appear depends on the day, and a sighting is not promised."
-    ],
+      "Explore the waters around Naples on a two-hour guided wildlife outing focused on the animals of southwest Florida. The guide chooses the route using recent activity and conditions rather than following a rigid course.",
+      "The search can include dolphins, West Indian manatees, sea turtles and conchs, along with coastal birds such as pelicans, ospreys and bald eagles. The region's shallow bays and estuarine waters provide important habitat, but every animal is wild and no particular sighting can be guaranteed.",
+      "The pace is designed to allow time for observation instead of simply covering distance. Confirm the exact meeting point and current participation details before arrival, since the source listing contains inconsistent activity labeling."
+],
     "schemaDescription": "Two-hour guided paddle in Naples watching for dolphins, manatees, sea turtles, and coastal birds. A sighting is not promised.",
     "highlights": [
       "two-hour walking tour in Naples"
@@ -124,7 +126,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/RH6VUmgQJ6BCLay3Eewz"
     ],
     "productImage": "https://cdn.filestackcontent.com/hNSHADkGRdGafqN6pELJ",
-    "wordCount": 133,
+    "wordCount": 112,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
