@@ -49,9 +49,10 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Nightime Python Road Hunt is a four-hour guided outing with South Florida Airboat Adventures in Miami. The sail runs in the evening under the stars.",
-      "Groups are capped at 4."
-    ],
+      "Join a small-group nighttime python road hunt in the South Florida landscape outside central Miami. This four-hour guided outing takes place after dark, when the environment and visibility are very different from a daytime Everglades sightseeing tour.",
+      "The focus is on searching for invasive Burmese pythons, a species that has had a serious ecological impact in southern Florida. The operator describes a road-based hunt, so participants should expect an active wildlife-search experience rather than a scenic boat cruise. Encounters with animals are unpredictable, and finding a python cannot be guaranteed.",
+      "South Florida Airboat Adventures lists a maximum group size of four, with the meeting location on FL-90 in Miami. Confirm the operator's safety instructions, permitted activities, appropriate clothing and what participation involves before booking. The experience is scheduled for the evening."
+],
     "schemaDescription": "Four-hour evening python hunt in Miami with South Florida Airboat Adventures, for up to four people.",
     "highlights": [
       "four-hour guided outing in Miami",
@@ -59,7 +60,7 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/eD1QWTMYTIeokra7lAOQ",
-    "wordCount": 31,
+    "wordCount": 131,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "5334 FL-90, Miami, FL 33185",
@@ -88,10 +89,10 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Trip: Tour Brickell/Biscayne Bay, marine stadium, Hobie Beach; quick swim at Monument Island or Picnic Island; sunset option via Miami River/Brickell and Fisher Island. Trip: More swim time; tour Millionaire Homes and Sunset Islands; marine stadium/Hobie Beach; recommended Vizcaya sandbar or other sandbars.",
-      "Trip: Combines the above with more flexibility to linger at favored spots; options include Bear Cut, Nixon sandbar, No Name Harbor, Vizcaya Museum, and Key Biscayne. Trip: Access to VIP/exclusive locations weather permitting, such as Stittsville and Fowey Rocks; Haulover sandbar recommended. Space for up to 11 guests with room to move around.",
-      "Options to visit sandbars, Millionaire's Row, Vizcaya, and scenic sunset routes."
-    ],
+      "Explore Biscayne Bay aboard a private 27-foot SeaRay Sundecker with space for up to 11 guests. This flexible charter offers a water-level view of Miami's skyline, waterfront neighborhoods and islands, with the captain shaping the outing around the time booked and conditions on the bay.",
+      "Possible routes include Brickell, the Miami Marine Stadium area, Hobie Beach and views near Fisher Island. Depending on the selected trip, there may be opportunities to swim around Monument Island or Picnic Island, cruise past waterfront homes, or head toward Key Biscayne and the Vizcaya area.",
+      "Longer itinerary options mention Bear Cut, No Name Harbor and other sandbars, but these are alternatives rather than guaranteed stops on every departure. A captain is listed as included. Confirm the charter duration, preferred route and any swimming arrangements before departure."
+],
     "schemaDescription": "Private SeaRay Sundeck charter on Biscayne Bay, with swim stops at Monument Island or Picnic Island and a route that can pass Fisher Island. The boat holds up to 11 guests.",
     "highlights": [
       "Monument Island and Picnic Island",
@@ -101,7 +102,7 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/zxnbwwpETSucNAKlpo90"
     ],
     "productImage": "https://cdn.filestackcontent.com/97GgWakRRqOVVestUsXN",
-    "wordCount": 111,
+    "wordCount": 132,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "201 NW S River Dr Miami, FL 33128 USA",
@@ -130,9 +131,10 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a guided outing with Sky Tours Miami. Private flight, Pilot, and Headset are included. The outing reaches Vizcaya Museum.",
-      "Groups are capped at 3. Guests must be at least 5 years old."
-    ],
+      "See Miami from above on a private airplane sightseeing flight with Sky Tours Miami. The approximately 30-minute experience offers an aerial perspective on the city's dense waterfront neighborhoods and the surrounding coastal landscape.",
+      "The operator identifies Vizcaya Museum as one of the landmarks on the route. From the air, the historic estate and its gardens sit within the larger setting of Biscayne Bay, a striking contrast to Miami's modern high-rise districts. The exact flight path depends on air traffic and weather conditions.",
+      "A pilot and headset are included, and the operator limits each group to three guests. Participants must be at least five years old. Departure information lists Southwest 127th Street in Miami; confirm arrival requirements, weight restrictions and the current flight route before booking."
+],
     "schemaDescription": "Private flight of about 30 minutes with Sky Tours Miami, including a pilot and a headset, passing Vizcaya Museum.",
     "highlights": [
       "30 Mins guided outing",
@@ -143,7 +145,7 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/nyIu36e6QPmi5bNhlTSt"
     ],
     "productImage": "https://cdn.filestackcontent.com/0DSwzrjqRkyXiQSydi6v",
-    "wordCount": 34,
+    "wordCount": 125,
     "durationLabel": "30 Mins",
     "durationIso": null,
     "meetingLocation": "14005 SW 127th St. Unit 120 A Miami, FL 33186",
