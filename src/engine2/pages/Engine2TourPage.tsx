@@ -129,9 +129,30 @@ export default function Engine2TourPage({
     whatYoullExperience: [normalizedTour.content.experienceText],
     highlights: normalizedTour.content.highlights,
   };
+  // Break long FareHarbor editorial copy into readable mobile paragraphs.
+  // Preserve every sentence and its order; this is presentation-only.
+  const splitEditorialParagraphs = (paragraphs: string[]): string[] =>
+    paragraphs.flatMap(paragraph => {
+      if (paragraph.length <= 420) return [paragraph];
+      const sentences = paragraph.match(/[^.!?]+(?:[.!?]+(?=\\s|$)|$)/g);
+      if (!sentences || sentences.length < 2) return [paragraph];
+      const chunks: string[] = [];
+      let chunk = "";
+      for (const sentence of sentences) {
+        const part = sentence.trim();
+        if (chunk && chunk.length + part.length + 1 > 360) {
+          chunks.push(chunk);
+          chunk = part;
+        } else {
+          chunk = chunk ? chunk + " " + part : part;
+        }
+      }
+      if (chunk) chunks.push(chunk);
+      return chunks;
+    });
   const content = proof
     ? {
-        whatYoullExperience: proof.paragraphs,
+        whatYoullExperience: splitEditorialParagraphs(proof.paragraphs),
         highlights: proof.highlights,
       }
     : overrideContent?.enabled
