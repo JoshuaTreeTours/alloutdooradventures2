@@ -1,0 +1,46 @@
+name: Magpie 100 URL and booking audit
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Verify 100 landing and booking URLs
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTTP and HTML dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Verify landing pages and booking destinations
+        run: python scripts/audits/check_magpie_live.py audits/magpie/winter-cohort-100-urls.csv
+      - name: Summarize outcomes
+        if: always()
+        run: |
+          python - <<'PY'
+          import csv,collections,os
+          f='magpie_live_results.csv'
+          if not os.path.exists(f):
+              print('Audit did not produce results');raise SystemExit(0)
+          with open(f,encoding='utf-8-sig',newline='') as fd: rows=list(csv.DictReader(fd))
+          counts=collections.Counter(x['classification'].split(';')[0] for x in rows)
+          summary=['## Magpie landing and booking audit',f'Rows tested: {len(rows)}','', '| Classification | Count |','|---|---:|']
+          summary += [f'| {k.replace("|","/")} | {v} |' for k,v in counts.most_common()]
+          summary+=['','HTTP 200 and booking link existence do not by themselves verify a working checkout. Browser-rendered booking widgets require manual follow-up.']
+          out='\n'.join(summary)+'\n'
+          print(out)
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as fw:fw.write(out)
+          PY
+      - name: Upload detailed report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: magpie-100-live-url-and-booking-audit
+          path: magpie_live_results.csv
+          if-no-files-found: warn
+          retention-days: 30
