@@ -11,14 +11,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Joshua Tree Excursions runs this sightseeing circuit by shuttle. It lasts four and a half hours and leaves the Joshua Tree office at 8 a.m., with a return around 12:30 p.m. A driver who also guides stays with the group. This circuit is a drive between overlooks, with time to step out for photos, not the private hike.",
-      "The sites come one by one. The Cholla Cactus Garden is one. Skull Rock is another. Arch Rock is included. The route then offers either Ohlsen Ranch or the Cap Rock Nature Trail, and it ends at Key's View."
-    ],
+      "See Joshua Tree National Park's striking desert landscapes on a four-and-a-half-hour guided sightseeing circuit by shuttle. The morning departure is listed for 8 a.m., with a return around 12:30 p.m. A driver-guide handles the route, allowing guests to concentrate on the scenery and step out at designated photo stops.",
+      "The itinerary includes the Cholla Cactus Garden, Skull Rock and Arch Rock, three distinctive examples of the park's plant life and weathered granite formations. The route also includes either the historic Ohlsen Ranch area or the Cap Rock Nature Trail, before reaching Keys View for a sweeping perspective over the surrounding desert.",
+      "This is a vehicle-based sightseeing excursion rather than the operator's private hiking experience. The exact sequence of stops may depend on park access and conditions. Confirm the departure point and current itinerary with Joshua Tree Excursions before setting out."
+],
     "schemaDescription": "Sightseeing circuit of about 4.5 hours by shuttle through Joshua Tree National Park, with photo stops.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
-    "wordCount": 100,
+    "wordCount": 140,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": null,
@@ -47,14 +48,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private morning hike with Joshua Tree Excursions lasts six hours inside Joshua Tree National Park. Guests can meet at the Joshua Tree office, take a local pickup, or request transport from Coachella Valley cities. The guide drives through the park to the trailhead, then leads a mostly off-trail hike of one to six miles.",
-      "Along the hike the guide covers park history, geology, plants, and animals. An optional lunch on the trail costs extra. Rock scrambling is optional. If time remains, the guide adds other park sights before the return to the office or the lodging. Included items are park fees, water, in-park transportation, and a loaner daypack. Meals and extra equipment are not included."
-    ],
+      "Explore Joshua Tree National Park on a six-hour private morning hike that leaves the busiest roadside viewpoints behind. After a drive to the trailhead, your guide leads a mostly off-trail route tailored to the group, with hiking distances described as roughly one to six miles.",
+      "Along the way, the guide introduces the park's granite geology, desert plants, wildlife and human history. Optional rock scrambling adds a closer look at the formations, while the route itself offers time to experience the open landscape on foot rather than only from a vehicle.",
+      "The operator includes park entry fees, water, transportation within the park and a loaner daypack. An optional trail lunch costs extra, and meals or additional equipment are not included. Meeting arrangements may include the Joshua Tree office, local pickup or transport from Coachella Valley cities. Discuss fitness, route preferences and pickup details before booking."
+],
     "schemaDescription": "Six-hour private morning hike in Joshua Tree National Park, mostly off trail.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
-    "wordCount": 118,
+    "wordCount": 144,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": null,
@@ -83,14 +85,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private sunset hike with Joshua Tree Excursions lasts six hours and is a hike into the sunset. Meeting choices are the Joshua Tree office, a local pickup, or transport from Coachella Valley cities. The guide drives through the park to a trailhead and then leads a mostly off-trail route of one to six miles.",
-      "The guide's commentary covers history, geology, plants, and animals. Lunch on the trail is optional and costs extra. Rock scrambling is optional. Other park sights may be added at the end if time allows, before a return to the office or the lodging. Included are park fees, water, transportation in the park, and a loaner daypack."
-    ],
+      "Follow a private guide into Joshua Tree National Park for a six-hour hiking experience timed around the desert's evening light. The outing begins with a drive to a trailhead before continuing mostly off trail, with route lengths described as approximately one to six miles.",
+      "The landscape changes character toward sunset, when granite formations and Joshua trees cast longer shadows. Along the hike, your guide explains the park's geology, desert plants, wildlife and history. Rock scrambling is optional, and additional park sights may be included if time permits.",
+      "Park fees, water, transportation within the park and a loaner daypack are included in the operator's description. A trail lunch is available at additional cost. Meeting options include the Joshua Tree office, local pickup and transport from Coachella Valley communities. Confirm the planned route and return time, especially when arranging transportation after dark."
+],
     "schemaDescription": "Six-hour private sunset hike in Joshua Tree National Park, mostly off trail.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
-    "wordCount": 112,
+    "wordCount": 140,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": null,
@@ -119,15 +122,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "On the way, guests receive detailed narration on park, its history, and interesting geology to Joshua Tree. Once at the trailhead, the guide will lead guests on mostly off-trail adventure through Joshua Tree wilderness. The climbing experience includes professional instruction from the certified rock guide, and all necessary equipment.",
-      "After that, whether guests are first-time climber or multi-pitch expert, the guides will make sure guests have an experience. All throughout the day, the personal guides will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
-      "Guests may even get to add in some rock scrambling toward the top of some of the otherworldly rock formations, for views and meets rarely had by others."
-    ],
+      "Combine a guided wilderness hike with hands-on rock climbing in Joshua Tree National Park, one of California's best-known granite climbing landscapes. This eight-hour experience begins with an introduction to the park's history and geology before the group reaches the trailhead.",
+      "Your guide leads a mostly off-trail walk among the boulder formations, then provides professional climbing instruction and the necessary equipment. The operator describes the outing as suitable for a range of experience levels, from first-time climbers to people with more advanced skills. Optional scrambling may also be part of the day.",
+      "Throughout the excursion, the guides share context about the park's plants, animals and rock formations, connecting the climbing to the surrounding desert environment. Discuss your previous climbing experience and physical requirements with the operator so the route and instruction match your group."
+],
     "schemaDescription": "Eight-hour hike and climb in Joshua Tree National Park, with instruction at the rocks.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
-    "wordCount": 130,
+    "wordCount": 133,
     "durationLabel": "8 hours",
     "durationIso": "PT8H",
     "meetingLocation": null,
@@ -156,13 +159,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The session is at the ranch, with the desert landscape around the grounds. Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the sunset departure."
-    ],
+      "Experience the Joshua Tree desert on horseback during a one-hour sunset trail ride. The outing takes place at the ranch, where the surrounding landscape of open desert and distant rocky hills provides the backdrop as daylight begins to soften.",
+      "The horses travel at a walking pace, making this a chance to enjoy the rhythm of a trail ride rather than a fast-paced riding session. The emphasis is on the animals, the quiet ranch setting and the changing light across the high desert. Sunset timing varies by season, so the departure time should be confirmed for your date.",
+      "The operator lists the meeting point on Cascade Road in Joshua Tree and a minimum rider age of eight. Group pricing may be available for parties of five or more. Check current clothing, footwear and arrival instructions before traveling to the ranch."
+],
     "schemaDescription": "One-hour sunset trail ride on horseback in Joshua Tree.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
-    "wordCount": 36,
+    "wordCount": 139,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -490,13 +495,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the morning departure."
-    ],
+      "Begin the day with a one-hour horseback trail ride in Joshua Tree, where the ranch setting offers a different way to experience the high desert. This morning departure follows a walking pace, giving riders time to take in the surrounding landscape rather than concentrating on speed.",
+      "Joshua Tree's desert environment is defined by broad skies, rugged rock formations and hardy vegetation adapted to dry conditions. From horseback, the landscape unfolds more slowly, with the horses and the quiet atmosphere of the ranch at the center of the experience. This is a ranch-area ride, not a promise of entry into Joshua Tree National Park.",
+      "The operator lists its meeting point on Cascade Road in Joshua Tree and a minimum rider age of eight. Allow time to arrive before your scheduled departure and confirm suitable footwear, clothing and any riding requirements when making the reservation."
+],
     "schemaDescription": "One-hour morning horseback trail ride in Joshua Tree.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
-    "wordCount": 23,
+    "wordCount": 143,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
