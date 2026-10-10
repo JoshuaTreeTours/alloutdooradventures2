@@ -11,8 +11,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is an 8-hour guided outing with Aloha Hawaii Tours. The outing starts at Halona Blowhole. The group then visits Pali Lookout and Macadamia Nut Farm. Later stops include Shrimp Truck and Puaʻena Point. The group is stroller and wheelchair accessible. A full refund is available with at least 24 hours' notice."
-    ],
+      "Discover Oʻahu beyond Waikīkī on an eight-hour narrated circle-island excursion that combines scenic viewpoints with stops connected to local food. Aloha Hawaii Tours lists hotel pickup in Waikīkī, making this a full-day introduction to different sides of the island.",
+      "The itinerary includes Hālona Blowhole on the southeastern coast and the dramatic mountain panorama from Nuʻuanu Pali Lookout. Other scheduled locations include a macadamia nut farm, a shrimp-truck stop and Puaʻena Point on the North Shore. These places offer contrasting views of Oʻahu's volcanic coastline, agricultural traditions and surf-oriented communities.",
+      "The operator lists the tour as stroller- and wheelchair-accessible; confirm individual stop accessibility and current pickup details before travel. Allow the full eight hours and check whether food purchases are included or paid separately."
+],
     "schemaDescription": "An 8-hour guided outing with Aloha Hawaii Tours. The outing passes Halona Blowhole, Pali Lookout, and Macadamia Nut Farm.",
     "highlights": [
       "8-hour guided outing",
@@ -23,7 +25,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/MjTOHvSE62q1lZf4Nvjg"
     ],
     "productImage": "https://cdn.filestackcontent.com/RDZLOzvKRVeXaOHkO86R",
-    "wordCount": 54,
+    "wordCount": 123,
     "durationLabel": "8 Hours",
     "durationIso": "PT8H",
     "meetingLocation": "Pick-up from a Waikiki hotel is required",
@@ -111,10 +113,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The cruise is out on the harbor for the fireworks. Guests go out on the water to look for whales. Dolphins are also part of what the outing goes out to see. People stay aboard, and the animals are what the trip goes out to find.",
-      "Travel stays on the boat for the whole trip. From the water, guests see Diamond Head. The landmarks are seen from the harbor, with the boat doing the traveling. People are on the water so they can watch the display away from the crowded shore.",
-      "The boat is how guests move, and the harbor is the viewpoint."
-    ],
+      "Take to the water off Honolulu for a two-hour cruise with views back toward Waikīkī and Diamond Head. The shoreline looks different from the boat, with the volcanic outline of Lēʻahi rising beyond the hotels and beaches.",
+      "The operator highlights Friday-night fireworks as a special feature of applicable sailings. The harbor offers a vantage point away from the busiest shoreline viewing areas. The source material also mentions marine life, but whales and dolphins are wild animals and should not be treated as guaranteed sightings on a sightseeing cruise.",
+      "This is an onboard experience rather than a shore excursion. Confirm your departure day, boarding point and whether the fireworks are scheduled for your particular sailing. Ocean conditions, wildlife activity and the visibility of any display can vary."
+],
     "schemaDescription": "The cruise is out on the harbor for the fireworks. Guests go out on the water to look for whales. Dolphins are also part of what the outing goes out to see. People stay aboard, and the animals are what the trip goes out to find.",
     "highlights": [
       "two-hour guided outing in Honolulu",
@@ -124,7 +126,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/moF2kxwTYOuufX3nWG8S"
     ],
     "productImage": "https://cdn.filestackcontent.com/jqDLeHsfSNKuL9m0yJRh",
-    "wordCount": 103,
+    "wordCount": 126,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "1125 Ala Moana Blvd D111 Honolulu, HI 96814",
@@ -157,9 +159,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out on the water to look for whales. Animals the trip watches for include humpback whales. People stay aboard, and the animals are what the trip goes out to find. Travel stays on the boat for the whole trip. From the water, guests see Oahu's Gold Coast and Ho Mai.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
-    ],
+      "Search for humpback whales off Oʻahu on a two-hour boat excursion from Honolulu. The outing is built around watching the ocean for marine mammals while enjoying a view back toward the island's south coast.",
+      "Humpback whales migrate to Hawaiian waters seasonally, making the experience particularly relevant during the winter months. From offshore, the operator describes views toward Oʻahu's Gold Coast. The boat remains the viewing platform throughout the excursion; guests do not need to plan for a shore stop.",
+      "Whales are wild animals, so encounters and their proximity to the vessel cannot be promised. Complimentary soft drinks are listed among the highlights. Confirm the seasonal sailing schedule, boarding instructions and current weather arrangements when reserving."
+],
     "schemaDescription": "Guests go out on the water to look for whales. Animals the trip watches for include humpback whales. People stay aboard, and the animals are what the trip goes out to find. Travel stays on the boat for the whole trip. From the water, guests see Oahu's Gold Coast and Ho Mai.",
     "highlights": [
       "two-hour guided outing in Honolulu",
@@ -169,7 +172,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/VJrlVlkAQEOUwCYjozKk"
     ],
     "productImage": "https://cdn.filestackcontent.com/jGba9HUMRXSeKyD8ULPT",
-    "wordCount": 105,
+    "wordCount": 115,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "1125 Ala Moana Blvd B1 Honolulu, HI 96814",
@@ -212,8 +215,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests snorkel from the boat over a patch reef. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
-    ],
+      "Snorkel off Waikīkī on a two-hour boat excursion focused on Oʻahu's reef environment and the possibility of seeing Hawaiian green sea turtles. The journey offers views of the coastline from the water before guests enter the ocean at a snorkeling site.",
+      "The operator describes snorkeling above a patch reef, with scenic views back toward Waikīkī. Sea turtles are protected wildlife; sightings depend on conditions, and swimmers should keep a respectful distance without touching or pursuing animals. Even without an encounter, the reef setting offers a chance to appreciate the island's marine habitat.",
+      "Complimentary soft drinks are listed in the operator's highlights. Confirm equipment, swimming requirements and current ocean conditions before departure. The precise snorkeling location can vary, and safe participation depends on the crew's instructions."
+],
     "schemaDescription": "Guests snorkel from the boat over a patch reef. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see.",
     "highlights": [
       "two-hour guided outing in Honolulu",
@@ -224,7 +229,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/jIL1hFgT4qfMBgGu57UR"
     ],
     "productImage": "https://cdn.filestackcontent.com/6FcyxAhyRQqxAx6BjZwn",
-    "wordCount": 62,
+    "wordCount": 125,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "1125 Ala Moana Blvd Honolulu, HI 96814",
@@ -361,9 +366,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The day combines a guided hike with time on the rock, after a drive to the trailhead. A certified guide gives the climbing instruction before anyone leaves the ground. Rock formations, canyons, and the long views are what the hike is there to reach. Guests ride a rented bike for the day.",
-      "The ride passes Kapiolani Park and Duke Kahanamoku. Cyclists also come to Amelia Earhart and Doris Duke's Shangri-La. Black Point and Diamond Head Crater are on the same loop. The locations are chosen because a film or television scene was shot there."
-    ],
+      "Explore Honolulu's Diamond Head neighborhood by bicycle on a guided outing lasting approximately three to four hours. The route links coastal streets and public landmarks around Waikīkī with views toward the famous volcanic crater known locally as Lēʻahi.",
+      "The operator's listed sights include Kapiʻolani Park, the Duke Kahanamoku area, the World War I Natatorium Memorial and the exterior surroundings of Doris Duke's Shangri La. Black Point and the Diamond Head crater landscape also feature in the route. Some locations have appeared in film or television productions, adding another layer to the neighborhood's story.",
+      "Bike rental and equipment are listed as part of the experience. The source description mixes cycling with hiking language, so confirm the current riding route and whether any actual crater hike or admission is included before booking."
+],
     "schemaDescription": "A 3- to 4-hour bicycle outing with Bike Tour Hawaii. The outing passes WW1 Natatorium Memorial, Doris Duke's Shangri-La, and Hawaii FIVE-O.",
     "highlights": [
       "3- to 4-hour bicycle outing",
@@ -374,7 +380,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/y8ASo4gITNO2LB17j2ow"
     ],
     "productImage": "https://www.filepicker.io/api/file/NbBdP1xeS4W5IIMNA0u5",
-    "wordCount": 95,
+    "wordCount": 130,
     "durationLabel": "3-4 Hours",
     "durationIso": null,
     "meetingLocation": "Meet at the Kuhio Beach Banyan Tree, Waikiki Beach",
@@ -413,8 +419,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. Guests ride a rented bike for the day. The ride passes Taste Hawaii and Kuhio Beach Banyan Tree. Cyclists also come to Waikiki Beach and Kapiolani Park."
-    ],
+      "See Waikīkī from a bicycle on a four-hour Hawaiian food-themed outing that combines neighborhood sightseeing with an introduction to local flavors. Riding through Honolulu makes it possible to connect the beach, parks and food stops at a relaxed street-level pace.",
+      "The route described by the operator includes Kapiʻolani Park, Waikīkī Beach and the Kūhiō Beach Banyan Tree, alongside its Taste Hawaii food component. The park sits below Diamond Head, while the beachfront provides a lively contrast of surf culture, historic public spaces and busy visitor streets.",
+      "Bike rental and equipment are listed in the operator's highlights. Food stops and tastings can change, so confirm exactly what is included in the ticket and any dietary needs in advance. The meeting details identify Bike Tour Hawaii in Honolulu."
+],
     "schemaDescription": "A four-hour bicycle outing with Bike Tour Hawaii in Honolulu. The outing passes Kapiolani Park.",
     "highlights": [
       "four-hour bicycle outing in Honolulu",
@@ -425,7 +433,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/Q8dJ5ddqRh2e3FWVKfYv"
     ],
     "productImage": "https://cdn.filestackcontent.com/6MLKVoXvQXumgvhBYvk2",
-    "wordCount": 42,
+    "wordCount": 126,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "Bike Tour Hawaii • 2421 Ala Wai Blvd 1402 Honolulu, HI 96815",
@@ -526,9 +534,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. Guests ride a rented bike for the day. Reserving ahead is how the shop holds a bike. Guests ride electric bikes for this booking. The ride passes Manoa Fallas and Manoa Valley.",
-      "Cyclists also come to Jurassic Park and Lost Kingdom Bike."
-    ],
+      "Combine an electric-bike outing with the green landscape of Mānoa Valley on a four-and-a-half-hour excursion from Honolulu. The route heads away from the beachfront toward the wetter mountain foothills associated with Mānoa Falls.",
+      "The valley is known for lush vegetation and a dramatically different atmosphere from the sunlit Waikīkī coast. The operator's source references Mānoa Falls and the valley, along with film-location themes associated with tropical scenery. An electric bicycle provides assistance on the riding portions of the outing.",
+      "Bike rental and equipment are listed among the highlights, with a meeting point near the Kūhiō Beach Banyan Tree. Confirm the current route, the length and difficulty of any walking segment, and whether access to the waterfall trail is included. Trail conditions can change after rain."
+],
     "schemaDescription": "A 4.5-hour bicycle outing with Bike Tour Hawaii in Honolulu.",
     "highlights": [
       "4.5-hour bicycle outing in Honolulu",
@@ -538,7 +547,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/MIYLsbzFQbmltlYopW5J"
     ],
     "productImage": "https://cdn.filestackcontent.com/dJAD16J0RfOqpF8cnJhh",
-    "wordCount": 57,
+    "wordCount": 125,
     "durationLabel": "4.5 Hours",
     "durationIso": "PT4H30M",
     "meetingLocation": "Kuhio Beach Banyan Tree • 2453 Kalakaua Ave Honolulu, HI 96815",
@@ -844,9 +853,10 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 7-hour guided outing with E Noa Corporation. The group starts at Pearl Harbor Visitor Center. The group then visits USS Arizona Memorial and Downtown Honolulu. Admission to Pearl Harbor Visitor Center, USS Arizona Memorial entry, and Battleship Missouri tour are included.",
-      "A full refund is available with at least 24 hours' notice."
-    ],
+      "Visit the historic sites of Pearl Harbor on a seven-hour guided excursion with pickup from Waikīkī. The day centers on the events of December 7, 1941, and the memorials that preserve the stories of those who served and died.",
+      "The operator lists the Pearl Harbor Visitor Center, the USS Arizona Memorial and a tour of the Battleship Missouri, alongside travel through downtown Honolulu. The Arizona Memorial marks the resting place of sailors and Marines killed aboard the ship, while the Missouri is associated with Japan's formal surrender in 1945.",
+      "Admission to the visitor center, USS Arizona Memorial entry and the Missouri tour are described as included. Memorial access and transport arrangements can be affected by operational conditions, so confirm the current itinerary and security restrictions before departure."
+],
     "schemaDescription": "A 7-hour guided outing with E Noa Corporation. The outing passes Pearl Harbor Visitor Center, USS Arizona Memorial, and Downtown Honolulu.",
     "highlights": [
       "7-hour guided outing",
@@ -856,7 +866,7 @@ export const fareHarborHonoluluLegacyProducts: FareHarborProofProduct[] = [
       "https://www.filepicker.io/api/file/XhoaKFZ9TTS0UnyWQsUY"
     ],
     "productImage": "https://www.filepicker.io/api/file/pe89KdazQrOg7flieMPJ",
-    "wordCount": 56,
+    "wordCount": 127,
     "durationLabel": "7 Hours",
     "durationIso": "PT7H",
     "meetingLocation": "Pick-up from Waikiki",
