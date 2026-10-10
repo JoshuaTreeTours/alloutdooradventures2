@@ -110,9 +110,10 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Cowgirl is a private offshore fishing charter on a 45-foot Hatteras out of Key West, for up to six guests. Lengths offered are 4, 6, 8, 10, or 12 hours. Grounds named are reefs, wrecks, and deeper water. Species named are mahi, wahoo, and tuna, plus sailfish, snapper, and shark. An air-conditioned cabin is there between bites.",
-      "A captain and a mate work every trip. Bait, rods, reels, lures, and other tackle are included, as are Florida fishing licenses, ice, and coolers. Fish can be cleaned and bagged at the dock when the law allows it. Guests bring food and drinks. Usual departure times are 7:00 a.m. and 1:00 p.m., with other hours on request, after a safety talk and a plan for the day."
-    ],
+      "Fish the waters off Key West aboard Cowgirl, a 45-foot Hatteras available for private offshore charters of four to twelve hours. With a maximum of six guests, the trip can range from a half-day introduction to a long run into deeper water.",
+      "Depending on season and conditions, the crew may work reefs, wrecks or offshore grounds for species such as mahi-mahi, wahoo, tuna, sailfish, snapper and sharks. Fishing success and particular species are never guaranteed. An air-conditioned cabin provides a break from the weather between bites.",
+      "A captain and mate accompany each trip. Bait, rods, reels, lures, tackle, Florida fishing licenses, ice and coolers are listed as included, and legal catch can be cleaned and bagged at the dock. Guests bring their own food and drinks."
+],
     "schemaDescription": "Private offshore fishing charter on a 45-foot Hatteras out of Key West for up to six guests, offered for 4, 6, 8, 10, or 12 hours. A captain, a mate, and tackle are included.",
     "highlights": [
       "4- to 12-hour harbor outing in Key West",
@@ -122,7 +123,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/KLbmMCxcR7iJvPIwv4d9"
     ],
     "productImage": "https://cdn.filestackcontent.com/UxWDijTVS9CElGrgZCj8",
-    "wordCount": 131,
+    "wordCount": 126,
     "durationLabel": "4-12 Hours",
     "durationIso": null,
     "meetingLocation": "1801 N Roosevelt Blvd, Key West, Florida 33040",
@@ -254,9 +255,10 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Sunset Atlantia is a two-hour evening charter in Key West on the 64-foot power catamaran with a 33-foot beam. Six staterooms, six bathrooms, and crew quarters are aboard, and the group cap is 12.",
-      "The galley includes an island, an industrial dishwasher, a hood above a full-size range and oven, and a double sink. The salon has a retractable television and two convertible tables. Teak decks hold lounges at bow and stern. Two refrigerators sit outside, with sinks and an ice maker. The helm has navigation electronics. Those galley, salon, and deck fittings stay on the boat for this evening charter."
-    ],
+      "See the Key West sunset from Atlantia, a 64-foot power catamaran with a broad 33-foot beam. The two-hour evening charter accommodates up to 12 guests and provides substantially more interior and deck space than a small sightseeing boat.",
+      "The vessel has teak deck areas at the bow and stern, outdoor refrigeration and sinks, and an interior salon with convertible tables. Six staterooms and bathrooms are aboard, along with a full galley. These amenities make the boat itself an important part of the experience while the evening light changes over the Keys.",
+      "The charter departs from Shrimp Road in Key West. Confirm boarding time, food and beverage arrangements and which spaces are available to guests during the sunset outing. The sailing course depends on weather and water conditions."
+],
     "schemaDescription": "Two-hour evening charter in Key West on the 64-foot Atlantia power catamaran, for up to 12 guests, with six staterooms and a full galley.",
     "highlights": [
       "two-hour guided outing in Key West",
@@ -264,7 +266,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/ffg3ALRnRL265ybaJwEu",
-    "wordCount": 105,
+    "wordCount": 127,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
@@ -293,9 +295,10 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Sunset Somewhere is a two-hour evening charter on a Lagoon 450 F flybridge catamaran in Key West. The group cap is 12. The boat works for a couple and also for a larger group. The cockpit is large. On the flybridge, lines and controls are within reach. A second cockpit faces forward for the breeze.",
-      "Four cabins each have a head and a separate shower. Headroom is 6 feet 6 inches or more. The saloon has a galley in a C shape and windows with a full ring of views. Sliding doors open to decks that sit flush with the floors."
-    ],
+      "Spend two evening hours aboard a Lagoon 450 F flybridge catamaran for a private-style Key West sunset experience. The vessel accommodates up to 12 guests and combines broad outdoor spaces with an interior designed for panoramic views.",
+      "A large cockpit and elevated flybridge create several places to enjoy the breeze, while a forward cockpit offers another open-air perspective. Inside, the saloon is surrounded by windows and connects to a C-shaped galley. Four cabins each have their own head and separate shower, although the sunset cruise is centered on shared deck and salon spaces.",
+      "Departure is from Shrimp Road in Key West. Confirm the exact boarding time, food and beverage arrangements and which onboard areas are available during the charter. Weather determines the evening course and sunset visibility."
+],
     "schemaDescription": "Two-hour evening charter in Key West on the Lagoon 450 F flybridge catamaran Somewhere, for up to 12 guests, with four cabins and a flybridge.",
     "highlights": [
       "two-hour guided outing in Key West",
@@ -304,7 +307,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/i4ADNzRdS3iashVlHD1h",
-    "wordCount": 102,
+    "wordCount": 127,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
@@ -333,8 +336,10 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a private sandbar charter on the water. The stop is a Key West sandbar, away from a crowd of other boats. From the water, guests see Florida Keys."
-    ],
+      "Escape Key West's busier waterfront on a four-hour private charter designed around time at a sandbar. With a maximum of six guests, the experience emphasizes a relaxed stretch in the shallow waters of the Florida Keys rather than a crowded shared excursion.",
+      "The captain selects an appropriate sandbar according to tide, wind and boat traffic, with the goal of finding space away from concentrations of other boats when conditions permit. From the water, the low-lying Keys landscape and open horizon provide the backdrop. No particular sandbar should be assumed in advance.",
+      "The listed meeting point is on Shrimp Road in Key West. Confirm what is provided aboard, swimming expectations and the day's likely destination before departure. Sun protection is especially important during several hours on exposed water."
+],
     "schemaDescription": "Private sandbar charter in Key West, held away from a crowd of other boats.",
     "highlights": [
       "four-hour harbor outing in Key West",
@@ -344,7 +349,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/VjRAjbQwSqi0xdZMZdY1"
     ],
     "productImage": "https://cdn.filestackcontent.com/eWvlhjg8TiS4pCYrHPMa",
-    "wordCount": 30,
+    "wordCount": 127,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "7001 Shrimp Rd, Key West, FL, USA",
@@ -373,16 +378,17 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This charter is four hours on a Boston Whaler 230 Vantage, a bow-rider. A captain is aboard. Six people can sit comfortably. The bow has a lounge and a sun pad. A shaded bench is fitted, and a larger shaded area is on the boat as well. Audio is a Bluetooth connection. There is a freshwater shower and a sink at a prep station.",
-      "Fuel is included. So is a cooler holding ice, plus bottled water. Soda and chips are aboard too. The time is a private boat ride to spots reached only by water. It is not a shared timetable."
-    ],
+      "Spend four private hours on a Boston Whaler 230 Vantage with a captain, giving your group time to explore Key West's surrounding waters without sharing the boat. The bow-rider seats up to six comfortably and includes both open lounging space and shade.",
+      "The charter is intentionally flexible rather than tied to a fixed sightseeing timetable. Depending on conditions and your priorities, the captain can discuss accessible destinations and time on the water. The boat includes a bow lounge, sun pad, Bluetooth audio, freshwater shower and a preparation sink.",
+      "Fuel, a cooler with ice, bottled water, soda and chips are listed as included. Departure is from the Palm Avenue Causeway area. Discuss desired activities and any swimming plans before departure so the four-hour window can be used effectively."
+],
     "schemaDescription": "Four-hour private charter on a Boston Whaler 230 Vantage bow-rider in Key West, with a captain and seating for six.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/tAXXbINpRYmNV8fSCzEI"
     ],
     "productImage": "https://cdn.filestackcontent.com/BNWLrJ0QdCQUX1Dl43zA",
-    "wordCount": 102,
+    "wordCount": 127,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
@@ -415,16 +421,17 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This charter lasts six hours on a Boston Whaler 230 Vantage, a newer bow-rider. A captain is aboard. Seating is comfortable for six people. The bow has a lounge and a sun pad. A shaded bench is fitted, and a larger shaded area is on the boat as well. Audio uses a Bluetooth connection. A freshwater shower and a sink at a prep station are on board.",
-      "Fuel is included. So is a cooler holding ice, plus bottled water. Soda and chips are aboard too. The booking is time on this private boat. It is not a shared timetable."
-    ],
+      "Extend the private Key West experience to six hours aboard a Boston Whaler 230 Vantage. The additional time gives a group of up to six more flexibility to cruise, linger at a favorite spot or combine activities without the pace of a shorter charter.",
+      "The bow-rider has a lounge and sun pad forward, shaded seating, Bluetooth audio, a freshwater shower and a preparation sink. A captain handles the boat, while the itinerary remains flexible rather than following a shared-tour schedule. Weather and sea conditions determine which areas are practical on the day.",
+      "Fuel, a cooler with ice, bottled water, soda and chips are listed as included. The charter departs from the Palm Avenue Causeway area in Key West. Confirm preferred activities, boarding details and what to bring before arrival."
+],
     "schemaDescription": "Six-hour private charter on a newer Boston Whaler 230 Vantage bow-rider in Key West, with a captain and seating for six.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/SgVH47iFTRiTrmuNYhZ5"
     ],
     "productImage": "https://cdn.filestackcontent.com/YEuiJ9MCSLOuMzZtp2y3",
-    "wordCount": 100,
+    "wordCount": 129,
     "durationLabel": "6 Hours",
     "durationIso": "PT6H",
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
@@ -457,16 +464,17 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. This is a private sandbar charter on the water.",
-      "The booking is about 5 hours."
-    ],
+      "Spend about five private hours on a Boston Whaler exploring Key West's shallow-water recreation areas and settling in at a sandbar. The open powerboat format suits a relaxed day built around being on the water rather than following a narrated sightseeing circuit.",
+      "A sandbar stop can mean swimming, wading and simply enjoying the clear shallows, with the exact location selected according to tide, wind and boat traffic. Because the charter is private, the pace is centered on your group within the available time. A Bluetooth sound system is installed aboard the boat.",
+      "Departure is from the Palm Avenue Causeway area in Key West. Confirm what drinks, snacks, shade and water equipment are included, and ask the operator about the planned sandbar and current conditions before setting out."
+],
     "schemaDescription": "Private sandbar charter of about five hours on a Boston Whaler in Key West, with a captain aboard.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/jLcExHEVRlKUVfGnvsfT"
     ],
     "productImage": "https://cdn.filestackcontent.com/UfxH7cWARrKPdXE5OUQA",
-    "wordCount": 47,
+    "wordCount": 127,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
@@ -499,8 +507,10 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This two-hour sunset sail in Key West passes the Historic Seaport, Key West Bight, Mallory Square, and Fort Zachary Taylor. It also passes the Navy Mole, Truman Annex, and Truman's Winter White House."
-    ],
+      "Watch the sun drop toward the Gulf on a two-hour sail from Key West. The route gives passengers a water-level view of the island's historic waterfront as daylight changes into the softer colors of evening.",
+      "The operator lists the Historic Seaport, Key West Bight, Mallory Square and Fort Zachary Taylor among the sights, along with the Navy Mole, Truman Annex and Harry S. Truman's Little White House area. Christmas Tree Island is also associated with the route. Actual views depend on the sailing course and conditions.",
+      "This is a sightseeing sail rather than a sequence of shore stops. Confirm the departure point and boarding time before travel, since sunset schedules shift through the year. Bring a light layer for the breeze even after a warm Key West afternoon."
+],
     "schemaDescription": "Two-hour sunset sail in Key West, passing the Historic Seaport, Key West Bight, Mallory Square, and Fort Zachary Taylor.",
     "highlights": [
       "two-hour harbor outing in Key West",
@@ -510,7 +520,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/jkb8Ow99SMKrclylzRcB"
     ],
     "productImage": "https://cdn.filestackcontent.com/rYOWrfRTpiNlWy9n0MOz",
-    "wordCount": 34,
+    "wordCount": 128,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Key West, FL",
@@ -553,9 +563,10 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Six Fins runs a two-hour guided jet ski tour from the Perry Hotel and Marina in Key West. The route circles the island for about 28 miles, with stops along the way. The machines are Yamaha VX Waverunners. A Coast Guard-licensed lead guide narrates landmarks, points out marine life, and keeps the group together. The departure is a small group.",
-      "Drivers must be 16 or older. Passengers as young as 6 can ride with an adult. Each jet ski takes one driver and up to two passengers, and the weight limit is 530 pounds. Riders born on or after January 1, 1988 need a Florida boating safety card to drive. Without the card, they can ride as passengers. Coast Guard-approved life vests are included. Check-in includes a safety briefing, and arrival is requested 30 minutes early."
-    ],
+      "Circle Key West by personal watercraft on a two-hour guided route covering roughly 28 miles. Six Fins departs from the Perry Hotel and Marina using Yamaha VX WaveRunners, with a Coast Guard-licensed lead guide keeping the small group together and adding context at stops.",
+      "The route is designed to show the island from the water while giving riders an active experience between landmarks. Marine life may be seen along the way, but sightings are not guaranteed. Conditions can alter the exact course or stops.",
+      "Drivers must be at least 16; passengers may be as young as six. Each machine carries one driver and up to two passengers with a 530-pound combined limit. Drivers born on or after January 1, 1988 need the required Florida boating-safety credential. Confirm current licensing requirements before arrival."
+],
     "schemaDescription": "Two-hour guided jet ski circumnavigation of Key West from the Perry Hotel and Marina, on Yamaha VX Waverunners with a Coast Guard-licensed lead guide.",
     "highlights": [
       "Brand-new Yamaha VX Waverunners"
@@ -564,7 +575,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/j1pbM7bJT36f6xNJFVPP"
     ],
     "productImage": "https://cdn.filestackcontent.com/jEA9hOfQj2oZMMAyvqf4",
-    "wordCount": 140,
+    "wordCount": 132,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "7025 Shrimp Rd. at Coconut Row, Dock J, Slip 1 Key West, FL 33040",
@@ -650,9 +661,10 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The Underground Donut Tour is a Key West walk of two hours for groups of up to 20. It begins at Glazed Donuts with donuts just made, then moves into Old Town. Later tastes rotate. Possible stops include Key lime pie, cookies, ice cream, and local donuts. Conch fritters are on the list too, under the local nickname Key West donuts. The group decides which of those appear.",
-      "During the walk the guide adds island history and local stories. The setting is tropical streets and brightly painted buildings. The tour does not end where it started. Strollers and wheelchairs can be used. Tips and parking fees are extra."
-    ],
+      "Walk through Key West's colorful Old Town on a two-hour food tour built around sweets and local treats. The outing begins at Glazed Donuts before continuing through tropical streets and historic neighborhoods with a guide adding island stories along the way.",
+      "Tastings rotate, but the operator mentions possibilities including fresh donuts, Key lime pie, cookies, ice cream and conch fritters—the latter sometimes playfully described as Key West's savory 'donuts.' The exact lineup can change, so individual foods should not be treated as guaranteed on every departure.",
+      "Groups are capped at 20. The route does not finish where it starts, and the operator lists the experience as accessible to strollers and wheelchairs. Tips and parking are extra. Confirm dietary restrictions and the current tasting lineup before arrival on Duval Street."
+],
     "schemaDescription": "Two-hour Key West walk for up to 20 guests, starting at Glazed Donuts and continuing through Old Town for rotating sweets and island history.",
     "highlights": [
       "two-hour walking tour in Key West",
@@ -662,7 +674,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ucavwJ29Qq62vEB34mOM"
     ],
     "productImage": "https://cdn.filestackcontent.com/HPV1P8fNS2qRfCdHLUZP",
-    "wordCount": 108,
+    "wordCount": 129,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "430 Duval Street Key West, FL 33040",
