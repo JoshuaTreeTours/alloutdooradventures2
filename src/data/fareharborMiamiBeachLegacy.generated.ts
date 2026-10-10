@@ -11,9 +11,10 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "305 Tours pairs a narrated boat cruise of 90 minutes with a South Beach bike rental of three hours, usable the same day or later. Pickup is a South Beach hotel or the shop. On the water the boat crosses Biscayne Bay and passes the downtown skyline, then the port, Fisher Island, and Millionaire's Row. Drinks and small snacks are sold on board.",
-      "The rental includes a bicycle, a helmet, a lock, and a bottle of water. The bike route goes by the Versace Mansion and Star Island, then Lincoln Road, Ocean Drive, the Art Deco District, and South Pointe Park. Those bike stops are separate from the 90 minutes afloat."
-    ],
+      "See Miami from Biscayne Bay, then explore South Beach independently by bicycle. The package pairs a narrated 90-minute boat cruise with a three-hour bike rental that the operator says may be used the same day or later.",
+      "On the water, the route passes the downtown skyline, PortMiami, Fisher Island and Millionaire's Row. The bicycle portion offers a different perspective, with suggested sights including Ocean Drive, Lincoln Road, South Pointe Park, the Art Deco District and the Versace Mansion area. The boat and bike are separate experiences rather than one continuous guided route.",
+      "The rental includes a bicycle, helmet, lock and bottled water. Confirm pickup arrangements, the bike-return deadline and whether hotel pickup applies to your reservation before setting out."
+],
     "schemaDescription": "Ninety-minute narrated cruise on Biscayne Bay paired with a three-hour South Beach bike rental. The boat passes the downtown skyline, the port, Fisher Island, and Millionaire's Row.",
     "highlights": [
       "3 Hour bicycle outing",
@@ -21,7 +22,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/kekAePQFQNam02qguFGM",
-    "wordCount": 111,
+    "wordCount": 119,
     "durationLabel": "3 Hour",
     "durationIso": "PT3H",
     "meetingLocation": null,
@@ -59,9 +60,10 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This 305 Tours booking runs about five hours: a city tour of about four hours, a boat cruise, and a three-hour South Beach bike rental on the same day or another day. Pickup is a South Beach hotel or the shop. The air-conditioned bus covers the Art Deco District and Ocean Drive, then downtown, Brickell, Coconut Grove, and Coral Gables. Little Havana and Calle Ocho are on that same bus loop.",
-      "The boat is a narrated cruise of 90 minutes on Biscayne Bay, passing the downtown skyline, the port, Fisher Island, and Millionaire's Row. Drinks and light snacks are sold aboard. The bike rental includes a bicycle, a helmet, a lock, and bottled water. The bike route goes by the Versace Mansion, Star Island, Lincoln Road, Ocean Drive, the Art Deco streets, and South Pointe Park."
-    ],
+      "Experience several sides of Miami in one combination package linking a city tour, Biscayne Bay cruise and South Beach bicycle rental. The coach portion covers the Art Deco District and Ocean Drive before continuing through downtown, Brickell, Coconut Grove, Coral Gables and Little Havana.",
+      "A narrated 90-minute cruise then provides views of the skyline, PortMiami, Fisher Island and Millionaire's Row from the water. The bicycle rental is a separate component and includes a bike, helmet, lock and bottled water for exploring South Beach landmarks at your own pace.",
+      "The operator describes the principal combination as about five hours while also offering flexibility around the bike rental. Confirm the actual sequence and total time for your booking, as well as pickup details and whether the bicycle portion is scheduled for the same day."
+],
     "schemaDescription": "Miami combo with a city bus loop, a 90-minute Biscayne Bay cruise, and a three-hour South Beach bike rental. The bus covers the Art Deco District, Brickell, and Little Havana.",
     "highlights": [
       "5 Hours bicycle outing",
@@ -69,7 +71,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/wpgG3jOSWxAOOvHj5RQ4",
-    "wordCount": 138,
+    "wordCount": 132,
     "durationLabel": "5 Hours",
     "durationIso": "PT5H",
     "meetingLocation": null,
@@ -107,8 +109,10 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This adults-only bike and food tour lasts about 4.5 hours. A bike, a helmet, a guide, and food samples are included. The ride goes through the Art Deco district and along the beach. Tastings can include Cuban food, seafood, and Latin fusion, and vegetarian options are available. Drinks beyond tap water are not included."
-    ],
+      "Pedal through Miami Beach on an adults-only food tour combining neighborhood history, Art Deco scenery and local tastings. The guided outing lasts about four and a half hours, giving the group time to ride between stops rather than seeing South Beach only from a vehicle.",
+      "The route travels through the Art Deco district and along the beach, while food samples can draw from Miami's Cuban, seafood and Latin-fusion influences. The exact restaurants and dishes may change. Vegetarian options are available according to the operator, but other dietary requirements should be discussed in advance.",
+      "A bicycle, helmet, guide and food samples are listed as included. Drinks beyond tap water are not included. The meeting point is on West Avenue in Miami Beach; arrive prepared for several hours of outdoor riding in warm coastal conditions."
+],
     "schemaDescription": "Adults-only bike and food tour of about 4.5 hours through the Art Deco district, with a bike, a helmet, a guide, and food samples included.",
     "highlights": [
       "4.5-hour bicycle outing in Miami Beach",
@@ -118,7 +122,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/yWn9XmeHRYaOIKHpJizi"
     ],
     "productImage": "https://cdn.filestackcontent.com/mdcBKF4lTbahj8bdgPPX",
-    "wordCount": 56,
+    "wordCount": 133,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": "959 West Ave Suite 1 Miami Beach, FL 33139",
@@ -151,9 +155,10 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This 4.5-hour trip leaves the Art Deco district in South Beach for Everglades National Park and returns to the same drop-off by coach. On the airboat, guests may see alligators, turtles, birds, snakes, and other reptiles in a subtropical area of about 1.5 million acres. The guide also talks about the plants and animals of the Everglades.",
-      "The route then goes to an alligator farm. There the guide compares caimans, crocodiles, and other species, and explains historic methods used to capture alligators. The booking also includes two free hours on a rental. The airboat time and the farm stop are both inside the 4.5 hours."
-    ],
+      "Leave South Beach for a half-day introduction to the Everglades on a 4.5-hour coach-and-airboat excursion. Transportation from the Art Deco district carries the group west before the experience shifts onto the water for a closer look at the wetlands.",
+      "The airboat portion explores habitat associated with native birds, turtles and other wetland wildlife, while the guide explains the plants and animals of the Everglades. Wildlife sightings cannot be guaranteed. The itinerary also includes a wildlife-focused educational stop.",
+      "The booking includes two complimentary hours with a rental, according to the operator. Pickup and return are on 14th Street in Miami Beach. Confirm the current airboat duration, rental choice and exactly what the 4.5-hour schedule includes before departure."
+],
     "schemaDescription": "Trip of 4.5 hours from South Beach to an Everglades airboat ride and an alligator farm, with two free rental hours included.",
     "highlights": [
       "4.5-hour harbor outing in Miami Beach",
@@ -163,7 +168,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/t10LSbZvTt6s2EsIDFhn"
     ],
     "productImage": "https://cdn.filestackcontent.com/DokRtLLrSNiXv03swq6F",
-    "wordCount": 110,
+    "wordCount": 116,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": "233 14th Street Miami Beach, FL 33139",
@@ -201,9 +206,10 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Pickup for this combo is the South Beach shop. An air-conditioned bus then covers the Art Deco District and Ocean Drive. Downtown Miami and Brickell Avenue follow. Little Havana and Calle Ocho close the land loop. A narrated cruise of 90 minutes runs on Biscayne Bay, past the downtown skyline, the port, Fisher Island, and Millionaire's Row. Drinks and light snacks are for sale on the boat.",
-      "A bike is included. The ride passes the Versace Mansion and Star Island, then Lincoln Road, Ocean Drive, the Art Deco District, and South Pointe Park. Two free hours on a rental are included. The city-and-boat day can last from three hours to eight, depending on how the stops are used."
-    ],
+      "Combine Miami sightseeing by coach and boat with time in Little Havana and a separate South Beach bike rental. The land route begins around the Art Deco District and Ocean Drive before continuing through downtown, Brickell and Calle Ocho.",
+      "A narrated 90-minute Biscayne Bay cruise adds views of the downtown skyline, PortMiami, Fisher Island and the waterfront homes associated with Millionaire's Row. Drinks and light snacks are available for purchase aboard. The included bike rental can be used to explore Lincoln Road, Ocean Drive, South Pointe Park and the Art Deco District.",
+      "Pickup is from the South Beach shop on 14th Street. Because the operator describes several components and a variable overall duration, confirm the day's sequence and whether the bicycle portion occurs before or after the city-and-boat tour."
+],
     "schemaDescription": "South Beach combo with an Art Deco and Little Havana bus loop, a 90-minute Biscayne Bay cruise, a bike, and two free rental hours.",
     "highlights": [
       "Fisher Island and Star Island"
@@ -212,7 +218,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/71gYJqsRQ9iUpTexLCIz"
     ],
     "productImage": "https://cdn.filestackcontent.com/DYYUaSQ1usrWWUcOQMwA",
-    "wordCount": 121,
+    "wordCount": 129,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "233 14th Street Miami Beach, FL 33139",
@@ -250,9 +256,10 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The booking is an airboat trip in the Florida Everglades. After the ride there is a short wildlife talk that includes rescued alligators. Count on about 2 hours, including the ride to the park and back. The airboat is the reason for the day. The coach is only the way there and back.",
-      "Time on the water is about 2 hours. The route also reaches Bayside Marketplace and Biscayne Bay. Downtown Miami and Star Island are part of the same outing."
-    ],
+      "Pair an Everglades airboat experience with a Biscayne Bay sightseeing cruise for a day that contrasts South Florida's wetlands with Miami's urban waterfront. Coach transportation connects the different parts of the itinerary from Miami Beach.",
+      "In the Everglades, the airboat is the central experience, followed by a short wildlife presentation. The Miami portion reaches Bayside Marketplace and Biscayne Bay, with views associated with downtown and Star Island. Wildlife encounters in the Everglades remain unpredictable.",
+      "The package also advertises two complimentary hours with rentals. Because the source listing combines several components with different timing descriptions, confirm the current total duration, order of activities and what rental is included before departure from the 14th Street meeting point."
+],
     "schemaDescription": "Everglades airboat ride with a short wildlife talk, then time at Bayside Marketplace, Biscayne Bay, downtown Miami, and Star Island.",
     "highlights": [
       "Star Island"
@@ -261,7 +268,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/hp2VsKm3SWIQOMXDSbDk"
     ],
     "productImage": "https://cdn.filestackcontent.com/h2YQcb7tTs6Md5MWUmkZ",
-    "wordCount": 81,
+    "wordCount": 115,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "233 14th Street Miami Beach, FL 33139",
