@@ -11,15 +11,17 @@ export const fareHarborStPetersburgLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out for a sunset sail. The water is usually calmer once the afternoon wind drops. From the water, guests see SkyBeach Resort Marina."
-    ],
+      "Leave St. Petersburg's shoreline behind for a private sunset sail departing from SkyBeach Resort Marina. The two-hour outing trades the busy waterfront for open views across the bay, where the changing light becomes the centerpiece of the evening.",
+      "From the boat, the marina and surrounding waterfront take on a different perspective. The operator notes that the water can become calmer as afternoon winds ease, although sailing conditions naturally vary from day to day. There is time to enjoy the movement of the boat and the colors over the water rather than rushing between sightseeing stops.",
+      "This experience is listed for guests aged three and older, with departure from Sunshine Drive South in St. Petersburg. Confirm the precise boarding instructions and weather arrangements when booking, particularly if your plans depend on a specific sunset time."
+],
     "schemaDescription": "Sunset sail from SkyBeach Resort Marina, usually on calmer water after the afternoon wind drops.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/dr5U0nMoQgSgV5ob9qXI"
     ],
     "productImage": "https://cdn.filestackcontent.com/0d4wY48USeaKHeRSYXmO",
-    "wordCount": 25,
+    "wordCount": 134,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
@@ -48,15 +50,17 @@ export const fareHarborStPetersburgLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This full-day private sail lets the group choose one destination: Egmont Key, Anna Maria, or Shell Key. Egmont Key is a historic island with gopher tortoises, the remains of Fort Dade, and secluded beaches. Anna Maria is a coastal town. Shell Key is set aside for shelling and undeveloped shoreline. The charter length is eight hours."
-    ],
+      "Spend a full day under sail from St. Petersburg on an eight-hour private charter that can be shaped around one of three coastal destinations: Egmont Key, Anna Maria Island or Shell Key. Each offers a different introduction to the waters and islands at the mouth of Tampa Bay.",
+      "Egmont Key is known for its quiet beaches, gopher tortoises and the remains of historic Fort Dade. Anna Maria Island offers the atmosphere of a Gulf Coast beach community, while Shell Key is valued for its largely undeveloped shoreline and shelling opportunities. The choice of destination is part of planning the day, not a promise to visit all three.",
+      "Depart from the SkyBeach Resort Marina area on Sunshine Drive South. The operator lists this as a private charter for ages three and older. Confirm your preferred destination, sailing conditions and any shore-access arrangements before departure."
+],
     "schemaDescription": "Full-day private sail with a choice of Egmont Key, Anna Maria, or Shell Key. Egmont Key includes the remains of Fort Dade.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/7JZkwDwQ4WAYNCezIEcF"
     ],
     "productImage": "https://cdn.filestackcontent.com/ABOPSt8QGquxdkSwgxF2",
-    "wordCount": 57,
+    "wordCount": 143,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
@@ -85,15 +89,17 @@ export const fareHarborStPetersburgLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The skyline is the main view as the boat moves through the harbor. Guests sail on a catamaran for this cruise."
-    ],
+      "See St. Petersburg from the water on a private two-hour catamaran sail with an eye out for dolphins. The city's skyline provides a backdrop as the boat leaves the marina and moves into the surrounding harbor waters.",
+      "Dolphins inhabit the Tampa Bay region, but they are wild animals and appearances cannot be guaranteed. The appeal of this excursion is as much the relaxed sailing experience and waterfront scenery as the possibility of spotting marine life. A catamaran offers a different perspective from a land-based walk along the shore.",
+      "The cruise departs from the SkyBeach Resort Marina area on Sunshine Drive South. The operator lists the charter for guests aged three and older. Check the current boarding instructions and weather policy before travel, and bring sun protection appropriate for an outing on the water."
+],
     "schemaDescription": "Two-hour dolphin-spotting sail on a catamaran, with the city skyline as the main view from the harbor.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/PeqtaSvTCygDg03N4ZCg"
     ],
     "productImage": "https://cdn.filestackcontent.com/eDDIPtISXaeUdvdqRhl7",
-    "wordCount": 21,
+    "wordCount": 133,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6800 Sunshine Drive South St. Petersburg, FL 33705",
