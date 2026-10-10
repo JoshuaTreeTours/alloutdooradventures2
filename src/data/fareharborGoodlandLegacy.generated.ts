@@ -11,8 +11,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This two-hour sunset eco-tour goes through the Ten Thousand Islands and Rookery Bay Reserve. The boat watches for dolphins and coastal birds and can stop at a beach for shells before sunset on the Gulf Coast. The boat holds up to 17 guests."
-    ],
+      "Set out from Goodland for a two-hour sunset cruise through the mangrove waterways of the Ten Thousand Islands and Rookery Bay Reserve. This stretch of Southwest Florida is a maze of sheltered channels and low islands, where the shoreline changes character as the light softens toward evening.",
+      "The captain looks for dolphins and coastal birds along the route. Wildlife sightings are never certain, but watching the mangroves and open water is part of the experience. Depending on conditions, the boat may also stop at a beach where guests can look for shells.",
+      "The outing finishes with views toward the Gulf Coast at sunset. The operator offers private group options for different party sizes, with a maximum boat capacity of 17. Departure is from Goodland Boat Park; check the reservation details for your specific meeting instructions."
+],
     "schemaDescription": "Two-hour sunset eco-tour with views of Rookery Bay Reserve and the Gulf Coast.",
     "highlights": [
       "two-hour guided outing in Goodland",
@@ -22,7 +24,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/83CS5ZiaTsCDlGa4CSzb"
     ],
     "productImage": "https://cdn.filestackcontent.com/VxIJbDn1TDWYDwXF6Bp1",
-    "wordCount": 45,
+    "wordCount": 135,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -221,9 +223,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This three-hour eco cruise goes through the Ten Thousand Islands. Captains and guides talk about the ecology of the mangrove islands. The boat searches for dolphins and covers the local population. After the mangroves, the group stops on a private beach to look for tropical shells along the Gulf coast.",
-      "The boats have comfortable seating. A ladder at the front is there for stepping onto the beach. Children and adults are both expected on the trip."
-    ],
+      "Explore the Ten Thousand Islands on a three-hour eco cruise departing from Goodland, just south of Marco Island. The route moves through mangrove-lined channels, where the captain explains the ecology of this unusual coastal landscape and the wildlife that depends on it.",
+      "Keep an eye on the water for dolphins as the boat travels between the islands. The excursion also includes a beach stop for looking at tropical shells along the Gulf Coast. Shell bags are listed among the operator's highlights, making this more than a sightseeing cruise from the boat.",
+      "Boats have seating for the journey and a forward ladder for stepping ashore at the beach. Families can join the trip, with age-based ticket categories available. As with any coastal excursion, the precise route and wildlife encounters depend on conditions on the day."
+],
     "schemaDescription": "Three-hour eco cruise through the Ten Thousand Islands, with a dolphin search and a private-beach stop for shells.",
     "highlights": [
       "three-hour guided outing in Goodland",
@@ -233,7 +236,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/88i2Sk2vTT2oX42D4qit"
     ],
     "productImage": "https://cdn.filestackcontent.com/lZ1iMDFeQi4GodXv1xVg",
-    "wordCount": 77,
+    "wordCount": 134,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -865,8 +868,10 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This four-hour shelling trip stays on the water. The boat can pass Marco Island, Kice Island, Dickman's Point, and Shell Island, with time at the Caxambas sandbars."
-    ],
+      "Spend four hours exploring the shell-rich barrier islands and sandbars off Goodland on a half-day boat excursion. The route may pass Marco Island, Kice Island, Dickman's Point and Shell Island, with time around the Caxambas sandbars.",
+      "Rather than following a fixed walking trail, the outing uses a boat to reach stretches of coast that are harder to visit independently. The appeal is the chance to explore the changing shoreline and search for shells in a landscape shaped by tides, shallow water and shifting sand.",
+      "The operator lists Kice Island and Shell Island among the featured locations, along with parking at the departure point. Actual landing sites depend on weather, tides and safe access. Allow for a full four-hour outing and consult the booking details for current departure instructions and what to bring."
+],
     "schemaDescription": "Four-hour shelling trip passing Marco Island, Kice Island, Dickman's Point, and Shell Island, with time at the Caxambas sandbars.",
     "highlights": [
       "four-hour guided outing in Goodland",
@@ -877,7 +882,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/cO930ey7QiGeJn87UPKk"
     ],
     "productImage": "https://cdn.filestackcontent.com/Fk3ukq2MQ0Wt6EfBNRSn",
-    "wordCount": 28,
+    "wordCount": 132,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",
