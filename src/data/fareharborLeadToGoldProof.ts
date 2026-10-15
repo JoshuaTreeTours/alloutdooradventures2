@@ -1,4 +1,5 @@
 import { type FareHarborProofProduct } from "./fareharborLeadToGoldProof.generated";
+import { fareHarborWinterEditorialOverviews } from "./fareharborWinterEditorialOverviews";
 import {
   fareHarborMigratedProducts,
   getFareHarborAvalonLegacyProducts,
@@ -69,14 +70,19 @@ export {
   getFareHarborSantaMonicaLegacyProducts,
 };
 
+const editorializedFareHarborProducts = fareHarborMigratedProducts.map(product => {
+  const overview = fareHarborWinterEditorialOverviews[product.itemId];
+  return overview ? { ...product, paragraphs: [overview], wordCount: overview.trim().split(/\s+/).length } : product;
+});
+
 const byItemId = new Map(
-  fareHarborMigratedProducts.map(product => [product.itemId, product])
+  editorializedFareHarborProducts.map(product => [product.itemId, product])
 );
 
 const ITEM_URL_PATTERN = /\/items\/(\d+)(?:\/|$|\?)/;
 
 export const getFareHarborProofProducts = (): FareHarborProofProduct[] =>
-  fareHarborMigratedProducts;
+  editorializedFareHarborProducts;
 
 export const getFareHarborProofByItemId = (
   itemId?: string | null
@@ -154,7 +160,7 @@ const itemIdFromSlugOrPath = (value?: string | null): string | null => {
 };
 
 const byPublicOrEngine2Path = new Map<string, FareHarborProofProduct>();
-for (const product of fareHarborMigratedProducts) {
+for (const product of editorializedFareHarborProducts) {
   for (const candidate of [product.publicPath, product.engine2Path]) {
     const normalized = normalizeMigratedRoutePath(candidate);
     if (normalized) {
