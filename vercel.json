@@ -67,11 +67,6 @@
   ],
   "redirects": [
     {
-      "source": "/destinations/california/joshua-tree/tours/hike-and-climb-459591/book",
-      "destination": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459591/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      "permanent": false
-    },
-    {
       "source": "/guides/world/spain/bilbo",
       "destination": "/guides/world/spain/bilbao",
       "permanent": true
