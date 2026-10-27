@@ -14,7 +14,8 @@ import { buildCityGuideFacts } from "../lib/cityGuideFacts";
 import { getFlagstaffTourDetailPath } from "./flagstaffTours";
 import type { GuideImage } from "./guideImages";
 import { getGuideImages } from "./guideImages";
-import { getTourDetailPath, tours } from "./tours";
+import { getTourDetailPath, prioritizeEngine6Tours, tours } from "./tours";
+import { selectFeaturedTourPreview } from "./tourPromotionPriority";
 import {
   getAllEngine2Tours,
   type Engine2Tour,
@@ -988,7 +989,7 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
     itineraries,
     bestTimeToVisit: buildBestTimeToVisit(stateName),
     whatToPack: buildWhatToPack(),
-    featuredTours: stateTours.slice(0, 12),
+    featuredTours: selectFeaturedTourPreview(prioritizeEngine6Tours(stateTours), 12),
   };
 };
 
@@ -1079,7 +1080,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     itineraries,
     bestTimeToVisit: buildBestTimeToVisit(countryName),
     whatToPack: buildWhatToPack(),
-    featuredTours: countryTours.slice(0, 12),
+    featuredTours: selectFeaturedTourPreview(prioritizeEngine6Tours(countryTours), 12),
   };
 };
 
@@ -1152,7 +1153,9 @@ export const buildCityGuide = ({
   const filteredTours = activityFocus
     ? cityTours.filter(tour => tour.activitySlugs.includes(activityFocus))
     : cityTours;
-  const toursToShow = filteredTours.length ? filteredTours : cityTours;
+  const toursToShow = prioritizeEngine6Tours(
+    filteredTours.length ? filteredTours : cityTours
+  );
   const activityLinks = buildActivityLinks(cityTours, slug =>
     regionType === "state"
       ? `/destinations/${parentSlug}/${canonicalCitySlug}/tours?activity=${slug}`
@@ -1274,7 +1277,7 @@ export const buildCityGuide = ({
     itineraries,
     bestTimeToVisit: buildBestTimeToVisit(cityName),
     whatToPack: buildWhatToPack(),
-    featuredTours: toursToShow.slice(0, 12),
+    featuredTours: selectFeaturedTourPreview(toursToShow, 12),
     activityFocus: activityFocusLabel,
     guideImages: getGuideImages(
       canonicalCitySlug,
@@ -1302,7 +1305,14 @@ export const buildCityGuide = ({
   });
   const override = cityOverrides[overrideRoute];
   if (override) {
-    return { ...guide, ...override };
+    const mergedGuide = { ...guide, ...override };
+    return {
+      ...mergedGuide,
+      featuredTours: selectFeaturedTourPreview(
+        prioritizeEngine6Tours(mergedGuide.featuredTours ?? []),
+        12
+      ),
+    };
   }
 
   if (!sanitize) {
