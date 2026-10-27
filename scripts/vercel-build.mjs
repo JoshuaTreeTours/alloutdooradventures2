@@ -380,6 +380,12 @@ if (exists("scripts/prerender-tour-routes.tsx")) {
   });
 }
 
+// AOA listing cards must never point to unbuilt Lead-to-Gold pages or a dead
+// booking route. Validate every city and migrated product before publishing.
+if (exists("scripts/audit-fareharbor-gold-routes.mjs")) {
+  run("node scripts/audit-fareharbor-gold-routes.mjs");
+}
+
 // Route files must be created from the empty-root template first. Only the
 // actual homepage receives rendered body content, so no other route flashes
 // homepage markup while its client bundle loads.
