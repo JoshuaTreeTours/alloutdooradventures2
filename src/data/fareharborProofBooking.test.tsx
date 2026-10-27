@@ -5,6 +5,9 @@ import { getFareHarborProofProducts, getFareHarborProofByPath } from "./fareharb
 import { getFareHarborProofBookingUrl } from "./fareharborProofBooking";
 import { getProofBackedFareHarborTourByCanonicalPath } from "../engine6/legacyFh/registry";
 import CityTourBookingRoute from "../pages/destinations/states/tours/CityTourBookingRoute";
+import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
+import { assertFareHarborGoldCtaIntegrity, assertEngine6CtaIntegrity } from "../engine6/hardening";
+
 import {
   getAllRouteBackedTourEntries,
   getCityTourDetailPath,
@@ -73,6 +76,46 @@ describe("Lead-to-Gold FareHarbor link integrity across all locations", () => {
     expect(sanDiegoEntries.length).toBeGreaterThan(0);
     for (const entry of sanDiegoEntries) {
       expect(entry.href).toBe(getFareHarborProofFromTour(entry.tour)?.publicPath);
+    }
+  });
+
+  it("validates every migrated checkout using FareHarbor rules without changing Viator strictness", () => {
+    for (const product of products) {
+      const tour = getProofBackedFareHarborTourByCanonicalPath(product.publicPath);
+      expect(tour, product.publicPath).not.toBeNull();
+      expect(() => assertFareHarborGoldCtaIntegrity({
+        ctaOwner: tour!.ownership.ctaOwner,
+        ctaUrl: tour!.bookingUrl,
+      }), product.publicPath).not.toThrow();
+    }
+    expect(() => assertEngine6CtaIntegrity({
+      ctaOwner: "fareharbor",
+      ctaUrl: getFareHarborProofBookingUrl(products[0]),
+    })).toThrow(/Viator CTA ownership/);
+  });
+
+  it("server-renders real Gold FareHarbor tour pages with clickable attributed booking links", () => {
+    const sampleItemIds = ["439314", "145208", "181765"];
+    for (const id of sampleItemIds) {
+      const product = products.find(tour => tour.itemId === id);
+      expect(product, id).toBeDefined();
+      const fragments = product!.publicPath.split("/").filter(Boolean);
+      const result = renderToString(
+        <Router ssrPath={product!.publicPath}>
+          <CityTourDetailRoute
+            params={{
+              stateSlug: fragments[1],
+              citySlug: fragments[2],
+              tourSlug: fragments[4],
+            }}
+          />
+        </Router>
+      );
+      expect(result).not.toContain("Tour not found");
+      expect(result).toContain("Check availability");
+      expect(result).toContain(
+        `fareharbor.com/embeds/book/${product!.company}/items/${id}/`
+      );
     }
   });
 
