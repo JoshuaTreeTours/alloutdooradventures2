@@ -1,5 +1,9 @@
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
 import { prioritizeEngine6Tours } from "./tours";
+import {
+  isEnhancedFareHarborTour,
+  selectFeaturedTourPreview,
+} from "./tourPromotionPriority";
 import { tours } from "./tours";
 import type { Tour } from "./tours.types";
 import {
@@ -194,7 +198,11 @@ const preferEngine6ForInternationalGuide = (
   }
 
   const engine6Tours = candidateTours.filter(tour => tour.engine === "engine6");
-  return engine6Tours.length ? engine6Tours : candidateTours;
+  return engine6Tours.length
+    ? candidateTours.filter(
+        tour => tour.engine === "engine6" || isEnhancedFareHarborTour(tour)
+      )
+    : candidateTours;
 };
 
 export const getTourCountsForActivities = (
@@ -235,7 +243,7 @@ export const getTopToursForPlace = (
     return sortedTours;
   }
 
-  return sortedTours.slice(0, limit);
+  return selectFeaturedTourPreview(sortedTours, limit);
 };
 
 export const getTopCitiesForPlace = (
