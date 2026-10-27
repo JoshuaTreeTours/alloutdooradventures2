@@ -5,6 +5,13 @@ import { getFareHarborProofProducts, getFareHarborProofByPath } from "./fareharb
 import { getFareHarborProofBookingUrl } from "./fareharborProofBooking";
 import { getProofBackedFareHarborTourByCanonicalPath } from "../engine6/legacyFh/registry";
 import CityTourBookingRoute from "../pages/destinations/states/tours/CityTourBookingRoute";
+import {
+  getAllRouteBackedTourEntries,
+  getCityTourDetailPath,
+  getTourDetailPath,
+  getToursByCityUnified,
+} from "./tours";
+import { getFareHarborProofFromTour } from "./fareharborLeadToGoldProof";
 
 const products = getFareHarborProofProducts();
 
@@ -34,6 +41,38 @@ describe("Lead-to-Gold FareHarbor link integrity across all locations", () => {
       expect(booking.searchParams.get("ref")).toBe("https://www.alloutdooradventures.com");
       expect(tour?.bookingUrl).toBe(booking.toString());
       expect(tour?.bookingUrl).not.toContain("/book?"); // Not AOA's old internal link
+    }
+  });
+
+  it("links every promoted FareHarbor listing to its canonical built product page", () => {
+    const routeEntries = getAllRouteBackedTourEntries();
+    const upgraded = routeEntries.filter(
+      entry =>
+        entry.tour.bookingProvider === "fareharbor" &&
+        Boolean(getFareHarborProofFromTour(entry.tour))
+    );
+    expect(upgraded.length).toBeGreaterThan(100);
+    const locations = new Set<string>();
+
+    for (const entry of upgraded) {
+      const proof = getFareHarborProofFromTour(entry.tour)!;
+      locations.add(`${entry.tour.destination.stateSlug}/${entry.tour.destination.citySlug}`);
+      expect(entry.href, `Bad listing URL for ${proof.itemId}`).toBe(proof.publicPath);
+      expect(getTourDetailPath(entry.tour)).toBe(proof.publicPath);
+      expect(getCityTourDetailPath(entry.tour)).toBe(proof.publicPath);
+    }
+    console.log(
+      `[Gold FH listing audit] ${upgraded.length} source cards in ${locations.size} locations have canonical destination URLs`
+    );
+
+    const sanDiegoEntries = getToursByCityUnified("california", "san-diego").filter(
+      entry =>
+        entry.tour.bookingProvider === "fareharbor" &&
+        Boolean(getFareHarborProofFromTour(entry.tour))
+    );
+    expect(sanDiegoEntries.length).toBeGreaterThan(0);
+    for (const entry of sanDiegoEntries) {
+      expect(entry.href).toBe(getFareHarborProofFromTour(entry.tour)?.publicPath);
     }
   });
 
