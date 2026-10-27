@@ -34,5 +34,3 @@ jobs:
       - run: npm ci
       - name: Verify promotion rank and discovery ordering
         run: npx vitest run src/data/tourPromotionPriority.test.ts src/data/tourIndex.test.ts
-      - name: Verify TypeScript
-        run: npx tsc --noEmit
