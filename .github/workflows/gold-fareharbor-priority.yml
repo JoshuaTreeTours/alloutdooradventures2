@@ -1,0 +1,38 @@
+name: Gold FareHarbor priority
+on:
+  pull_request:
+    paths:
+      - 'src/data/tourPromotionPriority*'
+      - 'src/data/tours.ts'
+      - 'src/data/activityFilters.ts'
+      - 'src/data/activityDiscovery.ts'
+      - 'src/data/tourIndex.ts'
+      - 'src/data/guideData.ts'
+      - '.github/workflows/gold-fareharbor-priority.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/tourPromotionPriority*'
+      - 'src/data/tours.ts'
+      - 'src/data/activityFilters.ts'
+      - 'src/data/activityDiscovery.ts'
+      - 'src/data/tourIndex.ts'
+      - 'src/data/guideData.ts'
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Verify promotion rank and discovery ordering
+        run: npx vitest run src/data/tourPromotionPriority.test.ts src/data/tours.unified.test.ts src/data/tourIndex.test.ts
+      - name: Verify TypeScript
+        run: npx tsc --noEmit
