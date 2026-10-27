@@ -91,7 +91,7 @@ function Engine6BookingCta({
       </a>
       {isOpening ? (
         <p className={feedbackClassName} aria-live="polite">
-          Opening secure Viator booking page…
+          Opening secure partner booking page…
         </p>
       ) : null}
     </div>

@@ -50,6 +50,8 @@ import {
 } from "../../../../utils/fareharbor/suppressedBookingPages";
 import RemovedTourGone from "../../../RemovedTourGone";
 import { resolveSafeTourListHref } from "../../../../utils/tours/tourNavigation";
+import { getFareHarborProofByPath } from "../../../../data/fareharborLeadToGoldProof";
+import { getFareHarborProofBookingUrl } from "../../../../data/fareharborProofBooking";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -59,9 +61,51 @@ type CityTourBookingRouteProps = {
   };
 };
 
+function FareHarborLeadToGoldBookingRedirect({
+  url,
+  title,
+}: {
+  url: string;
+  title: string;
+}) {
+  useEffect(() => {
+    window.location.replace(url);
+  }, [url]);
+
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-16 text-[#1f2a1f]">
+      <h1 className="text-2xl font-semibold">Complete your reservation</h1>
+      <p className="mt-4">
+        Continue to FareHarbor to check availability and reserve {title}.
+      </p>
+      <a
+        href={url}
+        rel="sponsored nofollow noopener"
+        className="mt-6 inline-flex rounded-md bg-[#2f8a3d] px-6 py-3 font-semibold text-white"
+      >
+        Continue to FareHarbor
+      </a>
+    </main>
+  );
+}
+
 export default function CityTourBookingRoute({
   params,
 }: CityTourBookingRouteProps) {
+  // The Lead-to-Gold pages use the enhanced renderer rather than the old
+  // legacy catalog. Honor previously shared /book URLs as well as new CTAs.
+  const proof = getFareHarborProofByPath(
+    `/destinations/${params.stateSlug}/${params.citySlug}/tours/${params.tourSlug}`
+  );
+  if (proof) {
+    return (
+      <FareHarborLeadToGoldBookingRedirect
+        url={getFareHarborProofBookingUrl(proof)}
+        title={proof.title}
+      />
+    );
+  }
+
   const retiredFareHarborRedirectPath = getRetiredFareHarborTourRedirectPath({
     stateSlug: params.stateSlug,
     citySlug: params.citySlug,
