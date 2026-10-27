@@ -1,0 +1,35 @@
+name: FareHarbor Gold link integrity
+on:
+  pull_request:
+    paths:
+      - 'src/data/fareharborProofBooking*'
+      - 'src/engine6/legacyFh/registry.ts'
+      - 'src/pages/destinations/states/tours/CityTourBookingRoute.tsx'
+      - 'src/engine6/components/Engine6TourPage.tsx'
+      - 'scripts/audit-fareharbor-gold-routes.mjs'
+      - 'scripts/vercel-build.mjs'
+      - '.github/workflows/fareharbor-gold-link-integrity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/fareharborProofBooking*'
+      - 'src/engine6/legacyFh/registry.ts'
+      - 'src/pages/destinations/states/tours/CityTourBookingRoute.tsx'
+      - 'src/engine6/components/Engine6TourPage.tsx'
+      - 'scripts/audit-fareharbor-gold-routes.mjs'
+      - 'scripts/vercel-build.mjs'
+permissions:
+  contents: read
+jobs:
+  link-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx vitest run src/data/fareharborProofBooking.test.tsx
