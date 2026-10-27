@@ -7,6 +7,7 @@ import { isUSStateName } from "../constants/usStates";
 import { getStateBySlug, states } from "./destinations";
 import { getAllRouteBackedTourEntries, getTourDetailPath } from "./tours";
 import type { Tour } from "./tours.types";
+import { getTourPromotionRank } from "./tourPromotionPriority";
 import type { UnifiedCityTour } from "./tours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { slugify } from "../utils/slugify";
@@ -62,7 +63,7 @@ export const getResolvedPrimaryActivitySlug=(tour:Tour)=>{const cached=resolvedP
 const hasActivityCategory=(tour:Tour,activitySlug:string)=>getResolvedPrimaryActivitySlug(tour)===activitySlug;
 const getUniqueTourKey=(tour:Tour)=>tour.productCode||tour.id||[tour.destination.stateSlug,tour.destination.citySlug,tour.slug].join("/");
 const getQualityValue=(value:number|undefined)=>typeof value==="number"&&Number.isFinite(value)?value:-1;
-const compareActivityDiscoveryTours=(a:Tour,b:Tour)=>{const ratingDelta=getQualityValue(b.badges.rating)-getQualityValue(a.badges.rating);if(ratingDelta!==0)return ratingDelta;const reviewDelta=getQualityValue(b.badges.reviewCount)-getQualityValue(a.badges.reviewCount);if(reviewDelta!==0)return reviewDelta;return a.title.localeCompare(b.title)};
+const compareActivityDiscoveryTours=(a:Tour,b:Tour)=>{const promotionDelta=getTourPromotionRank(b)-getTourPromotionRank(a);if(promotionDelta!==0)return promotionDelta;const ratingDelta=getQualityValue(b.badges.rating)-getQualityValue(a.badges.rating);if(ratingDelta!==0)return ratingDelta;const reviewDelta=getQualityValue(b.badges.reviewCount)-getQualityValue(a.badges.reviewCount);if(reviewDelta!==0)return reviewDelta;return a.title.localeCompare(b.title)};
 export const sortActivityDiscoveryTours=(activityTours:Tour[])=>[...activityTours].sort(compareActivityDiscoveryTours);
 const getUniqueEntryKey=(entry:UnifiedCityTour)=>entry.href||getUniqueTourKey(entry.tour);
 const dedupeTourEntries=(activityEntries:UnifiedCityTour[])=>{const seen=new Set<string>();return activityEntries.filter(entry=>{const key=getUniqueEntryKey(entry);if(seen.has(key))return false;seen.add(key);return true})};
