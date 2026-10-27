@@ -100,6 +100,7 @@ import { isEngine6LiveItineraryMergeSuppressed } from "../../../../engine6/mapVi
 import { synthesizeEngine6ItineraryFallbackDescription } from "../../../../engine6/synthesizeEngine6ItineraryFallbackDescription";
 import {
   assertEngine6CtaIntegrity,
+  assertFareHarborGoldCtaIntegrity,
   assertEngine6DataSource,
   assertEngine6ImageDeterminism,
   assertEngine6NoFallbackContamination,
@@ -563,7 +564,7 @@ export default function CityTourDetailRoute({
       tourEngine: "legacy-fh-migrated",
       renderer: "engine6",
     });
-    assertEngine6CtaIntegrity({
+    assertFareHarborGoldCtaIntegrity({
       ctaOwner: proofBackedFareHarborTour.ownership.ctaOwner,
       ctaUrl: proofBackedFareHarborTour.bookingUrl,
     });
