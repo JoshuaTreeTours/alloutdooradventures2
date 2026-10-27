@@ -1,6 +1,7 @@
 import type { Engine6Tour } from "../types";
 import { isExcludedProductCode } from "../../data/excludedProductCodes";
 import { getFareHarborProofByPath } from "../../data/fareharborLeadToGoldProof";
+import { getFareHarborProofBookingUrl } from "../../data/fareharborProofBooking";
 import { centralParkBikeToursMigratedRecord } from "./fixtures/centralParkBikeTours";
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import type { LegacyFhMigratedProductRecord } from "./types";
@@ -82,5 +83,10 @@ export const getProofBackedFareHarborTourByCanonicalPath = (
     sourceType: "legacy_fh_migrated",
   };
 
-  return mapLegacyFhRecordToEngine6Tour(record);
+  const mapped = mapLegacyFhRecordToEngine6Tour(record);
+  return {
+    ...mapped,
+    // Never send enhanced FareHarbor visitors to an unresolvable local /book page.
+    bookingUrl: getFareHarborProofBookingUrl(proof),
+  };
 };
