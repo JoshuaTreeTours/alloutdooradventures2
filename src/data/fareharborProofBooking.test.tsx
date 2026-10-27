@@ -79,6 +79,18 @@ describe("Lead-to-Gold FareHarbor link integrity across all locations", () => {
     }
   });
 
+  it("does not promote historical FareHarbor records marked retired", () => {
+    const retiredId = "575320";
+    expect(getFareHarborProofByPath(
+      "/destinations/california/san-diego/tours/meditation-and-mountain-hike-tour-800-am-575320"
+    )).toBeNull();
+    expect(products.some(product => product.itemId === retiredId)).toBe(false);
+    expect(getAllRouteBackedTourEntries().some(entry =>
+      entry.tour.bookingProvider === "fareharbor" &&
+      entry.href.endsWith(`-${retiredId}`)
+    )).toBe(false);
+  });
+
   it("validates every migrated checkout using FareHarbor rules without changing Viator strictness", () => {
     for (const product of products) {
       const tour = getProofBackedFareHarborTourByCanonicalPath(product.publicPath);
