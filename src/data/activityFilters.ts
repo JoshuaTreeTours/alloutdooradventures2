@@ -1,4 +1,5 @@
 import type { Tour } from "./tours.types";
+import { getTourPromotionRank } from "./tourPromotionPriority";
 
 const HIKING_CATEGORY_SLUGS = new Set([
   "hiking",
@@ -159,13 +160,7 @@ const ACTIVITY_RELEVANCE_CATEGORY_SLUGS: Record<string, Set<string>> = {
   canoeing: PADDLE_CATEGORY_SLUGS,
 };
 
-const getEnginePlacementRank = (tour: Tour) => {
-  if (tour.engine === "engine6") return 5;
-  if (tour.engine === "engine4") return 4;
-  if (tour.engine === "engine3") return 3;
-  if (tour.engine === "engine2") return 2;
-  return 1;
-};
+const getEnginePlacementRank = getTourPromotionRank;
 
 const normalizeDuplicateKeyPart = (value: string | undefined | null) =>
   normalize(value)
@@ -234,18 +229,11 @@ const preferCategoryDuplicate = (
   candidate: { tour: Tour; index: number },
   activitySlug: string
 ) => {
-  if (
-    current.tour.engine !== "engine6" &&
-    candidate.tour.engine === "engine6"
-  ) {
-    return candidate;
-  }
-
-  if (
-    current.tour.engine === "engine6" &&
-    candidate.tour.engine !== "engine6"
-  ) {
-    return current;
+  // Never let a lower-priority duplicate displace Engine6 or migrated FH.
+  const currentRank = getEnginePlacementRank(current.tour);
+  const candidateRank = getEnginePlacementRank(candidate.tour);
+  if (candidateRank !== currentRank) {
+    return candidateRank > currentRank ? candidate : current;
   }
 
   const currentRelevance = getCategoryPageActivityRelevance(
@@ -256,18 +244,9 @@ const preferCategoryDuplicate = (
     candidate.tour,
     activitySlug
   );
-
   if (candidateRelevance !== currentRelevance) {
     return candidateRelevance > currentRelevance ? candidate : current;
   }
-
-  const currentRank = getEnginePlacementRank(current.tour);
-  const candidateRank = getEnginePlacementRank(candidate.tour);
-
-  if (candidateRank !== currentRank) {
-    return candidateRank > currentRank ? candidate : current;
-  }
-
   return candidate.index < current.index ? candidate : current;
 };
 
@@ -292,20 +271,14 @@ export const sortCategoryPageActivityTours = (
 
   return Array.from(dedupedByProduct.values())
     .sort((a, b) => {
+      const rankDelta =
+        getEnginePlacementRank(b.tour) - getEnginePlacementRank(a.tour);
+      if (rankDelta !== 0) return rankDelta;
+
       const relevanceDelta =
         getCategoryPageActivityRelevance(b.tour, activitySlug) -
         getCategoryPageActivityRelevance(a.tour, activitySlug);
-
-      if (relevanceDelta !== 0) {
-        return relevanceDelta;
-      }
-
-      const rankDelta =
-        getEnginePlacementRank(b.tour) - getEnginePlacementRank(a.tour);
-
-      if (rankDelta !== 0) {
-        return rankDelta;
-      }
+      if (relevanceDelta !== 0) return relevanceDelta;
 
       return a.index - b.index;
     })
