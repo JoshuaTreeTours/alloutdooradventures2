@@ -600,6 +600,17 @@ const isValidForPublicCityListing = (
   citySlug: string
 ) => {
   const itemId = getEngine1FareHarborItemId(entry.tour) ?? entry.tour.id;
+  // The proof registry may contain historical snapshots of now-retired items.
+  // Keep those out of city, activity, and guide discovery surfaces.
+  if (
+    entry.tour.bookingProvider === "fareharbor" &&
+    isTourRemoved({
+      tourId: itemId.replace(/^engine2-/, ""),
+      operatorName: entry.tour.operator,
+    })
+  ) {
+    return false;
+  }
   if (
     isHardDeletedLegacyTour({
       productId: itemId,

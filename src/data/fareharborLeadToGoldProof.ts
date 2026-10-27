@@ -34,6 +34,7 @@ import {
   getFareHarborSantaMonicaLegacyProducts,
 } from "./fareharborCityBatches";
 import { fareHarborAggregateRatingSchema } from "./fareharborPresentation";
+import { isTourRemoved } from "../utils/tours/isTourRemoved";
 
 export {
   getFareHarborAvalonLegacyProducts,
@@ -69,14 +70,24 @@ export {
   getFareHarborSantaMonicaLegacyProducts,
 };
 
+// The stored proof snapshots are not a promise of current bookability.
+// Retired, unpublished, or otherwise blocked tour IDs must never be promoted.
+const activeFareHarborProofProducts = fareHarborMigratedProducts.filter(
+  product =>
+    !isTourRemoved({
+      tourId: product.itemId,
+      operatorShortName: product.company,
+    })
+);
+
 const byItemId = new Map(
-  fareHarborMigratedProducts.map(product => [product.itemId, product])
+  activeFareHarborProofProducts.map(product => [product.itemId, product])
 );
 
 const ITEM_URL_PATTERN = /\/items\/(\d+)(?:\/|$|\?)/;
 
 export const getFareHarborProofProducts = (): FareHarborProofProduct[] =>
-  fareHarborMigratedProducts;
+  activeFareHarborProofProducts;
 
 export const getFareHarborProofByItemId = (
   itemId?: string | null
@@ -154,7 +165,7 @@ const itemIdFromSlugOrPath = (value?: string | null): string | null => {
 };
 
 const byPublicOrEngine2Path = new Map<string, FareHarborProofProduct>();
-for (const product of fareHarborMigratedProducts) {
+for (const product of activeFareHarborProofProducts) {
   for (const candidate of [product.publicPath, product.engine2Path]) {
     const normalized = normalizeMigratedRoutePath(candidate);
     if (normalized) {

@@ -88,6 +88,45 @@ export const assertEngine6CtaIntegrity = ({
   assertCondition(!ctaUrl.includes("/search/"), "cta URL cannot point to a search page");
 };
 
+/**
+ * Enhanced FareHarbor products use the Engine6 visual renderer, not Engine6
+ * Viator ownership. Validate their distinct attributed product-level CTA
+ * without weakening the native Engine6 Viator CTA contract.
+ */
+export const assertFareHarborGoldCtaIntegrity = ({
+  ctaOwner,
+  ctaUrl,
+}: {
+  ctaOwner: "fareharbor" | "viator";
+  ctaUrl: string;
+}) => {
+  assertCondition(ctaOwner === "fareharbor", "Gold FH routes must use FareHarbor CTA ownership");
+  let parsed: URL;
+  try {
+    parsed = new URL(ctaUrl);
+  } catch {
+    throw new Error("[engine6-hardening] Gold FH CTA must be an absolute URL");
+  }
+  assertCondition(
+    parsed.protocol === "https:" && parsed.hostname === "fareharbor.com",
+    "Gold FH CTA must use secure FareHarbor checkout"
+  );
+  assertCondition(
+    /^\/embeds\/book\/[a-zA-Z0-9_-]+\/items\/\d+\/$/.test(parsed.pathname),
+    "Gold FH CTA must target a specific FareHarbor bookable item"
+  );
+  assertCondition(
+    parsed.searchParams.get("asn") === "fhdn" &&
+      parsed.searchParams.get("asn-ref") === "alloutdooradventures",
+    "Gold FH CTA must preserve AOA affiliate attribution"
+  );
+  assertCondition(
+    parsed.searchParams.get("ref") === "https://www.alloutdooradventures.com" &&
+      parsed.searchParams.get("marketplace") === "yes",
+    "Gold FH CTA must preserve AOA referral parameters"
+  );
+};
+
 export const assertUniqueByCanonicalPath = (value: boolean) => {
   assertCondition(value === true, "listing entries must be unique by canonical path");
 };

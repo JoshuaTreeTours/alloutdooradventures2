@@ -4,6 +4,8 @@ on:
     paths:
       - 'src/data/fareharborProofBooking*'
       - 'src/engine6/legacyFh/registry.ts'
+      - 'src/engine6/hardening.ts'
+      - 'src/pages/destinations/states/tours/CityTourDetailRoute.tsx'
       - 'src/pages/destinations/states/tours/CityTourBookingRoute.tsx'
       - 'src/engine6/components/Engine6TourPage.tsx'
       - 'scripts/audit-fareharbor-gold-routes.mjs'
@@ -14,6 +16,8 @@ on:
     paths:
       - 'src/data/fareharborProofBooking*'
       - 'src/engine6/legacyFh/registry.ts'
+      - 'src/engine6/hardening.ts'
+      - 'src/pages/destinations/states/tours/CityTourDetailRoute.tsx'
       - 'src/pages/destinations/states/tours/CityTourBookingRoute.tsx'
       - 'src/engine6/components/Engine6TourPage.tsx'
       - 'scripts/audit-fareharbor-gold-routes.mjs'

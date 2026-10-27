@@ -5,6 +5,9 @@ import { getFareHarborProofProducts, getFareHarborProofByPath } from "./fareharb
 import { getFareHarborProofBookingUrl } from "./fareharborProofBooking";
 import { getProofBackedFareHarborTourByCanonicalPath } from "../engine6/legacyFh/registry";
 import CityTourBookingRoute from "../pages/destinations/states/tours/CityTourBookingRoute";
+import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
+import { assertFareHarborGoldCtaIntegrity, assertEngine6CtaIntegrity } from "../engine6/hardening";
+
 import {
   getAllRouteBackedTourEntries,
   getCityTourDetailPath,
@@ -74,6 +77,58 @@ describe("Lead-to-Gold FareHarbor link integrity across all locations", () => {
     for (const entry of sanDiegoEntries) {
       expect(entry.href).toBe(getFareHarborProofFromTour(entry.tour)?.publicPath);
     }
+  });
+
+  it("does not promote historical FareHarbor records marked retired", () => {
+    const retiredId = "575320";
+    expect(getFareHarborProofByPath(
+      "/destinations/california/san-diego/tours/meditation-and-mountain-hike-tour-800-am-575320"
+    )).toBeNull();
+    expect(products.some(product => product.itemId === retiredId)).toBe(false);
+    expect(getAllRouteBackedTourEntries().some(entry =>
+      entry.tour.bookingProvider === "fareharbor" &&
+      entry.href.endsWith(`-${retiredId}`)
+    )).toBe(false);
+  });
+
+  it("validates every migrated checkout using FareHarbor rules without changing Viator strictness", () => {
+    for (const product of products) {
+      const tour = getProofBackedFareHarborTourByCanonicalPath(product.publicPath);
+      expect(tour, product.publicPath).not.toBeNull();
+      expect(() => assertFareHarborGoldCtaIntegrity({
+        ctaOwner: tour!.ownership.ctaOwner,
+        ctaUrl: tour!.bookingUrl,
+      }), product.publicPath).not.toThrow();
+    }
+    expect(() => assertEngine6CtaIntegrity({
+      ctaOwner: "fareharbor",
+      ctaUrl: getFareHarborProofBookingUrl(products[0]),
+    })).toThrow(/Viator CTA ownership/);
+  });
+
+  it("server-renders EVERY Gold FareHarbor product with an attributed checkout", () => {
+    let rendered = 0;
+    for (const product of products) {
+      const fragments = product.publicPath.split("/").filter(Boolean);
+      const html = renderToString(
+        <Router ssrPath={product.publicPath}>
+          <CityTourDetailRoute
+            params={{
+              stateSlug: fragments[1],
+              citySlug: fragments[2],
+              tourSlug: fragments[4],
+            }}
+          />
+        </Router>
+      );
+      expect(html, product.publicPath).not.toContain("Tour not found");
+      expect(html, product.publicPath).toContain("Check availability");
+      expect(html, product.publicPath).toContain(
+        `fareharbor.com/embeds/book/${product.company}/items/${product.itemId}/`
+      );
+      rendered++;
+    }
+    console.log(`[Gold FH prerender audit] ${rendered} product pages SSR with a valid attributed checkout`);
   });
 
   it("fixes the San Diego electric-bike example and its old /book deep link", () => {
