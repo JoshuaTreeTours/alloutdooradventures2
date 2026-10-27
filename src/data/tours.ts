@@ -35,6 +35,10 @@ import {
 } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
+import {
+  getTourPromotionRank,
+  prioritizeTourPromotionEntries,
+} from "./tourPromotionPriority";
 import { suppressLegacyFareHarborTour } from "../engine6/replacementMode";
 import {
   applyFareHarborProofDestination,
@@ -395,61 +399,11 @@ const ENGINE6_ONLY_CITY_KEYS = new Set<string>([
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>
   ENGINE6_ONLY_CITY_KEYS.has(`${stateSlug}/${citySlug}`);
 
-const prioritizeEngineOrderEntries = <T>(
-  entries: T[],
-  getTour: (entry: T) => Tour
-) => {
-  const byRank = new Map<number, T[]>();
-
-  for (const entry of entries) {
-    const rank = engineRank(getTour(entry));
-    const bucket = byRank.get(rank);
-
-    if (bucket) {
-      bucket.push(entry);
-      continue;
-    }
-
-    byRank.set(rank, [entry]);
-  }
-
-  const ordered: T[] = [];
-
-  for (const rank of [5, 4, 3, 2, 1]) {
-    const bucket = byRank.get(rank);
-    if (bucket) {
-      ordered.push(...bucket);
-    }
-  }
-
-  return ordered;
-};
-
 export const prioritizeEngine6Tours = (entries: Tour[]) =>
-  prioritizeEngineOrderEntries(entries, entry => entry);
+  prioritizeTourPromotionEntries(entries, entry => entry);
 
 const prioritizeEngine6UnifiedTours = (entries: UnifiedCityTour[]) =>
-  prioritizeEngineOrderEntries(entries, entry => entry.tour);
-
-function engineRank(tour: Tour) {
-  if (tour.engine === "engine6") {
-    return 5;
-  }
-
-  if (tour.engine === "engine4") {
-    return 4;
-  }
-
-  if (tour.engine === "engine3") {
-    return 3;
-  }
-
-  if (tour.engine === "engine2") {
-    return 2;
-  }
-
-  return 1;
-}
+  prioritizeTourPromotionEntries(entries, entry => entry.tour);
 
 const dedupeToursByCanonicalPath = (entries: Tour[]) => {
   const byCanonicalPath = new Map<string, Tour>();
@@ -463,8 +417,8 @@ const dedupeToursByCanonicalPath = (entries: Tour[]) => {
       continue;
     }
 
-    const nextRank = engineRank(entry);
-    const existingRank = engineRank(existing);
+    const nextRank = getTourPromotionRank(entry);
+    const existingRank = getTourPromotionRank(existing);
 
     if (nextRank > existingRank) {
       byCanonicalPath.set(key, entry);
@@ -706,8 +660,8 @@ const dedupeUnifiedCityTours = (entries: UnifiedCityTour[]) => {
       continue;
     }
 
-    const nextRank = engineRank(entry.tour);
-    const existingRank = engineRank(existing.tour);
+    const nextRank = getTourPromotionRank(entry.tour);
+    const existingRank = getTourPromotionRank(existing.tour);
 
     if (nextRank > existingRank) {
       deduped.set(key, entry);
