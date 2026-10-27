@@ -658,7 +658,14 @@ const getDedupeKey = (entry: UnifiedCityTour) => {
 const dedupeUnifiedCityTours = (entries: UnifiedCityTour[]) => {
   const deduped = new Map<string, UnifiedCityTour>();
 
-  for (const entry of entries) {
+  for (const candidate of entries) {
+    // Legacy Engine2/Engine1 item routes may have stale slugs. Normalize
+    // Gold FH entries before deduping so every surface uses the built page.
+    const authoritativePath = getFareHarborProofCanonicalPath(candidate.tour);
+    const entry =
+      authoritativePath && candidate.href !== authoritativePath
+        ? { ...candidate, href: authoritativePath }
+        : candidate;
     const key = getDedupeKey(entry);
     const existing = deduped.get(key);
 
