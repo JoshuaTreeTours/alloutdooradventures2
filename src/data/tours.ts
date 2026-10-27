@@ -487,15 +487,22 @@ export const getToursByActivity = (activitySlug: string) =>
     activitySlug
   );
 
+const getFareHarborProofCanonicalPath = (tour: Tour) =>
+  tour.bookingProvider === "fareharbor"
+    ? getFareHarborProofFromTour(tour)?.publicPath ?? null
+    : null;
+
 export const getTourDetailPath = (tour: Tour) =>
-  tour.destination.stateSlug === "switzerland" || tour.engine === "engine6"
+  getFareHarborProofCanonicalPath(tour) ??
+  (tour.destination.stateSlug === "switzerland" || tour.engine === "engine6"
     ? getCityTourDetailPath(tour)
     : `/tours/${tour.destination.stateSlug}/${getCanonicalDestinationCitySlug(
         tour.destination.stateSlug,
         tour.destination.citySlug
-      )}/${tour.slug}`;
+      )}/${tour.slug}`);
 
 export const getCityTourDetailPath = (tour: Tour) =>
+  getFareHarborProofCanonicalPath(tour) ??
   `/destinations/${tour.destination.stateSlug}/${getCanonicalDestinationCitySlug(
     tour.destination.stateSlug,
     tour.destination.citySlug
