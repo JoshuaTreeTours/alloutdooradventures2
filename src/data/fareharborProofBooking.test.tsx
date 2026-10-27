@@ -94,14 +94,12 @@ describe("Lead-to-Gold FareHarbor link integrity across all locations", () => {
     })).toThrow(/Viator CTA ownership/);
   });
 
-  it("server-renders real Gold FareHarbor tour pages with clickable attributed booking links", () => {
-    const sampleItemIds = ["439314", "145208", "181765"];
-    for (const id of sampleItemIds) {
-      const product = products.find(tour => tour.itemId === id);
-      expect(product, id).toBeDefined();
-      const fragments = product!.publicPath.split("/").filter(Boolean);
-      const result = renderToString(
-        <Router ssrPath={product!.publicPath}>
+  it("server-renders EVERY Gold FareHarbor product with an attributed checkout", () => {
+    let rendered = 0;
+    for (const product of products) {
+      const fragments = product.publicPath.split("/").filter(Boolean);
+      const html = renderToString(
+        <Router ssrPath={product.publicPath}>
           <CityTourDetailRoute
             params={{
               stateSlug: fragments[1],
@@ -111,12 +109,14 @@ describe("Lead-to-Gold FareHarbor link integrity across all locations", () => {
           />
         </Router>
       );
-      expect(result).not.toContain("Tour not found");
-      expect(result).toContain("Check availability");
-      expect(result).toContain(
-        `fareharbor.com/embeds/book/${product!.company}/items/${id}/`
+      expect(html, product.publicPath).not.toContain("Tour not found");
+      expect(html, product.publicPath).toContain("Check availability");
+      expect(html, product.publicPath).toContain(
+        `fareharbor.com/embeds/book/${product.company}/items/${product.itemId}/`
       );
+      rendered++;
     }
+    console.log(`[Gold FH prerender audit] ${rendered} product pages SSR with a valid attributed checkout`);
   });
 
   it("fixes the San Diego electric-bike example and its old /book deep link", () => {
