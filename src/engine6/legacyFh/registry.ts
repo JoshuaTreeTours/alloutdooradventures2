@@ -2,6 +2,10 @@ import type { Engine6Tour } from "../types";
 import { isExcludedProductCode } from "../../data/excludedProductCodes";
 import { getFareHarborProofByPath } from "../../data/fareharborLeadToGoldProof";
 import { getFareHarborProofBookingUrl } from "../../data/fareharborProofBooking";
+import {
+  getFareHarborEditorialHighlights,
+  getFareHarborEditorialOverview,
+} from "../../data/fareharborEditorialOverviews";
 import { centralParkBikeToursMigratedRecord } from "./fixtures/centralParkBikeTours";
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import type { LegacyFhMigratedProductRecord } from "./types";
@@ -68,17 +72,26 @@ export const getProofBackedFareHarborTourByCanonicalPath = (
       rating: proof.aggregateRating?.ratingValue ?? null,
       reviewCount: proof.aggregateRating?.reviewCount ?? null,
     },
-    overview:
+    overview: getFareHarborEditorialOverview(
+      proof.itemId,
       proof.paragraphs.length > 0
         ? proof.paragraphs.join("\n\n")
-        : proof.schemaDescription,
-    highlights: proof.highlights,
+        : proof.schemaDescription
+    ),
+    highlights: getFareHarborEditorialHighlights(proof.itemId, proof.highlights),
     itinerary: [],
     inclusions: [],
     exclusions: [],
     meetingInfo: proof.meetingLocation ?? null,
     durationText: proof.durationLabel ?? null,
-    additionalInfo: proof.pricingNotes,
+    additionalInfo: [
+      ...proof.pricingNotes,
+      ...(proof.itemId === "439314"
+        ? [
+            "Age and rider-size requirements apply. Riders under 18 must be accompanied by an adult. Confirm current minimum age and sizing restrictions with the operator before booking.",
+          ]
+        : []),
+    ],
     cancellationSummary: null,
     sourceType: "legacy_fh_migrated",
   };

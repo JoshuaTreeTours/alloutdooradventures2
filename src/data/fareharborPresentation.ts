@@ -1,4 +1,5 @@
 import type { FareHarborProofProduct } from "./fareharborLeadToGoldProof.generated";
+import { getFareHarborEditorialSchemaDescription } from "./fareharborEditorialOverviews";
 
 export type FareHarborRatingProvider = "TripAdvisor" | "Google";
 
@@ -42,9 +43,9 @@ const firstNaturalSentence = (paragraphs: string[], title: string) => {
 };
 
 export const fareHarborShortDescription = (
-  proof: Pick<FareHarborProofProduct, "title" | "schemaDescription" | "paragraphs">
+  proof: Pick<FareHarborProofProduct, "title" | "schemaDescription" | "paragraphs"> & { itemId?: string }
 ) => {
-  const summary = normalizeText(proof.schemaDescription ?? "");
+  const summary = normalizeText(getFareHarborEditorialSchemaDescription(proof.itemId ?? "", proof.schemaDescription ?? ""));
   const title = normalizeText(proof.title ?? "");
   if (!summary || sameText(summary, title)) {
     return firstNaturalSentence(proof.paragraphs, title);
@@ -65,7 +66,7 @@ export const fareHarborShortDescription = (
 };
 
 export const fareHarborShortDescriptionRepeatsExperience = (
-  proof: Pick<FareHarborProofProduct, "title" | "schemaDescription" | "paragraphs">
+  proof: Pick<FareHarborProofProduct, "title" | "schemaDescription" | "paragraphs"> & { itemId?: string }
 ) => {
   const shortDescription = fareHarborShortDescription(proof);
   const experience = normalizeText(proof.paragraphs.join(" "));

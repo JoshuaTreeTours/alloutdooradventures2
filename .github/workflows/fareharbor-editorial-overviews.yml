@@ -1,0 +1,27 @@
+name: FareHarbor editorial quality
+on:
+  pull_request:
+    paths:
+      - 'src/data/fareharborEditorialOverviews*'
+      - 'src/engine6/legacyFh/registry.ts'
+      - '.github/workflows/fareharbor-editorial-overviews.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/fareharborEditorialOverviews*'
+      - 'src/engine6/legacyFh/registry.ts'
+permissions:
+  contents: read
+jobs:
+  editorial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx vitest run src/data/fareharborEditorialOverviews.test.ts src/data/fareharborProofBooking.test.tsx

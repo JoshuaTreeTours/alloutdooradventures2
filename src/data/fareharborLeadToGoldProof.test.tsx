@@ -31,6 +31,7 @@ import {
   getFareHarborProofFromTour,
   getFareHarborProofProducts,
 } from "./fareharborLeadToGoldProof";
+import { getFareHarborEditorialSchemaDescription } from "./fareharborEditorialOverviews";
 import { isStageBBookingPageNotFound } from "../utils/fareharbor/stageBTerminalBookingPages";
 import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
 import { isRemovedTourSlug } from "../utils/tours/isTourRemoved";
@@ -414,9 +415,10 @@ describe("FareHarbor Stage B proof set", () => {
       const images = PROOF_VISIBLE_IMAGES[itemId];
       const imageSources = visibleImageSources(beforeRelated);
       expect(new Set(imageSources).size).toBe(imageSources.length);
-      expect(imageSources.filter(source => source === images.hero)).toHaveLength(
-        1
-      );
+      expect(
+        imageSources.filter(source => source === images.hero),
+        `${itemId}: expected hero ${images.hero}; got ${imageSources.join(", ")}`
+      ).toHaveLength(1);
       for (const galleryImage of images.gallery) {
         expect(
           imageSources.filter(source => source === galleryImage)
@@ -617,8 +619,9 @@ describe("FareHarbor Stage B proof set", () => {
     expect((productNode(nodes)?.offers as { url: string }).url).toBe(
       "https://example.com/book"
     );
-    expect(productNode(nodes)?.description).toBe(proof!.schemaDescription);
-    expect(tripNode(nodes)?.description).toBe(proof!.schemaDescription);
+    const verifiedSummary = getFareHarborEditorialSchemaDescription(proof!.itemId, proof!.schemaDescription);
+    expect(productNode(nodes)?.description).toBe(verifiedSummary);
+    expect(tripNode(nodes)?.description).toBe(verifiedSummary);
     expect(proof!.schemaDescription.length).toBeLessThan(proof!.paragraphs.join(" ").length);
     expect(productNode(nodes)?.aggregateRating).toBeUndefined();
     expect(tripNode(nodes)?.aggregateRating).toBeUndefined();
@@ -656,7 +659,7 @@ describe("FareHarbor Stage B proof set", () => {
       graph,
       { id: tour!.id, slug: tour!.slug, bookingUrl: tour!.bookingUrl }
     );
-    expect(result.seo.description).toBe(proof!.schemaDescription);
+    expect(result.seo.description).toBe(getFareHarborEditorialSchemaDescription(proof!.itemId, proof!.schemaDescription));
     const product = productNode(result.structuredData["@graph"]);
     const trip = tripNode(result.structuredData["@graph"]);
     expect((product?.offers as { price?: string }).price).toBe("59.95");
@@ -678,7 +681,7 @@ describe("FareHarbor Stage B proof set", () => {
     const patched = applyFareHarborProofToHtml(html, proof!);
     const again = applyFareHarborProofToHtml(patched, proof!);
     expect(again).toBe(patched);
-    expect(patched).toContain(`content="${proof!.schemaDescription}"`);
+    expect(patched).toContain(`content="${getFareHarborEditorialSchemaDescription(proof!.itemId, proof!.schemaDescription)}"`);
     expect(patched).not.toContain("129.00");
     expect(patched).not.toContain("InStock");
     expect(patched).toContain(proof!.paragraphs[0]);
@@ -688,7 +691,7 @@ describe("FareHarbor Stage B proof set", () => {
     const graph = JSON.parse(json ?? "{}")["@graph"] as Array<Record<string, unknown>>;
     expect((productNode(graph)?.offers as { price?: string }).price).toBe("59.95");
     expect((tripNode(graph)?.offers as { price?: string }).price).toBe("59.95");
-    expect(productNode(graph)?.description).toBe(proof!.schemaDescription);
+    expect(productNode(graph)?.description).toBe(getFareHarborEditorialSchemaDescription(proof!.itemId, proof!.schemaDescription));
   });
 
   it("builds Product and TouristTrip from the proof record, omitting Offer when unpriced", () => {

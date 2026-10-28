@@ -1,4 +1,5 @@
 import { type FareHarborProofProduct } from "./fareharborLeadToGoldProof.generated";
+import { getFareHarborEditorialSchemaDescription } from "./fareharborEditorialOverviews";
 import {
   fareHarborMigratedProducts,
   getFareHarborAvalonLegacyProducts,
@@ -360,7 +361,7 @@ const patchSchemaValue = (
   const describesProof = types.some(type => DESCRIPTION_TYPES.has(type));
   const hostsOffer = types.some(type => OFFER_HOST_TYPES.has(type));
   if (describesProof) {
-    next.description = proof.schemaDescription;
+    next.description = getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription);
     const aggregateRating = types.includes("Product")
       ? fareHarborAggregateRatingSchema(proof)
       : undefined;
@@ -449,7 +450,7 @@ export const buildFareHarborProofSchemaGraph = (
     "@id": `${canonicalUrl}#product`,
     url: canonicalUrl,
     name: proof.title,
-    description: proof.schemaDescription,
+    description: getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription),
     sku: proof.itemId,
     ...(image ? { image } : {}),
     ...(offerStub ? { offers: offerStub } : {}),
@@ -458,7 +459,7 @@ export const buildFareHarborProofSchemaGraph = (
     "@type": "TouristTrip",
     "@id": `${canonicalUrl}#touristtrip`,
     name: proof.title,
-    description: proof.schemaDescription,
+    description: getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription),
     ...(image ? { image } : {}),
     ...(proof.durationIso ? { duration: proof.durationIso } : {}),
     ...(offerStub ? { offers: offerStub } : {}),
@@ -487,7 +488,7 @@ export const applyFareHarborProofToPrerender = <
   }
   const nextSeo = {
     ...seo,
-    description: proof.schemaDescription,
+    description: getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription),
   };
   const graph = structuredData?.["@graph"];
   if (!structuredData || !Array.isArray(graph)) {
@@ -518,8 +519,10 @@ const replaceMetaContent = (
     "i"
   );
   return html.replace(pattern, tag => {
-    if (/content=["'][^"']*["']/i.test(tag)) {
-      return tag.replace(/content=["'][^"']*["']/i, `content="${value}"`);
+    // Match the closing quote, not just the next quote character: authored
+    // descriptions can legitimately contain apostrophes (Colorado's, etc.).
+    if (/content=(["'])(.*?)\1/i.test(tag)) {
+      return tag.replace(/content=(["'])(.*?)\1/i, `content="${value}"`);
     }
     return tag.replace(/\s*\/?\s*>$/, ` content="${value}" />`);
   });
@@ -539,7 +542,7 @@ export const applyFareHarborProofToHtml = (
   html: string,
   proof: FareHarborProofProduct
 ): string => {
-  const description = escapeAttribute(proof.schemaDescription);
+  const description = escapeAttribute(getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription));
   let next = html.replace(
     /<script\b([^>]*?)type=["']application\/ld\+json["']([^>]*)>([\s\S]*?)<\/script>/gi,
     (full, before: string, after: string, body: string) => {
