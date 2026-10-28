@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T23:22:11.612Z",
+  "generatedAt": "2026-10-28T04:27:07.544Z",
   "source": "merchant feed generation using shared Engine6 commercial resolver snapshot",
   "rows": [
     {
@@ -1294,8 +1294,8 @@
       "productCode": "6508TAHOE",
       "price": "70 USD",
       "averageRating": "4.7",
-      "ratingCount": "175",
-      "reviewCount": "175"
+      "ratingCount": "176",
+      "reviewCount": "176"
     },
     {
       "productCode": "383103P1",
@@ -2442,8 +2442,8 @@
       "productCode": "7812P19",
       "price": "89 USD",
       "averageRating": "4.9",
-      "ratingCount": "1045",
-      "reviewCount": "1045"
+      "ratingCount": "1046",
+      "reviewCount": "1046"
     },
     {
       "productCode": "3283BWW",
@@ -4052,8 +4052,8 @@
       "productCode": "469693P1",
       "price": "106.59 USD",
       "averageRating": "4.9",
-      "ratingCount": "855",
-      "reviewCount": "855"
+      "ratingCount": "856",
+      "reviewCount": "856"
     },
     {
       "productCode": "3961P32",
@@ -7328,8 +7328,8 @@
       "productCode": "42053P14",
       "price": "53 USD",
       "averageRating": "5.0",
-      "ratingCount": "894",
-      "reviewCount": "894"
+      "ratingCount": "895",
+      "reviewCount": "895"
     },
     {
       "productCode": "48881P11",
