@@ -2,7 +2,10 @@ import type { Engine6Tour } from "../types";
 import { isExcludedProductCode } from "../../data/excludedProductCodes";
 import { getFareHarborProofByPath } from "../../data/fareharborLeadToGoldProof";
 import { getFareHarborProofBookingUrl } from "../../data/fareharborProofBooking";
-import { getFareHarborEditorialOverview } from "../../data/fareharborEditorialOverviews";
+import {
+  getFareHarborEditorialHighlights,
+  getFareHarborEditorialOverview,
+} from "../../data/fareharborEditorialOverviews";
 import { centralParkBikeToursMigratedRecord } from "./fixtures/centralParkBikeTours";
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import type { LegacyFhMigratedProductRecord } from "./types";
@@ -75,7 +78,7 @@ export const getProofBackedFareHarborTourByCanonicalPath = (
         ? proof.paragraphs.join("\n\n")
         : proof.schemaDescription
     ),
-    highlights: proof.highlights,
+    highlights: getFareHarborEditorialHighlights(proof.itemId, proof.highlights),
     itinerary: [],
     inclusions: [],
     exclusions: [],

@@ -32,6 +32,7 @@ import {
   getFareHarborProofFromTour,
   resolveFareHarborProofCtaLabel,
 } from "../../../../data/fareharborLeadToGoldProof";
+import { getFareHarborEditorialSchemaDescription } from "../../../../data/fareharborEditorialOverviews";
 import {
   fareHarborMobileStickyBooking,
   fareHarborProductImage,
@@ -725,7 +726,9 @@ export default function CityTourDetailRoute({
   const seoDescription = tour
     ? buildTourMeta(tour, canonicalUrl).description
     : undefined;
-  const proofSchemaDescription = proof?.schemaDescription;
+  const proofSchemaDescription = proof
+    ? getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription)
+    : undefined;
   const productDescription =
     proofSchemaDescription ??
     (tour ? getExpandedTourDescription(tour)[0] : undefined);
@@ -995,7 +998,7 @@ export default function CityTourDetailRoute({
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
   if (proof) {
-    seoMeta.description = proof.schemaDescription;
+    seoMeta.description = getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription);
   }
   const relatedTours = (
     isFlagstaff

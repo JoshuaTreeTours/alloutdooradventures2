@@ -64,7 +64,9 @@ export const mapLegacyFhRecordToEngine6Tour = (
     overview: record.overview,
     highlights: record.highlights,
     itinerary: record.itinerary,
-    categories: ["bike-tour"],
+    // FareHarbor is a mixed catalog (whales, sails, food, bikes, etc.). Do not
+    // assign every item a cycling source category; classify its actual content.
+    categories: [],
   });
 
   return {
@@ -99,17 +101,17 @@ export const mapLegacyFhRecordToEngine6Tour = (
     faqs: [],
     included: record.inclusions,
     requirements,
-    primaryCategory: classification.matchedCategorySlugs[0] ?? "cycling",
+    primaryCategory: classification.matchedCategorySlugs[0] ?? "sightseeing-city-tours",
     categories:
       classification.matchedCategorySlugs.length > 0
         ? classification.matchedCategorySlugs
-        : ["cycling"],
-    primaryDisplayCategory: classification.primaryDisplayCategory ?? "Cycling",
+        : ["sightseeing-city-tours"],
+    primaryDisplayCategory: classification.primaryDisplayCategory ?? "Sightseeing & City Tours",
     activityCategories:
       classification.activityCategories.length > 0
         ? classification.activityCategories
-        : [{ slug: "cycling", label: "Cycling" }],
-    categoryLabel: classification.primaryDisplayCategory ?? "Cycling",
+        : [{ slug: "sightseeing-city-tours", label: "Sightseeing & City Tours" }],
+    categoryLabel: classification.primaryDisplayCategory ?? "Sightseeing & City Tours",
     pagePath: record.canonicalPath,
     canonicalPath: record.canonicalPath,
     bookingUrl: record.bookingPath,

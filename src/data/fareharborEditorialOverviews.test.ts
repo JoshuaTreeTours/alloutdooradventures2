@@ -2,8 +2,12 @@ import { describe, expect, it } from "vitest";
 import { getFareHarborProofProducts } from "./fareharborLeadToGoldProof";
 import {
   fareHarborEditorialOverviews,
+  fareHarborEditorialHighlights,
+  getFareHarborEditorialHighlights,
   getFareHarborEditorialOverview,
+  getFareHarborEditorialSchemaDescription,
 } from "./fareharborEditorialOverviews";
+import { applyFareHarborProofToHtml } from "./fareharborLeadToGoldProof";
 import { getProofBackedFareHarborTourByCanonicalPath } from "../engine6/legacyFh/registry";
 
 const wordCount = (text: string) =>
@@ -33,6 +37,54 @@ describe("Lead-to-Gold authored editorial overviews", () => {
     expect(tour?.overviewText).toContain("Balboa Park");
     expect(tour?.overviewText).not.toMatch(/100 to 260 pounds|riders need to be 16/i);
     expect(tour?.requirements.join(" ")).toContain("Age and rider-size requirements apply");
+  });
+
+  it("renders individually verified highlights without generic supplier labels", () => {
+    for (const [id, highlights] of Object.entries(fareHarborEditorialHighlights)) {
+      const proof = getFareHarborProofProducts().find(product => product.itemId === id);
+      expect(proof, `missing source product: ${id}`).toBeDefined();
+      expect(fareHarborEditorialOverviews[id], `missing authored overview for ${id}`).toBeTruthy();
+      expect(highlights.length, id).toBeGreaterThanOrEqual(2);
+      expect(highlights.length, id).toBeLessThanOrEqual(3);
+      expect(highlights.join(" "), id).not.toMatch(/^(food\s*&\s*beverages|guided outing)$/i);
+      const rendered = getProofBackedFareHarborTourByCanonicalPath(proof!.publicPath);
+      expect(rendered?.highlights).toEqual(highlights);
+      expect(getFareHarborEditorialHighlights(id, proof!.highlights)).toEqual(highlights);
+    }
+  });
+
+  it("keeps mixed FareHarbor tours in their own activity categories", () => {
+    const whale = getProofBackedFareHarborTourByCanonicalPath(
+      "/destinations/california/san-diego/tours/whale-watching-34415"
+    );
+    const sailing = getProofBackedFareHarborTourByCanonicalPath(
+      "/destinations/california/san-diego/tours/private-sailing-lessons-516845"
+    );
+    const cycling = getProofBackedFareHarborTourByCanonicalPath(
+      "/destinations/california/san-diego/tours/private-san-diego-electric-bike-tour-439314"
+    );
+    expect(whale?.primaryCategory).toBe("wildlife");
+    expect(sailing?.primaryCategory).toBe("sailing");
+    expect(cycling?.primaryCategory).toBe("cycling");
+    for (const tour of [whale, sailing]) {
+      expect(tour?.categories).not.toContain("cycling");
+    }
+    expect(whale?.overviewText).toContain("138-foot sailing yacht");
+    expect(whale?.highlights).toContain("Water, soda, chips, and granola bars included");
+    expect(whale?.bookingUrl).toMatch(/^https:\/\//);
+  });
+
+  it("keeps the edited San Diego yacht overview and final SEO schema aligned", () => {
+    const proof = getFareHarborProofProducts().find(product => product.itemId === "34415")!;
+    const summary = getFareHarborEditorialSchemaDescription(proof.itemId, proof.schemaDescription);
+    expect(summary).toContain("138-foot sailing yacht");
+    expect(summary).not.toContain("Whale-watching trip of about");
+    const html = `<html><head><meta name="description" content="Old description" /><script type="application/ld+json">{"@graph":[{"@type":"Product","description":"Old description","offers":{"@type":"Offer","price":"129.00"}}]}</script></head></html>`;
+    const updated = applyFareHarborProofToHtml(html, proof);
+    expect(updated).toContain(`content="${summary}"`);
+    expect(updated).toContain(`"description":"${summary}"`);
+    expect(updated).toContain(`"price":"${proof.offer?.price}"`);
+    expect(applyFareHarborProofToHtml(updated, proof)).toBe(updated);
   });
 
   it("keeps unresearched product descriptions grounded instead of fabricating copy", () => {
