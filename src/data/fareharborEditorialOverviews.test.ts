@@ -39,11 +39,13 @@ describe("Lead-to-Gold authored editorial overviews", () => {
     expect(tour?.requirements.join(" ")).toContain("Age and rider-size requirements apply");
   });
 
-  it("renders individually verified highlights without generic supplier labels", () => {
+  it("renders verified highlights independently from full overview rewrites", () => {
     for (const [id, highlights] of Object.entries(fareHarborEditorialHighlights)) {
       const proof = getFareHarborProofProducts().find(product => product.itemId === id);
       expect(proof, `missing source product: ${id}`).toBeDefined();
-      expect(fareHarborEditorialOverviews[id], `missing authored overview for ${id}`).toBeTruthy();
+      if (!fareHarborEditorialOverviews[id]) {
+        expect(wordCount(proof!.paragraphs.join(" ")), `insufficient source for ${id}`).toBeGreaterThanOrEqual(100);
+      }
       expect(highlights.length, id).toBeGreaterThanOrEqual(2);
       expect(highlights.length, id).toBeLessThanOrEqual(3);
       expect(highlights.join(" "), id).not.toMatch(/^(food\s*&\s*beverages|guided outing)$/i);
