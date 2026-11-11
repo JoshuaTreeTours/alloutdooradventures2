@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import React from "react";
@@ -69,6 +70,29 @@ const renderRoute = (route: CityTourIndexRoute) => {
       );
   }
 };
+
+// Run Europe in its own Node process. The Europe integrity pass traverses all
+// inventory-backed country and city hubs; isolating it keeps that memory from
+// accumulating inside the generic city-tour prerender process and preserves a
+// clean fail-closed boundary between the two passes.
+execFileSync(
+  process.execPath,
+  [
+    "--import",
+    "tsx",
+    path.resolve("scripts/prerender-europe-destination-routes.tsx"),
+  ],
+  {
+    cwd: process.cwd(),
+    env: {
+      ...process.env,
+      NODE_ENV: "production",
+      TSX_TSCONFIG_PATH:
+        process.env.TSX_TSCONFIG_PATH || "tsconfig.prerender.json",
+    },
+    stdio: "inherit",
+  }
+);
 
 const sitemap = await readFile(sitemapPath, "utf8");
 const pathnames = Array.from(sitemap.matchAll(/<loc>(.*?)<\/loc>/g))
