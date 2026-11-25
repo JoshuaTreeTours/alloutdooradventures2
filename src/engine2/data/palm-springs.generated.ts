@@ -498,7 +498,7 @@ const palmSpringsTours = [
         "https://www.viator.com/tours/Palm-Springs/Earthquake-Canyon-Express-Downhill-Bike-Adventure/d648-3351P13?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
     },
     pricing: {
-      price: "255",
+      price: "149",
       currency: "USD",
     },
     viatorRatingValue: 4.9,

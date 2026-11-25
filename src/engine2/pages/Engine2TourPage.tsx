@@ -184,7 +184,7 @@ export default function Engine2TourPage({
     : undefined;
   const viatorPriceLabel =
     isViatorTour && tour.pricing?.currency && displayPrice > 0
-      ? `Prices starting at ${tour.pricing.currency} ${displayPrice.toFixed(0)}`
+      ? `From $${displayPrice.toFixed(0)} pp`
       : undefined;
   const headerPriceLabel = proof
     ? (proof.visiblePriceLabel ?? undefined)
