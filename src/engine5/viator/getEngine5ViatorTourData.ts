@@ -27,13 +27,27 @@ const asRecord = (value: unknown): Record<string, unknown> | undefined =>
     ? (value as Record<string, unknown>)
     : undefined;
 
-
 const toStringArray = (value: unknown): string[] =>
   Array.isArray(value)
     ? value
         .map(item => cleanText(item))
         .filter((item): item is string => Boolean(item))
     : [];
+
+const pickTextWithPath = (
+  product: Record<string, unknown>,
+  candidates: Array<{ path: string; value: unknown }>
+) => {
+  for (const candidate of candidates) {
+    const value = cleanText(candidate.value);
+    if (value) {
+      return { value, fieldPath: candidate.path };
+    }
+  }
+
+  return { value: undefined, fieldPath: undefined };
+};
+
 const rankVariant = (variant: Engine5ImageVariant): number => {
   const width = variant.width ?? 0;
   const height = variant.height ?? 0;
@@ -52,14 +66,20 @@ const rankVariant = (variant: Engine5ImageVariant): number => {
   return 1_000_000_000 + area;
 };
 
-const selectCanonicalHero = (exactProductImages: Engine5ExactProductImage[]) => {
-  const withVariants = exactProductImages.filter(image => image.variants.length > 0);
+const selectCanonicalHero = (
+  exactProductImages: Engine5ExactProductImage[]
+) => {
+  const withVariants = exactProductImages.filter(
+    image => image.variants.length > 0
+  );
   const coverImages = withVariants.filter(image => image.isCover);
   const candidates = coverImages.length > 0 ? coverImages : withVariants;
 
   const allCandidateUrls = Array.from(
     new Set(
-      exactProductImages.flatMap(image => image.variants.map(variant => variant.url))
+      exactProductImages.flatMap(image =>
+        image.variants.map(variant => variant.url)
+      )
     )
   );
 
@@ -116,16 +136,30 @@ export const getEngine5ViatorTourData = async (
   }
 
   const payload = (await response.json()) as Record<string, unknown>;
+  const diagnostics = asRecord(payload.diagnostics);
   const product =
     (payload.product as Record<string, unknown> | undefined) ?? payload;
 
-  const title = cleanText(product.title) ?? cleanText(product.productTitle);
-  const description =
-    cleanText(product.shortDescription) ??
-    cleanText(product.summary) ??
-    cleanText(asRecord(product.description)?.text) ??
-    cleanText(product.description);
-  const bookingUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
+  const title = pickTextWithPath(product, [
+    { path: "product.title", value: product.title },
+    { path: "product.productTitle", value: product.productTitle },
+  ]);
+
+  const description = pickTextWithPath(product, [
+    { path: "product.shortDescription", value: product.shortDescription },
+    { path: "product.summary", value: product.summary },
+    {
+      path: "product.description.text",
+      value: asRecord(product.description)?.text,
+    },
+    { path: "product.description", value: product.description },
+  ]);
+
+  const bookingUrl = pickTextWithPath(product, [
+    { path: "product.productUrl", value: product.productUrl },
+    { path: "product.seoUrl", value: product.seoUrl },
+  ]);
+
   const exactProductImages = extractViatorImages(product)?.value ?? [];
   const extractedHero = extractViatorHeroImage(product);
   const heroSelection =
@@ -140,16 +174,18 @@ export const getEngine5ViatorTourData = async (
           candidateUrls: Array.from(
             new Set([
               extractedHero.url,
-              ...exactProductImages.flatMap(image => image.variants.map(variant => variant.url)),
+              ...exactProductImages.flatMap(image =>
+                image.variants.map(variant => variant.url)
+              ),
             ])
           ),
         }
       : selectCanonicalHero(exactProductImages);
 
   if (
-    !title ||
-    !description ||
-    !bookingUrl ||
+    !title.value ||
+    !description.value ||
+    !bookingUrl.value ||
     !heroSelection.canonicalHeroUrl ||
     heroSelection.heroSelectionSource === "missing"
   ) {
@@ -168,13 +204,16 @@ export const getEngine5ViatorTourData = async (
 
   return {
     productCode: normalizedCode,
-    title,
-    description,
-    bookingUrl,
+    title: title.value,
+    description: description.value,
+    bookingUrl: bookingUrl.value,
     duration: duration?.value,
     startTime:
-      cleanText(product.startTime) ?? cleanText(asRecord(product.schedule)?.startTime),
-    fromPrice: price?.formattedPrice ?? (typeof price?.amount === "number" ? String(price.amount) : undefined),
+      cleanText(product.startTime) ??
+      cleanText(asRecord(product.schedule)?.startTime),
+    fromPrice:
+      price?.formattedPrice ??
+      (typeof price?.amount === "number" ? String(price.amount) : undefined),
     priceCurrency: cleanText(product.currencyCode),
     rating: rating?.value,
     reviewCount: reviewCount?.value,
@@ -197,6 +236,36 @@ export const getEngine5ViatorTourData = async (
       apiFetchAttempted: true,
       apiFetchSucceeded: true,
       descriptionSource: "api",
+    },
+    sourceTrace: {
+      titleFieldPath: title.fieldPath,
+      heroImageFieldPath: extractedHero?.fieldPath,
+      priceFieldPath: price?.fieldPath,
+      ratingFieldPath: rating?.fieldPath,
+      reviewCountFieldPath: reviewCount?.fieldPath,
+      meetingPointFieldPath: meetingPoint?.fieldPath,
+      routeOwnershipFieldPath: "src/engine5/viator/record.ts#destination",
+      runtimeDiagnostics: {
+        hasViatorApiKey:
+          typeof diagnostics?.hasViatorApiKey === "boolean"
+            ? (diagnostics.hasViatorApiKey as boolean)
+            : undefined,
+        attemptedLiveFetch:
+          typeof diagnostics?.attemptedLiveFetch === "boolean"
+            ? (diagnostics.attemptedLiveFetch as boolean)
+            : undefined,
+        upstreamStatus:
+          typeof diagnostics?.upstreamStatus === "number" ||
+          diagnostics?.upstreamStatus === null
+            ? (diagnostics.upstreamStatus as number | null)
+            : undefined,
+        upstreamOk:
+          typeof diagnostics?.upstreamOk === "boolean" ||
+          diagnostics?.upstreamOk === null
+            ? (diagnostics.upstreamOk as boolean | null)
+            : undefined,
+        commercialPriceFieldPath: price?.fieldPath,
+      },
     },
   };
 };

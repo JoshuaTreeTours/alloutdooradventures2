@@ -13,9 +13,15 @@ export default function Engine5ProofTourPage() {
   useEffect(() => {
     getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
       .then(apiTour => {
-        const mapped = mapViatorToEngine5Tour(engine5ProofViatorRecord, apiTour);
+        const mapped = mapViatorToEngine5Tour(
+          engine5ProofViatorRecord,
+          apiTour
+        );
         if (process.env.NODE_ENV !== "production") {
-          console.info("[engine5][132218P209] hero diagnostics", mapped.normalized.diagnostics);
+          console.info(
+            "[engine5][163873P16] hero diagnostics",
+            mapped.normalized.diagnostics
+          );
         }
         setTour(mapped.page);
       })

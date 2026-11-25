@@ -6,10 +6,11 @@ import {
   extractViatorRating,
   extractViatorReviewCount,
   extractViatorItinerary,
-} from "../../src/engine5/viator/extractors";
+} from "./viatorExtractors";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
+const ENGINE5_NEW_SPECIMEN_PRODUCT_CODE = "163873P16";
 const ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
 
 type BridgeDiagnostics = {
@@ -31,7 +32,8 @@ const buildHeaders = (apiKey: string) => ({
 const getBundledExactProductPayload = async (productCode: string) => {
   if (
     productCode !== ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE &&
-    productCode !== ENGINE5_BRIDGE_PRODUCT_CODE
+    productCode !== ENGINE5_BRIDGE_PRODUCT_CODE &&
+    productCode !== ENGINE5_NEW_SPECIMEN_PRODUCT_CODE
   ) {
     return null;
   }
@@ -52,7 +54,9 @@ const getBundledExactProductPayload = async (productCode: string) => {
   }
 };
 
-const buildInitialBridgeDiagnostics = (hasViatorApiKey: boolean): BridgeDiagnostics => ({
+const buildInitialBridgeDiagnostics = (
+  hasViatorApiKey: boolean
+): BridgeDiagnostics => ({
   hasViatorApiKey,
   attemptedLiveFetch: false,
   upstreamStatus: null,
@@ -71,11 +75,13 @@ const respondWithBundledPayload = (
     "public, s-maxage=300, stale-while-revalidate=1800"
   );
   res.setHeader("X-Engine5-Source", "bundled-exact-product-payload");
-  res.status(200).json(
-    diagnostics
-      ? { product: bundledPayload, diagnostics }
-      : { product: bundledPayload }
-  );
+  res
+    .status(200)
+    .json(
+      diagnostics
+        ? { product: bundledPayload, diagnostics }
+        : { product: bundledPayload }
+    );
 };
 
 export default async function handler(req: any, res: any) {
@@ -113,7 +119,10 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const baseUrl = process.env.VIATOR_BASE_URL ?? DEFAULT_VIATOR_BASE_URL;
+  const baseUrl =
+    process.env.VIATOR_API_BASE_URL ??
+    process.env.VIATOR_BASE_URL ??
+    DEFAULT_VIATOR_BASE_URL;
 
   try {
     bridgeDiagnostics.attemptedLiveFetch = true;
@@ -124,7 +133,8 @@ export default async function handler(req: any, res: any) {
 
     bridgeDiagnostics.upstreamStatus = response.status;
     bridgeDiagnostics.upstreamOk = response.ok;
-    bridgeDiagnostics.upstreamContentType = response.headers.get("content-type");
+    bridgeDiagnostics.upstreamContentType =
+      response.headers.get("content-type");
 
     if (!response.ok) {
       if (bundledPayload && isBridgeProduct) {
@@ -181,7 +191,8 @@ export default async function handler(req: any, res: any) {
       isBridgeProduct &&
       !(typeof livePrice?.amount === "number" && livePrice.amount > 0)
     ) {
-      bridgeDiagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
+      bridgeDiagnostics.usedBundledFallbackBecause =
+        "live-price-missing-or-zero";
       respondWithBundledPayload(res, bundledPayload, {
         source: "bundled-fallback",
         reason: "live-price-missing-or-zero",
@@ -197,11 +208,23 @@ export default async function handler(req: any, res: any) {
       return;
     }
 
+    const product =
+      typeof payload.product === "object" && payload.product !== null
+        ? (payload.product as Record<string, unknown>)
+        : payload;
+
     res.setHeader(
       "Cache-Control",
       "public, s-maxage=300, stale-while-revalidate=1800"
     );
-    res.status(200).json(payload);
+    res.status(200).json({
+      product,
+      diagnostics: {
+        source: "live-api",
+        ...bridgeDiagnostics,
+        commercialPriceFieldPath: livePrice?.fieldPath ?? null,
+      },
+    });
   } catch (error: any) {
     if (bundledPayload && isBridgeProduct) {
       bridgeDiagnostics.usedBundledFallbackBecause = "request-failed";
