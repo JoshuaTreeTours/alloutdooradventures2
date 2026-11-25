@@ -96,6 +96,30 @@ type ExactProductImage = { isCover: boolean; variants: ExactProductVariant[] };
 const asNumber = (value: unknown): number | undefined =>
   typeof value === "number" && Number.isFinite(value) ? value : undefined;
 
+const asNumberish = (value: unknown): number | undefined => {
+  const direct = asNumber(value);
+  if (direct !== undefined) {
+    return direct;
+  }
+
+  if (typeof value !== "string") {
+    return undefined;
+  }
+
+  const parsed = Number.parseFloat(value.trim());
+  return Number.isFinite(parsed) ? parsed : undefined;
+};
+
+const pickFirstNumber = (...values: unknown[]): number | undefined => {
+  for (const value of values) {
+    const numeric = asNumberish(value);
+    if (numeric !== undefined) {
+      return numeric;
+    }
+  }
+  return undefined;
+};
+
 const extractImageVariants = (image: Record<string, unknown>) => {
   const variants: ExactProductVariant[] = [];
 
@@ -228,6 +252,10 @@ export const getEngine4ViatorTourData = async (
     );
     const product =
       (payload.product as Record<string, unknown> | undefined) ?? payload;
+    const aggregateRating = asRecord(product.aggregateRating);
+    const stats = asRecord(product.statistics);
+    const reviews = asRecord(product.reviews);
+    const reviewsSummary = asRecord(reviews?.summary);
 
     const exactProductImages = extractExactProductImages(product);
     const exactProductImageUrls = exactProductImages
@@ -313,14 +341,20 @@ export const getEngine4ViatorTourData = async (
       priceCurrency: cleanText(
         (product as Record<string, unknown>).currencyCode
       ),
-      rating:
-        typeof (product as Record<string, unknown>).rating === "number"
-          ? ((product as Record<string, unknown>).rating as number)
-          : undefined,
-      reviewCount:
-        typeof (product as Record<string, unknown>).reviewCount === "number"
-          ? ((product as Record<string, unknown>).reviewCount as number)
-          : undefined,
+      rating: pickFirstNumber(
+        aggregateRating?.ratingValue,
+        aggregateRating?.rating,
+        product.ratingValue,
+        product.rating,
+        reviewsSummary?.rating,
+        stats?.rating
+      ),
+      reviewCount: pickFirstNumber(
+        aggregateRating?.reviewCount,
+        product.reviewCount,
+        reviewsSummary?.count,
+        stats?.reviewCount
+      ),
       primaryImageUrl,
       galleryImages,
       sourceDerivedImageUrl: fallbackTour?.sourceDerivedImageUrl,

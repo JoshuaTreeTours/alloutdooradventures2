@@ -30,7 +30,8 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasPrice = hasText(tour.facts.priceFrom);
   const rating = Number(tour.facts.ratingValue);
   const reviewCount = Number(tour.facts.reviewCount);
-  const hasRatingRow = Number.isFinite(rating) && Number.isFinite(reviewCount);
+  const hasRatingRow =
+    Number.isFinite(rating) && rating > 0 && Number.isFinite(reviewCount) && reviewCount > 0;
   const hasMeetingPoint = hasText(tour.facts.meetingPointShort);
   const hasStartTime = hasText(tour.facts.startTime);
   const hasDuration = hasText(tour.facts.duration);
