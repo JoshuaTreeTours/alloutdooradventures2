@@ -76,7 +76,7 @@ export const isHardDeletedLegacyTour = ({
     normalizedCanonicalPath ===
       "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849"
   ) {
-    return false;
+    return true;
   }
   if (
     normalizedProductId &&
