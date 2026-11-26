@@ -52,9 +52,9 @@ export const isTourRemoved = ({
     ) {
       return true;
     }
-    // Stage B proof page only. The rest of the red-jeep opt-out stays removed.
+    // Retired FareHarbor product must not be republished.
     if (normalizedTourId === "34849" || trailingTourId === "34849") {
-      return false;
+      return true;
     }
     if (
       REMOVED_TOUR_IDS.has(normalizedTourId) ||
