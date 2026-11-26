@@ -452,7 +452,7 @@ export const isInvalidPlaceholderTourSlug = (slug?: string | null) => {
   }
 
   if (normalizedSlug === "shared-san-andreas-fault-jeep-tour-34849") {
-    return false;
+    return true;
   }
 
   if (INVALID_PLACEHOLDER_TOUR_SLUGS.has(normalizedSlug)) {
