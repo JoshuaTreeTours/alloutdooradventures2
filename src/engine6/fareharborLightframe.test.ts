@@ -97,7 +97,7 @@ describe("Engine6 FareHarbor Lightframe eligibility and inventory", () => {
       head: {
         appendChild: vi.fn(() => {
           fakeWindow.FH = { autoLightframe };
-          listeners.get("load")?.();
+          // Simulate a cold network request; the test releases load later.
         }),
       },
     };
@@ -119,7 +119,10 @@ describe("Engine6 FareHarbor Lightframe eligibility and inventory", () => {
     expect(await prepareFareHarborLightframe(viatorLink)).toBe(false);
     expect(fakeDocument.createElement).not.toHaveBeenCalled();
 
-    expect(await prepareFareHarborLightframe(fareHarborLink)).toBe(true);
+    const pending = prepareFareHarborLightframe(fareHarborLink);
+    expect(autoLightframe).not.toHaveBeenCalled();
+    listeners.get("load")?.();
+    expect(await pending).toBe(true);
     expect(fakeDocument.createElement).toHaveBeenCalledTimes(1);
     expect(fakeDocument.head.appendChild).toHaveBeenCalledTimes(1);
     expect(autoLightframe).toHaveBeenCalledTimes(1);
