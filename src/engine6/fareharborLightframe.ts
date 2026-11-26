@@ -44,10 +44,12 @@ const loadFareHarborApi = (): Promise<FareHarborLightframeApi | null> => {
     );
     const script = existingScript ?? document.createElement("script");
     let settled = false;
+    const timeout = setTimeout(() => finish(null), 8000);
 
     const finish = (api: FareHarborLightframeApi | null) => {
       if (settled) return;
       settled = true;
+      clearTimeout(timeout);
       script.removeEventListener("load", onLoad);
       script.removeEventListener("error", onError);
       if (!api && !existingScript) script.remove();
@@ -70,8 +72,8 @@ const loadFareHarborApi = (): Promise<FareHarborLightframeApi | null> => {
 };
 
 /**
- * Load FareHarbor's own Lightframe API only after a customer shows intent to
- * book, then bind it only to this exact affiliate booking link. The untouched
+ * Prepare FareHarbor's Lightframe API before booking interaction,
+ * then bind it within the booking link's immediate container. The untouched
  * link remains the native booking fallback if the API cannot load or open.
  */
 export const prepareFareHarborLightframe = (
@@ -87,7 +89,7 @@ export const prepareFareHarborLightframe = (
     .then(api => {
       if (!api?.autoLightframe || !link.isConnected) return false;
       if (!initializedLinks.has(link)) {
-        api.autoLightframe({ container: link });
+        api.autoLightframe({ container: link.parentElement ?? link });
         initializedLinks.add(link);
       }
       return true;
