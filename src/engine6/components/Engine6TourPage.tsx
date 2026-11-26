@@ -1,5 +1,6 @@
 import React, {
   type ReactNode,
+  type MouseEvent,
   useCallback,
   useEffect,
   useMemo,
@@ -50,8 +51,38 @@ const useFareHarborLightframeHandlers = (href: string, enabled: boolean) => {
     }
   }, [enabled, href]);
 
+  useEffect(() => {
+    prepare();
+  }, [prepare]);
+
+  const replaying = useRef(false);
+  const opening = useRef(false);
+  const onClick = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
+    if (!enabled || !isFareHarborEmbedsBookingUrl(href) || replaying.current ||
+        event.defaultPrevented || event.metaKey || event.ctrlKey ||
+        event.shiftKey || event.altKey || event.button !== 0) return;
+    event.preventDefault();
+    if (opening.current) return;
+    opening.current = true;
+    const link = event.currentTarget;
+    void prepareFareHarborLightframe(link).then(ready => {
+      if (!link.isConnected || link.href !== new URL(href, window.location.href).href) return;
+      if (!ready) {
+        window.location.assign(link.href);
+        return;
+      }
+      replaying.current = true;
+      try {
+        link.click();
+      } finally {
+        replaying.current = false;
+      }
+    }).finally(() => { opening.current = false; });
+  }, [enabled, href]);
+
   return {
     linkRef,
+    onClick,
     onPointerEnter: prepare,
     onPointerDown: prepare,
     onFocus: prepare,
@@ -85,6 +116,7 @@ function Engine6MobileStickyAvailabilityBar({
         onPointerEnter={lightframeHandlers.onPointerEnter}
         onPointerDown={lightframeHandlers.onPointerDown}
         onFocus={lightframeHandlers.onFocus}
+        onClick={lightframeHandlers.onClick}
         className="flex min-h-12 w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-green-900/20 transition hover:bg-[#287a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-900 focus-visible:ring-offset-2"
       >
         Check Availability
@@ -122,8 +154,9 @@ function Engine6BookingCta({
         onPointerEnter={lightframeHandlers.onPointerEnter}
         onPointerDown={lightframeHandlers.onPointerDown}
         onFocus={lightframeHandlers.onFocus}
-        onClick={() => {
-          if (isExternal) {
+        onClick={event => {
+          lightframeHandlers.onClick(event);
+          if (isExternal && !isFareHarbor) {
             setIsOpening(true);
           }
         }}
