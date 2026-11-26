@@ -31,28 +31,60 @@ import {
   type Engine6LiveProductFields,
 } from "../liveProductFields";
 import { shouldSuppressEngine6ItineraryRow } from "../../../api/engine6/itineraryRenderingGovernance";
+import {
+  isFareHarborEmbedsBookingUrl,
+  prepareFareHarborLightframe,
+} from "../fareharborLightframe";
 
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
 
 const EXTERNAL_BOOKING_REL = "sponsored nofollow noopener";
 
+const useFareHarborLightframeHandlers = (href: string, enabled: boolean) => {
+  const linkRef = useRef<HTMLAnchorElement | null>(null);
+  const prepare = useCallback(() => {
+    const link = linkRef.current;
+    if (enabled && link && isFareHarborEmbedsBookingUrl(href)) {
+      void prepareFareHarborLightframe(link);
+    }
+  }, [enabled, href]);
+
+  return {
+    linkRef,
+    onPointerEnter: prepare,
+    onPointerDown: prepare,
+    onFocus: prepare,
+  };
+};
+
 function Engine6MobileStickyAvailabilityBar({
   href,
   isExternal,
+  isFareHarbor,
 }: {
   href: string;
   isExternal: boolean;
+  isFareHarbor: boolean;
 }) {
+  const lightframeHandlers = useFareHarborLightframeHandlers(
+    href,
+    isFareHarbor
+  );
+
   return (
     <div
       className="fixed inset-x-0 bottom-0 z-50 border-t border-green-900/10 bg-white/95 px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-10px_30px_rgba(31,77,54,0.18)] backdrop-blur md:hidden"
       data-testid="engine6-mobile-sticky-availability"
     >
       <a
+        ref={lightframeHandlers.linkRef}
         href={href}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? EXTERNAL_BOOKING_REL : undefined}
+        onPointerEnter={lightframeHandlers.onPointerEnter}
+        onPointerDown={lightframeHandlers.onPointerDown}
+        onFocus={lightframeHandlers.onFocus}
         className="flex min-h-12 w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-green-900/20 transition hover:bg-[#287a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-900 focus-visible:ring-offset-2"
       >
         Check Availability
@@ -64,22 +96,32 @@ function Engine6MobileStickyAvailabilityBar({
 function Engine6BookingCta({
   href,
   isExternal,
+  isFareHarbor,
   className,
   feedbackClassName = "mt-2 text-sm font-medium text-[#2f4a2f]",
 }: {
   href: string;
   isExternal: boolean;
+  isFareHarbor: boolean;
   className: string;
   feedbackClassName?: string;
 }) {
   const [isOpening, setIsOpening] = useState(false);
+  const lightframeHandlers = useFareHarborLightframeHandlers(
+    href,
+    isFareHarbor
+  );
 
   return (
     <div>
       <a
+        ref={lightframeHandlers.linkRef}
         href={href}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? EXTERNAL_BOOKING_REL : undefined}
+        onPointerEnter={lightframeHandlers.onPointerEnter}
+        onPointerDown={lightframeHandlers.onPointerDown}
+        onFocus={lightframeHandlers.onFocus}
         onClick={() => {
           if (isExternal) {
             setIsOpening(true);
@@ -385,6 +427,7 @@ export default function Engine6TourPage({
   );
   const showRelatedTours = hydratedRelatedTours.length >= 2;
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
+  const isFareHarborBooking = tour.ownership.ctaOwner === "fareharbor";
   useStructuredData(schemaGraph);
 
   return (
@@ -500,6 +543,7 @@ export default function Engine6TourPage({
               <Engine6BookingCta
                 href={tour.bookingUrl}
                 isExternal={isExternalBookingUrl}
+                isFareHarbor={isFareHarborBooking}
                 className={BOOK_CTA_CLASSES}
                 feedbackClassName="mt-2 text-sm font-medium text-white"
               />
@@ -691,6 +735,7 @@ export default function Engine6TourPage({
             <Engine6BookingCta
               href={tour.bookingUrl}
               isExternal={isExternalBookingUrl}
+              isFareHarbor={isFareHarborBooking}
               className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
               feedbackClassName="mt-2 text-sm font-medium text-white"
             />
@@ -758,6 +803,7 @@ export default function Engine6TourPage({
       <Engine6MobileStickyAvailabilityBar
         href={tour.bookingUrl}
         isExternal={isExternalBookingUrl}
+        isFareHarbor={isFareHarborBooking}
       />
     </main>
   );
